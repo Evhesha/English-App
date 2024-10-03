@@ -5,6 +5,8 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Navbar from "./Components/Navbar/Navbar";
 import RoutesList from "./Components/RoutesList/RoutesList";
 
+// shift + alt + f позволяет форматировать код(выставлять скопированный текст в красивом виде)
+
 function App() {
   return (
     <>

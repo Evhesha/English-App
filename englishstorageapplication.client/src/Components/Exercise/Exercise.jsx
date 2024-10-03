@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import TaskInput from "../TaskInput/TaskInput";
 
-// shift + alt + f позволяет форматировать код(выставлять скопированный текст в красивом виде)
 function Exercise({exampleName, trueValue, tasktext}) {
     const [bgcolor, setbgColor] = useState('bg-light');
     const [value, setValue] = useState('');

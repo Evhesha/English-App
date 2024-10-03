@@ -52,7 +52,7 @@ function Sidebar() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/weekly" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link to="/topics-page" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
                     Themes
                   </Link>
                 </li>
