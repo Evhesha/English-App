@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\assets\\react.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\assets\\react.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\app.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\app.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T18:40:24.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\WeatherForecast.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\WeatherForecast.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T18:40:16.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.css",
+              "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.css",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.css",
+              "RelativeToolTip": "englishstorageapplication.client\\src\\App.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-19T10:53:01.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "react.svg",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\assets\\react.svg",
+              "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\assets\\react.svg",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\assets\\react.svg",
+              "RelativeToolTip": "englishstorageapplication.client\\src\\assets\\react.svg",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVDhPrVRbTCNVGP5OOzO9TKEWSrGUttpdpV2ua7ioaDa7ullcdVe8rHFNjPFBY4hGY0wIJprw5ItmCdEXL/FRE4MQsw9LiCthIcFFxA3hFiEsLQUKpaW03XZmOuOZaQsY9W2/5J/zz3/55j///OfgrkJRFFJQD9DX13elrq7uXVWnfk2KugpZlpHJZJBKpYa6u7u7gsFgWHP8HyjhHE2Sc7ncf4okSfLMzIw8NTUl9/f3/xgIBGoKqRr0hfUAHR0dXW1tbXaZFiQJccjpWyDJbyBsfQ9x46oW81dIRHNLG0wmk4/juOr19fVbUQrV9w9CrvVl4m9s7VpIG\u002BxL6\u002BMolb6EaesrSOFhgNRAVtyQIhMIbgPeB1ths9kYs9l8vKyszD0/P39jnyJPSAj4hy7YPE\u002B/\u002BUmJ0/NkS4DlzlRegXXzGmZWmvBT4j0sGy6jvvE85O05JEUeN6ZXMT09jUQioafEgdHR0R/i8XiYUfmMdees3ovvfPhEc/VbL9Qvm5vljxBdTGM81YMl33MICiZMLG8iJa7iRUct/I3HUA0HBEGAxWLB7OysVpcKnfpwdLzd3haoePVS7WRpS/oDsjeTwTrpRbqiE2wK4EUJnvuqcHM7h7HY/SAlHtjt5XA6nbBardDr9QdToBF6nZbOZ/1z5Q3i52RnSoS54TvUP9yJSyedeKXBjuTGNmycAYQ3YSrKYiejpVFQkiOjpULb8omK\u002BOOPWL81JVeM\u002BEL8GKFfWYjSn/Qn0GDQucsxKGd0YDkWK9tZxPYFVJUaVS7a/8MZVcFUORnu9YZr1ezaMrmu\u002B1ThW84Sn0IrKATlSRWIdwTaMxFZSYKk2jS36skTFkmZ0ILnYmzlZ8Nk8g1lzn0u99vEor6p0kwUeiLUIJVQTSR0MF202ka3BQ4Lp9nydHnCIhglEX5p67Yrez13GmJKYXgTq2v32clJFw\u002BrkUEiI2JyNYa1WFrNhNtmhoXaDzkOyVQwmVCmPZYy/DK\u002ByZzwMHFvpc9FhjfSGF7agkK3yHAMcpZyxHJm7EZ28ZSOgKVShFb/kQp10h4xne/JXg5v7ny2OLcSvb2xrwh8CeicgBx/AFmXFxF6h0QiUfiMEp6pqwSnL/7lf0Pf8xocp\u002B6N\u002BW6OL4x5nayYjIv\u002BRFLmQ5E9RHfiuBPdBbu/h9p7GLx/\u002BhjKeNo/erK02mhlhOpra2sYHBz8mp6asJ7O62R4E2cC3NYpV2Rs1lndaD776GN\u002BB5tDjZVBaxWPC7UOPN9UBSOrTVl\u002Bn4VdE52OEgYxNDSkEeatR9Db2zumXl\u002BiKBZEkEUhL/SoFSR7sKoxIyMjstvtblHzC588BG3w7wMDA\u002B0FXRP1Ui02vmgrigpa2R902dVe7i6AvwHcTSP/8z9AyQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-09-17T16:50:38.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\index.html",
+              "RelativeDocumentMoniker": "englishstorageapplication.client\\index.html",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\index.html",
+              "RelativeToolTip": "englishstorageapplication.client\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-17T16:50:03.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\main.jsx",
+              "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\main.jsx",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\main.jsx",
+              "RelativeToolTip": "englishstorageapplication.client\\src\\main.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-09-17T16:50:01.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.client.esproj",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\App.client.esproj",
+              "RelativeDocumentMoniker": "englishstorageapplication.client\\App.client.esproj",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\App.client.esproj",
+              "RelativeToolTip": "englishstorageapplication.client\\App.client.esproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-17T16:48:49.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.jsx",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.jsx",
+              "RelativeToolTip": "englishstorageapplication.client\\src\\App.jsx",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAC4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-09-17T16:47:22.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Program.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Program.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Program.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T16:47:05.118Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
