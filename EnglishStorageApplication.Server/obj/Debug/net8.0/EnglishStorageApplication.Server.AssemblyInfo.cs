@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EnglishStorageApplication.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cca4c4664cd96721abb6bf430067b269919c05e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnglishStorageApplication.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnglishStorageApplication.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
