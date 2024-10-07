@@ -34,3 +34,5 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\ob
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\EnglishStorageApplication.Server.genruntimeconfig.cache
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\ref\EnglishStorageApplication.Server.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\EnglishStorageApplication.Server.sourcelink.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
