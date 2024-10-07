@@ -1,9 +1,9 @@
-import Exercise from "../../Components/Exercise/Exercise"
+import InputExercise from "../../Components/Exercise/InputExercise"
 
 function FutureSimple(){
     return <>
         <h1>Future Simple</h1>
-        <Exercise exampleName={"future simple"}/>
+        <InputExercise exampleName={"future simple"}/>
     </>
 }
 

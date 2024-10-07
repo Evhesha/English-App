@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../Sidebar/Sidebar.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Sidebar() {
@@ -71,7 +72,7 @@ function Sidebar() {
               data-bs-target="#orders-collapse"
               aria-expanded="false"
             >
-              Useful links
+              Tests
             </button>
             <div className="collapse" id="orders-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">

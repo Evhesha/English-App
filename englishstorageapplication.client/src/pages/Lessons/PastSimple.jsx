@@ -1,9 +1,9 @@
-import Exercise from "../../Components/Exercise/Exercise"
+import InputExercise from "../../Components/Exercise/InputExercise"
 
 function PastSimple(){
     return <>
         <h1>Past Simple</h1>
-        <Exercise trueValue={'past'}/>
+        <InputExercise trueValue={'past'}/>
     </>
 }
 
