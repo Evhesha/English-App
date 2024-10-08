@@ -1,38 +1,35 @@
-﻿/* Убедитесь, что body и html занимают всю высоту */
+﻿/* Контейнер с Sidebar и контентом */
+.app-container {
+  display: flex;
+  flex: 1; /* Занимает оставшееся пространство */
+  width: 100%; /* Растягивается на всю ширину */
+}
+
+/* Контент */
+.content {
+  flex: 1; /* Занимает оставшееся пространство */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
+  border-radius: 8px; /* Скругленные углы */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для контента */
+  overflow-y: auto; /* Добавление вертикальной прокрутки, если контент превышает высоту */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px; /* Фиксированная ширина сайдбара */
+  background-color: rgba(0, 0, 0, 0.8); /* Темный фон для сайдбара */
+  color: #ffffff; /* Белый текст в сайдбаре */
+  padding: 20px; /* Отступы внутри сайдбара */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Тень для сайдбара */
+}
+
+/* Убедитесь, что body и html занимают всю высоту */
 html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-/* Общий контейнер для всего приложения */
-.app-layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Занимает всю высоту экрана */
-    width: 100%; /* Обеспечивает растягивание на всю ширину */
-  }
-  
-  /* Navbar */
-  .navbar {
-    width: 100%; /* Растягиваем Navbar по всей ширине */
-    background-color: #f8f9fa;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для навбара */
-  }
-  
-  /* Контейнер с Sidebar и контентом */
-  .app-container {
-    display: flex;
-    flex: 1;
-    width: 100%; /* Растягивается на всю ширину */
-    height: 100%; /* Вытягивается на всю высоту */
-  }
-  
-  /* Sidebar и контент */
-  .content {
-    height: 100%; /* Занимает всю высоту */
-    padding: 20px;
-    background-color: #ffffff;
-    padding-right: 100px;
-  }
-  
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #93ed77, #5353f0); /* Градиентный фон */
+  color: #333; /* Основной цвет текста */
+  overflow-x: hidden; /* Скрыть горизонтальный скролл */
+}
