@@ -48,7 +48,7 @@ function Sidebar() {
             <div className="collapse" id="dashboard-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
-                  <Link to="/overview" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link to="/my-dict-page" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
                     My dictionary
                   </Link>
                 </li>

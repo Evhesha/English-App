@@ -18,12 +18,13 @@ namespace EnglishStorageApplication.Server.Controllers
             _context = context;
         }
 
-        // Реализация методов интерфейса
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
         }
 
+        [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -36,6 +37,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return user;
         }
 
+        [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
             _context.Users.Add(user);
@@ -44,6 +46,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
 
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.Id)
@@ -72,6 +75,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return NoContent();
         }
 
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
