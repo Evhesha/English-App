@@ -18,6 +18,7 @@ import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
 
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
+import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
 
 function RoutesList() {
   return (
@@ -40,7 +41,9 @@ function RoutesList() {
 
         //Sidebar.Dictionary
         <Route path="/topics-page" element={<TopicsPage />}/>
+        <Route path="/my-dict-page" element={<MyDictPage />}/>
         <Route path="/traveling-topic" element={<Traveling />}/>
+        
         // Footer
 
       </Routes>

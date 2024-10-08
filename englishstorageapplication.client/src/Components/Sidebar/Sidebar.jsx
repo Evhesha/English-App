@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../Sidebar/Sidebar.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Sidebar() {
@@ -47,7 +48,7 @@ function Sidebar() {
             <div className="collapse" id="dashboard-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
-                  <Link to="/overview" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link to="/my-dict-page" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
                     My dictionary
                   </Link>
                 </li>
@@ -71,7 +72,7 @@ function Sidebar() {
               data-bs-target="#orders-collapse"
               aria-expanded="false"
             >
-              Useful links
+              Tests
             </button>
             <div className="collapse" id="orders-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
