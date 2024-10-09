@@ -3,7 +3,7 @@ import { useState } from "react";
 import AddDict from "../dict-images/AddPicture.png";
 
 function MyDictPage() {
-  const [authorized, setAuthorized] = useState(true);
+  const [authorized, setAuthorized] = useState(false);
 
   const plsAuthorizeBlock = (
     <div
