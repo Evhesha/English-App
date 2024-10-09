@@ -7,28 +7,28 @@
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\assets\\react.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\assets\\react.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\app.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\app.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\main.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\main.jsx",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\index.html",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\index.html",
@@ -83,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "react.svg",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\assets\\react.svg",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\assets\\react.svg",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.css",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.css",
@@ -107,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "App.client.esproj",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\App.client.esproj",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\App.client.esproj",
@@ -119,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "App.jsx",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.jsx",

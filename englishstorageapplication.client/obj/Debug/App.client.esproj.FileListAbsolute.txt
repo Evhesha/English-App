@@ -1,1 +1,2 @@
 C:\Medvedskii\BNTU\EnglishStorageApplication\englishstorageapplication.client\obj\Debug\App.client.esproj.CoreCompileInputs.cache
+C:\Medvedskii\BNTU\3 курс\EnglishStorageApplication\englishstorageapplication.client\obj\Debug\App.client.esproj.CoreCompileInputs.cache
