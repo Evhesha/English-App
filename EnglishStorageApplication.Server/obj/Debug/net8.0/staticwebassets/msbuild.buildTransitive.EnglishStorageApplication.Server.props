@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\EnglishStorageApplication.Server.props" />
-</Project>
