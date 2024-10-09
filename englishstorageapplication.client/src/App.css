@@ -6,9 +6,6 @@
   --shadow-color: #e0e0e0;
 }
 
-
-
-
 /* Navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.8); /* Reduced opacity for less white background */
@@ -19,8 +16,6 @@
   top: 0;
   z-index: 1000;
 }
-
-
 
 .navbar-content {
   display: flex;
@@ -104,3 +99,12 @@ html, body {
     width: 200px;
   }
 }
+
+
+.toggle-btn:hover {
+  background-color: rgb(89, 119, 255); /* Измените цвет фона на красный */
+  color: white; /* Измените цвет текста, если необходимо */
+  transform: scale(1.1);
+}
+
+

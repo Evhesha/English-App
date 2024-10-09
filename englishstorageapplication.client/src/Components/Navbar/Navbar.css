@@ -4,6 +4,7 @@
   --text-color: #333;
   --bg-color: #f8f9fa;
   --shadow-color: #e0e0e0;
+  --hover-color: #2980b9;
  }
  
  .navbar {
@@ -116,15 +117,18 @@
  
  .toggle-btn:hover {
   transform: scale(1.1);
+  
  }
  
  .toggle-btn.open {
   transform: rotate(90deg);
+  
  }
  
  @media (max-width: 768px) {
   .navbar-content {
    justify-content: space-between;
+   
   }
  
   .nav-list {
@@ -140,6 +144,7 @@
   .btn {
    padding: 4px 8px;
    font-size: 11px;
+   
   }
  }
  
