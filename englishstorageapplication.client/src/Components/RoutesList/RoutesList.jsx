@@ -19,6 +19,8 @@ import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
 import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
+import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
+import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
 
 function RoutesList() {
   return (
@@ -43,6 +45,8 @@ function RoutesList() {
         <Route path="/topics-page" element={<TopicsPage />}/>
         <Route path="/my-dict-page" element={<MyDictPage />}/>
         <Route path="/traveling-topic" element={<Traveling />}/>
+        <Route path="/cooking-topic" element={<Cooking />}/>
+        <Route path="/shopping-topic" element={<Shopping />}/>
         
         // Footer
 
