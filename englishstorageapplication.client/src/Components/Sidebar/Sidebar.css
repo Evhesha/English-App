@@ -61,4 +61,9 @@ body {
   .scrollarea {
     overflow-y: auto;
   }
+
+  .large-text {
+    font-size: 15px; 
+}
+  
   

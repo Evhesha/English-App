@@ -14,7 +14,7 @@ function Sidebar() {
               data-bs-target="#home-collapse"
               aria-expanded="true"
             >
-              Lessons
+              <strong className="large-text">Lessons</strong>
             </button>
             <div className="collapse show" id="home-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -43,7 +43,7 @@ function Sidebar() {
               data-bs-target="#dashboard-collapse"
               aria-expanded="false"
             >
-              Dictionary
+              <strong className="large-text">Dictionary</strong>
             </button>
             <div className="collapse" id="dashboard-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -59,7 +59,7 @@ function Sidebar() {
                 </li>
                 <li>
                   <Link to="/monthly" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                   1000 popular
+                    1000 popular
                   </Link>
                 </li>
               </ul>
@@ -72,7 +72,7 @@ function Sidebar() {
               data-bs-target="#orders-collapse"
               aria-expanded="false"
             >
-              Tests
+              <strong className="large-text">Tests</strong>
             </button>
             <div className="collapse" id="orders-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -107,7 +107,7 @@ function Sidebar() {
               data-bs-target="#account-collapse"
               aria-expanded="false"
             >
-              Account
+              <strong className="large-text">Account</strong>
             </button>
             <div className="collapse" id="account-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
