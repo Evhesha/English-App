@@ -6,7 +6,7 @@ function Home() {
             <header>
                 <h1>Английский — ключ к новым возможностям!</h1>
                 <p>Изучайте английский язык бесплатно с нами и откройте двери в новый мир!</p>
-                <button>Okaaaay lets go </button>
+                <button> lets go </button>
             
             </header>
             <section>
