@@ -1,7 +1,10 @@
   import { Link } from "react-router-dom";
+  import { useState } from "react";
   import "../Navbar/Navbar.css";
 
   function Navbar({ toggleSidebar, isSidebarOpen }) {
+    const [isAdmin, setIsAdmin] = useState(true);
+
     return (
       <nav className="navbar">
         <div className="container">
@@ -24,6 +27,14 @@
                     About
                   </Link>
                 </li>
+                {isAdmin ? <li>
+                  <Link className="nav-link" to={"/admin"}>
+                    Admin
+                  </Link>
+                </li>
+                : ''
+
+                }
               </ul>
             </div>
             <div className="navbar-right">
