@@ -1,33 +1,33 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #93ed77, #5353f0);
-    color: #000;
+    font-family: 'Tahoma', sans-serif;
+    background: linear-gradient(to bottom right, #ffffff9f, #4242a2);
+    color: #000000;
     overflow-x: hidden;
 }
 
 header {
     text-align: center;
     padding: 100px 20px;
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-weight: bold;
     opacity: 0.9;
     animation: fadeIn 1s ease;
 }
 
 header h1 {
-    animation: bounce 3s infinite; /* Анимация подпрыгивания заголовка */
+    animation: bounce 1s infinite; /* Анимация подпрыгивания заголовка */
 }
 
 section {
     padding: 60px 20px;
     text-align: center;
-    background-color: rgba(136, 0, 255, 0.1);
+    background-color: rgba(66, 74, 67, 0.092);
     border-radius: 10px;
     margin: 60px auto;
-    max-width: 800px;
+    max-width: 900px;
     animation: slideIn 0.8s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень для секций */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для секций */
 }
 
 h2 {
@@ -46,55 +46,13 @@ button {
     color: #fff;
     background-color: #5353f0;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход для кнопки */
+    margin-top: 30px; /* Отступ сверху для кнопки */
 }
 
 button:hover {
     background-color: #93ed77;
     transform: scale(1.05); /* Увеличение кнопки при наведении */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        font-size: 2.5em;
-    }
-    section {
-        padding: 40px 10px;
-    }
-    h2 {
-        font-size: 2em;
-    }
 }

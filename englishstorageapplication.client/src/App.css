@@ -1,35 +1,110 @@
-﻿/* Контейнер с Sidebar и контентом */
-.app-container {
-  display: flex;
-  flex: 1; /* Занимает оставшееся пространство */
-  width: 100%; /* Растягивается на всю ширину */
+﻿:root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+  --shadow-color: #e0e0e0;
 }
 
-/* Контент */
-.content {
-  flex: 1; /* Занимает оставшееся пространство */
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.8); /* Reduced opacity for less white background */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px; /* Further reduced height */
+  padding: 0 20px;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-top: 28px; /* Add margin to account for navbar height */
+}
+
+/* Content */
+.content { 
+  flex: 1;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
-  border-radius: 8px; /* Скругленные углы */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для контента */
-  overflow-y: auto; /* Добавление вертикальной прокрутки, если контент превышает высоту */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly reduced opacity */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  margin: 0 50px; /* Reduced side margins */
+  max-width: 1200px; /* Added max-width for better readability on large screens */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 250px; /* Фиксированная ширина сайдбара */
-  background-color: rgba(0, 0, 0, 0.8); /* Темный фон для сайдбара */
-  color: #ffffff; /* Белый текст в сайдбаре */
-  padding: 20px; /* Отступы внутри сайдбара */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Тень для сайдбара */
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 28px); /* Adjust height to account for navbar */
+  overflow-y: auto;
 }
 
-/* Убедитесь, что body и html занимают всю высоту */
+/* Global Styles */
 html, body {
   height: 100%;
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom right, #93ed77, #5353f0); /* Градиентный фон */
-  color: #333; /* Основной цвет текста */
-  overflow-x: hidden; /* Скрыть горизонтальный скролл */
+  background: linear-gradient(to bottom right, #93ed77, #5353f0);
+  color: #333;
+  overflow-x: hidden;
 }
+
+/* Button Styles */
+.btn {
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 11px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    margin: 0 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+  }
+}
+
+
+.toggle-btn:hover {
+  background-color: rgb(89, 119, 255); /* Измените цвет фона на красный */
+  color: white; /* Измените цвет текста, если необходимо */
+  transform: scale(1.1);
+}
+
+
