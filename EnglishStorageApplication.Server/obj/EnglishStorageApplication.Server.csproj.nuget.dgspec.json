@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kiril\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {}
+    "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kiril\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
+    "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kiril\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
+        "projectUniqueName": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
         "projectName": "EnglishStorageApplication.Server",
-        "projectPath": "C:\\Users\\Kiril\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
-        "packagesPath": "C:\\Users\\Kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kiril\\English-App\\EnglishStorageApplication.Server\\obj\\",
+        "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
+        "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
+        "outputPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EvGenii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
