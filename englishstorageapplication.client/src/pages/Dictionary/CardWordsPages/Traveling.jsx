@@ -38,25 +38,60 @@ function Traveling() {
         <div className="container text-center" onMouseMove={handleMouseMove}>
             <h1 className="header" style={headerStyle}>Exploring the World</h1>
             <section className="section">
-                <h2 className="subHeader">Why Travel?</h2>
-                <p className="paragraph">
-                    Traveling is an adventure that transforms you. It allows you to step outside your comfort zone and embrace the unknown. Each trip is an opportunity to learn, grow, and connect with people from all walks of life. From the bustling streets of Tokyo to the serene beaches of Bali, each destination tells a story waiting to be discovered.
-                </p>
-                <p className="paragraph">
-                    Imagine savoring a delicious paella in Spain, hiking through the lush landscapes of New Zealand, or exploring the ancient ruins of Machu Picchu. These experiences not only enrich our minds but also create lasting memories that shape who we are. Traveling fosters understanding and appreciation for diverse cultures, making the world feel like a smaller, friendlier place.
-                </p>
-                <p className="paragraph">
-                    The thrill of planning a new journey, the excitement of packing your bags, and the anticipation of new experiences fill our lives with joy. Traveling teaches us resilience and adaptability, as we navigate unfamiliar places and cultures. Each journey adds a chapter to our life story, filled with laughter, challenges, and unforgettable moments.
-                </p>
+                <h2 className="subHeader">Words about travel</h2>
+                <div className="row">
+                    <div className="col">
+                        <ul className="list">
+                            <li><strong>Adventure</strong> - приключение</li>
+                            <li><strong>Journey</strong> - путешествие</li>
+                            <li><strong>Destination</strong> - место назначения</li>
+                            <li><strong>Itinerary</strong> - маршрут</li>
+                            <li><strong>Expedition</strong> - экспедиция</li>
+                            <li><strong>Explorer</strong> - исследователь</li>
+                            <li><strong>Passport</strong> - паспорт</li>
+                            <li><strong>Travel insurance</strong> - страхование путешествий</li>
+                        </ul>
+                    </div>
+                    <div className="col">
+                        <ul className="list">
+                            <li><strong>Tourist trap</strong> - туристическая ловушка</li>
+                            <li><strong>Souvenir</strong> - сувенир</li>
+                            <li><strong>Backpacking</strong> - пеший туризм</li>
+                            <li><strong>Accommodation</strong> - жильё</li>
+                            <li><strong>Sightseeing</strong> - осмотр достопримечательностей</li>
+                            <li><strong>Culture</strong> - культура</li>
+                            <li><strong>Guidebook</strong> - путеводитель</li>
+                            <li><strong>Local cuisine</strong> - местная кухня</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="sentences mt-4">
+                    <p><strong>Adventure</strong>: I love going on an adventure to new places. - Мне нравится отправляться в приключение в новые места.</p>
+                    <p><strong>Journey</strong>: Our journey took us through beautiful landscapes. - Наше путешествие проходило через красивые пейзажи.</p>
+                    <p><strong>Destination</strong>: Paris is my dream destination. - Париж — это моя мечта о месте назначения.</p>
+                    <p><strong>Itinerary</strong>: We planned our itinerary carefully. - Мы тщательно спланировали наш маршрут.</p>
+                    <p><strong>Expedition</strong>: The expedition to the mountains was challenging. - Экспедиция в горы была сложной.</p>
+                    <p><strong>Explorer</strong>: He is a famous explorer of the Amazon rainforest. - Он известный исследователь амазонских джунглей.</p>
+                    <p><strong>Passport</strong>: Don't forget to bring your passport to the airport. - Не забудь взять с собой паспорт в аэропорт.</p>
+                    <p><strong>Travel insurance</strong>: It's important to have travel insurance for safety. - Важно иметь страхование путешествий для безопасности.</p>
+                    <p><strong>Tourist trap</strong>: That cafe is just a tourist trap. - Это кафе — просто туристическая ловушка.</p>
+                    <p><strong>Souvenir</strong>: I bought a charming souvenir from my trip. - Я купил очаровательный сувенир из поездки.</p>
+                    <p><strong>Backpacking</strong>: Backpacking through Europe was an unforgettable experience. - Пеший туризм по Европе был незабываемым опытом.</p>
+                    <p><strong>Accommodation</strong>: We found great accommodation near the beach. - Мы нашли отличное жильё рядом с пляжем.</p>
+                    <p><strong>Sightseeing</strong>: Sightseeing in Rome is a must for every traveler. - Осмотр достопримечательностей в Риме — обязательное дело для каждого путешественника.</p>
+                    <p><strong>Culture</strong>: Experiencing the local culture is exciting. - Познавать местную культуру — это увлекательно.</p>
+                    <p><strong>Guidebook</strong>: I always carry a guidebook when I travel. - Я всегда беру с собой путеводитель, когда путешествую.</p>
+                    <p><strong>Local cuisine</strong>: Tasting the local cuisine is one of the best parts of traveling. - Дегустация местной кухни — одна из лучших частей путешествий.</p>
+                </div>
             </section>
             <section className="section">
                 <h2 className="subHeader">Common Questions</h2>
                 <ul className="list">
-                    <li>Do you like traveling?</li>
-                    <li>Where do you dream of traveling next?</li>
-                    <li>Which countries would you like to visit?</li>
-                    <li>What travel hacks have you discovered along the way?</li>
-                    <li>When do you think is the best time to explore Asia?</li>
+                    <li>Do you like traveling? - Тебе нравится путешествовать?</li>
+                    <li>Where do you dream of traveling next? - Куда ты мечтаешь поехать следующим?</li>
+                    <li>Which countries would you like to visit? - Какие страны ты хотел бы посетить?</li>
+                    <li>What travel hacks have you discovered along the way? - Какие советы для путешествий ты открыл на своём пути?</li>
+                    <li>When do you think is the best time to explore Asia? - Когда, по твоему мнению, лучше всего исследовать Азию?</li>
                 </ul>
             </section>
             <section className="section">

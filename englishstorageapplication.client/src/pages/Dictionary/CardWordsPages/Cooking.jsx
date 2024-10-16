@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Traveling.css';
+import './Cooking.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Cooking() {
@@ -36,18 +36,53 @@ function Cooking() {
 
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
-            <h1 className="header" style={headerStyle}>Cooking topic</h1>
+            <h1 className="header" style={headerStyle}>Cooking Topic</h1>
             <section className="section">
-                <h2 className="subHeader">Why Learn Cooking?</h2>
-                <p className="paragraph">
-                    Cooking is an essential skill that empowers you to create delicious meals at home. It allows you to explore different cuisines and experiment with flavors. Each recipe is an opportunity to learn new techniques and expand your culinary knowledge.
-                </p>
-                <p className="paragraph">
-                    Imagine preparing a mouth-watering lasagna, baking a fluffy cake, or grilling the perfect steak. These experiences not only enhance your cooking skills but also bring joy and satisfaction to yourself and your loved ones. Cooking fosters creativity and appreciation for good food.
-                </p>
-                <p className="paragraph">
-                    The excitement of trying a new recipe, the aroma of spices filling your kitchen, and the joy of sharing a meal with friends create lasting memories. Cooking teaches us patience and attention to detail, as we navigate through ingredients and methods. Each dish adds a new flavor to our life story.
-                </p>
+                <h2 className="subHeader">Words about Cooking</h2>
+                <div className="row">
+                    <div className="col">
+                        <ul className="list">
+                            <li><strong>Baking</strong> - выпечка</li>
+                            <li><strong>Grilling</strong> - гриль</li>
+                            <li><strong>Frying</strong> - жарка</li>
+                            <li><strong>Steaming</strong> - приготовление на пару</li>
+                            <li><strong>Boiling</strong> - варка</li>
+                            <li><strong>Roasting</strong> - запекание</li>
+                            <li><strong>Chopping</strong> - нарезка</li>
+                            <li><strong>Mixing</strong> - смешивание</li>
+                        </ul>
+                    </div>
+                    <div className="col">
+                        <ul className="list">
+                            <li><strong>Seasoning</strong> - приправы</li>
+                            <li><strong>Sautéing</strong> - обжаривание</li>
+                            <li><strong>Simmering</strong> - томление</li>
+                            <li><strong>Marinating</strong> - маринование</li>
+                            <li><strong>Whipping</strong> - взбивание</li>
+                            <li><strong>Garnishing</strong> - украшение</li>
+                            <li><strong>Plating</strong> - оформление блюда</li>
+                            <li><strong>Fermenting</strong> - ферментация</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="sentences mt-4">
+                    <p><strong>Baking</strong>: I love baking fresh bread on weekends. - Мне нравится печь свежий хлеб по выходным.</p>
+                    <p><strong>Grilling</strong>: Grilling vegetables adds a smoky flavor. - Жарка овощей придаёт им дымный вкус.</p>
+                    <p><strong>Frying</strong>: Frying potatoes makes them crispy and delicious. - Жарка картошки делает её хрустящей и вкусной.</p>
+                    <p><strong>Steaming</strong>: Steaming fish keeps it moist and tender. - Приготовление рыбы на пару сохраняет её сочность и нежность.</p>
+                    <p><strong>Boiling</strong>: Boiling pasta is the first step to a great meal. - Варка пасты — это первый шаг к отличному блюду.</p>
+                    <p><strong>Roasting</strong>: Roasting chicken gives it a golden brown skin. - Запекание курицы придаёт ей золотистую корочку.</p>
+                    <p><strong>Chopping</strong>: Chopping onions can make you cry! - Нарезка лука может заставить вас плакать!</p>
+                    <p><strong>Mixing</strong>: Mixing the batter well is essential for fluffy pancakes. - Хорошее смешивание теста необходимо для пышных блинов.</p>
+                    <p><strong>Seasoning</strong>: Seasoning your food enhances its flavor. - Приправление пищи улучшает её вкус.</p>
+                    <p><strong>Sautéing</strong>: Sautéing garlic in olive oil creates a wonderful aroma. - Обжаривание чеснока в оливковом масле создаёт прекрасный аромат.</p>
+                    <p><strong>Simmering</strong>: Simmering the soup makes all the flavors blend together. - Томление супа позволяет всем вкусам смешаться.</p>
+                    <p><strong>Marinating</strong>: Marinating meat overnight improves its taste. - Маринование мяса на ночь улучшает его вкус.</p>
+                    <p><strong>Whipping</strong>: Whipping cream until stiff peaks form is crucial for desserts. - Взбивание сливок до образования жестких пиков важно для десертов.</p>
+                    <p><strong>Garnishing</strong>: Garnishing with fresh herbs adds color to the dish. - Украшение свежей зеленью добавляет цвет блюду.</p>
+                    <p><strong>Plating</strong>: Plating your food beautifully makes it more appetizing. - Красивое оформление пищи делает её более аппетитной.</p>
+                    <p><strong>Fermenting</strong>: Fermenting vegetables can enhance their health benefits. - Ферментация овощей может увеличить их полезные свойства.</p>
+                </div>
             </section>
             <section className="section">
                 <h2 className="subHeader">Common Cooking Questions</h2>
