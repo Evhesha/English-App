@@ -12,6 +12,7 @@ import PastSimple from "/src/pages/Lessons/PastSimple";
 
 import AboutApp from "/src/pages/Another/AboutApp";
 import Home from "../Home/Home";
+import AdminPanel from "../../pages/Another/AdminPanel";
 
 import TopicsPage from "../../pages/Dictionary/DictionaryTopicsPage/TopicsPage";
 import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
@@ -34,6 +35,7 @@ function RoutesList() {
         <Route path="/home" element={<Home />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<AdminPanel />} />
 
         // Sidebar
         // Sidebar.Lessons
