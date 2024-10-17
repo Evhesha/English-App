@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\data\\userentites\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\data\\userentites\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\services\\interfaces\\iuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\services\\interfaces\\iuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -38,28 +62,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T13:16:47.475Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:33:22.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUsersController.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:29:38.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Models\\User.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Models\\User.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:14:02.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:36:19.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:57:28.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
               "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAgAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-06T18:00:11.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\main.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\main.jsx",
@@ -67,11 +173,12 @@
               "RelativeToolTip": "englishstorageapplication.client\\src\\main.jsx",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-09-17T16:50:01.268Z"
+              "WhenOpened": "2024-09-17T16:50:01.268Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\index.html",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\index.html",
@@ -79,11 +186,12 @@
               "RelativeToolTip": "englishstorageapplication.client\\index.html",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-17T16:50:03.453Z"
+              "WhenOpened": "2024-09-17T16:50:03.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "react.svg",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\assets\\react.svg",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\assets\\react.svg",
@@ -91,11 +199,12 @@
               "RelativeToolTip": "englishstorageapplication.client\\src\\assets\\react.svg",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQKSURBVDhPrVRbTCNVGP5OOzO9TKEWSrGUttpdpV2ua7ioaDa7ullcdVe8rHFNjPFBY4hGY0wIJprw5ItmCdEXL/FRE4MQsw9LiCthIcFFxA3hFiEsLQUKpaW03XZmOuOZaQsY9W2/5J/zz3/55j///OfgrkJRFFJQD9DX13elrq7uXVWnfk2KugpZlpHJZJBKpYa6u7u7gsFgWHP8HyjhHE2Sc7ncf4okSfLMzIw8NTUl9/f3/xgIBGoKqRr0hfUAHR0dXW1tbXaZFiQJccjpWyDJbyBsfQ9x46oW81dIRHNLG0wmk4/juOr19fVbUQrV9w9CrvVl4m9s7VpIG\u002BxL6\u002BMolb6EaesrSOFhgNRAVtyQIhMIbgPeB1ths9kYs9l8vKyszD0/P39jnyJPSAj4hy7YPE\u002B/\u002BUmJ0/NkS4DlzlRegXXzGmZWmvBT4j0sGy6jvvE85O05JEUeN6ZXMT09jUQioafEgdHR0R/i8XiYUfmMdees3ovvfPhEc/VbL9Qvm5vljxBdTGM81YMl33MICiZMLG8iJa7iRUct/I3HUA0HBEGAxWLB7OysVpcKnfpwdLzd3haoePVS7WRpS/oDsjeTwTrpRbqiE2wK4EUJnvuqcHM7h7HY/SAlHtjt5XA6nbBardDr9QdToBF6nZbOZ/1z5Q3i52RnSoS54TvUP9yJSyedeKXBjuTGNmycAYQ3YSrKYiejpVFQkiOjpULb8omK\u002BOOPWL81JVeM\u002BEL8GKFfWYjSn/Qn0GDQucsxKGd0YDkWK9tZxPYFVJUaVS7a/8MZVcFUORnu9YZr1ezaMrmu\u002B1ThW84Sn0IrKATlSRWIdwTaMxFZSYKk2jS36skTFkmZ0ILnYmzlZ8Nk8g1lzn0u99vEor6p0kwUeiLUIJVQTSR0MF202ka3BQ4Lp9nydHnCIhglEX5p67Yrez13GmJKYXgTq2v32clJFw\u002BrkUEiI2JyNYa1WFrNhNtmhoXaDzkOyVQwmVCmPZYy/DK\u002ByZzwMHFvpc9FhjfSGF7agkK3yHAMcpZyxHJm7EZ28ZSOgKVShFb/kQp10h4xne/JXg5v7ny2OLcSvb2xrwh8CeicgBx/AFmXFxF6h0QiUfiMEp6pqwSnL/7lf0Pf8xocp\u002B6N\u002BW6OL4x5nayYjIv\u002BRFLmQ5E9RHfiuBPdBbu/h9p7GLx/\u002BhjKeNo/erK02mhlhOpra2sYHBz8mp6asJ7O62R4E2cC3NYpV2Rs1lndaD776GN\u002BB5tDjZVBaxWPC7UOPN9UBSOrTVl\u002Bn4VdE52OEgYxNDSkEeatR9Db2zumXl\u002BiKBZEkEUhL/SoFSR7sKoxIyMjstvtblHzC588BG3w7wMDA\u002B0FXRP1Ui02vmgrigpa2R902dVe7i6AvwHcTSP/8z9AyQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2024-09-17T16:50:38.436Z"
+              "WhenOpened": "2024-09-17T16:50:38.436Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.css",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.css",
@@ -103,11 +212,12 @@
               "RelativeToolTip": "englishstorageapplication.client\\src\\App.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-19T10:53:01.121Z"
+              "WhenOpened": "2024-09-19T10:53:01.121Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "App.client.esproj",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\App.client.esproj",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\App.client.esproj",
@@ -115,19 +225,21 @@
               "RelativeToolTip": "englishstorageapplication.client\\App.client.esproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-17T16:48:49.5Z"
+              "WhenOpened": "2024-09-17T16:48:49.5Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "App.jsx",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.jsx",
               "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.jsx",
               "RelativeToolTip": "englishstorageapplication.client\\src\\App.jsx",
-              "ViewState": "AQIAADcAAAAAAAAAAABBwC4AAAAXAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAABBwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-09-17T16:47:22.006Z"
+              "WhenOpened": "2024-09-17T16:47:22.006Z",
+              "EditorCaption": ""
             }
           ]
         }
