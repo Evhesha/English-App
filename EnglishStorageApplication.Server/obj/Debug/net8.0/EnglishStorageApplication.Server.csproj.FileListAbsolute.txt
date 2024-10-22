@@ -74,3 +74,12 @@ C:\Medvedskii\BNTU\3 курс\EnglishStorageApplication\EnglishStorageApplicatio
 C:\Medvedskii\BNTU\3 курс\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\EnglishStorageApplication.Server.pdb
 C:\Medvedskii\BNTU\3 курс\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\EnglishStorageApplication.Server.genruntimeconfig.cache
 C:\Medvedskii\BNTU\3 курс\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\ref\EnglishStorageApplication.Server.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Npgsql.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

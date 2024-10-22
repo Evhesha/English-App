@@ -1,4 +1,3 @@
-
 // Controllers: Содержит контроллеры, которые обрабатывают HTTP-запросы и возвращают ответы.
 // Models: Содержит модели данных, которые представляют сущности базы данных.
 // Data: Содержит контекст базы данных и миграции.
@@ -6,6 +5,9 @@
 // Repositories: Содержит репозитории для доступа к данным. Это помогает отделить логику доступа к данным от бизнес-логики.
 // DTOs: Содержит объекты передачи данных (Data Transfer Objects), которые используются для передачи данных между слоями приложения.
 // Helpers: Содержит вспомогательные классы и утилиты, такие как генерация JWT токенов или отправка email.
+
+using EnglishStorageApplication.Server.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<ApplicationDbContext>(
+    options =>
+    {
+        options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(ApplicationDbContext)));
+    });
 
 var app = builder.Build();
 

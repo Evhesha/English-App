@@ -1,19 +1,20 @@
 ﻿using EnglishStorageApplication.Server.Data.UserEntites;
 using EnglishStorageApplication.Server.Models;
+using EnglishStorageApplication.Server.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnglishStorageApplication.Server.Data.Repositories
 {
-    public class UserRepository
+    public class UsersRepository : IUsersRepository
     {
         private readonly ApplicationDbContext _context;
 
-        public UserRepository(ApplicationDbContext context)
+        public UsersRepository(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public async Task<List<User>> GetUsers()
+        public async Task<List<User>> Get()
         {
             var userEntityes = await _context.Users
                 .AsNoTracking()
@@ -41,9 +42,29 @@ namespace EnglishStorageApplication.Server.Data.Repositories
             return userEntity.Id;
         }
 
-        //public async Task<Guid> Update(Guid id, string name, string email, string password)
-        //{
+        public async Task<Guid> Update(Guid id, string name, string email, string password)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user != null)
+            {
+                user.Name = name;
+                user.Email = email;
+                user.Password = password;
+                await _context.SaveChangesAsync();
+            }
+            return id;
+        }
 
-        //}
+        public async Task<Guid> Delete(Guid id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+            }
+            return id;
+        }
+
     }
 }
