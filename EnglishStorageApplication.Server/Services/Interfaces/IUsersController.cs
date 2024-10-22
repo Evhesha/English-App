@@ -1,14 +1,13 @@
-﻿using EnglishStorageApplication.Server.Models;
+﻿using EnglishStorageApplication.Server.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EnglishStorageApplication.Server.Services.Interfaces
+namespace EnglishStorageApplication.Server.Controllers
 {
     public interface IUsersController
     {
-        Task<ActionResult<IEnumerable<User>>> GetUsers();
-        Task<ActionResult<User>> GetUser(Guid id);
-        Task<ActionResult<User>> PostUser(User user);
-        Task<IActionResult> PutUser(Guid id, User user);
+        Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request);
         Task<IActionResult> DeleteUser(Guid id);
+        Task<ActionResult<List<UsersResponse>>> GetUsers();
+        Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request);
     }
 }

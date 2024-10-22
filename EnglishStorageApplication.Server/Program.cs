@@ -7,11 +7,12 @@
 // Helpers: Содержит вспомогательные классы и утилиты, такие как генерация JWT токенов или отправка email.
 
 using EnglishStorageApplication.Server.Data;
+using EnglishStorageApplication.Server.Data.Repositories;
+using EnglishStorageApplication.Server.Services.AppServices;
+using EnglishStorageApplication.Server.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,6 +24,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(
     {
         options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(ApplicationDbContext)));
     });
+
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 var app = builder.Build();
 
