@@ -1,0 +1,16 @@
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\bin\Debug\net8.0\EnglishApp.DataAccess.deps.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\bin\Debug\net8.0\EnglishApp.DataAccess.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\bin\Debug\net8.0\EnglishApp.DataAccess.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\bin\Debug\net8.0\EnglishApp.Core.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\bin\Debug\net8.0\EnglishApp.Core.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.csproj.AssemblyReference.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.AssemblyInfoInputs.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.AssemblyInfo.cs
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.sourcelink.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishA.9206E92C.Up2Date
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\refint\EnglishApp.DataAccess.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\ref\EnglishApp.DataAccess.dll

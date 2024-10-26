@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EnglishApp.Core\EnglishApp.Core.csproj" />
+    <ProjectReference Include="..\EnglishApp.DataAccess\EnglishApp.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

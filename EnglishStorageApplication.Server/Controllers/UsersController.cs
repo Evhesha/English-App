@@ -1,98 +1,67 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using EnglishStorageApplication.Server.Services.Interfaces;
-using EnglishStorageApplication.Server.Models;
-using EnglishStorageApplication.Server.Data;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
+using EnglishStorageApplication.Server.Contracts;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase, IUsersController
+    public class UsersController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IUserService _context;
 
-        public UsersController(ApplicationDbContext context)
+        public UsersController(IUserService context)
         {
             _context = context;
         }
 
+        //Метод NoContent() вернет статус-код 204, что означает "Нет содержимого",
+        //и таким образом сигнализирует, что запрос был успешным, но данных для возвращения нет.
+        //Это временное решение, пока ты не готов добавить реальную функциональность!
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult<List<UsersResponse>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
-        }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return user;
+            var users = await _context.GetAllUsers();
+            var response = users.Select(u => new UsersResponse(u.Id, u.Name, u.Email, u.Password));
+            return Ok(response);
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            var (user, error) = EnglishStorageApplication.EnglishApp.Core.Models.User.Create(
+                Guid.NewGuid(),
+                request.name,
+                request.email,
+                request.password
+                );
 
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+            if (string.IsNullOrEmpty(error))
+            {
+                return BadRequest(error);
+            }
+
+            var userId = await _context.CreateUser(user);
+
+            return Ok(userId);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request)
         {
-            if (id != user.Id)
-            {
-                return BadRequest();
-            }
+            var userId = await _context.UpdateUser(id, request.name, request.email, request.password);
 
-            _context.Entry(user).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            return Ok(userId);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeleteUser(Guid id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool UserExists(int id)
-        {
-            return _context.Users.Any(e => e.Id == id);
+            return Ok(await _context.DeleteUser(id));
         }
     }
 }
