@@ -8,8 +8,8 @@
 
 using EnglishStorageApplication.Server.Data;
 using EnglishStorageApplication.Server.Data.Repositories;
-using EnglishStorageApplication.Server.Services.AppServices;
-using EnglishStorageApplication.Server.Services.Interfaces;
+using EnglishStorageApplication.EnglishApp.Application.AppServices;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(
     options =>
     {
-        options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(ApplicationDbContext)));
+        options.UseNpgsql(builder.Configuration.GetConnectionString("ApplicationDbContext"));
     });
 
 builder.Services.AddScoped<IUserService, UserService>();

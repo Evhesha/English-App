@@ -927,6 +927,45 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "EnglishApp.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EnglishApp.Core": "1.0.0",
+          "EnglishApp.DataAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EnglishApp.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EnglishApp.Application.dll": {}
+        }
+      },
+      "EnglishApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EnglishApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EnglishApp.Core.dll": {}
+        }
+      },
+      "EnglishApp.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EnglishApp.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/EnglishApp.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EnglishApp.DataAccess.dll": {}
+        }
       }
     }
   },
@@ -2633,10 +2672,28 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EnglishApp.Application/1.0.0": {
+      "type": "project",
+      "path": "../EnglishApp.Application/EnglishApp.Application.csproj",
+      "msbuildProject": "../EnglishApp.Application/EnglishApp.Application.csproj"
+    },
+    "EnglishApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../EnglishApp.Core/EnglishApp.Core.csproj",
+      "msbuildProject": "../EnglishApp.Core/EnglishApp.Core.csproj"
+    },
+    "EnglishApp.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../EnglishApp.DataAccess/EnglishApp.DataAccess.csproj",
+      "msbuildProject": "../EnglishApp.DataAccess/EnglishApp.DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EnglishApp.Application >= 1.0.0",
+      "EnglishApp.Core >= 1.0.0",
+      "EnglishApp.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.SpaProxy >= 8.*-*",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
@@ -2677,7 +2734,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\EnglishApp.Application.csproj": {
+              "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\EnglishApp.Application.csproj"
+            },
+            "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+              "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj"
+            },
+            "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
+              "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

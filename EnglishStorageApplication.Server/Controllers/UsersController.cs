@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using EnglishStorageApplication.Server.Services.Interfaces;
-using EnglishStorageApplication.Server.Models;
-using EnglishStorageApplication.Server.Data;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using EnglishStorageApplication.Server.Contracts;
 
@@ -10,7 +9,7 @@ namespace EnglishStorageApplication.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase, IUsersController
+    public class UsersController : ControllerBase
     {
         private readonly IUserService _context;
 
@@ -34,7 +33,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request)
         {
-            var (user, error) = Models.User.Create(
+            var (user, error) = EnglishStorageApplication.EnglishApp.Core.Models.User.Create(
                 Guid.NewGuid(),
                 request.name,
                 request.email,

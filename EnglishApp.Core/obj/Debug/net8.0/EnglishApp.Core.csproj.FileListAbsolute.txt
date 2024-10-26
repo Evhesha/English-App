@@ -1,0 +1,12 @@
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\bin\Debug\net8.0\EnglishApp.Core.deps.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\bin\Debug\net8.0\EnglishApp.Core.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\bin\Debug\net8.0\EnglishApp.Core.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\EnglishApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\EnglishApp.Core.AssemblyInfoInputs.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\EnglishApp.Core.AssemblyInfo.cs
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\EnglishApp.Core.csproj.CoreCompileInputs.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\EnglishApp.Core.sourcelink.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\EnglishApp.Core.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\refint\EnglishApp.Core.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\EnglishApp.Core.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Core\obj\Debug\net8.0\ref\EnglishApp.Core.dll

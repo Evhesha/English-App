@@ -150,3 +150,9 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bi
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Application.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Core.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.DataAccess.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Application.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Core.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.DataAccess.pdb
