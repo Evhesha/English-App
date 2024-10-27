@@ -1,11 +1,14 @@
 ﻿namespace EnglishStorageApplication.EnglishApp.Core.Models
 {
+    //Доменная модель (Domain Model) в C# используется для представления логики и структуры данных в приложении.
+    //Она описывает сущности и их поведение в рамках предметной области.
+
     public class User
     {
         public const int MAX_PASSWORD_LENGTH = 6;
 
         // конструктор является приватным, т.к. хотим провести валидацию данных
-        // и для этого используем метод с возвратом кортежа
+        // и для этого используем метод с возвратом кортежа(фабричный паттерн)
         private User(Guid id, string name, string email, string password)
         {
             Id = id;

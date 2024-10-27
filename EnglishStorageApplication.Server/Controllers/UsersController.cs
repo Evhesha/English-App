@@ -38,17 +38,17 @@ namespace EnglishStorageApplication.Server.Controllers
                 request.name,
                 request.email,
                 request.password
-                );
+            );
 
-            if (string.IsNullOrEmpty(error))
+            if (!string.IsNullOrEmpty(error))
             {
                 return BadRequest(error);
             }
 
             var userId = await _context.CreateUser(user);
-
             return Ok(userId);
         }
+
 
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request)
