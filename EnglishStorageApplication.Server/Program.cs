@@ -6,7 +6,7 @@
 // DTOs: Содержит объекты передачи данных (Data Transfer Objects), которые используются для передачи данных между слоями приложения.
 // Helpers: Содержит вспомогательные классы и утилиты, такие как генерация JWT токенов или отправка email.
 
-using EnglishStorageApplication.Server.Data;
+using EnglishStorageApplication.EnglishApp.DataAccess;
 using EnglishStorageApplication.Server.Data.Repositories;
 using EnglishStorageApplication.EnglishApp.Application.AppServices;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
