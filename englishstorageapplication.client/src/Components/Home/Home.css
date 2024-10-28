@@ -220,3 +220,12 @@ footer {
         text-align: center;
     }
 }
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}

@@ -145,11 +145,7 @@ function Home() {
                 </Container>
             </section>
 
-            <footer>
-                <Container>
-                    <p className="copyright">© 2024 English Learning. Все права защищены.</p>
-                </Container>
-            </footer>
+            
         </div>
     );
 }
