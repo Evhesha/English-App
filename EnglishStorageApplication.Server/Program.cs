@@ -6,11 +6,12 @@
 // DTOs: Содержит объекты передачи данных (Data Transfer Objects), которые используются для передачи данных между слоями приложения.
 // Helpers: Содержит вспомогательные классы и утилиты, такие как генерация JWT токенов или отправка email.
 
-using EnglishStorageApplication.Server.Data;
-using EnglishStorageApplication.Server.Data.Repositories;
+using EnglishStorageApplication.EnglishApp.DataAccess;
+using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
 using EnglishStorageApplication.EnglishApp.Application.AppServices;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using Microsoft.EntityFrameworkCore;
+using EnglishApp.Application.AppServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +28,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+
+builder.Services.AddScoped<IUserCardService, UserCardService>();
+builder.Services.AddScoped<IUsersCardsRepository, UsersCardsRepository>();
 
 var app = builder.Build();
 

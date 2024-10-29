@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.EnglishApp.Core.Models;
-using Microsoft.EntityFrameworkCore;
 using EnglishStorageApplication.Server.Contracts;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -38,17 +35,17 @@ namespace EnglishStorageApplication.Server.Controllers
                 request.name,
                 request.email,
                 request.password
-                );
+            );
 
-            if (string.IsNullOrEmpty(error))
+            if (!string.IsNullOrEmpty(error))
             {
                 return BadRequest(error);
             }
 
             var userId = await _context.CreateUser(user);
-
             return Ok(userId);
         }
+
 
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request)
