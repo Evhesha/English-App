@@ -1,4 +1,4 @@
-﻿using EnglishApp.DataAccess.UserEntites;
+﻿using EnglishStorageApplication.EnglishApp.DataAccess.UserEntites;
 using EnglishStorageApplication.Server.Data.UserEntites;
 using Microsoft.EntityFrameworkCore;
 

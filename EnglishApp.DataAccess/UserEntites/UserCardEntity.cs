@@ -1,4 +1,4 @@
-﻿namespace EnglishApp.DataAccess.UserEntites
+﻿namespace EnglishStorageApplication.EnglishApp.DataAccess.UserEntites
 {
     public class UserCardEntity
     {

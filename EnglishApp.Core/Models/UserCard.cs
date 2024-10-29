@@ -1,4 +1,4 @@
-﻿namespace EnglishApp.Core.Models
+﻿namespace EnglishStorageApplication.EnglishApp.Core.Models
 {
     public class UserCard
     {

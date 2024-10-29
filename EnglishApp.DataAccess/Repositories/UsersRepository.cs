@@ -1,10 +1,9 @@
 ﻿using EnglishStorageApplication.Server.Data.UserEntites;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
-namespace EnglishStorageApplication.Server.Data.Repositories
+namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
 {
     public class UsersRepository : IUsersRepository
     {
