@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Cooking.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Cooking() {
     const [response, setResponse] = useState('');
@@ -36,6 +37,7 @@ function Cooking() {
 
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
+            <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
             <h1 className="header" style={headerStyle}>Cooking Topic</h1>
             <section className="section">
                 <h2 className="subHeader">Words about Cooking</h2>

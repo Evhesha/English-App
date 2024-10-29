@@ -1,7 +1,14 @@
 .formula-container {
-    background: linear-gradient(to right, #5ff7ff, #7b84fe);
+    background: linear-gradient(to right, #4ad4dc, #7b84fe);
     padding: 20px;
     border-radius: 10px;
     color: white;
     text-align: center;
   }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px; 
+  }
+  

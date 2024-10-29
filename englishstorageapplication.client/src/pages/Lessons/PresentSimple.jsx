@@ -47,17 +47,52 @@ function PresentSimple() {
     <p>
     Mary (she) play<b>s</b> <b>the</b> piano. — Мэри играет на пианино.  
     </p>
-
+    <div className="cards-container">
+    <ChooseExercise
+        title={"Present Simple"}
+        text={"Kirill _________ water"}
+        answer1={"drink"}
+        answer2={"drinks"}
+        answer3={"drinking"}
+        answer4={"dranks"}
+        correctAnswer={"drinks"}
+      />
+      <ChooseExercise
+        title={"Present Simple"}
+        text={"They _______ football on weekends"}
+        answer1={"plays"}
+        answer2={"playing"}
+        answer3={"play"}
+        answer4={"played"}
+        correctAnswer={"play"}
+      />
+      <ChooseExercise
+        title={"Present Simple"}
+        text={"She _____ books every evening."}
+        answer1={"reads"}
+        answer2={"read"}
+        answer3={"reading"}
+        answer4={"readed"}
+        correctAnswer={"reads"}
+      />
+    </div>
     <h2>Глагол to be в Present Simple</h2>
     <div className="formula-container">
         <p>Единственное число I <b>am</b> / You <b>are</b> / He, She, It <b>is</b></p>
         <p>Множественное число We, You, They <b>are</b></p>
     </div>
+    <p></p>
+    <p>Используется, если во времени Present Simple отсутствует глагол</p>
+    <p>Обычно используется в вырожениях связанные с: </p>
+    <p>Существования или уточнения состояния: She is happy. (Она счастлива.)</p>
+    <p>Местонахождения: They are at home. (Они дома.)</p>
+    <p>Временного состояния: He is tired. (Он устал.)</p>
+    <p></p>
       <InputExercise
         exampleName={"Present Simple"}
-        trueValue={"present"}
+        trueValue={"am"}
         tasktext={
-          "With supporting text below as __________ lead-in to additional content."
+          "I __ student"
         }
       />
 
@@ -70,6 +105,8 @@ function PresentSimple() {
         answer4={"made"}
         correctAnswer={"make"}
       />
+
+      <h2>Употребление глаголов do/does и have/has</h2>
     </>
   );
 }
