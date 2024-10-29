@@ -23,6 +23,11 @@ function App() {
             <RoutesList />
           </div>
         </div>
+        <div>
+          <footer className="footerr">
+            <p className="copyright">© 2024 English Learning. Все права защищены.</p>
+          </footer>
+        </div>
       </div>
     </>
   );
