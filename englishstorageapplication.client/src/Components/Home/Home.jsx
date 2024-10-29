@@ -38,10 +38,10 @@ function Home() {
     }, []);
 
     return (
-        <div className="minimal-home">
+        <div className="minimal-home animate-on-scroll">
             <section className="hero">
                 <Container>
-                    <div className="hero-content">
+                    <div className="hero-content" >
                         <h1>Изучайте английский бесплатно с удовольствием</h1>
                         <p className="subtitle">Эффективная методика для быстрого освоения языка</p>
                         <div className="cta-container">
