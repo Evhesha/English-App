@@ -102,29 +102,33 @@
   border: none;
   font-size: 25px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
   margin-right: 10px;
   color: var(--text-color);
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
+  width: 40px;
   height: 40px;
-  margin-top: 5px; 
+  margin-top: 5px;
+  border-radius: 50%;
+}
 
-
- }
- 
- .toggle-btn:hover {
+.toggle-btn:hover {
   transform: scale(1.1);
-  
- }
- 
- .toggle-btn.open {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.toggle-btn.open {
   transform: rotate(90deg);
-  
- }
+}
+
+.toggle-btn.open:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
  
  @media (max-width: 768px) {
   .navbar-content {
