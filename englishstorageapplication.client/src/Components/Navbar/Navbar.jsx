@@ -41,7 +41,7 @@
               <Link className="btn btn-outline" to={"/login"}>
                 Login
               </Link>
-              <Link className="btn btn-primary" to={"/signUp"}>
+              <Link className="btn btn-primary" to={"/signUp"} style={{paddingLeft: "10px", paddingRight: "10px"}}>
                 Sign-Up
               </Link>
             </div>
