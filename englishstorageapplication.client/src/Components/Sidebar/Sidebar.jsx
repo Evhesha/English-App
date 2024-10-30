@@ -58,8 +58,13 @@ function Sidebar() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/monthly" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link to="/thousamd-popular" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
                     1000 popular
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/words-in-parts" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                    Words in parts
                   </Link>
                 </li>
               </ul>
