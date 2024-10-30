@@ -14,3 +14,5 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\refint\EnglishApp.DataAccess.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.pdb
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\ref\EnglishApp.DataAccess.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\bin\Debug\net8.0\EnglishApp.DataAccess.runtimeconfig.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.DataAccess\obj\Debug\net8.0\EnglishApp.DataAccess.genruntimeconfig.cache

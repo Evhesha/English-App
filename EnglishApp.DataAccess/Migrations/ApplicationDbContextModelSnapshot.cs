@@ -22,6 +22,28 @@ namespace EnglishStorageApplication.Server.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("EnglishStorageApplication.EnglishApp.DataAccess.UserEntites.UserCardEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("NameOfUsersCard")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserCardData")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UsersCards");
+                });
+
             modelBuilder.Entity("EnglishStorageApplication.Server.Data.UserEntites.UserEntity", b =>
                 {
                     b.Property<Guid>("Id")
