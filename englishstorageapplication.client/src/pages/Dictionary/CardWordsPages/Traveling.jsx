@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Traveling.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Traveling() {
     const [response, setResponse] = useState('');
@@ -36,6 +38,7 @@ function Traveling() {
 
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
+            <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
             <h1 className="header" style={headerStyle}>Exploring the World</h1>
             <section className="section">
                 <h2 className="subHeader">Words about travel</h2>
