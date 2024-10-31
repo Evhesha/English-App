@@ -107,4 +107,6 @@ html, body {
   transform: scale(1.1);
 }
 
-
+.footerr{
+  background-color: #007bff00;
+}

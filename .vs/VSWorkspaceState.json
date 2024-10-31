@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\EnglishApp.Application",
+    "\\EnglishApp.Application\\AppServices",
+    "\\EnglishApp.DataAccess"
   ],
   "SelectedNode": "\\EnglishStorageApplication.sln",
   "PreviewInSolutionExplorer": false

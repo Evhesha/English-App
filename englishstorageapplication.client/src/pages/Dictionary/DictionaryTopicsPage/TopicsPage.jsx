@@ -26,11 +26,11 @@ function TopicsPage() {
           link={"/cooking-topic"}
         />
         <Card
-          title={"Traveling"}
+          title={"Shopping"}
           image={
             <img src={shoppingImage} className="card-img-top" alt="..."></img>
           }
-          text={"Shopping topic topic"}
+          text={"Shopping topic"}
           link={"/shopping-topic"}
         />
       </div>

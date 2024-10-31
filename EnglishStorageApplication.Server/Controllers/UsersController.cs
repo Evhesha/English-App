@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.EnglishApp.Core.Models;
-using Microsoft.EntityFrameworkCore;
 using EnglishStorageApplication.Server.Contracts;
 
 namespace EnglishStorageApplication.Server.Controllers
