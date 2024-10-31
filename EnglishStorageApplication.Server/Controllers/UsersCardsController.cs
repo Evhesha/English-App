@@ -36,9 +36,6 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(response);
         }
 
-
-
-
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateUserCard([FromBody] UsersCardsRequest request)
         {
