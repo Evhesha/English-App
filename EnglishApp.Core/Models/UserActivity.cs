@@ -15,7 +15,7 @@
         public DateTime DateTime { get; }
         public bool IsActive { get; }
 
-        public static (UserActivity userActivity, string error) Create(Guid id, Guid userId, DateTime dateTime, bool isActive)
+        public static (UserActivity UserActivity, string error) Create(Guid id, Guid userId, DateTime dateTime, bool isActive)
         {
             string error = string.Empty;
 

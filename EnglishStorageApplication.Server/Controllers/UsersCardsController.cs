@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.Server.Contracts;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using Microsoft.EntityFrameworkCore;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishStorageApplication.Server.Controllers
 {

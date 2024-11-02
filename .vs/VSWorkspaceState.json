@@ -3,7 +3,8 @@
     "",
     "\\EnglishApp.Application",
     "\\EnglishApp.Application\\AppServices",
-    "\\EnglishApp.DataAccess"
+    "\\EnglishApp.DataAccess",
+    "\\EnglishStorageApplication.Server"
   ],
   "SelectedNode": "\\EnglishStorageApplication.sln",
   "PreviewInSolutionExplorer": false
