@@ -38,11 +38,14 @@
               </ul>
             </div>
             <div className="navbar-right">
-              <Link className="btn btn-outline" to={"/login"}>
-                Login
+              <Link  to={"/profile-page"}>
+                <i class="bi bi-person-circle" style={{ fontSize: '2.5rem' }}></i>
               </Link>
-              <Link className="btn btn-primary" to={"/signUp"} style={{paddingLeft: "10px", paddingRight: "10px"}}>
-                Sign-Up
+              <Link className="btn btn-outline-primary" to={"/login"} style={{paddingLeft: "10px", paddingRight: "10px"}}>
+                Login <i className="bi bi-box-arrow-in-right"></i>
+              </Link>
+              <Link className="btn btn-outline-primary" to={"/signUp"} style={{paddingLeft: "10px", paddingRight: "10px"}}>
+                Sign-Up <i className="bi bi-clipboard2-check"></i>
               </Link>
             </div>
           </header>

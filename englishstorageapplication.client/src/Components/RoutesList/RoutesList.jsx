@@ -21,6 +21,7 @@ import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
 
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
+import ProfilePage from "../../pages/ProfilePage/ProfilePage";
 import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
 import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
 import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
@@ -38,6 +39,7 @@ function RoutesList() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/profile-page" element={<ProfilePage />} />
 
         // Sidebar
         // Sidebar.Lessons
