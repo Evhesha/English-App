@@ -32,6 +32,9 @@ builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<IUserCardService, UserCardService>();
 builder.Services.AddScoped<IUsersCardsRepository, UsersCardsRepository>();
 
+builder.Services.AddScoped<IUserActivityService, UserActivityService>();
+builder.Services.AddScoped<IUsersActivitiesRepository, UsersActivitiesRepository>();
+
 var app = builder.Build();
 
 app.UseDefaultFiles();
