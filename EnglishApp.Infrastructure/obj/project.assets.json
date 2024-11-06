@@ -368,8 +368,8 @@
     },
     "EnglishApp.Core/1.0.0": {
       "type": "project",
-      "path": "../EnglishStorageApplication/EnglishApp.Core/EnglishApp.Core.csproj",
-      "msbuildProject": "../EnglishStorageApplication/EnglishApp.Core/EnglishApp.Core.csproj"
+      "path": "../EnglishApp.Core/EnglishApp.Core.csproj",
+      "msbuildProject": "../EnglishApp.Core/EnglishApp.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -386,11 +386,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Medvedskii\\BNTU\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
       "projectName": "EnglishApp.Infrastructure",
-      "projectPath": "C:\\Medvedskii\\BNTU\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
+      "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-      "outputPath": "C:\\Medvedskii\\BNTU\\EnglishApp.Infrastructure\\obj\\",
+      "outputPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

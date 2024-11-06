@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZSv0zpwNazw=",
+  "dgSpecHash": "DRkSXO4tbFQ=",
   "success": true,
   "projectFilePath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\EvGenii\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\EvGenii\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\8.0.10\\microsoft.aspnetcore.spaproxy.8.0.10.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

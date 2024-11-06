@@ -156,3 +156,5 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bi
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Application.pdb
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Core.pdb
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.DataAccess.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\AutoMapper.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
