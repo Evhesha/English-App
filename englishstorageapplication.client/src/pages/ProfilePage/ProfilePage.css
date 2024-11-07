@@ -1,0 +1,52 @@
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.profile-main {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.profile-avatar-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.profile-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info h2,
+.profile-info h4 {
+    margin: 0;
+}
+
+.profile-info .btn {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.profile-activity {
+    flex-grow: 1;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.activity-calendar {
+    margin-top: 20px;
+}
