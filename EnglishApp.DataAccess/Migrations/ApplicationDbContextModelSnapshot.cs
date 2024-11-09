@@ -22,6 +22,48 @@ namespace EnglishStorageApplication.Server.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("EnglishApp.DataAccess.UserEntites.UserActivityEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UsersActivities");
+                });
+
+            modelBuilder.Entity("EnglishStorageApplication.EnglishApp.DataAccess.UserEntites.UserCardEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("NameOfUsersCard")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserCardData")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UsersCards");
+                });
+
             modelBuilder.Entity("EnglishStorageApplication.Server.Data.UserEntites.UserEntity", b =>
                 {
                     b.Property<Guid>("Id")

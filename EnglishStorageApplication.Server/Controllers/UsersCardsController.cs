@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using EnglishStorageApplication.Server.Contracts;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -7,40 +9,62 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class UsersCardsController : ControllerBase
     {
-        private readonly IUserService _userService;
-        public UsersCardsController(IUserService userService)
+        private readonly IUserCardService _userCardService;
+        public UsersCardsController(IUserCardService userCardService)
         {
-            _userService = userService;
+            _userCardService = userCardService;
         }
 
         [HttpGet]
-        public IActionResult GetUsersCards()
+        public async Task<ActionResult<List<UsersCardsResponse>>> GetUsersCards()
         {
-            return NoContent();
+            var usersCards = await _userCardService.GetAllUsersCards();
+            var response = usersCards.Select(u => new UsersCardsResponse(u.Id, u.UserId, u.NameOfUserCard, u.UserCardData));
+            return Ok(response);
         }
 
-        [HttpGet("{id:int}")]
-        public IActionResult GetUserCards(int id)
+        [HttpGet("{userId:guid}")]
+        public async Task<ActionResult<List<UsersCardsResponse>>> GetUserCards(Guid userId)
         {
-            return NoContent();
+            var userCards = await _userCardService.GetAllUserCards(userId);
+            if (userCards == null || !userCards.Any())
+            {
+                return NoContent();
+            }
+            var response = userCards.Select(u => new UsersCardsResponse(u.Id, u.UserId, u.NameOfUserCard, u.UserCardData)).ToList();
+            return Ok(response);
         }
 
-        //[HttpPost]
-        //public IActionResult CreateUserCard([FromBody] UserCard userCardD)
-        //{
-        //    return NoContent();
-        //}
+        [HttpPost]
+        public async Task<ActionResult<Guid>> CreateUserCard([FromBody] UsersCardsRequest request)
+        {
+            var (userCard, error) = UserCard.Create(
+                Guid.NewGuid(),
+                request.userId,
+                request.nameOfUserCard,
+                request.userCardData
+            );
 
-        //[HttpPut("{id:guid}")]
-        //public IActionResult UpdateUserCard(Guid id, [FromBody] UserCard userCard)
-        //{
-        //    return NoContent();
-        //}
+            if (!string.IsNullOrEmpty(error))
+            {
+                return BadRequest(error);
+            }
+
+            var userId = await _userCardService.CreateUserCard(userCard);
+            return Ok(userId);
+        }
+
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> UpdateUserCard(Guid id, [FromBody] UsersCardsRequest request)
+        {
+            var userCardId = await _userCardService.UpdateUserCard(id, request.userId, request.nameOfUserCard, request.userCardData);
+            return Ok(userCardId);
+        }
 
         [HttpDelete("{id:guid}")]
-        public IActionResult DeleteUserCard(Guid id)
+        public async Task<IActionResult> DeleteUserCard(Guid id)
         {
-            return NoContent();
+            return Ok(await _userCardService.DeleteUserCard(id));
         }
     }
 }
