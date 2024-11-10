@@ -7,14 +7,14 @@ using System.Text;
 
 namespace EnglishApp.Infrastructure
 {
-    public class JwtProvider (IOptions<JwtOptions> options)
+    public class JwtProvider(IOptions<JwtOptions> options)
     {
         private readonly JwtOptions _options = options.Value;
 
         public string GenerateToken(User user)
         {
-            Claim[] claims = [new("UserId", user.Id.ToString())]; 
-    
+            Claim[] claims = [new("UserId", user.Id.ToString())];
+
             var signingCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SectretKey)), SecurityAlgorithms.HmacSha256);
 

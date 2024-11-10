@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.Server.Contracts;
 using Microsoft.EntityFrameworkCore;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+using EnglishStorageApplication.EnglishApp.Core.Models;
+using EnglishStorageApplication.Server.Contracts.Users;
+using Microsoft.AspNetCore.Identity.Data;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -11,22 +14,21 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        
-        private readonly IUserService _authService;
+        private readonly EnglishApp.Core.Abstractions.IAuthenticationService _authService;
 
-        public AuthController(IUserService authService)
+        public AuthController(EnglishApp.Core.Abstractions.IAuthenticationService authService)
         {
             _authService = authService;
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult> Register([FromBody] UsersResponse request)
+        public async Task<ActionResult> Register([FromBody] RegisterUserRequest request)
         {
             var (user, error) = EnglishStorageApplication.EnglishApp.Core.Models.User.Create(
                 Guid.NewGuid(),
-                request.name,
-                request.email,
-                request.password
+                request.Name,
+                request.Email,
+                request.Password
             );
 
             if (!string.IsNullOrEmpty(error))
@@ -34,22 +36,23 @@ namespace EnglishStorageApplication.Server.Controllers
                 return BadRequest(error);
             }
 
-            var userId = await _authService.CreateUser(user);
-            return Ok(userId);
+            var userId = await _authService.Register(user.Name, user.Email, user.Password);
+            return Ok(new { UserId = userId });
         }
 
-        //[HttpPost("login")]
-        //public async Task<ActionResult<string>> Login([FromBody] LoginRequest request)
-        //{
-        //    try
-        //    {
-        //        var token = await _authService.Login(request.email, request.password);
-        //        return Ok(token);
-        //    }
-        //    catch (UnauthorizedAccessException)
-        //    {
-        //        return Unauthorized("Invalid credentials");
-        //    }
-        //}
+
+        [HttpPost("login")]
+        public async Task<ActionResult<string>> Login([FromBody] LoginRequest request)
+        {
+            try
+            {
+                var token = await _authService.Login(request.Email, request.Password);
+                return Ok(new { Token = token });
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized("Invalid credentials");
+            }
+        }
     }
 }

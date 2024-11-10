@@ -6,10 +6,10 @@ namespace EnglishStorageApplication.Server.Endpoints
 {
     public static class UsersEndpoints
     {
-        public static IEndpointRouteBuilder MapUserEndPoints (this IEndpointRouteBuilder app)
+        public static IEndpointRouteBuilder MapUserEndPoints(this IEndpointRouteBuilder app)
         {
-            app.MapPost("register", Register);
-            app.MapPost("login", Login);
+            app.MapPost("/api/users/register", Register);
+            app.MapPost("/api/users/login", Login);
             return app;
         }
 
@@ -18,17 +18,30 @@ namespace EnglishStorageApplication.Server.Endpoints
             AuthenticationService authenticationService)
         {
             await authenticationService.Register(
-                registerUserRequest.Name, 
-                registerUserRequest.Email, 
+                registerUserRequest.Name,
+                registerUserRequest.Email,
                 registerUserRequest.Password
             );
 
-            return Results.Ok();
+            return Results.Ok(new { Message = "User registered successfully" });
         }
 
-        private static async Task<IResult> Login()
+        private static async Task<IResult> Login(
+            LoginUserRequest loginUserRequest,
+            AuthenticationService authenticationService)
         {
-            return Results.Ok();
+            var token = await authenticationService.Login(
+                loginUserRequest.Email,
+                loginUserRequest.Password
+            );
+
+            if (string.IsNullOrEmpty(token))
+            {
+                return Results.Unauthorized();
+            }
+
+            return Results.Ok(new { Token = token });
         }
     }
 }
+

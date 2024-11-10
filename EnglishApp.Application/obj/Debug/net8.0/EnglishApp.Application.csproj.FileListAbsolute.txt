@@ -16,3 +16,5 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Application\obj\Debug\ne
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Application\obj\Debug\net8.0\refint\EnglishApp.Application.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Application\obj\Debug\net8.0\EnglishApp.Application.pdb
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Application\obj\Debug\net8.0\ref\EnglishApp.Application.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Application\bin\Debug\net8.0\EnglishApp.Infrastructure.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Application\bin\Debug\net8.0\EnglishApp.Infrastructure.pdb
