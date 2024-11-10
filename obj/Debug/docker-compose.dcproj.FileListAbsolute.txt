@@ -30,3 +30,14 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\EnglishApp.Application.pd
 C:\Medvedskii\BNTU\EnglishStorageApplication\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Medvedskii\BNTU\EnglishStorageApplication\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Medvedskii\BNTU\EnglishStorageApplication\obj\Debug\docker-c.35A3FFBA.Up2Date
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\EnglishApp.Infrastructure.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\BCrypt.Net-Next.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\EnglishApp.Infrastructure.pdb

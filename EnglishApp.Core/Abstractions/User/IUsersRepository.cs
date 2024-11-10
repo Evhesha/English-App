@@ -7,6 +7,7 @@ namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
         Task<Guid> Create(User user);
         Task<Guid> Delete(Guid id);
         Task<List<User>> Get();
+        Task<User> GetByEmail(string email);
         Task<Guid> Update(Guid id, string name, string email, string password);
     }
 }
