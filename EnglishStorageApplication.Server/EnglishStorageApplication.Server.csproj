@@ -33,10 +33,4 @@
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 		</ProjectReference>
 	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="Data\" />
-		<Folder Include="DTOs\" />
-		<Folder Include="Helpers\" />
-	</ItemGroup>
 </Project>

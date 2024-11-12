@@ -28,7 +28,8 @@ namespace EnglishStorageApplication.Server.Endpoints
 
         private static async Task<IResult> Login(
             LoginUserRequest loginUserRequest,
-            AuthenticationService authenticationService)
+            AuthenticationService authenticationService,
+            HttpContext context)
         {
             var token = await authenticationService.Login(
                 loginUserRequest.Email,
@@ -39,6 +40,8 @@ namespace EnglishStorageApplication.Server.Endpoints
             {
                 return Results.Unauthorized();
             }
+
+            context.Response.Cookies.Append("tasty-cookies", token);
 
             return Results.Ok(new { Token = token });
         }
