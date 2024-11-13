@@ -1,17 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function ListGroupElement({ name, email, password }) {
+function ListGroupElement({ id, name, email }) {
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center" style={{ border: '2px solid #ccc', borderRadius: '5px', marginBottom: '10px', padding: '10px' }}>
             <div> 
+            <div style={{ flex: 1 }}> 
+                <p><b>Id: </b> {id}</p>
+            </div>
             <div style={{ flex: 1 }}> 
                 <p><b>Name: </b> {name}</p>
             </div>
             <div style={{ flex: 1 }}>
                 <p><b>Email: </b> {email}</p>
-            </div>
-            <div style={{ flex: 1 }}>
-                <p><b>Password: </b> {password}</p>
             </div>
             </div>
             <div>

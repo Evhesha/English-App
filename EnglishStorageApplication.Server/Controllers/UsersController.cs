@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.Server.Contracts;
+using Microsoft.AspNetCore.Cors;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -20,6 +21,7 @@ namespace EnglishStorageApplication.Server.Controllers
         //Это временное решение, пока ты не готов добавить реальную функциональность!
 
         [HttpGet]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UsersResponse>>> GetUsers()
         {
             var users = await _context.GetAllUsers();

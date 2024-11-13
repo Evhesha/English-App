@@ -66,6 +66,14 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+// Настройка CORS
+builder.Services.AddCors(options => 
+{ options.AddPolicy("AllowSpecificOrigin",
+    builder => builder.WithOrigins("http://localhost:5173") 
+    .AllowAnyMethod() 
+    .AllowAnyHeader()); 
+});
+
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -79,6 +87,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting(); 
+
+// Применение политики CORS
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthentication();
 app.UseAuthorization();
