@@ -7,13 +7,21 @@ using System.Text;
 
 namespace EnglishApp.Infrastructure
 {
-    public class JwtProvider(IOptions<JwtOptions> options)
+    public class JwtProvider
     {
-        private readonly JwtOptions _options = options.Value;
+        private readonly JwtOptions _options;
+
+        public JwtProvider(IOptions<JwtOptions> options)
+        {
+            _options = options.Value ?? throw new ArgumentNullException(nameof(options));
+        }
 
         public string GenerateToken(User user)
         {
-            Claim[] claims = [new("UserId", user.Id.ToString())];
+            var claims = new[]
+            {
+                new Claim("UserId", user.Id.ToString())
+            };
 
             var signingCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SectretKey)), SecurityAlgorithms.HmacSha256);
@@ -22,10 +30,9 @@ namespace EnglishApp.Infrastructure
                 claims: claims,
                 signingCredentials: signingCredentials,
                 expires: DateTime.UtcNow.AddHours(_options.ExpitesHours)
-                );
+            );
 
-            var tokenValue = new JwtSecurityTokenHandler().WriteToken(token);
-            return tokenValue.ToString();
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

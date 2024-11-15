@@ -82,23 +82,18 @@ function Sidebar() {
             <div className="collapse" id="orders-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
-                  <Link to="/orders/new" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    New
+                  <Link to="/topics-tests" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                    By topics
                   </Link>
                 </li>
                 <li>
-                  <Link to="/orders/processed" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Processed
+                  <Link to="/mixed-tests" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                    Mixed
                   </Link>
                 </li>
                 <li>
-                  <Link to="/orders/shipped" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Shipped
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/orders/returned" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Returned
+                  <Link to="/level-tests" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                    By level
                   </Link>
                 </li>
               </ul>
@@ -117,12 +112,7 @@ function Sidebar() {
             <div className="collapse" id="account-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
-                  <Link to="/account/new" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    New...
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/account/profile" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link to="/profile-page" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
                     Profile
                   </Link>
                 </li>

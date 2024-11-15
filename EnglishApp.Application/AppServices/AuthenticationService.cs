@@ -1,8 +1,6 @@
 ﻿using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishApp.Infrastructure;
-using System.Security.Claims;
-using System.Text;
 
 namespace EnglishApp.Application.AppServices
 {
