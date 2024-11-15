@@ -30,6 +30,7 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpPost]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request)
         {
             var (user, error) = EnglishStorageApplication.EnglishApp.Core.Models.User.Create(
@@ -50,6 +51,7 @@ namespace EnglishStorageApplication.Server.Controllers
 
 
         [HttpPut("{id:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request)
         {
             var userId = await _context.UpdateUser(id, request.name, request.email, request.password);
@@ -58,6 +60,7 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpDelete("{id:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUser(Guid id)
         {
             return Ok(await _context.DeleteUser(id));
