@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import ListGroupElement from "../../Components/ListGroupElement/ListGroupElement";
 import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
-import CreateUserPopUp from '../../Components/PopUps/CreateUserPopUp';
+import CreateUserPopUp from "../../Components/PopUps/CreateUserPopUp";
 
 function AdminPanel() {
   const [users, setUsers] = useState([]);
@@ -10,10 +10,10 @@ function AdminPanel() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://localhost:5001/api/users');
+        const response = await axios.get("https://localhost:5001/api/users");
         setUsers(response.data);
       } catch (error) {
-        console.error('Ошибка при получении пользователей:', error);
+        console.error("Ошибка при получении пользователей:", error);
       }
     };
 
@@ -21,17 +21,23 @@ function AdminPanel() {
   }, []);
 
   const handleDelete = (id) => {
-    setUsers(users.filter(user => user.id !== id));
+    setUsers(users.filter((user) => user.id !== id));
   };
 
   return (
     <>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <ToLinkButton link="/home" placeholder={"Home"} />
-        <h1 style={{ marginLeft: '20px' }}>Admin Panel</h1>
+        <h1 style={{ marginLeft: "20px" }}>Admin Panel</h1>
       </div>
-      <p>Num of all users <b>{users.length}</b></p>
-      <CreateUserPopUp onPost={newUser => setUsers([...users, newUser])} />
+      <p>
+        Num of all users <b>{users.length}</b>
+      </p>
+      <CreateUserPopUp onPost={(newUser) => setUsers([...users, newUser])} />
+      <p></p>
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
       <p></p>
       <div className="list-group">
         {users.map((user, index) => (
