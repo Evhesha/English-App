@@ -20,19 +20,20 @@ namespace EnglishApp.Infrastructure
         {
             var claims = new[]
             {
-                new Claim("UserId", user.Id.ToString())
+              new Claim("UserId", user.Id.ToString())
             };
 
             var signingCredentials = new SigningCredentials(
-                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SectretKey)), SecurityAlgorithms.HmacSha256);
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SecretKey)), SecurityAlgorithms.HmacSha256); // Исправлено на SecretKey
 
             var token = new JwtSecurityToken(
                 claims: claims,
                 signingCredentials: signingCredentials,
-                expires: DateTime.UtcNow.AddHours(_options.ExpitesHours)
+                expires: DateTime.UtcNow.AddHours(_options.ExpiresHours) // Исправлено на ExpiresHours
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
     }
 }

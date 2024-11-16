@@ -1,31 +1,48 @@
 import ChooseExercise from "../../Components/Exercise/ChooseExercise";
 import InputExercise from "../../Components/Exercise/InputExercise";
 import "../Lessons/Lessons.css";
+import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
 
 function FutureSimple() {
   return (
     <>
-      <h1>Future Simple - простое будущее время</h1>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <ToLinkButton link="/list-lessons-page" placeholder={"Lessons"} />
+        <h1 style={{ marginLeft: "20px" }}>Future Simple - простое будущее время</h1>
+      </div>
       <p>
-        Future Simple (простое будущее время) используется для высказывания предположений о будущем 
-        или о событиях, которые точно произойдут и на которые мы не можем повлиять. 
-        Также это время применяется для обещаний, угроз, предупреждений и предостережений.
+        Future Simple (простое будущее время) используется для высказывания
+        предположений о будущем или о событиях, которые точно произойдут и на
+        которые мы не можем повлиять. Также это время применяется для обещаний,
+        угроз, предупреждений и предостережений.
       </p>
 
       <h2>Случаи употребления Future Simple</h2>
       <div className="usage-box">
         <ol>
-          <li>Предсказания и предположения о будущем:
-            <p><i>I think it will rain tomorrow — Я думаю, завтра будет дождь</i></p>
+          <li>
+            Предсказания и предположения о будущем:
+            <p>
+              <i>I think it will rain tomorrow — Я думаю, завтра будет дождь</i>
+            </p>
           </li>
-          <li>Спонтанные решения:
-            <p><i>I will help you with your bags — Я помогу тебе с сумками</i></p>
+          <li>
+            Спонтанные решения:
+            <p>
+              <i>I will help you with your bags — Я помогу тебе с сумками</i>
+            </p>
           </li>
-          <li>Обещания:
-            <p><i>I will always love you — Я всегда буду любить тебя</i></p>
+          <li>
+            Обещания:
+            <p>
+              <i>I will always love you — Я всегда буду любить тебя</i>
+            </p>
           </li>
-          <li>Угрозы или предупреждения:
-            <p><i>You will regret this — Ты пожалеешь об этом</i></p>
+          <li>
+            Угрозы или предупреждения:
+            <p>
+              <i>You will regret this — Ты пожалеешь об этом</i>
+            </p>
           </li>
         </ol>
       </div>
@@ -39,7 +56,9 @@ function FutureSimple() {
       </div>
 
       <div className="important-box">
-        <p><b>Важно!</b> Will используется для всех лиц и чисел:</p>
+        <p>
+          <b>Важно!</b> Will используется для всех лиц и чисел:
+        </p>
         <p>I will</p>
         <p>You will</p>
         <p>He/She/It will</p>
@@ -48,7 +67,9 @@ function FutureSimple() {
       </div>
 
       <div className="examples-box">
-        <p><b>Примеры: </b></p>
+        <p>
+          <b>Примеры: </b>
+        </p>
         <p>I will work tomorrow — Я буду работать завтра</p>
         <p>She will help you — Она поможет тебе</p>
         <p>They will arrive next week — Они приедут на следующей неделе</p>
@@ -87,7 +108,9 @@ function FutureSimple() {
       </div>
 
       <div className="examples-box">
-        <p><b>Примеры:</b></p>
+        <p>
+          <b>Примеры:</b>
+        </p>
         <p>I won't work tomorrow — Я не буду работать завтра</p>
         <p>She will not help you — Она не поможет тебе</p>
         <p>They won't come to the party — Они не придут на вечеринку</p>
@@ -127,7 +150,9 @@ function FutureSimple() {
 
       <h3>Общие вопросы</h3>
       <div className="examples-box">
-        <p><b>Примеры:</b></p>
+        <p>
+          <b>Примеры:</b>
+        </p>
         <p>Will you help me? — Ты поможешь мне?</p>
         <p>Will she come tomorrow? — Она придёт завтра?</p>
         <p>Will they win the match? — Они выиграют матч?</p>
@@ -139,7 +164,9 @@ function FutureSimple() {
       </div>
 
       <div className="examples-box">
-        <p><b>Примеры:</b></p>
+        <p>
+          <b>Примеры:</b>
+        </p>
         <p>When will you come? — Когда ты придёшь?</p>
         <p>Where will they go? — Куда они пойдут?</p>
         <p>What will she cook? — Что она приготовит?</p>
@@ -177,7 +204,9 @@ function FutureSimple() {
           <h3>Основные маркеры:</h3>
           <ul>
             <li>tomorrow — завтра</li>
-            <li>next week/month/year — на следующей неделе/в следующем месяце/году</li>
+            <li>
+              next week/month/year — на следующей неделе/в следующем месяце/году
+            </li>
             <li>in the future — в будущем</li>
             <li>tonight — сегодня вечером</li>
             <li>soon — скоро</li>
@@ -188,11 +217,23 @@ function FutureSimple() {
       </div>
 
       <div className="examples-box">
-        <p><b>Примеры с маркерами времени:</b></p>
-        <p>I will call you <b>tomorrow</b> — Я позвоню тебе завтра</p>
-        <p>They will move to London <b>next year</b> — Они переедут в Лондон в следующем году</p>
-        <p>She will graduate <b>in two months</b> — Она закончит учебу через два месяца</p>
-        <p>We will meet <b>soon</b> — Мы скоро встретимся</p>
+        <p>
+          <b>Примеры с маркерами времени:</b>
+        </p>
+        <p>
+          I will call you <b>tomorrow</b> — Я позвоню тебе завтра
+        </p>
+        <p>
+          They will move to London <b>next year</b> — Они переедут в Лондон в
+          следующем году
+        </p>
+        <p>
+          She will graduate <b>in two months</b> — Она закончит учебу через два
+          месяца
+        </p>
+        <p>
+          We will meet <b>soon</b> — Мы скоро встретимся
+        </p>
       </div>
 
       <div className="cards-container">

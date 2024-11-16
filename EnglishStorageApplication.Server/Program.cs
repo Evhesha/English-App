@@ -4,11 +4,9 @@ using EnglishStorageApplication.EnglishApp.Application.AppServices;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
 using EnglishStorageApplication.EnglishApp.DataAccess;
+using EnglishStorageApplication.EnglishApp.Extensions;
 using EnglishStorageApplication.EnglishApp.Infrastructure;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,39 +38,10 @@ builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
 // Настройка аутентификации и JWT
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    var secretKey = builder.Configuration["JwtOptions:SecretKey"];
-    if (string.IsNullOrEmpty(secretKey))
-    {
-        throw new ArgumentNullException("JwtOptions:SecretKey", "JWT Secret Key is missing or null.");
-    }
-
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["JwtOptions:Issuer"],
-        ValidAudience = builder.Configuration["JwtOptions:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
-        ClockSkew = TimeSpan.Zero
-    };
-});
+builder.Services.AddJwtAuthentication(builder.Configuration);
 
 // Настройка CORS
-builder.Services.AddCors(options => 
-{ options.AddPolicy("AllowSpecificOrigin",
-    builder => builder.WithOrigins("http://localhost:5173") 
-    .AllowAnyMethod() 
-    .AllowAnyHeader()); 
-});
+builder.Services.AddCustomCors(builder.Configuration);
 
 var app = builder.Build();
 
@@ -88,7 +57,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseRouting(); 
+app.UseRouting();
 
 // Применение политики CORS
 app.UseCors("AllowSpecificOrigin");
