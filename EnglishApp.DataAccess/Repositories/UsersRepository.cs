@@ -27,18 +27,22 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
             return users;
         }
 
-        //public async Task<User> GetByEmail(string email)
-        //{
-        //    var usersEntity = await _context.Users
-        //        .AsNoTracking()
-        //        .FirstOrDefaultAsync(u => u.Email == email) ?? throw new Exception()
-        //        .ToListAsync();
+        public async Task<User> GetByEmail(string email)
+        {
+            var userEntity = await _context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Email == email);
 
-        //    var users = usersEntity
-        //        .Select(x => User.Create(userEntity.Id, userEntity.Name, userEntity.Email, userEntity.Password).User
-        //        .ToList());
-        //    return users; 
-        //}
+            if (userEntity == null)
+                throw new Exception("User not found");
+
+            var (user, error) = User.Create(userEntity.Id, userEntity.Name, userEntity.Email, userEntity.Password);
+
+            if (!string.IsNullOrEmpty(error))
+                throw new Exception(error);
+
+            return user;
+        }
 
         public async Task<Guid> Create(User user)
         {

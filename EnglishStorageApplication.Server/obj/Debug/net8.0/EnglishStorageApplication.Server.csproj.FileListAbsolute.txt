@@ -158,3 +158,14 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bi
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.DataAccess.pdb
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\AutoMapper.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Infrastructure.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Infrastructure.pdb

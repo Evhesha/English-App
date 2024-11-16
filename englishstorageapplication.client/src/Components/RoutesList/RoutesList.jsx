@@ -6,9 +6,15 @@ import {
   Navigate
 } from "react-router-dom";
 
+import LessonsListPage from "../../pages/Lessons/LessonsListPage/LessonsListPage";
+
 import PresentSimple from "/src/pages/Lessons/PresentSimple";
 import FutureSimple from "/src/pages/Lessons/FutureSimple";
 import PastSimple from "/src/pages/Lessons/PastSimple";
+import PresentContinuous from "../../pages/Lessons/PresentContinuous";
+import PastContinuous from "../../pages/Lessons/PastContinuous";
+import PresentPerfect from "../../pages/Lessons/PresentPerfect";
+import PresentPerfectContinuous from "../../pages/Lessons/PresentPerfectContinuous";
 
 import AboutApp from "/src/pages/Another/AboutApp";
 import Home from "../Home/Home";
@@ -22,9 +28,16 @@ import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
 import ProfilePage from "../../pages/ProfilePage/ProfilePage";
+
 import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
+
 import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
 import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
+
+import ByLevelTestPage from "../../pages/Tests/By level/ByLevelTestPage";
+import ByTopicsPage from "../../pages/Tests/By topics/ByTopicsPage";
+import TestCardLink from "../../pages/Tests/TestCardLink";
+import MixedTestsPage from "../../pages/Tests/Mixed/MixedTestsPage";
 
 function RoutesList() {
   return (
@@ -43,9 +56,15 @@ function RoutesList() {
 
         // Sidebar
         // Sidebar.Lessons
+        <Route path="/list-lessons-page" element={<LessonsListPage />} />
+
         <Route path="/present-simple" element={<PresentSimple />} />
         <Route path="/future-simple" element={<FutureSimple />} />
         <Route path="/past-simple" element={<PastSimple />} />
+        <Route path="/present-continuous" element={<PresentContinuous />} />
+        <Route path="/past-continuous" element={<PastContinuous />} />
+        <Route path="/present-perfect" element={<PresentPerfect />} />
+        <Route path="/present-perfect-continuous" element={<PresentPerfectContinuous />} />
 
         //Sidebar.Dictionary
         <Route path="/topics-page" element={<TopicsPage />}/>
@@ -57,6 +76,11 @@ function RoutesList() {
         <Route path="/traveling-topic" element={<Traveling />}/>
         <Route path="/cooking-topic" element={<Cooking />}/>
         <Route path="/shopping-topic" element={<Shopping />}/>
+
+        //Sideber.Tests
+        <Route path="/level-tests" element={<ByLevelTestPage />}/>
+        <Route path="/topics-tests" element={<ByTopicsPage />}/>
+        <Route path="/mixed-tests" element={<MixedTestsPage />}/>
         
         // Footer
 

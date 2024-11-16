@@ -1,31 +1,29 @@
-// Controllers: Содержит контроллеры, которые обрабатывают HTTP-запросы и возвращают ответы.
-// Models: Содержит модели данных, которые представляют сущности базы данных.
-// Data: Содержит контекст базы данных и миграции.
-// Services: Содержит бизнес-логику приложения. Здесь можно определить интерфейсы и их реализации для различных сервисов.
-// Repositories: Содержит репозитории для доступа к данным. Это помогает отделить логику доступа к данным от бизнес-логики.
-// DTOs: Содержит объекты передачи данных (Data Transfer Objects), которые используются для передачи данных между слоями приложения.
-// Helpers: Содержит вспомогательные классы и утилиты, такие как генерация JWT токенов или отправка email.
-
-using EnglishStorageApplication.EnglishApp.DataAccess;
-using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
+using EnglishApp.Application.AppServices;
+using EnglishApp.Infrastructure;
 using EnglishStorageApplication.EnglishApp.Application.AppServices;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
+using EnglishStorageApplication.EnglishApp.DataAccess;
+using EnglishStorageApplication.EnglishApp.Extensions;
+using EnglishStorageApplication.EnglishApp.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using EnglishApp.Application.AppServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Конфигурация служб
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ApplicationDbContext>(
-    options =>
-    {
-        options.UseNpgsql(builder.Configuration.GetConnectionString("ApplicationDbContext"));
-    });
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("ApplicationDbContext"));
+});
 
+// Регистрация конфигурации JwtOptions
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
+
+// Регистрация сервисов
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
@@ -34,6 +32,16 @@ builder.Services.AddScoped<IUsersCardsRepository, UsersCardsRepository>();
 
 builder.Services.AddScoped<IUserActivityService, UserActivityService>();
 builder.Services.AddScoped<IUsersActivitiesRepository, UsersActivitiesRepository>();
+
+builder.Services.AddScoped<JwtProvider>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+
+// Настройка аутентификации и JWT
+builder.Services.AddJwtAuthentication(builder.Configuration);
+
+// Настройка CORS
+builder.Services.AddCustomCors(builder.Configuration);
 
 var app = builder.Build();
 
@@ -49,6 +57,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+// Применение политики CORS
+app.UseCors("AllowSpecificOrigin");
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

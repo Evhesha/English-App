@@ -1,41 +1,18 @@
 import { Link } from "react-router-dom";
 import "../Sidebar/Sidebar.css";
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Sidebar() {
   return (
     <>
       <div className="flex-shrink-0 p-3" style={{ width: "280px" }}>
         <ul className="list-unstyled ps-0">
-          <li className="mb-1">
-            <button
-              className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#home-collapse"
-              aria-expanded="true"
-            >
-              <strong className="large-text">Lessons</strong>
-            </button>
-            <div className="collapse show" id="home-collapse">
-              <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li>
-                  <Link to="/present-simple" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Present Simple
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/future-simple" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Future Simple
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/past-simple" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Past Simple
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </li>
+        <li className="mb-1">
+  <Link to="/list-lessons-page" className="btn btn-toggle d-inline-flex align-items-center rounded border-0">
+    <strong className="large-text">Lessons</strong>
+  </Link>
+</li>
+
           <li className="mb-1">
             <button
               className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
@@ -48,22 +25,34 @@ function Sidebar() {
             <div className="collapse" id="dashboard-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
-                  <Link to="/my-dict-page" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link
+                    to="/my-dict-page"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
                     My dictionary
                   </Link>
                 </li>
                 <li>
-                  <Link to="/topics-page" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link
+                    to="/topics-page"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
                     Themes
                   </Link>
                 </li>
                 <li>
-                  <Link to="/thousamd-popular" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link
+                    to="/thousamd-popular"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
                     1000 popular
                   </Link>
                 </li>
                 <li>
-                  <Link to="/words-in-parts" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link
+                    to="/words-in-parts"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
                     Words in parts
                   </Link>
                 </li>
@@ -82,23 +71,27 @@ function Sidebar() {
             <div className="collapse" id="orders-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
-                  <Link to="/orders/new" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    New
+                  <Link
+                    to="/topics-tests"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
+                    By topics
                   </Link>
                 </li>
                 <li>
-                  <Link to="/orders/processed" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Processed
+                  <Link
+                    to="/mixed-tests"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
+                    Mixed
                   </Link>
                 </li>
                 <li>
-                  <Link to="/orders/shipped" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Shipped
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/orders/returned" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    Returned
+                  <Link
+                    to="/level-tests"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
+                    By level
                   </Link>
                 </li>
               </ul>
@@ -117,22 +110,26 @@ function Sidebar() {
             <div className="collapse" id="account-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li>
-                  <Link to="/account/new" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                    New...
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/account/profile" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link
+                    to="/profile-page"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
                     Profile
                   </Link>
                 </li>
                 <li>
-                  <Link to="/account/settings" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link
+                    to="/account/settings"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
                     Settings
                   </Link>
                 </li>
                 <li>
-                  <Link to="/account/sign-out" className="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                  <Link
+                    to="/account/sign-out"
+                    className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                  >
                     Sign out
                   </Link>
                 </li>

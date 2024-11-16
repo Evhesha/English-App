@@ -1,0 +1,16 @@
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\bin\Debug\net8.0\EnglishApp.Infrastructure.deps.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\bin\Debug\net8.0\EnglishApp.Infrastructure.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\bin\Debug\net8.0\EnglishApp.Infrastructure.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\bin\Debug\net8.0\EnglishApp.Core.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\bin\Debug\net8.0\EnglishApp.Core.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.csproj.AssemblyReference.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.AssemblyInfo.cs
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.sourcelink.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishA.76FF6D52.Up2Date
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\refint\EnglishApp.Infrastructure.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\EnglishApp.Infrastructure.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Infrastructure\obj\Debug\net8.0\ref\EnglishApp.Infrastructure.dll

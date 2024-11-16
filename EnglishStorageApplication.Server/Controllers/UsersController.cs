@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.Server.Contracts;
+using Microsoft.AspNetCore.Cors;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -20,6 +21,7 @@ namespace EnglishStorageApplication.Server.Controllers
         //Это временное решение, пока ты не готов добавить реальную функциональность!
 
         [HttpGet]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UsersResponse>>> GetUsers()
         {
             var users = await _context.GetAllUsers();
@@ -28,6 +30,7 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpPost]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request)
         {
             var (user, error) = EnglishStorageApplication.EnglishApp.Core.Models.User.Create(
@@ -48,6 +51,7 @@ namespace EnglishStorageApplication.Server.Controllers
 
 
         [HttpPut("{id:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request)
         {
             var userId = await _context.UpdateUser(id, request.name, request.email, request.password);
@@ -56,6 +60,7 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpDelete("{id:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUser(Guid id)
         {
             return Ok(await _context.DeleteUser(id));
