@@ -2,7 +2,7 @@
 {
     public class JwtOptions
     {
-        public string SectretKey { get; set; } = string.Empty;
-        public int ExpitesHours { get; set; }
+        public string SecretKey { get; set; } = string.Empty;
+        public int ExpiresHours { get; set; }
     }
 }
