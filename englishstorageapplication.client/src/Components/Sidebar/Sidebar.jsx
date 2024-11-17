@@ -37,7 +37,7 @@ function Sidebar() {
                     to="/topics-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Themes
+                    Topics
                   </Link>
                 </li>
                 <li>
@@ -45,7 +45,7 @@ function Sidebar() {
                     to="/thousamd-popular"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    1000 popular
+                    100 popular
                   </Link>
                 </li>
                 <li>

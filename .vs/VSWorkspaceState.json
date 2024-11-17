@@ -5,7 +5,8 @@
     "\\EnglishApp.Application\\AppServices",
     "\\EnglishApp.DataAccess",
     "\\EnglishApp.DataAccess\\Repositories",
-    "\\EnglishStorageApplication.Server"
+    "\\EnglishStorageApplication.Server",
+    "\\EnglishStorageApplication.Server\\Controllers"
   ],
   "SelectedNode": "\\EnglishStorageApplication.sln",
   "PreviewInSolutionExplorer": false
