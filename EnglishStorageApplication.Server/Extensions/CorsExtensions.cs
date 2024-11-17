@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace EnglishStorageApplication.EnglishApp.Extensions
 {
+    // Это Extension нужен для CORS
     public static class CorsExtensions
     {
         public static IServiceCollection AddCustomCors(this IServiceCollection services, IConfiguration configuration)

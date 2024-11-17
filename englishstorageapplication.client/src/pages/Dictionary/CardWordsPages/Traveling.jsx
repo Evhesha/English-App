@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Traveling.css';
+import './CardWordsPages.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
