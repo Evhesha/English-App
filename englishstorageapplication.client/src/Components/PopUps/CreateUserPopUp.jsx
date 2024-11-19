@@ -55,7 +55,7 @@ function CreateUserPopUp({ onPost }) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-            <p>Add user</p>
+            <h3>Add user</h3>
             <form onSubmit={handleCreate}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">

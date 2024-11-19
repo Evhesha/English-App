@@ -1,15 +1,17 @@
+import React from 'react';
+
 function WordsInParts() {
   const tables = [
     {
-      title: "Местоимения (Subject Pronouns)",
+      title: "Личные местоимения (Personal Pronouns)",
       words: [
         { eng: "I", rus: "Я" },
         { eng: "He", rus: "Он" },
         { eng: "She", rus: "Она" },
-        { eng: "You", rus: "Ты" },
+        { eng: "You", rus: "Ты/Вы" },
         { eng: "We", rus: "Мы" },
         { eng: "They", rus: "Они" },
-        { eng: "It", rus: "Оно" },
+        { eng: "It", rus: "Оно" }
       ]
     },
     {
@@ -18,22 +20,123 @@ function WordsInParts() {
         { eng: "Me", rus: "Меня, мной, мне" },
         { eng: "Us", rus: "Нас, нами, о нас" },
         { eng: "Her", rus: "Ее, ей, о ней" },
-        { eng: "His", rus: "Его, ему, о нем" },
-        { eng: "You", rus: "Тобой, тебя, тебе" },
-        { eng: "Them", rus: "Ими, их, о них" },
-        { eng: "It", rus: "Его, ему, о нем, им" },
+        { eng: "Him", rus: "Его, ему, о нем" },
+        { eng: "You", rus: "Тебя/Вас" },
+        { eng: "Them", rus: "Их, ими, о них" },
+        { eng: "It", rus: "Его/Ее (для предметов)" }
       ]
     },
     {
-      title: "Предлоги и союзы",
+      title: "Притяжательные местоимения (Possessive Pronouns)",
       words: [
-        { eng: "To", rus: "К" },
+        { eng: "My/Mine", rus: "Мой/Моё" },
+        { eng: "Your/Yours", rus: "Твой/Ваш" },
+        { eng: "His", rus: "Его" },
+        { eng: "Her/Hers", rus: "Её" },
+        { eng: "Our/Ours", rus: "Наш" },
+        { eng: "Their/Theirs", rus: "Их" },
+        { eng: "Its", rus: "Его/Её (для предметов)" }
+      ]
+    },
+    {
+      title: "Основные предлоги (Basic Prepositions)",
+      words: [
+        { eng: "In", rus: "В" },
+        { eng: "On", rus: "На" },
+        { eng: "At", rus: "В/На/У" },
+        { eng: "To", rus: "К/В" },
+        { eng: "From", rus: "Из/От" },
         { eng: "With", rus: "С" },
-        { eng: "For", rus: "Для" },
-        { eng: "From", rus: "От" },
+        { eng: "Without", rus: "Без" },
+        { eng: "For", rus: "Для/За" },
         { eng: "Of", rus: "Родительный падеж" },
-        { eng: "As", rus: "Как" },
+        { eng: "By", rus: "К/Возле/От" }
+      ]
+    },
+    {
+      title: "Союзы (Conjunctions)",
+      words: [
         { eng: "And", rus: "И" },
+        { eng: "But", rus: "Но" },
+        { eng: "Or", rus: "Или" },
+        { eng: "Because", rus: "Потому что" },
+        { eng: "So", rus: "Поэтому" },
+        { eng: "If", rus: "Если" },
+        { eng: "Unless", rus: "Если не" },
+        { eng: "Although", rus: "Хотя" }
+      ]
+    },
+    {
+      title: "Базовые глаголы (Basic Verbs)",
+      words: [
+        { eng: "Be (am/is/are)", rus: "Быть" },
+        { eng: "Have", rus: "Иметь" },
+        { eng: "Do", rus: "Делать" },
+        { eng: "Go", rus: "Идти" },
+        { eng: "Come", rus: "Приходить" },
+        { eng: "See", rus: "Видеть" },
+        { eng: "Know", rus: "Знать" },
+        { eng: "Think", rus: "Думать" },
+        { eng: "Say", rus: "Говорить" },
+        { eng: "Get", rus: "Получать" }
+      ]
+    },
+    {
+      title: "Прилагательные (Common Adjectives)",
+      words: [
+        { eng: "Good", rus: "Хороший" },
+        { eng: "Bad", rus: "Плохой" },
+        { eng: "Big", rus: "Большой" },
+        { eng: "Small", rus: "Маленький" },
+        { eng: "Hot", rus: "Горячий" },
+        { eng: "Cold", rus: "Холодный" },
+        { eng: "New", rus: "Новый" },
+        { eng: "Old", rus: "Старый" },
+        { eng: "Happy", rus: "Счастливый" },
+        { eng: "Sad", rus: "Грустный" }
+      ]
+    },
+    {
+      title: "Наречия (Common Adverbs)",
+      words: [
+        { eng: "Very", rus: "Очень" },
+        { eng: "Really", rus: "Действительно" },
+        { eng: "Well", rus: "Хорошо" },
+        { eng: "Fast", rus: "Быстро" },
+        { eng: "Slowly", rus: "Медленно" },
+        { eng: "Often", rus: "Часто" },
+        { eng: "Sometimes", rus: "Иногда" },
+        { eng: "Never", rus: "Никогда" },
+        { eng: "Always", rus: "Всегда" },
+        { eng: "Usually", rus: "Обычно" }
+      ]
+    },
+    {
+      title: "Вопросительные слова (Question Words)",
+      words: [
+        { eng: "What", rus: "Что" },
+        { eng: "Where", rus: "Где" },
+        { eng: "When", rus: "Когда" },
+        { eng: "Why", rus: "Почему" },
+        { eng: "How", rus: "Как" },
+        { eng: "Who", rus: "Кто" },
+        { eng: "Which", rus: "Который" },
+        { eng: "Whose", rus: "Чей" }
+      ]
+    },
+    {
+      title: "Времена и даты (Time & Dates)",
+      words: [
+        { eng: "Today", rus: "Сегодня" },
+        { eng: "Tomorrow", rus: "Завтра" },
+        { eng: "Yesterday", rus: "Вчера" },
+        { eng: "Now", rus: "Сейчас" },
+        { eng: "Later", rus: "Позже" },
+        { eng: "Soon", rus: "Скоро" },
+        { eng: "Morning", rus: "Утро" },
+        { eng: "Evening", rus: "Вечер" },
+        { eng: "Night", rus: "Ночь" },
+        { eng: "Week", rus: "Неделя" }
       ]
     }
   ];
@@ -54,13 +157,15 @@ function WordsInParts() {
           animation: fadeInUp 0.5s ease forwards;
         }
 
-        .table-section:nth-child(2) {
-          animation-delay: 0.2s;
-        }
-
-        .table-section:nth-child(3) {
-          animation-delay: 0.4s;
-        }
+        .table-section:nth-child(2) { animation-delay: 0.2s; }
+        .table-section:nth-child(3) { animation-delay: 0.4s; }
+        .table-section:nth-child(4) { animation-delay: 0.6s; }
+        .table-section:nth-child(5) { animation-delay: 0.8s; }
+        .table-section:nth-child(6) { animation-delay: 1.0s; }
+        .table-section:nth-child(7) { animation-delay: 1.2s; }
+        .table-section:nth-child(8) { animation-delay: 1.4s; }
+        .table-section:nth-child(9) { animation-delay: 1.6s; }
+        .table-section:nth-child(10) { animation-delay: 1.8s; }
 
         @keyframes fadeInUp {
           from {
@@ -155,4 +260,3 @@ function WordsInParts() {
 }
 
 export default WordsInParts;
-

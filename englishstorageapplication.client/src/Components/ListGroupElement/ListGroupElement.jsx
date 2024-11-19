@@ -1,11 +1,16 @@
+import EditUserPopUp from '../PopUps/EditUserPopUp';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-function ListGroupElement({ id, name, email, onDelete }) {
+function ListGroupElement({ id, name, email, onDelete, onUpdate }) {
   const handleDelete = async () => {
+    const confirmDelete = window.confirm("Are you sure that you want to delete the user?");
+    if (!confirmDelete) return;
+
     try {
       await axios.delete(`https://localhost:5001/api/users/${id}`);
-      onDelete(id); // Уведомляем родительский компонент об удалении пользователя
+      onDelete(id);
     } catch (error) {
       console.error('Ошибка при удалении пользователя:', error);
     }
@@ -25,7 +30,13 @@ function ListGroupElement({ id, name, email, onDelete }) {
         </div>
       </div>
       <div>
-        <button type="button" className="btn btn-primary"><i className="bi bi-pencil"></i> Edit</button>
+        <EditUserPopUp 
+          id={id}
+          name={name}
+          email={email}
+          onPut={onUpdate}
+        />
+        <p></p>
         <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"></i> Delete</button>
       </div>
     </li>

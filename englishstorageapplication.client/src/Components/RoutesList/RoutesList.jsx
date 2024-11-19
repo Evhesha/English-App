@@ -24,6 +24,10 @@ import TopicsPage from "../../pages/Dictionary/DictionaryTopicsPage/TopicsPage";
 import ThousandPopular from "../../pages/Dictionary/ThousandPopular/ThousandPopular";
 import WordsInParts from "../../pages/Dictionary/WordsInParts/WordsInParts";
 import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
+import Sport from "../../pages/Dictionary/CardWordsPages/Sport";
+import Programming from "../../pages/Dictionary/CardWordsPages/Programming";
+import Nature from "../../pages/Dictionary/CardWordsPages/Nature";
+import Work from "../../pages/Dictionary/CardWordsPages/Work";
 
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
@@ -76,6 +80,10 @@ function RoutesList() {
         <Route path="/traveling-topic" element={<Traveling />}/>
         <Route path="/cooking-topic" element={<Cooking />}/>
         <Route path="/shopping-topic" element={<Shopping />}/>
+        <Route path="/sport-topic" element={<Sport />}/>
+        <Route path="/programming-topic" element={<Programming />}/>
+        <Route path="/nature-topic" element={<Nature />}/>
+        <Route path="/work-topic" element={<Work />}/>
 
         //Sideber.Tests
         <Route path="/level-tests" element={<ByLevelTestPage />}/>
