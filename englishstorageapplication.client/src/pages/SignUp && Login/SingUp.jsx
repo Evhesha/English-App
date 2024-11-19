@@ -1,5 +1,7 @@
-import { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import { useState } from "react";
+import styled, { keyframes } from "styled-components";
+import axios from "axios";
+import ExeptionPopUp from "../../Components/PopUps/ExeptionPopUp";
 
 const fadeIn = keyframes`
   from {
@@ -53,7 +55,23 @@ const FormFloating = styled.div`
     border-radius: 10px;
     border: 2px solid #e0e0e0;
     transition: all 0.3s ease;
-    
+
+    &:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+    }
+  }
+`;
+
+const FormFloatingPassword = styled.div`
+  margin-bottom: 20px;
+  position: relative;
+
+  input {
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+
     &:focus {
       border-color: #3498db;
       box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
@@ -69,13 +87,13 @@ const SubmitButton = styled.button`
   font-weight: 600;
   transition: all 0.3s ease;
   margin-top: 20px;
-  
+
   &:hover {
     background: #2980b9;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
   }
-  
+
   &:active {
     transform: translateY(0);
   }
@@ -83,7 +101,7 @@ const SubmitButton = styled.button`
 
 const RememberMe = styled.div`
   margin: 20px 0;
-  
+
   input {
     cursor: pointer;
     &:checked {
@@ -102,28 +120,54 @@ const Copyright = styled.p`
 
 function SignUp() {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    confirmPassword: '',
-    name: ''
+    email: "",
+    password: "",
+    confirmPassword: "",
+    name: "",
   });
+
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle signup logic here
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
+    setShowPopup(false); // Hide popup when input changes
+  };
+
+  const handleCreate = async (event) => {
+    event.preventDefault();
+    if (formData.password !== formData.confirmPassword) {
+      setShowPopup(true);
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        "https://localhost:5001/api/Auth/register",
+        {
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+        }
+      );
+      console.log("User created:", response.data);
+      // Здесь вы можете добавить логику после успешной регистрации, например, перенаправить пользователя на страницу входа
+    } catch (error) {
+      console.error("Error creating user:", error);
+      // Здесь вы можете обрабатывать ошибки регистрации
+    }
   };
 
   return (
     <Container>
       <FormCard>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleCreate}>
           <Title>Create Account</Title>
 
           <FormLabel>Введите ваш email</FormLabel>
@@ -141,7 +185,7 @@ function SignUp() {
           </FormFloating>
 
           <FormLabel>Придумайте пароль</FormLabel>
-          <FormFloating className="form-floating">
+          <FormFloatingPassword className="form-floating">
             <input
               type="password"
               className="form-control"
@@ -152,10 +196,10 @@ function SignUp() {
               onChange={handleChange}
             />
             <label htmlFor="password">Password</label>
-          </FormFloating>
+          </FormFloatingPassword>
 
           <FormLabel>Повторите пароль</FormLabel>
-          <FormFloating className="form-floating">
+          <FormFloatingPassword className="form-floating">
             <input
               type="password"
               className="form-control"
@@ -166,7 +210,7 @@ function SignUp() {
               onChange={handleChange}
             />
             <label htmlFor="confirmPassword">Confirm Password</label>
-          </FormFloating>
+          </FormFloatingPassword>
 
           <FormLabel>Придумайте имя</FormLabel>
           <FormFloating className="form-floating">
@@ -183,11 +227,7 @@ function SignUp() {
           </FormFloating>
 
           <RememberMe className="form-check text-start">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="remember"
-            />
+            <input className="form-check-input" type="checkbox" id="remember" />
             <label className="form-check-label" htmlFor="remember">
               Remember me
             </label>
@@ -199,10 +239,10 @@ function SignUp() {
 
           <Copyright>&copy; 2024-2026</Copyright>
         </form>
+        {showPopup && <ExeptionPopUp message={"Your password and confirm password must be equal"} onClose={() => setShowPopup(false)} />}
       </FormCard>
     </Container>
   );
 }
 
 export default SignUp;
-
