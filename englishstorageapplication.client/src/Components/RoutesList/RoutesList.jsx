@@ -39,9 +39,15 @@ import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
 import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
 
 import ByLevelTestPage from "../../pages/Tests/By level/ByLevelTestPage";
+import A0 from "../../pages/Tests/By level/ByLevelTests/A0";
+
 import ByTopicsPage from "../../pages/Tests/By topics/ByTopicsPage";
+import PresentSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PresentSimpleTest";
+
 import TestCardLink from "../../pages/Tests/TestCardLink";
+
 import MixedTestsPage from "../../pages/Tests/Mixed/MixedTestsPage";
+import MixedTest1 from "../../pages/Tests/Mixed/MixedTests/MixedTest1";
 
 function RoutesList() {
   return (
@@ -87,8 +93,13 @@ function RoutesList() {
 
         //Sideber.Tests
         <Route path="/level-tests" element={<ByLevelTestPage />}/>
+        <Route path="/A0-test" element={<A0 />}/>
+
         <Route path="/topics-tests" element={<ByTopicsPage />}/>
+        <Route path="/present-simple-test" element={<PresentSimpleTest />}/>
+
         <Route path="/mixed-tests" element={<MixedTestsPage />}/>
+        <Route path="/mixed-test-1" element={<MixedTest1 />}/>
         
         // Footer
 
