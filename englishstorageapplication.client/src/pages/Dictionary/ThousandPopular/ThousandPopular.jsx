@@ -59,7 +59,16 @@ function ThousandPopular() {
             {word: "air", transcription: "[eər]", translation: "воздух"},
             {word: "well", transcription: "[wel]", translation: "хорошо"},
             {word: "also", transcription: "[ˈɔːl.səʊ]", translation: "также"},
-            {word: "play", transcription: "[pleɪ]", translation: "играть"}
+            {word: "play", transcription: "[pleɪ]", translation: "играть"},
+            {word: "small", transcription: "[smɔːl]", translation: "маленький"},
+            {word: "large", transcription: "[lɑːdʒ]", translation: "большой"},
+            {word: "turn", transcription: "[tɜːn]", translation: "поворачивать"},
+            {word: "here", transcription: "[hɪər]", translation: "здесь"},
+            {word: "show", transcription: "[ʃəʊ]", translation: "показывать"},
+            {word: "every", transcription: "[ˈev.ri]", translation: "каждый"},
+            {word: "good", transcription: "[ɡʊd]", translation: "хороший"},
+            {word: "me", transcription: "[miː]", translation: "мне"},
+            {word: "give", transcription: "[ɡɪv]", translation: "давать"}
         ],
         [
             {word: "small", transcription: "[smɔːl]", translation: "маленький"},
@@ -84,7 +93,17 @@ function ThousandPopular() {
             {word: "why", transcription: "[waɪ]", translation: "почему"},
             {word: "ask", transcription: "[ɑːsk]", translation: "спрашивать"},
             {word: "men", transcription: "[men]", translation: "люди"},
-            {word: "change", transcription: "[tʃeɪndʒ]", translation: "менять"}
+            {word: "change", transcription: "[tʃeɪndʒ]", translation: "менять"},
+            {word: "help", transcription: "[help]", translation: "помогать"},
+            {word: "line", transcription: "[laɪn]", translation: "линия"},
+            {word: "much", transcription: "[mʌtʃ]", translation: "много"},
+            {word: "before", transcription: "[bɪˈfɔːr]", translation: "до"},
+            {word: "move", transcription: "[muːv]", translation: "двигать"},
+            {word: "right", transcription: "[raɪt]", translation: "правильно"},
+            {word: "too", transcription: "[tuː]", translation: "тоже"},
+            {word: "mean", transcription: "[miːn]", translation: "значить"},
+            {word: "old", transcription: "[əʊld]", translation: "старый"},
+            {word: "any", transcription: "[ˈen.i]", translation: "любой"}
         ]
     ];
 
@@ -210,4 +229,3 @@ function ThousandPopular() {
 }
 
 export default ThousandPopular;
-
