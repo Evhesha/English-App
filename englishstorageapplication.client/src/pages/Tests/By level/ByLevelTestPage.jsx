@@ -1,10 +1,11 @@
 import TestCardLink from "../TestCardLink";
+import { Link } from "react-router-dom";
 
 function ByLevelTestPage(){
 
     return <>
         <h1>By level test page</h1>
-        <TestCardLink text={"Level A1"} title={"A1"}></TestCardLink>
+        <TestCardLink link={"/A0-test"}  text={"Level A0"} title={"A0"}></TestCardLink>
     
     </>
 }

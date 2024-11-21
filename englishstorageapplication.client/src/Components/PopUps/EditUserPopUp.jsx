@@ -2,11 +2,10 @@ import "../PopUps/CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
-function CreateUserPopUp({ onPost }) {
-
+function EditUserPopUp({ id, name: initialName, email: initialEmail, onPut }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState(initialName);
+  const [email, setEmail] = useState(initialEmail);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
@@ -15,11 +14,11 @@ function CreateUserPopUp({ onPost }) {
     setError(null); // Сброс ошибки при закрытии/открытии формы
   };
 
-  const handleCreate = async (event) => {
+  const handleEdit = async (event) => {
     event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
     try {
-      const response = await axios.post(
-        "https://localhost:5001/api/Auth/register",
+      const response = await axios.put(
+        `https://localhost:5001/api/users/${id}`,
         {
           name,
           email,
@@ -27,27 +26,29 @@ function CreateUserPopUp({ onPost }) {
         }
       );
 
+      console.log(response); // Логирование ответа сервера
+
       if (response.status === 200 || response.status === 201) {
-        onPost(response.data); // Передаем данные о новом пользователе в родительский компонент
-        togglePopup(); // Закрываем всплывающее окно после успешного создания пользователя
+        if (typeof onPut === 'function') {
+          onPut(response.data); // Передаем данные о новом пользователе в родительский компонент
+        }
+        togglePopup(); // Закрываем всплывающее окно после успешного изменения пользователя
+        window.location.reload(); // Обновляем страницу для отображения изменений
       } else {
-        setError(response.data.message || "Ошибка при создании пользователя.");
+        setError(response.data.message || "Ошибка при изменении пользователя.");
       }
     } catch (error) {
-      if (error.response) {
-        setError(
-          error.response.data.message || "Ошибка при создании пользователя."
-        );
-      } else {
-        setError("Ошибка при создании пользователя.");
-      }
+      console.error(error); // Логирование ошибки
+      setError(
+        error.response?.data?.message || "Ошибка при изменении пользователя."
+      );
     }
   };
 
   return (
     <div>
-      <button className="btn btn-primary" onClick={togglePopup}>
-        Add user <i className="bi bi-plus-circle"></i>
+      <button type="button" className="btn btn-primary" onClick={togglePopup}>
+        <i className="bi bi-pencil"></i> Edit
       </button>
       {isOpen && (
         <div className="popup">
@@ -55,8 +56,8 @@ function CreateUserPopUp({ onPost }) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-            <h3>Add user</h3>
-            <form onSubmit={handleCreate}>
+            <h3>Edit user</h3>
+            <form onSubmit={handleEdit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                   Name
@@ -103,7 +104,7 @@ function CreateUserPopUp({ onPost }) {
                 </div>
               )}
               <button type="submit" className="btn btn-primary">
-                Save
+                Save edit
               </button>
             </form>
           </div>
@@ -113,4 +114,4 @@ function CreateUserPopUp({ onPost }) {
   );
 }
 
-export default CreateUserPopUp;
+export default EditUserPopUp;
