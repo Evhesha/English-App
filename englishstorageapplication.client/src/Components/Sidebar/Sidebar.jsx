@@ -1,17 +1,26 @@
 import { Link } from "react-router-dom";
 import "../Sidebar/Sidebar.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Cookies from "js-cookie";
 
 function Sidebar() {
+  const handleLogout = () => { 
+    Cookies.remove("token"); // Удаляем токен из куки 
+    setAuthorized(false); // Обновляем состояние авторизации
+    };
+
   return (
     <>
       <div className="flex-shrink-0 p-3" style={{ width: "280px" }}>
         <ul className="list-unstyled ps-0">
-        <li className="mb-1">
-  <Link to="/list-lessons-page" className="btn btn-toggle d-inline-flex align-items-center rounded border-0">
-    <strong className="large-text">Lessons</strong>
-  </Link>
-</li>
+          <li className="mb-1">
+            <Link
+              to="/list-lessons-page"
+              className="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+            >
+              <strong className="large-text">Lessons</strong>
+            </Link>
+          </li>
 
           <li className="mb-1">
             <button
@@ -127,7 +136,7 @@ function Sidebar() {
                 </li>
                 <li>
                   <Link
-                    to="/account/sign-out"
+                    onClick={handleLogout}
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
                     Sign out
