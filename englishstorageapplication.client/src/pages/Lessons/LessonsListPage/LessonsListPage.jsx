@@ -36,17 +36,48 @@ function LessonsListPage() {
       icon: "⏪"
     },
     { 
+      path: "/future-continuous", 
+      title: "Future Continuous",
+      description: "Ongoing actions in the past",
+      icon: "⏪"
+    },
+    { 
       path: "/present-perfect", 
       title: "Present Perfect",
       description: "Connecting past to present",
       icon: "🔄"
     },
     { 
+      path: "/past-perfect", 
+      title: "Past Perfect",
+      description: "Ongoing actions in the past",
+      icon: "⏪"
+    },
+    { 
+      path: "/future-perfect", 
+      title: "Future Perfect",
+      description: "Ongoing actions in the past",
+      icon: "⏪"
+    },
+    { 
       path: "/present-perfect-continuous", 
       title: "Present Perfect Continuous",
       description: "Ongoing actions until now",
       icon: "⭕"
+    },
+    { 
+      path: "/past-perfect-continuous", 
+      title: "Past Perfect Continuous",
+      description: "Ongoing actions until now",
+      icon: "⭕"
+    },
+    { 
+      path: "/future-perfect-continuous", 
+      title: "Future Perfect Continuous",
+      description: "Ongoing actions until now",
+      icon: "⭕"
     }
+    
   ];
 
   return (
