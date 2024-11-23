@@ -7,6 +7,7 @@ using EnglishStorageApplication.EnglishApp.DataAccess;
 using EnglishStorageApplication.EnglishApp.Extensions;
 using EnglishStorageApplication.EnglishApp.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using EnglishApp.DataAccess.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,9 @@ builder.Services.AddScoped<IUsersCardsRepository, UsersCardsRepository>();
 
 builder.Services.AddScoped<IUserActivityService, UserActivityService>();
 builder.Services.AddScoped<IUsersActivitiesRepository, UsersActivitiesRepository>();
+
+builder.Services.AddScoped<IUserStudyResultService, UserStudyResultService>();
+builder.Services.AddScoped<IUsersStudyResultsRepository, UsersStudyResultsRepository>();
 
 builder.Services.AddScoped<JwtProvider>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
