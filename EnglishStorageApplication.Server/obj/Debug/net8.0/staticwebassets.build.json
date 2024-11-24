@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8c+/McD5DKnG87SSy1UhM2E7OPFiHSXcg8TxpWLLqKw=",
+  "Hash": "a7gzVWIyRterjji0FeUeKAx0WYXZhmL6u7aT+y1bHDc=",
   "Source": "EnglishStorageApplication.Server",
   "BasePath": "_content/EnglishStorageApplication.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "App.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
