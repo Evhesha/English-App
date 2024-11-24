@@ -2,6 +2,7 @@
 using EnglishStorageApplication.Server.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
+using EnglishApp.Core.Models;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -21,14 +22,24 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UsersStudyResultsResponse>>> GetUsersStudyResults()
         {
-            return NoContent();
+            var usersResults = await _userStudyResultService.GetAllUsersResults();
+            var response = usersResults.Select(r => new UsersStudyResultsResponse(r.Id, r.UserId, r.TestId, r.PercentResult));
+            return Ok(response);
         }
 
         [HttpGet("{userId:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UsersStudyResultsResponse>>> GetUserStudyResults()
+        public async Task<ActionResult<List<UsersStudyResultsResponse>>> GetUserStudyResults(Guid userId)
         {
-            return NoContent();
+            var userResults = await _userStudyResultService.GetUserResults(userId);
+            if (userResults == null || !userResults.Any())
+            {
+                return NoContent();
+            }
+
+            var response = userResults.Select(r => new UsersStudyResultsResponse(r.Id, r.UserId, r.TestId, r.PercentResult)).ToList();
+
+            return Ok(response);
         }
 
         [HttpPost]
@@ -37,7 +48,21 @@ namespace EnglishStorageApplication.Server.Controllers
             [FromBody] UsersStudyResultsResponse usersStudyResultsResponse
         )
         {
-            return NoContent();
+            var (userResult, error) = UserStudyResult.Create(
+                Guid.NewGuid(),
+                usersStudyResultsResponse.id,
+                usersStudyResultsResponse.userId,
+                usersStudyResultsResponse.percent
+            );
+
+            if (!string.IsNullOrEmpty(error))
+            {
+                return BadRequest(error);
+            }
+
+            var userResultId = await _userStudyResultService.CreateUserResult(userResult);
+
+            return Ok(userResultId);
         }
 
         [HttpPut("{id:guid}")]
@@ -47,14 +72,16 @@ namespace EnglishStorageApplication.Server.Controllers
             [FromBody] UsersStudyResultsRequest usersStudyResultsRequest
             )
         {
-            return NoContent();
+            var userResult = await _userStudyResultService.Update(
+                id, usersStudyResultsRequest.percent);
+            return Ok(userResult);
         }
 
         [HttpDelete("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUserStudyResult(Guid id)
         {
-            return NoContent();
+            return Ok(await _userStudyResultService.Delete(id));
         }
     }
 }
