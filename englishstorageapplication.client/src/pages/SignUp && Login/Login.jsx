@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const fadeIn = keyframes`
   from {
@@ -107,6 +109,7 @@ const ForgotPassword = styled.a`
   }
 `;
 
+
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -114,6 +117,25 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
+  };
+
+  const handleLogin = async (event) => {
+    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+    try {
+      const response = await axios.post(
+        "https://localhost:5001/api/Auth/login",
+        {
+          email,
+          password,
+        }
+      );
+  
+      console.log("Token received:", response.data.token);
+      Cookies.set('token', response.data.token, { expires: 7 }); // Сохранение токена в cookie на 7 дней
+      // Перенаправление пользователя после успешного входа, если нужно
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
   };
 
   return (
@@ -159,7 +181,7 @@ function Login() {
             </label>
           </RememberMe>
 
-          <SubmitButton className="btn btn-primary w-100" type="submit">
+          <SubmitButton onClick={handleLogin} className="btn btn-primary w-100" type="submit">
             Login
           </SubmitButton>
 
@@ -171,4 +193,3 @@ function Login() {
 }
 
 export default Login;
-
