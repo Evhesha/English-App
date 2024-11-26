@@ -10,6 +10,7 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess
         public DbSet<UserEntity> Users { get; set; }
         public DbSet<UserCardEntity> UsersCards { get; set; }
         public DbSet<UserActivityEntity> UsersActivities { get; set; }
+        public DbSet<UserStudyResultEntity> UsersStudyResults { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

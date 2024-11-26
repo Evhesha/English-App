@@ -1,11 +1,6 @@
-using EnglishApp.Application.AppServices;
 using EnglishApp.Infrastructure;
-using EnglishStorageApplication.EnglishApp.Application.AppServices;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using EnglishStorageApplication.EnglishApp.Extensions;
-using EnglishStorageApplication.EnglishApp.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,24 +15,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("ApplicationDbContext"));
 });
 
-// Регистрация конфигурации JwtOptions
+// Регистрация конфигурации JwtOptions (extension)
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
 
-// Регистрация сервисов
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+// Регистрация сервисов (extension)
+builder.Services.AddApplicationServices();
 
-builder.Services.AddScoped<IUserCardService, UserCardService>();
-builder.Services.AddScoped<IUsersCardsRepository, UsersCardsRepository>();
-
-builder.Services.AddScoped<IUserActivityService, UserActivityService>();
-builder.Services.AddScoped<IUsersActivitiesRepository, UsersActivitiesRepository>();
-
-builder.Services.AddScoped<JwtProvider>();
-builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
-builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
-
-// Настройка аутентификации и JWT
+// Настройка аутентификации и JWT (extension)
 builder.Services.AddJwtAuthentication(builder.Configuration);
 
 // Настройка CORS

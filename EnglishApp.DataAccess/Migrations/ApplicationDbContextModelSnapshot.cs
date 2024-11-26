@@ -42,6 +42,26 @@ namespace EnglishStorageApplication.Server.Migrations
                     b.ToTable("UsersActivities");
                 });
 
+            modelBuilder.Entity("EnglishApp.DataAccess.UserEntites.UserStudyResultEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<double>("PercentResult")
+                        .HasColumnType("double precision");
+
+                    b.Property<Guid>("TestId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UsersStudyResults");
+                });
+
             modelBuilder.Entity("EnglishStorageApplication.EnglishApp.DataAccess.UserEntites.UserCardEntity", b =>
                 {
                     b.Property<Guid>("Id")
