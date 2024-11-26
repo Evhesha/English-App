@@ -123,7 +123,7 @@ function Sidebar() {
                     to="/profile-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Profile
+                    <i class="bi bi-person-fill"></i>Profile
                   </Link>
                 </li>
                 <li>
@@ -131,7 +131,7 @@ function Sidebar() {
                     to="/account/settings"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Settings
+                    <i class="bi bi-gear-wide-connected"></i> Settings
                   </Link>
                 </li>
                 <li>
@@ -139,7 +139,7 @@ function Sidebar() {
                     onClick={handleLogout}
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Sign out
+                    <i class="bi bi-door-closed"></i> Sign out
                   </Link>
                 </li>
               </ul>
