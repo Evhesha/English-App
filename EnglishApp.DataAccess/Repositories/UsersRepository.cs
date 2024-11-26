@@ -27,6 +27,20 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
             return users;
         }
 
+        public async Task<List<User>> GetUser(Guid id)
+        {
+            var userEntities = await _context.Users
+                .AsNoTracking()
+                .Where(x => x.Id == id)
+                .ToListAsync();
+
+            var user = userEntities
+                .Select(x => User.Create(x.Id, x.Name, x.Email, x.Password).User)
+                .ToList();
+
+            return user;
+        }
+
         public async Task<User> GetByEmail(string email)
         {
             var userEntity = await _context.Users
