@@ -1,8 +1,10 @@
 ﻿using EnglishApp.Application.AppServices;
 using EnglishApp.DataAccess.Repositories;
+using EnglishApp.Infrastructure;
 using EnglishStorageApplication.EnglishApp.Application.AppServices;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
+using EnglishStorageApplication.EnglishApp.Infrastructure;
 
 namespace EnglishStorageApplication.EnglishApp.Extensions
 {
@@ -21,6 +23,10 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
 
             services.AddScoped<IUserStudyResultService, UserStudyResultService>();
             services.AddScoped<IUsersStudyResultsRepository, UsersStudyResultsRepository>();
+
+            services.AddScoped<JwtProvider>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IPasswordHasher, PasswordHasher>();
 
             return services;
         }

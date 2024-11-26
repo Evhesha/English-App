@@ -38,6 +38,7 @@ import Work from "../../pages/Dictionary/CardWordsPages/Work";
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
 import ProfilePage from "../../pages/ProfilePage/ProfilePage";
+import SettingPage from "../../pages/Another/SettingPage";
 
 import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
 
@@ -70,6 +71,7 @@ function RoutesList() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/profile-page" element={<ProfilePage />} />
+        <Route path="/setting-page" element={<SettingPage />} />
 
         // Sidebar
         // Sidebar.Lessons
