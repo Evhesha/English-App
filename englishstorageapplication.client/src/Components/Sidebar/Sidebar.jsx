@@ -1,13 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Sidebar/Sidebar.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Cookies from "js-cookie";
+import { useState } from "react";
 
 function Sidebar() {
+  const [isAuthorized, setAuthorized] = useState(true);
+  const navigate = useNavigate();
+
   const handleLogout = () => { 
+    const confirmLogout = window.confirm("Are you sure that you want to logout?");
+    if (!confirmLogout) return;
+
     Cookies.remove("token"); // Удаляем токен из куки 
     setAuthorized(false); // Обновляем состояние авторизации
-    };
+    navigate("/login"); // Перенаправляем на страницу входа
+    window.location.reload(); // Обновляем страницу
+  };
 
   return (
     <>
@@ -123,23 +132,24 @@ function Sidebar() {
                     to="/profile-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Profile
+                    <i className="bi bi-person-fill"></i>Profile
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/account/settings"
+                    to="/setting-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Settings
+                    <i className="bi bi-gear-wide-connected"></i> Settings
                   </Link>
                 </li>
                 <li>
                   <Link
+                    to="#"
                     onClick={handleLogout}
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Sign out
+                    <i className="bi bi-door-closed"></i> Sign out
                   </Link>
                 </li>
               </ul>

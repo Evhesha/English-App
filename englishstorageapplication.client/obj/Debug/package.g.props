@@ -14,6 +14,9 @@
     <PackageJsonDependenciesBootstrap Condition="$(PackageJsonDependenciesBootstrap) == ''">^5.3.3</PackageJsonDependenciesBootstrap>
     <PackageJsonDependenciesBootstrapIcons Condition="$(PackageJsonDependenciesBootstrapIcons) == ''">^1.11.3</PackageJsonDependenciesBootstrapIcons>
     <PackageJsonDependenciesCors Condition="$(PackageJsonDependenciesCors) == ''">^2.8.5</PackageJsonDependenciesCors>
+    <PackageJsonDependenciesI18next Condition="$(PackageJsonDependenciesI18next) == ''">^24.0.2</PackageJsonDependenciesI18next>
+    <PackageJsonDependenciesI18nextBrowserLanguagedetector Condition="$(PackageJsonDependenciesI18nextBrowserLanguagedetector) == ''">^8.0.0</PackageJsonDependenciesI18nextBrowserLanguagedetector>
+    <PackageJsonDependenciesI18nextHttpBackend Condition="$(PackageJsonDependenciesI18nextHttpBackend) == ''">^3.0.1</PackageJsonDependenciesI18nextHttpBackend>
     <PackageJsonDependenciesJsCookie Condition="$(PackageJsonDependenciesJsCookie) == ''">^3.0.5</PackageJsonDependenciesJsCookie>
     <PackageJsonDependenciesJwtDecode Condition="$(PackageJsonDependenciesJwtDecode) == ''">^4.0.0</PackageJsonDependenciesJwtDecode>
     <PackageJsonDependenciesLocalforage Condition="$(PackageJsonDependenciesLocalforage) == ''">^1.10.0</PackageJsonDependenciesLocalforage>
@@ -21,6 +24,7 @@
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^18.3.1</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactBootstrap Condition="$(PackageJsonDependenciesReactBootstrap) == ''">^2.10.5</PackageJsonDependenciesReactBootstrap>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^18.3.1</PackageJsonDependenciesReactDom>
+    <PackageJsonDependenciesReactI18next Condition="$(PackageJsonDependenciesReactI18next) == ''">^15.1.2</PackageJsonDependenciesReactI18next>
     <PackageJsonDependenciesReactRouterDom Condition="$(PackageJsonDependenciesReactRouterDom) == ''">^6.26.2</PackageJsonDependenciesReactRouterDom>
     <PackageJsonDependenciesSortBy Condition="$(PackageJsonDependenciesSortBy) == ''">^1.2.0</PackageJsonDependenciesSortBy>
     <PackageJsonDependenciesStyledComponents Condition="$(PackageJsonDependenciesStyledComponents) == ''">^6.1.13</PackageJsonDependenciesStyledComponents>

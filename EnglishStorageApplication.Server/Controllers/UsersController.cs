@@ -29,6 +29,15 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(response);
         }
 
+        [HttpGet("{id:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
+        public async Task<ActionResult<List<UserActivityResponse>>> GetUser(Guid id)
+        {
+            var user = await _context.GetUser(id);
+            var response = user.Select(u => new UsersResponse(u.Id, u.Name, u.Email, u.Password));
+            return Ok(response);
+        }
+
         [HttpPost]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request)

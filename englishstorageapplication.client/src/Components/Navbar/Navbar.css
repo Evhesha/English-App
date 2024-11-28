@@ -152,4 +152,60 @@
    
   }
  }
+
+ .theme-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--bs-primary);
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.theme-toggle-btn i {
+  font-size: 1.2rem;
+}
+
+/* Стили для темной темы */
+.dark-theme {
+  --bs-body-bg: #212529;
+  --bs-body-color: #f8f9fa;
+}
+
+.dark-theme .navbar {
+  background-color: #343a40;
+}
+
+.dark-theme .nav-link {
+  color: #f8f9fa;
+}
+
+.dark-theme .nav-link:hover {
+  color: var(--bs-primary);
+}
+
+.dark-theme .theme-toggle-btn {
+  color: #f8f9fa;
+}
+
+.dark-theme .btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.dark-theme .btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--bs-primary);
+}
  

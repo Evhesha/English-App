@@ -38,6 +38,7 @@ import Work from "../../pages/Dictionary/CardWordsPages/Work";
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
 import ProfilePage from "../../pages/ProfilePage/ProfilePage";
+import SettingPage from "../../pages/Another/SettingPage";
 
 import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
 
@@ -49,6 +50,9 @@ import A0 from "../../pages/Tests/By level/ByLevelTests/A0";
 
 import ByTopicsPage from "../../pages/Tests/By topics/ByTopicsPage";
 import PresentSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PresentSimpleTest";
+import FutureSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/FutureSimpleTest";
+import PastSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PastSimpleTest";
+import PresentContinuousTest from "../../pages/Tests/By topics/ByTopicsTests/PresentContinuousTest";
 
 import TestCardLink from "../../pages/Tests/TestCardLink";
 
@@ -70,6 +74,7 @@ function RoutesList() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/profile-page" element={<ProfilePage />} />
+        <Route path="/setting-page" element={<SettingPage />} />
 
         // Sidebar
         // Sidebar.Lessons
@@ -109,6 +114,9 @@ function RoutesList() {
 
         <Route path="/topics-tests" element={<ByTopicsPage />}/>
         <Route path="/present-simple-test" element={<PresentSimpleTest />}/>
+        <Route path="/future-simple-test" element={<FutureSimpleTest />}/>
+        <Route path="/past-simple-test" element={<PastSimpleTest />}/>
+        <Route path="/present-continuous-test" element={<PresentContinuousTest />}/>
 
         <Route path="/mixed-tests" element={<MixedTestsPage />}/>
         <Route path="/mixed-test-1" element={<MixedTest1 />}/>

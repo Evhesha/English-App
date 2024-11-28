@@ -17,6 +17,11 @@ namespace EnglishStorageApplication.EnglishApp.Application.AppServices
             return await _usersRepository.Get();
         }
 
+        public async Task<List<User>> GetUser(Guid id)
+        {
+            return await _usersRepository.GetUser(id);
+        }
+
         public async Task<Guid> CreateUser(User user)
         {
             return await _usersRepository.Create(user);
