@@ -16,24 +16,28 @@ namespace EnglishApp.Infrastructure
             _options = options.Value ?? throw new ArgumentNullException(nameof(options));
         }
 
-        public string GenerateToken(User user)
+        public string GenerateToken(User user, bool isAdmin)
         {
-            var claims = new[]
+            var claims = new List<Claim>
             {
-              new Claim("UserId", user.Id.ToString())
+                new Claim("UserId", user.Id.ToString())
             };
 
+            if (isAdmin)
+            {
+                claims.Add(new Claim("role", "Admin"));
+            }
+
             var signingCredentials = new SigningCredentials(
-                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SecretKey)), SecurityAlgorithms.HmacSha256); // Исправлено на SecretKey
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SecretKey)), SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
                 claims: claims,
                 signingCredentials: signingCredentials,
-                expires: DateTime.UtcNow.AddHours(_options.ExpiresHours) // Исправлено на ExpiresHours
+                expires: DateTime.UtcNow.AddHours(_options.ExpiresHours)
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
     }
 }
