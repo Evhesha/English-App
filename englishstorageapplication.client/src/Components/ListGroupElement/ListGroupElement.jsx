@@ -1,5 +1,5 @@
 import EditUserPopUp from '../PopUps/EditUserPopUp';
-
+import RadioGroup from '../RadioComponents/RadioGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
@@ -38,6 +38,7 @@ function ListGroupElement({ id, name, email, onDelete, onUpdate }) {
         />
         <p></p>
         <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"></i> Delete</button>
+        <RadioGroup></RadioGroup>
       </div>
     </li>
   );

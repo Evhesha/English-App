@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 function ProfilePage() {
   const [user, setUser] = useState(null);
   const [isAuthorized, setAuthorized] = useState(false);
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -68,7 +68,9 @@ function ProfilePage() {
               />
             </div>
           ) : (
-            <p>You are not authorized or login</p>
+            <div class="alert alert-danger" role="alert">
+              You are not authorized or not login
+            </div>
           )}
         </div>
         <div className="profile-activity">

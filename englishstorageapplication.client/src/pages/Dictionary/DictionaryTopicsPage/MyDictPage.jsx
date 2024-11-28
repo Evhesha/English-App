@@ -12,7 +12,7 @@ function MyDictPage() {
   useEffect(() => {
     const fetchData = async () => {
       const token = Cookies.get("token");
-      console.log(token)
+      console.log(token);
       if (token) {
         // Use jwt-decode to decode the token
         const decodedToken = jwtDecode(token);
@@ -20,12 +20,13 @@ function MyDictPage() {
         const userId = decodedToken.UserId; // Extract UserId from token
 
         // Request user cards
-        axios.get(`https://localhost:5001/api/UsersCards/${userId}`)
-          .then(response => {
+        axios
+          .get(`https://localhost:5001/api/UsersCards/${userId}`)
+          .then((response) => {
             setCards(response.data);
             setAuthorized(true);
           })
-          .catch(error => {
+          .catch((error) => {
             console.error("Error fetching cards:", error);
             setAuthorized(false);
           });
@@ -45,8 +46,10 @@ function MyDictPage() {
         height: "40vh",
       }}
     >
-      <h1>You are not logged in or signed-up in the system</h1>
-      <h3>Please login or sign-up</h3>
+      <div class="alert alert-danger" role="alert">
+        <h1>You are not logged in or signed-up in the system</h1>
+        <h3>Please login or sign-up</h3>
+      </div>
     </div>
   );
 
@@ -63,7 +66,14 @@ function MyDictPage() {
             />
           ))} */}
           <Card
-            image={<img src={AddDict} className="card-img-top" alt="..." style={{ paddingLeft: '50px', width: '70%', height: '70%' }} />}
+            image={
+              <img
+                src={AddDict}
+                className="card-img-top"
+                alt="..."
+                style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
+              />
+            }
             text={"Add your own dict"}
             // link={"/traveling-topic"} здесь реализовать открытие формы, для создание словаря
           />
