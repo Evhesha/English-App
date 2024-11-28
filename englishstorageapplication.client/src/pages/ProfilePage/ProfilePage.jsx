@@ -5,10 +5,12 @@ import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
 import EditUserPopUp from "../../Components/PopUps/EditUserPopUp";
+import { useTranslation } from "react-i18next";
 
 function ProfilePage() {
   const [user, setUser] = useState(null);
   const [isAuthorized, setAuthorized] = useState(false);
+  const { t } = useTranslation()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +40,7 @@ function ProfilePage() {
 
   return (
     <>
-      <h1>Profile page</h1>
+      <h1>{t("profile")}</h1>
       <div className="profile-container">
         <div className="profile-main">
           <button className="profile-avatar-btn">
