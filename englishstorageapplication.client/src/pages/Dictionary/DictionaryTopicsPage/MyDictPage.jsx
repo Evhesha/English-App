@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card";
 import AddDict from "../dict-images/AddPicture.png";
+import YourOwnDict from "../dict-images/YourOwnDict.png";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
@@ -24,6 +25,7 @@ function MyDictPage() {
           .get(`https://localhost:5001/api/UsersCards/${userId}`)
           .then((response) => {
             setCards(response.data);
+            console.log(response.data);
             setAuthorized(true);
           })
           .catch((error) => {
@@ -46,7 +48,7 @@ function MyDictPage() {
         height: "40vh",
       }}
     >
-      <div class="alert alert-danger" role="alert">
+      <div className="alert alert-danger" role="alert">
         <h1>You are not logged in or signed-up in the system</h1>
         <h3>Please login or sign-up</h3>
       </div>
@@ -56,15 +58,23 @@ function MyDictPage() {
   return (
     <>
       {authorized ? (
-        <>
-          {/* {cards.map(card => (
+       <div className="card-container">
+         <>
+          {cards.map((card) => (
             <Card
               key={card.id}
-              image={<img src={AddDict} className="card-img-top" alt="..." style={{ paddingLeft: '50px', width: '70%', height: '70%' }} />}
-              text={card.title}
+              image={
+                <img
+                  src={YourOwnDict}
+                  className="card-img-top"
+                  alt="..."
+                  style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
+                />
+              }
+              title={card.nameOfUserCard}
               // link={`/dictionary/${card.id}`} реализовать ссылку для перехода
             />
-          ))} */}
+          ))}
           <Card
             image={
               <img
@@ -78,6 +88,7 @@ function MyDictPage() {
             // link={"/traveling-topic"} здесь реализовать открытие формы, для создание словаря
           />
         </>
+       </div>
       ) : (
         plsAuthorizeBlock
       )}

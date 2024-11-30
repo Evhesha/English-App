@@ -3,12 +3,15 @@ import axios from "axios";
 import ListGroupElement from "../../Components/ListGroupElement/ListGroupElement";
 import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
 import CreateUserPopUp from "../../Components/PopUps/CreateUserPopUp";
+import { useTranslation } from "react-i18next";
+import RoleDropdown from "../../Components/Dropdown/RoleDropdown";
 
 function AdminPanel() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [delayCompleted, setDelayCompleted] = useState(false);
+  const {t} = useTranslation();
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -35,7 +38,7 @@ function AdminPanel() {
         setHasError(true); // Устанавливаем ошибку, если загрузка занимает слишком много времени
         console.log("Загрузка данных занимает слишком много времени.");
       }
-    }, 5000); // Таймер на 5 секунд
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [isLoading]);
@@ -48,11 +51,15 @@ function AdminPanel() {
     <>
       <div style={{ display: "flex", alignItems: "center" }}>
         <ToLinkButton link="/home" placeholder={"Home"} />
-        <h1 style={{ marginLeft: "20px" }}>Admin Panel</h1>
+        <h1 style={{ marginLeft: "20px" }}>{t("admin-panel")}</h1>
       </div>
       <p>
-        Num of all users <b>{users.length}</b>
+        {t("num-of-users")} <b>{users.length}</b> * Num of admins <b>{users.length} </b>
+         * Num of teaches <b>{users.length}</b> * Num of users <b>{users.length}</b>
       </p>
+      Отсортировать по роли 
+      <RoleDropdown></RoleDropdown>
+      <p></p>
       <CreateUserPopUp onPost={(newUser) => setUsers([...users, newUser])} />
       <p></p>
       {isLoading ? (

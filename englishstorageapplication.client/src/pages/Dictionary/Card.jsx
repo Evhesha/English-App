@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import CreateDictCardPop from "../../Components/PopUps/CreateDictCardPopUp"
 
-function Card({image, title, text, link}) {
+function Card({image, title, text}) {
  
     return (
     <>
@@ -11,9 +11,7 @@ function Card({image, title, text, link}) {
           <p className="card-text">
             {text}
           </p>
-          <Link to={link} className="btn btn-primary">
-            Open topic
-          </Link>
+          <CreateDictCardPop></CreateDictCardPop>
         </div>
       </div>
     </>

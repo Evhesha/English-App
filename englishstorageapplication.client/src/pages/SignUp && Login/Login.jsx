@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 
 const fadeIn = keyframes`
   from {
@@ -120,7 +121,6 @@ function Login() {
   };
 
   const handleLogin = async (event) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
     try {
       const response = await axios.post(
         "https://localhost:5001/api/Auth/login",
@@ -132,7 +132,7 @@ function Login() {
   
       console.log("Token received:", response.data.token);
       Cookies.set('token', response.data.token, { expires: 7 }); // Сохранение токена в cookie на 7 дней
-      // Перенаправление пользователя после успешного входа, если нужно
+      window.location.reload();
     } catch (error) {
       console.error("Error logging in:", error);
     }
