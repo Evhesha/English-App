@@ -24,6 +24,9 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
             services.AddScoped<IUserStudyResultService, UserStudyResultService>();
             services.AddScoped<IUsersStudyResultsRepository, UsersStudyResultsRepository>();
 
+            services.AddScoped<IAdminRoleService, AdminRoleService>();
+            services.AddScoped<IAdminRoleRepository, AdminRoleRepository>();
+
             services.AddScoped<JwtProvider>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IPasswordHasher, PasswordHasher>();

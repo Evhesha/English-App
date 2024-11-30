@@ -2,5 +2,7 @@
     "settings" : "Settings",
     "language" : "Language",
     "theme" : "Theme",
-    "profile" : "Profile page"
+    "profile" : "Profile page",
+    "admin-panel" : "Admin panel",
+    "num-of-users" : "Num of all users"
 }
