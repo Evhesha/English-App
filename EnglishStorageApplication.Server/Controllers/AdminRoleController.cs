@@ -16,6 +16,14 @@ namespace EnglishStorageApplication.Server.Controllers
             _adminRoleService = adminRoleService;   
         }
 
+        [HttpGet]
+        public async Task<ActionResult<List<AdminRolesResponse>>> GetRoles()
+        {
+            var roles = await _adminRoleService.GetAllRoles();
+            var response = roles.Select(r => new AdminRolesResponse(r.Id, r.UserId));
+            return Ok(response);
+        }
+
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateRole([FromBody] AdminRolesRequest request)
         {
@@ -31,5 +39,10 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(roleId);
         }
 
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            return Ok(await _adminRoleService.Delete(id));
+        }
     }
 }
