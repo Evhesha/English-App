@@ -1,10 +1,44 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../Navbar/Navbar.css";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+import Cookies from "js-cookie";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
-  const [isAdmin, setIsAdmin] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const token = Cookies.get("token");
+      console.log(token);
+      if (token) {
+        // Use jwt-decode to decode the token
+        const decodedToken = jwtDecode(token);
+        console.log("Decoded Token:", decodedToken); // Logging decoded token to check its content
+        const userId = decodedToken.role; // Extract UserId from token
+
+        if (userId === "Admin"){
+          setIsAdmin(true);
+        }
+
+        // Request user cards
+        axios
+          .get(`https://localhost:5001/api/UsersCards/${userId}`)
+          .then((response) => {
+            setCards(response.data);
+            setAuthorized(true);
+          })
+          .catch((error) => {
+            console.error("Error fetching cards:", error);
+            setAuthorized(false);
+          });
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     // Проверяем сохраненную тему при загрузке

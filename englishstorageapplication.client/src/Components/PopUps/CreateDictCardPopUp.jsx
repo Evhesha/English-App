@@ -4,9 +4,8 @@ import axios from "axios";
 
 function CreateDictCardPopUp(){
     const [isOpen, setIsOpen] = useState(false);
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [name, setName] = useState("Name");
+    const [text, setText] = useState("")
     const [error, setError] = useState(null);
   
     const togglePopup = () => {
@@ -46,7 +45,7 @@ function CreateDictCardPopUp(){
     return (
       <div>
         <button className="btn btn-primary" onClick={togglePopup}>
-          Create card <i className="bi bi-plus-circle"></i>
+          Your own card <i className="bi bi-plus-circle"></i>
         </button>
         {isOpen && (
           <div className="popup">
@@ -76,7 +75,7 @@ function CreateDictCardPopUp(){
                     type="text"
                     className="form-control"
                     id="name"
-                    value={name}
+                    value={text}
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
