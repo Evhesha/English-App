@@ -3,19 +3,24 @@ import "../Sidebar/Sidebar.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Cookies from "js-cookie";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Sidebar() {
   const [isAuthorized, setAuthorized] = useState(true);
   const navigate = useNavigate();
+  const {t} = useTranslation();
+  
 
   const handleLogout = () => { 
     const confirmLogout = window.confirm("Are you sure that you want to logout?");
     if (!confirmLogout) return;
+    
 
     Cookies.remove("token"); // Удаляем токен из куки 
     setAuthorized(false); // Обновляем состояние авторизации
     navigate("/login"); // Перенаправляем на страницу входа
     window.location.reload(); // Обновляем страницу
+    
   };
 
   return (
@@ -27,7 +32,7 @@ function Sidebar() {
               to="/list-lessons-page"
               className="btn btn-toggle d-inline-flex align-items-center rounded border-0"
             >
-              <strong className="large-text">Lessons</strong>
+              <strong className="large-text">{t("sidebar.lessons")}</strong>
             </Link>
           </li>
 
@@ -38,7 +43,7 @@ function Sidebar() {
               data-bs-target="#dashboard-collapse"
               aria-expanded="false"
             >
-              <strong className="large-text">Dictionary</strong>
+              <strong className="large-text">{t("sidebar.dictionary")}</strong>
             </button>
             <div className="collapse" id="dashboard-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -47,7 +52,7 @@ function Sidebar() {
                     to="/my-dict-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    My dictionary
+                    {t("sidebar.my-dictionary")}
                   </Link>
                 </li>
                 <li>
@@ -55,7 +60,7 @@ function Sidebar() {
                     to="/topics-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Topics
+                    {t("sidebar.topics")}
                   </Link>
                 </li>
                 <li>
@@ -63,7 +68,7 @@ function Sidebar() {
                     to="/thousamd-popular"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    100 popular
+                    {t("sidebar.100-popular")}
                   </Link>
                 </li>
                 <li>
@@ -71,7 +76,7 @@ function Sidebar() {
                     to="/words-in-parts"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Words in parts
+                    {t("sidebar.Words-in-parts")}
                   </Link>
                 </li>
               </ul>
@@ -84,7 +89,7 @@ function Sidebar() {
               data-bs-target="#orders-collapse"
               aria-expanded="false"
             >
-              <strong className="large-text">Tests</strong>
+              <strong className="large-text">{t("sidebar.Tests")}</strong>
             </button>
             <div className="collapse" id="orders-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -93,7 +98,7 @@ function Sidebar() {
                     to="/topics-tests"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    By topics
+                    {t("sidebar.By topics")}
                   </Link>
                 </li>
                 <li>
@@ -101,7 +106,7 @@ function Sidebar() {
                     to="/mixed-tests"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    Mixed
+                    {t("sidebar.Mixed")}
                   </Link>
                 </li>
                 <li>
@@ -109,7 +114,7 @@ function Sidebar() {
                     to="/level-tests"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    By level
+                    {t("sidebar.By level")}
                   </Link>
                 </li>
               </ul>
@@ -123,7 +128,7 @@ function Sidebar() {
               data-bs-target="#account-collapse"
               aria-expanded="false"
             >
-              <strong className="large-text">Account</strong>
+              <strong className="large-text">{t("sidebar.Account")}</strong>
             </button>
             <div className="collapse" id="account-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -132,7 +137,7 @@ function Sidebar() {
                     to="/profile-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    <i className="bi bi-person-fill"></i>Profile
+                    <i className="bi bi-person-fill"></i>{t("sidebar.Profile")}
                   </Link>
                 </li>
                 <li>
@@ -140,7 +145,7 @@ function Sidebar() {
                     to="/setting-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    <i className="bi bi-gear-wide-connected"></i> Settings
+                    <i className="bi bi-gear-wide-connected"></i> {t("sidebar.Settings")}
                   </Link>
                 </li>
                 <li>
@@ -149,7 +154,7 @@ function Sidebar() {
                     onClick={handleLogout}
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    <i className="bi bi-door-closed"></i> Sign out
+                    <i className="bi bi-door-closed"></i> {t("sidebar.Sign out")}
                   </Link>
                 </li>
               </ul>
