@@ -2,7 +2,7 @@ import "../PopUps/CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
-function CreateDictCardPopUp(){
+function CheckDictCardPopUp(){
     const [isOpen, setIsOpen] = useState(false);
     const [name, setName] = useState("Name");
     const [text, setText] = useState("")
@@ -13,39 +13,10 @@ function CreateDictCardPopUp(){
       setError(null); // Сброс ошибки при закрытии/открытии формы
     };
   
-    const handleCreate = async (event) => {
-      event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
-      try {
-        const response = await axios.post(
-          "https://localhost:5001/api/UsersCards",
-          {
-            userId,
-            nameOfUserCard,
-            userCardData,
-          }
-        );
-  
-        if (response.status === 200 || response.status === 201) {
-          onPost(response.data); // Передаем данные о новом пользователе в родительский компонент
-          togglePopup(); // Закрываем всплывающее окно после успешного создания пользователя
-        } else {
-          setError(response.data.message || "Ошибка при создании пользователя.");
-        }
-      } catch (error) {
-        if (error.response) {
-          setError(
-            error.response.data.message || "Ошибка при создании пользователя."
-          );
-        } else {
-          setError("Ошибка при создании пользователя.");
-        }
-      }
-    };
-  
     return (
       <div>
         <button className="btn btn-primary" onClick={togglePopup}>
-          Create card <i className="bi bi-plus-circle"></i>
+        Check card <i class="bi bi-cloud-check"></i>
         </button>
         {isOpen && (
           <div className="popup">
@@ -53,8 +24,9 @@ function CreateDictCardPopUp(){
               <span className="close" onClick={togglePopup}>
                 &times;
               </span>
-              <h3>Add card</h3>
-              <form onSubmit={handleCreate}>
+              <h3>Check card</h3>
+              <form //</div>onSubmit={handleCreate}
+              >
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">
                     Card name
@@ -87,6 +59,9 @@ function CreateDictCardPopUp(){
                 <button type="submit" className="btn btn-primary">
                   Save
                 </button>
+                <button className="btn btn-danger">
+                  Close
+                </button>
               </form>
             </div>
           </div>
@@ -95,4 +70,4 @@ function CreateDictCardPopUp(){
     );
 }
 
-export default CreateDictCardPopUp;
+export default CheckDictCardPopUp;
