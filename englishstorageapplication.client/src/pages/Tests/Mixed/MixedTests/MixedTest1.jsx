@@ -1,7 +1,7 @@
 function MixedTest1(){
 
     return<>
-        <h1>Mixed test (1)</h1>
+        <h1>Mixed test №1</h1>
     </>
 }
 
