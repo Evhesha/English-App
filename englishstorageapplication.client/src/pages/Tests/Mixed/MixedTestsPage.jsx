@@ -9,12 +9,12 @@ function MixedTestsPage() {
       icon: "📝",
     },
     {
-      link: "/mixed-test-2",
+      link: "/mixed-test-2)", //добавить линк
       title: "Mixed test №2",
       icon: "📊",
     },
     {
-        link: "/mixed-test-1",
+        link: "/mixed-test-3", //добавить линк
         title: "Mixed test №3",
         icon: "📑",
       },
