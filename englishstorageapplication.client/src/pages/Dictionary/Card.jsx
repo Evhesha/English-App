@@ -8,10 +8,7 @@ function Card({image, title, text}) {
         {image}
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">
-            {text}
-          </p>
-          <CheckDictCardPopUp></CheckDictCardPopUp>
+          <CheckDictCardPopUp title={title} cardText={text}></CheckDictCardPopUp>
         </div>
       </div>
     </>

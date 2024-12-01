@@ -73,7 +73,7 @@ function MyDictPage() {
                 />
               }
               title={card.nameOfUserCard}
-              // link={`/dictionary/${card.id}`} реализовать ссылку для перехода
+              text={card.userCardData}
             />
           ))}
           <CreatCard
