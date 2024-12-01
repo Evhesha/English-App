@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card";
+import CreatCard from "./CreateCard"
 import AddDict from "../dict-images/AddPicture.png";
 import YourOwnDict from "../dict-images/YourOwnDict.png";
 import axios from "axios";
@@ -75,7 +76,7 @@ function MyDictPage() {
               // link={`/dictionary/${card.id}`} реализовать ссылку для перехода
             />
           ))}
-          <Card
+          <CreatCard
             image={
               <img
                 src={AddDict}
@@ -85,7 +86,6 @@ function MyDictPage() {
               />
             }
             text={"Add your own dict"}
-            // link={"/traveling-topic"} здесь реализовать открытие формы, для создание словаря
           />
         </>
        </div>

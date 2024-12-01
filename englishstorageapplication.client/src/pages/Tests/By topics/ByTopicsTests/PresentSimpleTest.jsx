@@ -173,7 +173,7 @@ function PresentSimpleTest() {
     return (
         <div className="test-container">
             <style>{styles}</style>
-            <h1>Present Simple Test 1</h1>
+            <h1>Present Simple Test </h1>
             
             {showResults ? (
                 <Results 

@@ -1,4 +1,4 @@
-import CheckDictCardPopUp from "../../Components/PopUps/CheckDictCardPopUp"
+import CreateDictCardPop from "../../../Components/PopUps/CreateDictCardPopUp"
 
 function Card({image, title, text}) {
  
@@ -11,7 +11,7 @@ function Card({image, title, text}) {
           <p className="card-text">
             {text}
           </p>
-          <CheckDictCardPopUp></CheckDictCardPopUp>
+          <CreateDictCardPop></CreateDictCardPop>
         </div>
       </div>
     </>

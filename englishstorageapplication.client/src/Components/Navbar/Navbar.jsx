@@ -4,10 +4,12 @@ import "../Navbar/Navbar.css";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
+import { useTranslation } from "react-i18next";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const {t} = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -74,18 +76,18 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
             <ul className="nav-list">
               <li>
                 <Link className="nav-link" to={"/home"}>
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li>
                 <Link className="nav-link" to={"/about-app"}>
-                  About
+                {t("about")}
                 </Link>
               </li>
               {isAdmin ? (
                 <li>
                   <Link className="nav-link" to={"/admin"}>
-                    Admin
+                  {t("admin")}
                   </Link>
                 </li>
               ) : ''}

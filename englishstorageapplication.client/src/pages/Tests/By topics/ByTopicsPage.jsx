@@ -1,32 +1,56 @@
-import TestCardLink from "../TestCardLink";
+import { Link } from "react-router-dom";
+import "../styles.css"; // Не забудьте добавить импорт стилей
+
+function TestCardLink({ link, text, title, icon }) {
+  return (
+    <Link to={link} className="lesson-card">
+      <div className="lesson-icon">{icon}</div>
+      <h3 className="lesson-title">{title}</h3>
+      <p className="lesson-description">{text}</p>
+      <div className="hover-effect"></div>
+    </Link>
+  );
+}
 
 function ByTopicsPage() {
+  const topics = [
+    {
+      link: "/present-simple-test",
+      title: "Present simple",
+      icon: "⏰",
+    },
+    {
+      link: "/past-simple-test",
+      title: "Past simple",
+      icon: "📅",
+    },
+    {
+      link: "/future-simple-test",
+      title: "Future simple",
+      icon: "🔮",
+    },
+    {
+      link: "/present-continuous-test",
+      title: "Present continuous",
+      icon: "▶️",
+    },
+  ];
+
   return (
-    <>
-      <h1>By topics tests page</h1>
-      <div className="card-container">
-        <TestCardLink
-          link={"/present-simple-test"}
-          text={"Present simple"}
-          title={"Present simple(1)"}
-        ></TestCardLink>
-        <TestCardLink
-          link={"/past-simple-test"}
-          text={"Past simple"}
-          title={"Past simple(1)"}
-        ></TestCardLink>
-        <TestCardLink
-          link={"/future-simple-test"}
-          text={"Furute simple"}
-          title={"Future simple(1)"}
-        ></TestCardLink>
-        <TestCardLink
-          link={"/present-continuous-test"}
-          text={"Present continuous"}
-          title={"Present continuous(1)"}
-        ></TestCardLink>
+    <div className="lessons-container">
+      <h1 className="text-center main-title mb-5">By Topics Tests Page</h1>
+      <div className="lessons-grid">
+        {topics.map((topic, index) => (
+          <TestCardLink
+            key={index}
+            link={topic.link}
+            text={topic.text}
+            title={topic.title}
+            icon={topic.icon}
+          />
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 

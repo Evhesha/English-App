@@ -1,6 +1,6 @@
-import CheckDictCardPopUp from "../../Components/PopUps/CheckDictCardPopUp"
+import { Link } from "react-router-dom";
 
-function Card({image, title, text}) {
+function TopicCard({image, title, text, link}) {
  
     return (
     <>
@@ -11,11 +11,13 @@ function Card({image, title, text}) {
           <p className="card-text">
             {text}
           </p>
-          <CheckDictCardPopUp></CheckDictCardPopUp>
+          <Link to={link} className="btn btn-primary">
+            Open topic
+          </Link>
         </div>
       </div>
     </>
   );
 }
 
-export default Card;
+export default TopicCard;
