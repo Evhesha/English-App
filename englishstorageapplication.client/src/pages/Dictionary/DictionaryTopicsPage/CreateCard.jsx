@@ -1,6 +1,6 @@
 import CreateDictCardPop from "../../../Components/PopUps/CreateDictCardPopUp"
 
-function Card({image, title, text}) {
+function Card({image, title, text, onUpdate}) {
  
     return (
     <>

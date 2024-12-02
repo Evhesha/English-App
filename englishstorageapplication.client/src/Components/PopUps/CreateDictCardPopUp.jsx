@@ -26,18 +26,18 @@ function CreateDictCardPopUp(){
         );
   
         if (response.status === 200 || response.status === 201) {
-          onPost(response.data); // Передаем данные о новом пользователе в родительский компонент
-          togglePopup(); // Закрываем всплывающее окно после успешного создания пользователя
+          onPost(response.data);
+          togglePopup();
         } else {
-          setError(response.data.message || "Ошибка при создании пользователя.");
+          setError(response.data.message || "Ошибка при создании карточки.");
         }
       } catch (error) {
         if (error.response) {
           setError(
-            error.response.data.message || "Ошибка при создании пользователя."
+            error.response.data.message || "Ошибка при создании карточки."
           );
         } else {
-          setError("Ошибка при создании пользователя.");
+          setError("Ошибка при создании карточки.");
         }
       }
     };
@@ -76,7 +76,7 @@ function CreateDictCardPopUp(){
                     className="form-control"
                     id="name"
                     value={text}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setText(e.target.value)}
                   />
                 </div>
                 {error && (
