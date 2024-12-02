@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card";
-import CreatCard from "./CreateCard"
+import CreateCard from "./CreateCard";
 import AddDict from "../dict-images/AddPicture.png";
 import YourOwnDict from "../dict-images/YourOwnDict.png";
 import axios from "axios";
@@ -14,30 +14,33 @@ function MyDictPage() {
   useEffect(() => {
     const fetchData = async () => {
       const token = Cookies.get("token");
-      console.log(token);
       if (token) {
-        // Use jwt-decode to decode the token
         const decodedToken = jwtDecode(token);
-        console.log("Decoded Token:", decodedToken); // Logging decoded token to check its content
-        const userId = decodedToken.UserId; // Extract UserId from token
+        const userId = decodedToken.UserId;
 
-        // Request user cards
-        axios
-          .get(`https://localhost:5001/api/UsersCards/${userId}`)
-          .then((response) => {
+        try {
+          const response = await axios.get(`https://localhost:5001/api/UsersCards/${userId}`);
+
+          if (Array.isArray(response.data)) {
             setCards(response.data);
-            console.log(response.data);
-            setAuthorized(true);
-          })
-          .catch((error) => {
-            console.error("Error fetching cards:", error);
-            setAuthorized(false);
-          });
+          } else {
+            console.error("Ошибка: данные из API не являются массивом", response.data);
+          }
+
+          setAuthorized(true);
+        } catch (error) {
+          console.error("Ошибка при получении карточек:", error);
+          setAuthorized(false);
+        }
       }
     };
 
     fetchData();
   }, []);
+
+  const handleDelete = (id) => {
+    setCards(cards.filter((card) => card.id !== id));
+  };
 
   const plsAuthorizeBlock = (
     <div
@@ -61,9 +64,10 @@ function MyDictPage() {
       {authorized ? (
        <div className="card-container">
          <>
-          {cards.map((card) => (
+          {cards.map((card, index) => (
             <Card
-              key={card.id}
+              key={index}
+              id={card.id}
               image={
                 <img
                   src={YourOwnDict}
@@ -73,10 +77,11 @@ function MyDictPage() {
                 />
               }
               title={card.nameOfUserCard}
-              // link={`/dictionary/${card.id}`} реализовать ссылку для перехода
+              text={card.userCardData}
+              onDelete={() => handleDelete(card.id)}
             />
           ))}
-          <CreatCard
+          <CreateCard
             image={
               <img
                 src={AddDict}

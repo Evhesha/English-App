@@ -1,7 +1,26 @@
 .card-container {
-    padding-left: 6rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem; /* Расстояние между карточками */
-  }
-  
+  padding-left: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem; /* Расстояние между карточками */
+}
+
+.card-img-top {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

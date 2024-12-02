@@ -25,7 +25,6 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
           setIsAdmin(true);
         }
 
-        // Request user cards
         axios
           .get(`https://localhost:5001/api/UsersCards/${userId}`)
           .then((response) => {
@@ -33,7 +32,7 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
             setAuthorized(true);
           })
           .catch((error) => {
-            console.error("Error fetching cards:", error);
+            console.error("Error fetching role:", error);
             setAuthorized(false);
           });
       }
@@ -76,18 +75,18 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
             <ul className="nav-list">
               <li>
                 <Link className="nav-link" to={"/home"}>
-                  {t("home")}
+                  {t("navbar.home")}
                 </Link>
               </li>
               <li>
                 <Link className="nav-link" to={"/about-app"}>
-                {t("about")}
+                {t("navbar.about")}
                 </Link>
               </li>
               {isAdmin ? (
                 <li>
                   <Link className="nav-link" to={"/admin"}>
-                  {t("admin")}
+                  {t("navbar.admin")}
                   </Link>
                 </li>
               ) : ''}

@@ -76,7 +76,7 @@ function Sidebar() {
                     to="/words-in-parts"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    {t("sidebar.Words-in-parts")}
+                    {t("sidebar.words-in-parts")}
                   </Link>
                 </li>
               </ul>
@@ -89,7 +89,7 @@ function Sidebar() {
               data-bs-target="#orders-collapse"
               aria-expanded="false"
             >
-              <strong className="large-text">{t("sidebar.Tests")}</strong>
+              <strong className="large-text">{t("sidebar.tests")}</strong>
             </button>
             <div className="collapse" id="orders-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -98,7 +98,7 @@ function Sidebar() {
                     to="/topics-tests"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    {t("sidebar.By topics")}
+                    {t("sidebar.by-topics")}
                   </Link>
                 </li>
                 <li>
@@ -106,7 +106,7 @@ function Sidebar() {
                     to="/mixed-tests"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    {t("sidebar.Mixed")}
+                    {t("sidebar.mixed")}
                   </Link>
                 </li>
                 <li>
@@ -114,7 +114,7 @@ function Sidebar() {
                     to="/level-tests"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    {t("sidebar.By level")}
+                    {t("sidebar.by-level")}
                   </Link>
                 </li>
               </ul>
@@ -128,7 +128,7 @@ function Sidebar() {
               data-bs-target="#account-collapse"
               aria-expanded="false"
             >
-              <strong className="large-text">{t("sidebar.Account")}</strong>
+              <strong className="large-text">{t("sidebar.account")}</strong>
             </button>
             <div className="collapse" id="account-collapse">
               <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -137,7 +137,7 @@ function Sidebar() {
                     to="/profile-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    <i className="bi bi-person-fill"></i>{t("sidebar.Profile")}
+                    <i className="bi bi-person-fill"></i>{t("sidebar.profile")}
                   </Link>
                 </li>
                 <li>
@@ -145,7 +145,7 @@ function Sidebar() {
                     to="/setting-page"
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    <i className="bi bi-gear-wide-connected"></i> {t("sidebar.Settings")}
+                    <i className="bi bi-gear-wide-connected"></i> {t("sidebar.settings")}
                   </Link>
                 </li>
                 <li>
@@ -154,7 +154,7 @@ function Sidebar() {
                     onClick={handleLogout}
                     className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                   >
-                    <i className="bi bi-door-closed"></i> {t("sidebar.Sign out")}
+                    <i className="bi bi-door-closed"></i> {t("sidebar.sign-out")}
                   </Link>
                 </li>
               </ul>
