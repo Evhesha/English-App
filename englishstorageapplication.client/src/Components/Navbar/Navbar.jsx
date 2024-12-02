@@ -75,18 +75,18 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
             <ul className="nav-list">
               <li>
                 <Link className="nav-link" to={"/home"}>
-                  {t("home")}
+                  {t("navbar.home")}
                 </Link>
               </li>
               <li>
                 <Link className="nav-link" to={"/about-app"}>
-                {t("about")}
+                {t("navbar.about")}
                 </Link>
               </li>
               {isAdmin ? (
                 <li>
                   <Link className="nav-link" to={"/admin"}>
-                  {t("admin")}
+                  {t("navbar.admin")}
                   </Link>
                 </li>
               ) : ''}

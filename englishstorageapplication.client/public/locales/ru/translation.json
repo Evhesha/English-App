@@ -1,13 +1,18 @@
 {
+    "navbar" : {
+     "home" : "Домой",
+    "about" : "Про",
+    "admin" : "Админ"
+    },
+
+    "accoutn-page" : {
     "settings" : "Настройки",
     "language" : "Язык",
     "theme" : "Тема",
     "profile" : "Страница профиля",
     "admin-panel" : "Панель администратора",
-    "home" : "Домой",
-    "about" : "Про",
-    "admin" : "Админ",
-    "num-of-users" : "Количество всех пользователей",
+    "num-of-users" : "Количество всех пользователей"
+},
 
     "sidebar": {
         "lessons": "Уроки",
@@ -15,15 +20,15 @@
         "my-dictionary": "Мой словарь",
         "topics" : "Разделы",
         "100-popular" : "100 популярных",
-        "Words-in-parts" : "Слова по частям",
-        "Tests" : "Тесты",
-        "By topics" : "По разделам",
-        "Mixed" : "Смешанные",
-        "By level" : "По уровню",
-        "Account" : "Аккаунт",
-        "Profile" : "Профиль",
-        "Settings" : "Настройки",
-        "Sign out" : "Выход"
+        "words-in-parts" : "Слова по частям",
+        "tests" : "Тесты",
+        "by-topics" : "По разделам",
+        "mixed" : "Смешанные",
+        "by-level" : "По уровню",
+        "account" : "Аккаунт",
+        "profile" : "Профиль",
+        "settings" : "Настройки",
+        "sign-out" : "Выход"
 
 
     }
