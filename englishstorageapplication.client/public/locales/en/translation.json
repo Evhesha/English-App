@@ -1,34 +1,33 @@
 {
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "admin": "Admin"
+  },
 
-    "navbar" : {
-        "home": "Home",
-        "about": "About",
-        "admin": "Admin"
-    },
-
-    "accoutn-page" : {
+  "accoutn-page": {
     "settings": "Settings",
     "language": "Language",
     "theme": "Theme",
     "profile": "Profile page",
     "admin-panel": "Admin panel",
     "num-of-users": "Num of all users"
-},
+  },
 
-    "sidebar": {
-        "lessons": "Lessons",
-        "dictionary": "Dictionary",
-        "my-dictionary": "My dictionary",
-        "topics" : "Topics",
-        "100-popular" : "100 popular",
-        "words-in-parts" : "Words in parts",
-        "tests" : "Tests",
-        "by-topics" : "By topics",
-        "mixed" : "Mixed",
-        "by-level" : "By level",
-        "account" : "Account",
-        "profile" : "Profile",
-        "settings" : "Settings",
-        "sign-out" : "Sign out"
-    }
+  "sidebar": {
+    "lessons": "Lessons",
+    "dictionary": "Dictionary",
+    "my-dictionary": "My dictionary",
+    "topics": "Topics",
+    "100-popular": "100 popular",
+    "words-in-parts": "Words in parts",
+    "tests": "Tests",
+    "by-topics": "By topics",
+    "mixed": "Mixed",
+    "by-level": "By level",
+    "account": "Account",
+    "profile": "Profile",
+    "settings": "Settings",
+    "sign-out": "Sign out"
+  }
 }

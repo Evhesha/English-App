@@ -33,7 +33,7 @@ const CardContainer = styled.div`
 function TopicsPage() {
   return (
     <CardContainer>
-      <Card
+      <TopicCard
         title={"Traveling"}
         image={
           <img src={travelingImage} className="card-img-top" alt="..."></img>
@@ -41,37 +41,37 @@ function TopicsPage() {
         text={"Traveling topic"}
         link={"/traveling-topic"}
       />
-      <Card
+      <TopicCard
         title={"Cooking"}
         image={<img src={cookingImage} className="card-img-top" alt="..."></img>}
         text={"Cooking topic"}
         link={"/cooking-topic"}
       />
-      <Card
+      <TopicCard
         title={"Shopping"}
         image={<img src={shoppingImage} className="card-img-top" alt="..."></img>}
         text={"Shopping topic"}
         link={"/shopping-topic"}
       />
-      <Card
+      <TopicCard
         title={"Sport"}
         image={<img src={sportImage} className="card-img-top" alt="..."></img>}
         text={"Sport topic"}
         link={"/sport-topic"}
       />
-      <Card
+      <TopicCard
         title={"Nature"}
         image={<img src={natureImage} className="card-img-top" alt="..."></img>}
         text={"Nature topic"}
         link={"/nature-topic"}
       />
-      <Card
+      <TopicCard
         title={"Work"}
         image={<img src={workImage} className="card-img-top" alt="..."></img>}
         text={"Work topic"}
         link={"/work-topic"}
       />
-      <Card
+      <TopicCard
         title={"Programming"}
         image={
           <img src={programmingPage} className="card-img-top" alt="..."></img>
