@@ -1,37 +1,33 @@
 {
-    "navbar" : {
-     "home" : "Домой",
-    "about" : "Про",
-    "admin" : "Админ"
-    },
+  "navbar": {
+    "home": "Домой",
+    "about": "Про",
+    "admin": "Админ"
+  },
 
-    "accoutn-page" : {
-    "settings" : "Настройки",
-    "language" : "Язык",
-    "theme" : "Тема",
-    "profile" : "Страница профиля",
-    "admin-panel" : "Панель администратора",
-    "num-of-users" : "Количество всех пользователей"
-},
+  "accoutn-page": {
+    "settings": "Настройки",
+    "language": "Язык",
+    "theme": "Тема",
+    "profile": "Страница профиля",
+    "admin-panel": "Панель администратора",
+    "num-of-users": "Количество всех пользователей"
+  },
 
-    "sidebar": {
-        "lessons": "Уроки",
-        "dictionary": "Словарь",
-        "my-dictionary": "Мой словарь",
-        "topics" : "Разделы",
-        "100-popular" : "100 популярных",
-        "words-in-parts" : "Слова по частям",
-        "tests" : "Тесты",
-        "by-topics" : "По разделам",
-        "mixed" : "Смешанные",
-        "by-level" : "По уровню",
-        "account" : "Аккаунт",
-        "profile" : "Профиль",
-        "settings" : "Настройки",
-        "sign-out" : "Выход"
-
-
-    }
-
-    
+  "sidebar": {
+    "lessons": "Уроки",
+    "dictionary": "Словарь",
+    "my-dictionary": "Мой словарь",
+    "topics": "Разделы",
+    "100-popular": "100 популярных",
+    "words-in-parts": "Слова по частям",
+    "tests": "Тесты",
+    "by-topics": "По разделам",
+    "mixed": "Смешанные",
+    "by-level": "По уровню",
+    "account": "Аккаунт",
+    "profile": "Профиль",
+    "settings": "Настройки",
+    "sign-out": "Выход"
+  }
 }
