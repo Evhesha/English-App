@@ -1,5 +1,5 @@
-import Card from "../Card";
-import "../DictionaryTopicsPage/TopicsPage.css";
+import TopicCard from "../TopicCard";
+import "../DictionaryTopicsPage/TopicsPage.css"
 
 import travelingImage from "../dict-images/traveling.png";
 import cookingImage from "../dict-images/cooking.png";
