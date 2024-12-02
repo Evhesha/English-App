@@ -9,13 +9,13 @@ function SettingPage(){
     }
 
     return<>
-        <h1>{t("settings")}</h1>
+        <h1>{t("accoutn-page.settings")}</h1>
         <p></p>
-        <h3>{t("language")}</h3>
+        <h3>{t("accoutn-page.language")}</h3>
         <button onClick={() => changeLanguage("en")}>EN</button>
         <button onClick={() => changeLanguage("ru")}>RU</button>
         <p></p>
-        <h3>{t("theme")}</h3>
+        <h3>{t("accoutn-page.theme")}</h3>
     </>
 }
 

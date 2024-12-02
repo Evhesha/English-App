@@ -54,7 +54,7 @@ function AdminPanel() {
         <h1 style={{ marginLeft: "20px" }}>{t("admin-panel")}</h1>
       </div>
       <p>
-        {t("num-of-users")} <b>{users.length}</b> * Num of admins <b>{users.length} </b>
+        {t("accoutn-page.num-of-users")} <b>{users.length}</b> * Num of admins <b>{users.length} </b>
          * Num of teaches <b>{users.length}</b> * Num of users <b>{users.length}</b>
       </p>
       Отсортировать по роли 
