@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const fadeIn = keyframes`
   from {
@@ -113,17 +115,25 @@ const ThemeSwitch = styled.label`
 `;
 
 function SettingPage() {
-    const [t, i18n] = useTranslation();
+    const { t, i18n } = useTranslation();
     const [currentLang, setCurrentLang] = useState(i18n.language);
     const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    const notify = () => {
+      toast.success("Language changed!", {
+        position: "bottom-right"
+      });
+    }
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
         setCurrentLang(language);
+        notify();
     };
 
     return (
         <Container>
+          <ToastContainer />
             <Title>{t("accoutn-page.settings")}</Title>
             
             <Section>
