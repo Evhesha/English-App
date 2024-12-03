@@ -5,6 +5,8 @@ import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
 import CreateUserPopUp from "../../Components/PopUps/CreateUserPopUp";
 import { useTranslation } from "react-i18next";
 import RoleDropdown from "../../Components/Dropdown/RoleDropdown";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function AdminPanel() {
   const [users, setUsers] = useState([]);
@@ -12,6 +14,12 @@ function AdminPanel() {
   const [hasError, setHasError] = useState(false);
   const [delayCompleted, setDelayCompleted] = useState(false);
   const {t} = useTranslation();
+
+  const notify = () => {
+    toast.success("Data received!", {
+      position: "bottom-right"
+    });
+  }
 
   useEffect(() => {
     const fetchUsers = async () => {
