@@ -2,39 +2,44 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../Navbar/Navbar.css";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from "jwt-decode";
 import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+
+  const notify = () => {
+    toast.success("Theme changed!", {
+      position: "bottom-right"
+    });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       const token = Cookies.get("token");
-      console.log(token);
       if (token) {
-        // Use jwt-decode to decode the token
-        const decodedToken = jwtDecode(token);
-        console.log("Decoded Token:", decodedToken); // Logging decoded token to check its content
-        const userId = decodedToken.role; // Extract UserId from token
+        try {
+          const decodedToken = jwtDecode(token);
+          const userRole = decodedToken.role;
 
-        if (userId === "Admin"){
-          setIsAdmin(true);
+          if (userRole === "Admin") {
+            setIsAdmin(true);
+          } else {
+            setIsAdmin(false);
+          }
+
+          // Если необходимо, можете добавить обработку данных пользователя
+        } catch (error) {
+          console.error("Error decoding token:", error);
+          setIsAdmin(false);
         }
-
-        axios
-          .get(`https://localhost:5001/api/UsersCards/${userId}`)
-          .then((response) => {
-            setCards(response.data);
-            setAuthorized(true);
-          })
-          .catch((error) => {
-            console.error("Error fetching role:", error);
-            setAuthorized(false);
-          });
+      } else {
+        setIsAdmin(false);
       }
     };
 
@@ -42,7 +47,6 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
   }, []);
 
   useEffect(() => {
-    // Проверяем сохраненную тему при загрузке
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setDarkMode(true);
@@ -59,6 +63,7 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
       document.body.classList.remove('dark-theme');
       localStorage.setItem('theme', 'light');
     }
+    notify();
   };
 
   return (
@@ -80,16 +85,16 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
               </li>
               <li>
                 <Link className="nav-link" to={"/about-app"}>
-                {t("navbar.about")}
+                  {t("navbar.about")}
                 </Link>
               </li>
-              {isAdmin ? (
+              {isAdmin && (
                 <li>
                   <Link className="nav-link" to={"/admin"}>
-                  {t("navbar.admin")}
+                    {t("navbar.admin")}
                   </Link>
                 </li>
-              ) : ''}
+              )}
             </ul>
           </div>
           <div className="navbar-right">
@@ -103,10 +108,10 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
             <Link to={"/profile-page"}>
               <i className="bi bi-person-circle" style={{ fontSize: '2.5rem' }}></i>
             </Link>
-            <Link className="btn btn-outline-primary" to={"/login"} style={{paddingLeft: "10px", paddingRight: "10px"}}>
+            <Link className="btn btn-outline-primary" to={"/login"} style={{ paddingLeft: "10px", paddingRight: "10px" }}>
               Login <i className="bi bi-box-arrow-in-right"></i>
             </Link>
-            <Link className="btn btn-outline-primary" to={"/signUp"} style={{paddingLeft: "10px", paddingRight: "10px"}}>
+            <Link className="btn btn-outline-primary" to={"/signUp"} style={{ paddingLeft: "10px", paddingRight: "10px" }}>
               Sign-Up <i className="bi bi-clipboard2-check"></i>
             </Link>
           </div>
