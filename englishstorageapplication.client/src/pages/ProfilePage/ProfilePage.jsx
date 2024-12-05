@@ -30,7 +30,6 @@ function ProfilePage() {
           setUser(response.data);
           setAuthorized(true);
         } catch (error) {
-          console.error("Error fetching user data:", error);
           setAuthorized(false);
         }
       }
