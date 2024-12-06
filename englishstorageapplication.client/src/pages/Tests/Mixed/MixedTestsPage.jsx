@@ -1,5 +1,5 @@
 import TestCardLink from "../TestCardLink";
-import "../styles.css"; // Убедитесь, что стили импортированы
+import "../styles.css";
 
 function MixedTestsPage() {
   const tests = [
@@ -9,12 +9,12 @@ function MixedTestsPage() {
       icon: "📝",
     },
     {
-      link: "/mixed-test-2)", //добавить линк
+      link: "/mixed-test-2",
       title: "Mixed test №2",
       icon: "📊",
     },
     {
-        link: "/mixed-test-3", //добавить линк
+        link: "/mixed-test-3",
         title: "Mixed test №3",
         icon: "📑",
       },
