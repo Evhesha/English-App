@@ -18,9 +18,8 @@ import PresentPerfect from "../../pages/Lessons/PresentPerfect";
 import PastPerfect from "../../pages/Lessons/PastPerfect";
 import FuturePerfect from "../../pages/Lessons/FuturePerfect";
 import PresentPerfectContinuous from "../../pages/Lessons/PresentPerfectContinuous";
-import PastPerfectContinuous
- from "../../pages/Lessons/PastPerfectContionuous";
-
+import FuturePerfectContinuous from "../../pages/Lessons/FuturePerfectContinuous";
+import PastPerfectContinuous from "../../pages/Lessons/PastPerfectContionuous";
 
 import AboutApp from "/src/pages/Another/AboutApp";
 import Home from "../Home/Home";
@@ -47,6 +46,12 @@ import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
 
 import ByLevelTestPage from "../../pages/Tests/By level/ByLevelTestPage";
 import A0 from "../../pages/Tests/By level/ByLevelTests/A0";
+import A1 from "../../pages/Tests/By level/ByLevelTests/A1";
+import A2 from "../../pages/Tests/By level/ByLevelTests/A2";
+import B1 from "../../pages/Tests/By level/ByLevelTests/B1";
+import B2 from "../../pages/Tests/By level/ByLevelTests/B2";
+import C1 from "../../pages/Tests/By level/ByLevelTests/C1";
+import C2 from "../../pages/Tests/By level/ByLevelTests/C2";
 
 import ByTopicsPage from "../../pages/Tests/By topics/ByTopicsPage";
 import PresentSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PresentSimpleTest";
@@ -54,11 +59,11 @@ import FutureSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/FutureSi
 import PastSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PastSimpleTest";
 import PresentContinuousTest from "../../pages/Tests/By topics/ByTopicsTests/PresentContinuousTest";
 
-import TestCardLink from "../../pages/Tests/TestCardLink";
-
 import MixedTestsPage from "../../pages/Tests/Mixed/MixedTestsPage";
 import MixedTest1 from "../../pages/Tests/Mixed/MixedTests/MixedTest1";
-import FuturePerfectContinuous from "../../pages/Lessons/FuturePerfectContinuous";
+import MixedTest2 from "../../pages/Tests/Mixed/MixedTests/MixedTest2";
+import MixedTest3 from "../../pages/Tests/Mixed/MixedTests/MixedTest3";
+
 
 function RoutesList() {
   return (
@@ -111,6 +116,12 @@ function RoutesList() {
         //Sideber.Tests
         <Route path="/level-tests" element={<ByLevelTestPage />}/>
         <Route path="/A0-test" element={<A0 />}/>
+        <Route path="/A1-test" element={<A1 />}/>
+        <Route path="/A2-test" element={<A2 />}/>
+        <Route path="/B1-test" element={<B1 />}/>
+        <Route path="/B2-test" element={<B2 />}/>
+        <Route path="/C1-test" element={<C1 />}/>
+        <Route path="/C2-test" element={<C1 />}/>
 
         <Route path="/topics-tests" element={<ByTopicsPage />}/>
         <Route path="/present-simple-test" element={<PresentSimpleTest />}/>
@@ -120,6 +131,8 @@ function RoutesList() {
 
         <Route path="/mixed-tests" element={<MixedTestsPage />}/>
         <Route path="/mixed-test-1" element={<MixedTest1 />}/>
+        <Route path="/mixed-test-2" element={<MixedTest2 />}/>
+        <Route path="/mixed-test-3" element={<MixedTest3 />}/>
         
         // Footer
 
