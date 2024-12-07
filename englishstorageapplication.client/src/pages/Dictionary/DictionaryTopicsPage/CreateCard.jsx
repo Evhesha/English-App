@@ -1,7 +1,10 @@
 import CreateDictCardPop from "../../../Components/PopUps/CreateDictCardPopUp"
+import { useState } from "react";
+
 
 function Card({image, title, text, onUpdate}) {
- 
+  const [cards, setCards] = useState([]);
+  
     return (
     <>
       <div className="card" style={{ width: "18rem" }}>
@@ -11,7 +14,7 @@ function Card({image, title, text, onUpdate}) {
           <p className="card-text">
             {text}
           </p>
-          <CreateDictCardPop></CreateDictCardPop>
+          <CreateDictCardPop onPost={(newCard) => setCards([...cards, newCard])}></CreateDictCardPop>
         </div>
       </div>
     </>

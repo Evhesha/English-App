@@ -1,6 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
 
 const fadeIn = keyframes`
   from {
@@ -113,17 +117,37 @@ const ThemeSwitch = styled.label`
 `;
 
 function SettingPage() {
-    const [t, i18n] = useTranslation();
+    const { t, i18n } = useTranslation();
     const [currentLang, setCurrentLang] = useState(i18n.language);
     const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    const notify = () => {
+      toast.success("Language changed!", {
+        position: "bottom-right"
+      });
+    }
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
         setCurrentLang(language);
+        notify();
+    };
+
+    const handleLogout = () => { 
+      const confirmLogout = window.confirm("Are you sure that you want to logout?");
+      if (!confirmLogout) return;
+      
+  
+      Cookies.remove("token"); // Удаляем токен из куки 
+      setAuthorized(false); // Обновляем состояние авторизации
+      navigate("/login"); // Перенаправляем на страницу входа
+      window.location.reload(); // Обновляем страницу
+      
     };
 
     return (
         <Container>
+          <ToastContainer />
             <Title>{t("accoutn-page.settings")}</Title>
             
             <Section>
@@ -154,6 +178,20 @@ function SettingPage() {
                     />
                     <span></span>
                 </ThemeSwitch>
+            </Section>
+
+            <Section>
+                <h3 style={{color : "red"}}>{t("sidebar.sign-out")}</h3>
+                
+                <Link
+                    to="#"
+                    onClick={handleLogout}
+                    className="btn-danger"
+                  >
+                    <i className="bi bi-door-closed"></i> {t("sidebar.sign-out")}
+                  </Link>
+                    <span></span>
+               
             </Section>
         </Container>
     );
