@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import "../Home/Home.css";
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useTranslation } from "react-i18next";
 
 function Home() {
+    const { t } = useTranslation();
+
     useEffect(() => {
         const observerCallback = (entries) => {
             entries.forEach(entry => {
@@ -42,11 +45,11 @@ function Home() {
             <section className="hero">
                 <Container>
                     <div className="hero-content" >
-                        <h1>Изучайте английский бесплатно с удовольствием</h1>
-                        <p className="subtitle">Эффективная методика для быстрого освоения языка</p>
+                        <h1>{t("home.hero_title")}</h1>
+                        <p className="subtitle">{t("home.hero_subtitle")}</p>
                         <div className="cta-container">
-                            <Button className="btn-primary">Начать обучение</Button>
-                            <Button variant="outline-dark">Узнать больше</Button>
+                            <Button className="btn-primary">{t("home.start_button")}</Button>
+                            <Button variant="outline-dark">{t("home.learn_more")}</Button>
                         </div>
                     </div>
                 </Container>
@@ -58,19 +61,19 @@ function Home() {
                         <Col md={4} className="stat-column animate-on-scroll">
                             <div className="stat-card">
                                 <div className="counter" data-value="10000">0</div>
-                                <p>Активных студентов</p>
+                                <p>{t("home.active_students")}</p>
                             </div>
                         </Col>
                         <Col md={4} className="stat-column animate-on-scroll">
                             <div className="stat-card">
                                 <div className="counter" data-value="100">0</div>
-                                <p>Уроков</p>
+                                <p>{t("home.lessons")}</p>
                             </div>
                         </Col>
                         <Col md={4} className="stat-column animate-on-scroll">
                             <div className="stat-card">
                                 <div className="counter" data-value="98">0</div>
-                                <p>% Успешных студентов</p>
+                                <p>{t("home.success_rate")}</p>
                             </div>
                         </Col>
                     </Row>
@@ -79,28 +82,28 @@ function Home() {
 
             <section className="features">
                 <Container>
-                    <h2 className="section-title animate-on-scroll">Преимущества обучения</h2>
+                    <h2 className="section-title animate-on-scroll">{t("home.features_title")}</h2>
                     <Row>
                         {[
                             {
                                 icon: "🎯",
-                                title: "Персонализация",
-                                description: "Индивидуальный подход к каждому студенту"
+                                title: t("home.feature1_title"),
+                                description: t("home.feature1_desc")
                             },
                             {
                                 icon: "💡",
-                                title: "Современные методики",
-                                description: "Эффективные подходы к обучению"
+                                title: t("home.feature2_title"),
+                                description: t("home.feature2_desc")
                             },
                             {
                                 icon: "🗣️",
-                                title: "Разговорная практика",
-                                description: "Регулярное общение с носителями языка"
+                                title: t("home.feature3_title"),
+                                description: t("home.feature3_desc")
                             },
                             {
                                 icon: "📱",
-                                title: "Доступность",
-                                description: "Обучение в любое время и в любом месте"
+                                title: t("home.feature4_title"),
+                                description: t("home.feature4_desc")
                             }
                         ].map((feature, index) => (
                             <Col md={6} lg={3} key={index} className="animate-on-scroll">
@@ -117,14 +120,14 @@ function Home() {
 
             <section className="process">
                 <Container>
-                    <h2 className="section-title animate-on-scroll">Как проходит обучение</h2>
+                    <h2 className="section-title animate-on-scroll">{t("home.process_title")}</h2>
                     <div className="process-steps">
                         {[
-                            "Определение уровня языка",
-                            "Составление учебного плана",
-                            "Регулярные занятия",
-                            "Практика и закрепление",
-                            "Достижение результатов"
+                            t("home.process_step1"),
+                            t("home.process_step2"),
+                            t("home.process_step3"),
+                            t("home.process_step4"),
+                            t("home.process_step5")
                         ].map((step, index) => (
                             <div key={index} className="process-step animate-on-scroll">
                                 <div className="step-number">{index + 1}</div>
@@ -138,14 +141,12 @@ function Home() {
             <section className="cta-section">
                 <Container>
                     <div className="cta-content animate-on-scroll">
-                        <h2>Готовы начать?</h2>
-                        <p>Присоединяйтесь к нам сегодня и достигните своих языковых целей</p>
-                        <Button className="btn-primary">Начать бесплатно</Button>
+                        <h2>{t("home.cta_title")}</h2>
+                        <p>{t("home.cta_subtitle")}</p>
+                        <Button className="btn-primary">{t("home.cta_button")}</Button>
                     </div>
                 </Container>
             </section>
-
-            
         </div>
     );
 }

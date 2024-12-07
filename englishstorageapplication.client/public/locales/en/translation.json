@@ -29,5 +29,32 @@
     "profile": "Profile",
     "settings": "Settings",
     "sign-out": "Sign out"
+  },
+  "home": {
+    "hero_title": "Learn English for free with pleasure",
+    "hero_subtitle": "Effective methodology for quick language acquisition",
+    "start_button": "Start Learning",
+    "learn_more": "Learn More",
+    "active_students": "Active Students",
+    "lessons": "Lessons",
+    "success_rate": "% Successful Students",
+    "features_title": "Learning Benefits",
+    "feature1_title": "Personalization",
+    "feature1_desc": "Individual approach to each student",
+    "feature2_title": "Modern Methods",
+    "feature2_desc": "Effective learning approaches",
+    "feature3_title": "Speaking Practice",
+    "feature3_desc": "Regular communication with native speakers",
+    "feature4_title": "Accessibility",
+    "feature4_desc": "Learn anytime, anywhere",
+    "process_title": "How Learning Works",
+    "process_step1": "Language level assessment",
+    "process_step2": "Creating study plan",
+    "process_step3": "Regular classes",
+    "process_step4": "Practice and consolidation",
+    "process_step5": "Achieving results",
+    "cta_title": "Ready to Start?",
+    "cta_subtitle": "Join us today and achieve your language goals",
+    "cta_button": "Start for Free"
   }
 }
