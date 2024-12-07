@@ -3,6 +3,8 @@ import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
 
 const fadeIn = keyframes`
   from {
@@ -131,6 +133,18 @@ function SettingPage() {
         notify();
     };
 
+    const handleLogout = () => { 
+      const confirmLogout = window.confirm("Are you sure that you want to logout?");
+      if (!confirmLogout) return;
+      
+  
+      Cookies.remove("token"); // Удаляем токен из куки 
+      setAuthorized(false); // Обновляем состояние авторизации
+      navigate("/login"); // Перенаправляем на страницу входа
+      window.location.reload(); // Обновляем страницу
+      
+    };
+
     return (
         <Container>
           <ToastContainer />
@@ -164,6 +178,20 @@ function SettingPage() {
                     />
                     <span></span>
                 </ThemeSwitch>
+            </Section>
+
+            <Section>
+                <h3 style={{color : "red"}}>{t("sidebar.sign-out")}</h3>
+                
+                <Link
+                    to="#"
+                    onClick={handleLogout}
+                    className="btn-danger"
+                  >
+                    <i className="bi bi-door-closed"></i> {t("sidebar.sign-out")}
+                  </Link>
+                    <span></span>
+               
             </Section>
         </Container>
     );
