@@ -5,13 +5,13 @@ const getResultMessage = (score, totalQuestions) => {
         return {
             emoji: '🏆',
             title: 'Perfect Score!',
-            message: 'Congratulations! You are a Present Simple master!'
+            message: 'Congratulations! You are a Topic master!'
         };
     } else if (percentage >= 80) {
         return {
             emoji: '🌟',
             title: 'Excellent!',
-            message: 'Great job! You have a strong understanding of Present Simple!'
+            message: 'Great job! You have a strong understanding of Topic!'
         };
     } else if (percentage >= 60) {
         return {
@@ -29,7 +29,7 @@ const getResultMessage = (score, totalQuestions) => {
         return {
             emoji: '💪',
             title: 'Don\'t Give Up!',
-            message: 'Present Simple needs more practice. You can do it!'
+            message: 'Topic needs more practice. You can do it!'
         };
     }
 };
