@@ -8,7 +8,12 @@
 
 /* Navbar */
 .navbar {
-  background: rgba(255, 255, 255, 0.8); /* Reduced opacity for less white background */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Reduced opacity for less white background */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   padding: 0;
   transition: all 0.3s ease;
@@ -34,10 +39,10 @@
 }
 
 /* Content */
-.content { 
+.content {
   flex: 1;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly reduced opacity */
+  background-color: var(--content-bg-color); /* Slightly reduced opacity */
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
@@ -59,13 +64,23 @@
 }
 
 /* Global Styles */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom right, #93ed77, #5353f0);
+  font-family: "Arial", sans-serif;
   color: #333;
   overflow-x: hidden;
+}
+
+.light-theme {
+  background: linear-gradient(to bottom right, #93ed77, #5353f0);
+  --content-bg-color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-theme {
+  background: linear-gradient(to bottom right, #39618a, #34495e);
+  --content-bg-color: rgba(92, 153, 186, 0.9);
 }
 
 /* Button Styles */
@@ -94,12 +109,11 @@ html, body {
   .content {
     margin: 0 20px;
   }
-  
+
   .sidebar {
     width: 200px;
   }
 }
-
 
 .toggle-btn:hover {
   background-color: rgb(89, 119, 255); /* Измените цвет фона на красный */
@@ -107,6 +121,6 @@ html, body {
   transform: scale(1.1);
 }
 
-.footerr{
+.footerr {
   background-color: #007bff00;
 }
