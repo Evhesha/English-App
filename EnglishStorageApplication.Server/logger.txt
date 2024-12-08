@@ -1,0 +1,50 @@
+The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+Using an in-memory repository. Keys will not be persisted to storage.
+Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+No XML encryptor configured. Key {c0a72053-2f52-4c2e-a4d0-49ccecb1200b} may be persisted to storage in unencrypted form.
+The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+Now listening on: http://[::]:5000
+Now listening on: https://[::]:5001
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /app
+Executed DbCommand (108ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+Executed DbCommand (457ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AdminRoles" AS a
+    WHERE a."UserId" = @__userId_0)
+Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+Executed DbCommand (28ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
