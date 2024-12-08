@@ -8,12 +8,7 @@
 
 /* Navbar */
 .navbar {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Reduced opacity for less white background */
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   padding: 0;
   transition: all 0.3s ease;
@@ -22,11 +17,17 @@
   z-index: 1000;
 }
 
+.dark-theme .navbar {
+  background: rgba(23, 32, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .navbar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 28px; /* Further reduced height */
+  height: 28px;
   padding: 0 20px;
 }
 
@@ -35,21 +36,22 @@
   display: flex;
   flex: 1;
   width: 100%;
-  margin-top: 28px; /* Add margin to account for navbar height */
+  margin-top: 28px;
 }
 
 /* Content */
 .content {
   flex: 1;
   padding: 20px;
-  background-color: var(--content-bg-color); /* Slightly reduced opacity */
+  background-color: var(--content-bg-color);
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  margin: 0 50px; /* Reduced side margins */
-  max-width: 1200px; /* Added max-width for better readability on large screens */
+  margin: 0 50px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.3s ease;
 }
 
 /* Sidebar */
@@ -59,7 +61,7 @@
   color: #ffffff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  height: calc(100vh - 28px); /* Adjust height to account for navbar */
+  height: calc(100vh - 28px);
   overflow-y: auto;
 }
 
@@ -79,8 +81,26 @@ body {
 }
 
 .dark-theme {
-  background: linear-gradient(to bottom right, #39618a, #34495e);
-  --content-bg-color: rgba(92, 153, 186, 0.9);
+  background: linear-gradient(135deg, #1a2a3d 0%, #2c3e50 25%, #3498db 100%);
+  --content-bg-color: rgba(23, 32, 42, 0.9);
+  color: #ecf0f1;
+}
+
+.dark-theme .content {
+  background: linear-gradient(135deg, rgba(26, 42, 61, 0.9), rgba(44, 62, 80, 0.9));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .btn {
+  color: #ecf0f1;
+  border-color: #3498db;
+}
+
+.dark-theme .btn:hover {
+  background-color: #3498db;
+  color: #fff;
+  border-color: #2980b9;
 }
 
 /* Button Styles */
@@ -116,11 +136,38 @@ body {
 }
 
 .toggle-btn:hover {
-  background-color: rgb(89, 119, 255); /* Измените цвет фона на красный */
-  color: white; /* Измените цвет текста, если необходимо */
+  background-color: rgb(89, 119, 255);
+  color: white;
   transform: scale(1.1);
+}
+
+.dark-theme .toggle-btn:hover {
+  background-color: #3498db;
 }
 
 .footerr {
   background-color: #007bff00;
+}
+
+/* Дополнительные стили для темной темы */
+.dark-theme .nav-link {
+  color: #ecf0f1;
+}
+
+.dark-theme .nav-link:hover {
+  color: #3498db;
+}
+
+.dark-theme .bi {
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+}
+
+.dark-theme .bi:hover {
+  color: #3498db;
+}
+
+.dark-theme .sidebar {
+  background: linear-gradient(135deg, rgba(26, 42, 61, 0.95), rgba(44, 62, 80, 0.95));
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
