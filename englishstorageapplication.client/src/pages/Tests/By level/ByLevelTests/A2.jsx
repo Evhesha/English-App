@@ -1,9 +1,4 @@
-import React, { useState } from 'react';
-import styles from '../../StyleConstant';
-import ProgressBar from '../../ProgressBar';
-import Question from '../../Question';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Results from '../../Results';
+import TestTemplate from "../../TestTemplate";
 
 const questions = [
     {
@@ -127,114 +122,7 @@ const questions = [
 ];
 
 function A2Test() {
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [score, setScore] = useState(0);
-    const [userAnswers, setUserAnswers] = useState({});
-    const [showResults, setShowResults] = useState(false);
-    const [inputAnswer, setInputAnswer] = useState('');
-    const [mistakes, setMistakes] = useState([]);
-
-    const handleAnswer = () => {
-        const question = questions[currentQuestion];
-        let isCorrect = false;
-        let userAnswer = '';
-
-        if (question.type === 'choice') {
-            userAnswer = userAnswers[currentQuestion];
-            isCorrect = userAnswer === question.correctAnswer;
-        } else if (question.type === 'input') {
-            userAnswer = inputAnswer.toLowerCase().trim();
-            isCorrect = userAnswer === question.correctAnswer.toLowerCase();
-        } else if (question.type === 'match') {
-            userAnswer = userAnswers[currentQuestion];
-            isCorrect = JSON.stringify(userAnswer) === JSON.stringify(question.correctAnswer);
-        }
-
-        if (isCorrect) {
-            setScore(score + 1);
-        } else {
-            setMistakes([...mistakes, {
-                question: question.question,
-                userAnswer: userAnswer,
-                correctAnswer: question.correctAnswer
-            }]);
-        }
-
-        if (currentQuestion < questions.length - 1) {
-            setCurrentQuestion(currentQuestion + 1);
-            setInputAnswer('');
-        } else {
-            setShowResults(true);
-        }
-    };
-
-    const handleSkip = () => {
-        if (currentQuestion < questions.length - 1) {
-            setCurrentQuestion(currentQuestion + 1);
-            setInputAnswer('');
-        } else {
-            setShowResults(true);
-        }
-    };
-
-    const handleOptionSelect = (option) => {
-        setUserAnswers({
-            ...userAnswers,
-            [currentQuestion]: option
-        });
-    };
-
-    const handleMatchSelect = (term, match) => {
-        setUserAnswers({
-            ...userAnswers,
-            [currentQuestion]: {
-                ...userAnswers[currentQuestion],
-                [term]: match
-            }
-        });
-    };
-
-    const handleRetry = () => {
-        setCurrentQuestion(0);
-        setScore(0);
-        setUserAnswers({});
-        setShowResults(false);
-        setInputAnswer('');
-        setMistakes([]);
-    };
-
-    return (
-        <div className="test-container">
-            <style>{styles}</style>
-            <h1>A2 English Test</h1>
-            
-            {showResults ? (
-                <Results 
-                    score={score}
-                    questionsLength={questions.length}
-                    mistakes={mistakes}
-                    onRetry={handleRetry}
-                />
-            ) : (
-                <>
-                    <ProgressBar 
-                        currentQuestion={currentQuestion}
-                        totalQuestions={questions.length}
-                    />
-                    <Question 
-                        question={questions[currentQuestion]}
-                        userAnswers={userAnswers}
-                        inputAnswer={inputAnswer}
-                        onOptionSelect={handleOptionSelect}
-                        onInputChange={setInputAnswer}
-                        onAnswer={handleAnswer}
-                        onSkip={handleSkip}
-                        onMatchSelect={handleMatchSelect}
-                    />
-                </>
-            )}
-        </div>
-    );
+    return <TestTemplate testName="A2 level Test" questions={questions} />
 }
 
 export default A2Test;

@@ -5,6 +5,8 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Navbar from "./Components/Navbar/Navbar";
 import RoutesList from "./Components/RoutesList/RoutesList";
 
+import { ThemeProvider } from "./Components/ThemeProvider/ThemeProvider";
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -13,7 +15,7 @@ function App() {
   };
 
   return (
-    <>
+    <ThemeProvider>
       <div className="app-layout">
         <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
         <div className="app-container">
@@ -22,13 +24,13 @@ function App() {
             <RoutesList />
           </div>
         </div>
-        <div>
-          <footer className="footerr">
-            <p className="copyright">© 2024 English Learning. Все права защищены.</p>
-          </footer>
-        </div>
+        <footer className="footerr">
+          <p className="copyright">
+            © 2024 English Learning. Все права защищены.
+          </p>
+        </footer>
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 
