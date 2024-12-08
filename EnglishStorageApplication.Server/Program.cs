@@ -1,6 +1,7 @@
 using EnglishApp.Infrastructure;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using EnglishStorageApplication.EnglishApp.Extensions;
+using EnglishStorageApplication.Server.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,9 @@ builder.Services.AddApplicationServices();
 
 // Настройка аутентификации и JWT (extension)
 builder.Services.AddJwtAuthentication(builder.Configuration);
+
+// Установка файла для логирования (extension)
+builder.Logging.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
 
 // Настройка CORS
 builder.Services.AddCustomCors(builder.Configuration);
