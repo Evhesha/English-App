@@ -1,9 +1,24 @@
 import CreateDictCardPop from "../../../Components/PopUps/CreateDictCardPopUp"
 import { useState } from "react";
+import { jwtDecode } from "jwt-decode";
+import { useEffect } from "react";
+import Cookies from "js-cookie";
+import axios from "axios";
 
+function CreateCard({image, title, text, onCreate}) {
+  const [userId, setUserId] = useState(null);
 
-function Card({image, title, text, onUpdate}) {
-  const [cards, setCards] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const token = Cookies.get("token");
+      if (token) {
+        const decodedToken = jwtDecode(token);
+        setUserId(decodedToken.UserId);
+      }
+    };
+
+    fetchData();
+  }, []);
   
     return (
     <>
@@ -14,11 +29,11 @@ function Card({image, title, text, onUpdate}) {
           <p className="card-text">
             {text}
           </p>
-          <CreateDictCardPop onPost={(newCard) => setCards([...cards, newCard])}></CreateDictCardPop>
+          <CreateDictCardPop onPost={onCreate} userId={userId}></CreateDictCardPop>
         </div>
       </div>
     </>
   );
 }
 
-export default Card;
+export default CreateCard;
