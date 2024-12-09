@@ -69,13 +69,13 @@ function LessonsListPage() {
       path: "/past-perfect-continuous", 
       title: "Past Perfect Continuous",
       description: "Ongoing actions until now",
-      icon: "⏳"
+      icon: "🎯"
     },
     { 
       path: "/future-perfect-continuous", 
       title: "Future Perfect Continuous",
       description: "Ongoing actions until now",
-      icon: "🎯"
+      icon: "⏳"
     }
     
   ];
