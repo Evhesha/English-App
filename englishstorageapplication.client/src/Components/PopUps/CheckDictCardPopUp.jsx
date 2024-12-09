@@ -1,10 +1,11 @@
 import "../PopUps/CreateUserPopUp.css";
 import { useState } from "react";
+import axios from "axios";
 
-function CheckDictCardPopUp({title, cardText}){
+function CheckDictCardPopUp({ title, cardText, onPut, userId, id }) {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState(title);
-  const [text, setText] = useState(cardText)
+  const [text, setText] = useState(cardText);
   const [error, setError] = useState(null);
 
   const togglePopup = () => {
@@ -15,6 +16,37 @@ function CheckDictCardPopUp({title, cardText}){
   const closePopup = (e) => {
     e.preventDefault(); // Предотвращаем перезагрузку страницы
     setIsOpen(false);
+  };
+
+  const handleEdit = async (event) => {
+    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+    try {
+      const response = await axios.put(
+        `https://localhost:5001/api/UsersCards/${id}`,
+        {
+          userId: userId,
+          nameOfUserCard: name,
+          userCardData: text,
+        }
+      );
+
+      console.log(response); // Логирование ответа сервера
+
+      if (response.status === 200 || response.status === 201) {
+        if (typeof onPut === 'function') {
+          onPut(response.data);
+        }
+        togglePopup();
+        window.location.reload();
+      } else {
+        setError(response.data.message || "Ошибка при изменении карточки.");
+      }
+    } catch (error) {
+      console.error(error); // Логирование ошибки
+      setError(
+        error.response?.data?.message || "Ошибка при изменении карточки."
+      );
+    }
   };
 
   return (
@@ -29,7 +61,7 @@ function CheckDictCardPopUp({title, cardText}){
               &times;
             </span>
             <h3>Check card</h3>
-            <form onSubmit={togglePopup}>
+            <form onSubmit={handleEdit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                   Card name
