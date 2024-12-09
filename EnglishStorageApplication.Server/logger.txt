@@ -1,10 +1,200 @@
 The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
 Using an in-memory repository. Keys will not be persisted to storage.
 Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
-No XML encryptor configured. Key {900bae94-fb49-44a6-b76a-00b96b0b1815} may be persisted to storage in unencrypted form.
+No XML encryptor configured. Key {1922fb32-8667-4c72-9822-bd4d6b36aafb} may be persisted to storage in unencrypted form.
 The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
 Now listening on: http://[::]:5000
 Now listening on: https://[::]:5001
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: /app
+Executed DbCommand (288ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+Executed DbCommand (28ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AdminRoles" AS a
+    WHERE a."UserId" = @__userId_0)
+Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+Executed DbCommand (27ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (31ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (44ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (44ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (36ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+Executed DbCommand (19ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "UsersCards" SET "NameOfUsersCard" = @p0
+WHERE "Id" = @p1;
+Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "UsersCards" SET "UserCardData" = @p0
+WHERE "Id" = @p1;
+Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (6ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+Executed DbCommand (26ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AdminRoles" AS a
+    WHERE a."UserId" = @__userId_0)
+Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (10ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AdminRoles" AS a
+    WHERE a."UserId" = @__userId_0)
+Executed DbCommand (9ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "AdminRoles" AS a
+    WHERE a."UserId" = @__userId_0)
+Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+Executed DbCommand (62ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
