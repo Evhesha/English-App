@@ -60,10 +60,10 @@ function CheckDictCardPopUp({ title, cardText, onPut, userId, id }) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-            <h3>Check card</h3>
+            <h3 style={{color : "black"}}>Check card</h3>
             <form onSubmit={handleEdit}>
               <div className="mb-3">
-                <label htmlFor="name" className="form-label">
+                <label htmlFor="name" className="form-label" style={{color : "black"}}>
                   Card name
                 </label>
                 <input
@@ -75,13 +75,13 @@ function CheckDictCardPopUp({ title, cardText, onPut, userId, id }) {
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="text" className="form-label">
+                <label htmlFor="text" className="form-label" style={{color : "black"}}>
                   Card text
                 </label>
-                <input
-                  type="text"
+                <textarea
                   className="form-control"
                   id="text"
+                  rows="5"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                 />
