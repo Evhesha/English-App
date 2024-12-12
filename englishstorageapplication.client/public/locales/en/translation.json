@@ -56,5 +56,35 @@
     "cta-title": "Ready to Start?",
     "cta-subtitle": "Join us today and achieve your language goals",
     "cta-button": "Start for Free"
+  },
+    
+  "aboutapp" : {
+    "about-program": "About Program",
+    "key-features": "Key Features",
+    "navigation": "Navigation",
+    "home": "Home - main page of the application",
+    "about": "About - information about the application",
+    "theme-toggle": "Black/White Theme - toggle theme",
+    "profile-page": "Profile page - go to profile",
+    "authentication": "Authentication",
+    "login": "Login - log into account",
+    "sign-up": "Sign-Up - register a new user",
+    "open-close-sidebar": "Open/Close Sidebar - manage menu",
+    "learning-tools": "Learning Tools",
+    "lessons": "Lessons - lessons tab",
+    "dictionary": "Dictionary - dictionary tab",
+    "subject-dictionaries": "Subject dictionaries",
+    "tests": "Tests - tests tab",
+    "subject-tests": "Subject tests",
+    "user-settings": "User Settings",
+    "account-management": "Account - manage account",
+    "profile": "Profile - personal profile",
+    "settings": "Settings - application settings",
+    "sign-out": "Sign out - log out of account",
+    "authors": "Authors",
+    "created-by": "This project was created by Medvedskii Evgenii & Zuhta Kirill",
+    "group": "FITR BNTU, Group 10701222"
   }
 }
+  
+

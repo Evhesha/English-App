@@ -15,8 +15,20 @@ function AdminPanel() {
   const [delayCompleted, setDelayCompleted] = useState(false);
   const {t} = useTranslation();
 
-  const notify = () => {
+  const receiveNotify = () => {
     toast.success("Data received!", {
+      position: "bottom-right"
+    });
+  }
+
+  const deleteNotify = () => {
+    toast.success("Data delete successfuly!", {
+      position: "bottom-right"
+    });
+  }
+
+  const mistakeNotify = () => {
+    toast.error("Error loading data!", {
       position: "bottom-right"
     });
   }
@@ -29,10 +41,12 @@ function AdminPanel() {
         setIsLoading(false);
         setHasError(false); // сбрасываем ошибку при успешной загрузке
         console.log("Данные успешно загружены:", response.data);
+        receiveNotify();
       } catch (error) {
         console.error("Ошибка при получении пользователей:", error);
         setIsLoading(false);
         setHasError(true);
+        mistakeNotify();
       }
     };
 
@@ -53,10 +67,12 @@ function AdminPanel() {
 
   const handleDelete = (id) => {
     setUsers(users.filter((user) => user.id !== id));
+    deleteNotify();
   };
 
   return (
     <>
+      <ToastContainer />
       <div style={{ display: "flex", alignItems: "center" }}>
         <ToLinkButton link="/home" placeholder={"Home"} />
         <h1 style={{ marginLeft: "20px" }}>{t("admin-panel")}</h1>
