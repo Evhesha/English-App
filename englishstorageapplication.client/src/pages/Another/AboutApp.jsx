@@ -1,65 +1,67 @@
 import Authors from "../../assets/Authors.jpg"
 import About from "../../assets/about.png"
 import './AboutApp.css'
+import { useTranslation } from "react-i18next";
 
 function AboutApp() {
+  const { t } = useTranslation();
   return (
     <div className="about-container">
       <div className="header-section">
-        <h1>About Program</h1>
+        <h1>{t("aboutapp.about-program")}</h1>
         <img src={About} className="about-image" alt="Program interface" />
       </div>
 
       <div className="features-section">
-        <h2>Key Features</h2>
+        <h2>{t("aboutapp.key-features")}</h2>
         <div className="features-grid">
           <div className="feature-group">
-            <h3>Navigation</h3>
+            <h3>{t("aboutapp.navigation")}</h3>
             <ul>
-              <li><span className="number">1)</span> Home - домашняя страница приложения</li>
-              <li><span className="number">2)</span> About - страница "О приложении"</li>
-              <li><span className="number">3)</span> Black/White Theme - переключение темы</li>
-              <li><span className="number">4)</span> Profile page - переход в профиль</li>
+              <li><span className="number">1)</span> {t("aboutapp.home")}</li>
+              <li><span className="number">2)</span> {t("aboutapp.about")}</li>
+              <li><span className="number">3)</span> {t("aboutapp.theme-toggle")}</li>
+              <li><span className="number">4)</span> {t("aboutapp.profile-page")}</li>
             </ul>
           </div>
 
           <div className="feature-group">
-            <h3>Authentication</h3>
+            <h3>{t("aboutapp.authentication")}</h3>
             <ul>
-              <li><span className="number">5)</span> Login - вход в аккаунт</li>
-              <li><span className="number">6)</span> Sign-Up - регистрация нового пользователя</li>
+              <li><span className="number">5)</span> {t("aboutapp.login")}</li>
+              <li><span className="number">6)</span> {t("aboutapp.sign-up")}</li>
               
-              <li><span className="number">7)</span> Open/Close Sidebar - управление меню</li>
+              <li><span className="number">7)</span> {t("aboutapp.open-close-sidebar")}</li>
             </ul>
           </div>
 
           <div className="feature-group">
-            <h3>Learning Tools</h3>
+            <h3>{t("aboutapp.learning-tools")}</h3>
             <ul>
-              <li><span className="number">8)</span> Lessons - вкладка "Уроки"</li>
-              <li><span className="number">9)</span> Dictionary - вкладка "Словарь"</li>
-              <li><span className="number">10-13)</span> Словари по разным темам</li>
-              <li><span className="number">14)</span> Tests - вкладка "Тесты"</li>
-              <li><span className="number">15-17)</span> Тесты по разным темам</li>
+              <li><span className="number">8)</span> {t("aboutapp.lessons")}</li>
+              <li><span className="number">9)</span> {t("aboutapp.dictionary")}</li>
+              <li><span className="number">10-13)</span> {t("aboutapp.subject-dictionaries")}</li>
+              <li><span className="number">14)</span> {t("aboutapp.tests")}</li>
+              <li><span className="number">15-17)</span> {t("aboutapp.subject-tests")}</li>
             </ul>
           </div>
 
           <div className="feature-group">
-            <h3>User Settings</h3>
+            <h3>{t("aboutapp.user-settings")}</h3>
             <ul>
-              <li><span className="number">18)</span> Account - управление аккаунтом</li>
-              <li><span className="number">19)</span> Profile - персональный профиль</li>
-              <li><span className="number">20)</span> Settings - настройки приложения</li>
-              <li><span className="number">21)</span> Sign out - выход из аккаунта</li>
+              <li><span className="number">18)</span> {t("aboutapp.account-management")}</li>
+              <li><span className="number">19)</span> {t("aboutapp.profile")}</li>
+              <li><span className="number">20)</span> {t("aboutapp.settings")}</li>
+              <li><span className="number">21)</span> {t("aboutapp.sign-out")}</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div className="authors-section">
-        <h2>Authors</h2>
-        <p>This project was created by Medvedskii Evgenii & Zuhta Kirill</p>
-        <p>FITR BNTU, Group 10701222</p>
+        <h2>{t("aboutapp.authors")}</h2>
+        <p>{t("aboutapp.created-by")}</p>
+        <p>{t("aboutapp.group")}</p>
         <img src={Authors} className="authors-image" alt="Project authors" />
       </div>
     </div>
