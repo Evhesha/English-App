@@ -127,4 +127,34 @@ LIMIT 1
 [12/10/2024 13:45:52] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 DELETE FROM "Users"
 WHERE "Id" = @p0;
-[12/10/2024 13:45:52] 
+[12/10/2024 13:45:52] Executed DbCommand (38ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[12/10/2024 13:49:49] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[12/10/2024 13:49:49] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[12/10/2024 13:49:55] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[12/10/2024 13:49:55] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[12/10/2024 13:50:04] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[12/10/2024 13:50:04] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+[12/10/2024 13:51:00] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+[12/10/2024 13:51:00] 

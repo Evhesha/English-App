@@ -22,7 +22,7 @@ function AdminPanel() {
   }
 
   const deleteNotify = () => {
-    toast.success("Data received!", {
+    toast.success("Data delete successfuly!", {
       position: "bottom-right"
     });
   }
