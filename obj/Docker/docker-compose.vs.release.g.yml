@@ -1,11 +1,10 @@
-version: '3.9'
-
 services:
   englishstorageapplication.server:
     container_name: "EnglishStorageApplication.Server"
     build:
       args:
-        BUILD_CONFIGURATION: Release
+        LAUNCHING_FROM_VS: true
+        BUILD_CONFIGURATION: Debug
       labels:
         com.microsoft.created-by: "visual-studio"
         com.microsoft.visual-studio.project-name: "EnglishStorageApplication.Server"
