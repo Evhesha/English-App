@@ -41,3 +41,4 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\BCrypt.Net-Next.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.Logging.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\EnglishApp.Infrastructure.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\bin\Debug\EnglishStorageApplication.Server.staticwebassets.endpoints.json

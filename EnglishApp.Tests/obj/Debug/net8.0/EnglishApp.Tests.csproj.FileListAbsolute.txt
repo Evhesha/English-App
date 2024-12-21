@@ -145,3 +145,4 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Tests\bin\Debug\net8.0\M
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Tests\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Tests\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishApp.Tests\bin\Debug\net8.0\EnglishStorageApplication.Server.staticwebassets.endpoints.json
