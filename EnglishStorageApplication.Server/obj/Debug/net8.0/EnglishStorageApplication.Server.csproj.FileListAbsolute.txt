@@ -169,3 +169,7 @@ C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bi
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Infrastructure.dll
 C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishApp.Infrastructure.pdb
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\bin\Debug\net8.0\EnglishStorageApplication.Server.staticwebassets.endpoints.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\staticwebassets\msbuild.EnglishStorageApplication.Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
