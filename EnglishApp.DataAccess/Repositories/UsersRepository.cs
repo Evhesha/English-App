@@ -1,4 +1,4 @@
-﻿using EnglishStorageApplication.Server.Data.UserEntites;
+﻿using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using Microsoft.EntityFrameworkCore;

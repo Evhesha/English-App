@@ -1,6 +1,6 @@
-﻿namespace EnglishApp.DataAccess.UserEntites
+﻿namespace EnglishApp.DataAccess.Entities
 {
-    public class AdminRoleEntity
+    public class TeacherRoleEntity
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }

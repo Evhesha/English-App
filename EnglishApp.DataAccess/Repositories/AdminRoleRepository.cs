@@ -1,7 +1,7 @@
 ﻿using EnglishStorageApplication.EnglishApp.DataAccess;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
-using EnglishApp.DataAccess.UserEntites;
+using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories

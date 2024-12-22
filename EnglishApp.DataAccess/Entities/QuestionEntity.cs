@@ -1,6 +1,8 @@
-﻿namespace EnglishApp.Core.Models
+﻿using EnglishApp.Core.Models;
+
+namespace EnglishApp.DataAccess.Entities
 {
-    public class Question
+    public class QuestionEntity
     {
         public Guid Id { get; set; }
         public Guid TestId { get; set; }
