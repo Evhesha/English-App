@@ -1,4 +1,4 @@
-﻿namespace EnglishApp.DataAccess.UserEntites
+﻿namespace EnglishApp.DataAccess.Entities
 {
     public class UserActivityEntity
     {

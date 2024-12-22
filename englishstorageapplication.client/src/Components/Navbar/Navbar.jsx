@@ -11,6 +11,7 @@ import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isTeacher, setTeacher] = useState(true);
   const { darkMode, toggleTheme } = useTheme();
   const { t } = useTranslation();
 
@@ -33,6 +34,7 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
           } else {
             setIsAdmin(false);
           }
+        //Teacher if
         } catch (error) {
           console.error("Error decoding token:", error);
           setIsAdmin(false);
@@ -71,6 +73,13 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
                 <li>
                   <Link className="nav-link" to={"/admin"}>
                     {t("navbar.admin")}
+                  </Link>
+                </li>
+              )}
+              {isTeacher && (
+                <li>
+                  <Link className="nav-link" to={"/teacher"}>
+                    {t("navbar.teacher")}
                   </Link>
                 </li>
               )}
