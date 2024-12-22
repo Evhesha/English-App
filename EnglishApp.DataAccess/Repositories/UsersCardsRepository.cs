@@ -1,5 +1,5 @@
 ﻿using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.DataAccess.UserEntites;
+using EnglishApp.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
