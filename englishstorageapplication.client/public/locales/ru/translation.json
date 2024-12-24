@@ -2,7 +2,8 @@
   "navbar": {
     "home": "Домой",
     "about": "Про",
-    "admin": "Админ"
+    "admin": "Админ",
+    "teacher": "Учитель"
   },
 
   "accoutn-page": {

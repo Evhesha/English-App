@@ -6,11 +6,11 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<TestEntity> TestEntities { get; set; }
-        public DbSet<QuestionEntity> QuestionEntities { get; set; }
-        public DbSet<OptionEntity> OptionEntities { get; set; }
+        public DbSet<TestEntity> Tests { get; set; }
+        public DbSet<QuestionEntity> Questions { get; set; }
+        public DbSet<OptionEntity> Options { get; set; }
 
-        public DbSet<TeacherRoleEntity> TeacherRoleEntities { get; set; }
+        public DbSet<TeacherRoleEntity> TeacherRoles { get; set; }
         public DbSet<AdminRoleEntity> AdminRoles { get; set; }
 
         public DbSet<UserEntity> Users { get; set; }
@@ -26,7 +26,6 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new TeacherRoleConfiguration());
             modelBuilder.ApplyConfiguration(new TestConfiguration());
             modelBuilder.ApplyConfiguration(new QuestionConfiguration());
             modelBuilder.ApplyConfiguration(new OptionConfiguration());
