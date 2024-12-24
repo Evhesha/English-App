@@ -8,10 +8,10 @@
             UserId = userId;
         }
 
-        public Guid Id { get;}
-        public Guid UserId { get;}
+        public Guid Id { get; set;  }
+        public Guid UserId { get; set;  }
 
-        public (string Error, TeacherRole Role) Create(Guid id, Guid userId)
+        public static (TeacherRole TeacherRole, string Error) Create(Guid id, Guid userId)
         {
             string error = string.Empty;
 
@@ -19,7 +19,7 @@
 
             var role = new TeacherRole(id, userId);
 
-            return (error, role);
+            return (role, error);
         }
 
     }
