@@ -1,11 +1,25 @@
 The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[12/24/2024 19:59:39] Using an in-memory repository. Keys will not be persisted to storage.
-[12/24/2024 19:59:39] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
-[12/24/2024 19:59:39] No XML encryptor configured. Key {7f464931-5327-4c66-b2aa-c5627622b54c} may be persisted to storage in unencrypted form.
-[12/24/2024 19:59:39] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[12/24/2024 19:59:39] Now listening on: http://[::]:5000
-[12/24/2024 19:59:40] Now listening on: https://[::]:5001
-[12/24/2024 19:59:40] Application started. Press Ctrl+C to shut down.
-[12/24/2024 19:59:40] Hosting environment: Development
-[12/24/2024 19:59:40] Content root path: /app
-[12/24/2024 19:59:40] 
+[12/25/2024 10:21:16] Using an in-memory repository. Keys will not be persisted to storage.
+[12/25/2024 10:21:17] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[12/25/2024 10:21:17] No XML encryptor configured. Key {da41a67b-f895-446c-b643-1b809c7a76f2} may be persisted to storage in unencrypted form.
+[12/25/2024 10:21:17] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[12/25/2024 10:21:17] Now listening on: http://[::]:5000
+[12/25/2024 10:21:17] Now listening on: https://[::]:5001
+[12/25/2024 10:21:17] Application started. Press Ctrl+C to shut down.
+[12/25/2024 10:21:17] Hosting environment: Development
+[12/25/2024 10:21:17] Content root path: /app
+[12/25/2024 10:21:17] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT t."Id", t."UserId"
+FROM "TeacherRoles" AS t
+[12/25/2024 10:21:27] Executed DbCommand (22ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT t."Id", t."UserId"
+FROM "TeacherRoles" AS t
+WHERE t."Id" = @__get_Item_0
+LIMIT 1
+[12/25/2024 10:21:47] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+DELETE FROM "TeacherRoles"
+WHERE "Id" = @p0;
+[12/25/2024 10:21:47] Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT t."Id", t."UserId"
+FROM "TeacherRoles" AS t
+[12/25/2024 10:21:52] 
