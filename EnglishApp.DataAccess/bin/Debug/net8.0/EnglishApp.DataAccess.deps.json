@@ -568,7 +568,10 @@
       "System.Threading.Channels/6.0.0": {},
       "EnglishApp.Core/1.0.0": {
         "runtime": {
-          "EnglishApp.Core.dll": {}
+          "EnglishApp.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

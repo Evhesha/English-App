@@ -278,7 +278,10 @@
       },
       "EnglishApp.Core/1.0.0": {
         "runtime": {
-          "EnglishApp.Core.dll": {}
+          "EnglishApp.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "EnglishApp.DataAccess/1.0.0": {
@@ -290,7 +293,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
         },
         "runtime": {
-          "EnglishApp.DataAccess.dll": {}
+          "EnglishApp.DataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "EnglishApp.Infrastructure/1.0.0": {
@@ -300,7 +306,10 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10"
         },
         "runtime": {
-          "EnglishApp.Infrastructure.dll": {}
+          "EnglishApp.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

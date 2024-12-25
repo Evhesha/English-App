@@ -10,7 +10,6 @@
     <Folder Include="Abstractions\Question\" />
     <Folder Include="Abstractions\Option\" />
     <Folder Include="Abstractions\Test\" />
-    <Folder Include="Abstractions\TeacherRole\" />
   </ItemGroup>
 
 </Project>

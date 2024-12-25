@@ -16,7 +16,7 @@ namespace EnglishApp.Infrastructure
             _options = options.Value ?? throw new ArgumentNullException(nameof(options));
         }
 
-        public string GenerateToken(User user, bool isAdmin)
+        public string GenerateToken(User user, bool isAdmin, bool isTeacher)
         {
             var claims = new List<Claim>
             {
@@ -26,6 +26,11 @@ namespace EnglishApp.Infrastructure
             if (isAdmin)
             {
                 claims.Add(new Claim("role", "Admin"));
+            }
+
+            if (isTeacher)
+            {
+                claims.Add(new Claim("role", "Teacher"));
             }
 
             var signingCredentials = new SigningCredentials(
