@@ -7,6 +7,6 @@ namespace EnglishApp.DataAccess.Entities
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public string Name { get; set; } = string.Empty;
-        public List<Question> Questions { get; set; } = new ();
+        public List<QuestionEntity> Questions { get; set; } = new ();
     }
 }
