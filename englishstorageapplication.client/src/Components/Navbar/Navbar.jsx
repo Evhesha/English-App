@@ -11,7 +11,7 @@ import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
   const [isAdmin, setIsAdmin] = useState(false);
-  const [isTeacher, setTeacher] = useState(true);
+  const [isTeacher, setIsTeacher] = useState(false);
   const { darkMode, toggleTheme } = useTheme();
   const { t } = useTranslation();
 
@@ -34,13 +34,20 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
           } else {
             setIsAdmin(false);
           }
-        //Teacher if
+
+          if (userRole === "Teacher"){
+            setIsTeacher(true);
+          } else {
+            setIsTeacher(false);
+          }
         } catch (error) {
           console.error("Error decoding token:", error);
           setIsAdmin(false);
+          setIsTeacher(false);
         }
       } else {
         setIsAdmin(false);
+        setIsTeacher(false);
       }
     };
 
