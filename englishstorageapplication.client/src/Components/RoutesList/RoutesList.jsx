@@ -24,6 +24,7 @@ import PastPerfectContinuous from "../../pages/Lessons/PastPerfectContionuous";
 import AboutApp from "/src/pages/Another/AboutApp";
 import Home from "../Home/Home";
 import AdminPanel from "../../pages/Another/AdminPanel";
+import TeacherPage from "../../pages/Another/TeacherPage";
 
 import TopicsPage from "../../pages/Dictionary/DictionaryTopicsPage/TopicsPage";
 import ThousandPopular from "../../pages/Dictionary/ThousandPopular/ThousandPopular";
@@ -78,6 +79,7 @@ function RoutesList() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/teacher" element={<TeacherPage />} />
         <Route path="/profile-page" element={<ProfilePage />} />
         <Route path="/setting-page" element={<SettingPage />} />
 
