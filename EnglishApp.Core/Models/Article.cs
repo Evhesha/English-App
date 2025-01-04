@@ -15,15 +15,18 @@
         public string Title { get; }
         public string Text { get; }
 
-        public (string Error, Article Article) Create(Guid id, Guid userId, string title, string text)
+        public (Article Article, string Error) Create(Guid id, Guid userId, string title, string text)
         {
             string error = string.Empty;
 
-            //Condition if
+            if (title == null)
+            {
+                error = "Article can't be empty.";
+            }
 
             var article = new Article(id, userId, title, text);
 
-            return (error, article);
+            return (article, error);
         }
     }
 }
