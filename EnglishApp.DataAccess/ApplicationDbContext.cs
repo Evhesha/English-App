@@ -10,6 +10,8 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess
         public DbSet<QuestionEntity> Questions { get; set; }
         public DbSet<OptionEntity> Options { get; set; }
 
+        public DbSet<ArticleEntity> Articles { get; set; }
+
         public DbSet<TeacherRoleEntity> TeacherRoles { get; set; }
         public DbSet<AdminRoleEntity> AdminRoles { get; set; }
 

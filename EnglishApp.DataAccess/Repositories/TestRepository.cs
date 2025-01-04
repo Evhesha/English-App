@@ -34,5 +34,18 @@ namespace EnglishApp.DataAccess.Repositories
         {
 
         }
+
+        public async Task<Guid> Delete(Guid testId)
+        {
+            var test = await _applicationDbContext.Tests.FirstOrDefaultAsync(t =>  t.Id == testId);
+
+            if (test != null)
+            {
+                _applicationDbContext.Remove(test);
+                await _applicationDbContext.SaveChangesAsync();
+            }
+
+            return testId;
+        }
     }
 }
