@@ -10,10 +10,10 @@
             Text = text;
         }
 
-        public Guid Id { get; }
-        public Guid UserId { get; }
-        public string Title { get; }
-        public string Text { get; }
+        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
+        public string Title { get; set; }
+        public string Text { get; set; }
 
         public (Article Article, string Error) Create(Guid id, Guid userId, string title, string text)
         {
