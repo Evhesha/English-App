@@ -83,7 +83,7 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
                   </Link>
                 </li>
               )}
-              {isTeacher && (
+              {!isTeacher && (
                 <li>
                   <Link className="nav-link" to={"/teacher"}>
                     {t("navbar.teacher")}

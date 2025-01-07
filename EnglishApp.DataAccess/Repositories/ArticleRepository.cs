@@ -36,7 +36,8 @@ namespace EnglishApp.DataAccess.Repositories
                 Id = article.Id,
                 UserId = article.UserId,
                 Title = article.Title,
-                Text = article.Text
+                Text = article.Text,
+                Images = article.Images
             };
 
             await _context.Articles.AddAsync(atricleEntity);
