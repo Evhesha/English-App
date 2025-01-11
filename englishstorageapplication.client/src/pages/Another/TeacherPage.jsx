@@ -1,9 +1,27 @@
 import { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
 import TestListElement from "../../Components/TeacherPageComp/TestListElement";
 
 function TeacherPage() {
+  const [activeTab, setActiveTab] = useState("articles");
+  const [articles, setArticles] = useState([
+    { id: 1, name: "Article 1" },
+    { id: 2, name: "Article 2" },
+  ]);
+  const [tests, setTests] = useState([
+    { id: 1, name: "Test 1" },
+    { id: 2, name: "Test 2" },
+  ]);
+
+  const handleDeleteArticle = (id) => {
+    setArticles(articles.filter(article => article.id !== id));
+  };
+
+  const handleDeleteTest = (id) => {
+    setTests(tests.filter(test => test.id !== id));
+  };
+
   const Section = styled.div`
     background: #fff;
     border-radius: 12px;
@@ -48,25 +66,48 @@ function TeacherPage() {
     <>
       <h1>Teacher panel</h1>
       <Section>
-        <h3></h3>
+        <h3>Content</h3>
         <ButtonGroup>
           <LanguageButton
-            // active={currentLang === "en"}
-            // onClick={() => changeLanguage("en")}
+            active={activeTab === "articles"}
+            onClick={() => setActiveTab("articles")}
           >
             Articles
           </LanguageButton>
           <LanguageButton
-            // active={currentLang === "ru"}
-            // onClick={() => changeLanguage("ru")}
+            active={activeTab === "tests"}
+            onClick={() => setActiveTab("tests")}
           >
             Tests
           </LanguageButton>
         </ButtonGroup>
-        <ArticleListElement />
-      </Section>
+        <p></p>
 
-      
+        {activeTab === "articles" && (
+          <ul>
+            {articles.map(article => (
+              <ArticleListElement
+                key={article.id}
+                id={article.id}
+                name={article.name}
+                onDelete={handleDeleteArticle}
+              />
+            ))}
+          </ul>
+        )}
+        {activeTab === "tests" && (
+          <ul>
+            {tests.map(test => (
+              <TestListElement
+                key={test.id}
+                id={test.id}
+                name={test.name}
+                onDelete={handleDeleteTest}
+              />
+            ))}
+          </ul>
+        )}
+      </Section>
     </>
   );
 }
