@@ -5,6 +5,22 @@ import TestListElement from "../../Components/TeacherPageComp/TestListElement";
 
 function TeacherPage() {
   const [activeTab, setActiveTab] = useState("articles");
+  const [articles, setArticles] = useState([
+    { id: 1, name: "Article 1" },
+    { id: 2, name: "Article 2" },
+  ]);
+  const [tests, setTests] = useState([
+    { id: 1, name: "Test 1" },
+    { id: 2, name: "Test 2" },
+  ]);
+
+  const handleDeleteArticle = (id) => {
+    setArticles(articles.filter(article => article.id !== id));
+  };
+
+  const handleDeleteTest = (id) => {
+    setTests(tests.filter(test => test.id !== id));
+  };
 
   const Section = styled.div`
     background: #fff;
@@ -65,9 +81,32 @@ function TeacherPage() {
             Tests
           </LanguageButton>
         </ButtonGroup>
+        <p></p>
 
-        {activeTab === "articles" && <ArticleListElement />}
-        {activeTab === "tests" && <TestListElement />}
+        {activeTab === "articles" && (
+          <ul>
+            {articles.map(article => (
+              <ArticleListElement
+                key={article.id}
+                id={article.id}
+                name={article.name}
+                onDelete={handleDeleteArticle}
+              />
+            ))}
+          </ul>
+        )}
+        {activeTab === "tests" && (
+          <ul>
+            {tests.map(test => (
+              <TestListElement
+                key={test.id}
+                id={test.id}
+                name={test.name}
+                onDelete={handleDeleteTest}
+              />
+            ))}
+          </ul>
+        )}
       </Section>
     </>
   );
