@@ -29,7 +29,7 @@ function ArticleListElement(id, name) {
         <div>
           <div style={{ flex: 1 }}>
             <p>
-              <b>Id: </b> {id}
+              <b>Article Id: </b> {id}
             </p>
           </div>
           <div style={{ flex: 1 }}>

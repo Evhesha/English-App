@@ -1,9 +1,11 @@
 import { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
 import TestListElement from "../../Components/TeacherPageComp/TestListElement";
 
 function TeacherPage() {
+  const [activeTab, setActiveTab] = useState("articles");
+
   const Section = styled.div`
     background: #fff;
     border-radius: 12px;
@@ -48,25 +50,25 @@ function TeacherPage() {
     <>
       <h1>Teacher panel</h1>
       <Section>
-        <h3></h3>
+        <h3>Content</h3>
         <ButtonGroup>
           <LanguageButton
-            // active={currentLang === "en"}
-            // onClick={() => changeLanguage("en")}
+            active={activeTab === "articles"}
+            onClick={() => setActiveTab("articles")}
           >
             Articles
           </LanguageButton>
           <LanguageButton
-            // active={currentLang === "ru"}
-            // onClick={() => changeLanguage("ru")}
+            active={activeTab === "tests"}
+            onClick={() => setActiveTab("tests")}
           >
             Tests
           </LanguageButton>
         </ButtonGroup>
-        <ArticleListElement />
-      </Section>
 
-      
+        {activeTab === "articles" && <ArticleListElement />}
+        {activeTab === "tests" && <TestListElement />}
+      </Section>
     </>
   );
 }
