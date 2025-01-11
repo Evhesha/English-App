@@ -1,6 +1,7 @@
-
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
+import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
+import TestListElement from "../../Components/TeacherPageComp/TestListElement";
 
 function TeacherPage() {
   const Section = styled.div`
@@ -62,7 +63,10 @@ function TeacherPage() {
             Tests
           </LanguageButton>
         </ButtonGroup>
+        <ArticleListElement />
       </Section>
+
+      
     </>
   );
 }
