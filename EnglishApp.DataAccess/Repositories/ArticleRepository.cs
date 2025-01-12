@@ -2,10 +2,11 @@
 using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories
 {
-    public class ArticleRepository
+    public class ArticleRepository : IArticleRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -14,19 +15,31 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
-        public async Task<List<ArticleEntity>> Get()
+        public async Task<List<Article>> Get()
         {
-            return await _context.Articles
+            var articleEntity = await _context.Articles
                 .AsNoTracking()
                 .ToListAsync();
+
+            var articles = articleEntity
+                .Select(a => Article.Create(a.Id, a.UserId, a.Title, a.Text, a.Images).Article)
+                .ToList();
+
+            return articles;
         }
 
-        public async Task<List<ArticleEntity>> GetArticles(Guid id)
+        public async Task<List<Article>> GetArticles(Guid userId)
         {
-            return await _context.Articles
+            var articleEntity = await _context.Articles
                 .AsNoTracking()
-                .Where(x => x.Id == id)
+                .Where(x => x.UserId == userId)
                 .ToListAsync();
+
+            var articles = articleEntity
+                .Select(a => Article.Create(a.Id, a.UserId, a.Title, a.Text, a.Images).Article)
+                .ToList();
+
+            return articles;
         }
 
         public async Task<Guid> Create(Article article)
@@ -46,12 +59,23 @@ namespace EnglishApp.DataAccess.Repositories
             return atricleEntity.Id;
         }
 
-        
+        public async Task<Guid> Update(Guid id, string title, string text)
+        {
+            var articleEntity = await _context.Articles.FindAsync(id);
+            if (articleEntity != null)
+            {
+                articleEntity.Title = title;
+                articleEntity.Text = text;
+                await _context.SaveChangesAsync();
+            }
+
+            return id;
+        }
 
         public async Task<Guid> Delete(Guid id)
         {
             var article = await _context.Articles
-                .FirstOrDefaultAsync(a =>  a.Id == id);
+                .FirstOrDefaultAsync(a => a.Id == id);
 
             if (article != null)
             {

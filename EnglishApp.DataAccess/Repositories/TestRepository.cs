@@ -25,7 +25,7 @@ namespace EnglishApp.DataAccess.Repositories
         {
             return await _applicationDbContext.Tests
                 .AsNoTracking()
-                .Where(t => t.Id == testId)
+                .Where(t => t.UserId == testId)
                 .Include(t => t.Questions)
                 .ToListAsync();
         }
