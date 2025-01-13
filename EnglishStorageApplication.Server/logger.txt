@@ -1,15 +1,46 @@
 The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[01/10/2025 20:34:35] Using an in-memory repository. Keys will not be persisted to storage.
-[01/10/2025 20:34:35] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
-[01/10/2025 20:34:35] No XML encryptor configured. Key {70bae796-eef4-4efb-99dd-089402e6f379} may be persisted to storage in unencrypted form.
-[01/10/2025 20:34:35] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[01/10/2025 20:34:35] Now listening on: http://[::]:5000
-[01/10/2025 20:34:37] Now listening on: https://[::]:5001
-[01/10/2025 20:34:37] Application started. Press Ctrl+C to shut down.
-[01/10/2025 20:34:37] Hosting environment: Development
-[01/10/2025 20:34:37] Content root path: /app
-[01/10/2025 20:34:37] The foreign key property 'OptionEntity.QuestionId1' was created in shadow state because a conflicting property with the simple name 'QuestionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
-[01/10/2025 20:34:57] Executed DbCommand (84ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[01/13/2025 10:45:57] Using an in-memory repository. Keys will not be persisted to storage.
+[01/13/2025 10:45:57] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[01/13/2025 10:45:57] No XML encryptor configured. Key {99b2dcb1-7438-43c6-a0ad-cd9b0a36c2e7} may be persisted to storage in unencrypted form.
+[01/13/2025 10:45:57] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[01/13/2025 10:45:57] Now listening on: http://[::]:5000
+[01/13/2025 10:45:58] Now listening on: https://[::]:5001
+[01/13/2025 10:45:58] Application started. Press Ctrl+C to shut down.
+[01/13/2025 10:45:58] Hosting environment: Development
+[01/13/2025 10:45:58] Content root path: /app
+[01/13/2025 10:45:58] The foreign key property 'OptionEntity.QuestionId1' was created in shadow state because a conflicting property with the simple name 'QuestionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+[01/13/2025 10:46:15] Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT u."Id", u."Email", u."Name", u."Password"
 FROM "Users" AS u
-[01/10/2025 20:35:00] 
+[01/13/2025 10:46:16] Failed executing DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+[01/13/2025 10:46:33] An exception occurred while iterating over the results of a query for context type 'EnglishStorageApplication.EnglishApp.DataAccess.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: relation "Articles" does not exist
+
+POSITION: 65
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Articles" does not exist
+    Position: 65
+    File: parse_relation.c
+    Line: 1449
+    Routine: parserOpenTable
+[01/13/2025 10:46:33] An unhandled exception has occurred while executing the request.
+[01/13/2025 10:46:34] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+[01/13/2025 11:08:09] 

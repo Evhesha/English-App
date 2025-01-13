@@ -24,6 +24,9 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
             services.AddScoped<IUserStudyResultService, UserStudyResultService>();
             services.AddScoped<IUsersStudyResultsRepository, UsersStudyResultsRepository>();
 
+            services.AddScoped<IArticleService, ArticleService>();
+            services.AddScoped<IArticleRepository, ArticleRepository>();
+
             services.AddScoped<IAdminRoleService, AdminRoleService>();
             services.AddScoped<IAdminRoleRepository, AdminRoleRepository>();
 
