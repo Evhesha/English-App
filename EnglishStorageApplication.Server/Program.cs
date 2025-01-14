@@ -1,8 +1,6 @@
 using EnglishApp.Infrastructure;
-using EnglishStorageApplication.EnglishApp.DataAccess;
 using EnglishStorageApplication.EnglishApp.Extensions;
 using EnglishStorageApplication.Server.Extensions;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseNpgsql(builder.Configuration.GetConnectionString("ApplicationDbContext"));
-});
 
 // Регистрация конфигурации JwtOptions (extension)
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
@@ -30,6 +23,9 @@ builder.Logging.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.tx
 
 // Настройка CORS
 builder.Services.AddCustomCors(builder.Configuration);
+
+// database extensions
+builder.Services.AddDatabaseServices(builder.Configuration);
 
 var app = builder.Build();
 
