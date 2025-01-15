@@ -48,7 +48,6 @@ namespace EnglishApp.Application.AppServices
                 throw new UnauthorizedAccessException("Invalid credentials");
             }
 
-            // Проверка, является ли пользователь администратором
             var isAdmin = await _adminRolesRepository.IsAdmin(user.Id);
             var isTeacher = await _teacherRoleRepository.IsTeacher(user.Id);
 
