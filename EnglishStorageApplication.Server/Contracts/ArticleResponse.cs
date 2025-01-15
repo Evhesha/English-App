@@ -6,8 +6,14 @@
         string title,
         string text);
 
+    public record ArticleUpdate(
+        string title,
+        string text
+        );
+
     public record ArticleRequest(
         Guid userId,
         string title,
-        string text);
+        string text,
+        List<byte[]> images);
 }

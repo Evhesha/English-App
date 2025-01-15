@@ -1,4 +1,5 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+﻿using EnglishApp.Core.Models;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.Server.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,15 +35,23 @@ namespace EnglishStorageApplication.Server.Controllers
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateArticle([FromBody]ArticleRequest request)
         {
-            //var (article, error) = EnglishApp.Core.Models.Article.Create(request);
-            return Ok();
+            var (article, error) = Article.Create(
+                Guid.NewGuid(),
+                request.userId,
+                request.title,
+                request.text,
+                request.images);
+
+            var articleId = await _articleService.Create(article);
+
+            return Ok(articleId);
         }
 
         [HttpPut("{id:guid}")]
-        public async Task<ActionResult<Guid>> UpdateArticle(Guid id, [FromBody]ArticleRequest request)
+        public async Task<ActionResult<Guid>> UpdateArticle(Guid id, [FromBody]ArticleUpdate update)
         {
-            var userId = await _articleService.Update(request.userId, request.title, request.text); 
-            return Ok(userId);
+            var articleId = await _articleService.Update(id, update.title, update.text); 
+            return Ok(articleId);
         }
 
         [HttpDelete("{id:guid}")]

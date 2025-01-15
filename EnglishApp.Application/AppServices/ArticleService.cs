@@ -27,14 +27,14 @@ namespace EnglishApp.Application.AppServices
             return await _articleRepository.Create(article);
         }
 
-        public async Task<Guid> Delete(Guid id)
-        {
-            return await _articleRepository.Delete(id);
-        }
-
         public async Task<Guid> Update(Guid id, string title, string text)
         {
             return await _articleRepository.Update(id, title, text);
+        }
+
+        public async Task<Guid> Delete(Guid id)
+        {
+            return await _articleRepository.Delete(id);
         }
     }
 }
