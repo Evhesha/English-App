@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\extensions\\authenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\extensions\\authenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\englishstorageapplication.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\englishstorageapplication.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\logger.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\logger.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishapp.dataaccess\\repositories\\testrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|solutionrelative:englishapp.dataaccess\\repositories\\testrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|solutionrelative:englishapp.dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\contracts\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\contracts\\usersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -93,10 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F33B7C65-0702-4C80-888C-BC9DB2AB59AC}|EnglishApp.Core\\EnglishApp.Core.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishapp.core\\abstractions\\auth\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F33B7C65-0702-4C80-888C-BC9DB2AB59AC}|EnglishApp.Core\\EnglishApp.Core.csproj|solutionrelative:englishapp.core\\abstractions\\auth\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishapp.dataaccess\\repositories\\testrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|solutionrelative:englishapp.dataaccess\\repositories\\testrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\contracts\\testresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -185,10 +201,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\controllers\\teacherrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\controllers\\teacherrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishapp.dataaccess\\repositories\\userscardsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -341,10 +353,6 @@
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\extensions\\fileloggerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\extensions\\authenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\extensions\\authenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\medvedskii\\bntu\\englishstorageapplication\\englishstorageapplication.server\\endpoints\\usersendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\endpoints\\usersendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -480,59 +488,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T18:00:11.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ArticleService.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\ArticleService.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\ArticleService.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\ArticleService.cs",
-              "RelativeToolTip": "EnglishApp.Application\\AppServices\\ArticleService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:37:30.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserService.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserService.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserService.cs",
-              "RelativeToolTip": "EnglishApp.Application\\AppServices\\UserService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:29:05.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "docker-compose.dcproj",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\docker-compose.dcproj",
-              "RelativeDocumentMoniker": "docker-compose.dcproj",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\docker-compose.dcproj",
-              "RelativeToolTip": "docker-compose.dcproj",
+              "DocumentIndex": 3,
+              "Title": "logger.txt",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\logger.txt",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\logger.txt",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\logger.txt",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\logger.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-15T11:17:41.861Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-15T14:19:15.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "Article.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Article.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Article.cs",
@@ -540,12 +508,11 @@
               "RelativeToolTip": "EnglishApp.Core\\Models\\Article.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAADwvx8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T17:20:05.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T17:20:05.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ArticleResponse.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\ArticleResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\ArticleResponse.cs",
@@ -553,249 +520,85 @@
               "RelativeToolTip": "EnglishStorageApplication.Server\\Contracts\\ArticleResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:43:49.567Z",
+              "WhenOpened": "2025-01-11T20:43:49.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\appsettings.json",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\appsettings.json",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-19T07:38:57.75Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "docker-compose.dcproj",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-15T11:17:41.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserService.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserService.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserService.cs",
+              "RelativeToolTip": "EnglishApp.Application\\AppServices\\UserService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T13:29:05.894Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ArticleController.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\ArticleController.cs*",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\ArticleController.cs*",
-              "ViewState": "AgIAACcAAAAAAAAAAAAiwDQAAAA9AAAAAAAAAA==",
+              "Title": "AuthenticationExtensions.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:40:35.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdminRoleRepository.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
-              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
-              "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T09:04:18.742Z",
+              "WhenOpened": "2024-11-19T09:02:58.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ArticleRepository.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
-              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
-              "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T10:39:49.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsersRepository.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
-              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
-              "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:29:16.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\AuthenticationService.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\AuthenticationService.cs",
-              "RelativeToolTip": "EnglishApp.Application\\AppServices\\AuthenticationService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAADwvzMAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T17:49:50.83Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ArticleEntity.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
-              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
-              "RelativeToolTip": "EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T10:25:44.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:45:30.71Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UsersCardsResponse.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
+              "Title": "EnglishStorageApplication.Server.http",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.http",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\EnglishStorageApplication.Server.http",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.http",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\EnglishStorageApplication.Server.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T16:54:37.659Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-01-15T14:19:17.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UsersResponse.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:23:15.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Program.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Program.cs",
               "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Program.cs",
               "RelativeToolTip": "EnglishStorageApplication.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T15:03:47.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ITeacherRoleRepository.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
-              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T19:52:28.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\ApplicationDbContext.cs",
-              "RelativeToolTip": "EnglishApp.DataAccess\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T14:16:14.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TestService.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\TestService.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\TestService.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\TestService.cs",
-              "RelativeToolTip": "EnglishApp.Application\\AppServices\\TestService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T19:21:19.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UserCardService.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserCardService.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserCardService.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserCardService.cs",
-              "RelativeToolTip": "EnglishApp.Application\\AppServices\\UserCardService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvxYAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:31:12.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IAuthenticationService.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
-              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T08:57:10.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IArticleRepository.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
-              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T10:01:58.692Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IArticleService.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
-              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
-              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T10:12:53.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "TestResponse.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:48:29.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "TestController.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\TestController.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\TestController.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\TestController.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\TestController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T20:44:09.714Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 5,
               "Title": "TestRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\TestRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\TestRepository.cs",
@@ -807,7 +610,247 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ArticleService.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\ArticleService.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\ArticleService.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\ArticleService.cs",
+              "RelativeToolTip": "EnglishApp.Application\\AppServices\\ArticleService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T20:37:30.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T18:00:11.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ArticleController.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T20:40:35.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminRoleRepository.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
+              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
+              "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T09:04:18.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ArticleRepository.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
+              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
+              "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T10:39:49.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
+              "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T13:29:16.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\AuthenticationService.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\AuthenticationService.cs",
+              "RelativeToolTip": "EnglishApp.Application\\AppServices\\AuthenticationService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvzMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T17:49:50.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ArticleEntity.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
+              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
+              "RelativeToolTip": "EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T10:25:44.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Extensions\\ServiceExtensions.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T09:45:30.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UsersCardsResponse.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T16:54:37.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UsersResponse.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T13:23:15.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ITeacherRoleRepository.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
+              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T19:52:28.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\ApplicationDbContext.cs",
+              "RelativeToolTip": "EnglishApp.DataAccess\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T14:16:14.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TestService.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\TestService.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\TestService.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\TestService.cs",
+              "RelativeToolTip": "EnglishApp.Application\\AppServices\\TestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T19:21:19.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserCardService.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserCardService.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserCardService.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserCardService.cs",
+              "RelativeToolTip": "EnglishApp.Application\\AppServices\\UserCardService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T13:31:12.452Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 27,
+              "Title": "IAuthenticationService.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
+              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T08:57:10.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IArticleRepository.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
+              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T10:01:58.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IArticleService.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
+              "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
+              "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T10:12:53.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TestResponse.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T20:48:29.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\TestController.cs",
+              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\TestController.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Controllers\\TestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T20:44:09.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "UsersStudyResultsRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\UsersStudyResultsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersStudyResultsRepository.cs",
@@ -819,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "TeacherRoleRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\TeacherRoleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\TeacherRoleRepository.cs",
@@ -831,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "UserEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\UserEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserEntity.cs",
@@ -843,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "AdminRole.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\AdminRole.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\AdminRole.cs",
@@ -855,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\User.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\User.cs",
@@ -867,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "UserCardEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\UserCardEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserCardEntity.cs",
@@ -879,7 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "TestEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\TestEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\TestEntity.cs",
@@ -891,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "TeacherRoleEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\TeacherRoleEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\TeacherRoleEntity.cs",
@@ -903,7 +946,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "OptionEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\OptionEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\OptionEntity.cs",
@@ -915,7 +958,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "AdminRoleEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\AdminRoleEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\AdminRoleEntity.cs",
@@ -927,7 +970,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "QuestionEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\QuestionEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\QuestionEntity.cs",
@@ -939,7 +982,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "UserActivityEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\UserActivityEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserActivityEntity.cs",
@@ -951,7 +994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "UserStudyResultEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Entities\\UserStudyResultEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserStudyResultEntity.cs",
@@ -963,7 +1006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "Test.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Test.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Test.cs",
@@ -975,7 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Option.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Option.cs",
@@ -987,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "OptionConfiguration.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Configurations\\OptionConfiguration.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Configurations\\OptionConfiguration.cs",
@@ -999,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "QuestionConfiguration.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Configurations\\QuestionConfiguration.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Configurations\\QuestionConfiguration.cs",
@@ -1011,7 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "TestConfiguration.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Configurations\\TestConfiguration.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Configurations\\TestConfiguration.cs",
@@ -1023,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Dockerfile",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Dockerfile",
@@ -1035,7 +1078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "TeacherRoleController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\TeacherRoleController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\TeacherRoleController.cs",
@@ -1047,19 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\appsettings.json",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\appsettings.json",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-19T07:38:57.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "UsersCardsRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\UsersCardsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersCardsRepository.cs",
@@ -1071,7 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "TeacherRoleSevice.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\TeacherRoleSevice.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\TeacherRoleSevice.cs",
@@ -1083,7 +1114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "TeacherRoleResponse.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\TeacherRoleResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\TeacherRoleResponse.cs",
@@ -1095,7 +1126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "AdminRoleController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\AdminRoleController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\AdminRoleController.cs",
@@ -1107,7 +1138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "AdminRoleResponse.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\AdminRoleResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\AdminRoleResponse.cs",
@@ -1119,7 +1150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "IUsersRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\User\\IUsersRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\User\\IUsersRepository.cs",
@@ -1131,7 +1162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "ITeacherRoleSevice.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleSevice.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleSevice.cs",
@@ -1143,7 +1174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "AdminRoleService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\AdminRoleService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\AdminRoleService.cs",
@@ -1155,7 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "UserActivityService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserActivityService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserActivityService.cs",
@@ -1167,7 +1198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "UserStudyResultService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\UserStudyResultService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserStudyResultService.cs",
@@ -1179,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "OptionService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\OptionService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\OptionService.cs",
@@ -1191,7 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "QuestionService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\AppServices\\QuestionService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\QuestionService.cs",
@@ -1203,7 +1234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Question.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Question.cs",
@@ -1215,7 +1246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "UsersActivitiesRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\Repositories\\UsersActivitiesRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersActivitiesRepository.cs",
@@ -1227,7 +1258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "TeacherRole.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\TeacherRole.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\TeacherRole.cs",
@@ -1239,7 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\User\\IUserService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\User\\IUserService.cs",
@@ -1251,7 +1282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "launch.json",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\.vscode\\launch.json",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\.vscode\\launch.json",
@@ -1263,7 +1294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 69,
               "Title": "EnglishStorageApplication.Server.csproj",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
@@ -1275,7 +1306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 67,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -1287,7 +1318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "migration.sql",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\migration.sql",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\migration.sql",
@@ -1298,7 +1329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 83,
               "Title": "ServiceExtensionsTests.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Tests\\ServiceExtensionsTests.cs",
               "RelativeDocumentMoniker": "EnglishApp.Tests\\ServiceExtensionsTests.cs",
@@ -1310,7 +1341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "CorsExtensionsTests.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Tests\\CorsExtensionsTests.cs",
               "RelativeDocumentMoniker": "EnglishApp.Tests\\CorsExtensionsTests.cs",
@@ -1322,7 +1353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\.dockerignore",
               "RelativeDocumentMoniker": ".dockerignore",
@@ -1334,7 +1365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "CorsExtensions.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\CorsExtensions.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\CorsExtensions.cs",
@@ -1346,7 +1377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "FileLoggerExtensions.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\FileLoggerExtensions.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\FileLoggerExtensions.cs",
@@ -1358,19 +1389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
-              "Title": "AuthenticationExtensions.cs",
-              "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
-              "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAiwCcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T09:02:58.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 88,
               "Title": "UsersEndpoints.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Endpoints\\UsersEndpoints.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Endpoints\\UsersEndpoints.cs",
@@ -1382,7 +1401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 89,
               "Title": "UsersStudyResultsController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersStudyResultsController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersStudyResultsController.cs",
@@ -1394,7 +1413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 90,
               "Title": "UsersCardsController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersCardsController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersCardsController.cs",
@@ -1406,7 +1425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 91,
               "Title": "UsersActivitiesController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\UsersActivitiesController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersActivitiesController.cs",
@@ -1418,7 +1437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 92,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\AuthController.cs",
@@ -1430,7 +1449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 93,
               "Title": "IUsersCardsRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\UserCard\\IUsersCardsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserCard\\IUsersCardsRepository.cs",
@@ -1442,7 +1461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 94,
               "Title": "IUserCardService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\UserCard\\IUserCardService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserCard\\IUserCardService.cs",
@@ -1454,7 +1473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 95,
               "Title": "IUsersStudyResultsRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\UserStudyResult\\IUsersStudyResultsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserStudyResult\\IUsersStudyResultsRepository.cs",
@@ -1466,7 +1485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 96,
               "Title": "IUserStudyResultService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\UserStudyResult\\IUserStudyResultService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserStudyResult\\IUserStudyResultService.cs",
@@ -1478,7 +1497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 97,
               "Title": "IUsersActivitiesRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\UserActivity\\IUsersActivitiesRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserActivity\\IUsersActivitiesRepository.cs",
@@ -1490,7 +1509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 98,
               "Title": "IUserActivityService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\UserActivity\\IUserActivityService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserActivity\\IUserActivityService.cs",
@@ -1502,7 +1521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 99,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\Auth\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Auth\\IPasswordHasher.cs",
@@ -1514,7 +1533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 100,
               "Title": "IAdminRoleService.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleService.cs",
@@ -1526,7 +1545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 101,
               "Title": "IAdminRoleRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleRepository.cs",
@@ -1538,7 +1557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 102,
               "Title": "UserActivity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\UserActivity.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\UserActivity.cs",
@@ -1550,7 +1569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 103,
               "Title": "RegisterUserRequest.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\Users\\RegisterUserRequest.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\Users\\RegisterUserRequest.cs",
@@ -1562,7 +1581,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 104,
               "Title": "LoginUserRequest.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\Users\\LoginUserRequest.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\Users\\LoginUserRequest.cs",
@@ -1574,7 +1593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 105,
               "Title": "UserCard.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\UserCard.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\UserCard.cs",
@@ -1586,7 +1605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 106,
               "Title": "UserStudyResult.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\UserStudyResult.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\UserStudyResult.cs",
@@ -1598,7 +1617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 82,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Role.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Role.cs",
@@ -1610,7 +1629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\UserRole.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\UserRole.cs",
@@ -1621,7 +1640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 107,
               "Title": "UsersStudyResultsResponse.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UsersStudyResultsResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersStudyResultsResponse.cs",
@@ -1633,7 +1652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 108,
               "Title": "CHANGELOG.md",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\CHANGELOG.md",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\CHANGELOG.md",
@@ -1645,7 +1664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 109,
               "Title": "UserActivityResponse.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Contracts\\UserActivityResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UserActivityResponse.cs",
@@ -1657,7 +1676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "EnglishStorageApplication.Server.csproj.user",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj.user",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj.user",
@@ -1669,7 +1688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "migration.sql",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\migration.sql",
               "RelativeDocumentMoniker": "migration.sql",
@@ -1680,7 +1699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 110,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\launchSettings.json",
               "RelativeDocumentMoniker": "launchSettings.json",
@@ -1692,7 +1711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -1704,7 +1723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
@@ -1716,7 +1735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
@@ -1728,7 +1747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "IUsersController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
@@ -1740,7 +1759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Models\\User.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Models\\User.cs",
@@ -1752,7 +1771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "UserEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
@@ -1764,7 +1783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
@@ -1776,7 +1795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 111,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\main.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\main.jsx",
@@ -1788,7 +1807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 112,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\index.html",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\index.html",
@@ -1800,7 +1819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 113,
               "Title": "react.svg",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\assets\\react.svg",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\assets\\react.svg",
@@ -1812,7 +1831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 114,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.css",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.css",
@@ -1824,7 +1843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 115,
               "Title": "App.client.esproj",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\App.client.esproj",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\App.client.esproj",
@@ -1836,7 +1855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 116,
               "Title": "App.jsx",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\src\\App.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.jsx",
@@ -1847,8 +1866,12 @@
               "WhenOpened": "2024-09-17T16:47:22.006Z"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "EnglishApp.Infrastructure\\PasswordHasher.cs",
@@ -1860,7 +1883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "JwtProvider.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\JwtProvider.cs",
               "RelativeDocumentMoniker": "EnglishApp.Infrastructure\\JwtProvider.cs",
