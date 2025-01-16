@@ -4,35 +4,23 @@ using EnglishStorageApplication.Server.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Конфигурация служб
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Регистрация конфигурации JwtOptions (extension)
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
-
-// Регистрация сервисов (extension)
 builder.Services.AddApplicationServices();
-
-// Настройка аутентификации и JWT (extension)
 builder.Services.AddJwtAuthentication(builder.Configuration);
-
-// Установка файла для логирования (extension)
-builder.Logging.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
-
-// Настройка CORS
 builder.Services.AddCustomCors(builder.Configuration);
-
-// database extensions
 builder.Services.AddDatabaseServices(builder.Configuration);
+
+builder.Logging.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
 
 var app = builder.Build();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -43,7 +31,6 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-// Применение политики CORS
 app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthentication();
