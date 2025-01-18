@@ -1,18 +1,17 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
 import TestListElement from "../../Components/TeacherPageComp/TestListElement";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+import Cookies from "js-cookie";
 
 function TeacherPage() {
   const [activeTab, setActiveTab] = useState("articles");
-  const [articles, setArticles] = useState([
-    { id: 1, name: "Article 1" },
-    { id: 2, name: "Article 2" },
-  ]);
-  const [tests, setTests] = useState([
-    { id: 1, name: "Test 1" },
-    { id: 2, name: "Test 2" },
-  ]);
+
+  const [articles, setArticles] = useState([]);
+  const [tests, setTests] = useState([]);
 
   const handleDeleteArticle = (id) => {
     setArticles(articles.filter(article => article.id !== id));
@@ -21,6 +20,30 @@ function TeacherPage() {
   const handleDeleteTest = (id) => {
     setTests(tests.filter(test => test.id !== id));
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const token = Cookies.get("token");
+      if (token) {
+        const decodedToken = jwtDecode(token);
+        const userId = decodedToken.UserId;
+
+        try {
+          const response = await axios.get(`https://localhost:5001/api/Article/${userId}`);
+
+          if (Array.isArray(response.data)) {
+            setArticles(response.data);
+          } else {
+            console.error("Ошибка: данные из API не являются массивом", response.data);
+          }
+
+        } catch (error) {
+        }
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const Section = styled.div`
     background: #fff;
@@ -89,7 +112,7 @@ function TeacherPage() {
               <ArticleListElement
                 key={article.id}
                 id={article.id}
-                name={article.name}
+                name={article.title}
                 onDelete={handleDeleteArticle}
               />
             ))}
