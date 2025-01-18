@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using EnglishStorageApplication.Server.Contracts;
-using Microsoft.EntityFrameworkCore;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.EnglishApp.Core.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.Server.Contracts.Users;
 using Microsoft.AspNetCore.Identity.Data;
 

@@ -11,7 +11,7 @@ import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
   const [isAdmin, setIsAdmin] = useState(false);
-  const [isTeacher, setIsTeacher] = useState(false);
+  const [isTeacher, setIsTeacher] = useState(true);
   const { darkMode, toggleTheme } = useTheme();
   const { t } = useTranslation();
 
@@ -83,7 +83,7 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
                   </Link>
                 </li>
               )}
-              {!isTeacher && (
+              {isTeacher && (
                 <li>
                   <Link className="nav-link" to={"/teacher"}>
                     {t("navbar.teacher")}
