@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
+
+import Section from "./TeacherPageComponents/Section";
+import TypeButton from "./TeacherPageComponents/TypeButton";
+
 import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
 import TestListElement from "../../Components/TeacherPageComp/TestListElement";
+
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
+
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function TeacherPage() {
   const [activeTab, setActiveTab] = useState("articles");
@@ -45,40 +53,23 @@ function TeacherPage() {
     fetchData();
   }, []);
 
-  const Section = styled.div`
-    background: #fff;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-
-    h3 {
-      color: #34495e;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
+    const receiveNotify = () => {
+      toast.success("Data received!", {
+        position: "bottom-right"
+      });
     }
-  `;
-
-  const LanguageButton = styled.button`
-    padding: 10px 25px;
-    border: 2px solid #3498db;
-    border-radius: 8px;
-    background: ${(props) => (props.active ? "#3498db" : "transparent")};
-    color: ${(props) => (props.active ? "#fff" : "#3498db")};
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+  
+    const deleteNotify = () => {
+      toast.success("Data delete successfuly!", {
+        position: "bottom-right"
+      });
     }
-
-    &:active {
-      transform: translateY(0);
+  
+    const mistakeNotify = () => {
+      toast.error("Error loading data!", {
+        position: "bottom-right"
+      });
     }
-  `;
 
   const ButtonGroup = styled.div`
     display: flex;
@@ -91,18 +82,18 @@ function TeacherPage() {
       <Section>
         <h3>Content</h3>
         <ButtonGroup>
-          <LanguageButton
+          <TypeButton
             active={activeTab === "articles"}
             onClick={() => setActiveTab("articles")}
           >
             Articles
-          </LanguageButton>
-          <LanguageButton
+          </TypeButton>
+          <TypeButton
             active={activeTab === "tests"}
             onClick={() => setActiveTab("tests")}
           >
             Tests
-          </LanguageButton>
+          </TypeButton>
         </ButtonGroup>
         <p></p>
 

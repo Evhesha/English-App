@@ -1,6 +1,6 @@
 import axios from "axios";
-import PropTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import PropTypes from "prop-types";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function TestListElement({ id, name, onDelete }) {
   const handleDelete = async () => {
@@ -35,13 +35,12 @@ function TestListElement({ id, name, onDelete }) {
           <b>Name: </b> {name}
         </p>
       </div>
-      <button
-        type="button"
-        className="btn btn-danger"
-        onClick={handleDelete}
-      >
-        <i className="bi bi-trash3"></i> Delete
-      </button>
+      <div>
+        <button type="button" className="btn btn-primary" ><i className="bi bi-trash3"></i>Pass</button>
+      </div>
+      <div>
+        <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"></i>Delete</button>
+      </div>
     </li>
   );
 }
