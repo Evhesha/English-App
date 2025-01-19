@@ -26,7 +26,10 @@ function ArticleListElement({ id, name, onDelete }) {
         </div>
       </div>
       <div>
-        <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"></i> Delete</button>
+        <button type="button" className="btn btn-primary" ><i className="bi bi-trash3"></i>Read</button>
+      </div>
+      <div>
+        <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"></i>Delete</button>
       </div>
     </li>
   );
