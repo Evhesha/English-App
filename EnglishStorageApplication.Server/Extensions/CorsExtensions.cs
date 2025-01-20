@@ -1,7 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace EnglishStorageApplication.EnglishApp.Extensions
+﻿namespace EnglishStorageApplication.EnglishApp.Extensions
 {
     // Это Extension нужен для CORS
     public static class CorsExtensions

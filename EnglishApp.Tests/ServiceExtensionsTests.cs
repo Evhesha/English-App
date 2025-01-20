@@ -1,17 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Text;
 using Xunit;
-using EnglishApp.Application.AppServices;
-using EnglishApp.DataAccess.Repositories;
 using EnglishApp.Infrastructure;
-using EnglishStorageApplication.EnglishApp.Application.AppServices;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
-using EnglishStorageApplication.EnglishApp.Infrastructure;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
@@ -61,7 +52,8 @@ namespace EnglishStorageApplication.EnglishApp.Extensions.Tests
             Assert.NotNull(serviceProvider.GetService<JwtProvider>());
             Assert.NotNull(serviceProvider.GetService<IAuthenticationService>());
             Assert.NotNull(serviceProvider.GetService<IPasswordHasher>());
-
-       }
+            Assert.NotNull(serviceProvider.GetService<IArticleService>());
+            Assert.NotNull(serviceProvider.GetService<IArticleRepository>());
+        }
     }
 }
