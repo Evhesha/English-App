@@ -1,84 +1,54 @@
 The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[01/18/2025 11:30:45] Using an in-memory repository. Keys will not be persisted to storage.
-[01/18/2025 11:30:45] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
-[01/18/2025 11:30:45] No XML encryptor configured. Key {4e71e293-3a94-4f68-9e79-9ad28a147c26} may be persisted to storage in unencrypted form.
-[01/18/2025 11:30:45] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[01/18/2025 11:30:45] Now listening on: http://[::]:5000
-[01/18/2025 11:30:46] Now listening on: https://[::]:5001
-[01/18/2025 11:30:46] Application started. Press Ctrl+C to shut down.
-[01/18/2025 11:30:46] Hosting environment: Development
-[01/18/2025 11:30:46] Content root path: /app
-[01/18/2025 11:30:46] The foreign key property 'OptionEntity.QuestionId1' was created in shadow state because a conflicting property with the simple name 'QuestionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
-[01/18/2025 11:31:08] Executed DbCommand (75ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[01/20/2025 10:42:09] Using an in-memory repository. Keys will not be persisted to storage.
+[01/20/2025 10:42:09] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[01/20/2025 10:42:09] No XML encryptor configured. Key {5fa76a18-3f01-4e37-8f39-a1d333618e3c} may be persisted to storage in unencrypted form.
+[01/20/2025 10:42:09] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[01/20/2025 10:42:10] Now listening on: http://[::]:5000
+[01/20/2025 10:42:11] Now listening on: https://[::]:5001
+[01/20/2025 10:42:11] Application started. Press Ctrl+C to shut down.
+[01/20/2025 10:42:11] Hosting environment: Development
+[01/20/2025 10:42:11] Content root path: /app
+[01/20/2025 10:42:11] The foreign key property 'OptionEntity.QuestionId1' was created in shadow state because a conflicting property with the simple name 'QuestionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+[01/20/2025 10:43:41] Executed DbCommand (105ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
 FROM "Articles" AS a
-[01/18/2025 11:31:12] Executed DbCommand (178ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+WHERE a."UserId" = @__userId_0
+[01/20/2025 10:43:43] Executed DbCommand (55ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+WHERE a."UserId" = @__userId_0
+[01/20/2025 10:43:43] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+WHERE a."UserId" = @__userId_0
+[01/20/2025 10:44:00] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+WHERE a."UserId" = @__userId_0
+[01/20/2025 10:44:00] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+[01/20/2025 10:44:45] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+WHERE a."UserId" = @__userId_0
+[01/20/2025 10:48:51] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
 FROM "Articles" AS a
 WHERE a."Id" = @__id_0
 LIMIT 1
-[01/18/2025 11:31:26] Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[01/20/2025 10:50:46] Executed DbCommand (33ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 DELETE FROM "Articles"
 WHERE "Id" = @p0;
-[01/18/2025 11:31:26] Executed DbCommand (46ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
-FROM "Articles" AS a
-WHERE a."Id" = @__id_0
-LIMIT 1
-[01/18/2025 11:31:52] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-DELETE FROM "Articles"
-WHERE "Id" = @p0;
-[01/18/2025 11:31:52] Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
-FROM "Articles" AS a
-[01/18/2025 11:31:55] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[01/18/2025 11:32:09] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Object), @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "Articles" ("Id", "Images", "Text", "Title", "UserId")
-VALUES (@p0, @p1, @p2, @p3, @p4);
-[01/18/2025 11:32:45] Executed DbCommand (27ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Object), @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "Articles" ("Id", "Images", "Text", "Title", "UserId")
-VALUES (@p0, @p1, @p2, @p3, @p4);
-[01/18/2025 11:32:56] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
-FROM "Articles" AS a
-[01/18/2025 11:33:26] Executed DbCommand (4ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Email" = @__email_0
-LIMIT 1
-[01/18/2025 11:36:49] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "AdminRoles" AS a
-    WHERE a."UserId" = @__userId_0)
-[01/18/2025 11:36:49] Executed DbCommand (24ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "TeacherRoles" AS t
-    WHERE t."UserId" = @__userId_0)
-[01/18/2025 11:36:49] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
-FROM "Articles" AS a
-[01/18/2025 11:40:57] Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[01/20/2025 10:50:47] Executed DbCommand (56ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
 FROM "Articles" AS a
 WHERE a."UserId" = @__userId_0
-[01/18/2025 11:41:14] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[01/20/2025 10:50:51] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
 FROM "Articles" AS a
 WHERE a."UserId" = @__userId_0
-[01/18/2025 11:42:14] Executed DbCommand (72ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[01/20/2025 10:50:51] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
 FROM "Articles" AS a
-WHERE a."UserId" = @__userId_0
-[01/18/2025 11:43:36] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
-FROM "Articles" AS a
-WHERE a."UserId" = @__userId_0
-[01/18/2025 11:43:36] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
-FROM "Articles" AS a
-WHERE a."UserId" = @__userId_0
-[01/18/2025 11:44:06] 
+[01/20/2025 10:50:52] 

@@ -10,7 +10,7 @@ function TestListElement({ id, name, onDelete }) {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://localhost:5001/api/tests/${id}`); // Измени URL на правильный
+      await axios.delete(`https://localhost:5001/api/Test/${id}`); // Измени URL на правильный
       onDelete(id);
     } catch (error) {
       console.error("Ошибка при удалении теста:", error);

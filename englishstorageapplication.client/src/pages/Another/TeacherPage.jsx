@@ -98,7 +98,12 @@ function TeacherPage() {
         <p></p>
 
         {activeTab === "articles" && (
+          
+          <>
+          <button ></button>
           <ul>
+            //Add article pop up component
+
             {articles.map(article => (
               <ArticleListElement
                 key={article.id}
@@ -107,9 +112,12 @@ function TeacherPage() {
                 onDelete={handleDeleteArticle}
               />
             ))}
-          </ul>
+          </ul></>
         )}
         {activeTab === "tests" && (
+          <>
+          //Add test pop up component
+
           <ul>
             {tests.map(test => (
               <TestListElement
@@ -119,7 +127,7 @@ function TeacherPage() {
                 onDelete={handleDeleteTest}
               />
             ))}
-          </ul>
+          </ul></>
         )}
       </Section>
     </>
