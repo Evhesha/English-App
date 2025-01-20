@@ -8,7 +8,7 @@ function ArticleListElement({ id, name, onDelete }) {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://localhost:5001/api/articles/${id}`); // Измени URL на правильный
+      await axios.delete(`https://localhost:5001/api/Article/${id}`); // Измени URL на правильный
       onDelete(id);
     } catch (error) {
       console.error('Ошибка при удалении статьи:', error);
@@ -35,7 +35,6 @@ function ArticleListElement({ id, name, onDelete }) {
   );
 }
 
-// Пропсы по умолчанию
 ArticleListElement.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
