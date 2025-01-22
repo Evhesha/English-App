@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         public Guid TestId { get; set; }
-        public required Test Test { get; set; }
+        public Test? Test { get; set; }
         public string Type { get; set; } = string.Empty;
         public string QuestionText { get; set; } = string.Empty;
         public List<Option> Options { get; set; } = new();
