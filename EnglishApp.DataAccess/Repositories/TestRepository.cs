@@ -21,6 +21,14 @@ namespace EnglishApp.DataAccess.Repositories
                 .ToListAsync();
         }
 
+        public async Task<List<TestEntity>> GetUserTests(Guid userId)
+        {
+            return await _context.Tests
+                .AsNoTracking()
+                .Where(t => t.UserId == userId)
+                .ToListAsync();
+        }
+
         public async Task<List<TestEntity>> GetTestWithQuestions(Guid testId)
         {
             return await _context.Tests
