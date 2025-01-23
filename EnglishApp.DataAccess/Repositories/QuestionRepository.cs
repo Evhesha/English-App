@@ -29,10 +29,10 @@ namespace EnglishApp.DataAccess.Repositories
                 .ToListAsync();
         }
 
-        public async Task<List<QuestionEntity>> GetQuestionsWithOptions()
-        {
+        //public async Task<List<QuestionEntity>> GetQuestionsWithOptions()
+        //{
 
-        }
+        //}
 
         public async Task<Guid> Create(Question question)
         {
@@ -50,6 +50,11 @@ namespace EnglishApp.DataAccess.Repositories
 
             return question.Id;
         }
+
+        //public async Task<Guid> Update(string type, string questionText, string correctAnswer)
+        //{
+
+        //}
 
         public async Task<Guid> Delete(Guid id)
         {
