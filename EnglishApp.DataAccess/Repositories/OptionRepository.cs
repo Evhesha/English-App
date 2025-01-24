@@ -22,8 +22,13 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<List<OptionEntity>> GetQuestionOptions(Guid questionId)
         {
-
+            return await _context.Options
+                .AsNoTracking()
+                .Where(o =>  o.QuestionId == questionId)
+                .ToListAsync();
         }
+
+
 
         public async Task<Guid> Delete(Guid id)
         {

@@ -13,7 +13,7 @@
         public Guid UserId { get; }
         public string Name { get; }
 
-        public (string Error, Test test) Create
+        public static (Test Test, string Error) Create
             (Guid id,
             Guid userId,
             string name)
@@ -24,7 +24,7 @@
 
             var test = new Test(id, userId, name);
             
-            return (error, test);
+            return (test, error);
         }
     }
 }

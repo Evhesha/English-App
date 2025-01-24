@@ -2,10 +2,11 @@
 using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories
 {
-    public class TestRepository
+    public class TestRepository : ITestRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -14,28 +15,46 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
-        public async Task<List<TestEntity>> GetTest()
+        public async Task<List<Test>> GetTest()
         {
-            return  await _context.Tests
+            var testEntity = await _context.Tests
                 .AsNoTracking()
                 .ToListAsync();
+
+            var tests = testEntity
+                .Select(t => Test.Create(t.Id, t.UserId, t.Name).Test)
+                .ToList();
+
+            return tests;
         }
 
-        public async Task<List<TestEntity>> GetUserTests(Guid userId)
+        public async Task<List<Test>> GetUserTests(Guid userId)
         {
-            return await _context.Tests
+            var testEntity = await _context.Tests
                 .AsNoTracking()
                 .Where(t => t.UserId == userId)
                 .ToListAsync();
+
+            var tests = testEntity
+                .Select(t => Test.Create(t.Id, t.UserId, t.Name).Test)
+                .ToList();
+
+            return tests;
         }
 
-        public async Task<List<TestEntity>> GetTestWithQuestions(Guid testId)
+        public async Task<List<Test>> GetTestWithQuestions(Guid testId)
         {
-            return await _context.Tests
+            var testEntity = await _context.Tests
                 .AsNoTracking()
-                .Where(t => t.UserId == testId)
+                .Where(t => t.Id == testId)
                 .Include(t => t.Questions)
                 .ToListAsync();
+
+            var tests = testEntity
+                .Select(t => Test.Create(t.Id, t.UserId, t.Name).Test)
+                .ToList();
+
+            return tests;
         }
 
         public async Task<Guid> CreateTest(Test test)
@@ -60,6 +79,7 @@ namespace EnglishApp.DataAccess.Repositories
             if (testEntity != null)
             {
                 testEntity.Name = name;
+                await _context.SaveChangesAsync();
             }
 
             return id;
@@ -67,7 +87,7 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<Guid> Delete(Guid testId)
         {
-            var test = await _context.Tests.FirstOrDefaultAsync(t =>  t.Id == testId);
+            var test = await _context.Tests.FirstOrDefaultAsync(t => t.Id == testId);
 
             if (test != null)
             {
