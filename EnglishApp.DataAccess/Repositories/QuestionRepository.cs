@@ -31,7 +31,9 @@ namespace EnglishApp.DataAccess.Repositories
 
         //public async Task<List<QuestionEntity>> GetQuestionsWithOptions()
         //{
-
+        //    return await _context.Options
+        //        .AsNoTracking()
+        //        .Include()
         //}
 
         public async Task<Guid> Create(Question question)
