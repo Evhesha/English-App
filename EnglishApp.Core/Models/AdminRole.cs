@@ -15,8 +15,6 @@
         {
             string error = string.Empty;
 
-            //Conditions if
-
             var adminRole = new AdminRole(id, userId);
 
             return (adminRole, error);  

@@ -13,13 +13,16 @@
         public Guid QuestionId { get; set; }
         public string OptionText { get; set; } = string.Empty;
 
-        public (Option Option, string Error) Create(
+        public static (Option Option, string Error) Create(
             Guid id, Guid questionId, string optionText)
         {
             string error = string.Empty;
             var option = new Option(id, questionId, optionText);
 
-            // condition if
+            if (string.IsNullOrEmpty(optionText))
+            {
+                error = "Option text can't be empty!";
+            }
 
             return (option, error);
         }

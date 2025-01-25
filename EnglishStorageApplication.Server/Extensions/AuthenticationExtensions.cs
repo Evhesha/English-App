@@ -4,7 +4,6 @@ using System.Text;
 
 namespace EnglishStorageApplication.EnglishApp.Extensions
 {
-    // Это Extension нужен для настройки JWT токенов
     public static class AuthenticationExtensions
     {
         public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)

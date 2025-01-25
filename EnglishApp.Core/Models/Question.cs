@@ -22,7 +22,7 @@
         public string QuestionText { get; set; } = string.Empty;
         public string CorrectAnswer { get; set; } = string.Empty;
 
-        public (Question question, string Error) Create(
+        public static (Question Question, string Error) Create(
             Guid id,
             Guid testId,
             string type,
@@ -32,7 +32,15 @@
             string error = string.Empty;
             var question = new Question(id, testId, type, questionText, correctAnswer);
 
-            // condition if
+            if (string.IsNullOrEmpty(questionText))
+            {
+                error = "Question text can't be empty!";
+            }
+
+            if (string.IsNullOrEmpty(correctAnswer))
+            {
+                error = "Correct answer can't be empty";
+            }
 
             return (question, error);
         }

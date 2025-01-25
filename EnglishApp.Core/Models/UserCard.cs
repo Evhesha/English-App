@@ -19,7 +19,7 @@
         {
             string error = string.Empty;
 
-            if (nameOfUsersCard == string.Empty)
+            if (string.IsNullOrEmpty(nameOfUsersCard))
             {
                 error = "Name of card can't be empty";
             }
