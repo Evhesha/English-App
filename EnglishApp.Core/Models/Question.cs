@@ -32,7 +32,15 @@
             string error = string.Empty;
             var question = new Question(id, testId, type, questionText, correctAnswer);
 
-            // condition if
+            if (string.IsNullOrEmpty(questionText))
+            {
+                error = "Question text can't be empty!";
+            }
+
+            if (string.IsNullOrEmpty(correctAnswer))
+            {
+                error = "Correct answer can't be empty";
+            }
 
             return (question, error);
         }

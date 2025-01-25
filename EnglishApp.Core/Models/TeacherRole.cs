@@ -15,12 +15,9 @@
         {
             string error = string.Empty;
 
-            // Conditions if
-
             var role = new TeacherRole(id, userId);
 
             return (role, error);
         }
-
     }
 }

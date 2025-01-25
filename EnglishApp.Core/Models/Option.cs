@@ -19,7 +19,10 @@
             string error = string.Empty;
             var option = new Option(id, questionId, optionText);
 
-            // condition if
+            if (string.IsNullOrEmpty(optionText))
+            {
+                error = "Option text can't be empty!";
+            }
 
             return (option, error);
         }

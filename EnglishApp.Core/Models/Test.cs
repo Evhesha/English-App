@@ -20,7 +20,10 @@
         {
             string error = string.Empty;
 
-            // Condition if
+            if (string.IsNullOrEmpty(name))
+            {
+                error = "Name can't be empty!";
+            }
 
             var test = new Test(id, userId, name);
             
