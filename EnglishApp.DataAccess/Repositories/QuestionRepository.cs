@@ -14,22 +14,34 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
-        public async Task<List<QuestionEntity>> Get()
+        public async Task<List<Question>> Get()
         {
-            return await _context.Questions
+            var questionEntity =  await _context.Questions
                 .AsNoTracking()
                 .ToListAsync();
+
+            var questions = questionEntity
+                .Select(q => Question.Create(q.Id, q.TestId, q.Type, q.QuestionText, q.CorrectAnswer).Question)
+                .ToList();
+
+            return questions;
         }
 
-        public async Task<List<QuestionEntity>> GetTestQuestions(Guid testId)
+        public async Task<List<Question>> GetTestQuestions(Guid testId)
         {
-            return await _context.Questions
+            var questionEntity =  await _context.Questions
                 .AsNoTracking()
                 .Where(q => q.TestId == testId)
                 .ToListAsync();
+
+            var questions = questionEntity
+                .Select(q => Question.Create(q.Id, q.TestId, q.Type, q.QuestionText, q.CorrectAnswer).Question)
+                .ToList();
+
+            return questions;
         }
 
-        //public async Task<List<QuestionEntity>> GetQuestionsWithOptions()
+        //public async Task<List<Question>> GetQuestionsWithOptions()
         //{
         //    return await _context.Options
         //        .AsNoTracking()

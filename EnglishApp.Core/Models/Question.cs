@@ -22,7 +22,7 @@
         public string QuestionText { get; set; } = string.Empty;
         public string CorrectAnswer { get; set; } = string.Empty;
 
-        public (Question question, string Error) Create(
+        public static (Question Question, string Error) Create(
             Guid id,
             Guid testId,
             string type,
