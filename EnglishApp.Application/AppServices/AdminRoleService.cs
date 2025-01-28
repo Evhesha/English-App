@@ -5,31 +5,31 @@ namespace EnglishApp.Application.AppServices
 {
     public class AdminRoleService : IAdminRoleService
     {
-        private readonly IAdminRoleRepository _roleRepository;
+        private readonly IAdminRoleRepository _adminRoleRepository;
 
-        public AdminRoleService(IAdminRoleRepository roleRepository)
+        public AdminRoleService(IAdminRoleRepository adminRoleRepository)
         {
-            _roleRepository = roleRepository;
+            _adminRoleRepository = adminRoleRepository;
         }
 
         public async Task<List<AdminRole>> GetAllRoles()
         {
-            return await _roleRepository.Get();
+            return await _adminRoleRepository.Get();
         }
 
         public async Task<AdminRole> GetRole(Guid userId)
         {
-            return await _roleRepository.GetAdmin(userId);
+            return await _adminRoleRepository.GetAdmin(userId);
         }
 
         public async Task<Guid> CreateRole(AdminRole adminRole)
         {
-            return await _roleRepository.Create(adminRole);
+            return await _adminRoleRepository.Create(adminRole);
         }
 
         public async Task<Guid> Delete(Guid id)
         {
-            return await _roleRepository.Delete(id);
+            return await _adminRoleRepository.Delete(id);
         }
     }
 }

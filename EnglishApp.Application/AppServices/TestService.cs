@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EnglishApp.DataAccess.Repositories;
 
 namespace EnglishApp.Application.AppServices
 {
     public class TestService
     {
+        private readonly TestRepository _testRepository;
+
+        public TestService(TestRepository testRepository)
+        {
+
+        }
     }
 }

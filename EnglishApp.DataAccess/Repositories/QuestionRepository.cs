@@ -2,10 +2,11 @@
 using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories
 {
-    public class QuestionRepository
+    public class QuestionRepository : IQuestionRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -16,7 +17,7 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<List<Question>> Get()
         {
-            var questionEntity =  await _context.Questions
+            var questionEntity = await _context.Questions
                 .AsNoTracking()
                 .ToListAsync();
 
@@ -29,7 +30,7 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<List<Question>> GetTestQuestions(Guid testId)
         {
-            var questionEntity =  await _context.Questions
+            var questionEntity = await _context.Questions
                 .AsNoTracking()
                 .Where(q => q.TestId == testId)
                 .ToListAsync();
@@ -41,12 +42,20 @@ namespace EnglishApp.DataAccess.Repositories
             return questions;
         }
 
-        //public async Task<List<Question>> GetQuestionsWithOptions()
-        //{
-        //    return await _context.Options
-        //        .AsNoTracking()
-        //        .Include()
-        //}
+        public async Task<List<Question>> GetQuestionWithOptions(Guid id)
+        {
+            var questionEntity = await _context.Questions
+                .AsNoTracking()
+                .Where(q => q.Id == id)
+                .Include(q => q.Options)
+                .ToListAsync();
+
+            var questions = questionEntity
+                .Select(q => Question.Create(q.Id, q.TestId, q.Type, q.QuestionText, q.CorrectAnswer).Question)
+                .ToList();
+
+            return questions;
+        }
 
         public async Task<Guid> Create(Question question)
         {
@@ -65,10 +74,19 @@ namespace EnglishApp.DataAccess.Repositories
             return question.Id;
         }
 
-        //public async Task<Guid> Update(string type, string questionText, string correctAnswer)
-        //{
+        public async Task<Guid> Update(Guid id, string type, string questionText, string correctAnswer)
+        {
+            var questionEntity = await _context.Questions.FindAsync(id);
 
-        //}
+            if (questionEntity != null)
+            {
+                questionEntity.Type = type;
+                questionEntity.QuestionText = questionText;
+                questionEntity.CorrectAnswer = correctAnswer;
+            }
+
+            return id;
+        }
 
         public async Task<Guid> Delete(Guid id)
         {
