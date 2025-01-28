@@ -1,6 +1,4 @@
-﻿using EnglishApp.Core.Models;
-
-namespace EnglishApp.DataAccess.Entities
+﻿namespace EnglishApp.DataAccess.Entities
 {
     public class QuestionEntity
     {

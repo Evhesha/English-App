@@ -516,8 +516,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Test\\ITestRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T14:54:03.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T14:54:03.669Z"
             },
             {
               "$type": "Document",
@@ -529,8 +528,7 @@
               "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T10:39:49.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T10:39:49.998Z"
             },
             {
               "$type": "Document",
@@ -542,8 +540,7 @@
               "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\TestRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T19:15:29.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T19:15:29.795Z"
             },
             {
               "$type": "Document",
@@ -555,8 +552,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Models\\Test.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T17:20:15.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T17:20:15.991Z"
             },
             {
               "$type": "Document",
@@ -568,8 +564,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Auth\\IPasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T08:57:53.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T08:57:53.724Z"
             },
             {
               "$type": "Document",
@@ -581,8 +576,7 @@
               "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\QuestionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T17:11:42.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T17:11:42.492Z"
             },
             {
               "$type": "Document",
@@ -592,7 +586,7 @@
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Question.cs",
               "ToolTip": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Question.cs",
               "RelativeToolTip": "EnglishApp.Core\\Models\\Question.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-21T18:56:04.41Z",
               "EditorCaption": ""
@@ -607,8 +601,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Models\\Option.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T18:57:50.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T18:57:50.755Z"
             },
             {
               "$type": "Document",
@@ -620,8 +613,7 @@
               "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\UsersActivitiesRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T11:30:31.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T11:30:31.738Z"
             },
             {
               "$type": "Document",
@@ -633,8 +625,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Models\\TeacherRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T17:16:37.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T17:16:37.203Z"
             },
             {
               "$type": "Document",
@@ -646,8 +637,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Models\\Article.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T17:20:05.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T17:20:05.473Z"
             },
             {
               "$type": "Document",
@@ -659,8 +649,7 @@
               "RelativeToolTip": "EnglishApp.DataAccess\\Repositories\\OptionRepository.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T17:12:11.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T17:12:11.332Z"
             },
             {
               "$type": "Document",
@@ -672,8 +661,7 @@
               "RelativeToolTip": "EnglishApp.DataAccess\\Entities\\TestEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T19:31:43.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T19:31:43.776Z"
             },
             {
               "$type": "Document",
@@ -685,8 +673,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T10:12:53.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T10:12:53.181Z"
             },
             {
               "$type": "Document",
@@ -698,8 +685,7 @@
               "RelativeToolTip": "EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T10:01:58.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T10:01:58.692Z"
             },
             {
               "$type": "Document",

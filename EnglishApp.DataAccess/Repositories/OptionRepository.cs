@@ -1,4 +1,5 @@
-﻿using EnglishApp.DataAccess.Entities;
+﻿using EnglishApp.Core.Models;
+using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +29,16 @@ namespace EnglishApp.DataAccess.Repositories
                 .ToListAsync();
         }
 
+        //public async Task<Guid> Create(Option option)
+        //{
+
+        //}
+
+        //public async Task<Guid> Update(Guid id)
+        //{
+
+        //    return id;
+        //}
 
 
         public async Task<Guid> Delete(Guid id)
