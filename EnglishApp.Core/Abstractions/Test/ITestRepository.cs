@@ -6,7 +6,7 @@ namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
     {
         Task<Guid> CreateTest(Test test);
         Task<Guid> Delete(Guid testId);
-        Task<List<Test>> GetTest();
+        Task<List<Test>> Get();
         Task<List<Test>> GetTestWithQuestions(Guid testId);
         Task<List<Test>> GetUserTests(Guid userId);
         Task<Guid> Update(Guid id, string name);

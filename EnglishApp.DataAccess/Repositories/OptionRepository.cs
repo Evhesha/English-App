@@ -1,5 +1,4 @@
 ﻿using EnglishApp.Core.Models;
-using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,19 +13,31 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
-        public async Task<List<OptionEntity>> Get()
+        public async Task<List<Option>> Get()
         {
-            return await _context.Options
+            var optionEntity =  await _context.Options
                 .AsNoTracking()
                 .ToListAsync();
+
+            var options = optionEntity
+                .Select(o => Option.Create(o.Id, o.QuestionId, o.OptionText).Option)
+                .ToList();
+
+            return options;
         }
 
-        public async Task<List<OptionEntity>> GetQuestionOptions(Guid questionId)
+        public async Task<List<Option>> GetQuestionOptions(Guid questionId)
         {
-            return await _context.Options
+            var optionEntity =  await _context.Options
                 .AsNoTracking()
                 .Where(o =>  o.QuestionId == questionId)
                 .ToListAsync();
+
+            var options = optionEntity
+                .Select(o => Option.Create(o.Id, o.QuestionId, o.OptionText).Option)
+                .ToList();
+
+            return options;
         }
 
         //public async Task<Guid> Create(Option option)
@@ -39,7 +50,6 @@ namespace EnglishApp.DataAccess.Repositories
 
         //    return id;
         //}
-
 
         public async Task<Guid> Delete(Guid id)
         {

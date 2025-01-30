@@ -15,7 +15,7 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
-        public async Task<List<Test>> GetTest()
+        public async Task<List<Test>> Get()
         {
             var testEntity = await _context.Tests
                 .AsNoTracking()
