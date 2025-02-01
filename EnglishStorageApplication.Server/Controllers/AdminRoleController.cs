@@ -9,17 +9,17 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class AdminRoleController : ControllerBase
     {
-        private readonly IAdminRoleService _adminRoleService;
+        private readonly IAdminRoleService _service;
 
         public AdminRoleController(IAdminRoleService adminRoleService)
         {
-            _adminRoleService = adminRoleService;   
+            _service = adminRoleService;   
         }
 
         [HttpGet]
         public async Task<ActionResult<List<AdminRolesResponse>>> GetRoles()
         {
-            var roles = await _adminRoleService.GetAllRoles();
+            var roles = await _service.GetAllRoles();
             var response = roles.Select(r => new AdminRolesResponse(r.Id, r.UserId));
             return Ok(response);
         }
@@ -34,7 +34,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 return BadRequest(error);
             }
 
-            var roleId = await _adminRoleService.CreateRole(role);
+            var roleId = await _service.CreateRole(role);
 
             return Ok(roleId);
         }
@@ -42,7 +42,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            return Ok(await _adminRoleService.Delete(id));
+            return Ok(await _service.Delete(id));
         }
     }
 }

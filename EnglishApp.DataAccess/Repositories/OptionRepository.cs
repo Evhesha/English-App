@@ -1,10 +1,12 @@
 ﻿using EnglishApp.Core.Models;
+using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories
 {
-    public class OptionRepository
+    public class OptionRepository : IOptionRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -15,7 +17,7 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<List<Option>> Get()
         {
-            var optionEntity =  await _context.Options
+            var optionEntity = await _context.Options
                 .AsNoTracking()
                 .ToListAsync();
 
@@ -28,9 +30,9 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<List<Option>> GetQuestionOptions(Guid questionId)
         {
-            var optionEntity =  await _context.Options
+            var optionEntity = await _context.Options
                 .AsNoTracking()
-                .Where(o =>  o.QuestionId == questionId)
+                .Where(o => o.QuestionId == questionId)
                 .ToListAsync();
 
             var options = optionEntity
@@ -40,16 +42,33 @@ namespace EnglishApp.DataAccess.Repositories
             return options;
         }
 
-        //public async Task<Guid> Create(Option option)
-        //{
+        public async Task<Guid> Create(Option option)
+        {
+            var optionEntity = new OptionEntity
+            {
+                Id = option.Id,
+                QuestionId = option.QuestionId,
+                OptionText = option.OptionText,
+            };
 
-        //}
+            await _context.Options.AddAsync(optionEntity);
+            await _context.SaveChangesAsync();
 
-        //public async Task<Guid> Update(Guid id)
-        //{
+            return optionEntity.Id;
+        }
 
-        //    return id;
-        //}
+        public async Task<Guid> Update(Guid id, string optionText)
+        {
+            var optionEntity = await _context.Options.FindAsync(id);
+
+            if (optionEntity != null)
+            {
+                optionEntity.OptionText = optionText;
+                await _context.SaveChangesAsync();
+            }
+
+            return id;
+        }
 
         public async Task<Guid> Delete(Guid id)
         {

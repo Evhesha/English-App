@@ -66,7 +66,7 @@ namespace EnglishApp.DataAccess.Repositories
                 Name = test.Name
             };
 
-            await _context.AddAsync(testEntity);
+            await _context.Tests.AddAsync(testEntity);
             await _context.SaveChangesAsync();
 
             return test.Id;

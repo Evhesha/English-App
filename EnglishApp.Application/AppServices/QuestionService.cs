@@ -1,9 +1,10 @@
 ﻿using EnglishApp.Core.Models;
 using EnglishApp.DataAccess.Repositories;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.Application.AppServices
 {
-    public class QuestionService
+    public class QuestionService : IQuestionService
     {
         private readonly QuestionRepository _questionRepository;
 

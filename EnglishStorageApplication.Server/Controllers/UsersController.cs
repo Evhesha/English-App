@@ -9,11 +9,11 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly IUserService _context;
+        private readonly IUserService _service;
 
-        public UsersController(IUserService context)
+        public UsersController(IUserService userService)
         {
-            _context = context;
+            _service = userService;
         }
 
         //Метод NoContent() вернет статус-код 204, что означает "Нет содержимого",
@@ -24,7 +24,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UsersResponse>>> GetUsers()
         {
-            var users = await _context.GetAllUsers();
+            var users = await _service.GetAllUsers();
             var response = users.Select(u => new UsersResponse(u.Id, u.Name, u.Email, u.Password));
             return Ok(response);
         }
@@ -33,7 +33,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UserActivityResponse>>> GetUser(Guid id)
         {
-            var user = await _context.GetUser(id);
+            var user = await _service.GetUser(id);
             var response = user.Select(u => new UsersResponse(u.Id, u.Name, u.Email, u.Password));
             return Ok(response);
         }
@@ -54,7 +54,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 return BadRequest(error);
             }
 
-            var userId = await _context.CreateUser(user);
+            var userId = await _service.CreateUser(user);
             return Ok(userId);
         }
 
@@ -63,7 +63,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request)
         {
-            var userId = await _context.UpdateUser(id, request.name, request.email, request.password);
+            var userId = await _service.UpdateUser(id, request.name, request.email, request.password);
 
             return Ok(userId);
         }
@@ -72,7 +72,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUser(Guid id)
         {
-            return Ok(await _context.DeleteUser(id));
+            return Ok(await _service.DeleteUser(id));
         }
     }
 }

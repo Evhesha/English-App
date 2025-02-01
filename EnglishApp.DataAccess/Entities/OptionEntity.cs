@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         public Guid QuestionId { get; set; }
-        public required QuestionEntity Question { get; set; }
+        public QuestionEntity Question { get; set; } = new();
         public string OptionText { get; set; } = string.Empty;
     }
 }
