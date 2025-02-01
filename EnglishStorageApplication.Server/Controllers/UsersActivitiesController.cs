@@ -9,17 +9,17 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class UsersActivitiesController : ControllerBase
     {
-        private readonly IUserActivityService _userActivityService;
+        private readonly IUserActivityService _service;
 
         public UsersActivitiesController(IUserActivityService userActivityService)
         {
-            _userActivityService = userActivityService;
+            _service = userActivityService;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<UserActivityRequest>>> GetUsersActivities()
         {
-            var userActivities = await _userActivityService.GetAllUsersActivity();
+            var userActivities = await _service.GetAllUsersActivity();
             var response = userActivities.Select(a => new UserActivityRequest(a.UserId, a.DateTime, a.IsActive)).ToList();
             return Ok(response);
         }
@@ -27,7 +27,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [HttpGet("{userId:guid}")]
         public async Task<ActionResult<List<UserActivityRequest>>> GetUserActivities(Guid userId)
         {
-            var userActivities = await _userActivityService.GetUserActivity(userId);
+            var userActivities = await _service.GetUserActivity(userId);
             var response = userActivities.Select(a => new UserActivityRequest(a.UserId, a.DateTime, a.IsActive)).ToList();
             return Ok(response);
         }
@@ -42,7 +42,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 activityResponse.isActive
             );
 
-            var activityId = await _userActivityService.CreateUserActivity(userActivity);
+            var activityId = await _service.CreateUserActivity(userActivity);
             return Ok(activityId);
         }
     }

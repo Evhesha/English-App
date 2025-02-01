@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.Server.Contracts.Users;
 using Microsoft.AspNetCore.Identity.Data;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -8,11 +9,11 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly EnglishApp.Core.Abstractions.IAuthenticationService _authService;
+        private readonly IAuthenticationService _service;
 
-        public AuthController(EnglishApp.Core.Abstractions.IAuthenticationService authService)
+        public AuthController(IAuthenticationService authService)
         {
-            _authService = authService;
+            _service = authService;
         }
 
         [HttpPost("register")]
@@ -30,7 +31,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 return BadRequest(error);
             }
 
-            var userId = await _authService.Register(user.Name, user.Email, user.Password);
+            var userId = await _service.Register(user.Name, user.Email, user.Password);
             return Ok(new { UserId = userId });
         }
 
@@ -40,7 +41,7 @@ namespace EnglishStorageApplication.Server.Controllers
         {
             try
             {
-                var token = await _authService.Login(request.Email, request.Password);
+                var token = await _service.Login(request.Email, request.Password);
                 return Ok(new { Token = token });
             }
             catch (UnauthorizedAccessException)

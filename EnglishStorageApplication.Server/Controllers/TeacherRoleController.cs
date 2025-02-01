@@ -9,17 +9,17 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class TeacherRoleController : ControllerBase
     {
-        private readonly ITeacherRoleSevice _teacherRoleService;
+        private readonly ITeacherRoleSevice _service;
 
         public TeacherRoleController(ITeacherRoleSevice teacherRoleSevice)
         {
-            _teacherRoleService = teacherRoleSevice;
+            _service = teacherRoleSevice;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<AdminRolesResponse>>> GetRoles()
         {
-            var roles = await _teacherRoleService.GetAllRoles();
+            var roles = await _service.GetAllRoles();
             var response = roles.Select(r => new AdminRolesResponse(r.Id, r.UserId));
             return Ok(response);
         }
@@ -34,14 +34,14 @@ namespace EnglishStorageApplication.Server.Controllers
                 return BadRequest(error);
             }
 
-            var roleId = await _teacherRoleService.CreateRole(role);
+            var roleId = await _service.CreateRole(role);
             return Ok(roleId);
         }
 
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<Guid>> DeleteRole(Guid id)
         {
-            return Ok(await _teacherRoleService.DeleteRole(id));
+            return Ok(await _service.DeleteRole(id));
         }
     }
 }

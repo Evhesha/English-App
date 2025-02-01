@@ -5,15 +5,14 @@ namespace EnglishStorageApplication.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TestController : ControllerBase
+    public class OptionController : ControllerBase
     {
-        private readonly ITestService _service;
+        private readonly IOptionService _service;
 
-        public TestController(ITestService testService)
+        public OptionController(IOptionService optionService)
         {
-            _service = testService;
+            _service = optionService;
         }
-
 
     }
 }

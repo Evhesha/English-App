@@ -1,9 +1,10 @@
 ﻿using EnglishApp.Core.Models;
 using EnglishApp.DataAccess.Repositories;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.Application.AppServices
 {
-    public class TestService
+    public class TestService : ITestService
     {
         private readonly TestRepository _testRepository;
 

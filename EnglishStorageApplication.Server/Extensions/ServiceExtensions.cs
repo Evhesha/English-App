@@ -33,6 +33,15 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
             services.AddScoped<ITeacherRoleSevice, TeacherRoleSevice>();
             services.AddScoped<ITeacherRoleRepository, TeacherRoleRepository>();
 
+            //services.AddScoped<ITestService, TestService>();
+            //services.AddScoped<ITestRepository, TestRepository>();
+
+            //services.AddScoped<IQuestionService, QuestionService>();
+            //services.AddScoped<IQuestionRepository, QuestionRepository>();
+
+            //services.AddScoped<IOptionService, OptionService>();
+            //services.AddScoped<IOptionRepository, OptionRepository>();
+
             services.AddScoped<JwtProvider>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IPasswordHasher, PasswordHasher>();

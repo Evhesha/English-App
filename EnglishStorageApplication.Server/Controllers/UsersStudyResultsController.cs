@@ -11,18 +11,18 @@ namespace EnglishStorageApplication.Server.Controllers
     public class UsersStudyResultsController : ControllerBase
     {
 
-        private readonly IUserStudyResultService _userStudyResultService;
+        private readonly IUserStudyResultService _service;
 
         public UsersStudyResultsController(IUserStudyResultService userStudyResultService)
         {
-            _userStudyResultService = userStudyResultService;
+            _service = userStudyResultService;
         }
 
         [HttpGet]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UsersStudyResultsResponse>>> GetUsersStudyResults()
         {
-            var usersResults = await _userStudyResultService.GetAllUsersResults();
+            var usersResults = await _service.GetAllUsersResults();
             var response = usersResults.Select(r => new UsersStudyResultsResponse(r.Id, r.UserId, r.TestId, r.PercentResult));
             return Ok(response);
         }
@@ -31,7 +31,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UsersStudyResultsResponse>>> GetUserStudyResults(Guid userId)
         {
-            var userResults = await _userStudyResultService.GetUserResults(userId);
+            var userResults = await _service.GetUserResults(userId);
             if (userResults == null || !userResults.Any())
             {
                 return NoContent();
@@ -60,7 +60,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 return BadRequest(error);
             }
 
-            var userResultId = await _userStudyResultService.CreateUserResult(userResult);
+            var userResultId = await _service.CreateUserResult(userResult);
 
             return Ok(userResultId);
         }
@@ -72,7 +72,7 @@ namespace EnglishStorageApplication.Server.Controllers
             [FromBody] UsersStudyResultsRequest usersStudyResultsRequest
             )
         {
-            var userResult = await _userStudyResultService.Update(
+            var userResult = await _service.Update(
                 id, usersStudyResultsRequest.percent);
             return Ok(userResult);
         }
@@ -81,7 +81,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUserStudyResult(Guid id)
         {
-            return Ok(await _userStudyResultService.Delete(id));
+            return Ok(await _service.Delete(id));
         }
     }
 }

@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Abstractions\Question\" />
-    <Folder Include="Abstractions\Option\" />
-  </ItemGroup>
-
 </Project>
