@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kCD7O4uhfAY=",
+  "dgSpecHash": "AIc7ElXSNUM=",
   "success": true,
   "projectFilePath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,7 @@
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.1.1\\microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.1.1\\microsoft.aspnetcore.http.extensions.2.1.1.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.1.1\\microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
-    "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\8.0.11\\microsoft.aspnetcore.spaproxy.8.0.11.nupkg.sha512",
+    "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\8.0.16\\microsoft.aspnetcore.spaproxy.8.0.16.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
