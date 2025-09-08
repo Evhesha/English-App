@@ -1,6 +1,5 @@
 services:
   englishstorageapplication.server:
-    container_name: "EnglishStorageApplication.Server"
     build:
       args:
         LAUNCHING_FROM_VS: true

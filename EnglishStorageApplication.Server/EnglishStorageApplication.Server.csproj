@@ -30,6 +30,7 @@
 		<ProjectReference Include="..\EnglishApp.Application\EnglishApp.Application.csproj" />
 		<ProjectReference Include="..\EnglishApp.Core\EnglishApp.Core.csproj" />
 		<ProjectReference Include="..\EnglishApp.DataAccess\EnglishApp.DataAccess.csproj" />
+		<ProjectReference Include="..\EnglishApp.Infrastructure\EnglishApp.Infrastructure.csproj" />
 		<ProjectReference Include="..\englishstorageapplication.client\App.client.esproj">
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 		</ProjectReference>
