@@ -16,10 +16,6 @@ namespace EnglishStorageApplication.Server.Controllers
             _service = userService;
         }
 
-        //Метод NoContent() вернет статус-код 204, что означает "Нет содержимого",
-        //и таким образом сигнализирует, что запрос был успешным, но данных для возвращения нет.
-        //Это временное решение, пока ты не готов добавить реальную функциональность!
-
         [HttpGet]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UsersResponse>>> GetUsers()

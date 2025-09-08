@@ -11,8 +11,9 @@
           "EnglishApp.Application": "1.0.0",
           "EnglishApp.Core": "1.0.0",
           "EnglishApp.DataAccess": "1.0.0",
+          "EnglishApp.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.1.1",
-          "Microsoft.AspNetCore.SpaProxy": "8.0.11",
+          "Microsoft.AspNetCore.SpaProxy": "8.0.19",
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.20.1",
@@ -101,11 +102,11 @@
           "Microsoft.Extensions.Primitives": "8.0.0"
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/8.0.11": {
+      "Microsoft.AspNetCore.SpaProxy/8.0.19": {
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {
-            "assemblyVersion": "8.0.11.0",
-            "fileVersion": "8.0.1124.52116"
+            "assemblyVersion": "8.0.19.0",
+            "fileVersion": "8.0.1925.37204"
           }
         }
       },
@@ -745,7 +746,7 @@
         },
         "runtime": {
           "EnglishApp.Application.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -753,7 +754,7 @@
       "EnglishApp.Core/1.0.0": {
         "runtime": {
           "EnglishApp.Core.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -768,7 +769,7 @@
         },
         "runtime": {
           "EnglishApp.DataAccess.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -781,7 +782,7 @@
         },
         "runtime": {
           "EnglishApp.Infrastructure.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -857,12 +858,12 @@
       "path": "microsoft.aspnetcore.http.features/2.1.1",
       "hashPath": "microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.SpaProxy/8.0.11": {
+    "Microsoft.AspNetCore.SpaProxy/8.0.19": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jwE/cg81t/FTZF1DOKpd90ztzZz6NNNHdo+vLUL4I2IzqL3e8Coo+2eR0KeD4ShbJm+3LNPXH9a6gYv/oP+aQQ==",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.11",
-      "hashPath": "microsoft.aspnetcore.spaproxy.8.0.11.nupkg.sha512"
+      "sha512": "sha512-xWtCwORld+CYaee+QOVvjbhNf+mD04ZAafdBwd2YqdYolGsag2thKZLJRfmP2SkXAHNbJJ/9osZqsxnT/N3rMA==",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.19",
+      "hashPath": "microsoft.aspnetcore.spaproxy.8.0.19.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",

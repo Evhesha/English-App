@@ -135,7 +135,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/8.0.16": {
+      "Microsoft.AspNetCore.SpaProxy/8.0.19": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -1180,6 +1180,7 @@
           "EnglishApp.Application": "1.0.0",
           "EnglishApp.Core": "1.0.0",
           "EnglishApp.DataAccess": "1.0.0",
+          "EnglishApp.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.1.1",
           "Microsoft.AspNetCore.SpaProxy": "8.0.0-0",
           "Microsoft.EntityFrameworkCore": "8.0.10",
@@ -1327,10 +1328,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/8.0.16": {
-      "sha512": "epkhyVdorPlnTz3k839y9UkdaWYLA2I8NCZXCw9AbO4tSnpGrn7ufLv/oy5sl/gLCLHrEkhJX+VmiVN6im427w==",
+    "Microsoft.AspNetCore.SpaProxy/8.0.19": {
+      "sha512": "xWtCwORld+CYaee+QOVvjbhNf+mD04ZAafdBwd2YqdYolGsag2thKZLJRfmP2SkXAHNbJJ/9osZqsxnT/N3rMA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.16",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.19",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1338,7 +1339,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.8.0.16.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.8.0.19.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -3024,7 +3025,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
