@@ -1,5 +1,66 @@
-﻿################################################################################
-# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
-################################################################################
+﻿/.vs/EnglishStorageApplication/FileContentIndex
 
-/.vs/EnglishStorageApplication/FileContentIndex
+# === .NET / ASP.NET Core ===
+bin/
+obj/
+out/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Публикация и временные файлы
+*.log
+*.vspscc
+*.vsp
+*.pdb
+*.cache
+*.config
+*.dbmdl
+*.bak
+*.backup
+*.publishsettings
+*.publish.xml
+
+# Visual Studio
+.vs/
+*.dbmdl
+*.jfm
+*.localhistory/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# === Node.js / React ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# build артефакты React
+/build/
+/dist/
+
+# environment files
+.env
+.env.*.local
+
+# coverage
+coverage/
+*.lcov
+
+# Mac / Linux системные файлы
+.DS_Store
+Thumbs.db
+
+# === Дополнительно ===
+# Локальные настройки
+*.swp
+*.vscode/
+

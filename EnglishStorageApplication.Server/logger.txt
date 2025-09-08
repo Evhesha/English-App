@@ -1,173 +1,44 @@
 The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[09/08/2025 11:20:07] Using an in-memory repository. Keys will not be persisted to storage.
-[09/08/2025 11:20:07] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
-[09/08/2025 11:20:07] No XML encryptor configured. Key {b4356ad8-8bd5-4119-97f4-7d3245667cf8} may be persisted to storage in unencrypted form.
-[09/08/2025 11:20:07] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
-[09/08/2025 11:20:07] Now listening on: http://[::]:5000
-[09/08/2025 11:20:08] Now listening on: https://[::]:5001
-[09/08/2025 11:20:08] Application started. Press Ctrl+C to shut down.
-[09/08/2025 11:20:08] Hosting environment: Development
-[09/08/2025 11:20:08] Content root path: /app
-[09/08/2025 11:20:08] The foreign key property 'OptionEntity.QuestionId1' was created in shadow state because a conflicting property with the simple name 'QuestionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
-[09/08/2025 11:20:28] Executed DbCommand (64ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[09/08/2025 11:20:30] Executed DbCommand (81ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
-INSERT INTO "Users" ("Id", "Email", "Name", "Password")
-VALUES (@p0, @p1, @p2, @p3);
-[09/08/2025 11:24:11] Executed DbCommand (33ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Email" = @__email_0
-LIMIT 1
-[09/08/2025 11:24:21] Executed DbCommand (27ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "AdminRoles" AS a
-    WHERE a."UserId" = @__userId_0)
-[09/08/2025 11:24:22] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "TeacherRoles" AS t
-    WHERE t."UserId" = @__userId_0)
-[09/08/2025 11:24:22] Executed DbCommand (18ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:24:26] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:24:26] Executed DbCommand (34ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[09/08/2025 11:24:31] Executed DbCommand (24ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[09/08/2025 11:24:31] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "UsersCards" ("Id", "NameOfUsersCard", "UserCardData", "UserId")
-VALUES (@p0, @p1, @p2, @p3);
-[09/08/2025 11:24:42] Executed DbCommand (32ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[09/08/2025 11:24:44] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[09/08/2025 11:24:44] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[09/08/2025 11:25:24] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "AdminRoles" ("Id", "UserId")
-VALUES (@p0, @p1);
-[09/08/2025 11:25:42] Executed DbCommand (19ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Email" = @__email_0
-LIMIT 1
-[09/08/2025 11:25:51] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "AdminRoles" AS a
-    WHERE a."UserId" = @__userId_0)
-[09/08/2025 11:25:52] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "TeacherRoles" AS t
-    WHERE t."UserId" = @__userId_0)
-[09/08/2025 11:25:52] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[09/08/2025 11:25:55] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[09/08/2025 11:25:55] Executed DbCommand (29ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__get_Item_0
-LIMIT 1
-[09/08/2025 11:26:03] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-DELETE FROM "Users"
-WHERE "Id" = @p0;
-[09/08/2025 11:26:03] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:26:18] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:26:18] Executed DbCommand (24ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:26:48] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:26:48] Executed DbCommand (70ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[09/08/2025 11:27:13] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[09/08/2025 11:27:13] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:31:14] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:31:15] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[09/08/2025 11:31:30] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[09/08/2025 11:31:30] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:31:38] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-[09/08/2025 11:31:38] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
-INSERT INTO "Users" ("Id", "Email", "Name", "Password")
-VALUES (@p0, @p1, @p2, @p3);
-[09/08/2025 11:33:21] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-[09/08/2025 11:33:33] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "TeacherRoles" ("Id", "UserId")
-VALUES (@p0, @p1);
-[09/08/2025 11:33:52] Executed DbCommand (19ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."Password"
-FROM "Users" AS u
-WHERE u."Email" = @__email_0
-LIMIT 1
-[09/08/2025 11:34:00] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "AdminRoles" AS a
-    WHERE a."UserId" = @__userId_0)
-[09/08/2025 11:34:00] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "TeacherRoles" AS t
-    WHERE t."UserId" = @__userId_0)
-[09/08/2025 11:34:00] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[09/08/2025 18:57:21] Using an in-memory repository. Keys will not be persisted to storage.
+[09/08/2025 18:57:21] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+[09/08/2025 18:57:21] No XML encryptor configured. Key {8d0772c9-d5d1-4379-9809-2c685a7949bd} may be persisted to storage in unencrypted form.
+[09/08/2025 18:57:22] The WebRootPath was not found: /app/wwwroot. Static files may be unavailable.
+[09/08/2025 18:57:22] Now listening on: http://[::]:5000
+[09/08/2025 18:57:26] Now listening on: https://[::]:5001
+[09/08/2025 18:57:26] Application started. Press Ctrl+C to shut down.
+[09/08/2025 18:57:26] Hosting environment: Development
+[09/08/2025 18:57:26] Content root path: /app
+[09/08/2025 18:57:26] The foreign key property 'OptionEntity.QuestionId1' was created in shadow state because a conflicting property with the simple name 'QuestionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+[09/08/2025 18:58:37] Executed DbCommand (125ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
 FROM "Articles" AS a
 WHERE a."UserId" = @__userId_0
-[09/08/2025 11:34:03] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[09/08/2025 18:58:39] Executed DbCommand (139ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[09/08/2025 18:58:39] Executed DbCommand (30ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
 FROM "Articles" AS a
 WHERE a."UserId" = @__userId_0
-[09/08/2025 11:34:03] 
+[09/08/2025 18:58:40] Executed DbCommand (51ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[09/08/2025 18:58:40] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+WHERE a."UserId" = @__userId_0
+[09/08/2025 18:58:40] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."Images", a."Text", a."Title", a."UserId"
+FROM "Articles" AS a
+WHERE a."UserId" = @__userId_0
+[09/08/2025 18:58:40] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[09/08/2025 18:58:42] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."Password"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+[09/08/2025 18:58:42] 
