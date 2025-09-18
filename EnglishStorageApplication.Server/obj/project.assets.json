@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net9.0": {
       "AutoMapper/13.0.1": {
         "type": "package",
         "dependencies": {
@@ -148,7 +148,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/8.0.19": {
+      "Microsoft.AspNetCore.SpaProxy/8.0.20": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -1230,7 +1230,7 @@
       },
       "EnglishApp.Application/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "EnglishApp.Core": "1.0.0",
           "EnglishApp.DataAccess": "1.0.0",
@@ -1245,7 +1245,7 @@
       },
       "EnglishApp.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
           "bin/placeholder/EnglishApp.Core.dll": {}
         },
@@ -1255,7 +1255,7 @@
       },
       "EnglishApp.DataAccess/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "AutoMapper": "13.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
@@ -1272,7 +1272,7 @@
       },
       "EnglishApp.Infrastructure/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "EnglishApp.Core": "1.0.0",
@@ -1433,10 +1433,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/8.0.19": {
-      "sha512": "xWtCwORld+CYaee+QOVvjbhNf+mD04ZAafdBwd2YqdYolGsag2thKZLJRfmP2SkXAHNbJJ/9osZqsxnT/N3rMA==",
+    "Microsoft.AspNetCore.SpaProxy/8.0.20": {
+      "sha512": "TxWBxx2PiuaL1c5fpQdccNqnSe+Ck+R8EDd2GHG7jo6rlSVqFugceix/QckLmIn0wAQJhiWz//s+O5o/WcbBbQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.19",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.20",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1444,7 +1444,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.8.0.19.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.8.0.20.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -3375,7 +3375,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net9.0": [
       "EnglishApp.Application >= 1.0.0",
       "EnglishApp.Core >= 1.0.0",
       "EnglishApp.DataAccess >= 1.0.0",
@@ -3396,11 +3396,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
+      "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
       "projectName": "EnglishStorageApplication.Server",
-      "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
+      "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
       "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-      "outputPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\obj\\",
+      "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3411,7 +3411,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -3419,20 +3419,20 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\EnglishApp.Application.csproj": {
-              "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\EnglishApp.Application.csproj"
+            "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj": {
+              "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj"
             },
-            "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj": {
-              "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj"
+            "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+              "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
             },
-            "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
-              "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj"
+            "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj"
             },
-            "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
-              "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj"
+            "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj"
             }
           }
         }
@@ -3450,8 +3450,8 @@
       "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "dependencies": {
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",

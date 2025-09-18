@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cR6kZFVYTFM=",
+  "dgSpecHash": "dbd4OcImjuI=",
   "success": true,
-  "projectFilePath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\EnglishApp.Application.csproj",
+  "projectFilePath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EvGenii\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
@@ -31,15 +31,5 @@
     "C:\\Users\\EvGenii\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.10\\npgsql.entityframeworkcore.postgresql.8.0.10.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\EnglishApp.Application.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Application\\EnglishApp.Application.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

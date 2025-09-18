@@ -7,6 +7,8 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function MyDictPage() {
   const [authorized, setAuthorized] = useState(false);
   const [cards, setCards] = useState([]);
@@ -19,7 +21,7 @@ function MyDictPage() {
         const userId = decodedToken.UserId;
 
         try {
-          const response = await axios.get(`https://localhost:5001/api/UsersCards/${userId}`);
+          const response = await axios.get(`${API_BASE_URL}/api/UsersCards/${userId}`);
 
           if (Array.isArray(response.data)) {
             setCards(response.data);

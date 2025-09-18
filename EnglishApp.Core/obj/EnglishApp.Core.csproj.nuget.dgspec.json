@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj": {}
+    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {}
   },
   "projects": {
-    "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
         "projectName": "EnglishApp.Core",
-        "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\EnglishApp.Core.csproj",
+        "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
         "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\obj\\",
+        "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -48,8 +48,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "imports": [
             "net461",
             "net462",

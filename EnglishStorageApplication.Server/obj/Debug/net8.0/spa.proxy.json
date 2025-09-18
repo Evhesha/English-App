@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\..\\englishstorageapplication.client",
+"WorkingDirectory": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\..\\englishstorageapplication.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

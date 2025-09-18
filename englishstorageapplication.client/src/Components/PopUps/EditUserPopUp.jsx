@@ -2,6 +2,8 @@ import "../PopUps/CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function EditUserPopUp({ id, name: initialName, email: initialEmail, onPut }) {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState(initialName);
@@ -18,7 +20,7 @@ function EditUserPopUp({ id, name: initialName, email: initialEmail, onPut }) {
     event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
     try {
       const response = await axios.put(
-        `https://localhost:5001/api/users/${id}`,
+        `${API_BASE_URL}/api/users/${id}`,
         {
           name,
           email,

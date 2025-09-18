@@ -3,6 +3,8 @@ import styled, { keyframes } from "styled-components";
 import axios from "axios";
 import ExeptionPopUp from "../../Components/PopUps/ExeptionPopUp";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -137,7 +139,7 @@ function SignUp() {
       ...formData,
       [e.target.name]: e.target.value,
     });
-    setShowPopup(false); // Hide popup when input changes
+    setShowPopup(false);
   };
 
   const handleCreate = async (event) => {
@@ -149,7 +151,7 @@ function SignUp() {
 
     try {
       const response = await axios.post(
-        "https://localhost:5001/api/Auth/register",
+        `${API_BASE_URL}/api/Auth/register`,
         {
           name: formData.name,
           email: formData.email,
@@ -157,10 +159,10 @@ function SignUp() {
         }
       );
       console.log("User created:", response.data);
-      // Здесь вы можете добавить логику после успешной регистрации, например, перенаправить пользователя на страницу входа
+      // success registration logic
     } catch (error) {
       console.error("Error creating user:", error);
-      // Здесь вы можете обрабатывать ошибки регистрации
+      // registration error logic
     }
   };
 

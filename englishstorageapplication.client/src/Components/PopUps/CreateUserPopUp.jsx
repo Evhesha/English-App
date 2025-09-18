@@ -10,6 +10,8 @@ function CreateUserPopUp({ onPost }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
+  const API_BASE_URL = import.meta.env.VITE_API_URL;
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
     setError(null); // Сброс ошибки при закрытии/открытии формы
@@ -19,7 +21,7 @@ function CreateUserPopUp({ onPost }) {
     event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
     try {
       const response = await axios.post(
-        "https://localhost:5001/api/Auth/register",
+        `${API_BASE_URL}/api/Auth/register`,
         {
           name,
           email,

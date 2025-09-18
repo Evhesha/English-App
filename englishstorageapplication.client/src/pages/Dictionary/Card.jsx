@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function Card({ id, image, title, text, onDelete, onUpdate }) {
   const [userId, setUserId] = useState(null);
 
@@ -12,7 +14,7 @@ function Card({ id, image, title, text, onDelete, onUpdate }) {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://localhost:5001/api/UsersCards/${id}`);
+      await axios.delete(`${API_BASE_URL}/api/UsersCards/${id}`);
       onDelete(id);
     } catch (error) {
       console.error('Ошибка при удалении карточки:', error);

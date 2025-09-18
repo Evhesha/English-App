@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+hsacPNH/Cc=",
+  "dgSpecHash": "wEGj2b7/q6g=",
   "success": true,
-  "projectFilePath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EvGenii\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.10\\microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
@@ -14,15 +14,5 @@
     "C:\\Users\\EvGenii\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

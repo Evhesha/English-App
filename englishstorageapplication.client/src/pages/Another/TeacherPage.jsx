@@ -15,6 +15,8 @@ import Cookies from "js-cookie";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function TeacherPage() {
   const [activeTab, setActiveTab] = useState("articles");
 
@@ -37,7 +39,7 @@ function TeacherPage() {
         const userId = decodedToken.UserId;
 
         try {
-          const response = await axios.get(`https://localhost:5001/api/Article/${userId}`);
+          const response = await axios.get(`${API_BASE_URL}/api/Article/${userId}`);
 
           if (Array.isArray(response.data)) {
             setArticles(response.data);
@@ -46,6 +48,7 @@ function TeacherPage() {
           }
 
         } catch (error) {
+          
         }
       }
     };

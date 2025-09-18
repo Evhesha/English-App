@@ -2,6 +2,8 @@ import "../PopUps/CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function CheckArticlePopUp() {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState(title);
@@ -22,7 +24,7 @@ function CheckArticlePopUp() {
     event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
     try {
       const response = await axios.put(
-        `https://localhost:5001/api/UsersCards/${id}`,
+        `${API_BASE_URL}/api/UsersCards/${id}`,
         {
           userId: userId,
           nameOfUserCard: name,

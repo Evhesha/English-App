@@ -11,7 +11,10 @@ namespace EnglishStorageApplication.Server.Extensions
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseNpgsql(configuration.GetConnectionString("ApplicationDbContext"));
+                options.UseNpgsql(
+                    configuration.GetConnectionString("ApplicationDbContext"),
+                    b => b.MigrationsAssembly("EnglishApp.DataAccess")
+                );
             });
 
             return services;

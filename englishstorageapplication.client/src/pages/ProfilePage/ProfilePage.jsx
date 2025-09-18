@@ -7,6 +7,9 @@ import React, { useState, useEffect } from "react";
 import EditUserPopUp from "../../Components/PopUps/EditUserPopUp";
 import { useTranslation } from "react-i18next";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+
 function ProfilePage() {
   const [user, setUser] = useState(null);
   const [isAuthorized, setAuthorized] = useState(false);
@@ -19,14 +22,12 @@ function ProfilePage() {
       if (token) {
         // Use jwt-decode to decode the token
         const decodedToken = jwtDecode(token);
-        console.log("Decoded Token:", decodedToken); // Logging decoded token to check its content
         const id = decodedToken.UserId; // Extract id from token
         try {
-          // Request user data from the server
           const response = await axios.get(
-            `https://localhost:5001/api/Users/${id}`
+            `${API_BASE_URL}/api/Users/${id}`
           );
-          console.log("User data:", response.data); // Logging response data to check its structure
+          console.log("User data:", response.data);
           setUser(response.data);
           setAuthorized(true);
         } catch (error) {
@@ -73,12 +74,8 @@ function ProfilePage() {
           )}
         </div>
         <div className="profile-activity">
-          <h2>Activity</h2>
-          {/* Здесь будет размещаться календарь посещаемости */}
-          <div className="activity-calendar">
-            {/* Временная демонстрация */}
-            <p>Calendar will be here</p>
-          </div>
+          <h2>User data</h2>
+          
         </div>
       </div>
     </>

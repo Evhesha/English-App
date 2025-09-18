@@ -14,8 +14,8 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=/.nuget/fallbackpackages
     volumes:
-      - C:\Medvedskii\BNTU\EnglishStorageApplication\EnglishStorageApplication.Server:/app:rw
-      - C:\Medvedskii\BNTU\EnglishStorageApplication:/src:rw
+      - C:\Users\EvGenii\Source\Repos\English-App\EnglishStorageApplication.Server:/app:rw
+      - C:\Users\EvGenii\Source\Repos\English-App:/src:rw
       - C:\Users\EvGenii\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\EvGenii\.nuget\packages:/.nuget/packages:ro
       - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/.nuget/fallbackpackages:ro

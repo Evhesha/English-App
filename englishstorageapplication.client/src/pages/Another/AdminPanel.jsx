@@ -8,6 +8,8 @@ import RoleDropdown from "../../Components/Dropdown/RoleDropdown";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function AdminPanel() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,7 +38,7 @@ function AdminPanel() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("https://localhost:5001/api/users");
+        const response = await axios.get(`${API_BASE_URL}/api/users`);
         setUsers(response.data);
         setIsLoading(false);
         setHasError(false); // сбрасываем ошибку при успешной загрузке
@@ -57,7 +59,7 @@ function AdminPanel() {
     const timer = setTimeout(() => {
       if (isLoading) {
         setDelayCompleted(true);
-        setHasError(true); // Устанавливаем ошибку, если загрузка занимает слишком много времени
+        setHasError(true); 
         console.log("Загрузка данных занимает слишком много времени.");
       }
     }, 5000);

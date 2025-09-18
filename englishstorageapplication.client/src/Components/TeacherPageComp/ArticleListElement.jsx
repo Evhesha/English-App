@@ -2,13 +2,15 @@ import axios from "axios";
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function ArticleListElement({ id, name, onDelete }) {
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Are you sure that you want to delete the article?");
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://localhost:5001/api/Article/${id}`); // Измени URL на правильный
+      await axios.delete(`${API_BASE_URL}/api/Article/${id}`); // Измени URL на правильный
       onDelete(id);
     } catch (error) {
       console.error('Ошибка при удалении статьи:', error);
