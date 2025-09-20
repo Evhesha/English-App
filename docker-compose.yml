@@ -1,24 +1,5 @@
 version: "3.9"
 services:
-  # englishstorageapplication.server:
-  #   build:
-  #     context: .
-  #     dockerfile: EnglishStorageApplication.Server/Dockerfile
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_HTTP_PORTS=5000
-  #     - ASPNETCORE_HTTPS_PORTS=5001
-  #   depends_on:
-  #     - postgres
-  #   ports:
-  #     - "5000:5000"
-  #     - "5001:5001"
-  #   volumes:
-  #     - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-  #     - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-  #   networks:
-  #     - bridge_network
-
   pgadmin:
     image: dpage/pgadmin4
     environment:

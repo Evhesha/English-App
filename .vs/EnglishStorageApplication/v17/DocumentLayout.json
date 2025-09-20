@@ -3,6 +3,29 @@
   "WorkspaceRootPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78925A44-3F77-4EDE-871B-80641C906798}|docker-compose.dcproj|c:\\users\\evgenii\\source\\repos\\english-app\\docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78925A44-3F77-4EDE-871B-80641C906798}|docker-compose.dcproj|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78925A44-3F77-4EDE-871B-80641C906798}|docker-compose.dcproj|c:\\users\\evgenii\\source\\repos\\english-app\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78925A44-3F77-4EDE-871B-80641C906798}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.client\\app.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{ED12A8E5-2755-4815-8992-F49371511C4C}|englishstorageapplication.client\\App.client.esproj|solutionrelative:englishstorageapplication.client\\app.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -29,14 +52,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\englishstorageapplication.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\englishstorageapplication.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78925A44-3F77-4EDE-871B-80641C906798}|docker-compose.dcproj|c:\\users\\evgenii\\source\\repos\\english-app\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{78925A44-3F77-4EDE-871B-80641C906798}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishapp.dataaccess\\migrations\\20250915184117_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,9 +94,6 @@
       "RelativeMoniker": "D:0:0:{F597B6D9-51DE-4C3B-A02A-B22B68AA700F}|EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj|solutionrelative:englishapp.dataaccess\\migrations\\20241102152721_adduseractivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -110,10 +122,6 @@
       "RelativeMoniker": "D:0:0:{78925A44-3F77-4EDE-871B-80641C906798}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\controllers\\adminrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\controllers\\adminrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -136,10 +144,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A5D0D1FF-4C21-4AAF-925B-4BD4DCEC4801}|EnglishApp.Application\\EnglishApp.Application.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishapp.application\\appservices\\adminroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5D0D1FF-4C21-4AAF-925B-4BD4DCEC4801}|EnglishApp.Application\\EnglishApp.Application.csproj|solutionrelative:englishapp.application\\appservices\\adminroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|c:\\users\\evgenii\\source\\repos\\english-app\\englishstorageapplication.server\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{37535A13-F29B-485B-A085-C65697C08800}|EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj|solutionrelative:englishstorageapplication.server\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EvGenii\\source\\repos\\English-App\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -529,7 +533,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -545,59 +549,97 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.client",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\englishstorageapplication.client\\App.client.esproj",
-              "RelativeDocumentMoniker": "englishstorageapplication.client\\App.client.esproj",
-              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\englishstorageapplication.client\\App.client.esproj",
-              "RelativeToolTip": "englishstorageapplication.client\\App.client.esproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-18T19:17:30.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EnglishApp.Application",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
-              "RelativeDocumentMoniker": "EnglishApp.Application\\EnglishApp.Application.csproj",
-              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
-              "RelativeToolTip": "EnglishApp.Application\\EnglishApp.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-18T19:17:22.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EnglishApp.Core",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
-              "RelativeDocumentMoniker": "EnglishApp.Core\\EnglishApp.Core.csproj",
-              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
-              "RelativeToolTip": "EnglishApp.Core\\EnglishApp.Core.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-18T19:17:16.627Z",
+              "Title": "docker-compose.override.yml",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\docker-compose.override.yml",
+              "RelativeDocumentMoniker": "docker-compose.override.yml",
+              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\docker-compose.override.yml",
+              "RelativeToolTip": "docker-compose.override.yml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-09-19T14:06:19.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EnglishApp.DataAccess",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
-              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
-              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
-              "RelativeToolTip": "EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-18T19:17:08.367Z",
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-12-15T11:17:44.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20241022155504_postgresql.container_migration_915.cs",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
+              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
+              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
+              "RelativeToolTip": "EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T19:27:04.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Microsoft.VisualStudio.Docker.Compose.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
+              "ViewState": "AgIAALABAAAAAAAAAAAvwLYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-09-08T19:20:58.171Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Dockerfile",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Dockerfile",
+              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Dockerfile",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Dockerfile",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-09T12:27:48.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\appsettings.json",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-19T07:38:57.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Program.cs",
+              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Program.cs",
+              "RelativeToolTip": "EnglishStorageApplication.Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T11:08:38.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "EnglishApp.Infrastructure",
               "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
               "RelativeDocumentMoniker": "EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
@@ -610,44 +652,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-12-15T11:17:44.86Z",
+              "DocumentIndex": 6,
+              "Title": "App.client",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\englishstorageapplication.client\\App.client.esproj",
+              "RelativeDocumentMoniker": "englishstorageapplication.client\\App.client.esproj",
+              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\englishstorageapplication.client\\App.client.esproj",
+              "RelativeToolTip": "englishstorageapplication.client\\App.client.esproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-18T19:17:30.655Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20241022155504_postgresql.container_migration_915.cs",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
-              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
-              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
-              "RelativeToolTip": "EnglishApp.DataAccess\\Migrations\\20241022155504_postgresql.container_migration_915.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T19:27:04.155Z"
+              "DocumentIndex": 9,
+              "Title": "EnglishApp.DataAccess",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
+              "RelativeDocumentMoniker": "EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
+              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
+              "RelativeToolTip": "EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-18T19:17:08.367Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\appsettings.json",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-19T07:38:57.75Z"
+              "Title": "EnglishApp.Core",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
+              "RelativeDocumentMoniker": "EnglishApp.Core\\EnglishApp.Core.csproj",
+              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
+              "RelativeToolTip": "EnglishApp.Core\\EnglishApp.Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-18T19:17:16.627Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 7,
+              "Title": "EnglishApp.Application",
+              "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
+              "RelativeDocumentMoniker": "EnglishApp.Application\\EnglishApp.Application.csproj",
+              "ToolTip": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
+              "RelativeToolTip": "EnglishApp.Application\\EnglishApp.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-18T19:17:22.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "20241022151703_init.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241022151703_init.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20241022151703_init.cs",
@@ -659,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "EnglishStorageApplication.Server.csproj",
               "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
@@ -672,7 +729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "EnglishApp.Tests.csproj",
               "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
               "RelativeDocumentMoniker": "EnglishApp.Tests\\EnglishApp.Tests.csproj",
@@ -685,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "ArticleController.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\ArticleController.cs",
@@ -697,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "20250915184117_InitialMigration.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20250915184117_InitialMigration.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20250915184117_InitialMigration.cs",
@@ -709,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\ApplicationDbContext.cs",
@@ -721,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "DatabaseExtensions.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Extensions\\DatabaseExtensions.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\DatabaseExtensions.cs",
@@ -733,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "20241124090825_AddUserStudyResults.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241124090825_AddUserStudyResults.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20241124090825_AddUserStudyResults.cs",
@@ -745,7 +802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "20241024094347_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241024094347_InitialCreate.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20241024094347_InitialCreate.cs",
@@ -757,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "20241030140055_AddUserCards.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241030140055_AddUserCards.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20241030140055_AddUserCards.cs",
@@ -769,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "20241102152721_AddUserActivity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Migrations\\20241102152721_AddUserActivity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Migrations\\20241102152721_AddUserActivity.cs",
@@ -781,19 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Microsoft.VisualStudio.Docker.Compose.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Sdks\\Microsoft.Docker.Sdk\\build\\Microsoft.VisualStudio.Docker.Compose.targets",
-              "ViewState": "AgIAALIBAAAAAAAAAAAQwLcBAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-09-08T19:20:58.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "AdminRoleEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\AdminRoleEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\AdminRoleEntity.cs",
@@ -805,7 +850,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "AdminRole.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\AdminRole.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\AdminRole.cs",
@@ -817,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "OptionConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Configurations\\OptionConfiguration.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Configurations\\OptionConfiguration.cs",
@@ -829,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "UsersStudyResultsResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\UsersStudyResultsResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersStudyResultsResponse.cs",
@@ -841,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "UsersStudyResultsController.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Controllers\\UsersStudyResultsController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersStudyResultsController.cs",
@@ -853,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersController.cs",
@@ -865,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "docker-compose.dcproj",
               "DocumentMoniker": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\docker-compose.dcproj",
               "RelativeDocumentMoniker": "docker-compose.dcproj",
@@ -878,7 +923,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "AdminRoleController.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Controllers\\AdminRoleController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\AdminRoleController.cs",
@@ -890,7 +935,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\AuthenticationService.cs",
@@ -902,7 +947,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "ArticleService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\ArticleService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\ArticleService.cs",
@@ -914,19 +959,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Program.cs",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Program.cs",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T11:08:38.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "QuestionService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\QuestionService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\QuestionService.cs",
@@ -938,7 +971,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "AdminRoleService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\AdminRoleService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\AdminRoleService.cs",
@@ -950,19 +983,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Dockerfile",
-              "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Dockerfile",
-              "ToolTip": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Dockerfile",
-              "RelativeToolTip": "EnglishStorageApplication.Server\\Dockerfile",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBcAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-09T12:27:48.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\AuthController.cs",
@@ -974,7 +995,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "IOptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Option\\IOptionRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Option\\IOptionRepository.cs",
@@ -986,7 +1007,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "UsersActivitiesController.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Controllers\\UsersActivitiesController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersActivitiesController.cs",
@@ -998,7 +1019,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "OptionService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\OptionService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\OptionService.cs",
@@ -1010,7 +1031,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "UsersCardsController.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Controllers\\UsersCardsController.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Controllers\\UsersCardsController.cs",
@@ -1022,7 +1043,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "ITestRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Test\\ITestRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Test\\ITestRepository.cs",
@@ -1034,7 +1055,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "IOptionService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Option\\IOptionService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Option\\IOptionService.cs",
@@ -1046,7 +1067,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "ITestService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Test\\ITestService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Test\\ITestService.cs",
@@ -1058,7 +1079,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -1070,7 +1091,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "TestRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\TestRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\TestRepository.cs",
@@ -1082,7 +1103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "OptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\OptionRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\OptionRepository.cs",
@@ -1094,7 +1115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "QuestionRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\QuestionRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\QuestionRepository.cs",
@@ -1106,7 +1127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "UsersRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersRepository.cs",
@@ -1118,7 +1139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "OptionEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\OptionEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\OptionEntity.cs",
@@ -1130,7 +1151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "TestEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\TestEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\TestEntity.cs",
@@ -1142,7 +1163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "QuestionEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\QuestionEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\QuestionEntity.cs",
@@ -1154,7 +1175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "UsersStudyResultsRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\UsersStudyResultsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersStudyResultsRepository.cs",
@@ -1166,7 +1187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "UsersCardsRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\UsersCardsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersCardsRepository.cs",
@@ -1178,7 +1199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "UsersActivitiesRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\UsersActivitiesRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\UsersActivitiesRepository.cs",
@@ -1190,7 +1211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "TeacherRoleSevice.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\TeacherRoleSevice.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\TeacherRoleSevice.cs",
@@ -1202,7 +1223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\UserService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserService.cs",
@@ -1214,7 +1235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "TeacherRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\TeacherRoleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\TeacherRoleRepository.cs",
@@ -1226,7 +1247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "ArticleRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\ArticleRepository.cs",
@@ -1238,7 +1259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "AdminRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Repositories\\AdminRoleRepository.cs",
@@ -1250,7 +1271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "UserStudyResultService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\UserStudyResultService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserStudyResultService.cs",
@@ -1262,7 +1283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "UserCardService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\UserCardService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserCardService.cs",
@@ -1274,7 +1295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "UserActivityService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\AppServices\\UserActivityService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Application\\AppServices\\UserActivityService.cs",
@@ -1286,7 +1307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "UserCardEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\UserCardEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserCardEntity.cs",
@@ -1298,7 +1319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "AuthenticationExtensions.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\AuthenticationExtensions.cs",
@@ -1310,7 +1331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "CorsExtensions.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Extensions\\CorsExtensions.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\CorsExtensions.cs",
@@ -1322,7 +1343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\Option.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Option.cs",
@@ -1334,7 +1355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\Question.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Question.cs",
@@ -1346,7 +1367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "FileLoggerExtensions.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Extensions\\FileLoggerExtensions.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Extensions\\FileLoggerExtensions.cs",
@@ -1358,7 +1379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "UserStudyResultEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\UserStudyResultEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserStudyResultEntity.cs",
@@ -1370,7 +1391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "UserEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\UserEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserEntity.cs",
@@ -1382,7 +1403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "UserActivityEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\UserActivityEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\UserActivityEntity.cs",
@@ -1394,7 +1415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "TeacherRoleEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\TeacherRoleEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\TeacherRoleEntity.cs",
@@ -1406,7 +1427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "ArticleEntity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Entities\\ArticleEntity.cs",
@@ -1418,7 +1439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "Test.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\Test.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Test.cs",
@@ -1430,7 +1451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "TeacherRole.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\TeacherRole.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\TeacherRole.cs",
@@ -1442,7 +1463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "Article.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\Article.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\Article.cs",
@@ -1454,7 +1475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\User.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\User.cs",
@@ -1466,7 +1487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "UserCard.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\UserCard.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\UserCard.cs",
@@ -1478,7 +1499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "UserStudyResult.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\UserStudyResult.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\UserStudyResult.cs",
@@ -1490,7 +1511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "UserActivity.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Models\\UserActivity.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Models\\UserActivity.cs",
@@ -1502,7 +1523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Auth\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Auth\\IPasswordHasher.cs",
@@ -1514,7 +1535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "IArticleService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Article\\IArticleService.cs",
@@ -1526,7 +1547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "IArticleRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Article\\IArticleRepository.cs",
@@ -1538,7 +1559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "FileLogger.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Logging\\FileLogger.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Logging\\FileLogger.cs",
@@ -1550,7 +1571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "FileLoggerProvider.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Logging\\FileLoggerProvider.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Logging\\FileLoggerProvider.cs",
@@ -1562,7 +1583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "TestConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Configurations\\TestConfiguration.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Configurations\\TestConfiguration.cs",
@@ -1574,7 +1595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "QuestionConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\Configurations\\QuestionConfiguration.cs",
               "RelativeDocumentMoniker": "EnglishApp.DataAccess\\Configurations\\QuestionConfiguration.cs",
@@ -1586,7 +1607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "IAdminRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleRepository.cs",
@@ -1598,7 +1619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "IAdminRoleService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\AdminRole\\IAdminRoleService.cs",
@@ -1610,7 +1631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "RegisterUserRequest.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\Users\\RegisterUserRequest.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\Users\\RegisterUserRequest.cs",
@@ -1622,7 +1643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "LoginUserRequest.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\Users\\LoginUserRequest.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\Users\\LoginUserRequest.cs",
@@ -1634,7 +1655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "ArticleResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\ArticleResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\ArticleResponse.cs",
@@ -1646,7 +1667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "logger.txt",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\logger.txt",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\logger.txt",
@@ -1658,7 +1679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "EnglishStorageApplication.Server.http",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.http",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\EnglishStorageApplication.Server.http",
@@ -1670,7 +1691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "UsersCardsResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersCardsResponse.cs",
@@ -1682,7 +1703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "UsersResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UsersResponse.cs",
@@ -1694,7 +1715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "ITeacherRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleRepository.cs",
@@ -1706,7 +1727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "IAuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\Auth\\IAuthenticationService.cs",
@@ -1718,7 +1739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "TestResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\TestResponse.cs",
@@ -1730,7 +1751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "TeacherRoleResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\TeacherRoleResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\TeacherRoleResponse.cs",
@@ -1742,7 +1763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 100,
               "Title": "AdminRoleResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\AdminRoleResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\AdminRoleResponse.cs",
@@ -1754,7 +1775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 102,
               "Title": "IUsersRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\User\\IUsersRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\User\\IUsersRepository.cs",
@@ -1766,7 +1787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 101,
               "Title": "ITeacherRoleSevice.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleSevice.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\TeacherRole\\ITeacherRoleSevice.cs",
@@ -1778,7 +1799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 103,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\User\\IUserService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\User\\IUserService.cs",
@@ -1790,7 +1811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 133,
               "Title": "launch.json",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\.vscode\\launch.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\englishstorageapplication.client\\.vscode\\launch.json",
@@ -1802,7 +1823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 118,
               "Title": "migration.sql",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\migration.sql",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\migration.sql",
@@ -1813,7 +1834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 116,
               "Title": "ServiceExtensionsTests.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\ServiceExtensionsTests.cs",
               "RelativeDocumentMoniker": "EnglishApp.Tests\\ServiceExtensionsTests.cs",
@@ -1825,7 +1846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 117,
               "Title": "CorsExtensionsTests.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\CorsExtensionsTests.cs",
               "RelativeDocumentMoniker": "EnglishApp.Tests\\CorsExtensionsTests.cs",
@@ -1837,7 +1858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 119,
               "Title": "UsersEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Endpoints\\UsersEndpoints.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Endpoints\\UsersEndpoints.cs",
@@ -1849,7 +1870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 120,
               "Title": "IUsersCardsRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\UserCard\\IUsersCardsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserCard\\IUsersCardsRepository.cs",
@@ -1861,7 +1882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 121,
               "Title": "IUserCardService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\UserCard\\IUserCardService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserCard\\IUserCardService.cs",
@@ -1873,7 +1894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 122,
               "Title": "IUsersStudyResultsRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\UserStudyResult\\IUsersStudyResultsRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserStudyResult\\IUsersStudyResultsRepository.cs",
@@ -1885,7 +1906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 123,
               "Title": "IUserStudyResultService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\UserStudyResult\\IUserStudyResultService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserStudyResult\\IUserStudyResultService.cs",
@@ -1897,7 +1918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 124,
               "Title": "IUsersActivitiesRepository.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\UserActivity\\IUsersActivitiesRepository.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserActivity\\IUsersActivitiesRepository.cs",
@@ -1909,7 +1930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 125,
               "Title": "IUserActivityService.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\Abstractions\\UserActivity\\IUserActivityService.cs",
               "RelativeDocumentMoniker": "EnglishApp.Core\\Abstractions\\UserActivity\\IUserActivityService.cs",
@@ -1921,7 +1942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 115,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Role.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\Role.cs",
@@ -1933,7 +1954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 104,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\UserRole.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishApp.Core\\Models\\UserRole.cs",
@@ -1944,7 +1965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 126,
               "Title": "CHANGELOG.md",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\CHANGELOG.md",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\CHANGELOG.md",
@@ -1956,7 +1977,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 127,
               "Title": "UserActivityResponse.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\Contracts\\UserActivityResponse.cs",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\Contracts\\UserActivityResponse.cs",
@@ -1968,7 +1989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 105,
               "Title": "EnglishStorageApplication.Server.csproj.user",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj.user",
               "RelativeDocumentMoniker": "EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj.user",
@@ -1980,7 +2001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 106,
               "Title": "migration.sql",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\migration.sql",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\migration.sql",
@@ -1991,7 +2012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 128,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\launchSettings.json",
               "RelativeDocumentMoniker": "launchSettings.json",
@@ -2003,7 +2024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 108,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Repositories\\UserRepository.cs",
@@ -2015,7 +2036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 107,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\ApplicationDbContext.cs",
@@ -2027,7 +2048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 109,
               "Title": "IUsersController.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Services\\Interfaces\\IUsersController.cs",
@@ -2039,7 +2060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 110,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Models\\User.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Models\\User.cs",
@@ -2051,7 +2072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 111,
               "Title": "UserEntity.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\UserEntites\\UserEntity.cs",
@@ -2063,7 +2084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 112,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "C:\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Medvedskii\\BNTU\\EnglishStorageApplication\\EnglishStorageApplication.Server\\Data\\Configurations\\UserConfiguration.cs",
@@ -2075,7 +2096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 129,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\englishstorageapplication.client\\src\\main.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\main.jsx",
@@ -2087,7 +2108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 130,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\englishstorageapplication.client\\index.html",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\index.html",
@@ -2099,7 +2120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 131,
               "Title": "react.svg",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\englishstorageapplication.client\\src\\assets\\react.svg",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\assets\\react.svg",
@@ -2111,7 +2132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 132,
               "Title": "App.jsx",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\englishstorageapplication.client\\src\\App.jsx",
               "RelativeDocumentMoniker": "englishstorageapplication.client\\src\\App.jsx",
@@ -2123,7 +2144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 114,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "EnglishApp.Infrastructure\\PasswordHasher.cs",
@@ -2135,7 +2156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 113,
               "Title": "JwtProvider.cs",
               "DocumentMoniker": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\JwtProvider.cs",
               "RelativeDocumentMoniker": "EnglishApp.Infrastructure\\JwtProvider.cs",

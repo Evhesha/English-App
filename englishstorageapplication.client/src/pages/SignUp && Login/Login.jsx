@@ -123,6 +123,10 @@ function Login() {
 
   const handleLogin = async (event) => {
     try {
+       if (!API_BASE_URL) {
+    console.error('API_BASE_URL is undefined. Check your .env file');
+    return;
+       }
       const response = await axios.post(
         `${API_BASE_URL}/api/Auth/login`,
         {

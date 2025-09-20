@@ -3,13 +3,15 @@ import RoleDropdown from '../Dropdown/RoleDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function ListGroupElement({ id, name, email, onDelete, onUpdate }) {
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Are you sure that you want to delete the user?");
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://localhost:5001/api/users/${id}`);
+      await axios.delete(`${API_BASE_URL}/api/users/${id}`);
       onDelete(id);
     } catch (error) {
       console.error('Ошибка при удалении пользователя:', error);
