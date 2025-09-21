@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj": {}
+    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj": {
+    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
+        "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
         "projectName": "EnglishApp.Application",
-        "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
+        "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj",
         "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\obj\\",
+        "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
               },
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj"
               },
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj"
               }
             }
           }
@@ -76,18 +76,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
         "projectName": "EnglishApp.Core",
-        "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
+        "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
         "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\obj\\",
+        "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -142,18 +142,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
+    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
         "projectName": "EnglishApp.DataAccess",
-        "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
+        "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj",
         "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -175,8 +175,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
               }
             }
           }
@@ -236,18 +236,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
+    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
         "projectName": "EnglishApp.Infrastructure",
-        "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -269,8 +269,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
               }
             }
           }
@@ -316,18 +316,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj": {
+    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
         "projectName": "EnglishApp.Tests",
-        "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
+        "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
         "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\obj\\",
+        "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -349,8 +349,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj"
               }
             }
           }
@@ -406,18 +406,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
+    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
+        "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
         "projectName": "EnglishStorageApplication.Server",
-        "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
+        "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
         "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\obj\\",
+        "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -439,17 +439,17 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Application\\EnglishApp.Application.csproj"
               },
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj"
               },
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.DataAccess\\EnglishApp.DataAccess.csproj"
               },
-              "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj"
+              "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Infrastructure\\EnglishApp.Infrastructure.csproj"
               }
             }
           }
@@ -520,7 +520,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
