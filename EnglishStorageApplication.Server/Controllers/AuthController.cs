@@ -1,7 +1,5 @@
 ﻿using EnglishApp.Application.DTOs.UserDTOs;
 using Microsoft.AspNetCore.Mvc;
-using EnglishStorageApplication.Server.Contracts.Users;
-using Microsoft.AspNetCore.Identity.Data;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 
@@ -49,7 +47,7 @@ namespace EnglishStorageApplication.Server.Controllers
         {
             var token = await _authService.Login(loginDto.Email, loginDto.Password, cancellationToken);
             HttpContext.Response.Cookies.Append("tasty-cookies", token);
-            return Ok();
+            return Ok(new {token});
         }
     }
 }
