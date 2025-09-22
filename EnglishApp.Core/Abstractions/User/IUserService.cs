@@ -1,13 +1,10 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.User;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IUserService
 {
-    public interface IUserService
-    {
-        Task<Guid> CreateUser(User user);
-        Task<Guid> DeleteUser(Guid id);
-        Task<List<User>> GetAllUsers();
-        Task<List<User>> GetUser(Guid id);
-        Task<Guid> UpdateUser(Guid id, string name, string email, string password);
-    }
+    Task<List<EnglishStorageApplication.EnglishApp.Core.Models.User>> GetAllUsers(CancellationToken  cancellationToken);
+    Task<EnglishStorageApplication.EnglishApp.Core.Models.User?> GetUserById(Guid id, CancellationToken  cancellationToken);
+    Task<Guid> CreateUser(EnglishStorageApplication.EnglishApp.Core.Models.User user, CancellationToken cancellationToken);
+    Task<Guid> UpdateUser(EnglishStorageApplication.EnglishApp.Core.Models.User user, CancellationToken cancellationToken);
+    Task<Guid> DeleteUser(Guid id, CancellationToken cancellationToken);
 }

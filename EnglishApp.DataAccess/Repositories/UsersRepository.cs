@@ -1,9 +1,9 @@
-﻿using EnglishApp.DataAccess.Entities;
+﻿using EnglishApp.Core.Abstractions.User;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
-namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
+namespace EnglishApp.DataAccess.Repositories
 {
     public class UsersRepository : IUsersRepository
     {
@@ -14,88 +14,65 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
             _context = context;
         }
 
-        public async Task<List<User>> Get()
+        public async Task<List<User>> GetUsersAsync(CancellationToken cancellationToken)
         {
-            var userEntityes = await _context.Users
+            return await _context.Users
                 .AsNoTracking()
-                .ToListAsync();
-
-            var users = userEntityes
-                .Select(x => User.Create(x.Id, x.Name, x.Email, x.Password).User)
-                .ToList();
-
-            return users;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<List<User>> GetUser(Guid id)
+        public async Task<User?> GetUserByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            var userEntities = await _context.Users
+            return await _context.Users
                 .AsNoTracking()
-                .Where(x => x.Id == id)
-                .ToListAsync();
-
-            var user = userEntities
-                .Select(x => User.Create(x.Id, x.Name, x.Email, x.Password).User)
-                .ToList();
-
-            return user;
+                .SingleOrDefaultAsync(u => u.Id == id, cancellationToken);
         }
 
-        public async Task<User> GetByEmail(string email)
+        public async Task<User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken)
         {
-            var userEntity = await _context.Users
+            return await _context.Users
                 .AsNoTracking()
-                .FirstOrDefaultAsync(u => u.Email == email);
-
-            if (userEntity == null)
-                throw new Exception("User not found");
-
-            var (user, error) = User.Create(userEntity.Id, userEntity.Name, userEntity.Email, userEntity.Password);
-
-            if (!string.IsNullOrEmpty(error))
-                throw new Exception(error);
-
-            return user;
+                .SingleOrDefaultAsync(u => u.Email == email, cancellationToken);
         }
 
-        public async Task<Guid> Create(User user)
+        public async Task<Guid> CreateUserAsync(User user, CancellationToken cancellationToken)
         {
-            var userEntity = new UserEntity
+            var userEntity = new User
             {
                 Id = user.Id,
                 Name = user.Name,
                 Email = user.Email,
-                Password = user.Password,
+                PasswordHash = user.PasswordHash,
             };
 
-            await _context.Users.AddAsync(userEntity);
-            await _context.SaveChangesAsync();
+            await _context.Users.AddAsync(userEntity, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
             return userEntity.Id;
         }
 
-        public async Task<Guid> Update(Guid id, string name, string email, string password)
+        public async Task<Guid> UpdateUserAsync(User user, CancellationToken cancellationToken)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
+            var userEntity = await _context.Users.FindAsync(user.Id);
+            if (userEntity != null)
             {
-                user.Name = name;
-                user.Email = email;
-                user.Password = password;
-                await _context.SaveChangesAsync();
+                userEntity.Name = user.Name;
+                userEntity.Email = user.Email;
+                userEntity.PasswordHash = user.PasswordHash;
+                await _context.SaveChangesAsync(cancellationToken);
             }
-            return id;
+            
+            return userEntity.Id;
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteUserAsync(Guid id, CancellationToken cancellationToken)
         {
             var user = await _context.Users.FindAsync(id);
             if (user != null)
             {
                 _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
             return id;
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
+﻿using EnglishApp.Core.Abstractions.User;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishStorageApplication.EnglishApp.Application.AppServices
@@ -12,29 +13,29 @@ namespace EnglishStorageApplication.EnglishApp.Application.AppServices
             _usersRepository = usersRepository;
         }
 
-        public async Task<List<User>> GetAllUsers()
+        public async Task<List<User>> GetAllUsers(CancellationToken  cancellationToken)
         {
-            return await _usersRepository.Get();
+            return await _usersRepository.GetUsersAsync(cancellationToken);
         }
 
-        public async Task<List<User>> GetUser(Guid id)
+        public async Task<User?> GetUserById(Guid id, CancellationToken  cancellationToken)
         {
-            return await _usersRepository.GetUser(id);
+            return await _usersRepository.GetUserByIdAsync(id, cancellationToken);
         }
 
-        public async Task<Guid> CreateUser(User user)
+        public async Task<Guid> CreateUser(User user, CancellationToken cancellationToken)
         {
-            return await _usersRepository.Create(user);
+            return await _usersRepository.CreateUserAsync(user, cancellationToken);
         }
 
-        public async Task<Guid> UpdateUser(Guid id, string name, string email, string password)
+        public async Task<Guid> UpdateUser(User user, CancellationToken cancellationToken)
         {
-            return await _usersRepository.Update(id, name, email, password);
+            return await _usersRepository.UpdateUserAsync(user, cancellationToken);
         }
 
-        public async Task<Guid> DeleteUser(Guid id)
+        public async Task<Guid> DeleteUser(Guid id, CancellationToken cancellationToken)
         {
-            return await _usersRepository.Delete(id);
+            return await _usersRepository.DeleteUserAsync(id, cancellationToken);
         }
     }
 }

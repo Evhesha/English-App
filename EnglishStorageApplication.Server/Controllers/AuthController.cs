@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EnglishApp.Application.DTOs.UserDTOs;
+using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.Server.Contracts.Users;
 using Microsoft.AspNetCore.Identity.Data;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -9,45 +11,45 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthenticationService _service;
+        private readonly IAuthenticationService _authService;
 
-        public AuthController(IAuthenticationService authService)
+        public AuthController(IAuthenticationService authAuthService)
         {
-            _service = authService;
+            _authService = authAuthService;
         }
-
+        
         [HttpPost("register")]
-        public async Task<ActionResult> Register([FromBody] RegisterUserRequest request)
+        public async Task<ActionResult> Register(
+            CreateUserDto createUserDto,
+            CancellationToken cancellationToken)
         {
-            var (user, error) = EnglishStorageApplication.EnglishApp.Core.Models.User.Create(
-                Guid.NewGuid(),
-                request.Name,
-                request.Email,
-                request.Password
-            );
-
-            if (!string.IsNullOrEmpty(error))
+            var user = new User
             {
-                return BadRequest(error);
-            }
+                Id = Guid.NewGuid(),
+                Name = createUserDto.Name,
+                Email = createUserDto.Email,
+            };
 
-            var userId = await _service.Register(user.Name, user.Email, user.Password);
-            return Ok(new { UserId = userId });
+            await _authService.Register(createUserDto.Password, user, cancellationToken);
+
+            var userDto = new UserDto
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Email = user.Email
+            };
+
+            return Ok(userDto);
         }
-
 
         [HttpPost("login")]
-        public async Task<ActionResult<string>> Login([FromBody] LoginRequest request)
+        public async Task<ActionResult<string>> Login(
+            LoginUserDto loginDto,
+            CancellationToken cancellationToken)
         {
-            try
-            {
-                var token = await _service.Login(request.Email, request.Password);
-                return Ok(new { Token = token });
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Unauthorized("Invalid credentials");
-            }
+            var token = await _authService.Login(loginDto.Email, loginDto.Password, cancellationToken);
+            HttpContext.Response.Cookies.Append("tasty-cookies", token);
+            return Ok();
         }
     }
 }
