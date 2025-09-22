@@ -1,5 +1,6 @@
 ﻿using EnglishApp.DataAccess.Configurations;
 using EnglishApp.DataAccess.Entities;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnglishStorageApplication.EnglishApp.DataAccess
@@ -15,7 +16,7 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess
         public DbSet<TeacherRoleEntity> TeacherRoles { get; set; }
         public DbSet<AdminRoleEntity> AdminRoles { get; set; }
 
-        public DbSet<UserEntity> Users { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<UserCardEntity> UsersCards { get; set; }
         public DbSet<UserActivityEntity> UsersActivities { get; set; }
         public DbSet<UserStudyResultEntity> UsersStudyResults { get; set; }

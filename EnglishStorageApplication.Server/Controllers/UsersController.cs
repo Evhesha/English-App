@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EnglishApp.Application.DTOs.UserDTOs;
+using EnglishApp.Core.Abstractions.User;
+using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishStorageApplication.Server.Contracts;
 using Microsoft.AspNetCore.Cors;
 
@@ -9,66 +12,79 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly IUserService _service;
+        private readonly IUserService _userService;
+        private readonly IPasswordHasher _passwordHasher;
 
-        public UsersController(IUserService userService)
+        public UsersController(
+            IUserService userUserService,
+            IPasswordHasher passwordHasher)
         {
-            _service = userService;
+            _userService = userUserService;
+            _passwordHasher = passwordHasher;
         }
 
         [HttpGet]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UsersResponse>>> GetUsers()
+        public async Task<ActionResult<List<UsersResponse>>> GetUsers(CancellationToken cancellationToken)
         {
-            var users = await _service.GetAllUsers();
-            var response = users.Select(u => new UsersResponse(u.Id, u.Name, u.Email, u.Password));
-            return Ok(response);
+            var users = await _userService.GetAllUsers(cancellationToken);
+           
+            return Ok(users);
         }
 
         [HttpGet("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UserActivityResponse>>> GetUser(Guid id)
+        public async Task<ActionResult> GetUserById(
+            Guid id,
+            CancellationToken cancellationToken)
         {
-            var user = await _service.GetUser(id);
-            var response = user.Select(u => new UsersResponse(u.Id, u.Name, u.Email, u.Password));
-            return Ok(response);
+            var user = await _userService.GetUserById(id, cancellationToken);
+            return Ok(user);
         }
 
         [HttpPost]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<Guid>> CreateUser([FromBody] UsersRequest request)
+        public async Task<ActionResult<Guid>> CreateUser(
+            [FromBody] CreateUserDto createUserDto,
+            CancellationToken cansellationToken)
         {
-            var (user, error) = EnglishStorageApplication.EnglishApp.Core.Models.User.Create(
-                Guid.NewGuid(),
-                request.name,
-                request.email,
-                request.password
-            );
-
-            if (!string.IsNullOrEmpty(error))
+            var user = new User
             {
-                return BadRequest(error);
-            }
+                Id = Guid.NewGuid(),
+                Name = createUserDto.Name,
+                Email = createUserDto.Email,
+                PasswordHash = _passwordHasher.Generate(createUserDto.Password)
+            };
 
-            var userId = await _service.CreateUser(user);
+            var userId = await _userService.CreateUser(user, cansellationToken);
             return Ok(userId);
         }
-
-
+        
         [HttpPut("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UsersRequest request)
+        public async Task<IActionResult> UpdateUser(
+            Guid id,
+            [FromBody] UpdateUserDto updateUserDto,
+            CancellationToken cansellationToken)
         {
-            var userId = await _service.UpdateUser(id, request.name, request.email, request.password);
+            var user = new User
+            {
+                Id = id,
+                Name = updateUserDto.Name,
+                Email = updateUserDto.Email,
+                PasswordHash = _passwordHasher.Generate(updateUserDto.Password)
+            };
 
-            return Ok(userId);
+            await _userService.UpdateUser(user, cansellationToken);
+            
+            return Ok(user.Id);
         }
 
         [HttpDelete("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<IActionResult> DeleteUser(Guid id)
+        public async Task<IActionResult> DeleteUser(Guid id, CancellationToken cansellationToken)
         {
-            return Ok(await _service.DeleteUser(id));
+            return Ok(await _userService.DeleteUser(id, cansellationToken));
         }
     }
 }
