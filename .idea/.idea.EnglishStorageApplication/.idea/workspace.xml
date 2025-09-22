@@ -14,21 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0def415e-a048-4ef7-acb5-1d7a88c1e44a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/AuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Auth/IAuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Auth/IAuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUsersRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/UserEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/ServiceExtensionsTests.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Endpoints/UsersEndpoints.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/AuthenticationExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/AuthenticationExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +69,7 @@
     ".NET Launch Settings Profile.EnglishStorageApplication.Server: https.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix/user__model",
+    "git-widget-placeholder": "fix/fronted__auth",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,7 +84,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Compound.fullstack">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="fullstack" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.Server: https" type="LaunchSettings" />
       <toRun name="App.client: run" type="js.build_tools.npm" />
