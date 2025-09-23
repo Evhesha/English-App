@@ -1,5 +1,5 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+﻿using EnglishApp.Core.Abstractions.UserCard;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 
 namespace EnglishApp.Application.AppServices
 {
@@ -12,29 +12,29 @@ namespace EnglishApp.Application.AppServices
             _usersCardsRepository = usersCardsRepository;
         }
 
-        public async Task<List<UserCard>> GetAllUsersCards()
+        public async Task<List<UserCard>> GetUsersCards(CancellationToken cancellationToken)
         {
-            return await _usersCardsRepository.Get();
+            return await _usersCardsRepository.GetUsersCardsAsync(cancellationToken);
         }
 
-        public async Task<List<UserCard>> GetAllUserCards(Guid userId)
+        public async Task<List<UserCard>> GetUserCards(Guid userId, CancellationToken cancellationToken)
         {
-            return await _usersCardsRepository.GetUserCards(userId);
+            return await _usersCardsRepository.GetUserCardsByUserIdAsync(userId, cancellationToken);
         }
 
-        public async Task<Guid> CreateUserCard(UserCard userCard)
+        public async Task<Guid> CreateUserCard(UserCard userCard, CancellationToken cancellationToken)
         {
-            return await _usersCardsRepository.Create(userCard);
+            return await _usersCardsRepository.CreateUserCardAsync(userCard, cancellationToken);
         }
 
-        public async Task<Guid> UpdateUserCard(Guid id, Guid userId, string nameOfUserCard, string userCardData)
+        public async Task<Guid> UpdateUserCard(Guid id, UserCard userCard, CancellationToken cancellationToken)
         {
-            return await _usersCardsRepository.Update(id, userId, nameOfUserCard, userCardData);
+            return await _usersCardsRepository.UpdateUserCardAsync(id, userCard, cancellationToken);
         }
 
-        public async Task<Guid> DeleteUserCard(Guid userId)
+        public async Task<Guid> DeleteUserCard(Guid userId, CancellationToken cancellationToken)
         {
-            return await _usersCardsRepository.Delete(userId);
+            return await _usersCardsRepository.DeleteUserCardAsync(userId, cancellationToken);
         }
     }
 }

@@ -1,12 +1,9 @@
-﻿using EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.TeacherRole;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface ITeacherRoleSevice
 {
-    public interface ITeacherRoleSevice
-    {
-        Task<Guid> CreateRole(TeacherRole teacherRole);
-        Task<Guid> DeleteRole(Guid userId);
-        Task<List<TeacherRole>> GetAllRoles();
-        Task<TeacherRole> GetRole(Guid userId);
-    }
+    Task<List<Models.TeacherRole>> GetTeachers(CancellationToken cancellationToken);
+    Task<Models.TeacherRole?> GetTeacher(Guid userId, CancellationToken cancellationToken);
+    Task<Guid> CreateTeacher(Models.TeacherRole teacherRole, CancellationToken cancellationToken);
+    Task<Guid> DeleteTeacher(Guid userId, CancellationToken cancellationToken);
 }

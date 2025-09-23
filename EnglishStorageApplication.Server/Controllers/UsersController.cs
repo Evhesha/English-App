@@ -3,7 +3,6 @@ using EnglishApp.Core.Abstractions.User;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishStorageApplication.Server.Contracts;
 using Microsoft.AspNetCore.Cors;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -25,7 +24,7 @@ namespace EnglishStorageApplication.Server.Controllers
 
         [HttpGet]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UsersResponse>>> GetUsers(CancellationToken cancellationToken)
+        public async Task<ActionResult<List<UserDto>>> GetUsers(CancellationToken cancellationToken)
         {
             var users = await _userService.GetAllUsers(cancellationToken);
            
@@ -46,7 +45,7 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<Guid>> CreateUser(
             [FromBody] CreateUserDto createUserDto,
-            CancellationToken cansellationToken)
+            CancellationToken cancellationToken)
         {
             var user = new User
             {
@@ -56,7 +55,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 PasswordHash = _passwordHasher.Generate(createUserDto.Password)
             };
 
-            var userId = await _userService.CreateUser(user, cansellationToken);
+            var userId = await _userService.CreateUser(user, cancellationToken);
             return Ok(userId);
         }
         
@@ -65,7 +64,7 @@ namespace EnglishStorageApplication.Server.Controllers
         public async Task<IActionResult> UpdateUser(
             Guid id,
             [FromBody] UpdateUserDto updateUserDto,
-            CancellationToken cansellationToken)
+            CancellationToken cancellationToken)
         {
             var user = new User
             {
@@ -75,7 +74,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 PasswordHash = _passwordHasher.Generate(updateUserDto.Password)
             };
 
-            await _userService.UpdateUser(user, cansellationToken);
+            await _userService.UpdateUser(user, cancellationToken);
             
             return Ok(user.Id);
         }
