@@ -1,5 +1,5 @@
-﻿using EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+﻿using EnglishApp.Core.Abstractions.Article;
+using EnglishApp.Core.Models;
 
 namespace EnglishApp.Application.AppServices
 {
@@ -12,29 +12,29 @@ namespace EnglishApp.Application.AppServices
             _articleRepository = articleRepository;
         }
 
-        public async Task<List<Article>> GetAllArticles()
+        public async Task<List<Article>> GetArticles(CancellationToken cancellationToken)
         {
-            return await _articleRepository.Get();
+            return await _articleRepository.GetArticlesAsync(cancellationToken);
         }
 
-        public async Task<List<Article>> GetUserArticles(Guid userId)
+        public async Task<List<Article>> GetUserArticles(Guid userId, CancellationToken cancellationToken)
         {
-            return await _articleRepository.GetArticles(userId);
+            return await _articleRepository.GetUserArticlesAsync(userId, cancellationToken);
         }
 
-        public async Task<Guid> Create(Article article)
+        public async Task<Guid> CreateArticle(Article article, CancellationToken cancellationToken)
         {
-            return await _articleRepository.Create(article);
+            return await _articleRepository.CreateArticleAsync(article, cancellationToken);
         }
 
-        public async Task<Guid> Update(Guid id, string title, string text)
+        public async Task<Guid> UpdateArticle(Article article, CancellationToken cancellationToken)
         {
-            return await _articleRepository.Update(id, title, text);
+            return await _articleRepository.UpdateArticleAsync(article, cancellationToken);
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteArticle(Guid id, CancellationToken cancellationToken)
         {
-            return await _articleRepository.Delete(id);
+            return await _articleRepository.DeleteArticleAsync(id, cancellationToken);
         }
     }
 }

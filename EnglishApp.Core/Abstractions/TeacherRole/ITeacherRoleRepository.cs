@@ -1,13 +1,20 @@
-﻿using EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.TeacherRole;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface ITeacherRoleRepository
 {
-    public interface ITeacherRoleRepository
-    {
-        Task<Guid> Create(TeacherRole role);
-        Task<Guid> Delete(Guid id);
-        Task<List<TeacherRole>> Get();
-        Task<TeacherRole> GetTeacher(Guid id);
-        Task<bool> IsTeacher(Guid userId);
-    }
+    Task<List<Models.TeacherRole>> GetTeachersAsync(CancellationToken cancellationToken);
+
+    Task<Models.TeacherRole?> GetTeacherByUserIdAsync(
+        Guid id,
+        CancellationToken cancellationToken);
+
+    Task<Guid> CreateTeacherAsync(
+        Models.TeacherRole role,
+        CancellationToken  cancellationToken);
+
+    Task<Guid> DeleteTeacherAsync(
+        Guid id,
+        CancellationToken cancellationToken);
+
+    Task<bool> IsTeacherAsync(Guid userId);
 }

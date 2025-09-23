@@ -1,13 +1,10 @@
-﻿using EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.Article;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IArticleService
 {
-    public interface IArticleService
-    {
-        Task<Guid> Create(Article article);
-        Task<Guid> Delete(Guid id);
-        Task<List<Article>> GetAllArticles();
-        Task<List<Article>> GetUserArticles(Guid userId);
-        Task<Guid> Update(Guid id, string title, string text);
-    }
+    Task<List<Models.Article>> GetArticles(CancellationToken cancellationToken);
+    Task<List<Models.Article>> GetUserArticles(Guid userId, CancellationToken cancellationToken);
+    Task<Guid> CreateArticle(Models.Article article, CancellationToken cancellationToken);
+    Task<Guid> UpdateArticle(Models.Article article, CancellationToken cancellationToken);
+    Task<Guid> DeleteArticle(Guid id, CancellationToken cancellationToken);
 }

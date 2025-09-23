@@ -1,7 +1,7 @@
-﻿using EnglishStorageApplication.EnglishApp.DataAccess;
+﻿using EnglishApp.Core.Abstractions.AdminRole;
+using EnglishStorageApplication.EnglishApp.DataAccess;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
-using EnglishApp.DataAccess.Entities;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories
@@ -15,57 +15,54 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
-        public async Task<List<AdminRole>> Get()
+        public async Task<List<AdminRole>> GetAdminsAsync(CancellationToken cancellationToken)
         {
-            var roleEntities = await _context.AdminRoles
+            return await _context.AdminRoles
                 .AsNoTracking()
-                .ToListAsync();
-
-            var role = roleEntities
-                .Select(x => AdminRole.Create(x.Id, x.UserId).AdminRole)
-                .ToList();
-
-            return role;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<AdminRole> GetAdmin(Guid userId)
+        public async Task<AdminRole?> GetAdminByIdAsync(
+            Guid userId,
+            CancellationToken cancellationToken)
         {
-            var roleEntities = await _context.AdminRoles
+            return await _context.AdminRoles
                 .AsNoTracking()
-                .FirstOrDefaultAsync(x => x.UserId == userId);
-
-            var (adminRole, error) = AdminRole.Create(roleEntities.Id, roleEntities.UserId);
-            return adminRole;
+                .FirstOrDefaultAsync(x => x.UserId == userId, cancellationToken);
         }
 
-        public async Task<Guid> Create(AdminRole adminRole)
+        public async Task<Guid> CreateAdminAsync(
+            AdminRole adminRole,
+            CancellationToken cancellationToken)
         {
-            var roleEntity = new AdminRoleEntity
+            var roleEntity = new AdminRole
             {
                 Id = adminRole.Id,
                 UserId = adminRole.UserId,
             };
 
-            await _context.AdminRoles.AddAsync(roleEntity);
-            await _context.SaveChangesAsync();
+            await _context.AdminRoles.AddAsync(roleEntity, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return adminRole.Id;
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteAdminAsync(
+            Guid id,
+            CancellationToken cancellationToken)
         {
-            var role = await _context.AdminRoles.FindAsync(id);
+            var role = await _context.AdminRoles.FindAsync(id, cancellationToken);
 
             if (role != null)
             {
                 _context.AdminRoles.Remove(role);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
 
             return id;
         }
 
-        public async Task<bool> IsAdmin(Guid userId) 
+        public async Task<bool> IsAdminAsync(Guid userId) 
         {
             return await _context.AdminRoles.AsNoTracking().AnyAsync(x => x.UserId == userId); 
         }

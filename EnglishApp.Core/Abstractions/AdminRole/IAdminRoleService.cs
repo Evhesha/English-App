@@ -1,12 +1,9 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.AdminRole;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IAdminRoleService
 {
-    public interface IAdminRoleService
-    {
-        Task<Guid> CreateRole(AdminRole adminRole);
-        Task<Guid> Delete(Guid id);
-        Task<List<AdminRole>> GetAllRoles();
-        Task<AdminRole> GetRole(Guid userId);
-    }
+    Task<List<EnglishStorageApplication.EnglishApp.Core.Models.AdminRole>> GetAdmins(CancellationToken cancellationToken);
+    Task<EnglishStorageApplication.EnglishApp.Core.Models.AdminRole?> GetAdmin(Guid userId, CancellationToken cancellationToken);
+    Task<Guid> CreateAdmin(EnglishStorageApplication.EnglishApp.Core.Models.AdminRole adminRole, CancellationToken cancellationToken);
+    Task<Guid> Delete(Guid id, CancellationToken cancellationToken);
 }

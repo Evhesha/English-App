@@ -1,8 +1,7 @@
-﻿using EnglishApp.Core.Models;
-using EnglishApp.DataAccess.Entities;
+﻿using EnglishApp.Core.Abstractions.Article;
+using EnglishApp.Core.Models;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories
 {
@@ -15,36 +14,28 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
-        public async Task<List<Article>> Get()
+        public async Task<List<Article>> GetArticlesAsync(CancellationToken cancellationToken)
         {
-            var articleEntity = await _context.Articles
+             return await _context.Articles
                 .AsNoTracking()
-                .ToListAsync();
-
-            var articles = articleEntity
-                .Select(a => Article.Create(a.Id, a.UserId, a.Title, a.Text, a.Images).Article)
-                .ToList();
-
-            return articles;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<List<Article>> GetArticles(Guid userId)
+        public async Task<List<Article>> GetUserArticlesAsync(
+            Guid userId,
+            CancellationToken cancellationToken)
         {
-            var articleEntity = await _context.Articles
+            return await _context.Articles
                 .AsNoTracking()
                 .Where(x => x.UserId == userId)
-                .ToListAsync();
-
-            var articles = articleEntity
-                .Select(a => Article.Create(a.Id, a.UserId, a.Title, a.Text, a.Images).Article)
-                .ToList();
-
-            return articles;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<Guid> Create(Article article)
+        public async Task<Guid> CreateArticleAsync(
+            Article article,
+            CancellationToken cancellationToken)
         {
-            var atricleEntity = new ArticleEntity
+            var atricleEntity = new Article
             {
                 Id = article.Id,
                 UserId = article.UserId,
@@ -53,34 +44,38 @@ namespace EnglishApp.DataAccess.Repositories
                 Images = article.Images
             };
 
-            await _context.Articles.AddAsync(atricleEntity);
-            await _context.SaveChangesAsync();
+            await _context.Articles.AddAsync(atricleEntity, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return atricleEntity.Id;
         }
 
-        public async Task<Guid> Update(Guid id, string title, string text)
+        public async Task<Guid> UpdateArticleAsync(
+            Article article,
+            CancellationToken cancellationToken)
         {
-            var articleEntity = await _context.Articles.FindAsync(id);
+            var articleEntity = await _context.Articles.FindAsync(article.Id);
             if (articleEntity != null)
             {
-                articleEntity.Title = title;
-                articleEntity.Text = text;
-                await _context.SaveChangesAsync();
+                articleEntity.Title = article.Title;
+                articleEntity.Text = article.Text;
+                await _context.SaveChangesAsync(cancellationToken);
             }
 
-            return id;
+            return articleEntity.Id;
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteArticleAsync(
+            Guid id,
+            CancellationToken cancellationToken)
         {
             var article = await _context.Articles
-                .FirstOrDefaultAsync(a => a.Id == id);
+                .FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
 
             if (article != null)
             {
                 _context.Articles.Remove(article);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
 
             return id;

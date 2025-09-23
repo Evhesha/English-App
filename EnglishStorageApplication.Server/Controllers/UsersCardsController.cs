@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using EnglishStorageApplication.Server.Contracts;
+﻿using EnglishApp.Application.DTOs.UserCardDTOs;
+using EnglishApp.Core.Abstractions.UserCard;
+using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -16,55 +16,64 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<UsersCardsResponse>>> GetUsersCards()
+        public async Task<ActionResult<List<UserCardDto>>> GetUsersCards(CancellationToken cancellationToken)
         {
-            var usersCards = await _service.GetAllUsersCards();
-            var response = usersCards.Select(u => new UsersCardsResponse(u.Id, u.UserId, u.NameOfUserCard, u.UserCardData));
-            return Ok(response);
+            var usersCards = await _service.GetUsersCards(cancellationToken);
+            return Ok(usersCards);
         }
 
         [HttpGet("{userId:guid}")]
-        public async Task<ActionResult<List<UsersCardsResponse>>> GetUserCards(Guid userId)
+        public async Task<ActionResult<List<UserCardDto>>> GetUserCards(Guid userId, CancellationToken cancellationToken)
         {
-            var userCards = await _service.GetAllUserCards(userId);
-            if (userCards == null || !userCards.Any())
+            var userCards = await _service.GetUserCards(userId, cancellationToken);
+            if (!userCards.Any())
             {
                 return NoContent();
             }
-            var response = userCards.Select(u => new UsersCardsResponse(u.Id, u.UserId, u.NameOfUserCard, u.UserCardData)).ToList();
-            return Ok(response);
+            
+            return Ok(userCards);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Guid>> CreateUserCard([FromBody] UsersCardsRequest request)
+        public async Task<ActionResult<Guid>> CreateUserCard(
+            [FromBody] CreateUserCardDto createUserCardDto,
+            CancellationToken cancellationToken)
         {
-            var (userCard, error) = UserCard.Create(
-                Guid.NewGuid(),
-                request.userId,
-                request.nameOfUserCard,
-                request.userCardData
-            );
-
-            if (!string.IsNullOrEmpty(error))
+            var userCard = new UserCard
             {
-                return BadRequest(error);
-            }
+                Id = Guid.NewGuid(),
+                UserId = createUserCardDto.UserId,
+                NameOfUsersCard = createUserCardDto.NameOfUsersCard,
+                UserCardData = createUserCardDto.UserCardData
+            };
 
-            var userId = await _service.CreateUserCard(userCard);
+            var userId = await _service.CreateUserCard(userCard, cancellationToken);
             return Ok(userId);
         }
 
         [HttpPut("{id:guid}")]
-        public async Task<IActionResult> UpdateUserCard(Guid id, [FromBody] UsersCardsRequest request)
+        public async Task<IActionResult> UpdateUserCard(
+            Guid id,
+            [FromBody] UpdateUserCardDto updateUserCardDto,
+            CancellationToken cancellationToken)
         {
-            var userCardId = await _service.UpdateUserCard(id, request.userId, request.nameOfUserCard, request.userCardData);
+            var userCard = new UserCard
+            {
+                Id = id, 
+                NameOfUsersCard = updateUserCardDto.NameOfUsersCard,
+                UserCardData = updateUserCardDto.UserCardData
+            };
+            
+            var userCardId = 
+                await _service.UpdateUserCard(id, userCard, cancellationToken);
+            
             return Ok(userCardId);
         }
 
         [HttpDelete("{id:guid}")]
-        public async Task<IActionResult> DeleteUserCard(Guid id)
+        public async Task<IActionResult> DeleteUserCard(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _service.DeleteUserCard(id));
+            return Ok(await _service.DeleteUserCard(id, cancellationToken));
         }
     }
 }

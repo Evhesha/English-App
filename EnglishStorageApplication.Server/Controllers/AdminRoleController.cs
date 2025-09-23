@@ -1,6 +1,6 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+﻿using EnglishApp.Application.DTOs.AdminRoleDTOs;
+using EnglishApp.Core.Abstractions.AdminRole; 
 using Microsoft.AspNetCore.Mvc;
-using EnglishStorageApplication.Server.Contracts;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -17,32 +17,39 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<AdminRolesResponse>>> GetRoles()
+        public async Task<ActionResult<List<AdminDto>>> GetAdmins(CancellationToken cancellationToken)
         {
-            var roles = await _service.GetAllRoles();
-            var response = roles.Select(r => new AdminRolesResponse(r.Id, r.UserId));
-            return Ok(response);
+            var admins = await _service.GetAdmins(cancellationToken);
+            return Ok(admins);
+        }
+        
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<AdminDto>> GetAdmin(Guid id, CancellationToken cancellationToken)
+        {
+            var admin = await _service.GetAdmin(id, cancellationToken);
+            return Ok(admin);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Guid>> CreateRole([FromBody] AdminRolesRequest request)
+        public async Task<ActionResult<Guid>> CreateRole(
+            [FromBody] CreateAdminDto createAdminDto,
+            CancellationToken cancellationToken)
         {
-            var (role, error) = AdminRole.Create(Guid.NewGuid(), request.userId);
-
-            if (!string.IsNullOrEmpty(error))
+            var admin = new AdminRole()
             {
-                return BadRequest(error);
-            }
-
-            var roleId = await _service.CreateRole(role);
+                Id = Guid.NewGuid(),
+                UserId = createAdminDto.UserId
+            };
+            
+            var roleId = await _service.CreateAdmin(admin, cancellationToken);
 
             return Ok(roleId);
         }
 
         [HttpDelete("{id:guid}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _service.Delete(id));
+            return Ok(await _service.Delete(id, cancellationToken));
         }
     }
 }

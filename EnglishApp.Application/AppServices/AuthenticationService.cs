@@ -1,4 +1,6 @@
-﻿using EnglishApp.Core.Abstractions.User;
+﻿using EnglishApp.Core.Abstractions.AdminRole;
+using EnglishApp.Core.Abstractions.TeacherRole;
+using EnglishApp.Core.Abstractions.User;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishApp.Infrastructure;
@@ -50,8 +52,8 @@ namespace EnglishApp.Application.AppServices
                 throw new UnauthorizedAccessException("Invalid credentials");
             }
 
-            var isAdmin = await _adminRolesRepository.IsAdmin(user.Id);
-            var isTeacher = await _teacherRoleRepository.IsTeacher(user.Id);
+            var isAdmin = await _adminRolesRepository.IsAdminAsync(user.Id);
+            var isTeacher = await _teacherRoleRepository.IsTeacherAsync(user.Id);
 
             return _jwtProvider.GenerateToken(user, isAdmin, isTeacher);
         }
