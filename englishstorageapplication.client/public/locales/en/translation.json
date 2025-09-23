@@ -3,18 +3,16 @@
     "home": "Home",
     "about": "About",
     "admin": "Admin",
-    "teacher" : "Teacher"
+    "teacher": "Teacher"
   },
-
-  "accoutn-page": {
+  "account-page": {
     "settings": "Settings",
     "language": "Language",
     "theme": "Theme",
     "profile": "Profile page",
     "admin-panel": "Admin panel",
-    "num-of-users": "Num of all users"
+    "num-of-users": "Number of all users"
   },
-
   "sidebar": {
     "lessons": "Lessons",
     "dictionary": "Dictionary",
@@ -36,30 +34,38 @@
     "hero-subtitle": "Effective methodology for quick language acquisition",
     "start-button": "Start Learning",
     "learn-more": "Learn More",
-    "active-students": "Active Students",
-    "lessons": "Lessons",
-    "success-rate": "% Successful Students",
-    "features-title": "Learning Benefits",
-    "feature1-title": "Personalization",
-    "feature1-desc": "Individual approach to each student",
-    "feature2-title": "Modern Methods",
-    "feature2-desc": "Effective learning approaches",
-    "feature3-title": "Speaking Practice",
-    "feature3-desc": "Regular communication with native speakers",
-    "feature4-title": "Accessibility",
-    "feature4-desc": "Learn anytime, anywhere",
-    "process-title": "How Learning Works",
-    "process-step1": "Language level assessment",
-    "process-step2": "Creating study plan",
-    "process-step3": "Regular classes",
-    "process-step4": "Practice and consolidation",
-    "process-step5": "Achieving results",
-    "cta-title": "Ready to Start?",
-    "cta-subtitle": "Join us today and achieve your language goals",
-    "cta-button": "Start for Free"
+    "benefits-title": "Why Choose Us",
+    "benefit1-title": "Personalized Approach",
+    "benefit1-desc": "Individual learning path for each student",
+    "benefit2-title": "Live Communication",
+    "benefit2-desc": "Practice with native speakers and teachers",
+    "benefit3-title": "Structured Materials",
+    "benefit3-desc": "Well-organized lessons and exercises",
+    "features-title": "Our Features",
+    "feature1-title": "Speaking Practice",
+    "feature1-desc": "Improve your pronunciation and fluency",
+    "feature2-title": "Reading Materials",
+    "feature2-desc": "Interesting texts and articles for all levels",
+    "feature3-title": "Audio Lessons",
+    "feature3-desc": "Listen and learn on the go",
+    "feature4-title": "Progress Tracking",
+    "feature4-desc": "Monitor your improvement with detailed statistics",
+    "feature5-title": "Community Support",
+    "feature5-desc": "Learn together with other students",
+    "feature6-title": "Fast Results",
+    "feature6-desc": "See noticeable progress in just few weeks",
+    "testimonials-title": "Student Reviews",
+    "testimonial1-text": "This platform helped me overcome my language barrier and start speaking confidently",
+    "testimonial1-name": "Anna, Marketing Manager",
+    "testimonial2-text": "As a beginner, I appreciated the structured approach and friendly community",
+    "testimonial2-name": "Mike, Student",
+    "testimonial3-text": "Professional teachers and modern methodology made learning enjoyable",
+    "testimonial3-name": "Sarah, Engineer",
+    "final-cta-title": "Start Your English Journey Today",
+    "final-cta-subtitle": "Join thousands of successful students who achieved their language goals",
+    "final-cta-button": "Get Started Now"
   },
-    
-  "aboutapp" : {
+  "aboutapp": {
     "about-program": "About Program",
     "key-features": "Key Features",
     "navigation": "Navigation",
@@ -87,5 +93,3 @@
     "group": "FITR BNTU, Group 10701222"
   }
 }
-  
-

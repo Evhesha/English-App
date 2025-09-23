@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {}
+    "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Core/EnglishApp.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj": {
+    "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Core/EnglishApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
+        "projectUniqueName": "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Core/EnglishApp.Core.csproj",
         "projectName": "EnglishApp.Core",
-        "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
-        "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\obj\\",
+        "projectPath": "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Core/EnglishApp.Core.csproj",
+        "packagesPath": "/Users/kirillzuhta/.nuget/packages/",
+        "outputPath": "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Core/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\EvGenii\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kirillzuhta/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
