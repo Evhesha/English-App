@@ -1,7 +1,6 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishApp.DataAccess.Entities;
+﻿using EnglishApp.Core.Abstractions.UserCard;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
 {
@@ -14,69 +13,65 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
             _context = context;
         }
 
-        public async Task<List<UserCard>> Get()
+        public async Task<List<UserCard>> GetUsersCardsAsync(CancellationToken cancellationToken)
         {
-            var userCardsEntities = await _context.UsersCards
+            return await _context.UsersCards
                 .AsNoTracking()
-                .ToListAsync();
-
-            var usersCards = userCardsEntities
-                .Select(x => UserCard.Create(x.Id, x.UserId, x.NameOfUsersCard, x.UserCardData).UserCard)
-                .ToList();
-
-            return usersCards;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<List<UserCard>> GetUserCards(Guid userId)
+        public async Task<List<UserCard>> GetUserCardsByUserIdAsync(
+            Guid userId,
+            CancellationToken cancellationToken)
         {
-            var userCardsEntities = await _context.UsersCards
+            return await _context.UsersCards
                 .AsNoTracking()
                 .Where(x => x.UserId == userId)
-                .ToListAsync();
-
-            var userCards = userCardsEntities
-                .Select(x => UserCard.Create(x.Id, x.UserId, x.NameOfUsersCard, x.UserCardData).UserCard)
-                .ToList();
-
-            return userCards;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<Guid> Create(UserCard userCard)
+        public async Task<Guid> CreateUserCardAsync(
+            UserCard userCard,
+            CancellationToken cancellationToken)
         {
-            var userCardEntity = new UserCardEntity
+            var userCardEntity = new UserCard
             {
                 Id = userCard.Id,
                 UserId = userCard.UserId,
-                NameOfUsersCard = userCard.NameOfUserCard,
+                NameOfUsersCard = userCard.NameOfUsersCard,
                 UserCardData = userCard.UserCardData,
             };
 
-            await _context.UsersCards.AddAsync(userCardEntity);
-            await _context.SaveChangesAsync();
+            await _context.UsersCards.AddAsync(userCardEntity, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
             return userCardEntity.Id;
         }
 
-
-        public async Task<Guid> Update(Guid id, Guid userId, string nameOfUsersCard, string userCardData)
+        public async Task<Guid> UpdateUserCardAsync(
+            Guid id,
+            UserCard userCard,
+            CancellationToken cancellationToken)
         {
-            var userCard = await _context.UsersCards.FindAsync(id);
-            if (userCard != null)
+            var userCardEntity = await _context.UsersCards.FindAsync(userCard.Id);
+            if (userCardEntity != null)
             {
-                userCard.UserId = userId;
-                userCard.NameOfUsersCard = nameOfUsersCard;
-                userCard.UserCardData = userCardData;
-                await _context.SaveChangesAsync();
+                userCardEntity.NameOfUsersCard = userCard.NameOfUsersCard;
+                userCardEntity.UserCardData = userCard.UserCardData;
+                await _context.SaveChangesAsync(cancellationToken);
             }
-            return id;
+            
+            return userCardEntity.Id;
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteUserCardAsync(
+            Guid id,
+            CancellationToken cancellationToken)
         {
             var userCard = await _context.UsersCards.FindAsync(id);
             if (userCard != null)
             {
                 _context.UsersCards.Remove(userCard);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
             return id;
         }

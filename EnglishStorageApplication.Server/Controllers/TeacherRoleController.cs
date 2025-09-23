@@ -1,6 +1,6 @@
-﻿using EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.Server.Contracts;
+﻿using EnglishApp.Application.DTOs.TeacherRoleDTOs;
+using EnglishApp.Core.Abstractions.TeacherRole;
+using EnglishApp.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -17,31 +17,38 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<AdminRolesResponse>>> GetRoles()
+        public async Task<ActionResult<List<TeacherDto>>> GetTeachers(CancellationToken cancellationToken)
         {
-            var roles = await _service.GetAllRoles();
-            var response = roles.Select(r => new AdminRolesResponse(r.Id, r.UserId));
-            return Ok(response);
+            var teachers = await _service.GetTeachers(cancellationToken);
+            return Ok(teachers);
         }
-
-        [HttpPost]
-        public async Task<ActionResult<Guid>> CreateRole([FromBody] TeacherRoleRequest teacherRoleRequest)
+        
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<TeacherDto>> GetTeacher(Guid id, CancellationToken cancellationToken)
         {
-            var (role, error) = TeacherRole.Create(Guid.NewGuid(), teacherRoleRequest.userId);
-
-            if (!string.IsNullOrEmpty(error))
+            var teachers = await _service.GetTeacher(id, cancellationToken);
+            return Ok(teachers);
+        }
+        
+        [HttpPost]
+        public async Task<ActionResult<Guid>> CreateRole(
+            [FromBody] CreateTeacherDto createTeacherDto,
+            CancellationToken cancellationToken)
+        {
+            var teacher = new TeacherRole
             {
-                return BadRequest(error);
-            }
+                Id = Guid.NewGuid(),
+                UserId = createTeacherDto.UserId
+            };
 
-            var roleId = await _service.CreateRole(role);
+            var roleId = await _service.CreateTeacher(teacher, cancellationToken);
             return Ok(roleId);
         }
 
         [HttpDelete("{id:guid}")]
-        public async Task<ActionResult<Guid>> DeleteRole(Guid id)
+        public async Task<ActionResult<Guid>> DeleteRole(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _service.DeleteRole(id));
+            return Ok(await _service.DeleteTeacher(id, cancellationToken));
         }
     }
 }

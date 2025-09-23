@@ -1,7 +1,4 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.EnglishApp.Core.Models;
-
-namespace EnglishApp.Application.AppServices
+﻿namespace EnglishApp.Core.Abstractions.AdminRole
 {
     public class AdminRoleService : IAdminRoleService
     {
@@ -12,24 +9,24 @@ namespace EnglishApp.Application.AppServices
             _adminRoleRepository = adminRoleRepository;
         }
 
-        public async Task<List<AdminRole>> GetAllRoles()
+        public async Task<List<EnglishStorageApplication.EnglishApp.Core.Models.AdminRole>> GetAdmins(CancellationToken cancellationToken)
         {
-            return await _adminRoleRepository.Get();
+            return await _adminRoleRepository.GetAdminsAsync(cancellationToken);
         }
 
-        public async Task<AdminRole> GetRole(Guid userId)
+        public async Task<EnglishStorageApplication.EnglishApp.Core.Models.AdminRole?> GetAdmin(Guid userId, CancellationToken cancellationToken)
         {
-            return await _adminRoleRepository.GetAdmin(userId);
+            return await _adminRoleRepository.GetAdminByIdAsync(userId, cancellationToken);
         }
 
-        public async Task<Guid> CreateRole(AdminRole adminRole)
+        public async Task<Guid> CreateAdmin(EnglishStorageApplication.EnglishApp.Core.Models.AdminRole adminRole, CancellationToken cancellationToken)
         {
-            return await _adminRoleRepository.Create(adminRole);
+            return await _adminRoleRepository.CreateAdminAsync(adminRole, cancellationToken);
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> Delete(Guid id, CancellationToken cancellationToken)
         {
-            return await _adminRoleRepository.Delete(id);
+            return await _adminRoleRepository.DeleteAdminAsync(id, cancellationToken);
         }
     }
 }

@@ -1,13 +1,20 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.AdminRole;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IAdminRoleRepository
 {
-    public interface IAdminRoleRepository
-    {
-        Task<Guid> Create(AdminRole adminRole);
-        Task<Guid> Delete(Guid id);
-        Task<List<AdminRole>> Get();
-        Task<AdminRole> GetAdmin(Guid userId);
-        Task<bool> IsAdmin(Guid userId);
-    }
+    Task<List<EnglishStorageApplication.EnglishApp.Core.Models.AdminRole>> GetAdminsAsync(CancellationToken cancellationToken);
+
+    Task<EnglishStorageApplication.EnglishApp.Core.Models.AdminRole?> GetAdminByIdAsync(
+        Guid userId,
+        CancellationToken cancellationToken);
+
+    Task<Guid> CreateAdminAsync(
+        EnglishStorageApplication.EnglishApp.Core.Models.AdminRole adminRole,
+        CancellationToken cancellationToken);
+
+    Task<Guid> DeleteAdminAsync(
+        Guid id,
+        CancellationToken cancellationToken);
+
+    Task<bool> IsAdminAsync(Guid userId);
 }

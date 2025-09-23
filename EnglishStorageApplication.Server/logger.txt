@@ -1,82 +1,42 @@
 The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[22.09.2025 13:42:04] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[22.09.2025 13:42:05] Now listening on: https://localhost:7298
-[22.09.2025 13:42:05] Now listening on: http://localhost:5020
-[22.09.2025 13:42:05] Application started. Press Ctrl+C to shut down.
-[22.09.2025 13:42:05] Hosting environment: Development
-[22.09.2025 13:42:05] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
-[22.09.2025 13:42:05] The foreign key property 'OptionEntity.QuestionId1' was created in shadow state because a conflicting property with the simple name 'QuestionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
-[22.09.2025 13:42:39] Executed DbCommand (259ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+[23.09.2025 22:15:02] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[23.09.2025 22:15:02] Now listening on: https://localhost:7298
+[23.09.2025 22:15:02] Now listening on: http://localhost:5020
+[23.09.2025 22:15:02] Application started. Press Ctrl+C to shut down.
+[23.09.2025 22:15:02] Hosting environment: Development
+[23.09.2025 22:15:02] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
+[23.09.2025 22:15:02] Couldn't start the SPA development server with command 'npm run dev'.
+[23.09.2025 22:15:13] Executed DbCommand (69ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT u."Id", u."Email", u."Name", u."PasswordHash"
 FROM "Users" AS u
-WHERE u."Email" = @__email_0
-LIMIT 2
-[22.09.2025 13:42:44] Executed DbCommand (253ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Email" = @__email_0
-LIMIT 2
-[22.09.2025 13:42:44] Executed DbCommand (256ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Email" = @__email_0
-LIMIT 2
-[22.09.2025 13:42:44] Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "AdminRoles" AS a
-    WHERE a."UserId" = @__userId_0)
-[22.09.2025 13:42:46] Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "AdminRoles" AS a
-    WHERE a."UserId" = @__userId_0)
-[22.09.2025 13:42:46] Executed DbCommand (29ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "AdminRoles" AS a
-    WHERE a."UserId" = @__userId_0)
-[22.09.2025 13:42:46] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "TeacherRoles" AS t
-    WHERE t."UserId" = @__userId_0)
-[22.09.2025 13:42:46] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "TeacherRoles" AS t
-    WHERE t."UserId" = @__userId_0)
-[22.09.2025 13:42:46] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1
-    FROM "TeacherRoles" AS t
-    WHERE t."UserId" = @__userId_0)
-[22.09.2025 13:42:46] Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-[22.09.2025 13:42:51] Executed DbCommand (50ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-[22.09.2025 13:42:51] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[22.09.2025 13:43:01] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[22.09.2025 13:43:01] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[22.09.2025 13:43:17] Executed DbCommand (23ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[22.09.2025 13:43:17] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[22.09.2025 13:44:06] Application is shutting down...
-[22.09.2025 13:46:36] 
+[23.09.2025 22:15:22] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."UserId"
+FROM "AdminRoles" AS a
+[23.09.2025 22:15:49] Executed DbCommand (50ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "AdminRoles" ("Id", "UserId")
+VALUES (@p0, @p1);
+[23.09.2025 22:16:22] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT a."Id", a."UserId"
+FROM "AdminRoles" AS a
+[23.09.2025 22:16:28] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT t."Id", t."UserId"
+FROM "TeacherRoles" AS t
+[23.09.2025 22:16:36] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+[23.09.2025 22:16:45] Executed DbCommand (13ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[23.09.2025 22:17:24] Executed DbCommand (21ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "UsersCards" SET "NameOfUsersCard" = @p0, "UserCardData" = @p1
+WHERE "Id" = @p2;
+[23.09.2025 22:17:24] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+[23.09.2025 22:17:31] Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."PercentResult", u."TestId", u."UserId"
+FROM "UsersStudyResults" AS u
+[23.09.2025 22:17:41] Application is shutting down...
+[23.09.2025 22:17:49] 

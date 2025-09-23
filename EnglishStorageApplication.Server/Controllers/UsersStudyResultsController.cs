@@ -1,5 +1,5 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Abstractions;
-using EnglishStorageApplication.Server.Contracts;
+﻿using EnglishApp.Application.DTOs.UserStudyResult;
+using EnglishApp.Core.Abstractions.UserStudyResult;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using EnglishApp.Core.Models;
@@ -20,48 +20,42 @@ namespace EnglishStorageApplication.Server.Controllers
 
         [HttpGet]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UsersStudyResultsResponse>>> GetUsersStudyResults()
+        public async Task<ActionResult<List<UserStudyResultDto>>> GetUsersStudyResults(CancellationToken cancellationToken)
         {
-            var usersResults = await _service.GetAllUsersResults();
-            var response = usersResults.Select(r => new UsersStudyResultsResponse(r.Id, r.UserId, r.TestId, r.PercentResult));
-            return Ok(response);
+            var usersResults = await _service.GetAllUsersResults(cancellationToken);
+                
+            return Ok(usersResults);
         }
 
         [HttpGet("{userId:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UsersStudyResultsResponse>>> GetUserStudyResults(Guid userId)
+        public async Task<ActionResult<List<UserStudyResultDto>>> GetUserStudyResults(Guid userId, CancellationToken cancellationToken)
         {
-            var userResults = await _service.GetUserResults(userId);
-            if (userResults == null || !userResults.Any())
+            var userResults = await _service.GetUserResults(userId, cancellationToken);
+            if (!userResults.Any())
             {
                 return NoContent();
             }
-
-            var response = userResults.Select(r => new UsersStudyResultsResponse(r.Id, r.UserId, r.TestId, r.PercentResult)).ToList();
-
-            return Ok(response);
+            
+            return Ok(userResults);
         }
 
         [HttpPost]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<Guid>> CreateUserStudyResult(
-            [FromBody] UsersStudyResultsResponse usersStudyResultsResponse
+            [FromBody] CreateUserStudyResultDto createUserStudyResultDto,
+            CancellationToken cancellationToken
         )
         {
-            var (userResult, error) = UserStudyResult.Create(
-                Guid.NewGuid(),
-                usersStudyResultsResponse.id,
-                usersStudyResultsResponse.userId,
-                usersStudyResultsResponse.percent
-            );
-
-            if (!string.IsNullOrEmpty(error))
+            var userResult = new UserStudyResult
             {
-                return BadRequest(error);
-            }
+                Id = Guid.NewGuid(),
+                UserId = createUserStudyResultDto.UserId,
+                TestId = createUserStudyResultDto.TestId,
+                PercentResult = createUserStudyResultDto.PercentResult
+            };
 
-            var userResultId = await _service.CreateUserResult(userResult);
-
+            var userResultId = await _service.CreateUserResult(userResult, cancellationToken);
             return Ok(userResultId);
         }
 
@@ -69,19 +63,21 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> UpdateUserStudyResult(
             Guid id,
-            [FromBody] UsersStudyResultsRequest usersStudyResultsRequest
+            [FromBody] UpdateUserStudyResultDto updateUserStudyResultDto,
+            CancellationToken cancellationToken
             )
         {
-            var userResult = await _service.Update(
-                id, usersStudyResultsRequest.percent);
+            var userResult = await _service.UpdateUserResult(
+                id, updateUserStudyResultDto.PercentResult, cancellationToken);
+            
             return Ok(userResult);
         }
 
         [HttpDelete("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<IActionResult> DeleteUserStudyResult(Guid id)
+        public async Task<IActionResult> DeleteUserStudyResult(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _service.Delete(id));
+            return Ok(await _service.DeleteUserResult(id, cancellationToken));
         }
     }
 }

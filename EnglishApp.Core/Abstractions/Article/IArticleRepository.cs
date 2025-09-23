@@ -1,13 +1,22 @@
-﻿using EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.Article;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IArticleRepository
 {
-    public interface IArticleRepository
-    {
-        Task<Guid> Create(Article article);
-        Task<Guid> Delete(Guid id);
-        Task<List<Article>> Get();
-        Task<List<Article>> GetArticles(Guid userId);
-        Task<Guid> Update(Guid id, string title, string text);
-    }
+    Task<List<Models.Article>> GetArticlesAsync(CancellationToken cancellationToken);
+
+    Task<List<Models.Article>> GetUserArticlesAsync(
+        Guid userId,
+        CancellationToken cancellationToken);
+
+    Task<Guid> CreateArticleAsync(
+        Models.Article article,
+        CancellationToken cancellationToken);
+
+    Task<Guid> UpdateArticleAsync(
+        Models.Article article,
+        CancellationToken cancellationToken);
+
+    Task<Guid> DeleteArticleAsync(
+        Guid id,
+        CancellationToken cancellationToken);
 }

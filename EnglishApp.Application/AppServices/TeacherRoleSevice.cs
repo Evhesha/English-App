@@ -1,5 +1,5 @@
-﻿using EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+﻿using EnglishApp.Core.Abstractions.TeacherRole;
+using EnglishApp.Core.Models;
 
 namespace EnglishApp.Application.AppServices
 {
@@ -12,24 +12,24 @@ namespace EnglishApp.Application.AppServices
             _teacherRoleRepository = teacherRoleRepository;
         }
 
-        public async Task<List<TeacherRole>> GetAllRoles()
+        public async Task<List<TeacherRole>> GetTeachers(CancellationToken cancellationToken)
         {
-            return await _teacherRoleRepository.Get();
+            return await _teacherRoleRepository.GetTeachersAsync(cancellationToken);
         }
 
-        public async Task<TeacherRole> GetRole(Guid userId)
+        public async Task<TeacherRole?> GetTeacher(Guid userId, CancellationToken cancellationToken)
         {
-            return await _teacherRoleRepository.GetTeacher(userId);
+            return await _teacherRoleRepository.GetTeacherByUserIdAsync(userId, cancellationToken);
         }
 
-        public async Task<Guid> CreateRole(TeacherRole teacherRole)
+        public async Task<Guid> CreateTeacher(TeacherRole teacherRole, CancellationToken cancellationToken)
         {
-            return await _teacherRoleRepository.Create(teacherRole);
+            return await _teacherRoleRepository.CreateTeacherAsync(teacherRole, cancellationToken);
         }
 
-        public async Task<Guid> DeleteRole(Guid userId)
+        public async Task<Guid> DeleteTeacher(Guid userId, CancellationToken cancellationToken)
         {
-            return await _teacherRoleRepository.Delete(userId);
+            return await _teacherRoleRepository.DeleteTeacherAsync(userId, cancellationToken);
         }
     }
 }

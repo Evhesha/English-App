@@ -1,13 +1,10 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.UserCard;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IUserCardService
 {
-    public interface IUserCardService
-    {
-        Task<Guid> CreateUserCard(UserCard userCard);
-        Task<Guid> DeleteUserCard(Guid userId);
-        Task<List<UserCard>> GetAllUserCards(Guid userId);
-        Task<List<UserCard>> GetAllUsersCards();
-        Task<Guid> UpdateUserCard(Guid id, Guid userId, string nameOfUserCard, string userCardData);
-    }
+    Task<List<EnglishStorageApplication.EnglishApp.Core.Models.UserCard>> GetUsersCards(CancellationToken cancellationToken);
+    Task<List<EnglishStorageApplication.EnglishApp.Core.Models.UserCard>> GetUserCards(Guid userId, CancellationToken cancellationToken);
+    Task<Guid> CreateUserCard(EnglishStorageApplication.EnglishApp.Core.Models.UserCard userCard, CancellationToken cancellationToken);
+    Task<Guid> UpdateUserCard(Guid id, EnglishStorageApplication.EnglishApp.Core.Models.UserCard userCard, CancellationToken cancellationToken);
+    Task<Guid> DeleteUserCard(Guid userId, CancellationToken cancellationToken);
 }
