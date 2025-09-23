@@ -26,7 +26,7 @@ function App() {
         </div>
         <footer className="footerr">
           <p className="copyright">
-            © 2024 English Learning. Все права защищены.
+            © 2025 English Learning. Все права защищены.
           </p>
         </footer>
       </div>
