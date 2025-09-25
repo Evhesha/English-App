@@ -27,7 +27,9 @@
     "account": "Account",
     "profile": "Profile",
     "settings": "Settings",
-    "sign-out": "Sign out"
+    "sign-out": "Sign out",
+    "app-lessons": "App lessons",
+    "online-lessons": "Online lessons"
   },
   "home": {
     "hero-title": "Learn English for free with pleasure",
