@@ -14,91 +14,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0def415e-a048-4ef7-acb5-1d7a88c1e44a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/AdminRoleService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/ArticleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/ArticleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/AuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/OptionService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/QuestionService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/TeacherRoleSevice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/TeacherRoleSevice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/TestService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserActivityService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserCardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserCardService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/EnglishApp.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/EnglishApp.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/AdminRole/IAdminRoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/AdminRole/IAdminRoleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/AdminRole/IAdminRoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/AdminRole/IAdminRoleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Article/IArticleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Article/IArticleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Article/IArticleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Article/IArticleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Option/IOptionRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Option/IOptionService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Question/IQuestionRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Question/IQuestionService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/TeacherRole/ITeacherRoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/TeacherRole/ITeacherRoleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/TeacherRole/ITeacherRoleSevice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/TeacherRole/ITeacherRoleSevice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserActivity/IUserActivityService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserActivity/IUsersActivitiesRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserCard/IUserCardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserCard/IUserCardService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserCard/IUsersCardsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserCard/IUsersCardsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUsersStudyResultsRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/AdminRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/AdminRole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/Article.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Option.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Question.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/TeacherRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/TeacherRole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Test.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/UserActivity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/UserCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/UserCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/UserStudyResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/UserStudyResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/OptionConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/QuestionConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/TestConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/AdminRoleEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/ArticleEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/OptionEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/QuestionEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/TeacherRoleEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/TestEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/UserActivityEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/UserCardEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Entities/UserStudyResultEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/20241022151703_init.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/20241022151703_init.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/AdminRoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/AdminRoleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/ArticleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/ArticleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/OptionRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/QuestionRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TeacherRoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TeacherRoleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TestRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersActivitiesRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersCardsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersCardsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/AdminRoleResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/ArticleResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/TeacherRoleResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/TestResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/UserActivityResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/Users/LoginUserRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/Users/RegisterUserRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/UsersCardsResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/UsersResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Contracts/UsersStudyResultsResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/AdminRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/AdminRoleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/ArticleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/ArticleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/OptionController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/QuestionController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TeacherRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TeacherRoleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersActivitiesController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersCardsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersCardsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +91,7 @@
     ".NET Launch Settings Profile.EnglishStorageApplication.Server: https.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix/models",
+    "git-widget-placeholder": "fix/lessons__sides",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -182,7 +106,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.Server: https">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="fullstack" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.Server: https" type="LaunchSettings" />
       <toRun name="App.client: run" type="js.build_tools.npm" />
