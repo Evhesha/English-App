@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r9CUUBP+nFg=",
+  "dgSpecHash": "6P3nHVtZUMQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
+  "projectFilePath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EvGenii\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\EvGenii\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

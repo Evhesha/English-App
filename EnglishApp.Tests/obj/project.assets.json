@@ -2886,11 +2886,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
       "projectName": "EnglishApp.Tests",
-      "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
+      "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
       "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Tests\\obj\\",
+      "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2912,8 +2912,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
-              "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj"
+            "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
+              "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj"
             }
           }
         }
@@ -2969,7 +2969,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

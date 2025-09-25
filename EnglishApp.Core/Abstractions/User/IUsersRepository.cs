@@ -1,14 +1,11 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.User;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IUsersRepository
 {
-    public interface IUsersRepository
-    {
-        Task<Guid> Create(User user);
-        Task<Guid> Delete(Guid id);
-        Task<List<User>> Get();
-        Task<List<User>> GetUser(Guid id);
-        Task<User> GetByEmail(string email);
-        Task<Guid> Update(Guid id, string name, string email, string password);
-    }
+    Task<List<EnglishStorageApplication.EnglishApp.Core.Models.User>> GetUsersAsync(CancellationToken cancellationToken);
+    Task<EnglishStorageApplication.EnglishApp.Core.Models.User?> GetUserByIdAsync(Guid id, CancellationToken cancellationToken);
+    Task<EnglishStorageApplication.EnglishApp.Core.Models.User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken);
+    Task<Guid> CreateUserAsync(EnglishStorageApplication.EnglishApp.Core.Models.User user, CancellationToken cancellationToken);
+    Task<Guid> UpdateUserAsync(EnglishStorageApplication.EnglishApp.Core.Models.User user, CancellationToken cancellationToken);
+    Task<Guid> DeleteUserAsync(Guid id, CancellationToken cancellationToken);
 }

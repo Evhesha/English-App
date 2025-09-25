@@ -1,13 +1,10 @@
-﻿using EnglishApp.Core.Models;
+﻿namespace EnglishApp.Core.Abstractions.UserStudyResult;
 
-namespace EnglishStorageApplication.EnglishApp.Core.Abstractions
+public interface IUserStudyResultService
 {
-    public interface IUserStudyResultService
-    {
-        Task<Guid> CreateUserResult(UserStudyResult userStudyResult);
-        Task<Guid> Delete(Guid id);
-        Task<List<UserStudyResult>> GetAllUsersResults();
-        Task<List<UserStudyResult>> GetUserResults(Guid userId);
-        Task<Guid> Update(Guid id, double percent);
-    }
+    Task<List<Models.UserStudyResult>> GetAllUsersResults(CancellationToken cancellationToken);
+    Task<List<Models.UserStudyResult>> GetUserResults(Guid userId, CancellationToken cancellationToken);
+    Task<Guid> CreateUserResult(Models.UserStudyResult userStudyResult, CancellationToken cancellationToken);
+    Task<Guid> UpdateUserResult(Guid id, double percent, CancellationToken cancellationToken);
+    Task<Guid> DeleteUserResult(Guid id, CancellationToken cancellationToken);
 }

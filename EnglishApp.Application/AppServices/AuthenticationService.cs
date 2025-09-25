@@ -1,4 +1,7 @@
-﻿using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+﻿using EnglishApp.Core.Abstractions.AdminRole;
+using EnglishApp.Core.Abstractions.TeacherRole;
+using EnglishApp.Core.Abstractions.User;
+using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishApp.Infrastructure;
 
@@ -26,30 +29,31 @@ namespace EnglishApp.Application.AppServices
             _teacherRoleRepository = teacherRoleRepository;
         }
 
-        public async Task<Guid> Register(string userName, string email, string password)
+        public async Task<Guid> Register(string password, User user, CancellationToken cancellationToken)
         {
             var hashedPassword = _passwordHasher.Generate(password);
-            var (user, error) = User.Create(Guid.NewGuid(), userName, email, hashedPassword);
-
-            if (!string.IsNullOrEmpty(error))
+            var userEntity = new User
             {
-                throw new Exception(error);
-            }
-
-            await _usersRepository.Create(user);
+                Id = Guid.NewGuid(),
+                Name = user.Name,
+                Email = user.Email,
+                PasswordHash = hashedPassword,
+            };
+            
+            await _usersRepository.CreateUserAsync(userEntity, cancellationToken);
             return user.Id;
         }
 
-        public async Task<string> Login(string email, string password)
+        public async Task<string> Login(string email, string password, CancellationToken cancellationToken)
         {
-            var user = await _usersRepository.GetByEmail(email);
-            if (user == null || !_passwordHasher.Verify(password, user.Password))
+            var user = await _usersRepository.GetUserByEmailAsync(email, cancellationToken);
+            if (user == null || !_passwordHasher.Verify(password, user.PasswordHash))
             {
                 throw new UnauthorizedAccessException("Invalid credentials");
             }
 
-            var isAdmin = await _adminRolesRepository.IsAdmin(user.Id);
-            var isTeacher = await _teacherRoleRepository.IsTeacher(user.Id);
+            var isAdmin = await _adminRolesRepository.IsAdminAsync(user.Id);
+            var isTeacher = await _teacherRoleRepository.IsTeacherAsync(user.Id);
 
             return _jwtProvider.GenerateToken(user, isAdmin, isTeacher);
         }

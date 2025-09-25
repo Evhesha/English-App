@@ -1,4 +1,10 @@
 ﻿using EnglishApp.Application.AppServices;
+using EnglishApp.Core.Abstractions.AdminRole;
+using EnglishApp.Core.Abstractions.Article;
+using EnglishApp.Core.Abstractions.TeacherRole;
+using EnglishApp.Core.Abstractions.User;
+using EnglishApp.Core.Abstractions.UserCard;
+using EnglishApp.Core.Abstractions.UserStudyResult;
 using EnglishApp.DataAccess.Repositories;
 using EnglishApp.Infrastructure;
 using EnglishStorageApplication.EnglishApp.Application.AppServices;
@@ -18,9 +24,6 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
             services.AddScoped<IUserCardService, UserCardService>();
             services.AddScoped<IUsersCardsRepository, UsersCardsRepository>();
 
-            services.AddScoped<IUserActivityService, UserActivityService>();
-            services.AddScoped<IUsersActivitiesRepository, UsersActivitiesRepository>();
-
             services.AddScoped<IUserStudyResultService, UserStudyResultService>();
             services.AddScoped<IUsersStudyResultsRepository, UsersStudyResultsRepository>();
 
@@ -32,15 +35,6 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
 
             services.AddScoped<ITeacherRoleSevice, TeacherRoleSevice>();
             services.AddScoped<ITeacherRoleRepository, TeacherRoleRepository>();
-
-            //services.AddScoped<ITestService, TestService>();
-            //services.AddScoped<ITestRepository, TestRepository>();
-
-            //services.AddScoped<IQuestionService, QuestionService>();
-            //services.AddScoped<IQuestionRepository, QuestionRepository>();
-
-            //services.AddScoped<IOptionService, OptionService>();
-            //services.AddScoped<IOptionRepository, OptionRepository>();
 
             services.AddScoped<JwtProvider>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();

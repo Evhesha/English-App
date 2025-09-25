@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
+      "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
       "projectName": "EnglishApp.Core",
-      "projectPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
+      "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\EnglishApp.Core.csproj",
       "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EvGenii\\Source\\Repos\\English-App\\EnglishApp.Core\\obj\\",
+      "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -73,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

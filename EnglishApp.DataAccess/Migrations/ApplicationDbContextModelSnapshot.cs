@@ -23,21 +23,7 @@ namespace EnglishStorageApplication.Server.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.AdminRoleEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AdminRoles");
-                });
-
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.ArticleEntity", b =>
+            modelBuilder.Entity("EnglishApp.Core.Models.Article", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,60 +49,7 @@ namespace EnglishStorageApplication.Server.Migrations
                     b.ToTable("Articles");
                 });
 
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.OptionEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("OptionText")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("QuestionId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("QuestionId1")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("QuestionId");
-
-                    b.HasIndex("QuestionId1");
-
-                    b.ToTable("Options");
-                });
-
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.QuestionEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("CorrectAnswer")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("QuestionText")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("TestId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TestId");
-
-                    b.ToTable("Questions");
-                });
-
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.TeacherRoleEntity", b =>
+            modelBuilder.Entity("EnglishApp.Core.Models.TeacherRole", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -130,90 +63,7 @@ namespace EnglishStorageApplication.Server.Migrations
                     b.ToTable("TeacherRoles");
                 });
 
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.TestEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tests");
-                });
-
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.UserActivityEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("DateTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("UsersActivities");
-                });
-
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.UserCardEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("NameOfUsersCard")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserCardData")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("UsersCards");
-                });
-
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.UserEntity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.UserStudyResultEntity", b =>
+            modelBuilder.Entity("EnglishApp.Core.Models.UserStudyResult", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -233,42 +83,63 @@ namespace EnglishStorageApplication.Server.Migrations
                     b.ToTable("UsersStudyResults");
                 });
 
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.OptionEntity", b =>
+            modelBuilder.Entity("EnglishStorageApplication.EnglishApp.Core.Models.AdminRole", b =>
                 {
-                    b.HasOne("EnglishApp.DataAccess.Entities.QuestionEntity", null)
-                        .WithMany("Options")
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
 
-                    b.HasOne("EnglishApp.DataAccess.Entities.QuestionEntity", "Question")
-                        .WithMany()
-                        .HasForeignKey("QuestionId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
 
-                    b.Navigation("Question");
+                    b.HasKey("Id");
+
+                    b.ToTable("AdminRoles");
                 });
 
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.QuestionEntity", b =>
+            modelBuilder.Entity("EnglishStorageApplication.EnglishApp.Core.Models.User", b =>
                 {
-                    b.HasOne("EnglishApp.DataAccess.Entities.TestEntity", "Test")
-                        .WithMany("Questions")
-                        .HasForeignKey("TestId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
 
-                    b.Navigation("Test");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.QuestionEntity", b =>
+            modelBuilder.Entity("EnglishStorageApplication.EnglishApp.Core.Models.UserCard", b =>
                 {
-                    b.Navigation("Options");
-                });
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
 
-            modelBuilder.Entity("EnglishApp.DataAccess.Entities.TestEntity", b =>
-                {
-                    b.Navigation("Questions");
+                    b.Property<string>("NameOfUsersCard")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserCardData")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UsersCards");
                 });
 #pragma warning restore 612, 618
         }

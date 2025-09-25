@@ -1,5 +1,5 @@
-﻿using EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
+﻿using EnglishApp.Core.Abstractions.UserStudyResult;
+using EnglishApp.Core.Models;
 
 namespace EnglishApp.Application.AppServices
 {
@@ -12,29 +12,29 @@ namespace EnglishApp.Application.AppServices
             _usersStudyResultsRepository = usersStudyResultsRepository;
         }
 
-        public async Task<List<UserStudyResult>> GetAllUsersResults()
+        public async Task<List<UserStudyResult>> GetAllUsersResults(CancellationToken cancellationToken)
         {
-            return await _usersStudyResultsRepository.Get();
+            return await _usersStudyResultsRepository.GetUsersStudyResultsAsync(cancellationToken);
         }
 
-        public async Task<List<UserStudyResult>> GetUserResults(Guid userId)
+        public async Task<List<UserStudyResult>> GetUserResults(Guid userId, CancellationToken cancellationToken)
         {
-            return await _usersStudyResultsRepository.GetUserResults(userId);
+            return await _usersStudyResultsRepository.GetUserStudyResultsByIdAsync(userId, cancellationToken);
         }
 
-        public async Task<Guid> CreateUserResult(UserStudyResult userStudyResult)
+        public async Task<Guid> CreateUserResult(UserStudyResult userStudyResult, CancellationToken cancellationToken)
         {
-            return await _usersStudyResultsRepository.Create(userStudyResult);
+            return await _usersStudyResultsRepository.CreateUserStudyResultAsync(userStudyResult, cancellationToken);
         }
 
-        public async Task<Guid> Update(Guid id, double percent)
+        public async Task<Guid> UpdateUserResult(Guid id, double percent, CancellationToken cancellationToken)
         {
-            return await _usersStudyResultsRepository.Update(id, percent);
+            return await _usersStudyResultsRepository.UpdateUserStudyResultAsync(id, percent, cancellationToken);
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteUserResult(Guid id, CancellationToken cancellationToken)
         {
-            return await _usersStudyResultsRepository.Delete(id);
+            return await _usersStudyResultsRepository.DeleteUserStudyResultAsync(id, cancellationToken);
         }
     }
 }

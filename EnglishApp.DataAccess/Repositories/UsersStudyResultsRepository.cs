@@ -1,8 +1,7 @@
-﻿using EnglishApp.Core.Models;
-using EnglishApp.DataAccess.Entities;
+﻿using EnglishApp.Core.Abstractions.UserStudyResult;
+using EnglishApp.Core.Models;
 using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishApp.DataAccess.Repositories
 {
@@ -15,36 +14,28 @@ namespace EnglishApp.DataAccess.Repositories
             _context = context;
         }
 
-        public async Task<List<UserStudyResult>> Get()
+        public async Task<List<UserStudyResult>> GetUsersStudyResultsAsync(CancellationToken cancellationToken)
         {
-            var userStudyResultEntities = await _context.UsersStudyResults
+            return await _context.UsersStudyResults
                 .AsNoTracking()
-                .ToListAsync();
-
-            var results = userStudyResultEntities
-                .Select(x => UserStudyResult.Create(x.Id, x.UserId, x.TestId, x.PercentResult).UserStudyResult)
-                .ToList();
-
-            return results;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<List<UserStudyResult>> GetUserResults(Guid userId)
+        public async Task<List<UserStudyResult>> GetUserStudyResultsByIdAsync(
+            Guid userId,
+            CancellationToken cancellationToken)
         {
-            var userStudyResEntites = await _context.UsersStudyResults
+            return await _context.UsersStudyResults
                 .AsNoTracking()
                 .Where(x => x.UserId == userId)
-                .ToListAsync();
-
-            var results = userStudyResEntites
-                .Select(x => UserStudyResult.Create(x.Id, x.UserId, x.TestId, x.PercentResult).UserStudyResult)
-                .ToList();
-
-            return results;
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<Guid> Create(UserStudyResult userStudyResult)
+        public async Task<Guid> CreateUserStudyResultAsync(
+            UserStudyResult userStudyResult,
+            CancellationToken cancellationToken)
         {
-            var userStudyResultEntity = new UserStudyResultEntity
+            var userStudyResultEntity = new UserStudyResult
             {
                 Id = userStudyResult.Id,
                 UserId = userStudyResult.UserId,
@@ -52,31 +43,36 @@ namespace EnglishApp.DataAccess.Repositories
                 PercentResult = userStudyResult.PercentResult
             };
 
-            await _context.AddAsync(userStudyResultEntity);
-            await _context.SaveChangesAsync();
+            await _context.AddAsync(userStudyResultEntity, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return userStudyResult.Id;
         }
 
-        public async Task<Guid> Update(Guid id, double percent)
+        public async Task<Guid> UpdateUserStudyResultAsync(
+            Guid id,
+            double percent,
+            CancellationToken cancellationToken)
         {
             var result = await _context.UsersStudyResults.FindAsync(id);
             if (result != null)
             {
                 result.PercentResult = percent;
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
 
             return id;
         }
 
-        public async Task<Guid> Delete(Guid id)
+        public async Task<Guid> DeleteUserStudyResultAsync(
+            Guid id,
+            CancellationToken cancellationToken)
         {
             var result = await _context.UsersStudyResults.FindAsync(id);
             if (result != null)
             {
                 _context.UsersStudyResults.Remove(result);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
 
             return id;
