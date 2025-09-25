@@ -50,25 +50,24 @@ function ProfilePage() {
               alt="User Avatar"
             />
           </button>
-          {user ? (
-            <div className="profile-info">
-              <h2>
-                <b>Name: </b>
-                {user[0].name}
-              </h2>
-              <h4>
-                <b>Email: </b>
-                {user[0].email}
-              </h4>
-              <EditUserPopUp
-                id={user.id}
-                name={user.name}
-                email={user.email}
-                //onPut={onUpdate}
-              />
-            </div>
-          ) : (
-            <div class="alert alert-danger" role="alert">
+            {user ? (
+                <div className="profile-info">
+                    <h2>
+                        <b>Name: </b>
+                        {user.name}
+                    </h2>
+                    <h4>
+                        <b>Email: </b>
+                        {user.email}
+                    </h4>
+                    <EditUserPopUp
+                        id={user.id}
+                        name={user.name}
+                        email={user.email}
+                    />
+                </div>
+            ) : (
+                <div className="alert alert-danger" role="alert">
               You are not authorized or not login
             </div>
           )}
