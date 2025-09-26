@@ -40,7 +40,7 @@ function ProfilePage() {
 
   return (
     <>
-      <h1>{t("accoutn-page.profile")}</h1>
+      <h1>{t("account-page.profile")}</h1>
       <div className="profile-container">
         <div className="profile-main">
           <button className="profile-avatar-btn">

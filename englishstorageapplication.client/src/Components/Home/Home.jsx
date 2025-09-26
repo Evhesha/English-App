@@ -1,29 +1,14 @@
 import "../Home/Home.css";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useTranslation } from "react-i18next";
-import {useEffect} from "react";
+import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 function Home() {
     const { t } = useTranslation();
-
-    useEffect(() => {
-        const observerCallback = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(observerCallback, {
-            threshold: 0.1
-        });
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-    }, []);
+    const { darkMode, toggleTheme } = useTheme();
 
     return (
-        <div className="minimal-home animate-on-scroll">
+        <div className={`minimal-home ${darkMode ? 'dark-theme' : ''}`}>
             {/* Hero Section */}
             <section className="hero">
                 <Container>

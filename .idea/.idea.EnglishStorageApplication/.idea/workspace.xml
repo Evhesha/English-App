@@ -13,6 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0def415e-a048-4ef7-acb5-1d7a88c1e44a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.targets" afterDir="false" />
@@ -51,7 +52,6 @@
       <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.targets" afterDir="false" />
@@ -60,6 +60,11 @@
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +92,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Evhesha/English-App.git&quot;,
-    &quot;accountId&quot;: &quot;08cd64dd-b406-4d40-99ea-5ddb3361ee3f&quot;
+    &quot;accountId&quot;: &quot;dad2e82a-7ed2-4c8c-9e49-30a9cc1b0501&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -128,8 +133,9 @@
   "keyToString": {
     ".NET Launch Settings Profile.EnglishStorageApplication.Server: https.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix/user__getting",
+    "git-widget-placeholder": "fix/translations__themes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,7 +150,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.Server: https">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="fullstack" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.Server: https" type="LaunchSettings" />
       <toRun name="App.client: run" type="js.build_tools.npm" />
@@ -272,6 +278,10 @@
       <workItem from="1748261066061" duration="33000" />
       <workItem from="1748439015716" duration="4669000" />
       <workItem from="1748852897026" duration="8183000" />
+      <workItem from="1758798335707" duration="170000" />
+      <workItem from="1758827348555" duration="648000" />
+      <workItem from="1758864037769" duration="410000" />
+      <workItem from="1758870444433" duration="3121000" />
     </task>
     <task id="LOCAL-00001" summary="Success in user login">
       <option name="closed" value="true" />
