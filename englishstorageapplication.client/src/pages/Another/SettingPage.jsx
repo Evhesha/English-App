@@ -148,10 +148,10 @@ function SettingPage() {
     return (
         <Container>
           <ToastContainer />
-            <Title>{t("accoutn-page.settings")}</Title>
+            <Title>{t("account-page.settings")}</Title>
             
             <Section>
-                <h3>{t("accoutn-page.language")}</h3>
+                <h3>{t("account-page.language")}</h3>
                 <ButtonGroup>
                     <LanguageButton 
                         active={currentLang === "en"} 
@@ -169,7 +169,7 @@ function SettingPage() {
             </Section>
 
             <Section>
-                <h3>{t("accoutn-page.theme")}</h3>
+                <h3>{t("account-page.theme")}</h3>
                 <ThemeSwitch>
                     <input 
                         type="checkbox" 
