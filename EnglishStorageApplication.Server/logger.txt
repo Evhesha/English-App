@@ -1,36 +1,10 @@
 The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[25.09.2025 22:07:45] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[25.09.2025 22:07:45] Now listening on: https://localhost:7298
-[25.09.2025 22:07:45] Now listening on: http://localhost:5020
-[25.09.2025 22:07:45] Application started. Press Ctrl+C to shut down.
-[25.09.2025 22:07:45] Hosting environment: Development
-[25.09.2025 22:07:45] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
-[25.09.2025 22:07:45] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[25.09.2025 22:09:47] Executed DbCommand (94ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-[25.09.2025 22:10:31] Executed DbCommand (400ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[25.09.2025 22:10:32] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[25.09.2025 22:10:32] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-[25.09.2025 22:10:32] Executed DbCommand (48ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[25.09.2025 22:10:33] Executed DbCommand (49ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[25.09.2025 22:10:34] Application is shutting down...
-[25.09.2025 22:10:46] 
+[28.09.2025 18:17:51] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[28.09.2025 18:17:52] Now listening on: https://localhost:7298
+[28.09.2025 18:17:52] Now listening on: http://localhost:5020
+[28.09.2025 18:17:52] Application started. Press Ctrl+C to shut down.
+[28.09.2025 18:17:52] Hosting environment: Development
+[28.09.2025 18:17:52] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
+[28.09.2025 18:17:52] Unable to connect to the SPA development server at 'https://localhost:5173'.
+[28.09.2025 18:19:58] Application is shutting down...
+[28.09.2025 18:24:42] 
