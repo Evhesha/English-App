@@ -24,7 +24,7 @@ function App() {
             <RoutesList />
           </div>
         </div>
-        <footer className="footerr">
+        <footer className="footer">
           <p className="copyright">
             © 2025 English Learning. Все права защищены.
           </p>

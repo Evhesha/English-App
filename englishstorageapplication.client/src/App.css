@@ -6,7 +6,6 @@
   --shadow-color: #e0e0e0;
 }
 
-/* Navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -31,7 +30,12 @@
   padding: 0 20px;
 }
 
-/* App Container */
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .app-container {
   display: flex;
   flex: 1;
@@ -39,7 +43,6 @@
   margin-top: 28px;
 }
 
-/* Content */
 .content {
   flex: 1;
   padding: 20px;
@@ -54,7 +57,6 @@
   transition: all 0.3s ease;
 }
 
-/* Sidebar */
 .sidebar {
   width: 250px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -65,7 +67,6 @@
   overflow-y: auto;
 }
 
-/* Global Styles */
 html,
 body {
   height: 100%;
@@ -103,7 +104,6 @@ body {
   border-color: #2980b9;
 }
 
-/* Button Styles */
 .btn {
   padding: 2px 8px;
   border-radius: 2px;
@@ -124,7 +124,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .content {
     margin: 0 20px;
@@ -145,11 +144,14 @@ body {
   background-color: #3498db;
 }
 
-.footerr {
-  background-color: #007bff00;
+.footer {
+
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
 }
 
-/* Дополнительные стили для темной темы */
 .dark-theme .nav-link {
   color: #ecf0f1;
 }
