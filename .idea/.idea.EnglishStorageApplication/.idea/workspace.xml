@@ -60,12 +60,6 @@
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +72,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="fix/translations_themes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,9 +138,9 @@
     "npm.dev.executor": "Run",
     "vue.rearranger.settings.migration": "true"
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
 }]]></component>
@@ -307,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758538076045</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: translations_themes 🙈">
+      <option name="closed" value="true" />
+      <created>1758873578135</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758873578135</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +333,7 @@
     <MESSAGE value="Success in user login" />
     <MESSAGE value="feature: build configuration&#10;&#10;Now can build front and back projects simultaneously" />
     <MESSAGE value="fix: auth changes&#10;&#10;return token to fronted in login auth controller." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: auth changes&#10;&#10;return token to fronted in login auth controller." />
+    <MESSAGE value="fix: translations_themes " />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: translations_themes " />
   </component>
 </project>
