@@ -12,22 +12,22 @@ function CreateDictCardPopUp({ onPost, userId }) {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-    setError(null); // Сброс ошибки при закрытии/открытии формы
+    setError(null);
   };
 
   const closePopup = (e) => {
-    e.preventDefault(); // Предотвращаем перезагрузку страницы
+    e.preventDefault();
     setIsOpen(false);
   };
 
   const handleCreate = async (event) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+    event.preventDefault();
     try {
       const response = await axios.post(
         `${API_BASE_URL}/api/UsersCards`,
         {
           userId: userId,
-          nameOfUserCard: name,
+          nameOfUsersCard: name,
           userCardData: text,
         }
       );

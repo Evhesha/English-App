@@ -18,7 +18,7 @@ function MyDictPage() {
       const token = Cookies.get("token");
       if (token) {
         const decodedToken = jwtDecode(token);
-        const userId = decodedToken.UserId;
+        const userId = decodedToken.userId;
 
         try {
           const response = await axios.get(`${API_BASE_URL}/api/UsersCards/${userId}`);
