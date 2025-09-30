@@ -26,7 +26,7 @@ function Card({ id, image, title, text, onDelete, onUpdate }) {
       const token = Cookies.get("token");
       if (token) {
         const decodedToken = jwtDecode(token);
-        setUserId(decodedToken.UserId);
+        setUserId(decodedToken.userId);
       }
     };
 

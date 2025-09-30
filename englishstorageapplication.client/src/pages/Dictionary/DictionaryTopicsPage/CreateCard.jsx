@@ -13,7 +13,7 @@ function CreateCard({image, title, text, onCreate}) {
       const token = Cookies.get("token");
       if (token) {
         const decodedToken = jwtDecode(token);
-        setUserId(decodedToken.UserId);
+        setUserId(decodedToken.userId);
       }
     };
 

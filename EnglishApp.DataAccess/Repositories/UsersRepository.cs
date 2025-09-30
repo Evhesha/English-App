@@ -58,6 +58,7 @@ namespace EnglishApp.DataAccess.Repositories
                 userEntity.Name = user.Name;
                 userEntity.Email = user.Email;
                 userEntity.PasswordHash = user.PasswordHash;
+                userEntity.Role = user.Role;
                 await _context.SaveChangesAsync(cancellationToken);
             }
             
