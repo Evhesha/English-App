@@ -1,4 +1,4 @@
-import "../PopUps/CreateUserPopUp.css";
+import "../CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
@@ -12,16 +12,16 @@ function CheckDictCardPopUp({ title, cardText, onPut, userId, id }) {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-    setError(null); // Сброс ошибки при закрытии/открытии формы
+    setError(null); 
   };
 
   const closePopup = (e) => {
-    e.preventDefault(); // Предотвращаем перезагрузку страницы
+    e.preventDefault();
     setIsOpen(false);
   };
 
   const handleEdit = async (event) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+    event.preventDefault();
     try {
       const response = await axios.put(
         `${API_BASE_URL}/api/UsersCards/${id}`,
@@ -32,7 +32,7 @@ function CheckDictCardPopUp({ title, cardText, onPut, userId, id }) {
         }
       );
 
-      console.log(response); // Логирование ответа сервера
+      console.log(response); 
 
       if (response.status === 200 || response.status === 201) {
         if (typeof onPut === 'function') {
@@ -44,7 +44,7 @@ function CheckDictCardPopUp({ title, cardText, onPut, userId, id }) {
         setError(response.data.message || "Ошибка при изменении карточки.");
       }
     } catch (error) {
-      console.error(error); // Логирование ошибки
+      console.error(error); 
       setError(
         error.response?.data?.message || "Ошибка при изменении карточки."
       );

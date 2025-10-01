@@ -1,4 +1,4 @@
-import CreateDictCardPop from "../../../Components/PopUps/CreateDictCardPopUp"
+import CreateDictCardPop from "../../../Components/PopUps/Dict/CreateDictCardPopUp"
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";

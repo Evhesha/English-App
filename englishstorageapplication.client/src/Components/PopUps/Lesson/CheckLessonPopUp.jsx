@@ -1,10 +1,10 @@
-import "../PopUps/CreateUserPopUp.css";
+import "../CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CheckArticlePopUp() {
+function CheckLessonPopUp() {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState(title);
   const [text, setText] = useState(cardText);
@@ -107,4 +107,4 @@ function CheckArticlePopUp() {
   </>;
 }
 
-export default CheckArticlePopUp;
+export default CheckLessonPopUp;
