@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
 
@@ -14,6 +14,9 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+import CreateLesson from "@/pages/Another/TeacherPageComponents/CreateLesson.jsx";
+import AddLesson from "./TeacherPageComponents/AddLesson.png";
 
 function TeacherPage() {
   const [activeTab, setActiveTab] = useState("articles");
@@ -91,6 +94,14 @@ function TeacherPage() {
                   onDelete={handleDeleteArticle}
               />
           ))}
+          <CreateLesson title={"Add lesson"} image={
+              <img
+                  src={AddLesson}
+                  className="card-img-top"
+                  alt="..."
+                  style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
+              />
+          }></CreateLesson>
       </Section>
     </>
   );

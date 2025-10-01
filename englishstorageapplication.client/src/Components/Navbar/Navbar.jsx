@@ -47,7 +47,7 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
                 }
             } else {
                 setIsAdmin(false);
-                setIsTeacher(false);
+                setIsTeacher(true);
             }
         };
 
