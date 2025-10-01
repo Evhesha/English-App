@@ -2,7 +2,7 @@
 
 public class Like
 {
-    public Guid Id;
-    public Guid UserId;
-    public Guid ArticleId;
+    public Guid Id { get; set; }
+    public Guid UserId { get; set; }
+    public Guid ArticleId { get; set; }
 }
