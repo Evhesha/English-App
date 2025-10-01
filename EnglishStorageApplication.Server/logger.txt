@@ -1,11 +1,76 @@
-The WebRootPath was not found: /Users/kirillzuhta/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[01.10.2025 11:48:55] The WebRootPath was not found: /Users/kirillzuhta/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[01.10.2025 11:48:55] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
-[01.10.2025 11:48:55] Now listening on: https://localhost:7298
-[01.10.2025 11:48:55] Now listening on: http://localhost:5020
-[01.10.2025 11:48:55] Application started. Press Ctrl+C to shut down.
-[01.10.2025 11:48:55] Hosting environment: Development
-[01.10.2025 11:48:55] Content root path: /Users/kirillzuhta/RiderProjects/English-App/EnglishStorageApplication.Server
-[01.10.2025 11:48:55] There was an error trying to launch the SPA proxy.
-[01.10.2025 11:50:29] Application is shutting down...
-[01.10.2025 11:50:29] 
+The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[30.09.2025 12:02:43] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[30.09.2025 12:02:43] Now listening on: https://localhost:7298
+[30.09.2025 12:02:44] Now listening on: http://localhost:5020
+[30.09.2025 12:02:44] Application started. Press Ctrl+C to shut down.
+[30.09.2025 12:02:44] Hosting environment: Development
+[30.09.2025 12:02:44] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
+[30.09.2025 12:02:44] Couldn't start the SPA development server with command 'npm run dev'.
+[30.09.2025 12:02:47] Executed DbCommand (186ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[30.09.2025 12:03:39] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[30.09.2025 12:03:44] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[30.09.2025 12:03:44] Executed DbCommand (138ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[30.09.2025 12:05:27] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[30.09.2025 12:05:27] Executed DbCommand (88ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[30.09.2025 12:05:29] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[30.09.2025 12:06:32] Executed DbCommand (112ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+[30.09.2025 12:20:05] Executed DbCommand (72ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "UsersCards" ("Id", "NameOfUsersCard", "UserCardData", "UserId")
+VALUES (@p0, @p1, @p2, @p3);
+[30.09.2025 12:20:42] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "UsersCards" ("Id", "NameOfUsersCard", "UserCardData", "UserId")
+VALUES (@p0, @p1, @p2, @p3);
+[30.09.2025 12:21:26] Executed DbCommand (516ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[30.09.2025 12:21:30] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[30.09.2025 12:21:31] Executed DbCommand (58ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[30.09.2025 12:21:56] Executed DbCommand (33ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[30.09.2025 12:22:04] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[30.09.2025 12:22:04] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[30.09.2025 12:22:12] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[30.09.2025 12:22:12] Application is shutting down...
+[30.09.2025 12:28:51] 
