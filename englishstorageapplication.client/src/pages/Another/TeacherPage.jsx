@@ -1,12 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
 
 import Section from "./TeacherPageComponents/Section";
-import TypeButton from "./TeacherPageComponents/TypeButton";
 
 import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
-import TestListElement from "../../Components/TeacherPageComp/TestListElement";
 
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
@@ -16,6 +14,9 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+import CreateLesson from "@/pages/Another/TeacherPageComponents/CreateLesson.jsx";
+import AddLesson from "./TeacherPageComponents/AddLesson.png";
 
 function TeacherPage() {
   const [activeTab, setActiveTab] = useState("articles");
@@ -83,55 +84,24 @@ function TeacherPage() {
     <>
       <h1>Teacher panel</h1>
       <Section>
-        <h3>Content</h3>
-        <ButtonGroup>
-          <TypeButton
-            active={activeTab === "articles"}
-            onClick={() => setActiveTab("articles")}
-          >
-            Articles
-          </TypeButton>
-          <TypeButton
-            active={activeTab === "tests"}
-            onClick={() => setActiveTab("tests")}
-          >
-            Tests
-          </TypeButton>
-        </ButtonGroup>
-        <p></p>
+        <h3>Your lessons</h3>
 
-        {activeTab === "articles" && (
-          
-          <>
-          <button ></button>
-          <ul>
-            //Add article pop up component
-
-            {articles.map(article => (
+          {articles.map(article => (
               <ArticleListElement
-                key={article.id}
-                id={article.id}
-                name={article.title}
-                onDelete={handleDeleteArticle}
+                  key={article.id}
+                  id={article.id}
+                  name={article.title}
+                  onDelete={handleDeleteArticle}
               />
-            ))}
-          </ul></>
-        )}
-        {activeTab === "tests" && (
-          <>
-          //Add test pop up component
-
-          <ul>
-            {tests.map(test => (
-              <TestListElement
-                key={test.id}
-                id={test.id}
-                name={test.name}
-                onDelete={handleDeleteTest}
+          ))}
+          <CreateLesson title={"Add lesson"} image={
+              <img
+                  src={AddLesson}
+                  className="card-img-top"
+                  alt="..."
+                  style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
               />
-            ))}
-          </ul></>
-        )}
+          }></CreateLesson>
       </Section>
     </>
   );

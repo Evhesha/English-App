@@ -14,7 +14,7 @@ function CreateUserPopUp({ onPost }) {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-    setError(null); // Сброс ошибки при закрытии/открытии формы
+    setError(null); 
   };
 
   const handleCreate = async (event) => {

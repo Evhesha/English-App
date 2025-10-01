@@ -1,10 +1,10 @@
-import "../PopUps/CreateUserPopUp.css";
+import "../CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CreateArticlePopUp({ onPost, userId }) {
+function CreateLessonPopUp({ onPost, userId }) {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("Name");
   const [text, setText] = useState("");
@@ -12,16 +12,16 @@ function CreateArticlePopUp({ onPost, userId }) {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-    setError(null); // Сброс ошибки при закрытии/открытии формы
+    setError(null);
   };
 
   const closePopup = (e) => {
-    e.preventDefault(); // Предотвращаем перезагрузку страницы
+    e.preventDefault(); 
     setIsOpen(false);
   };
 
   const handleCreate = async (event) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+    event.preventDefault(); 
     try {
       const response = await axios.post(
         `${API_BASE_URL}/api/UsersCards`,
@@ -52,9 +52,9 @@ function CreateArticlePopUp({ onPost, userId }) {
 
   return (
     <>
-      <div>
+      <div >
         <button className="btn btn-primary" onClick={togglePopup}>
-          Create card <i className="bi bi-plus-circle"></i>
+          Create lesson <i className="bi bi-plus-circle"></i>
         </button>
         {isOpen && (
           <div className="popup">
@@ -62,7 +62,7 @@ function CreateArticlePopUp({ onPost, userId }) {
               <span className="close" onClick={togglePopup}>
                 &times;
               </span>
-              <h3 style={{ color: "black" }}>Add card</h3>
+              <h3 style={{ color: "black" }}>Add lesson</h3>
               <form onSubmit={handleCreate}>
                 <div className="mb-3">
                   <label
@@ -70,7 +70,7 @@ function CreateArticlePopUp({ onPost, userId }) {
                     className="form-label"
                     style={{ color: "black" }}
                   >
-                    Card name
+                    Lesson name
                   </label>
                   <input
                     type="text"
@@ -86,7 +86,7 @@ function CreateArticlePopUp({ onPost, userId }) {
                     className="form-label"
                     style={{ color: "black" }}
                   >
-                    Card text
+                    Lesson text
                   </label>
                   <textarea
                     className="form-control"
@@ -120,4 +120,4 @@ function CreateArticlePopUp({ onPost, userId }) {
   );
 }
 
-export default CreateArticlePopUp;
+export default CreateLessonPopUp;

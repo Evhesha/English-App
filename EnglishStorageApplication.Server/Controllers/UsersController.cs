@@ -3,6 +3,7 @@ using EnglishApp.Core.Abstractions.User;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -57,6 +58,19 @@ namespace EnglishStorageApplication.Server.Controllers
 
             var userId = await _userService.CreateUser(user, cancellationToken);
             return Ok(userId);
+        }
+        
+        [Authorize(Roles = "Admin")]
+        [HttpPost("assign-role")]
+        public async Task<IActionResult> AssignRole(Guid userId, string role, CancellationToken ct)
+        {
+            var user = await _userService.GetUserById(userId, ct);
+            if (user == null) return NotFound();
+
+            user.Role = role;
+            await _userService.UpdateUser(user, ct);
+
+            return Ok($"Role {role} assigned to {user.Name}");
         }
         
         [HttpPut("{id:guid}")]

@@ -1,30 +1,30 @@
-import "../PopUps/CreateUserPopUp.css";
+import "../CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CreateDictCardPopUp({ onPost, userId }) {
+function CheckLessonPopUp() {
   const [isOpen, setIsOpen] = useState(false);
-  const [name, setName] = useState("Name");
-  const [text, setText] = useState("");
+  const [name, setName] = useState(title);
+  const [text, setText] = useState(cardText);
   const [error, setError] = useState(null);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-    setError(null); // Сброс ошибки при закрытии/открытии формы
+    setError(null);
   };
 
   const closePopup = (e) => {
-    e.preventDefault(); // Предотвращаем перезагрузку страницы
+    e.preventDefault();
     setIsOpen(false);
   };
 
-  const handleCreate = async (event) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+  const handleEdit = async (event) => {
+    event.preventDefault();
     try {
-      const response = await axios.post(
-        `${API_BASE_URL}/api/UsersCards`,
+      const response = await axios.put(
+        `${API_BASE_URL}/api/UsersCards/${id}`,
         {
           userId: userId,
           nameOfUserCard: name,
@@ -32,28 +32,29 @@ function CreateDictCardPopUp({ onPost, userId }) {
         }
       );
 
+      console.log(response);
+
       if (response.status === 200 || response.status === 201) {
-        if (onPost) {
-          onPost(response.data);
+        if (typeof onPut === "function") {
+          onPut(response.data);
         }
         togglePopup();
         window.location.reload();
       } else {
-        setError(response.data.message || "Ошибка при создании карточки.");
+        setError(response.data.message || "Ошибка при изменении карточки.");
       }
     } catch (error) {
-      if (error.response) {
-        setError(error.response.data.message || "Ошибка при создании карточки.");
-      } else {
-        setError("Ошибка при создании карточки.");
-      }
+      console.error(error);
+      setError(
+        error.response?.data?.message || "Ошибка при изменении карточки."
+      );
     }
   };
 
-  return (
+  return <>
     <div>
       <button className="btn btn-primary" onClick={togglePopup}>
-        Create card <i className="bi bi-plus-circle"></i>
+        Check card <i className="bi bi-cloud-check"></i>
       </button>
       {isOpen && (
         <div className="popup">
@@ -61,8 +62,8 @@ function CreateDictCardPopUp({ onPost, userId }) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-            <h3 style={{color : "black"}}>Add card</h3>
-            <form onSubmit={handleCreate}>
+            <h3 style={{color : "black"}}>Check card</h3>
+            <form onSubmit={handleEdit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label" style={{color : "black"}}>
                   Card name
@@ -103,7 +104,7 @@ function CreateDictCardPopUp({ onPost, userId }) {
         </div>
       )}
     </div>
-  );
+  </>;
 }
 
-export default CreateDictCardPopUp;
+export default CheckLessonPopUp;

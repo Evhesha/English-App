@@ -1,79 +1,123 @@
+/* Sidebar.css */
+:root {
+    --sidebar-text-color: #000000;
+    --sidebar-bg-color: rgba(255, 255, 255, 0.85);
+    --sidebar-hover-bg: rgba(0, 122, 255, 0.12);
+    --sidebar-border-color: rgba(0, 0, 0, 0.1);
+}
+
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 html {
-  height: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 main {
-  height: 100vh;
-  height: -webkit-fill-available;
-  max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .dropdown-toggle {
-  outline: 0;
+    outline: 0;
 }
 
 .btn-toggle {
-  padding: 0.25rem 0.5rem;
-  font-weight: 600;
-  color: var(--bs-emphasis-color);
-  background-color: transparent;
+    padding: 0.25rem 0.5rem;
+    font-weight: 600;
+    color: var(--sidebar-text-color);
+    background-color: transparent;
 }
 .btn-toggle:hover,
 .btn-toggle:focus {
-  color: rgba(var(--bs-emphasis-color-rgb), 0.85);
-  background-color: var(--bs-tertiary-bg);
+    color: var(--sidebar-text-color);
+    background-color: var(--sidebar-hover-bg);
 }
 
 .btn-toggle::before {
-  width: 1.25em;
-  line-height: 0;
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
-  transition: transform 0.35s ease;
-  transform-origin: 0.5em 50%;
-}
-
-[data-bs-theme="dark"] .btn-toggle::before {
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    width: 1.25em;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform 0.35s ease;
+    transform-origin: 0.5em 50%;
 }
 
 .btn-toggle[aria-expanded="true"] {
-  color: rgba(var(--bs-emphasis-color-rgb), 0.85);
+    color: var(--sidebar-text-color);
 }
 .btn-toggle[aria-expanded="true"]::before {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .btn-toggle-nav a {
-  padding: 0.1875rem 0.5rem;
-  margin-top: 0.125rem;
-  margin-left: 1.25rem;
+    padding: 0.1875rem 0.5rem;
+    margin-top: 0.125rem;
+    margin-left: 1.25rem;
+    color: var(--sidebar-text-color);
+    text-decoration: none;
 }
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
-  background-color: var(--bs-tertiary-bg);
+    background-color: var(--sidebar-hover-bg);
+    color: var(--sidebar-text-color);
 }
 
 .scrollarea {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
 .large-text {
-  font-size: 15px;
+    font-size: 15px;
+    color: var(--sidebar-text-color);
 }
 
-.light-theme .text,
-.light-theme .btn-toggle-nav a {
-  color: #333;
+/* ТЕМНАЯ ТЕМА - КАК В НАВБАРЕ */
+.dark-theme {
+    --sidebar-text-color: #FFFFFF;
+    --sidebar-bg-color: rgba(30, 30, 30, 0.85);
+    --sidebar-hover-bg: rgba(0, 122, 255, 0.15);
+    --sidebar-border-color: rgba(255, 255, 255, 0.1);
 }
 
-.dark-theme .text,
-.dark-theme .btn-toggle-nav a {
-  color: #ffffff;
+.dark-theme .btn-toggle,
+.dark-theme .btn-toggle-nav a,
+.dark-theme .large-text {
+    color: var(--sidebar-text-color) !important;
+}
+
+.dark-theme .btn-toggle::before {
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+}
+
+.dark-theme .btn-toggle:hover,
+.dark-theme .btn-toggle:focus,
+.dark-theme .btn-toggle-nav a:hover,
+.dark-theme .btn-toggle-nav a:focus {
+    background-color: var(--sidebar-hover-bg) !important;
+    color: var(--sidebar-text-color) !important;
+}
+
+/* Все элементы сайдбара */
+.dark-theme .flex-shrink-0,
+.dark-theme .flex-shrink-0 h1,
+.dark-theme .flex-shrink-0 h2,
+.dark-theme .flex-shrink-0 h3,
+.dark-theme .flex-shrink-0 h4,
+.dark-theme .flex-shrink-0 h5,
+.dark-theme .flex-shrink-0 h6,
+.dark-theme .flex-shrink-0 p,
+.dark-theme .flex-shrink-0 span,
+.dark-theme .flex-shrink-0 div,
+.dark-theme .flex-shrink-0 li,
+.dark-theme .flex-shrink-0 a,
+.dark-theme .flex-shrink-0 strong,
+.dark-theme .flex-shrink-0 b,
+.dark-theme .flex-shrink-0 i,
+.dark-theme .flex-shrink-0 em {
+    color: var(--sidebar-text-color) !important;
 }

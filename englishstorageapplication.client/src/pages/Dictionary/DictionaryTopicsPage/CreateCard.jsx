@@ -1,4 +1,4 @@
-import CreateDictCardPop from "../../../Components/PopUps/CreateDictCardPopUp"
+import CreateDictCardPop from "../../../Components/PopUps/Dict/CreateDictCardPopUp"
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
@@ -13,7 +13,7 @@ function CreateCard({image, title, text, onCreate}) {
       const token = Cookies.get("token");
       if (token) {
         const decodedToken = jwtDecode(token);
-        setUserId(decodedToken.UserId);
+        setUserId(decodedToken.userId);
       }
     };
 

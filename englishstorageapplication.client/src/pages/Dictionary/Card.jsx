@@ -1,4 +1,4 @@
-import CheckDictCardPopUp from "../../Components/PopUps/CheckDictCardPopUp";
+import CheckDictCardPopUp from "../../Components/PopUps/Dict/CheckDictCardPopUp";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
@@ -26,7 +26,7 @@ function Card({ id, image, title, text, onDelete, onUpdate }) {
       const token = Cookies.get("token");
       if (token) {
         const decodedToken = jwtDecode(token);
-        setUserId(decodedToken.UserId);
+        setUserId(decodedToken.userId);
       }
     };
 

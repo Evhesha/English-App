@@ -1,7 +1,5 @@
 ﻿using EnglishApp.Application.AppServices;
-using EnglishApp.Core.Abstractions.AdminRole;
 using EnglishApp.Core.Abstractions.Article;
-using EnglishApp.Core.Abstractions.TeacherRole;
 using EnglishApp.Core.Abstractions.User;
 using EnglishApp.Core.Abstractions.UserCard;
 using EnglishApp.Core.Abstractions.UserStudyResult;
@@ -12,7 +10,7 @@ using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.DataAccess.Repositories;
 using EnglishStorageApplication.EnglishApp.Infrastructure;
 
-namespace EnglishStorageApplication.EnglishApp.Extensions
+namespace EnglishStorageApplication.Server.Extensions
 {
     public static class ServiceExtensions
     {
@@ -29,12 +27,6 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
 
             services.AddScoped<IArticleService, ArticleService>();
             services.AddScoped<IArticleRepository, ArticleRepository>();
-
-            services.AddScoped<IAdminRoleService, AdminRoleService>();
-            services.AddScoped<IAdminRoleRepository, AdminRoleRepository>();
-
-            services.AddScoped<ITeacherRoleSevice, TeacherRoleSevice>();
-            services.AddScoped<ITeacherRoleRepository, TeacherRoleRepository>();
 
             services.AddScoped<JwtProvider>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();

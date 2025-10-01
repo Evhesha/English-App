@@ -22,7 +22,7 @@ function ProfilePage() {
       if (token) {
         // Use jwt-decode to decode the token
         const decodedToken = jwtDecode(token);
-        const id = decodedToken.UserId; // Extract id from token
+        const id = decodedToken.userId; // Extract id from token
         try {
           const response = await axios.get(
             `${API_BASE_URL}/api/Users/${id}`
@@ -40,7 +40,7 @@ function ProfilePage() {
 
   return (
     <>
-      <h1>{t("accoutn-page.profile")}</h1>
+      <h1>{t("account-page.profile")}</h1>
       <div className="profile-container">
         <div className="profile-main">
           <button className="profile-avatar-btn">

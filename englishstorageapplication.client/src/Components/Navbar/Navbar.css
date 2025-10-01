@@ -1,211 +1,261 @@
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2980b9;
-  --text-color: #333;
-  --bg-color: #f8f9fa;
-  --shadow-color: #e0e0e0;
-  --hover-color: #2980b9;
- }
- 
- .navbar {
-  background: var(--bg-color);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 0;
-  transition: all 0.3s ease;
- }
- 
- .navbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  height: 60px; 
-  padding: 0 20px;
- }
- 
- .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
- }
- 
- .navbar-left {
-  display: flex;
-  align-items: center;
- }
- 
- .nav-list {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
- }
- 
- .nav-link {
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
-  transition: all 0.2s ease;
-  font-size: 20px;
- }
- 
- .nav-link:hover {
-  color: var(--primary-color);
- }
- 
- .navbar-right {
-  display: flex;
-  align-items: center;
-  margin-left: 700px; 
- }
- 
- .btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 3px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-decoration: none;
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 15px;
-  min-width: 100px;
- }
- 
- .btn-primary {
-  background-color: var(--primary-color);
-  color: white;
- }
+    --primary-color: #007AFF;   
+    --secondary-color: #5856D6;
+    --text-color: #000000;
+    --bg-color: rgba(255, 255, 255, 0.85);
+    --glass-effect: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(0, 0, 0, 0.1);
+}
 
- .btn-outline {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
- }
- 
- .btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
- 
- .btn-primary:hover {
-  background-color: var(--secondary-color);
- }
- 
- .btn-outline:hover {
-  background-color: rgba(52, 152, 219, 0.1);
- }
- 
- .toggle-btn {
-  background: none;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-right: 10px;
-  color: var(--text-color);
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin-top: 5px;
-  border-radius: 50%;
+.navbar {
+    background: var(--glass-effect);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-bottom: 0.5px solid var(--border-color);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    padding: 0 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 6px;
+}
+
+.nav-link {
+    white-space: nowrap;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: all 0.25s ease;
+    font-size: 15px;
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 122, 255, 0.12);
+    color: var(--primary-color);
+}
+
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    flex: 1;
+    margin-left: 500px;
+}
+
+
+.btn-apple {
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    letter-spacing: -0.1px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+
+.btn-login {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-login:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.03);
+}
+
+
+.btn-signup {
+    background: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-signup:hover {
+    transform: scale(1.03);
+}
+
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-color);
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    font-weight: 300;
 }
 
 .toggle-btn:hover {
-  transform: scale(1.1);
-  background-color: var(--primary-color);
-  color: white;
+    background-color: rgba(0, 122, 255, 0.12);
 }
 
-.toggle-btn.open {
-  transform: rotate(90deg);
-}
 
-.toggle-btn.open:hover {
-  background-color: var(--secondary-color);
-  color: white;
-}
- 
- @media (max-width: 768px) {
-  .navbar-content {
-   justify-content: space-between;
-   
-  }
- 
-  .nav-list {
-   display: none;
-  }
- 
-  .navbar-right {
-   display: flex;
-   align-items: center;
-   margin-left: auto;
-  }
- 
-  .btn {
-   padding: 4px 8px;
-   font-size: 11px;
-   
-  }
- }
-
- .theme-toggle-btn {
-  background: transparent;
-  border: none;
-  color: var(--bs-primary);
-  padding: 0.5rem;
-  margin-right: 1rem;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    padding: 6px;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .theme-toggle-btn:hover {
-  background: rgba(var(--bs-primary-rgb), 0.1);
+    background-color: rgba(0, 122, 255, 0.12);
 }
 
 .theme-toggle-btn i {
-  font-size: 1.2rem;
+    font-size: 16px;
 }
 
-/* Стили для темной темы */
+
+.profile-link {
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-link:hover {
+    background-color: rgba(0, 122, 255, 0.12);
+}
+
+.profile-link i {
+    font-size: 24px;
+}
+
+
 .dark-theme {
-  --bs-body-bg: #212529;
-  --bs-body-color: #f8f9fa;
+    --text-color: #FFFFFF;
+    --bg-color: rgba(30, 30, 30, 0.85);
+    --glass-effect: rgba(30, 30, 30, 0.8);
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
 .dark-theme .navbar {
-  background-color: #343a40;
+    background: var(--glass-effect);
 }
 
 .dark-theme .nav-link {
-  color: #f8f9fa;
+    color: #FFFFFF;
 }
 
 .dark-theme .nav-link:hover {
-  color: var(--bs-primary);
+    background-color: rgba(0, 122, 255, 0.15);
+    color: var(--primary-color);
 }
 
-.dark-theme .theme-toggle-btn {
-  color: #f8f9fa;
+.dark-theme .toggle-btn:hover,
+.dark-theme .theme-toggle-btn:hover,
+.dark-theme .profile-link:hover {
+    background-color: rgba(0, 122, 255, 0.15);
 }
 
-.dark-theme .btn-outline-primary {
-  color: var(--bs-primary);
-  border-color: var(--bs-primary);
+
+.dark-theme .btn-login {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
-.dark-theme .btn-outline-primary:hover {
-  color: #fff;
-  background-color: var(--bs-primary);
+.dark-theme .btn-login:hover {
+    background: var(--primary-color);
+    color: white;
 }
- 
+
+.dark-theme .btn-signup {
+    background: var(--primary-color);
+    color: white !important; 
+    border: 1px solid var(--primary-color);
+}
+
+.dark-theme .btn-signup:hover {
+    background: #0066dd;
+    color: white !important;
+}
+
+
+.dark-theme .btn-signup i {
+    color: white !important;
+}
+
+.dark-theme .btn-login i {
+    color: var(--primary-color);
+}
+
+.dark-theme .btn-login:hover i {
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-content {
+        padding: 0 16px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .navbar-right {
+        gap: 6px;
+        margin-left: 0;
+    }
+
+    .btn-apple {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
