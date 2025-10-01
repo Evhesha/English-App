@@ -135,6 +135,21 @@
           }
         }
       },
+      "Microsoft.AspNetCore.SpaProxy/8.0.20": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Microsoft.CodeCoverage/17.12.0": {
         "type": "package",
         "compile": {
@@ -1287,6 +1302,21 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
         "microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.SpaProxy/8.0.20": {
+      "sha512": "TxWBxx2PiuaL1c5fpQdccNqnSe+Ck+R8EDd2GHG7jo6rlSVqFugceix/QckLmIn0wAQJhiWz//s+O5o/WcbBbQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/Microsoft.AspNetCore.SpaProxy.targets",
+        "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll",
+        "microsoft.aspnetcore.spaproxy.8.0.20.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
     "Microsoft.CodeCoverage/17.12.0": {
@@ -2850,32 +2880,40 @@
     ]
   },
   "packageFolders": {
-    "/Users/kirillzuhta/.nuget/packages/": {}
+    "C:\\Users\\EvGenii\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Tests/EnglishApp.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
       "projectName": "EnglishApp.Tests",
-      "projectPath": "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Tests/EnglishApp.Tests.csproj",
-      "packagesPath": "/Users/kirillzuhta/.nuget/packages/",
-      "outputPath": "/Users/kirillzuhta/RiderProjects/English-App/EnglishApp.Tests/obj/",
+      "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\EnglishApp.Tests.csproj",
+      "packagesPath": "C:\\Users\\EvGenii\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishApp.Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/kirillzuhta/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\EvGenii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/kirillzuhta/RiderProjects/English-App/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj": {
-              "projectPath": "/Users/kirillzuhta/RiderProjects/English-App/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj"
+            "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj": {
+              "projectPath": "C:\\Users\\EvGenii\\source\\repos\\English-App\\EnglishStorageApplication.Server\\EnglishStorageApplication.Server.csproj"
             }
           }
         }
@@ -2931,33 +2969,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1801",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Failed to retrieve information about 'Microsoft.AspNetCore.SpaProxy' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.spaproxy/index.json'.",
-      "libraryId": "Microsoft.AspNetCore.SpaProxy"
-    },
-    {
-      "code": "NU1801",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Failed to retrieve information about 'Microsoft.AspNetCore.SpaProxy' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.spaproxy/index.json'.",
-      "libraryId": "Microsoft.AspNetCore.SpaProxy"
-    },
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package Microsoft.AspNetCore.SpaProxy. No packages exist with this id in source(s): nuget.org",
-      "libraryId": "Microsoft.AspNetCore.SpaProxy",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

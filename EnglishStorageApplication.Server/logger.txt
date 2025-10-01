@@ -1,41 +1,10 @@
-Executed DbCommand (62ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1 FROM pg_catalog.pg_class c
-    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
-    WHERE n.nspname='public' AND
-          c.relname='__EFMigrationsHistory'
-)
-[01.10.2025 13:07:56] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "MigrationId", "ProductVersion"
-FROM "__EFMigrationsHistory"
-ORDER BY "MigrationId";
-[01.10.2025 13:07:56] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1 FROM pg_catalog.pg_class c
-    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
-    WHERE n.nspname='public' AND
-          c.relname='__EFMigrationsHistory'
-)
-[01.10.2025 13:07:56] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT EXISTS (
-    SELECT 1 FROM pg_catalog.pg_class c
-    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
-    WHERE n.nspname='public' AND
-          c.relname='__EFMigrationsHistory'
-)
-[01.10.2025 13:07:56] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "MigrationId", "ProductVersion"
-FROM "__EFMigrationsHistory"
-ORDER BY "MigrationId";
-[01.10.2025 13:07:56] Applying migration '20251001100720_Migration.Like'.
-[01.10.2025 13:07:56] Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-CREATE TABLE "Likes" (
-    "Id" uuid NOT NULL,
-    "UserId" uuid NOT NULL,
-    "ArticleId" uuid NOT NULL,
-    CONSTRAINT "PK_Likes" PRIMARY KEY ("Id")
-);
-[01.10.2025 13:07:56] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
-VALUES ('20251001100720_Migration.Like', '8.0.10');
-[01.10.2025 13:07:56] 
+The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[01.10.2025 21:42:16] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[01.10.2025 21:42:17] Now listening on: https://localhost:7298
+[01.10.2025 21:42:17] Now listening on: http://localhost:5020
+[01.10.2025 21:42:17] Application started. Press Ctrl+C to shut down.
+[01.10.2025 21:42:17] Hosting environment: Development
+[01.10.2025 21:42:17] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
+[01.10.2025 21:42:17] Application is shutting down...
+[01.10.2025 21:42:48] There was an error trying to launch the SPA proxy.
+[01.10.2025 21:42:49] 
