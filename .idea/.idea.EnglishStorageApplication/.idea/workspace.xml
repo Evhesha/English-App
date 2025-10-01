@@ -68,7 +68,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix/user_getting" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,7 +138,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.Server: https">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="fullstack" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.Server: https" type="LaunchSettings" />
       <toRun name="App.client: run" type="js.build_tools.npm" />
@@ -270,6 +270,7 @@
       <workItem from="1758827348555" duration="648000" />
       <workItem from="1758864037769" duration="410000" />
       <workItem from="1758870444433" duration="3121000" />
+      <workItem from="1759310134546" duration="2045000" />
     </task>
     <task id="LOCAL-00001" summary="Success in user login">
       <option name="closed" value="true" />

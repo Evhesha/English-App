@@ -1,5 +1,7 @@
 {
   "navbar": {
+    "login": "Login",
+    "signup": "Sing-Up",
     "home": "Home",
     "about": "About",
     "admin": "Admin",
