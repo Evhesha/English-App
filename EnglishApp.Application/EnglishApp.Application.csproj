@@ -12,8 +12,4 @@
     <ProjectReference Include="..\EnglishApp.Infrastructure\EnglishApp.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTOs\ArticleDTOs\" />
-  </ItemGroup>
-
 </Project>

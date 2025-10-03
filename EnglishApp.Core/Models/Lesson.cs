@@ -1,6 +1,6 @@
 ﻿namespace EnglishApp.Core.Models
 {
-    public class Article
+    public class Lesson
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
