@@ -6,7 +6,7 @@ namespace EnglishApp.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Article> Articles { get; set; }
+        public DbSet<Lesson> Articles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserCard> UsersCards { get; set; }
         public DbSet<UserStudyResult> UsersStudyResults { get; set; }

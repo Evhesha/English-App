@@ -1,27 +1,26 @@
-﻿using EnglishApp.Core.Abstractions.Article;
+﻿using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.DataAccess.Repositories
 {
-    public class ArticleRepository : IArticleRepository
+    public class LessonRepository : ILessonRepository
     {
         private readonly ApplicationDbContext _context;
 
-        public ArticleRepository(ApplicationDbContext applicationDbContext)
+        public LessonRepository(ApplicationDbContext applicationDbContext)
         {
             _context = applicationDbContext;
         }
 
-        public async Task<List<Article>> GetArticlesAsync(CancellationToken cancellationToken)
+        public async Task<List<Lesson>> GetLessonsAsync(CancellationToken cancellationToken)
         {
              return await _context.Articles
                 .AsNoTracking()
                 .ToListAsync(cancellationToken);
         }
 
-        public async Task<List<Article>> GetUserArticlesAsync(
+        public async Task<List<Lesson>> GetUserLessonsAsync(
             Guid userId,
             CancellationToken cancellationToken)
         {
@@ -31,17 +30,17 @@ namespace EnglishApp.DataAccess.Repositories
                 .ToListAsync(cancellationToken);
         }
 
-        public async Task<Guid> CreateArticleAsync(
-            Article article,
+        public async Task<Guid> CreateLessonAsync(
+            Lesson lesson,
             CancellationToken cancellationToken)
         {
-            var atricleEntity = new Article
+            var atricleEntity = new Lesson
             {
-                Id = article.Id,
-                UserId = article.UserId,
-                Title = article.Title,
-                Text = article.Text,
-                Images = article.Images
+                Id = lesson.Id,
+                UserId = lesson.UserId,
+                Title = lesson.Title,
+                Text = lesson.Text,
+                Images = lesson.Images
             };
 
             await _context.Articles.AddAsync(atricleEntity, cancellationToken);
@@ -50,22 +49,22 @@ namespace EnglishApp.DataAccess.Repositories
             return atricleEntity.Id;
         }
 
-        public async Task<Guid> UpdateArticleAsync(
-            Article article,
+        public async Task<Guid> UpdateLessonAsync(
+            Lesson lesson,
             CancellationToken cancellationToken)
         {
-            var articleEntity = await _context.Articles.FindAsync(article.Id);
+            var articleEntity = await _context.Articles.FindAsync(lesson.Id);
             if (articleEntity != null)
             {
-                articleEntity.Title = article.Title;
-                articleEntity.Text = article.Text;
+                articleEntity.Title = lesson.Title;
+                articleEntity.Text = lesson.Text;
                 await _context.SaveChangesAsync(cancellationToken);
             }
 
             return articleEntity.Id;
         }
 
-        public async Task<Guid> DeleteArticleAsync(
+        public async Task<Guid> DeleteLessonAsync(
             Guid id,
             CancellationToken cancellationToken)
         {

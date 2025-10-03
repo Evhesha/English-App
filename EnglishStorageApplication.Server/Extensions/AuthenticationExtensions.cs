@@ -35,7 +35,39 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
                         RoleClaimType = ClaimTypes.Role,
                         NameClaimType = ClaimTypes.Name
                     };
+
+                    // ⚡ Здесь мы добавляем поддержку кук
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            // Сначала пытаемся взять токен из заголовка
+                            var token = context.Request.Headers["Authorization"].FirstOrDefault();
+                            if (!string.IsNullOrEmpty(token) && token.StartsWith("Bearer "))
+                            {
+                                context.Token = token.Substring("Bearer ".Length).Trim();
+                            }
+
+                            // Если в заголовке не нашли, пробуем взять из куки
+                            if (string.IsNullOrEmpty(context.Token))
+                            {
+                                var cookieToken = context.Request.Cookies["token"];
+                                if (!string.IsNullOrEmpty(cookieToken))
+                                {
+                                    context.Token = cookieToken;
+                                }
+                            }
+
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdmin", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("RequireTeacher", policy => policy.RequireRole("Teacher"));
+            });
 
             return services;
         }

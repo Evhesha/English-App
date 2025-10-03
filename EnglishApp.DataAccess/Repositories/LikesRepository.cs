@@ -20,19 +20,19 @@ public class LikesRepository : ILikesRepository
             .CountAsync(l => l.ArticleId == articleId, cancellationToken);
     }
 
-    public async Task<Like> AddLikeAsync(Guid articleId, Guid userId, CancellationToken cancellationToken)
+    public async Task<Like> AddLikeAsync(Like like, CancellationToken cancellationToken)
     {
         var exists = await _context.Likes
-            .AnyAsync(l => l.ArticleId == articleId && l.UserId == userId, cancellationToken);
+            .AnyAsync(l => l.ArticleId == like.ArticleId && l.UserId == like.UserId, cancellationToken);
 
         if (exists)
             throw new InvalidOperationException("User has already liked this article.");
 
         var likeEntity = new Like
         {
-            Id = Guid.NewGuid(),
-            ArticleId = articleId,
-            UserId = userId
+            Id = like.Id,
+            ArticleId = like.ArticleId,
+            UserId = like.UserId
         };
 
         await _context.Likes.AddAsync(likeEntity, cancellationToken);
