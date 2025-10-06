@@ -1,5 +1,8 @@
-﻿using EnglishApp.Core.Abstractions.Lesson;
+﻿using EnglishApp.Application.ParameterExtensions;
+using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Models;
+using EnglishApp.Core.Params;
+using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.Application.AppServices
 {
@@ -17,9 +20,30 @@ namespace EnglishApp.Application.AppServices
             return await _lessonRepository.GetLessonsAsync(cancellationToken);
         }
 
+        public async Task<List<Lesson>> GetLessonsWithParameters(
+            LessonFilter lessonFilter,
+            SortParams sortParams,
+            PageParams pageParams,
+            CancellationToken cancellationToken)
+        {
+            var query = _lessonRepository.GetLessonsQueryable();
+
+            query = query
+                .Filter(lessonFilter)
+                .Sort(sortParams)
+                .Page(pageParams);
+
+            return await query.ToListAsync();
+        }
+
         public async Task<List<Lesson>> GetUserLessons(Guid userId, CancellationToken cancellationToken)
         {
             return await _lessonRepository.GetUserLessonsAsync(userId, cancellationToken);
+        }
+
+        public async Task<Lesson?> GetUserLessonByLessonId(Guid lessonId, CancellationToken cancellationToken)
+        {
+            return await _lessonRepository.GetUserLessonByLessonIdAsync(lessonId, cancellationToken);
         }
 
         public async Task<Guid> CreateLesson(Lesson lesson, CancellationToken cancellationToken)

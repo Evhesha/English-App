@@ -8,5 +8,7 @@
         public string Text { get; set; } = string.Empty;
         public bool isPublic = true;
         public required List<byte[]> Images { get; set; }
+        public int WatchCount { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }
