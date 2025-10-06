@@ -2,10 +2,15 @@
 
 public interface ILessonRepository
 {
+    IQueryable<Models.Lesson> GetLessonsQueryable();
     Task<List<Models.Lesson>> GetLessonsAsync(CancellationToken cancellationToken);
 
     Task<List<Models.Lesson>> GetUserLessonsAsync(
         Guid userId,
+        CancellationToken cancellationToken);
+
+    Task<Models.Lesson?> GetUserLessonByLessonIdAsync(
+        Guid lessonId,
         CancellationToken cancellationToken);
 
     Task<Guid> CreateLessonAsync(

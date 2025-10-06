@@ -13,9 +13,14 @@ namespace EnglishApp.DataAccess.Repositories
             _context = applicationDbContext;
         }
 
+        public IQueryable<Lesson> GetLessonsQueryable()
+        {
+            return _context.Lessons.AsQueryable();
+        }
+
         public async Task<List<Lesson>> GetLessonsAsync(CancellationToken cancellationToken)
         {
-             return await _context.Articles
+             return await _context.Lessons
                 .AsNoTracking()
                 .ToListAsync(cancellationToken);
         }
@@ -24,10 +29,32 @@ namespace EnglishApp.DataAccess.Repositories
             Guid userId,
             CancellationToken cancellationToken)
         {
-            return await _context.Articles
+            return await _context.Lessons
                 .AsNoTracking()
                 .Where(x => x.UserId == userId)
                 .ToListAsync(cancellationToken);
+        }
+        
+        public async Task<Lesson?> GetUserLessonByLessonIdAsync(
+            Guid lessonId,
+            CancellationToken cancellationToken)
+        {
+            var lesson = await _context.Lessons
+                .AsNoTracking()
+                .FirstOrDefaultAsync(l => l.Id == lessonId, cancellationToken);
+
+            if (lesson != null)
+            {
+                await _context.Lessons
+                    .Where(l => l.Id == lessonId)
+                    .ExecuteUpdateAsync(setters => 
+                            setters.SetProperty(l => l.WatchCount, l => l.WatchCount + 1),
+                        cancellationToken);
+                
+                lesson.WatchCount++;
+            }
+
+            return lesson;
         }
 
         public async Task<Guid> CreateLessonAsync(
@@ -40,10 +67,11 @@ namespace EnglishApp.DataAccess.Repositories
                 UserId = lesson.UserId,
                 Title = lesson.Title,
                 Text = lesson.Text,
-                Images = lesson.Images
+                Images = lesson.Images,
+                CreatedDate = lesson.CreatedDate
             };
 
-            await _context.Articles.AddAsync(atricleEntity, cancellationToken);
+            await _context.Lessons.AddAsync(atricleEntity, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
 
             return atricleEntity.Id;
@@ -53,7 +81,7 @@ namespace EnglishApp.DataAccess.Repositories
             Lesson lesson,
             CancellationToken cancellationToken)
         {
-            var articleEntity = await _context.Articles.FindAsync(lesson.Id);
+            var articleEntity = await _context.Lessons.FindAsync(lesson.Id);
             if (articleEntity != null)
             {
                 articleEntity.Title = lesson.Title;
@@ -68,12 +96,12 @@ namespace EnglishApp.DataAccess.Repositories
             Guid id,
             CancellationToken cancellationToken)
         {
-            var article = await _context.Articles
+            var article = await _context.Lessons
                 .FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
 
             if (article != null)
             {
-                _context.Articles.Remove(article);
+                _context.Lessons.Remove(article);
                 await _context.SaveChangesAsync(cancellationToken);
             }
 
