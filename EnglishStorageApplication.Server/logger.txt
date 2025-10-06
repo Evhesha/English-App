@@ -1,47 +1,66 @@
 The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[06.10.2025 14:09:17] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[06.10.2025 14:09:17] Now listening on: https://localhost:7298
-[06.10.2025 14:09:17] Now listening on: http://localhost:5020
-[06.10.2025 14:09:17] Application started. Press Ctrl+C to shut down.
-[06.10.2025 14:09:17] Hosting environment: Development
-[06.10.2025 14:09:17] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
-[06.10.2025 14:09:17] Executed DbCommand (201ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[06.10.2025 22:15:31] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[06.10.2025 22:15:32] Now listening on: https://localhost:7298
+[06.10.2025 22:15:32] Now listening on: http://localhost:5020
+[06.10.2025 22:15:32] Application started. Press Ctrl+C to shut down.
+[06.10.2025 22:15:33] Hosting environment: Development
+[06.10.2025 22:15:33] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
+[06.10.2025 22:15:33] Executed DbCommand (62ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
-WHERE l."Title" = @__lessonFilter_Title_0
-ORDER BY l."Title"
-LIMIT @__p_2 OFFSET @__p_1
-[06.10.2025 14:09:40] Executed DbCommand (13ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Title" = @__lessonFilter_Title_0
-ORDER BY l."Title"
-LIMIT @__p_2 OFFSET @__p_1
-[06.10.2025 14:09:52] Executed DbCommand (6ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__lessonId_0
+[06.10.2025 22:17:15] Unable to connect to the SPA development server at 'https://localhost:5173'.
+[06.10.2025 22:17:38] Executed DbCommand (63ms) [Parameters=[@__articleId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Likes" AS l
+WHERE l."ArticleId" = @__articleId_0
+[06.10.2025 22:18:21] Executed DbCommand (3ms) [Parameters=[@__articleId_0='?' (DbType = Guid), @__userId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."ArticleId", l."UserId"
+FROM "Likes" AS l
+WHERE l."ArticleId" = @__articleId_0 AND l."UserId" = @__userId_1
 LIMIT 1
-[06.10.2025 14:10:10] Executed DbCommand (37ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-UPDATE "Lessons" AS l
-SET "WatchCount" = l."WatchCount" + 1
-WHERE l."Id" = @__lessonId_0
-[06.10.2025 14:10:10] Executed DbCommand (8ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Title" = @__lessonFilter_Title_0
-ORDER BY l."Title"
-LIMIT @__p_2 OFFSET @__p_1
-[06.10.2025 14:10:15] Executed DbCommand (47ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[06.10.2025 14:10:54] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-ORDER BY l."Title"
-LIMIT @__p_0 OFFSET @__p_0
-[06.10.2025 14:10:59] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[06.10.2025 14:11:24] Application is shutting down...
-[06.10.2025 14:11:43] 
+[06.10.2025 22:18:58] Executed DbCommand (4ms) [Parameters=[@__like_ArticleId_0='?' (DbType = Guid), @__like_UserId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Likes" AS l
+    WHERE l."ArticleId" = @__like_ArticleId_0 AND l."UserId" = @__like_UserId_1)
+[06.10.2025 22:19:24] Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Likes" ("Id", "ArticleId", "UserId")
+VALUES (@p0, @p1, @p2);
+[06.10.2025 22:19:25] Executed DbCommand (28ms) [Parameters=[@__articleId_0='?' (DbType = Guid), @__userId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."ArticleId", l."UserId"
+FROM "Likes" AS l
+WHERE l."ArticleId" = @__articleId_0 AND l."UserId" = @__userId_1
+LIMIT 1
+[06.10.2025 22:19:31] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+DELETE FROM "Likes"
+WHERE "Id" = @p0;
+[06.10.2025 22:19:31] Executed DbCommand (7ms) [Parameters=[@__articleId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Likes" AS l
+WHERE l."ArticleId" = @__articleId_0
+[06.10.2025 22:19:36] Executed DbCommand (3ms) [Parameters=[@__articleId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Likes" AS l
+WHERE l."ArticleId" = @__articleId_0
+[06.10.2025 22:19:39] Executed DbCommand (4ms) [Parameters=[@__like_ArticleId_0='?' (DbType = Guid), @__like_UserId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Likes" AS l
+    WHERE l."ArticleId" = @__like_ArticleId_0 AND l."UserId" = @__like_UserId_1)
+[06.10.2025 22:19:50] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Likes" ("Id", "ArticleId", "UserId")
+VALUES (@p0, @p1, @p2);
+[06.10.2025 22:19:50] Executed DbCommand (3ms) [Parameters=[@__articleId_0='?' (DbType = Guid), @__userId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."ArticleId", l."UserId"
+FROM "Likes" AS l
+WHERE l."ArticleId" = @__articleId_0 AND l."UserId" = @__userId_1
+LIMIT 1
+[06.10.2025 22:20:01] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+DELETE FROM "Likes"
+WHERE "Id" = @p0;
+[06.10.2025 22:20:01] Executed DbCommand (2ms) [Parameters=[@__articleId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Likes" AS l
+WHERE l."ArticleId" = @__articleId_0
+[06.10.2025 22:20:07] Application is shutting down...
+[06.10.2025 22:20:13] 
