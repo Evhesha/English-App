@@ -19,7 +19,7 @@ public class LikesController : ControllerBase
     [HttpGet("{id:guid}")]
     public async Task<ActionResult<int>> CountArticleLikes(Guid id, CancellationToken cancellationToken)
     {
-        var likes = await _likeService.CountArticleLikes(id, cancellationToken);
+        var likes = await _likeService.CountLessonLikes(id, cancellationToken);
         return Ok(likes);
     }
     
