@@ -13,7 +13,7 @@ public class LikesRepository : ILikesRepository
         _context = context;
     }
 
-    public async Task<int> CountArticleLikesAsync(Guid articleId, CancellationToken cancellationToken)
+    public async Task<int> CountLessonLikesAsync(Guid articleId, CancellationToken cancellationToken)
     {
         return await _context.Likes
             .AsNoTracking()
