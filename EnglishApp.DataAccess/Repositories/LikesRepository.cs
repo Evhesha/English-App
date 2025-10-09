@@ -1,4 +1,5 @@
 ﻿using EnglishApp.Core.Abstractions.Like;
+using EnglishApp.Core.Exceptions.LikeExceptions;
 using EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,7 +27,7 @@ public class LikesRepository : ILikesRepository
             .AnyAsync(l => l.ArticleId == like.ArticleId && l.UserId == like.UserId, cancellationToken);
 
         if (exists)
-            throw new InvalidOperationException("User has already liked this article.");
+            throw new LessonHadAlreadyLikedException("User has already liked this article.");
 
         var likeEntity = new Like
         {
@@ -54,7 +55,7 @@ public class LikesRepository : ILikesRepository
             .FirstOrDefaultAsync(l => l.ArticleId == articleId && l.UserId == userId, cancellationToken);
 
         if (likeEntity == null)
-            return false;
+            throw new LessonHadAlreadyLikedException("User has already liked this article.");
 
         _context.Likes.Remove(likeEntity);
         await _context.SaveChangesAsync(cancellationToken);

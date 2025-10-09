@@ -1,6 +1,6 @@
 ﻿using EnglishApp.Core.Abstractions.User;
+using EnglishApp.Core.Exceptions.UserExceptions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.DataAccess.Repositories
@@ -53,26 +53,32 @@ namespace EnglishApp.DataAccess.Repositories
         public async Task<Guid> UpdateUserAsync(User user, CancellationToken cancellationToken)
         {
             var userEntity = await _context.Users.FindAsync(user.Id);
-            if (userEntity != null)
+            
+            if (userEntity == null)
             {
-                userEntity.Name = user.Name;
-                userEntity.Email = user.Email;
-                userEntity.PasswordHash = user.PasswordHash;
-                userEntity.Role = user.Role;
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundUserException("User wasn't found");
             }
+            
+            userEntity.Name = user.Name;
+            userEntity.Email = user.Email;
+            userEntity.PasswordHash = user.PasswordHash;
+            userEntity.Role = user.Role;
+            await _context.SaveChangesAsync(cancellationToken);
             
             return userEntity.Id;
         }
 
         public async Task<Guid> DeleteUserAsync(Guid id, CancellationToken cancellationToken)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
+            var userEntity = await _context.Users.FindAsync(id);
+            if (userEntity == null)
             {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundUserException("User wasn't found");
             }
+            
+            _context.Users.Remove(userEntity);
+            await _context.SaveChangesAsync(cancellationToken);
+            
             return id;
         }
     }

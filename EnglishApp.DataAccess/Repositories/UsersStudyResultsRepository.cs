@@ -1,6 +1,6 @@
 ﻿using EnglishApp.Core.Abstractions.UserStudyResult;
+using EnglishApp.Core.Exceptions.UserStudyResultExceptions;
 using EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.DataAccess.Repositories
@@ -55,11 +55,13 @@ namespace EnglishApp.DataAccess.Repositories
             CancellationToken cancellationToken)
         {
             var result = await _context.UsersStudyResults.FindAsync(id);
-            if (result != null)
+            if (result == null)
             {
-                result.PercentResult = percent;
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundUserStudyResultException("Result wasn't found");
             }
+            
+            result.PercentResult = percent;
+            await _context.SaveChangesAsync(cancellationToken);
 
             return id;
         }
@@ -69,11 +71,13 @@ namespace EnglishApp.DataAccess.Repositories
             CancellationToken cancellationToken)
         {
             var result = await _context.UsersStudyResults.FindAsync(id);
-            if (result != null)
+            if (result == null)
             {
-                _context.UsersStudyResults.Remove(result);
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundUserStudyResultException("Result wasn't found");
             }
+            
+            _context.UsersStudyResults.Remove(result);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return id;
         }

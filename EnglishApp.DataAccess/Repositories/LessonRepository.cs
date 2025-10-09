@@ -1,4 +1,5 @@
 ﻿using EnglishApp.Core.Abstractions.Lesson;
+using EnglishApp.Core.Exceptions.LessonExceptions;
 using EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,29 +40,31 @@ namespace EnglishApp.DataAccess.Repositories
             Guid lessonId,
             CancellationToken cancellationToken)
         {
-            var lesson = await _context.Lessons
+            var lessonEntity = await _context.Lessons
                 .AsNoTracking()
                 .FirstOrDefaultAsync(l => l.Id == lessonId, cancellationToken);
 
-            if (lesson != null)
+            if (lessonEntity == null)
             {
-                await _context.Lessons
-                    .Where(l => l.Id == lessonId)
-                    .ExecuteUpdateAsync(setters => 
-                            setters.SetProperty(l => l.WatchCount, l => l.WatchCount + 1),
-                        cancellationToken);
-                
-                lesson.WatchCount++;
+                throw new NotFoundLessonException("There is no lesson with such id");
             }
+            
+            await _context.Lessons
+                .Where(l => l.Id == lessonId)
+                .ExecuteUpdateAsync(setters => 
+                    setters.SetProperty(l => l.WatchCount, l => l.WatchCount + 1),
+                cancellationToken);
+            
+            lessonEntity.WatchCount++;
 
-            return lesson;
+            return lessonEntity;
         }
 
         public async Task<Guid> CreateLessonAsync(
             Lesson lesson,
             CancellationToken cancellationToken)
         {
-            var atricleEntity = new Lesson
+            var lessonEntity = new Lesson
             {
                 Id = lesson.Id,
                 UserId = lesson.UserId,
@@ -71,39 +74,44 @@ namespace EnglishApp.DataAccess.Repositories
                 CreatedDate = lesson.CreatedDate
             };
 
-            await _context.Lessons.AddAsync(atricleEntity, cancellationToken);
+            await _context.Lessons.AddAsync(lessonEntity, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
 
-            return atricleEntity.Id;
+            return lessonEntity.Id;
         }
 
         public async Task<Guid> UpdateLessonAsync(
             Lesson lesson,
             CancellationToken cancellationToken)
         {
-            var articleEntity = await _context.Lessons.FindAsync(lesson.Id);
-            if (articleEntity != null)
+            var lessonEntity = await _context.Lessons.FindAsync(lesson.Id);
+            
+            if (lessonEntity == null)
             {
-                articleEntity.Title = lesson.Title;
-                articleEntity.Text = lesson.Text;
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundLessonException("There is no lesson with such id");
             }
+            
+            lessonEntity.Title = lesson.Title;
+            lessonEntity.Text = lesson.Text;
+            await _context.SaveChangesAsync(cancellationToken);
 
-            return articleEntity.Id;
+            return lessonEntity.Id;
         }
 
         public async Task<Guid> DeleteLessonAsync(
             Guid id,
             CancellationToken cancellationToken)
         {
-            var article = await _context.Lessons
+            var lessonEntity = await _context.Lessons
                 .FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
 
-            if (article != null)
+            if (lessonEntity == null)
             {
-                _context.Lessons.Remove(article);
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundLessonException("There is no lesson with a such id");
             }
+            
+            _context.Lessons.Remove(lessonEntity);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return id;
         }
