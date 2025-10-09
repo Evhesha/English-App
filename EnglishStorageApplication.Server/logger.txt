@@ -1,10 +1,27 @@
 The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[01.10.2025 21:42:16] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[01.10.2025 21:42:17] Now listening on: https://localhost:7298
-[01.10.2025 21:42:17] Now listening on: http://localhost:5020
-[01.10.2025 21:42:17] Application started. Press Ctrl+C to shut down.
-[01.10.2025 21:42:17] Hosting environment: Development
-[01.10.2025 21:42:17] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
-[01.10.2025 21:42:17] Application is shutting down...
-[01.10.2025 21:42:48] There was an error trying to launch the SPA proxy.
-[01.10.2025 21:42:49] 
+[09.10.2025 22:04:59] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
+[09.10.2025 22:05:00] Now listening on: https://localhost:7298
+[09.10.2025 22:05:00] Now listening on: http://localhost:5020
+[09.10.2025 22:05:00] Application started. Press Ctrl+C to shut down.
+[09.10.2025 22:05:00] Hosting environment: Development
+[09.10.2025 22:05:00] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
+[09.10.2025 22:05:00] Executed DbCommand (69ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+[09.10.2025 22:05:27] Executed DbCommand (50ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[09.10.2025 22:05:42] Executed DbCommand (52ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[09.10.2025 22:05:42] Executed DbCommand (4ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[09.10.2025 22:05:47] Application is shutting down...
+[09.10.2025 22:05:58] There was an error trying to launch the SPA proxy.
+[09.10.2025 22:05:58] 

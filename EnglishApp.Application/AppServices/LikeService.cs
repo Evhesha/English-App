@@ -12,14 +12,14 @@ public class LikeService : ILikeService
         _likesRepository = likesRepository;
     }
 
-    public async Task<int> CountArticleLikes(Guid articleId, CancellationToken cancellationToken)
+    public async Task<int> CountLessonLikes(Guid articleId, CancellationToken cancellationToken)
     {
-        return await _likesRepository.CountArticleLikesAsync(articleId, cancellationToken);
+        return await _likesRepository.CountLessonLikesAsync(articleId, cancellationToken);
     }
 
-    public async Task<Like> AddLike(Guid articleId, Guid userId, CancellationToken cancellationToken)
+    public async Task<Like> AddLike(Like like, CancellationToken cancellationToken)
     {
-        return await _likesRepository.AddLikeAsync(articleId, userId, cancellationToken);
+        return await _likesRepository.AddLikeAsync(like, cancellationToken);
     }
 
     public async Task<bool> HasUserLiked(Guid userId, Guid articleId, CancellationToken cancellationToken)

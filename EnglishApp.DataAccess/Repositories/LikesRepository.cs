@@ -1,4 +1,5 @@
 ﻿using EnglishApp.Core.Abstractions.Like;
+using EnglishApp.Core.Exceptions.LikeExceptions;
 using EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,26 +14,26 @@ public class LikesRepository : ILikesRepository
         _context = context;
     }
 
-    public async Task<int> CountArticleLikesAsync(Guid articleId, CancellationToken cancellationToken)
+    public async Task<int> CountLessonLikesAsync(Guid articleId, CancellationToken cancellationToken)
     {
         return await _context.Likes
             .AsNoTracking()
             .CountAsync(l => l.ArticleId == articleId, cancellationToken);
     }
 
-    public async Task<Like> AddLikeAsync(Guid articleId, Guid userId, CancellationToken cancellationToken)
+    public async Task<Like> AddLikeAsync(Like like, CancellationToken cancellationToken)
     {
         var exists = await _context.Likes
-            .AnyAsync(l => l.ArticleId == articleId && l.UserId == userId, cancellationToken);
+            .AnyAsync(l => l.ArticleId == like.ArticleId && l.UserId == like.UserId, cancellationToken);
 
         if (exists)
-            throw new InvalidOperationException("User has already liked this article.");
+            throw new LessonHadAlreadyLikedException("User has already liked this article.");
 
         var likeEntity = new Like
         {
-            Id = Guid.NewGuid(),
-            ArticleId = articleId,
-            UserId = userId
+            Id = like.Id,
+            ArticleId = like.ArticleId,
+            UserId = like.UserId
         };
 
         await _context.Likes.AddAsync(likeEntity, cancellationToken);
@@ -54,7 +55,7 @@ public class LikesRepository : ILikesRepository
             .FirstOrDefaultAsync(l => l.ArticleId == articleId && l.UserId == userId, cancellationToken);
 
         if (likeEntity == null)
-            return false;
+            throw new LessonHadAlreadyLikedException("User has already liked this article.");
 
         _context.Likes.Remove(likeEntity);
         await _context.SaveChangesAsync(cancellationToken);

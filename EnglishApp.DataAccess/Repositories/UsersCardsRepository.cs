@@ -1,4 +1,5 @@
 ﻿using EnglishApp.Core.Abstractions.UserCard;
+using EnglishApp.Core.Exceptions.UserCardExceptions;
 using EnglishApp.DataAccess;
 using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
@@ -54,12 +55,14 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
             CancellationToken cancellationToken)
         {
             var userCardEntity = await _context.UsersCards.FindAsync(userCard.Id);
-            if (userCardEntity != null)
+            if (userCardEntity == null)
             {
-                userCardEntity.NameOfUsersCard = userCard.NameOfUsersCard;
-                userCardEntity.UserCardData = userCard.UserCardData;
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundUserCardException("User card wasn't found");
             }
+            
+            userCardEntity.NameOfUsersCard = userCard.NameOfUsersCard;
+            userCardEntity.UserCardData = userCard.UserCardData;
+            await _context.SaveChangesAsync(cancellationToken);
             
             return userCardEntity.Id;
         }
@@ -68,12 +71,15 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
             Guid id,
             CancellationToken cancellationToken)
         {
-            var userCard = await _context.UsersCards.FindAsync(id);
-            if (userCard != null)
+            var userCardEntity = await _context.UsersCards.FindAsync(id);
+            if (userCardEntity == null)
             {
-                _context.UsersCards.Remove(userCard);
-                await _context.SaveChangesAsync(cancellationToken);
+                throw new NotFoundUserCardException("User card wasn't found");
             }
+            
+            _context.UsersCards.Remove(userCardEntity);
+            await _context.SaveChangesAsync(cancellationToken);
+            
             return id;
         }
     }

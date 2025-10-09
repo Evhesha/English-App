@@ -1,6 +1,7 @@
 using EnglishApp.Infrastructure;
 using EnglishStorageApplication.EnglishApp.Extensions;
 using EnglishStorageApplication.Server.Extensions;
+using EnglishStorageApplication.Server.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,7 @@ app.UseRouting();
 app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.MapControllers();
 app.MapFallbackToFile("/index.html");
 app.Run();
