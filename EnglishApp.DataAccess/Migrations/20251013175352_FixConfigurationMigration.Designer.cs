@@ -3,17 +3,20 @@ using System;
 using EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace EnglishStorageApplication.Server.Migrations
+namespace EnglishApp.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251013175352_FixConfigurationMigration")]
+    partial class FixConfigurationMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,9 +107,14 @@ namespace EnglishStorageApplication.Server.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("UserId1")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("UsersStudyResults");
                 });
@@ -155,9 +163,14 @@ namespace EnglishStorageApplication.Server.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("UserId1")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("UsersCards");
                 });
@@ -187,10 +200,14 @@ namespace EnglishStorageApplication.Server.Migrations
             modelBuilder.Entity("EnglishApp.Core.Models.UserStudyResult", b =>
                 {
                     b.HasOne("EnglishStorageApplication.EnglishApp.Core.Models.User", "User")
-                        .WithMany("UserStudyResults")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("EnglishStorageApplication.EnglishApp.Core.Models.User", null)
+                        .WithMany("UserStudyResults")
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("User");
                 });
@@ -198,10 +215,14 @@ namespace EnglishStorageApplication.Server.Migrations
             modelBuilder.Entity("EnglishStorageApplication.EnglishApp.Core.Models.UserCard", b =>
                 {
                     b.HasOne("EnglishStorageApplication.EnglishApp.Core.Models.User", "User")
-                        .WithMany("UserCards")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("EnglishStorageApplication.EnglishApp.Core.Models.User", null)
+                        .WithMany("UserCards")
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("User");
                 });

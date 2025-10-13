@@ -75,8 +75,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 UserId = createLessonDto.UserId,
                 Title = createLessonDto.Title,
                 Text = createLessonDto.Text,
-                isPublic = createLessonDto.isPublic,
-                Images = createLessonDto.Images,
+                isPublic = createLessonDto.isPublic
             };
 
             await _lessonService.CreateLesson(lesson, cancellationToken);
@@ -96,8 +95,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 UserId = updateLessonDto.UserId,
                 Title = updateLessonDto.Title,
                 Text = updateLessonDto.Text,
-                isPublic = updateLessonDto.isPublic,
-                Images = updateLessonDto.Images,
+                isPublic = updateLessonDto.isPublic
             };
             
             var articleId = await _lessonService.UpdateLesson(lesson, cancellationToken); 

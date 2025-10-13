@@ -6,5 +6,6 @@
         public Guid UserId { get; set; }
         public string NameOfUsersCard { get; set; } = string.Empty;
         public string UserCardData { get; set; } = string.Empty;
+        public User User { get; set; } = null!;
     }
 }
