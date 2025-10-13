@@ -1,27 +1,88 @@
-The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[09.10.2025 22:04:59] The WebRootPath was not found: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server\wwwroot. Static files may be unavailable.
-[09.10.2025 22:05:00] Now listening on: https://localhost:7298
-[09.10.2025 22:05:00] Now listening on: http://localhost:5020
-[09.10.2025 22:05:00] Application started. Press Ctrl+C to shut down.
-[09.10.2025 22:05:00] Hosting environment: Development
-[09.10.2025 22:05:00] Content root path: C:\Users\EvGenii\source\repos\English-App\EnglishStorageApplication.Server
-[09.10.2025 22:05:00] Executed DbCommand (69ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-[09.10.2025 22:05:27] Executed DbCommand (50ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__lessonId_0
-LIMIT 1
-[09.10.2025 22:05:42] Executed DbCommand (52ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-UPDATE "Lessons" AS l
-SET "WatchCount" = l."WatchCount" + 1
-WHERE l."Id" = @__lessonId_0
-[09.10.2025 22:05:42] Executed DbCommand (4ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."Images", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__lessonId_0
-LIMIT 1
-[09.10.2025 22:05:47] Application is shutting down...
-[09.10.2025 22:05:58] There was an error trying to launch the SPA proxy.
-[09.10.2025 22:05:58] 
+Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[13.10.2025 21:01:13] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[13.10.2025 21:01:13] Applying migration '20251013175352_FixConfigurationMigration'.
+[13.10.2025 21:01:13] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "Lessons" DROP COLUMN "Images";
+[13.10.2025 21:01:13] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "Likes" RENAME COLUMN "ArticleId" TO "LessonId";
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersStudyResults" ADD "UserId1" uuid;
+[13.10.2025 21:01:13] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersCards" ADD "UserId1" uuid;
+[13.10.2025 21:01:13] Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "LessonImages" (
+    "Id" uuid NOT NULL,
+    "LessonId" uuid NOT NULL,
+    "ImageURL" text NOT NULL,
+    CONSTRAINT "PK_LessonImages" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_LessonImages_Lessons_LessonId" FOREIGN KEY ("LessonId") REFERENCES "Lessons" ("Id") ON DELETE CASCADE
+);
+[13.10.2025 21:01:13] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_UsersStudyResults_UserId" ON "UsersStudyResults" ("UserId");
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_UsersStudyResults_UserId1" ON "UsersStudyResults" ("UserId1");
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_UsersCards_UserId" ON "UsersCards" ("UserId");
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_UsersCards_UserId1" ON "UsersCards" ("UserId1");
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_Likes_LessonId" ON "Likes" ("LessonId");
+[13.10.2025 21:01:13] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_LessonImages_LessonId" ON "LessonImages" ("LessonId");
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "Likes" ADD CONSTRAINT "FK_Likes_Lessons_LessonId" FOREIGN KEY ("LessonId") REFERENCES "Lessons" ("Id") ON DELETE CASCADE;
+[13.10.2025 21:01:13] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersCards" ADD CONSTRAINT "FK_UsersCards_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE;
+[13.10.2025 21:01:13] Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersCards" ADD CONSTRAINT "FK_UsersCards_Users_UserId1" FOREIGN KEY ("UserId1") REFERENCES "Users" ("Id");
+[13.10.2025 21:01:13] Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersStudyResults" ADD CONSTRAINT "FK_UsersStudyResults_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE;
+[13.10.2025 21:01:13] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersStudyResults" ADD CONSTRAINT "FK_UsersStudyResults_Users_UserId1" FOREIGN KEY ("UserId1") REFERENCES "Users" ("Id");
+[13.10.2025 21:01:13] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20251013175352_FixConfigurationMigration', '8.0.10');
+[13.10.2025 21:01:13] Applying migration '20251013175639_ConfigurationMigration'.
+[13.10.2025 21:01:13] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersCards" DROP CONSTRAINT "FK_UsersCards_Users_UserId1";
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersStudyResults" DROP CONSTRAINT "FK_UsersStudyResults_Users_UserId1";
+[13.10.2025 21:01:13] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DROP INDEX "IX_UsersStudyResults_UserId1";
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DROP INDEX "IX_UsersCards_UserId1";
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersStudyResults" DROP COLUMN "UserId1";
+[13.10.2025 21:01:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "UsersCards" DROP COLUMN "UserId1";
+[13.10.2025 21:01:13] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20251013175639_ConfigurationMigration', '8.0.10');
+[13.10.2025 21:01:13] 

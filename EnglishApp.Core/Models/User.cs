@@ -1,4 +1,6 @@
-﻿namespace EnglishStorageApplication.EnglishApp.Core.Models
+﻿using EnglishApp.Core.Models;
+
+namespace EnglishStorageApplication.EnglishApp.Core.Models
 {
     public class User
     {
@@ -7,5 +9,7 @@
         public string Email { get; set; } = string.Empty;
         public string PasswordHash { get; set; } = string.Empty;
         public string Role { get; set; } = "User";
+        public List<UserCard> UserCards { get; set; } = new();
+        public List<UserStudyResult>  UserStudyResults { get; set; } = new();
     }
 }

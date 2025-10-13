@@ -46,7 +46,7 @@ public class LikesController : ControllerBase
         {
             Id = Guid.NewGuid(),
             UserId = addLikeDto.UserId,
-            ArticleId = addLikeDto.ArticleId
+            LessonId = addLikeDto.ArticleId
         };
 
         await _likeService.AddLike(like, cancellationToken);
