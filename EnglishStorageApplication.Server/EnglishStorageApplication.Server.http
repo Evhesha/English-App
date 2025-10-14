@@ -1,6 +1,0 @@
-@EnglishStorageApplication.Server_HostAddress = http://localhost:5020
-
-GET {{EnglishStorageApplication.Server_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
