@@ -20,4 +20,17 @@
     <ProjectReference Include="..\EnglishStorageApplication.Server\EnglishStorageApplication.Server.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Auth\Controllers\" />
+    <Folder Include="Auth\Middleware\" />
+    <Folder Include="Auth\Services\" />
+    <Folder Include="Data\Images\" />
+    <Folder Include="Data\Lessons\" />
+    <Folder Include="Data\Likes\" />
+    <Folder Include="Data\UsersCards\" />
+    <Folder Include="Data\UsersStudyResults\" />
+    <Folder Include="Data\Users\" />
+    <Folder Include="TestUtilities\" />
+  </ItemGroup>
+
 </Project>
