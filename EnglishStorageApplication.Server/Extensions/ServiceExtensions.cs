@@ -1,5 +1,6 @@
 ﻿using EnglishApp.Application.AppServices;
 using EnglishApp.Core.Abstractions.Lesson;
+using EnglishApp.Core.Abstractions.LessonImage;
 using EnglishApp.Core.Abstractions.Like;
 using EnglishApp.Core.Abstractions.User;
 using EnglishApp.Core.Abstractions.UserCard;
@@ -27,7 +28,10 @@ namespace EnglishStorageApplication.Server.Extensions
             services.AddScoped<IUsersStudyResultsRepository, UsersStudyResultsRepository>();
 
             services.AddScoped<ILessonService, LessonService>();
-            services.AddScoped<ILessonRepository, LessonRepository>();
+            services.AddScoped<ILessonRepository, LessonsRepository>();
+
+            services.AddScoped<ILessonImageService, LessonImageService>();
+            services.AddScoped<ILessonsImagesRepository, LessonsImagesRepository>();
             
             services.AddScoped<ILikeService, LikeService>();
             services.AddScoped<ILikesRepository, LikesRepository>();

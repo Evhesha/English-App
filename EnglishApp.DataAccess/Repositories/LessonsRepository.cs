@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.DataAccess.Repositories
 {
-    public class LessonRepository : ILessonRepository
+    public class LessonsRepository : ILessonRepository
     {
         private readonly ApplicationDbContext _context;
 
-        public LessonRepository(ApplicationDbContext applicationDbContext)
+        public LessonsRepository(ApplicationDbContext applicationDbContext)
         {
             _context = applicationDbContext;
         }
