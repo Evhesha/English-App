@@ -70,8 +70,7 @@ namespace EnglishStorageApplication.Server.Controllers
             var lesson = new Lesson
             {
                 Id =  Guid.NewGuid(),
-                CreatedDate = DateTime.UtcNow
-                ,
+                CreatedDate = DateTime.UtcNow,
                 UserId = createLessonDto.UserId,
                 Title = createLessonDto.Title,
                 Text = createLessonDto.Text,
