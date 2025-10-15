@@ -64,8 +64,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 UserCardData = updateUserCardDto.UserCardData
             };
             
-            var userCardId = 
-                await _service.UpdateUserCard(id, userCard, cancellationToken);
+            var userCardId = await _service.UpdateUserCard(id, userCard, cancellationToken);
             
             return Ok(userCardId);
         }

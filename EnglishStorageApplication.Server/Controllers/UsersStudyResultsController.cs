@@ -32,6 +32,7 @@ namespace EnglishStorageApplication.Server.Controllers
         public async Task<ActionResult<List<UserStudyResultDto>>> GetUserStudyResults(Guid userId, CancellationToken cancellationToken)
         {
             var userResults = await _service.GetUserResults(userId, cancellationToken);
+            
             if (!userResults.Any())
             {
                 return NoContent();

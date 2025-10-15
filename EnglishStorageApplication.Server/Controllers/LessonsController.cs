@@ -21,10 +21,18 @@ namespace EnglishStorageApplication.Server.Controllers
         public async Task<ActionResult<List<LessonDto>>> GetLessons(CancellationToken cancellationToken)
         {
             var lessons = await _lessonService.GetLessons(cancellationToken);
+
+            var listLessonsDto = lessons.Select(lesson => new ListLessonsDto
+            {
+                Id = lesson.Id,
+                UserId = lesson.UserId,
+                Title = lesson.Title,
+                isPublic = lesson.isPublic,
+                WatchCount = lesson.WatchCount,
+                CreatedDate = lesson.CreatedDate
+            });
             
-            var listLessonsDto = new List<ListLessonsDto>();
-            
-            return Ok(lessons);
+            return Ok(listLessonsDto);
         }
 
         [HttpGet("lessons/{userId:guid}")]
@@ -37,7 +45,7 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpGet("lesson/params")]
-        public async Task<ActionResult<List<Lesson>>> GetLessonsWithParams(
+        public async Task<ActionResult<List<LessonDto>>> GetLessonsWithParams(
             [FromQuery] LessonFilter lessonFilter,
             [FromQuery] SortParams sortParams,
             [FromQuery]  PageParams pageParams,
@@ -49,8 +57,18 @@ namespace EnglishStorageApplication.Server.Controllers
                 sortParams,
                 pageParams,
                 cancellationToken);
+            
+            var listLessonsDto = lessons.Select(lesson => new ListLessonsDto
+            {
+                Id = lesson.Id,
+                UserId = lesson.UserId,
+                Title = lesson.Title,
+                isPublic = lesson.isPublic,
+                WatchCount = lesson.WatchCount,
+                CreatedDate = lesson.CreatedDate
+            });
 
-            return Ok(lessons);
+            return Ok(listLessonsDto);
         }
         
         [HttpGet("lesson/{lessonId:guid}")]
