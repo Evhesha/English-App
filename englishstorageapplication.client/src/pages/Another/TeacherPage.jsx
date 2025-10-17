@@ -1,23 +1,16 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
 import Section from "./TeacherPageComponents/Section";
-
 import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
-
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
-
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-
-const API_BASE_URL = import.meta.env.VITE_API_URL;
-
 import CreateLesson from "@/pages/Another/TeacherPageComponents/CreateLesson.jsx";
 import AddLesson from "./TeacherPageComponents/AddLesson.png";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 function TeacherPage() {
   const [activeTab, setActiveTab] = useState("articles");
 
@@ -35,36 +28,32 @@ function TeacherPage() {
   useEffect(() => {
     const fetchData = async () => {
       const token = Cookies.get("token");
-      if (token) {
-        const decodedToken = jwtDecode(token);
-        const userId = decodedToken.UserId;
+      //if (token) {
+        //const decodedToken = jwtDecode(token);
+        const userId = "1023a128-1835-4dda-9348-41915c86d7d1"
+            //decodedToken.UserId; hard code
 
         try {
-          const response = await axios.get(`${API_BASE_URL}/api/Article/${userId}`);
-
-          if (Array.isArray(response.data)) {
+          const response = await axios.get(`${API_BASE_URL}/api/Lessons/lessons/${userId}`);
             setArticles(response.data);
-          } else {
-            console.error("Ошибка: данные из API не являются массивом", response.data);
-          }
-
+console.log(response.data)
         } catch (error) {
-          
+          console.log(error);    
         }
-      }
+     // }
     };
 
     fetchData();
   }, []);
 
     const receiveNotify = () => {
-      toast.success("Data received!", {
+      toast.success("Data was received!", {
         position: "bottom-right"
       });
     }
   
     const deleteNotify = () => {
-      toast.success("Data delete successfuly!", {
+      toast.success("Data was deleted successfully!", {
         position: "bottom-right"
       });
     }
@@ -85,15 +74,6 @@ function TeacherPage() {
       <h1>Teacher panel</h1>
       <Section>
         <h3>Your lessons</h3>
-
-          {articles.map(article => (
-              <ArticleListElement
-                  key={article.id}
-                  id={article.id}
-                  name={article.title}
-                  onDelete={handleDeleteArticle}
-              />
-          ))}
           <CreateLesson title={"Add lesson"} image={
               <img
                   src={AddLesson}
@@ -102,6 +82,14 @@ function TeacherPage() {
                   style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
               />
           }></CreateLesson>
+          {articles.map(article => (
+              <ArticleListElement
+                  key={article.id}
+                  id={article.id}
+                  name={article.title}
+                  onDelete={handleDeleteArticle}
+              />
+          ))}
       </Section>
     </>
   );

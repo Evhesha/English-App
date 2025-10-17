@@ -9,18 +9,18 @@ import {
 import LessonsListPage from "../../pages/Lessons/LessonsListPage/LessonsListPage";
 import OnlineLessonsListPage from "@/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx";
 
-import PresentSimple from "/src/pages/Lessons/PresentSimple";
-import FutureSimple from "/src/pages/Lessons/FutureSimple";
-import PastSimple from "/src/pages/Lessons/PastSimple";
-import PresentContinuous from "../../pages/Lessons/PresentContinuous";
-import PastContinuous from "../../pages/Lessons/PastContinuous";
-import FutureContinuous from "../../pages/Lessons/FutureContionuous";
-import PresentPerfect from "../../pages/Lessons/PresentPerfect";
-import PastPerfect from "../../pages/Lessons/PastPerfect";
-import FuturePerfect from "../../pages/Lessons/FuturePerfect";
-import PresentPerfectContinuous from "../../pages/Lessons/PresentPerfectContinuous";
-import FuturePerfectContinuous from "../../pages/Lessons/FuturePerfectContinuous";
-import PastPerfectContinuous from "../../pages/Lessons/PastPerfectContionuous";
+import PresentSimple from "../../pages/Lessons/Lessons/PresentSimple.jsx";
+import FutureSimple from "../../pages/Lessons/Lessons/FutureSimple";
+import PastSimple from "../../pages/Lessons/Lessons/PastSimple";
+import PresentContinuous from "../../pages/Lessons/Lessons/PresentContinuous";
+import PastContinuous from "../../pages/Lessons/Lessons/PastContinuous";
+import FutureContinuous from "../../pages/Lessons/Lessons/FutureContionuous";
+import PresentPerfect from "../../pages/Lessons/Lessons/PresentPerfect";
+import PastPerfect from "../../pages/Lessons/Lessons/PastPerfect";
+import FuturePerfect from "../../pages/Lessons/Lessons/FuturePerfect";
+import PresentPerfectContinuous from "../../pages/Lessons/Lessons/PresentPerfectContinuous";
+import FuturePerfectContinuous from "../../pages/Lessons/Lessons/FuturePerfectContinuous";
+import PastPerfectContinuous from "../../pages/Lessons/Lessons/PastPerfectContionuous";
 
 import AboutApp from "/src/pages/Another/AboutApp";
 import Home from "../Home/Home";
