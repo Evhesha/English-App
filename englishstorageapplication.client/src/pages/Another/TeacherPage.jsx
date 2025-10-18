@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Section from "./TeacherPageComponents/Section";
-import ArticleListElement from "../../Components/TeacherPageComp/ArticleListElement";
+import LessonListElementForTeachers from "../../Components/TeacherPageComp/LessonListElementForTeachers.jsx";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
@@ -83,10 +83,12 @@ console.log(response.data)
               />
           }></CreateLesson>
           {articles.map(article => (
-              <ArticleListElement
+              <LessonListElementForTeachers
                   key={article.id}
                   id={article.id}
                   name={article.title}
+                  watches={article.watchCount}
+                  isPublic={article.isPublic}
                   onDelete={handleDeleteArticle}
               />
           ))}

@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './OnlineLessonsListPage.css';
 import { useTranslation } from "react-i18next";
 import axios from "axios";
+import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
+
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function OnlineLessonsListPage() {
@@ -38,16 +40,15 @@ function OnlineLessonsListPage() {
             <h1 className="text-center main-title mb-5">Online lessons</h1>
             <div className="lessons-grid">
                 {lessons.map((lesson, index) => (
-                    <Link
+                    <LessonListElementForUsers
                         key={index}
                         to={lesson.path}
-                        className="lesson-card"
+                        id={lesson.id}
+                        author={lesson.userId}
+                        name={lesson.title}
+                        watchCount={lesson.watchCount}
                     >
-                        <div className="lesson-icon">{lesson.icon}</div>
-                        <h3 className="lesson-title">{lesson.title}</h3>
-                        <p className="lesson-description">{lesson.text}</p>
-                        <div className="hover-effect"></div>
-                    </Link>
+                    </LessonListElementForUsers>
                 ))}
             </div>
         </div>
