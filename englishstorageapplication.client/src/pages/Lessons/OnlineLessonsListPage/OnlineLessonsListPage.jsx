@@ -44,6 +44,7 @@ function OnlineLessonsListPage() {
                         key={index}
                         to={lesson.path}
                         id={lesson.id}
+                        text={lesson.text}
                         author={lesson.userId}
                         name={lesson.title}
                         watchCount={lesson.watchCount}

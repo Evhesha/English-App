@@ -11,7 +11,7 @@ import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
     const [isAdmin, setIsAdmin] = useState(false);
-    const [isTeacher, setIsTeacher] = useState(true);
+    const [isTeacher, setIsTeacher] = useState(false);
     const { darkMode, toggleTheme } = useTheme();
     const { t } = useTranslation();
 
@@ -47,7 +47,7 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
                 }
             } else {
                 setIsAdmin(false);
-                setIsTeacher(true);
+                setIsTeacher(false);
             }
         };
 

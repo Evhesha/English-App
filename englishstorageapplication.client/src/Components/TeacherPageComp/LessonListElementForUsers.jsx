@@ -1,10 +1,11 @@
 ﻿import axios from "axios";
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function LessonListElementForUsers({ id, name, watchCount, author }) {
+function LessonListElementForUsers({ id, name, text, watchCount, author }) {
 
 
     return (
@@ -21,7 +22,7 @@ function LessonListElementForUsers({ id, name, watchCount, author }) {
                 </div>
             </div>
             <div>
-                <button type="button" className="btn btn-primary" ><i className="bi bi-book"> </i>Read</button>
+                <ReadLessonPopUp id={id} title={name} text={text}></ReadLessonPopUp>
             </div>
         </li>
     );

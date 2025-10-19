@@ -1,10 +1,11 @@
 import axios from "axios";
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CheckLessonPopUp from "@/Components/PopUps/Lesson/CheckLessonPopUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function LessonListElementForTeachers({ id, name, watches, isPublic, onDelete }) {
+function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDelete, onUpdate }) {
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Are you sure that you want to delete the article?");
     if (!confirmDelete) return;
@@ -34,7 +35,7 @@ function LessonListElementForTeachers({ id, name, watches, isPublic, onDelete })
           </div>
       </div>
       <div>
-        <button type="button" className="btn btn-primary" ><i className="bi bi-book"> </i>Open</button>
+        <CheckLessonPopUp id={id} title={name} text={text} onPut={onUpdate}></CheckLessonPopUp>
         <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"> 
         </i>Delete</button>
       </div>
