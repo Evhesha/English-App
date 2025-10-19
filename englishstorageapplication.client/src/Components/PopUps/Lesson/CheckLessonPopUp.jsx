@@ -26,7 +26,6 @@ function CheckLessonPopUp({ title, text, onPut, userId, id }) {
             const response = await axios.put(
                 `${API_BASE_URL}/api/Lessons/${id}`,
                 {
-                    userId: userId,
                     title: lessonTitle,
                     text: lessonText,
                 }

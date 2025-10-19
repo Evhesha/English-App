@@ -6,8 +6,6 @@ import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function LessonListElementForUsers({ id, name, text, watchCount, author }) {
-
-
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center" style={{ border: '2px solid #ccc', borderRadius: '5px', marginBottom: '10px', padding: '10px' }}>
             <div>
