@@ -22,11 +22,12 @@ namespace EnglishStorageApplication.Server.Controllers
         {
             var lessons = await _lessonService.GetLessons(cancellationToken);
 
-            var listLessonsDto = lessons.Select(lesson => new ListLessonsDto
+            var listLessonsDto = lessons.Select(lesson => new LessonDto
             {
                 Id = lesson.Id,
                 UserId = lesson.UserId,
                 Title = lesson.Title,
+                Text = lesson.Text,
                 isPublic = lesson.isPublic,
                 WatchCount = lesson.WatchCount,
                 CreatedDate = lesson.CreatedDate
@@ -58,11 +59,12 @@ namespace EnglishStorageApplication.Server.Controllers
                 pageParams,
                 cancellationToken);
             
-            var listLessonsDto = lessons.Select(lesson => new ListLessonsDto
+            var listLessonsDto = lessons.Select(lesson => new LessonDto
             {
                 Id = lesson.Id,
                 UserId = lesson.UserId,
                 Title = lesson.Title,
+                Text = lesson.Text,
                 isPublic = lesson.isPublic,
                 WatchCount = lesson.WatchCount,
                 CreatedDate = lesson.CreatedDate
