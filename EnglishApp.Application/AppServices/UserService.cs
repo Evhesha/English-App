@@ -23,6 +23,11 @@ namespace EnglishStorageApplication.EnglishApp.Application.AppServices
             return await _usersRepository.GetUserByIdAsync(id, cancellationToken);
         }
 
+        public async Task<User?> GetUserByEmail(string email, CancellationToken cancellationToken)
+        {
+            return await _usersRepository.GetUserByEmailAsync(email, cancellationToken);
+        }
+
         public async Task<Guid> CreateUser(User user, CancellationToken cancellationToken)
         {
             return await _usersRepository.CreateUserAsync(user, cancellationToken);
