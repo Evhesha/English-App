@@ -32,7 +32,9 @@ public class LikesController : ControllerBase
         var deleted = await _likeService.DeleteLike(userId, articleId, cancellationToken);
 
         if (!deleted)
+        {
             return NotFound("Like not found");
+        }
 
         return NoContent();
     }
@@ -46,7 +48,7 @@ public class LikesController : ControllerBase
         {
             Id = Guid.NewGuid(),
             UserId = addLikeDto.UserId,
-            ArticleId = addLikeDto.ArticleId
+            LessonId = addLikeDto.ArticleId
         };
 
         await _likeService.AddLike(like, cancellationToken);

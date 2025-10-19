@@ -9,6 +9,7 @@ function CreateLessonPopUp({ onPost, userId }) {
   const [name, setName] = useState("Name");
   const [text, setText] = useState("");
   const [error, setError] = useState(null);
+  const [isPrivate, setIsPrivate] = useState(false);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -19,18 +20,24 @@ function CreateLessonPopUp({ onPost, userId }) {
     e.preventDefault(); 
     setIsOpen(false);
   };
+  
+  const handlePrivacyChange = (value) => {
+      setIsPrivate(value === "true");
+  }
 
   const handleCreate = async (event) => {
     event.preventDefault(); 
     try {
       const response = await axios.post(
-        `${API_BASE_URL}/api/UsersCards`,
+        `${API_BASE_URL}/api/Lessons`,
         {
-          userId: userId,
-          nameOfUserCard: name,
-          userCardData: text,
+          userId: "1023a128-1835-4dda-9348-41915c86d7d1",
+          title: name,
+          text: text,
+            isPublic: isPrivate,
+            images: []
         }
-      );
+      )
 
       if (response.status === 200 || response.status === 201) {
         if (onPost) {
@@ -96,6 +103,24 @@ function CreateLessonPopUp({ onPost, userId }) {
                     onChange={(e) => setText(e.target.value)}
                   />
                 </div>
+                  <div className="mb-3">
+                      <label
+                      htmlFor="text"
+                      className="form-label"
+                      style={{ color: "black" }}>
+                          Is private?
+                      </label>
+                      <p></p>
+                      Yes   <input checked={isPrivate === true}
+                                onChange={(e) => handlePrivacyChange("true")}
+                                value={"true"}
+                                type="radio"/>
+                      <p></p>
+                      No  <input checked={isPrivate === false}
+                               onChange={(e) => handlePrivacyChange("false")}
+                               value={"false"}
+                               type="radio"/>
+                  </div>
                 {error && (
                   <div className="alert alert-danger" role="alert">
                     {error}

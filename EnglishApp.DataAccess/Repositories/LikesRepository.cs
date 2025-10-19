@@ -18,13 +18,13 @@ public class LikesRepository : ILikesRepository
     {
         return await _context.Likes
             .AsNoTracking()
-            .CountAsync(l => l.ArticleId == articleId, cancellationToken);
+            .CountAsync(l => l.LessonId == articleId, cancellationToken);
     }
 
     public async Task<Like> AddLikeAsync(Like like, CancellationToken cancellationToken)
     {
         var exists = await _context.Likes
-            .AnyAsync(l => l.ArticleId == like.ArticleId && l.UserId == like.UserId, cancellationToken);
+            .AnyAsync(l => l.LessonId == like.LessonId && l.UserId == like.UserId, cancellationToken);
 
         if (exists)
             throw new LessonHadAlreadyLikedException("User has already liked this article.");
@@ -32,7 +32,7 @@ public class LikesRepository : ILikesRepository
         var likeEntity = new Like
         {
             Id = like.Id,
-            ArticleId = like.ArticleId,
+            LessonId = like.LessonId,
             UserId = like.UserId
         };
 
@@ -46,13 +46,13 @@ public class LikesRepository : ILikesRepository
     {
         return await _context.Likes
             .AsNoTracking()
-            .AnyAsync(l => l.UserId == userId && l.ArticleId == articleId, cancellationToken);
+            .AnyAsync(l => l.UserId == userId && l.LessonId == articleId, cancellationToken);
     }
 
     public async Task<bool> DeleteLikeAsync(Guid userId, Guid articleId, CancellationToken cancellationToken)
     {
         var likeEntity = await _context.Likes
-            .FirstOrDefaultAsync(l => l.ArticleId == articleId && l.UserId == userId, cancellationToken);
+            .FirstOrDefaultAsync(l => l.LessonId == articleId && l.UserId == userId, cancellationToken);
 
         if (likeEntity == null)
             throw new LessonHadAlreadyLikedException("User has already liked this article.");
