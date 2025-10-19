@@ -4,10 +4,8 @@ import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CheckLessonPopUp() {
+function CheckLessonPopUp({ title, text, userId, id }) {
     const [isOpen, setIsOpen] = useState(false);
-    const [name, setName] = useState(title);
-    const [text, setText] = useState(cardText);
     const [error, setError] = useState(null);
 
     const togglePopup = () => {
@@ -23,7 +21,7 @@ function CheckLessonPopUp() {
     return <>
         <div>
             <button className="btn btn-primary" onClick={togglePopup}>
-                Read lesson <i className="bi bi-cloud-check"></i>
+                Read <i className="bi bi-book"></i>
             </button>
             {isOpen && (
                 <div className="popup">
@@ -39,10 +37,10 @@ function CheckLessonPopUp() {
                                 </label>
                                 <input
                                     type="text"
+                                    required={true}
                                     className="form-control"
                                     id="name"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    value={title}
                                 />
                             </div>
                             <div className="mb-3">
@@ -51,10 +49,10 @@ function CheckLessonPopUp() {
                                 </label>
                                 <textarea
                                     className="form-control"
+                                    readOnly={true}
                                     id="text"
                                     rows="5"
                                     value={text}
-                                    onChange={(e) => setText(e.target.value)}
                                 />
                             </div>
                             {error && (

@@ -87,6 +87,7 @@ console.log(response.data)
                   key={article.id}
                   id={article.id}
                   name={article.title}
+                  text={article.text}
                   watches={article.watchCount}
                   isPublic={article.isPublic}
                   onDelete={handleDeleteArticle}
