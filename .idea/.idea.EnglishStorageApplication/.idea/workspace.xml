@@ -12,8 +12,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: Now online lessons get lessons with text.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/EnglishApp.Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/EnglishApp.Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/EnglishApp.Core.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/EnglishApp.Core.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/EnglishApp.DataAccess.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/EnglishApp.DataAccess.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/EnglishApp.DataAccess.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/EnglishApp.DataAccess.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/EnglishApp.DataAccess.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/EnglishApp.DataAccess.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/EnglishApp.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/EnglishApp.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/EnglishApp.Infrastructure.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/EnglishApp.Infrastructure.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/EnglishApp.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/EnglishApp.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/App.client.esproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/App.client.esproj.FileListAbsolute.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +82,19 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Evhesha&quot;
+    &quot;assignee&quot;: &quot;gorynegasny&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Evhesha/English-App.git&quot;,
-    &quot;accountId&quot;: &quot;08cd64dd-b406-4d40-99ea-5ddb3361ee3f&quot;
+    &quot;accountId&quot;: &quot;dad2e82a-7ed2-4c8c-9e49-30a9cc1b0501&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/UpdateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/CreateLessonImageDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/LessonImageDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LikeDTOs/AddLikeDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LikeDTOs/LikeDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserCardDTOs/CreateUserCardDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,36 +107,19 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/CreateUserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UpdateUserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/EvGenii/source/repos/English-App/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonExceptions/NotFoundLessonException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonImageExceptions/LessonImageWasntFoundException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LikeExceptions/LessonHadAlreadyLikedException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/UserCardExceptions/NotFoundUserCardException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/UserExceptions/NotFoundUserException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/UserStudyResultExceptions/NotFoundUserStudyResultException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/LessonFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/PageParams.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/SortDirection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/SortParams.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/LessonImageConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsImagesRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/EmailTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/JwtTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/PasswordTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/EvGenii/source/repos/English-App/EnglishApp.DataAccess/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Middleware/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-  </component>
-  <component name="HttpClientSelectedEnvironments">
-    <file url="file://$USER_HOME$/AppData/Local/Temp/whats-new-dir/whats-new.http" environment="test" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="33c4llg8C4gRU9UbqJgQaT3lu1i" />
+  <component name="ProjectId" id="33gnmyD3WOH9x1RIzr965t7fHwe" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -106,17 +134,18 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/jwt__tests&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="FullStack" type="CompoundRunConfigurationType">
       <toRun name="HTTPS" type="LaunchSettings" />
       <toRun name="dev" type="js.build_tools.npm" />
@@ -172,63 +201,15 @@
       <updated>1759344291463</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: New lessons and like controllers, dtos.WorkSpace changes. Compound start. Changes in repos and services." />
-      <created>1759603204691</created>
+      <changelist id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="" />
+      <created>1759747745704</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1759603204691</updated>
-      <workItem from="1759603214013" duration="4147000" />
-      <workItem from="1759685689892" duration="12505000" />
-      <workItem from="1759951784523" duration="800000" />
-      <workItem from="1760034464537" duration="2075000" />
-      <workItem from="1760361086945" duration="2524000" />
-      <workItem from="1760521631350" duration="2487000" />
-      <workItem from="1760689585578" duration="4472000" />
-      <workItem from="1760813622310" duration="4128000" />
-      <workItem from="1760894355349" duration="1617000" />
-      <workItem from="1760986250058" duration="3331000" />
+      <updated>1759747745704</updated>
+      <workItem from="1759747746962" duration="979000" />
+      <workItem from="1760863256634" duration="4605000" />
     </task>
-    <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
-      <option name="closed" value="true" />
-      <created>1759778479292</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1759778479292</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Fix: rename articles to lessons in like repo, service and controller.">
-      <option name="closed" value="true" />
-      <created>1759863025173</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1759863025175</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fix: fixes in getting lesson with dto.">
-      <option name="closed" value="true" />
-      <created>1760556422140</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1760556422140</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Feature: tests for passwordHasher service.">
-      <option name="closed" value="true" />
-      <created>1760729776058</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1760729776058</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Feature: Can check teacher lessons in online lessons and teacher lessons pages. Can update lessons in teacher page.">
-      <option name="closed" value="true" />
-      <created>1760861769720</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1760861769720</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,13 +231,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Like migrations." />
     <MESSAGE value="WorkSpace changes. Compound start." />
-    <MESSAGE value="Feature: Pagination, filtration, sorting features for lessons. Watch couting for lessons;" />
-    <MESSAGE value="Fix: rename articles to lessons in like repo, service and controller." />
-    <MESSAGE value="Feature: images controller was added to project. New dto for lesson images model." />
-    <MESSAGE value="Feature: base operations with lessons with hardcode in fronted." />
-    <MESSAGE value="Feature: tests for passwordHasher service." />
-    <MESSAGE value="Feature: unit tests for email were added." />
-    <MESSAGE value="Fix: Now online lessons get lessons with text." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: Now online lessons get lessons with text." />
+    <option name="LAST_COMMIT_MESSAGE" value="WorkSpace changes. Compound start." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
