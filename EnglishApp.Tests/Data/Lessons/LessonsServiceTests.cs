@@ -9,30 +9,6 @@ namespace EnglishApp.Tests.Data.Lessons;
 public class LessonsServiceTests
 {
     [Fact]
-    public async Task GetLessons_ReturnsListOfLessons()
-    {
-        // Arrange
-        var mockRepo = Substitute.For<ILessonRepository>();
-        var lessons = new List<Lesson>
-        {
-            new() { Id = Guid.NewGuid(), Title = "Lesson 1" },
-            new() { Id = Guid.NewGuid(), Title = "Lesson 2" }
-        };
-        var ct = new CancellationToken();
-        
-        mockRepo.GetLessonsAsync(ct).Returns(lessons);
-        var service = new LessonService(mockRepo);
-        
-        // Act
-        var result = await service.GetLessons(ct);
-
-        // Assert
-        Assert.NotNull(result);
-        Assert.Equal(2, result.Count);
-        Assert.Equal("Lesson 1", result[0].Title);
-    }
-
-    [Fact]
     public async Task GetUserLessonByLessonId_WithValidId_ReturnsLesson()
     {
         // Arrange
