@@ -26,7 +26,6 @@
     <Folder Include="Data\Images\" />
     <Folder Include="Data\UsersCards\" />
     <Folder Include="Data\UsersStudyResults\" />
-    <Folder Include="Data\Users\" />
     <Folder Include="TestUtilities\" />
   </ItemGroup>
 
