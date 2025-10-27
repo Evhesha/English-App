@@ -2,3 +2,4 @@ C:/Medvedskii/BNTU/EnglishStorageApplication/englishstorageapplication.client/ob
 C:/Medvedskii/BNTU/3 курс/EnglishStorageApplication/englishstorageapplication.client/obj/Debug/App.client.esproj.CoreCompileInputs.cache
 C:/Users/EvGenii/Source/Repos/English-App/englishstorageapplication.client/obj/Debug/App.client.esproj.CoreCompileInputs.cache
 /Users/kirillzuhta/RiderProjects/English-App/englishstorageapplication.client/obj/Debug/App.client.esproj.CoreCompileInputs.cache
+C:\Users\EvGenii\source\repos\English-App\englishstorageapplication.client\obj\Debug\App.client.esproj.CoreCompileInputs.cache
