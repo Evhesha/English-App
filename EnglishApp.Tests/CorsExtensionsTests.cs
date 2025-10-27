@@ -6,13 +6,6 @@ using Xunit;
 
 namespace EnglishStorageApplication.EnglishApp.Extensions.Tests
 {
-    //Этот юнит-тест проверяет, что метод AddCustomCors корректно
-    //регистрирует политику CORS в контейнере зависимостей.
-    //Тест загружает конфигурацию из файла appsettings.json, вызывает метод AddCustomCors,
-    //чтобы настроить политику CORS, и затем проверяет,
-    //что политика AllowSpecificOrigin была успешно добавлена
-    //и содержит правильный разрешенный источник http://localhost:5173
-
     public class CorsExtensionsTests
     {
         [Fact]
@@ -20,8 +13,7 @@ namespace EnglishStorageApplication.EnglishApp.Extensions.Tests
         {
             // Arrange
             var services = new ServiceCollection();
-
-            // Загрузка конфигурации из файла appsettings.json
+            
             IConfiguration configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();

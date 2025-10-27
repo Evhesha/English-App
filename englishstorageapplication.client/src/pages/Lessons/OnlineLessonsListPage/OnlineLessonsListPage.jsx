@@ -18,17 +18,32 @@ function OnlineLessonsListPage() {
     useEffect(() => {
         const fetchLessons = async () => {
             try {
-                const response = await axios.get(`${API_BASE_URL}/api/Lessons`);
+                const url = `${API_BASE_URL}/api/Lessons/lessons/params`;
+                console.log("Загружаем уроки по URL:", url);
+                
+                const response = await axios.get(url, {
+                    params: {
+                        lessonFilter: {},
+                        sortParams: {},
+                        pageParams: {}
+                    }
+                });
+
+                console.log("Ответ получен:", response);
+                console.log("Данные уроков:", response.data);
+
                 setLessons(response.data);
                 setIsLoading(false);
                 setHasError(false);
-                console.log("Данные успешно загружены:", response.data);
-                //receiveNotify();
             } catch (error) {
-                console.error("Ошибка при получении уроков:", error);
+                console.error("Полная ошибка при получении уроков:", {
+                    message: error.message,
+                    status: error.response?.status,
+                    data: error.response?.data,
+                    url: error.config?.url
+                });
                 setIsLoading(false);
                 setHasError(true);
-                //mistakeNotify();
             }
         };
 
@@ -44,7 +59,6 @@ function OnlineLessonsListPage() {
                         key={index}
                         to={lesson.path}
                         id={lesson.id}
-                        text={lesson.text}
                         author={lesson.userId}
                         name={lesson.title}
                         watchCount={lesson.watchCount}
