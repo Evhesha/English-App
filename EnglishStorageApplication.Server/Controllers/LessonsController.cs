@@ -22,11 +22,12 @@ namespace EnglishStorageApplication.Server.Controllers
         {
             var lessons = await _lessonService.GetLessons(cancellationToken);
 
-            var listLessonsDto = lessons.Select(lesson => new ListLessonsDto
+            var listLessonsDto = lessons.Select(lesson => new LessonDto
             {
                 Id = lesson.Id,
                 UserId = lesson.UserId,
                 Title = lesson.Title,
+                Text = lesson.Text,
                 isPublic = lesson.isPublic,
                 WatchCount = lesson.WatchCount,
                 CreatedDate = lesson.CreatedDate
@@ -44,8 +45,8 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(lessons);
         }
 
-        [HttpGet("lesson/params")]
-        public async Task<ActionResult<List<LessonDto>>> GetLessonsWithParams(
+        [HttpGet("lessons/params")]
+        public async Task<ActionResult<List<ListLessonsDto>>> GetLessonsWithParams(
             [FromQuery] LessonFilter lessonFilter,
             [FromQuery] SortParams sortParams,
             [FromQuery]  PageParams pageParams,
@@ -58,12 +59,11 @@ namespace EnglishStorageApplication.Server.Controllers
                 pageParams,
                 cancellationToken);
             
-            var listLessonsDto = lessons.Select(lesson => new ListLessonsDto
+            var listLessonsDto = lessons.Select(lesson => new ListLessonsDto()
             {
                 Id = lesson.Id,
                 UserId = lesson.UserId,
                 Title = lesson.Title,
-                isPublic = lesson.isPublic,
                 WatchCount = lesson.WatchCount,
                 CreatedDate = lesson.CreatedDate
             });
