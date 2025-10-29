@@ -60,7 +60,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(userId);
         }
         
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPost("assign-role")]
         public async Task<IActionResult> AssignRole(Guid userId, string role, CancellationToken ct)
         {
