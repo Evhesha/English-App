@@ -53,7 +53,6 @@ function OnlineLessonsListPage() {
     return (
         <div className="lessons-container">
             <h1 className="text-center main-title mb-5">Online lessons</h1>
-            <div className="lessons-grid">
                 {lessons.map((lesson, index) => (
                     <LessonListElementForUsers
                         key={index}
@@ -65,7 +64,6 @@ function OnlineLessonsListPage() {
                     >
                     </LessonListElementForUsers>
                 ))}
-            </div>
         </div>
     );
 }

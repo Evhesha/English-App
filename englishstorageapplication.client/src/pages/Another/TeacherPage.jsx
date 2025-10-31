@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect, useRef } from "react";
 import Section from "./TeacherPageComponents/Section";
 import LessonListElementForTeachers from "../../Components/TeacherPageComp/LessonListElementForTeachers.jsx";
 import axios from "axios";
@@ -12,43 +11,45 @@ import AddLesson from "./TeacherPageComponents/AddLesson.png";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 function TeacherPage() {
-  const [activeTab, setActiveTab] = useState("articles");
-
   const [articles, setArticles] = useState([]);
-  const [tests, setTests] = useState([]);
+    const effectRan = useRef(false);
 
   const handleDeleteArticle = (id) => {
     setArticles(articles.filter(article => article.id !== id));
+    deleteNotify();
   };
 
-  const handleDeleteTest = (id) => {
-    setTests(tests.filter(test => test.id !== id));
-  };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const token = Cookies.get("token");
-      if (token) {
-        const decodedToken = jwtDecode(token);
-        const userId = decodedToken.userId; 
-
-        try {
-          const response = await axios.get(`${API_BASE_URL}/api/Lessons/lessons/${userId}`);
-            setArticles(response.data);
-console.log(response.data)
-        } catch (error) {
-          console.log(error);    
+    useEffect(() => {
+        if (effectRan.current === true) {
+            return;
         }
-      }
-    };
+        const fetchData = async () => {
+            const token = Cookies.get("token");
+            if (!token) return;
 
-    fetchData();
-  }, []);
+            try {
+                const decodedToken = jwtDecode(token);
+                const userId = decodedToken.userId;
+
+                const response = await axios.get(`${API_BASE_URL}/api/Lessons/lessons/${userId}`);
+                setArticles(response.data);
+                receiveNotify();
+            } catch (error) {
+                console.log("Error fetching data:", error);
+                mistakeNotify();
+            }
+        };
+
+        fetchData();
+        return () => {
+            effectRan.current = true;
+        };
+    }, []);
 
     const receiveNotify = () => {
-      toast.success("Data was received!", {
-        position: "bottom-right"
-      });
+        toast.success("Data was received!", {
+            position: "bottom-right"
+        });
     }
   
     const deleteNotify = () => {
@@ -62,17 +63,11 @@ console.log(response.data)
         position: "bottom-right"
       });
     }
-
-  const ButtonGroup = styled.div`
-    display: flex;
-    gap: 15px;
-  `;
-
+    
   return (
     <>
-      <h1>Teacher panel</h1>
+      <h1>Teacher panel (your lessons)</h1>
       <Section>
-        <h3>Your lessons</h3>
           <CreateLesson title={"Add lesson"} image={
               <img
                   src={AddLesson}
@@ -93,6 +88,7 @@ console.log(response.data)
               />
           ))}
       </Section>
+        <ToastContainer/>
     </>
   );
 }

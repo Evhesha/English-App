@@ -1,54 +1,355 @@
 The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[31.10.2025 12:33:36] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[31.10.2025 12:33:36] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
-[31.10.2025 12:33:36] Now listening on: https://localhost:7298
-[31.10.2025 12:33:36] Now listening on: http://localhost:5020
-[31.10.2025 12:33:36] Application started. Press Ctrl+C to shut down.
-[31.10.2025 12:33:36] Hosting environment: Development
-[31.10.2025 12:33:36] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
-[31.10.2025 12:33:36] Executed DbCommand (39ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:32:20] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[31.10.2025 22:32:20] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+[31.10.2025 22:32:20] Now listening on: https://localhost:7298
+[31.10.2025 22:32:20] Now listening on: http://localhost:5020
+[31.10.2025 22:32:20] Application started. Press Ctrl+C to shut down.
+[31.10.2025 22:32:20] Hosting environment: Development
+[31.10.2025 22:32:20] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
+[31.10.2025 22:32:20] Executed DbCommand (36ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:33:42] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:32:25] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:33:42] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:32:25] Unable to connect to the SPA development server at 'https://localhost:5173'.
+[31.10.2025 22:34:22] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:33:46] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:35:45] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:33:46] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:35:50] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[31.10.2025 12:33:50] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:37:24] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[31.10.2025 12:33:50] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:37:24] Executed DbCommand (3ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[31.10.2025 22:37:25] Executed DbCommand (5ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[31.10.2025 22:37:25] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:37:37] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:37:37] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[31.10.2025 22:37:38] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[31.10.2025 22:37:38] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:37:52] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:37:52] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:38:49] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:38:49] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:33:59] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:38:51] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:33:59] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:38:59] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Email", "Name", "PasswordHash", "Role")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+[31.10.2025 22:41:39] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:42:06] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[31.10.2025 22:42:39] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[31.10.2025 22:42:39] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Role" = @p0
+WHERE "Id" = @p1;
+[31.10.2025 22:42:39] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:43:33] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:50:39] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:50:39] Executed DbCommand (3ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[31.10.2025 22:50:50] Executed DbCommand (5ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[31.10.2025 22:50:50] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[31.10.2025 22:51:17] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:34:03] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[31.10.2025 22:51:19] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:51:35] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:51:35] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:53:23] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:53:23] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[31.10.2025 12:34:03] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[31.10.2025 12:35:38] 
+[31.10.2025 22:53:24] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:53:25] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:53:25] Executed DbCommand (3ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[31.10.2025 22:53:29] Executed DbCommand (4ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[31.10.2025 22:53:29] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."UserId" = @__userId_0
+[31.10.2025 22:53:31] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."UserId" = @__userId_0
+[31.10.2025 22:55:09] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:55:12] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:55:12] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."UserId" = @__userId_0
+[31.10.2025 22:55:40] Executed DbCommand (6ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:55:53] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:55:53] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."UserId" = @__userId_0
+[31.10.2025 22:55:59] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:56:41] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:56:41] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[31.10.2025 22:57:00] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:57:02] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:57:02] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:57:14] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:57:14] Executed DbCommand (9ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:57:25] Executed DbCommand (11ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 22:57:25] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Email", "Name", "PasswordHash", "Role")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+[31.10.2025 22:58:35] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:58:41] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[31.10.2025 22:58:51] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[31.10.2025 22:58:51] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Role" = @p0
+WHERE "Id" = @p1;
+[31.10.2025 22:58:51] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 22:58:58] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 23:00:37] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 23:00:37] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 23:00:48] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 23:00:48] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 23:01:06] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[31.10.2025 23:01:06] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[31.10.2025 23:01:22] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."UserId" = @__userId_0
+[31.10.2025 23:01:25] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 23:01:33] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[31.10.2025 23:01:33] Application is shutting down...
+[31.10.2025 23:02:25] 
