@@ -10,7 +10,7 @@ public static class LessonExtensions
         this IQueryable<Lesson> query,
         LessonFilter lessonFilter)
     {
-        query = query.Where(l => l.isPublic);
+        query = query.Where(l => l.IsPublic);
         
         if (!string.IsNullOrEmpty(lessonFilter.Title))
         {

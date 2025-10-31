@@ -29,6 +29,7 @@ namespace EnglishApp.Application.AppServices
             var query = _lessonRepository.GetLessonsQueryable();
 
             query = query
+                .Where(l => l.IsPublic == true)
                 .Filter(lessonFilter)
                 .Sort(sortParams)
                 .Page(pageParams);

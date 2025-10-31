@@ -28,10 +28,9 @@ function TeacherPage() {
   useEffect(() => {
     const fetchData = async () => {
       const token = Cookies.get("token");
-      //if (token) {
-        //const decodedToken = jwtDecode(token);
-        const userId = "1023a128-1835-4dda-9348-41915c86d7d1"
-            //decodedToken.UserId; hard code
+      if (token) {
+        const decodedToken = jwtDecode(token);
+        const userId = decodedToken.userId; 
 
         try {
           const response = await axios.get(`${API_BASE_URL}/api/Lessons/lessons/${userId}`);
@@ -40,7 +39,7 @@ console.log(response.data)
         } catch (error) {
           console.log(error);    
         }
-     // }
+      }
     };
 
     fetchData();
