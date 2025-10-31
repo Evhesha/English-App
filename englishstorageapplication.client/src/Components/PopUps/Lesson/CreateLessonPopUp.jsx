@@ -1,6 +1,8 @@
 import "../CreateUserPopUp.css";
 import { useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
+import {jwtDecode} from "jwt-decode";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -9,7 +11,7 @@ function CreateLessonPopUp({ onPost, userId }) {
   const [name, setName] = useState("Name");
   const [text, setText] = useState("");
   const [error, setError] = useState(null);
-  const [isPrivate, setIsPrivate] = useState(false);
+  const [isPublic, setIsPublic] = useState(true);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -20,21 +22,21 @@ function CreateLessonPopUp({ onPost, userId }) {
     e.preventDefault(); 
     setIsOpen(false);
   };
-  
-  const handlePrivacyChange = (value) => {
-      setIsPrivate(value === "true");
-  }
 
   const handleCreate = async (event) => {
     event.preventDefault(); 
     try {
-      const response = await axios.post(
+        const token = Cookies.get("token");
+        const decodedToken = jwtDecode(token);
+        const userId = decodedToken.userId;
+        
+        const response = await axios.post(
         `${API_BASE_URL}/api/Lessons`,
         {
-          userId: "1023a128-1835-4dda-9348-41915c86d7d1",
+          userId: userId,
           title: name,
           text: text,
-            isPublic: isPrivate,
+            isPublic: isPublic,
             images: []
         }
       )
@@ -103,23 +105,17 @@ function CreateLessonPopUp({ onPost, userId }) {
                     onChange={(e) => setText(e.target.value)}
                   />
                 </div>
-                  <div className="mb-3">
-                      <label
-                      htmlFor="text"
-                      className="form-label"
-                      style={{ color: "black" }}>
-                          Is private?
+                  <div className="mb-3 form-check">
+                      <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="isPublic"
+                          checked={isPublic}
+                          onChange={(e) => setIsPublic(e.target.checked)}
+                      />
+                      <label className="form-check-label" htmlFor="isPublic" style={{ color: "black" }}>
+                          Public lesson
                       </label>
-                      <p></p>
-                      Yes   <input checked={isPrivate === true}
-                                onChange={(e) => handlePrivacyChange("true")}
-                                value={"true"}
-                                type="radio"/>
-                      <p></p>
-                      No  <input checked={isPrivate === false}
-                               onChange={(e) => handlePrivacyChange("false")}
-                               value={"false"}
-                               type="radio"/>
                   </div>
                 {error && (
                   <div className="alert alert-danger" role="alert">

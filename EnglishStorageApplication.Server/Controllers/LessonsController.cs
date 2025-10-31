@@ -28,7 +28,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 UserId = lesson.UserId,
                 Title = lesson.Title,
                 Text = lesson.Text,
-                isPublic = lesson.isPublic,
+                IsPublic = lesson.IsPublic,
                 WatchCount = lesson.WatchCount,
                 CreatedDate = lesson.CreatedDate
             });
@@ -92,7 +92,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 UserId = createLessonDto.UserId,
                 Title = createLessonDto.Title,
                 Text = createLessonDto.Text,
-                isPublic = createLessonDto.isPublic
+                IsPublic = createLessonDto.IsPublic
             };
 
             await _lessonService.CreateLesson(lesson, cancellationToken);
@@ -112,7 +112,7 @@ namespace EnglishStorageApplication.Server.Controllers
                 UserId = updateLessonDto.UserId,
                 Title = updateLessonDto.Title,
                 Text = updateLessonDto.Text,
-                isPublic = updateLessonDto.isPublic
+                IsPublic = updateLessonDto.IsPublic
             };
             
             var articleId = await _lessonService.UpdateLesson(lesson, cancellationToken); 

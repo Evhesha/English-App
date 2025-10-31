@@ -12,7 +12,7 @@ public class CreateLessonDto
     
     public string Text { get; set; } = string.Empty;
     
-    public bool isPublic { get; set; }
+    public bool IsPublic { get; set; }
     
     public required List<byte[]> Images { get; set; }
 }
