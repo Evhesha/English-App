@@ -1,26 +1,26 @@
-﻿import axios from "axios";
-import PropTypes from 'prop-types';
+﻿import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
-
-const API_BASE_URL = import.meta.env.VITE_API_URL;
+import "./LessonsListElement.css"
 
 function LessonListElementForUsers({ id, name, text, watchCount, author }) {
     return (
-        <li className="list-group-item d-flex justify-content-between align-items-center" style={{ border: '2px solid #ccc', borderRadius: '5px', marginBottom: '10px', padding: '10px' }}>
-            <div>
-                <div style={{ flex: 1 }}>
-                    <p><b>Name: </b> {name}</p>
-                </div>
-                <div style={{ flex: 1 }}>
-                    <p><b>Views: </b> {watchCount}</p>
-                </div>
-                <div style={{ flex: 1 }}>
-                    <p><b>Author: </b> {author}</p>
+        <li className="list-group-item d-flex justify-content-between align-items-center lesson-list-element">
+            <div className="lesson-content">
+                <h3 className="lesson-title">{name}</h3>
+                <div className="lesson-info">
+                    <div className="info-item">
+                        <span className="info-label">Views:</span>
+                        <span className="info-value">{watchCount}</span>
+                    </div>
+                    <div className="info-item">
+                        <span className="info-label">Author:</span>
+                        <span className="info-value">{author}</span>
+                    </div>
                 </div>
             </div>
-            <div>
-                <ReadLessonPopUp id={id} title={name} text={text}></ReadLessonPopUp>
+            <div className="lesson-actions">
+                <ReadLessonPopUp id={id} title={name} text={text} />
             </div>
         </li>
     );
@@ -29,6 +29,9 @@ function LessonListElementForUsers({ id, name, text, watchCount, author }) {
 LessonListElementForUsers.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    watchCount: PropTypes.number,
+    author: PropTypes.string
 };
 
 export default LessonListElementForUsers;
