@@ -36,7 +36,6 @@ function Card({ id, image, title, text, onDelete, onUpdate }) {
   return (
     <>
       <div className="card" style={{ width: "18rem" }}>
-        <button type="button" className="btn btn-danger" onClick={handleDelete}></button>
         {image}
         <div className="card-body">
           <h5 className="card-title">{title}</h5>

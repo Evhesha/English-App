@@ -1,334 +1,142 @@
 The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[1.11.2025 15:23:31] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[1.11.2025 15:23:31] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
-[1.11.2025 15:23:31] Now listening on: https://localhost:7298
-[1.11.2025 15:23:31] Now listening on: http://localhost:5020
-[1.11.2025 15:23:31] Application started. Press Ctrl+C to shut down.
-[1.11.2025 15:23:31] Hosting environment: Development
-[1.11.2025 15:23:31] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
-[1.11.2025 15:23:31] Executed DbCommand (38ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:23:33] Executed DbCommand (6ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 15:58:22] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[1.11.2025 15:58:22] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+[1.11.2025 15:58:22] Now listening on: https://localhost:7298
+[1.11.2025 15:58:22] Now listening on: http://localhost:5020
+[1.11.2025 15:58:22] Application started. Press Ctrl+C to shut down.
+[1.11.2025 15:58:22] Hosting environment: Development
+[1.11.2025 15:58:22] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
+[1.11.2025 15:58:22] Executed DbCommand (36ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:24:18] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 15:59:27] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:24:18] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:24:30] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:24:30] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:24:31] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[1.11.2025 15:25:32] Executed DbCommand (10ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:29:25] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
-UPDATE "Lessons" SET "Title" = @p0
-WHERE "Id" = @p1;
-[1.11.2025 15:29:25] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:29:25] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:29:33] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:29:33] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:29:45] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:29:45] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:33:35] Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
-UPDATE "Lessons" SET "Text" = @p0, "Title" = @p1
-WHERE "Id" = @p2;
-[1.11.2025 15:33:35] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:33:35] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:33:40] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:33:41] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:37:16] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:37:24] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:37:24] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:37:27] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:37:27] Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "UsersCards" ("Id", "NameOfUsersCard", "UserCardData", "UserId")
-VALUES (@p0, @p1, @p2, @p3);
-[1.11.2025 15:38:14] An exception occurred in the database while saving changes for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
- ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "UsersCards" violates foreign key constraint "FK_UsersCards_Users_UserId"
-
-DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
-   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
-   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
-   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
-  Exception data:
-    Severity: ERROR
-    SqlState: 23503
-    MessageText: insert or update on table "UsersCards" violates foreign key constraint "FK_UsersCards_Users_UserId"
-    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
-    SchemaName: public
-    TableName: UsersCards
-    ConstraintName: FK_UsersCards_Users_UserId
-    File: ri_triggers.c
-    Line: 2772
-    Routine: ri_ReportViolation
-   --- End of inner exception stack trace ---
-   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-[1.11.2025 15:38:14] Unhandled exception occurred.
-[1.11.2025 15:38:14] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "UsersCards" ("Id", "NameOfUsersCard", "UserCardData", "UserId")
-VALUES (@p0, @p1, @p2, @p3);
-[1.11.2025 15:38:40] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:38:40] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:38:40] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:40:06] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:40:39] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
-UPDATE "UsersCards" SET "NameOfUsersCard" = @p0
-WHERE "Id" = @p1;
-[1.11.2025 15:40:39] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:40:39] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:40:39] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:40:45] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
-UPDATE "UsersCards" SET "UserCardData" = @p0
-WHERE "Id" = @p1;
-[1.11.2025 15:40:45] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:40:45] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:40:45] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:41:17] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:41:17] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:41:21] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:41:21] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:42:05] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."Id" = @__id_0
-LIMIT 1
-[1.11.2025 15:42:54] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-DELETE FROM "Lessons"
-WHERE "Id" = @p0;
-[1.11.2025 15:42:54] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?', @p5='?' (DbType = Guid), @p6='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-INSERT INTO "Lessons" ("Id", "CreatedDate", "IsPublic", "Text", "Title", "UserId", "WatchCount")
-VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
-[1.11.2025 15:43:08] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[1.11.2025 15:43:08] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:45:16] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:45:16] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."Id" = @__get_Item_0
-LIMIT 1
-[1.11.2025 15:45:40] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-DELETE FROM "UsersCards"
-WHERE "Id" = @p0;
-[1.11.2025 15:45:40] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:45:43] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:45:43] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 15:59:27] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."Id" = @__lessonId_0
 LIMIT 1
-[1.11.2025 15:45:46] Executed DbCommand (3ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 15:59:28] Executed DbCommand (5ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 UPDATE "Lessons" AS l
 SET "WatchCount" = l."WatchCount" + 1
 WHERE l."Id" = @__lessonId_0
-[1.11.2025 15:45:46] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:45:50] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[1.11.2025 15:45:50] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 15:59:28] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."UserId" = @__userId_0
-[1.11.2025 15:45:53] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 15:59:42] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__get_Item_0
+LIMIT 1
+[1.11.2025 16:00:00] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."UserId" = @__userId_0
+[1.11.2025 16:00:00] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:46:00] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 16:00:10] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:46:00] Executed DbCommand (10ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 16:00:10] Unable to connect to the SPA development server at 'https://localhost:5173'.
+[1.11.2025 16:00:24] Executed DbCommand (5ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[1.11.2025 16:00:37] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[1.11.2025 16:00:37] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[1.11.2025 16:00:52] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[1.11.2025 16:00:52] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[1.11.2025 16:01:11] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[1.11.2025 16:01:11] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[1.11.2025 16:01:16] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[1.11.2025 16:01:16] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."UserId" = @__userId_0
+[1.11.2025 16:03:35] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:46:25] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 16:04:16] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic" AND l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:46:56] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[1.11.2025 16:04:16] Executed DbCommand (3ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:46:56] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:47:01] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic" AND l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[1.11.2025 15:47:01] Application is shutting down...
-[1.11.2025 15:51:19] 
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[1.11.2025 16:04:17] Executed DbCommand (3ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[1.11.2025 16:04:17] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[1.11.2025 16:04:24] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[1.11.2025 16:04:24] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[1.11.2025 16:04:50] Executed DbCommand (4ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "UsersCards" SET "NameOfUsersCard" = @p0, "UserCardData" = @p1
+WHERE "Id" = @p2;
+[1.11.2025 16:04:50] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[1.11.2025 16:04:50] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[1.11.2025 16:04:50] Application is shutting down...
+[1.11.2025 16:06:15] 

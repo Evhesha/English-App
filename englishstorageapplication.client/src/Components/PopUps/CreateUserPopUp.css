@@ -18,9 +18,11 @@
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 500px;
+    max-width: 900px;
     position: relative;
     border: 1px solid #e0e0e0;
+    max-height: 130vh; 
+    overflow-y: auto; 
 }
 
 .close {
@@ -122,5 +124,5 @@
 
 textarea.form-control {
     resize: vertical;
-    min-height: 120px;
+    min-height: 400px; 
 }
