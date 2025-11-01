@@ -27,7 +27,7 @@ function LessonListElementForUsers({ id, name, text, watchCount, author }) {
 }
 
 LessonListElementForUsers.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     text: PropTypes.string,
     watchCount: PropTypes.number,

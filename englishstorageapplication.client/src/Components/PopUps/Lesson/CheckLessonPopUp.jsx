@@ -9,6 +9,7 @@ function CheckLessonPopUp({ title, text, onPut, userId, id }) {
     const [error, setError] = useState(null);
     const [lessonTitle, setLessonTitle] = useState(title);
     const [lessonText, setLessonText] = useState(text);
+    const [isPublic, setIsPublic] = useState();
     
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -28,6 +29,8 @@ function CheckLessonPopUp({ title, text, onPut, userId, id }) {
                 {
                     title: lessonTitle,
                     text: lessonText,
+                    isPublic: isPublic,
+                    images: []
                 }
             );
 
@@ -45,7 +48,7 @@ function CheckLessonPopUp({ title, text, onPut, userId, id }) {
         } catch (error) {
             console.error(error);
             setError(
-                error.response?.data?.message || "Ошибка при изменении укрока."
+                error.response?.data?.message || "Ошибка при изменении урока."
             );
         }
     };
@@ -86,6 +89,18 @@ function CheckLessonPopUp({ title, text, onPut, userId, id }) {
                                     value={lessonText}
                                     onChange={(e) => setLessonText(e.target.value)}
                                 />
+                            </div>
+                            <div className="mb-3 form-check">
+                                <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id="isPublic"
+                                    checked={isPublic}
+                                    onChange={(e) => setIsPublic(e.target.checked)}
+                                />
+                                <label className="form-check-label" htmlFor="isPublic" style={{ color: "black" }}>
+                                    Public lesson
+                                </label>
                             </div>
                             {error && (
                                 <div className="alert alert-danger" role="alert">
