@@ -51,7 +51,7 @@ function CheckLessonPopUp({ userId, id }) {
                         <span className="close" onClick={togglePopup}>
                             &times;
                         </span>
-                        <h3 style={{color: "black"}}>Check card</h3>
+                        <h3 style={{color: "black"}}>Check lesson</h3>
 
                         {isLoading && (
                             <div className="text-center">
@@ -71,7 +71,7 @@ function CheckLessonPopUp({ userId, id }) {
                             <form>
                                 <div className="mb-3">
                                     <label htmlFor="name" className="form-label" style={{color: "black"}}>
-                                        Card name
+                                        Lesson name
                                     </label>
                                     <input
                                         type="text"
@@ -84,7 +84,7 @@ function CheckLessonPopUp({ userId, id }) {
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="text" className="form-label" style={{color: "black"}}>
-                                        Card text
+                                        Lesson text
                                     </label>
                                     <textarea
                                         className="form-control"
