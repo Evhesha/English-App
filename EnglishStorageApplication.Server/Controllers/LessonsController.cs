@@ -109,7 +109,6 @@ namespace EnglishStorageApplication.Server.Controllers
             var lesson = new Lesson
             {
                 Id =  id,
-                UserId = updateLessonDto.UserId,
                 Title = updateLessonDto.Title,
                 Text = updateLessonDto.Text,
                 IsPublic = updateLessonDto.IsPublic

@@ -39,7 +39,7 @@ public static class LessonExtensions
         PageParams pageParams)
     {
         var page = pageParams.Page ?? 1;
-        var pageSize = pageParams.PageSize ?? 10;
+        var pageSize = pageParams.PageSize ?? 50;
 
         var skip = (page - 1) * pageSize;
         return query.Skip(skip).Take(pageSize);
