@@ -9,7 +9,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL;
 function CreateLessonPopUp({ onPost, userId }) {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("Name");
-  const [text, setText] = useState("");
+  const [text, setText] = useState("Text");
   const [error, setError] = useState(null);
   const [isPublic, setIsPublic] = useState(true);
 
@@ -33,10 +33,10 @@ function CreateLessonPopUp({ onPost, userId }) {
         const response = await axios.post(
         `${API_BASE_URL}/api/Lessons`,
         {
-          userId: userId,
-          title: name,
-          text: text,
-            isPublic: isPublic,
+            userId: userId,
+            title: name,
+            text: text,
+            isPublic: isPublic,          
             images: []
         }
       )
@@ -113,7 +113,7 @@ function CreateLessonPopUp({ onPost, userId }) {
                           checked={isPublic}
                           onChange={(e) => setIsPublic(e.target.checked)}
                       />
-                      <label className="form-check-label" htmlFor="isPublic" style={{ color: "black" }}>
+                      <label className="form-check-label" htmlFor="Public" style={{ color: "black" }}>
                           Public lesson
                       </label>
                   </div>

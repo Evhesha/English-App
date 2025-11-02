@@ -70,6 +70,7 @@ namespace EnglishApp.DataAccess.Repositories
                 UserId = lesson.UserId,
                 Title = lesson.Title,
                 Text = lesson.Text,
+                IsPublic = lesson.IsPublic,
                 Images = lesson.Images,
                 CreatedDate = lesson.CreatedDate
             };
