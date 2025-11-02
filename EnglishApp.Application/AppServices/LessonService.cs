@@ -20,7 +20,7 @@ namespace EnglishApp.Application.AppServices
             return await _lessonRepository.GetLessonsAsync(cancellationToken);
         }
 
-        public async Task<List<Lesson>> GetLessonsWithParameters(
+        public async Task<(List<Lesson> lessons, int totalCount)> GetLessonsWithParameters(
             LessonFilter lessonFilter,
             SortParams sortParams,
             PageParams pageParams,
@@ -29,12 +29,13 @@ namespace EnglishApp.Application.AppServices
             var query = _lessonRepository.GetLessonsQueryable();
 
             query = query
-                .Where(l => l.IsPublic == true)
                 .Filter(lessonFilter)
-                .Sort(sortParams)
-                .Page(pageParams);
+                .Sort(sortParams);
 
-            return await query.ToListAsync();
+            var (pagedQuery, totalCount) = query.PageWithCount(pageParams);
+            var lessons = await pagedQuery.ToListAsync(cancellationToken);
+
+            return (lessons, totalCount);
         }
 
         public async Task<List<Lesson>> GetUserLessons(Guid userId, CancellationToken cancellationToken)

@@ -39,10 +39,19 @@ public static class LessonExtensions
         PageParams pageParams)
     {
         var page = pageParams.Page ?? 1;
-        var pageSize = pageParams.PageSize ?? 50;
+        var pageSize = pageParams.PageSize ?? 30;
 
         var skip = (page - 1) * pageSize;
         return query.Skip(skip).Take(pageSize);
+    }
+    
+    public static (IQueryable<Lesson> pagedQuery, int totalCount) PageWithCount(
+        this IQueryable<Lesson> query,
+        PageParams pageParams)
+    {
+        var totalCount = query.Count();
+        var pagedQuery = query.Page(pageParams);
+        return (pagedQuery, totalCount);
     }
     
     private static Expression<Func<Lesson, object>> GetKeySelector(string orderBy)
@@ -55,7 +64,8 @@ public static class LessonExtensions
         return orderBy switch
         {
             nameof(Lesson.CreatedDate) => n => n.CreatedDate,
-            _ => throw new NotImplementedException()
+            
+            nameof(Lesson.WatchCount) => n => n.WatchCount,
         };
     }
 }
