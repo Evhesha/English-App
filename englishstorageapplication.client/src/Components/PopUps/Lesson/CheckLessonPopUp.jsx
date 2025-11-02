@@ -4,12 +4,12 @@ import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CheckLessonPopUp({ title, text, onPut, userId, id }) {
+function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsPublic }) {
     const [isOpen, setIsOpen] = useState(false);
     const [error, setError] = useState(null);
     const [lessonTitle, setLessonTitle] = useState(title);
     const [lessonText, setLessonText] = useState(text);
-    const [isPublic, setIsPublic] = useState();
+    const [isPublic, setIsPublic] = useState(initialIsPublic);
     
     const togglePopup = () => {
         setIsOpen(!isOpen);
