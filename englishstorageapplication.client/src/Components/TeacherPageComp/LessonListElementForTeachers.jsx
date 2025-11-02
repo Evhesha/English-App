@@ -35,7 +35,7 @@ function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDel
                 </div>
             </div>
             <div className="lesson-actions">
-                <CheckLessonPopUp id={id} title={name} text={text} onPut={onUpdate} />
+                <CheckLessonPopUp id={id} title={name} text={text} onPut={onUpdate} isPublic={isPublic} />
                 <button type="button" className="btn btn-danger ms-2" onClick={handleDelete}>
                     <i className="bi bi-trash3"></i> Delete
                 </button>

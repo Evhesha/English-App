@@ -94,6 +94,7 @@ namespace EnglishApp.DataAccess.Repositories
             
             lessonEntity.Title = lesson.Title;
             lessonEntity.Text = lesson.Text;
+            lessonEntity.IsPublic = lesson.IsPublic;
             await _context.SaveChangesAsync(cancellationToken);
 
             return lessonEntity.Id;
