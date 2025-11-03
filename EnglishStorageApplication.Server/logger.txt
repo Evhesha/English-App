@@ -144,4 +144,5 @@ FROM "Lessons" AS l
 WHERE l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[2.11.2025 21:42:20] 
+[2.11.2025 21:42:20] Application is shutting down...
+[2.11.2025 21:44:02] 
