@@ -6,6 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
+    public class PagedLessonsResponse
+    {
+        public List<ListLessonsDto> Lessons { get; set; } = new();
+        public int TotalCount { get; set; }
+    }
+    
     [Route("api/[controller]")]
     [ApiController]
     public class LessonsController : ControllerBase
@@ -46,19 +52,18 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpGet("lessons/params")]
-        public async Task<ActionResult<List<ListLessonsDto>>> GetLessonsWithParams(
+        public async Task<ActionResult<PagedLessonsResponse>> GetLessonsWithParams(
             [FromQuery] LessonFilter lessonFilter,
             [FromQuery] SortParams sortParams,
-            [FromQuery]  PageParams pageParams,
-            CancellationToken cancellationToken
-        )
+            [FromQuery] PageParams pageParams,
+            CancellationToken cancellationToken)
         {
-            var lessons = await _lessonService.GetLessonsWithParameters(
+            var (lessons, totalCount) = await _lessonService.GetLessonsWithParameters(
                 lessonFilter,
                 sortParams,
                 pageParams,
                 cancellationToken);
-            
+    
             var listLessonsDto = lessons.Select(lesson => new ListLessonsDto()
             {
                 Id = lesson.Id,
@@ -66,9 +71,15 @@ namespace EnglishStorageApplication.Server.Controllers
                 Title = lesson.Title,
                 WatchCount = lesson.WatchCount,
                 CreatedDate = lesson.CreatedDate
-            });
-
-            return Ok(listLessonsDto);
+            }).ToList();
+            
+            var result = new PagedLessonsResponse
+            {
+                Lessons = listLessonsDto,
+                TotalCount = totalCount
+            };
+    
+            return Ok(result);
         }
         
         [HttpGet("lesson/{lessonId:guid}")]
@@ -109,7 +120,6 @@ namespace EnglishStorageApplication.Server.Controllers
             var lesson = new Lesson
             {
                 Id =  id,
-                UserId = updateLessonDto.UserId,
                 Title = updateLessonDto.Title,
                 Text = updateLessonDto.Text,
                 IsPublic = updateLessonDto.IsPublic

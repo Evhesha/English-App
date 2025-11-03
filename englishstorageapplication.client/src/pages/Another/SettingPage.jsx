@@ -137,12 +137,10 @@ function SettingPage() {
       const confirmLogout = window.confirm("Are you sure that you want to logout?");
       if (!confirmLogout) return;
       
-  
-      Cookies.remove("token"); // Удаляем токен из куки 
-      setAuthorized(false); // Обновляем состояние авторизации
-      navigate("/login"); // Перенаправляем на страницу входа
-      window.location.reload(); // Обновляем страницу
-      
+      Cookies.remove("token"); 
+      setAuthorized(false);
+      navigate("/login"); 
+      window.location.reload();
     };
 
     return (

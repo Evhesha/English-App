@@ -36,11 +36,13 @@ function Card({ id, image, title, text, onDelete, onUpdate }) {
   return (
     <>
       <div className="card" style={{ width: "18rem" }}>
-        <button type="button" className="btn btn-danger" onClick={handleDelete}></button>
         {image}
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <CheckDictCardPopUp title={title} cardText={text} onPut={onUpdate} userId={userId} id={id}></CheckDictCardPopUp>
+            <button type="button" className="btn btn-danger ms-2" onClick={handleDelete}>
+                <i className="bi bi-trash3"></i> Delete
+            </button>
         </div>
       </div>
     </>

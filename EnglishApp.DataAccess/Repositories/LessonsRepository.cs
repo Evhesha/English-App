@@ -70,6 +70,7 @@ namespace EnglishApp.DataAccess.Repositories
                 UserId = lesson.UserId,
                 Title = lesson.Title,
                 Text = lesson.Text,
+                IsPublic = lesson.IsPublic,
                 Images = lesson.Images,
                 CreatedDate = lesson.CreatedDate
             };
@@ -93,6 +94,7 @@ namespace EnglishApp.DataAccess.Repositories
             
             lessonEntity.Title = lesson.Title;
             lessonEntity.Text = lesson.Text;
+            lessonEntity.IsPublic = lesson.IsPublic;
             await _context.SaveChangesAsync(cancellationToken);
 
             return lessonEntity.Id;

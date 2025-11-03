@@ -78,7 +78,7 @@ function MyDictPage() {
                   style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
                 />
               }
-              title={card.nameOfUserCard}
+              title={card.nameOfUsersCard}
               text={card.userCardData}
               onDelete={() => handleDelete(card.id)}
             />

@@ -6,7 +6,8 @@ public interface ILessonService
 {
     Task<List<Models.Lesson>> GetLessons(CancellationToken cancellationToken);
     Task<List<Models.Lesson>> GetUserLessons(Guid userId, CancellationToken cancellationToken);
-    Task<List<Models.Lesson>> GetLessonsWithParameters(
+
+    Task<(List<Models.Lesson> lessons, int totalCount)> GetLessonsWithParameters(
         LessonFilter lessonFilter,
         SortParams sortParams,
         PageParams pageParams,

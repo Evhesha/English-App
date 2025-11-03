@@ -26,8 +26,8 @@ function CheckDictCardPopUp({ title, cardText, onPut, userId, id }) {
       const response = await axios.put(
         `${API_BASE_URL}/api/UsersCards/${id}`,
         {
-          userId: userId,
-          nameOfUserCard: name,
+          userId: userId, 
+            nameOfUsersCard: name,
           userCardData: text,
         }
       );

@@ -4,8 +4,6 @@ namespace EnglishApp.Application.DTOs.LessonDTOs;
 
 public class UpdateLessonDto
 {
-    [Required(ErrorMessage = "User is required")]
-    public Guid UserId { get; set; }
     
     [Required(ErrorMessage = "Title is required")]
     public string Title { get; set; } = string.Empty;

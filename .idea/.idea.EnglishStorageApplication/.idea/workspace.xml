@@ -12,19 +12,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: .env was added">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: fixing in creating lessons public field.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/UpdateLessonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/UpdateLessonDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CreateLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CreateLessonPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,6 +49,8 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/AppServices/LessonService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/AppServices/LessonService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/ListLessonsDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,30 +112,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "fix/update-privacy-lessons",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
-    <configuration name="FullStack" type="CompoundRunConfigurationType">
-      <toRun name="HTTPS" type="LaunchSettings" />
-      <toRun name="dev" type="js.build_tools.npm" />
-      <method v="2" />
-    </configuration>
     <configuration name="HTTPS" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -178,7 +168,6 @@
     </configuration>
     <list>
       <item itemvalue=".NET Launch Settings Profile.HTTPS" />
-      <item itemvalue="Compound.FullStack" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.dev" />
     </list>
@@ -272,7 +261,31 @@
       <option name="project" value="LOCAL" />
       <updated>1761849179193</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Feature: Styles and componenting lessons data for teachers and online lessons.">
+      <option name="closed" value="true" />
+      <created>1761940992150</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761940992150</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix: popup fixes in naming and width. Delete no need delete button for user cards.">
+      <option name="closed" value="true" />
+      <created>1762002431202</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762002431202</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix: fixing in creating lessons public field.">
+      <option name="closed" value="true" />
+      <created>1762108336833</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762108336833</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +315,9 @@
     <MESSAGE value="Feature: unit tests for email were added." />
     <MESSAGE value="Fix: resolving all migrations into 1. New configurations" />
     <MESSAGE value="Feature: .env was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: .env was added" />
+    <MESSAGE value="Feature: Styles and componenting lessons data for teachers and online lessons." />
+    <MESSAGE value="Fix: popup fixes in naming and width. Delete no need delete button for user cards." />
+    <MESSAGE value="Fix: fixing in creating lessons public field." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: fixing in creating lessons public field." />
   </component>
 </project>
