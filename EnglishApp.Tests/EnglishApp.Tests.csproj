@@ -24,7 +24,6 @@
   <ItemGroup>
     <Folder Include="Auth\Middleware\" />
     <Folder Include="Data\Images\" />
-    <Folder Include="Data\UsersCards\" />
     <Folder Include="Data\UsersStudyResults\" />
     <Folder Include="TestUtilities\" />
   </ItemGroup>
