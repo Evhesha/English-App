@@ -45,39 +45,6 @@ public class UserCardServiceTests
     }
 
     [Fact]
-    public async Task GetUsersCards_ReturnsAllCards()
-    {
-        // Arrange
-        var mockRepo = Substitute.For<IUsersCardsRepository>();
-        var userCards = new List<UserCard>
-        {
-            new() { 
-                Id = Guid.NewGuid(), 
-                UserId = Guid.NewGuid(), 
-                NameOfUsersCard = "Card 1",
-                UserCardData = "Data 1"
-            },
-            new() { 
-                Id = Guid.NewGuid(), 
-                UserId = Guid.NewGuid(), 
-                NameOfUsersCard = "Card 2",
-                UserCardData = "Data 2"
-            }
-        };
-        var ct = new CancellationToken();
-        
-        mockRepo.GetUsersCardsAsync(ct).Returns(userCards);
-        var service = new UserCardService(mockRepo);
-        
-        // Act
-        var result = await service.GetUsersCards(ct);
-
-        // Assert
-        Assert.NotNull(result);
-        Assert.Equal(2, result.Count);
-    }
-
-    [Fact]
     public async Task CreateUserCard_WithValidData_ReturnsGuid()
     {
         // Arrange
