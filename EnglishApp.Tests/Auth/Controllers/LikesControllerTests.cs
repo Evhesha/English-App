@@ -1,9 +1,12 @@
 using EnglishApp.Application.DTOs.LikeDTOs;
 using EnglishApp.Core.Abstractions.Like;
+using EnglishApp.Core.Exceptions.LikeExceptions;
 using EnglishApp.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.Server.Controllers;
+using Microsoft.AspNetCore.Http.HttpResults;
 using NSubstitute;
+using NSubstitute.ExceptionExtensions;
 using Xunit;
 
 namespace EnglishApp.Tests.Auth.Controllers;
@@ -46,6 +49,7 @@ public class LikesControllerTests
             UserId = addLikeDto.UserId, 
             LessonId = addLikeDto.ArticleId 
         };
+        
         var ct = new CancellationToken();
         
         mockService.AddLike(Arg.Any<Like>(), ct).Returns(like);
@@ -59,6 +63,31 @@ public class LikesControllerTests
         var returnedLike = Assert.IsType<Like>(okResult.Value);
         Assert.Equal(addLikeDto.UserId, returnedLike.UserId);
         Assert.Equal(addLikeDto.ArticleId, returnedLike.LessonId);
+    }
+    
+    [Fact]
+    public async Task AddLike_ThatAlreadyExists_ReturnsException()
+    {
+        // Arrange
+        var mockService = Substitute.For<ILikeService>();
+        var addLikeDto = new AddLikeDto
+        {
+            UserId = Guid.NewGuid(),
+            ArticleId = Guid.NewGuid()
+        };
+    
+        var ct = new CancellationToken();
+        
+        mockService
+            .AddLike(Arg.Any<Like>(), ct)
+            .Throws(new LessonHadAlreadyLikedException("The user has already liked this item."));
+
+        var controller = new LikesController(mockService);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<LessonHadAlreadyLikedException>(
+            async () => await controller.AddLike(addLikeDto, ct)
+        );
     }
 
     [Fact]
@@ -74,10 +103,31 @@ public class LikesControllerTests
         var controller = new LikesController(mockService);
         
         // Act
-        var result = await controller.DeleteLike(articleId, userId, ct);
+        var result = await controller.DeleteLike(userId, articleId, ct);
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result.Result);
         Assert.True((bool)okResult.Value);
+    }
+    
+    [Fact]
+    public async Task DeleteLike_WhenLikeNotFound_ReturnsException()
+    {
+        // Arrange
+        var mockService = Substitute.For<ILikeService>();
+        var userId = Guid.NewGuid();
+        var articleId = Guid.NewGuid();
+        var ct = new CancellationToken();
+        
+        mockService
+            .DeleteLike(userId, articleId, ct)
+            .Throws(new LikeWasNotFoundException("Like was not found."));
+        
+        var controller = new LikesController(mockService);
+        
+        // Act & Assert
+        await Assert.ThrowsAsync<LikeWasNotFoundException>(
+            async () => await controller.DeleteLike(userId, articleId, ct)
+        );
     }
 }

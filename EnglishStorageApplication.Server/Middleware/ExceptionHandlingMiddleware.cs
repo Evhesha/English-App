@@ -37,24 +37,33 @@ public class ExceptionHandlingMiddleware
 
         switch (exception)
         {
+            // Lesson entity
             case NotFoundLessonException:
                 statusCode = HttpStatusCode.NotFound;
                 break;
 
+            // User entity
             case NotFoundUserException:
                 statusCode = HttpStatusCode.NotFound;
                 break;
             
+            // UserCard entity
             case NotFoundUserCardException:
                 statusCode =  HttpStatusCode.NotFound;
                 break;
             
+            // User entity
             case NotFoundUserStudyResultException:
                 statusCode = HttpStatusCode.NotFound;
                 break;
             
+            // Like entity
             case LessonHadAlreadyLikedException:
                 statusCode = HttpStatusCode.Conflict;
+                break;
+            
+            case LikeWasNotFoundException:
+                statusCode = HttpStatusCode.NotFound;
                 break;
 
             default:

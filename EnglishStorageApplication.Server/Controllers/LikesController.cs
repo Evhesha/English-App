@@ -58,8 +58,8 @@ public class LikesController : ControllerBase
 
     [HttpDelete]
     public async Task<ActionResult<bool>> DeleteLike(
-        [FromQuery] Guid articleId,
         [FromQuery] Guid userId,
+        [FromQuery] Guid articleId,
         CancellationToken cancellationToken)
     {
         return Ok(await _likeService.DeleteLike(userId, articleId, cancellationToken));
