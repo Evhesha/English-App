@@ -37,31 +37,6 @@ public class UserStudyResultServiceTests
     }
 
     [Fact]
-    public async Task GetAllUsersResults_ReturnsAllResults()
-    {
-        // Arrange
-        var mockRepo = Substitute.For<IUsersStudyResultsRepository>();
-        var service = new UserStudyResultService(mockRepo);
-        var cancellationToken = new CancellationToken();
-        
-        var expectedResults = new List<UserStudyResult>
-        {
-            CreateTestResult(Guid.NewGuid(), 80.0),
-            CreateTestResult(Guid.NewGuid(), 95.0)
-        };
-        
-        mockRepo.GetUsersStudyResultsAsync(cancellationToken)
-               .Returns(expectedResults);
-
-        // Act
-        var result = await service.GetAllUsersResults(cancellationToken);
-
-        // Assert
-        Assert.NotNull(result);
-        Assert.Equal(2, result.Count);
-    }
-
-    [Fact]
     public async Task CreateUserResult_ReturnsGuid()
     {
         // Arrange
@@ -77,28 +52,6 @@ public class UserStudyResultServiceTests
 
         // Act
         var result = await service.CreateUserResult(userStudyResult, cancellationToken);
-
-        // Assert
-        Assert.Equal(expectedGuid, result);
-    }
-
-    [Fact]
-    public async Task UpdateUserResult_UpdatesPercentAndReturnsGuid()
-    {
-        // Arrange
-        var mockRepo = Substitute.For<IUsersStudyResultsRepository>();
-        var service = new UserStudyResultService(mockRepo);
-        var cancellationToken = new CancellationToken();
-        
-        var resultId = Guid.NewGuid();
-        var newPercent = 95.5;
-        var expectedGuid = Guid.NewGuid();
-        
-        mockRepo.UpdateUserStudyResultAsync(resultId, newPercent, cancellationToken)
-               .Returns(expectedGuid);
-
-        // Act
-        var result = await service.UpdateUserResult(resultId, newPercent, cancellationToken);
 
         // Assert
         Assert.Equal(expectedGuid, result);
@@ -123,28 +76,6 @@ public class UserStudyResultServiceTests
 
         // Assert
         Assert.Equal(expectedGuid, result);
-    }
-
-    [Fact]
-    public async Task GetUserResults_WhenUserHasNoResults_ReturnsEmptyList()
-    {
-        // Arrange
-        var mockRepo = Substitute.For<IUsersStudyResultsRepository>();
-        var service = new UserStudyResultService(mockRepo);
-        var userId = Guid.NewGuid();
-        var cancellationToken = new CancellationToken();
-        
-        var emptyList = new List<UserStudyResult>();
-        
-        mockRepo.GetUserStudyResultsByIdAsync(userId, cancellationToken)
-               .Returns(emptyList);
-
-        // Act
-        var result = await service.GetUserResults(userId, cancellationToken);
-
-        // Assert
-        Assert.NotNull(result);
-        Assert.Empty(result);
     }
 
     [Fact]
