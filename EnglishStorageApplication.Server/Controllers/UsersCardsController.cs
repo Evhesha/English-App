@@ -70,7 +70,7 @@ namespace EnglishStorageApplication.Server.Controllers
         }
 
         [HttpDelete("{id:guid}")]
-        public async Task<IActionResult> DeleteUserCard(Guid id, CancellationToken cancellationToken)
+        public async Task<ActionResult<Guid>> DeleteUserCard(Guid id, CancellationToken cancellationToken)
         {
             return Ok(await _service.DeleteUserCard(id, cancellationToken));
         }

@@ -55,7 +55,7 @@ public class LikesRepository : ILikesRepository
             .FirstOrDefaultAsync(l => l.LessonId == articleId && l.UserId == userId, cancellationToken);
 
         if (likeEntity == null)
-            throw new LessonHadAlreadyLikedException("User has already liked this article.");
+            throw new LikeWasNotFoundException("Like was not found.");
 
         _context.Likes.Remove(likeEntity);
         await _context.SaveChangesAsync(cancellationToken);

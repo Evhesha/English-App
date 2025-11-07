@@ -12,12 +12,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: fixing in creating lessons public field.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +50,6 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/AppServices/LessonService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/AppServices/LessonService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/ListLessonsDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,6 +73,7 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonExceptions/NotFoundLessonException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonImageExceptions/LessonImageWasntFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LikeExceptions/LessonHadAlreadyLikedException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LikeExceptions/LikeWasNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/UserCardExceptions/NotFoundUserCardException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/UserExceptions/NotFoundUserException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/UserStudyResultExceptions/NotFoundUserStudyResultException.cs" root0="FORCE_HIGHLIGHTING" />
@@ -83,9 +83,11 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/SortParams.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/LessonImageConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsImagesRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersCardsControllersTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/EmailTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/PasswordTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/DistributedCacheExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Middleware/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" root0="SKIP_HIGHLIGHTING" />
@@ -120,7 +122,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix/update-privacy-lessons",
+    "git-widget-placeholder": "feature/elements-jsx-separation",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -212,6 +214,9 @@
       <workItem from="1761749443417" duration="1470000" />
       <workItem from="1761750973926" duration="10920000" />
       <workItem from="1761900002589" duration="3209000" />
+      <workItem from="1762150283069" duration="8006000" />
+      <workItem from="1762247349657" duration="2713000" />
+      <workItem from="1762352352077" duration="14258000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -277,15 +282,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762002431202</updated>
     </task>
-    <task id="LOCAL-00011" summary="Fix: fixing in creating lessons public field.">
+    <task id="LOCAL-00011" summary="Feature: new docker containers for redis and redis managing.">
       <option name="closed" value="true" />
-      <created>1762108336833</created>
+      <created>1762192473199</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1762108336833</updated>
+      <updated>1762192473199</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data.">
+      <option name="closed" value="true" />
+      <created>1762285670655</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762285670655</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +330,8 @@
     <MESSAGE value="Feature: .env was added" />
     <MESSAGE value="Feature: Styles and componenting lessons data for teachers and online lessons." />
     <MESSAGE value="Fix: popup fixes in naming and width. Delete no need delete button for user cards." />
-    <MESSAGE value="Fix: fixing in creating lessons public field." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: fixing in creating lessons public field." />
+    <MESSAGE value="Feature: new docker containers for redis and redis managing." />
+    <MESSAGE value="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data." />
   </component>
 </project>
