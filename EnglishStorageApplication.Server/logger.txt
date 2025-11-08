@@ -1,199 +1,31 @@
 The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[7.11.2025 19:09:56] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[7.11.2025 19:09:56] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
-[7.11.2025 19:09:56] Now listening on: https://localhost:7298
-[7.11.2025 19:09:56] Now listening on: http://localhost:5020
-[7.11.2025 19:09:56] Application started. Press Ctrl+C to shut down.
-[7.11.2025 19:09:56] Hosting environment: Development
-[7.11.2025 19:09:56] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
-[7.11.2025 19:09:56] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[7.11.2025 19:11:58] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[7.11.2025 19:53:41] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[7.11.2025 19:53:42] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+[7.11.2025 19:53:42] Now listening on: https://localhost:7298
+[7.11.2025 19:53:42] Now listening on: http://localhost:5020
+[7.11.2025 19:53:42] Application started. Press Ctrl+C to shut down.
+[7.11.2025 19:53:42] Hosting environment: Development
+[7.11.2025 19:53:42] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
+[7.11.2025 19:53:42] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT count(*)::int
 FROM "Lessons" AS l
 WHERE l."IsPublic"
-[7.11.2025 19:12:52] Executed DbCommand (13ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[7.11.2025 19:53:49] Executed DbCommand (10ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:12:52] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[7.11.2025 19:53:49] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT count(*)::int
 FROM "Lessons" AS l
 WHERE l."IsPublic"
-[7.11.2025 19:12:53] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[7.11.2025 19:53:50] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic"
 ORDER BY l."Title"
 LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:12:53] Unhandled exception occurred.
-[7.11.2025 19:12:54] Unhandled exception occurred.
-[7.11.2025 19:12:54] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:12:57] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:12:57] Unhandled exception occurred.
-[7.11.2025 19:12:58] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:12:59] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:12:59] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:13:32] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_0 OFFSET @__p_0
-[7.11.2025 19:13:32] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:13:33] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:13:33] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:13:33] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:13:33] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:13:33] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:13:33] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:13:37] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:13:37] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[7.11.2025 19:13:53] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:13:55] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:13:55] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:13:55] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:13:55] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[7.11.2025 19:14:04] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[7.11.2025 19:14:04] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[7.11.2025 19:14:07] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[7.11.2025 19:14:10] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[7.11.2025 19:14:18] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[7.11.2025 19:14:18] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[7.11.2025 19:14:20] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[7.11.2025 19:14:20] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[7.11.2025 19:14:21] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[7.11.2025 19:14:21] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[7.11.2025 19:14:25] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
-FROM "Users" AS u
-WHERE u."Id" = @__id_0
-LIMIT 2
-[7.11.2025 19:14:25] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:14:29] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:14:29] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[7.11.2025 19:14:29] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[7.11.2025 19:14:29] 
+[7.11.2025 19:53:50] There was an error trying to launch the SPA proxy.
+[7.11.2025 19:54:27] Application is shutting down...
+[7.11.2025 19:54:27] 
