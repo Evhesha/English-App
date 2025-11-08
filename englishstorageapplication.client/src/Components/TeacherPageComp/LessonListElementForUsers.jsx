@@ -3,7 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
 import "./LessonsListElement.css"
 
-function LessonListElementForUsers({ id, name, text, watchCount, author }) {
+function LessonListElementForUsers({ id, name, text, watchCount, author, createdDate }) {
+    const formatDate = (dateString) => {
+        if (!dateString) return '';
+        return new Date(dateString).toLocaleDateString('en-CA');
+    };
+    
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center lesson-list-element">
             <div className="lesson-content">
@@ -16,6 +21,14 @@ function LessonListElementForUsers({ id, name, text, watchCount, author }) {
                     <div className="info-item">
                         <span className="info-label">Author:</span>
                         <span className="info-value">{author}</span>
+                    </div>
+                    <div className="info-item">
+                        <span className="info-label">Created date:</span>
+                        <span className="info-value">{createdDate && (
+                            <small className="text-muted">
+                                Created: {formatDate(createdDate)}
+                            </small>
+                        )}</span>
                     </div>
                 </div>
             </div>
