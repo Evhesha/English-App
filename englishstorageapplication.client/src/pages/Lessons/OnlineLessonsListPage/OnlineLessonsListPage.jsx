@@ -19,60 +19,59 @@ function OnlineLessonsListPage() {
     const {t} = useTranslation();
     const [filtrationText, setFiltrationText] = useState("");
     const darkMode = useDarkMode();
+    
+    const [sortBy, setSortBy] = useState(""); 
+    const [sortDirection, setSortDirection] = useState(""); 
+    
+    const fetchLessons = async () => {
+        try {
+            setIsLoading(true);
+            const url = `${API_BASE_URL}/api/Lessons/lessons/params`;
 
-    // Состояния для сортировки
-    const [sortBy, setSortBy] = useState(""); // "watchCount", "createdDate", ""
-    const [sortDirection, setSortDirection] = useState(""); // "ascending", "descending", ""
+            const response = await axios.get(url, {
+                params: {
+                    Page: currentPage,
+                    PageSize: pageSize,
+                    Title: filtrationText,
+                    OrderBy: sortBy || undefined,
+                    Direction: sortDirection || undefined
+                }
+            });
 
+            console.log("Ответ получен:", response);
+
+            setLessons(response.data.lessons);
+            setTotalPages(Math.ceil(response.data.totalCount / pageSize));
+
+            setIsLoading(false);
+            setHasError(false);
+        } catch (error) {
+            console.error("Полная ошибка при получении уроков:", error);
+            setIsLoading(false);
+            setHasError(true);
+        }
+    };
+    
     useEffect(() => {
-        const fetchLessons = async () => {
-            try {
-                setIsLoading(true);
-                const url = `${API_BASE_URL}/api/Lessons/lessons/params`;
-
-                const response = await axios.get(url, {
-                    params: {
-                        Page: currentPage,
-                        PageSize: pageSize,
-                        // Добавляем параметры сортировки в запрос
-                        OrderBy: sortBy || undefined,
-                        Direction: sortDirection || undefined
-                    }
-                });
-
-                console.log("Ответ получен:", response);
-
-                setLessons(response.data.lessons);
-                setTotalPages(Math.ceil(response.data.totalCount / pageSize));
-
-                setIsLoading(false);
-                setHasError(false);
-            } catch (error) {
-                console.error("Полная ошибка при получении уроков:", error);
-                setIsLoading(false);
-                setHasError(true);
-            }
-        };
+        
 
         fetchLessons();
-    }, [currentPage, pageSize, sortBy, sortDirection]); // Добавляем зависимости для сортировки
+    }, [currentPage, pageSize, sortBy, sortDirection]);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
-
-    // Обработчики для checkbox'ов
+    
     const handleSortByChange = (field) => {
         setSortBy(field);
-        setCurrentPage(1); // Сбрасываем на первую страницу при изменении сортировки
+        setCurrentPage(1);
     };
 
     const handleSortDirectionChange = (direction) => {
         setSortDirection(direction);
-        setCurrentPage(1); // Сбрасываем на первую страницу при изменении направления
+        setCurrentPage(1);
     };
-
-    // Сброс сортировки
+    
     const handleResetSort = () => {
         setSortBy("");
         setSortDirection("");
@@ -82,12 +81,10 @@ function OnlineLessonsListPage() {
     return (
         <div className="lessons-container">
             <h1 className="text-center main-title mb-5">Online lessons</h1>
-
-            {/* Секция фильтрации и сортировки */}
+            
             <div className="filtration-section mb-4">
                 <h3>Filters and Sorting</h3>
-
-                {/* Фильтр по названию */}
+                
                 <div className="row mb-3">
                     <div className="col-md-8">
                         <div className="form-floating">
@@ -103,13 +100,12 @@ function OnlineLessonsListPage() {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <button className="btn btn-primary w-100 h-100">
-                            Apply Filter
+                        <button className="btn btn-primary w-100 h-100" onClick={fetchLessons}>
+                            Find lessons
                         </button>
                     </div>
                 </div>
-
-                {/* Сортировка по полю */}
+                
                 <div className="row mb-3">
                     <div className="col-md-6">
                         <div className="card">
@@ -123,8 +119,8 @@ function OnlineLessonsListPage() {
                                         type="radio"
                                         name="sortBy"
                                         id="sortByWatchCount"
-                                        checked={sortBy === "watchCount"}
-                                        onChange={() => handleSortByChange("watchCount")}
+                                        checked={sortBy === "WatchCount"}
+                                        onChange={() => handleSortByChange("WatchCount")}
                                     />
                                     <label className="form-check-label" htmlFor="sortByWatchCount">
                                         Watch Count
@@ -136,8 +132,8 @@ function OnlineLessonsListPage() {
                                         type="radio"
                                         name="sortBy"
                                         id="sortByCreatedDate"
-                                        checked={sortBy === "createdDate"}
-                                        onChange={() => handleSortByChange("createdDate")}
+                                        checked={sortBy === "CreatedDate"}
+                                        onChange={() => handleSortByChange("CreatedDate")}
                                     />
                                     <label className="form-check-label" htmlFor="sortByCreatedDate">
                                         Created Date
@@ -212,8 +208,7 @@ function OnlineLessonsListPage() {
                         </div>
                     </div>
                 </div>
-
-                {/* Кнопка сброса */}
+                
                 {(sortBy || sortDirection) && (
                     <div className="row">
                         <div className="col-12">
@@ -227,8 +222,7 @@ function OnlineLessonsListPage() {
                     </div>
                 )}
             </div>
-
-            {/* Индикатор активной сортировки */}
+            
             {(sortBy || sortDirection) && (
                 <div className="alert alert-info">
                     <strong>Active Sorting:</strong>
