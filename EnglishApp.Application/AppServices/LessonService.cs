@@ -19,6 +19,18 @@ namespace EnglishApp.Application.AppServices
         {
             return await _lessonRepository.GetLessonsAsync(cancellationToken);
         }
+        
+        public async Task<(List<Lesson> lessons, int totalCount)> GetLessonsWithPageParameters(
+            PageParams pageParams,
+            CancellationToken cancellationToken)
+        {
+            var query = _lessonRepository.GetLessonsQueryable();
+
+            var (pagedQuery, totalCount) = query.PageWithCount(pageParams);
+            var lessons = await pagedQuery.ToListAsync(cancellationToken);
+
+            return (lessons, totalCount);
+        }
 
         public async Task<(List<Lesson> lessons, int totalCount)> GetLessonsWithParameters(
             LessonFilter lessonFilter,

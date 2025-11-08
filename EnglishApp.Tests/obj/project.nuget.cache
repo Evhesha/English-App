@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k+cdqKMf948=",
+  "dgSpecHash": "y5S9c3jHmZk=",
   "success": true,
   "projectFilePath": "/Users/evgenii/RiderProjects/English-App/EnglishApp.Tests/EnglishApp.Tests.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,8 @@
     "/Users/evgenii/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.10/microsoft.entityframeworkcore.relational.8.0.10.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.10/microsoft.extensions.caching.abstractions.9.0.10.nupkg.sha512",
-    "/Users/evgenii/.nuget/packages/microsoft.extensions.caching.memory/9.0.0/microsoft.extensions.caching.memory.9.0.0.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.extensions.caching.hybrid/9.10.0/microsoft.extensions.caching.hybrid.9.10.0.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.extensions.caching.memory/9.0.10/microsoft.extensions.caching.memory.9.0.10.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/9.0.10/microsoft.extensions.caching.stackexchangeredis.9.0.10.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0/microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
