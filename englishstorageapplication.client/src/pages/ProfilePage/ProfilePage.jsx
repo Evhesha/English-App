@@ -4,7 +4,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
-import EditUserPopUp from "../../Components/PopUps/EditUserPopUp";
+import EditUserPopUp from "../../Components/PopUps/User/EditUserPopUp.jsx";
 import { useTranslation } from "react-i18next";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;

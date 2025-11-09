@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckLessonPopUp from "@/Components/PopUps/Lesson/CheckLessonPopUp.jsx";
 import "./LessonsListElement.css"
+import ChangeUserRolePopUp from "@/Components/PopUps/User/ChangeUserRolePopUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
