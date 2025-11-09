@@ -4,43 +4,50 @@ import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function EditUserPopUp({ id, name: initialName, email: initialEmail, onPut }) {
+function EditUserPopUp({ id,
+                           name: initialName,
+                           email: initialEmail,
+                           role: initialRole,
+                           password: initialPassword,
+                           onPut }) {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState(initialName);
   const [email, setEmail] = useState(initialEmail);
+  const [role, setRole] = useState(initialRole);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-    setError(null); // Сброс ошибки при закрытии/открытии формы
+    setError(null);
   };
 
   const handleEdit = async (event) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+    event.preventDefault();
     try {
       const response = await axios.put(
         `${API_BASE_URL}/api/users/${id}`,
         {
           name,
           email,
-          password,
+          password, 
+            role,
         }
       );
 
-      console.log(response); // Логирование ответа сервера
+      console.log(response);
 
       if (response.status === 200 || response.status === 201) {
         if (typeof onPut === 'function') {
-          onPut(response.data); // Передаем данные о новом пользователе в родительский компонент
+          onPut(response.data);
         }
-        togglePopup(); // Закрываем всплывающее окно после успешного изменения пользователя
-        window.location.reload(); // Обновляем страницу для отображения изменений
+        togglePopup();
+        window.location.reload();
       } else {
         setError(response.data.message || "Ошибка при изменении пользователя.");
       }
     } catch (error) {
-      console.error(error); // Логирование ошибки
+      console.error(error);
       setError(
         error.response?.data?.message || "Ошибка при изменении пользователя."
       );
@@ -100,6 +107,18 @@ function EditUserPopUp({ id, name: initialName, email: initialEmail, onPut }) {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+                <div className="mb-3">
+                    <label htmlFor="role" className="form-label">
+                        Role
+                    </label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="role"
+                        value={role}
+                        onChange={(e) => setRole(e.target.value)}
+                    />
+                </div>
               {error && (
                 <div className="alert alert-danger" role="alert">
                   {error}

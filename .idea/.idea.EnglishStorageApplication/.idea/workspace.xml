@@ -14,26 +14,24 @@
   <component name="ChangeListManager">
     <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Lesson/ILessonService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Lesson/ILessonService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/User/IUsersRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/EnglishApp.Tests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/EnglishStorageApplication.Server.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Dropdown/RoleDropdown.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ListGroupElement/ListGroupElement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ListGroupElement/ListGroupElement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/EditUserPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/EditUserPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +75,7 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserCardDTOs/UpdateUserCardDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserCardDTOs/UserCardDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/CreateUserDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/EditUserRoleDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/LoginUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UpdateUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,7 +104,6 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/PasswordTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Lessons/LessonsServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Likes/LikeServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/UserStudyResults/UserStudyResultServiceTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Users/UserServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/DistributedCacheExtensions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -143,7 +141,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/caching-lessons",
+    "git-widget-placeholder": "fix/admin-page",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",

@@ -62,6 +62,20 @@ namespace EnglishApp.DataAccess.Repositories
             userEntity.Name = user.Name;
             userEntity.Email = user.Email;
             userEntity.PasswordHash = user.PasswordHash;
+            await _context.SaveChangesAsync(cancellationToken);
+            
+            return userEntity.Id;
+        }
+        
+        public async Task<Guid> UpdateUserRoleAsync(User user, CancellationToken cancellationToken)
+        {
+            var userEntity = await _context.Users.FindAsync(user.Id);
+            
+            if (userEntity == null)
+            {
+                throw new NotFoundUserException("User wasn't found");
+            }
+            
             userEntity.Role = user.Role;
             await _context.SaveChangesAsync(cancellationToken);
             

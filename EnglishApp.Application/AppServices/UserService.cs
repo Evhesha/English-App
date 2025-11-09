@@ -1,6 +1,5 @@
 ﻿using EnglishApp.Core.Abstractions.User;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
 namespace EnglishStorageApplication.EnglishApp.Application.AppServices
 {
@@ -36,6 +35,11 @@ namespace EnglishStorageApplication.EnglishApp.Application.AppServices
         public async Task<Guid> UpdateUser(User user, CancellationToken cancellationToken)
         {
             return await _usersRepository.UpdateUserAsync(user, cancellationToken);
+        }
+
+        public async Task<Guid> UpdateUserRole(User user, CancellationToken cancellationToken)
+        {
+            return await _usersRepository.UpdateUserRoleAsync(user, cancellationToken);
         }
 
         public async Task<Guid> DeleteUser(Guid id, CancellationToken cancellationToken)

@@ -1,20 +1,70 @@
 The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[8.11.2025 16:54:40] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[8.11.2025 16:54:40] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
-[8.11.2025 16:54:40] Now listening on: https://localhost:7298
-[8.11.2025 16:54:40] Now listening on: http://localhost:5020
-[8.11.2025 16:54:40] Application started. Press Ctrl+C to shut down.
-[8.11.2025 16:54:40] Hosting environment: Development
-[8.11.2025 16:54:40] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
-[8.11.2025 16:54:40] Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-[8.11.2025 16:55:22] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[8.11.2025 16:55:22] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[8.11.2025 16:55:22] Executed DbCommand (8ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[9.11.2025 11:49:27] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[9.11.2025 11:49:27] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+[9.11.2025 11:49:27] Now listening on: https://localhost:7298
+[9.11.2025 11:49:27] Now listening on: http://localhost:5020
+[9.11.2025 11:49:27] Application started. Press Ctrl+C to shut down.
+[9.11.2025 11:49:27] Hosting environment: Development
+[9.11.2025 11:49:27] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
+[9.11.2025 11:49:27] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[9.11.2025 11:49:38] Executed DbCommand (8ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[9.11.2025 11:49:53] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Role" = @p0
+WHERE "Id" = @p1;
+[9.11.2025 11:49:53] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[9.11.2025 11:50:07] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[9.11.2025 11:50:20] Executed DbCommand (2ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?', @p1='?', @p2='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "Name" = @p1, "PasswordHash" = @p2
+WHERE "Id" = @p3;
+[9.11.2025 11:50:20] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[9.11.2025 11:50:25] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[9.11.2025 11:50:34] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Role" = @p0
+WHERE "Id" = @p1;
+[9.11.2025 11:50:34] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[9.11.2025 11:50:38] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[9.11.2025 11:50:45] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[9.11.2025 11:50:51] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[9.11.2025 11:50:58] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
-LIMIT @__p_1 OFFSET @__p_0
-[8.11.2025 16:55:22] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[8.11.2025 16:56:41] Application is shutting down...
-[8.11.2025 16:57:09] 
+WHERE l."UserId" = @__userId_0
+[9.11.2025 11:50:59] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[9.11.2025 11:51:04] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[9.11.2025 11:51:06] There was an error trying to launch the SPA proxy.
+[9.11.2025 11:51:26] Application is shutting down...
+[9.11.2025 11:51:26] 
