@@ -1,11 +1,10 @@
 import EditUserPopUp from '../PopUps/EditUserPopUp';
-import RoleDropdown from '../Dropdown/RoleDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function ListGroupElement({ id, name, email, onDelete, onUpdate }) {
+function ListGroupElement({ id, name, email, role, onDelete, onUpdate }) {
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Are you sure that you want to delete the user?");
     if (!confirmDelete) return;
@@ -30,17 +29,20 @@ function ListGroupElement({ id, name, email, onDelete, onUpdate }) {
         <div style={{ flex: 1 }}>
           <p><b>Email: </b> {email}</p>
         </div>
+          <div style={{ flex: 1 }}>
+              <p><b>Role: </b> {role}</p>
+          </div>
       </div>
       <div>
         <EditUserPopUp 
           id={id}
           name={name}
           email={email}
+          role={role}
           onPut={onUpdate}
         />
         <p></p>
         <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"></i> Delete</button>
-        <RoleDropdown></RoleDropdown>
       </div>
     </li>
   );

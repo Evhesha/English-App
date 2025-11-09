@@ -92,6 +92,24 @@ namespace EnglishStorageApplication.Server.Controllers
             
             return Ok(user.Id);
         }
+        
+        [HttpPatch("{id:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
+        public async Task<IActionResult> UpdateUser(
+            Guid id,
+            [FromBody] EditUserRoleDto editUserRoleDto,
+            CancellationToken cancellationToken)
+        {
+            var user = new User
+            {
+                Id = id,
+                Role = editUserRoleDto.Role,
+            };
+
+            await _userService.UpdateUserRole(user, cancellationToken);
+            
+            return Ok(user.Id);
+        }
 
         [HttpDelete("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
