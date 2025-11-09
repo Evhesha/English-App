@@ -1,4 +1,4 @@
-import "../PopUps/CreateUserPopUp.css";
+import "../PopUp.css";
 import { useState } from "react";
 import axios from "axios";
 
@@ -18,7 +18,7 @@ function CreateUserPopUp({ onPost }) {
   };
 
   const handleCreate = async (event) => {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы по умолчанию
+    event.preventDefault();
     try {
       const response = await axios.post(
         `${API_BASE_URL}/api/Auth/register`,
@@ -30,8 +30,8 @@ function CreateUserPopUp({ onPost }) {
       );
 
       if (response.status === 200 || response.status === 201) {
-        onPost(response.data); // Передаем данные о новом пользователе в родительский компонент
-        togglePopup(); // Закрываем всплывающее окно после успешного создания пользователя
+        onPost(response.data); 
+        togglePopup(); 
       } else {
         setError(response.data.message || "Ошибка при создании пользователя.");
       }

@@ -1,4 +1,5 @@
-import EditUserPopUp from '../PopUps/EditUserPopUp';
+import EditUserPopUp from '../PopUps/User/EditUserPopUp.jsx';
+import ChangeUserRolePopUp from '../PopUps/User/ChangeUserRolePopUp.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
@@ -38,9 +39,13 @@ function ListGroupElement({ id, name, email, role, onDelete, onUpdate }) {
           id={id}
           name={name}
           email={email}
-          role={role}
           onPut={onUpdate}
         />
+          <p></p>
+          <ChangeUserRolePopUp
+          id={id}
+          role={role}
+          />
         <p></p>
         <button type="button" className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash3"></i> Delete</button>
       </div>

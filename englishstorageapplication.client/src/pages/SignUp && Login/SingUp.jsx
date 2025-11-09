@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import ExeptionPopUp from "../../Components/PopUps/ExeptionPopUp";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import {
     Container,
@@ -118,7 +117,6 @@ function SignUp() {
 
                     <Copyright $darkMode={darkMode}>&copy; 2024-2026</Copyright>
                 </form>
-                {showPopup && <ExeptionPopUp message={"Your password and confirm password must be equal"} onClose={() => setShowPopup(false)} />}
             </FormCard>
         </Container>
     );
