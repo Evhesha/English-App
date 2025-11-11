@@ -8,18 +8,19 @@ namespace EnglishApp.Tests.Data.Lessons;
 
 public class LessonsServiceTests
 {
+    ILessonRepository mockRepo = Substitute.For<ILessonRepository>();
+    CancellationToken ct = new CancellationToken();
+    
     [Fact]
     public async Task GetUserLessonByLessonId_WithValidId_ReturnsLesson()
     {
         // Arrange
-        var mockRepo = Substitute.For<ILessonRepository>();
         var lessonId = Guid.NewGuid();
         var lesson = new Lesson 
         { 
             Id = lessonId, 
             Title = "Test Lesson" 
         };
-        var ct = new CancellationToken();
         
         mockRepo.GetUserLessonByLessonIdAsync(lessonId, ct).Returns(lesson);
         var service = new LessonService(mockRepo);
@@ -37,9 +38,7 @@ public class LessonsServiceTests
     public async Task GetUserLessonByLessonId_WithInvalidId_ReturnsNull()
     {
         // Arrange
-        var mockRepo = Substitute.For<ILessonRepository>();
         var lessonId = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockRepo.GetUserLessonByLessonIdAsync(lessonId, ct).Returns((Lesson?)null);
         var service = new LessonService(mockRepo);
@@ -55,14 +54,12 @@ public class LessonsServiceTests
     public async Task CreateLesson_WithValidData_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<ILessonRepository>();
         var lesson = new Lesson 
         { 
             Id = Guid.NewGuid(), 
             Title = "New Lesson" 
         };
         var expectedGuid = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockRepo.CreateLessonAsync(lesson, ct).Returns(expectedGuid);
         var service = new LessonService(mockRepo);
@@ -78,14 +75,12 @@ public class LessonsServiceTests
     public async Task GetUserLessons_WithValidUserId_ReturnsUserLessons()
     {
         // Arrange
-        var mockRepo = Substitute.For<ILessonRepository>();
         var userId = Guid.NewGuid();
         var userLessons = new List<Lesson>
         {
             new() { Id = Guid.NewGuid(), Title = "User Lesson 1" },
             new() { Id = Guid.NewGuid(), Title = "User Lesson 2" }
         };
-        var ct = new CancellationToken();
         
         mockRepo.GetUserLessonsAsync(userId, ct).Returns(userLessons);
         var service = new LessonService(mockRepo);

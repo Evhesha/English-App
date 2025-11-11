@@ -23,16 +23,30 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<User?> GetUserByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            return await _context.Users
+            var user =  await _context.Users
                 .AsNoTracking()
                 .SingleOrDefaultAsync(u => u.Id == id, cancellationToken);
+
+            if (user == null)
+            {
+                throw new NotFoundUserException("User wasn't found");
+            }
+            
+            return user;
         }
 
         public async Task<User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken)
         {
-            return await _context.Users
+            var user = await _context.Users
                 .AsNoTracking()
                 .SingleOrDefaultAsync(u => u.Email == email, cancellationToken);
+
+            if (user == null)
+            {
+                throw new NotFoundUserException("User wasn't found");
+            }
+            
+            return user;
         }
 
         public async Task<Guid> CreateUserAsync(User user, CancellationToken cancellationToken)

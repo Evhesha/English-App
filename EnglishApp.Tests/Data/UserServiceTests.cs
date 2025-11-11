@@ -8,14 +8,15 @@ namespace EnglishApp.Tests.Data.Users;
 
 public class UserServiceTests
 {
+    IUsersRepository mockRepo = Substitute.For<IUsersRepository>();
+    CancellationToken ct = new CancellationToken();
+    
     [Fact]
     public async Task GetUserById_WithValidId_ReturnsUser()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersRepository>();
         var userId = Guid.NewGuid();
         var user = new User { Id = userId, Email = "test@example.com", Name = "Test User" };
-        var ct = new CancellationToken();
         
         mockRepo.GetUserByIdAsync(userId, ct).Returns(user);
         var service = new UserService(mockRepo);
@@ -33,10 +34,8 @@ public class UserServiceTests
     public async Task GetUserByEmail_WithValidEmail_ReturnsUser()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersRepository>();
         var userEmail = "user@example.com";
         var user = new User { Id = Guid.NewGuid(), Email = userEmail, Name = "Test User" };
-        var ct = new CancellationToken();
         
         mockRepo.GetUserByEmailAsync(userEmail, ct).Returns(user);
         var service = new UserService(mockRepo);
@@ -53,9 +52,7 @@ public class UserServiceTests
     public async Task GetUserByEmail_WithInvalidEmail_ReturnsNull()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersRepository>();
         var userEmail = "nonexistent@example.com";
-        var ct = new CancellationToken();
         
         mockRepo.GetUserByEmailAsync(userEmail, ct).Returns((User?)null);
         var service = new UserService(mockRepo);
@@ -71,13 +68,11 @@ public class UserServiceTests
     public async Task GetAllUsers_ReturnsListOfUsers()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersRepository>();
         var users = new List<User>
         {
             new() { Id = Guid.NewGuid(), Email = "user1@example.com", Name = "User 1" },
             new() { Id = Guid.NewGuid(), Email = "user2@example.com", Name = "User 2" }
         };
-        var ct = new CancellationToken();
         
         mockRepo.GetUsersAsync(ct).Returns(users);
         var service = new UserService(mockRepo);
@@ -94,7 +89,6 @@ public class UserServiceTests
     public async Task CreateUser_WithValidData_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersRepository>();
         var user = new User 
         { 
             Id = Guid.NewGuid(), 
@@ -102,7 +96,6 @@ public class UserServiceTests
             Name = "New User" 
         };
         var expectedGuid = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockRepo.CreateUserAsync(user, ct).Returns(expectedGuid);
         var service = new UserService(mockRepo);
@@ -118,7 +111,6 @@ public class UserServiceTests
     public async Task UpdateUser_WithValidData_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersRepository>();
         var user = new User 
         { 
             Id = Guid.NewGuid(), 
@@ -126,7 +118,6 @@ public class UserServiceTests
             Name = "Updated User" 
         };
         var expectedGuid = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockRepo.UpdateUserAsync(user, ct).Returns(expectedGuid);
         var service = new UserService(mockRepo);

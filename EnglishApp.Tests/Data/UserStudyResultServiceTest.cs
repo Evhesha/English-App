@@ -8,14 +8,15 @@ namespace EnglishApp.Tests.Data.UserStudyResults;
 
 public class UserStudyResultServiceTests
 {
+    IUsersStudyResultsRepository mockRepo = Substitute.For<IUsersStudyResultsRepository>();
+    CancellationToken cancellationToken = new CancellationToken();
+    
     [Fact]
     public async Task GetUserResults_ReturnsUserStudyResults()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersStudyResultsRepository>();
         var service = new UserStudyResultService(mockRepo);
         var userId = Guid.NewGuid();
-        var cancellationToken = new CancellationToken();
         
         var expectedResults = new List<UserStudyResult>
         {
@@ -40,10 +41,7 @@ public class UserStudyResultServiceTests
     public async Task CreateUserResult_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersStudyResultsRepository>();
         var service = new UserStudyResultService(mockRepo);
-        var cancellationToken = new CancellationToken();
-        
         var userStudyResult = CreateTestResult(Guid.NewGuid(), 85.0);
         var expectedGuid = Guid.NewGuid();
         
@@ -61,10 +59,7 @@ public class UserStudyResultServiceTests
     public async Task DeleteUserResult_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersStudyResultsRepository>();
         var service = new UserStudyResultService(mockRepo);
-        var cancellationToken = new CancellationToken();
-        
         var resultId = Guid.NewGuid();
         var expectedGuid = Guid.NewGuid();
         
@@ -82,9 +77,7 @@ public class UserStudyResultServiceTests
     public async Task UpdateUserResult_WithPerfectScore_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersStudyResultsRepository>();
         var service = new UserStudyResultService(mockRepo);
-        var cancellationToken = new CancellationToken();
         
         var resultId = Guid.NewGuid();
         var perfectScore = 100.0;
