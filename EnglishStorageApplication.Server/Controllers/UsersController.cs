@@ -1,5 +1,6 @@
 ﻿using EnglishApp.Application.DTOs.UserDTOs;
 using EnglishApp.Core.Abstractions.User;
+using EnglishApp.Core.Exceptions.UserExceptions;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
@@ -38,8 +39,33 @@ namespace EnglishStorageApplication.Server.Controllers
             Guid id,
             CancellationToken cancellationToken)
         {
-            var user = await _userService.GetUserById(id, cancellationToken);
-            return Ok(user);
+            try
+            {
+                var user = await _userService.GetUserById(id, cancellationToken);
+                return Ok(user);
+            }
+            catch (NotFoundUserException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            
+        }
+
+        [HttpGet("/byEmail")]
+        [EnableCors("AllowSpecificOrigin")]
+        public async Task<ActionResult<UserDto>> GetUserByEmail(
+            [FromQuery]string email,
+            CancellationToken cancellationToken)
+        {
+            try
+            {
+                var user = await _userService.GetUserByEmail(email, cancellationToken);
+                return Ok(user);
+            }
+            catch (NotFoundUserException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPost]
@@ -95,7 +121,7 @@ namespace EnglishStorageApplication.Server.Controllers
         
         [HttpPatch("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<IActionResult> UpdateUser(
+        public async Task<IActionResult> UpdateUserRole(
             Guid id,
             [FromBody] EditUserRoleDto editUserRoleDto,
             CancellationToken cancellationToken)

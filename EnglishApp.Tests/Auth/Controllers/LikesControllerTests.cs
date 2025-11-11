@@ -4,7 +4,6 @@ using EnglishApp.Core.Exceptions.LikeExceptions;
 using EnglishApp.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.Server.Controllers;
-using Microsoft.AspNetCore.Http.HttpResults;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
 using Xunit;
@@ -13,14 +12,15 @@ namespace EnglishApp.Tests.Auth.Controllers;
 
 public class LikesControllerTests
 {
+    ILikeService mockService = Substitute.For<ILikeService>();
+    CancellationToken ct = new CancellationToken();
+    
     [Fact]
     public async Task CountArticleLikes_WithValidId_ReturnsOkWithCount()
     {
         // Arrange
-        var mockService = Substitute.For<ILikeService>();
         var articleId = Guid.NewGuid();
         var expectedCount = 10;
-        var ct = new CancellationToken();
         
         mockService.CountLessonLikes(articleId, ct).Returns(expectedCount);
         var controller = new LikesController(mockService);
@@ -37,7 +37,6 @@ public class LikesControllerTests
     public async Task AddLike_WithValidDto_ReturnsOkWithLike()
     {
         // Arrange
-        var mockService = Substitute.For<ILikeService>();
         var addLikeDto = new AddLikeDto 
         { 
             UserId = Guid.NewGuid(), 
@@ -49,8 +48,6 @@ public class LikesControllerTests
             UserId = addLikeDto.UserId, 
             LessonId = addLikeDto.ArticleId 
         };
-        
-        var ct = new CancellationToken();
         
         mockService.AddLike(Arg.Any<Like>(), ct).Returns(like);
         var controller = new LikesController(mockService);
@@ -69,14 +66,11 @@ public class LikesControllerTests
     public async Task AddLike_ThatAlreadyExists_ReturnsException()
     {
         // Arrange
-        var mockService = Substitute.For<ILikeService>();
         var addLikeDto = new AddLikeDto
         {
             UserId = Guid.NewGuid(),
             ArticleId = Guid.NewGuid()
         };
-    
-        var ct = new CancellationToken();
         
         mockService
             .AddLike(Arg.Any<Like>(), ct)
@@ -94,10 +88,8 @@ public class LikesControllerTests
     public async Task DeleteLike_WithValidData_ReturnsOkWithTrue()
     {
         // Arrange
-        var mockService = Substitute.For<ILikeService>();
         var userId = Guid.NewGuid();
         var articleId = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockService.DeleteLike(userId, articleId, ct).Returns(true);
         var controller = new LikesController(mockService);
@@ -114,10 +106,8 @@ public class LikesControllerTests
     public async Task DeleteLike_WhenLikeNotFound_ReturnsException()
     {
         // Arrange
-        var mockService = Substitute.For<ILikeService>();
         var userId = Guid.NewGuid();
         var articleId = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockService
             .DeleteLike(userId, articleId, ct)
