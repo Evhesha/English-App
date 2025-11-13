@@ -21,4 +21,8 @@
     <ProjectReference Include="..\EnglishStorageApplication.Server\EnglishStorageApplication.Server.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Repositories\" />
+  </ItemGroup>
+
 </Project>

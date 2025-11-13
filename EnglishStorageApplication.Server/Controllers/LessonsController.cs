@@ -1,5 +1,6 @@
 ﻿using EnglishApp.Application.DTOs.LessonDTOs;
 using EnglishApp.Core.Abstractions.Lesson;
+using EnglishApp.Core.Exceptions.LessonExceptions;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
 using Microsoft.AspNetCore.Mvc;
@@ -171,7 +172,14 @@ namespace EnglishStorageApplication.Server.Controllers
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<Guid>> DeleteLesson(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _lessonService.DeleteLesson(id, cancellationToken));
+            try
+            {
+                return Ok(await _lessonService.DeleteLesson(id, cancellationToken));
+            }
+            catch (NotFoundLessonException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }
