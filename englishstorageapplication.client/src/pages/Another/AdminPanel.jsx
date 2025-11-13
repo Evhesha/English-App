@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import ListGroupElement from "../../Components/ListGroupElement/ListGroupElement";
 import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
-import CreateUserPopUp from "../../Components/PopUps/CreateUserPopUp";
+import CreateUserPopUp from "../../Components/PopUps/User/CreateUserPopUp.jsx";
 import { useTranslation } from "react-i18next";
-import RoleDropdown from "../../Components/Dropdown/RoleDropdown";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -16,6 +15,7 @@ function AdminPanel() {
   const [hasError, setHasError] = useState(false);
   const [delayCompleted, setDelayCompleted] = useState(false);
   const {t} = useTranslation();
+    const effectRan = useRef(false);
 
   const receiveNotify = () => {
     toast.success("Data received!", {
@@ -37,11 +37,14 @@ function AdminPanel() {
 
   useEffect(() => {
     const fetchUsers = async () => {
+        if (effectRan.current === true) {
+            return;
+        }
       try {
         const response = await axios.get(`${API_BASE_URL}/api/users`);
         setUsers(response.data);
         setIsLoading(false);
-        setHasError(false); // сбрасываем ошибку при успешной загрузке
+        setHasError(false); 
         console.log("Данные успешно загружены:", response.data);
         receiveNotify();
       } catch (error) {
@@ -53,6 +56,9 @@ function AdminPanel() {
     };
 
     fetchUsers();
+      return () => {
+          effectRan.current = true;
+      };
   }, []);
 
   useEffect(() => {
@@ -83,8 +89,7 @@ function AdminPanel() {
         {t("accoutn-page.num-of-users")} <b>{users.length}</b> * Num of admins <b>{users.length} </b>
          * Num of teaches <b>{users.length}</b> * Num of users <b>{users.length}</b>
       </p>
-      Отсортировать по роли 
-      <RoleDropdown></RoleDropdown>
+      Отсортировать по роли
       <p></p>
       <CreateUserPopUp onPost={(newUser) => setUsers([...users, newUser])} />
       <p></p>
@@ -107,6 +112,7 @@ function AdminPanel() {
               id={user.id}
               name={user.name}
               email={user.email}
+              role={user.role}
               onDelete={() => handleDelete(user.id)}
             />
           ))}

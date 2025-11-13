@@ -1,8 +1,10 @@
 ﻿using EnglishApp.Application.DTOs.LessonDTOs;
 using EnglishApp.Core.Abstractions.Lesson;
+using EnglishApp.Core.Exceptions.LessonExceptions;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Hybrid;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
@@ -17,10 +19,14 @@ namespace EnglishStorageApplication.Server.Controllers
     public class LessonsController : ControllerBase
     {
         private readonly ILessonService _lessonService;
+        private readonly HybridCache _cache;
 
-        public LessonsController(ILessonService lessonService)
+        public LessonsController(
+            ILessonService lessonService,
+            HybridCache cache)
         {
             _lessonService = lessonService;
+            _cache = cache;
         }
 
         [HttpGet]
@@ -49,6 +55,40 @@ namespace EnglishStorageApplication.Server.Controllers
         {
             var lessons = await _lessonService.GetUserLessons(userId, cancellationToken);
             return Ok(lessons);
+        }
+        
+        [HttpGet("lessons/params/cache")]
+        public async Task<ActionResult<PagedLessonsResponse>> GetLessonsWithParamsFromCache(
+            [FromQuery] PageParams pageParams,
+            CancellationToken cancellationToken)
+        {
+            var fixedPageParams = new PageParams { Page = 1, PageSize = 10 };
+    
+            return await _cache.GetOrCreateAsync(
+                "lessons:page_1:size_10",
+                async cancel => 
+                {
+                    var (lessons, totalCount) = await _lessonService.GetLessonsWithPageParameters(
+                        fixedPageParams,
+                        cancellationToken);
+                    
+                    var listLessonsDto = lessons.Select(lesson => new ListLessonsDto()
+                    {
+                        Id = lesson.Id,
+                        UserId = lesson.UserId,
+                        Title = lesson.Title,
+                        WatchCount = lesson.WatchCount,
+                        CreatedDate = lesson.CreatedDate
+                    }).ToList();
+                
+                    return new PagedLessonsResponse
+                    {
+                        Lessons = listLessonsDto,
+                        TotalCount = totalCount
+                    };
+                },
+                new HybridCacheEntryOptions { Expiration = TimeSpan.FromMinutes(10) }
+            );
         }
 
         [HttpGet("lessons/params")]
@@ -132,7 +172,14 @@ namespace EnglishStorageApplication.Server.Controllers
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<Guid>> DeleteLesson(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _lessonService.DeleteLesson(id, cancellationToken));
+            try
+            {
+                return Ok(await _lessonService.DeleteLesson(id, cancellationToken));
+            }
+            catch (NotFoundLessonException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }

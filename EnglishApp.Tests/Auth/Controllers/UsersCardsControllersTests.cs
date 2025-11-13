@@ -12,13 +12,14 @@ namespace EnglishApp.Tests.Auth.Controllers;
 
 public class UsersCardsControllersTests
 {
+    IUserCardService mockService = Substitute.For<IUserCardService>();
+    CancellationToken ct = new CancellationToken();
+    
     [Fact]
     public async Task GetUserCards_ReturnsUserCardsOk()
     {
         // Arrange
-        var mockService = Substitute.For<IUserCardService>();
         var userId = Guid.NewGuid();
-        var ct = new CancellationToken();
         const int ARRAY_SIZE = 2;
 
         var userscards = new List<UserCard>(2)
@@ -52,8 +53,6 @@ public class UsersCardsControllersTests
     public async Task CreateUserCard_ReturnsGuidOk()
     {
         // Arrange
-        var mockService = Substitute.For<IUserCardService>();
-        var ct = new CancellationToken();
         var userCard = new UserCard
         {
             Id = Guid.NewGuid(),
@@ -83,9 +82,6 @@ public class UsersCardsControllersTests
     public async Task UpdateUserCard_WhenUserCardDoesNotExist_ReturnsException()
     {
         // Arrange
-        var mockService = Substitute.For<IUserCardService>();
-        var ct = new CancellationToken();
-        
         var userCard = new UserCard
         {
             Id = Guid.NewGuid(),
@@ -114,8 +110,6 @@ public class UsersCardsControllersTests
     public async Task DeleteUserCard_WhenUserCardExists_ReturnsOk()
     {
         // Arrange 
-        var mockService = Substitute.For<IUserCardService>();
-        var ct = new CancellationToken();
         var userCard = new UserCard
         {
             Id = Guid.NewGuid(),
@@ -138,8 +132,6 @@ public class UsersCardsControllersTests
     public async Task DeleteUserCard_WhenUserCardDoesNotExist_ReturnsException()
     {
         // Arrange 
-        var mockService = Substitute.For<IUserCardService>();
-        var ct = new CancellationToken();
         var userCard = new UserCard
         {
             Id = Guid.NewGuid(),

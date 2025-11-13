@@ -12,13 +12,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/LessonsServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LessonsServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/LikeServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LikeServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/UserCardServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserCardServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/UserServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/UserStudyResultServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserStudyResultServiceTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/EnglishApp.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/EnglishApp.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/559e28422bbc44d6a9b794bc4c0eb1eff83600/1c/2b3bec6e/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserCardDTOs/UpdateUserCardDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserCardDTOs/UserCardDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/CreateUserDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/EditUserRoleDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/LoginUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UpdateUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -83,10 +88,19 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/SortParams.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/LessonImageConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsImagesRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LessonControllerTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LikesControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UserControllerTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersCardsControllersTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/EmailTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/JwtTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/PasswordTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LessonsServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LikeServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/DistributedCacheExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Middleware/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
@@ -116,18 +130,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.HTTPS.executor": "Debug",
     ".NET Launch Settings Profile.Unnamed.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/elements-jsx-separation",
+    "git-widget-placeholder": "feature/tests",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
     "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -176,6 +191,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -217,6 +233,8 @@
       <workItem from="1762150283069" duration="8006000" />
       <workItem from="1762247349657" duration="2713000" />
       <workItem from="1762352352077" duration="14258000" />
+      <workItem from="1762771100838" duration="2078000" />
+      <workItem from="1762966073802" duration="7360000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -298,11 +316,50 @@
       <option name="project" value="LOCAL" />
       <updated>1762285670655</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Feature: filtering and sorting for lessons is available for users">
+      <option name="closed" value="true" />
+      <created>1762603148889</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762603148889</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix: can easily update users in admin page. Adding new putch method for changing user role.">
+      <option name="closed" value="true" />
+      <created>1762678383934</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1762678383934</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Feature: first 10 lessons users can get from cache.">
+      <option name="closed" value="true" />
+      <created>1762795517628</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762795517628</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="280" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 33% 1239/1863" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
@@ -332,6 +389,10 @@
     <MESSAGE value="Fix: popup fixes in naming and width. Delete no need delete button for user cards." />
     <MESSAGE value="Feature: new docker containers for redis and redis managing." />
     <MESSAGE value="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data." />
+    <MESSAGE value="Feature: filtering and sorting for lessons is available for users" />
+    <MESSAGE value="Fix: can easily update users in admin page. Adding new putch method for changing user role." />
+    <MESSAGE value="Feature: benchmark controller was added for testing getting lessons with cache and without cache." />
+    <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
   </component>
 </project>

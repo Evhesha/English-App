@@ -8,11 +8,13 @@ namespace EnglishApp.Tests.Data.UsersCards;
 
 public class UserCardServiceTests
 {
+    IUsersCardsRepository mockRepo = Substitute.For<IUsersCardsRepository>();
+    CancellationToken ct = new CancellationToken();
+    
     [Fact]
     public async Task GetUserCards_WithValidUserId_ReturnsUserCards()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersCardsRepository>();
         var userId = Guid.NewGuid();
         var userCards = new List<UserCard>
         {
@@ -29,7 +31,6 @@ public class UserCardServiceTests
                 UserCardData = "Word data 2"
             }
         };
-        var ct = new CancellationToken();
         
         mockRepo.GetUserCardsByUserIdAsync(userId, ct).Returns(userCards);
         var service = new UserCardService(mockRepo);
@@ -48,7 +49,6 @@ public class UserCardServiceTests
     public async Task CreateUserCard_WithValidData_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersCardsRepository>();
         var userCard = new UserCard 
         { 
             Id = Guid.NewGuid(), 
@@ -57,7 +57,6 @@ public class UserCardServiceTests
             UserCardData = "New word data"
         };
         var expectedGuid = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockRepo.CreateUserCardAsync(userCard, ct).Returns(expectedGuid);
         var service = new UserCardService(mockRepo);
@@ -73,7 +72,6 @@ public class UserCardServiceTests
     public async Task UpdateUserCard_WithValidData_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersCardsRepository>();
         var cardId = Guid.NewGuid();
         var userCard = new UserCard 
         { 
@@ -83,7 +81,6 @@ public class UserCardServiceTests
             UserCardData = "Updated word data"
         };
         var expectedGuid = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockRepo.UpdateUserCardAsync(cardId, userCard, ct).Returns(expectedGuid);
         var service = new UserCardService(mockRepo);
@@ -99,10 +96,8 @@ public class UserCardServiceTests
     public async Task DeleteUserCard_WithValidId_ReturnsGuid()
     {
         // Arrange
-        var mockRepo = Substitute.For<IUsersCardsRepository>();
         var cardId = Guid.NewGuid();
         var expectedGuid = Guid.NewGuid();
-        var ct = new CancellationToken();
         
         mockRepo.DeleteUserCardAsync(cardId, ct).Returns(expectedGuid);
         var service = new UserCardService(mockRepo);

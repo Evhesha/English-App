@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './OnlineLessonsListPage.css';
 import { useTranslation } from "react-i18next";
@@ -19,63 +19,78 @@ function OnlineLessonsListPage() {
     const {t} = useTranslation();
     const [filtrationText, setFiltrationText] = useState("");
     const darkMode = useDarkMode();
+    const effectRan = useRef(false);
 
-    // Состояния для сортировки
-    const [sortBy, setSortBy] = useState(""); // "watchCount", "createdDate", ""
-    const [sortDirection, setSortDirection] = useState(""); // "ascending", "descending", ""
+    const [sortBy, setSortBy] = useState("");
+    const [sortDirection, setSortDirection] = useState("");
+    const [isFirstLoad, setIsFirstLoad] = useState(true); 
+    
+    const fetchLessons = async (useCache = false) => {
+        try {
+            setIsLoading(true);
 
-    useEffect(() => {
-        const fetchLessons = async () => {
-            try {
-                setIsLoading(true);
-                const url = `${API_BASE_URL}/api/Lessons/lessons/params`;
+            const url = useCache
+                ? `${API_BASE_URL}/api/Lessons/lessons/params/cache`
+                : `${API_BASE_URL}/api/Lessons/lessons/params`;
 
-                const response = await axios.get(url, {
-                    params: {
-                        Page: currentPage,
-                        PageSize: pageSize,
-                        // Добавляем параметры сортировки в запрос
-                        OrderBy: sortBy || undefined,
-                        Direction: sortDirection || undefined
-                    }
-                });
+            const params = {
+                Page: currentPage,
+                PageSize: pageSize,
+                Title: filtrationText || undefined,
+                OrderBy: sortBy || undefined,
+                Direction: sortDirection || undefined
+            };
 
-                console.log("Ответ получен:", response);
+            const response = await axios.get(url, { params });
 
-                setLessons(response.data.lessons);
-                setTotalPages(Math.ceil(response.data.totalCount / pageSize));
+            console.log(useCache ? "📦 Из кэша:" : "🗄️ Из базы:", response.data);
 
-                setIsLoading(false);
-                setHasError(false);
-            } catch (error) {
-                console.error("Полная ошибка при получении уроков:", error);
-                setIsLoading(false);
-                setHasError(true);
+            setLessons(response.data.lessons);
+            setTotalPages(Math.ceil(response.data.totalCount / pageSize));
+            setIsLoading(false);
+            setHasError(false);
+            
+            if (isFirstLoad) {
+                setIsFirstLoad(false);
             }
+        } catch (error) {
+            console.error("Ошибка при получении уроков:", error);
+            setIsLoading(false);
+            setHasError(true);
+        }
+    };
+    
+    useEffect(() => {
+        if (effectRan.current === true) {
+            return;
+        }
+        fetchLessons(true);
+        return () => {
+            effectRan.current = true;
         };
-
-        fetchLessons();
-    }, [currentPage, pageSize, sortBy, sortDirection]); // Добавляем зависимости для сортировки
+    }, []);
+    
+    useEffect(() => {
+        if (!isFirstLoad) {
+            fetchLessons(false);
+        }
+    }, [currentPage, sortBy, sortDirection, filtrationText]);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
 
-    // Обработчики для checkbox'ов
     const handleSortByChange = (field) => {
         setSortBy(field);
-        setCurrentPage(1); // Сбрасываем на первую страницу при изменении сортировки
+        setCurrentPage(1);
     };
 
     const handleSortDirectionChange = (direction) => {
         setSortDirection(direction);
-        setCurrentPage(1); // Сбрасываем на первую страницу при изменении направления
+        setCurrentPage(1);
     };
 
-    // Сброс сортировки
-    const handleResetSort = () => {
-        setSortBy("");
-        setSortDirection("");
+    const handleSearch = () => {
         setCurrentPage(1);
     };
 
@@ -83,11 +98,9 @@ function OnlineLessonsListPage() {
         <div className="lessons-container">
             <h1 className="text-center main-title mb-5">Online lessons</h1>
 
-            {/* Секция фильтрации и сортировки */}
             <div className="filtration-section mb-4">
                 <h3>Filters and Sorting</h3>
 
-                {/* Фильтр по названию */}
                 <div className="row mb-3">
                     <div className="col-md-8">
                         <div className="form-floating">
@@ -98,18 +111,21 @@ function OnlineLessonsListPage() {
                                 placeholder="Filter by title"
                                 value={filtrationText}
                                 onChange={(e) => setFiltrationText(e.target.value)}
+                                onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                             />
                             <label htmlFor="filterInput">Filter by title</label>
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <button className="btn btn-primary w-100 h-100">
-                            Apply Filter
+                        <button
+                            className="btn btn-primary w-100 h-100"
+                            onClick={handleSearch}
+                        >
+                            Find lessons
                         </button>
                     </div>
                 </div>
 
-                {/* Сортировка по полю */}
                 <div className="row mb-3">
                     <div className="col-md-6">
                         <div className="card">
@@ -123,8 +139,8 @@ function OnlineLessonsListPage() {
                                         type="radio"
                                         name="sortBy"
                                         id="sortByWatchCount"
-                                        checked={sortBy === "watchCount"}
-                                        onChange={() => handleSortByChange("watchCount")}
+                                        checked={sortBy === "WatchCount"}
+                                        onChange={() => handleSortByChange("WatchCount")}
                                     />
                                     <label className="form-check-label" htmlFor="sortByWatchCount">
                                         Watch Count
@@ -136,31 +152,17 @@ function OnlineLessonsListPage() {
                                         type="radio"
                                         name="sortBy"
                                         id="sortByCreatedDate"
-                                        checked={sortBy === "createdDate"}
-                                        onChange={() => handleSortByChange("createdDate")}
+                                        checked={sortBy === "CreatedDate"}
+                                        onChange={() => handleSortByChange("CreatedDate")}
                                     />
                                     <label className="form-check-label" htmlFor="sortByCreatedDate">
                                         Created Date
-                                    </label>
-                                </div>
-                                <div className="form-check">
-                                    <input
-                                        className="form-check-input"
-                                        type="radio"
-                                        name="sortBy"
-                                        id="sortByNone"
-                                        checked={sortBy === ""}
-                                        onChange={() => handleSortByChange("")}
-                                    />
-                                    <label className="form-check-label" htmlFor="sortByNone">
-                                        No Sorting
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Направление сортировки */}
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
@@ -175,7 +177,7 @@ function OnlineLessonsListPage() {
                                         id="sortAscending"
                                         checked={sortDirection === "ascending"}
                                         onChange={() => handleSortDirectionChange("ascending")}
-                                        disabled={!sortBy} // Отключаем если не выбран field
+                                        disabled={!sortBy}
                                     />
                                     <label className="form-check-label" htmlFor="sortAscending">
                                         Ascending
@@ -189,53 +191,17 @@ function OnlineLessonsListPage() {
                                         id="sortDescending"
                                         checked={sortDirection === "descending"}
                                         onChange={() => handleSortDirectionChange("descending")}
-                                        disabled={!sortBy} // Отключаем если не выбран field
+                                        disabled={!sortBy}
                                     />
                                     <label className="form-check-label" htmlFor="sortDescending">
                                         Descending
-                                    </label>
-                                </div>
-                                <div className="form-check">
-                                    <input
-                                        className="form-check-input"
-                                        type="radio"
-                                        name="sortDirection"
-                                        id="sortDirectionNone"
-                                        checked={sortDirection === ""}
-                                        onChange={() => handleSortDirectionChange("")}
-                                    />
-                                    <label className="form-check-label" htmlFor="sortDirectionNone">
-                                        Default
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* Кнопка сброса */}
-                {(sortBy || sortDirection) && (
-                    <div className="row">
-                        <div className="col-12">
-                            <button
-                                className="btn btn-outline-secondary btn-sm"
-                                onClick={handleResetSort}
-                            >
-                                Reset Sorting
-                            </button>
-                        </div>
-                    </div>
-                )}
             </div>
-
-            {/* Индикатор активной сортировки */}
-            {(sortBy || sortDirection) && (
-                <div className="alert alert-info">
-                    <strong>Active Sorting:</strong>
-                    {sortBy && ` By ${sortBy === "watchCount" ? "Watch Count" : "Created Date"}`}
-                    {sortDirection && ` (${sortDirection})`}
-                </div>
-            )}
 
             {isLoading ? (
                 <div className="text-center">
