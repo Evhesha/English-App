@@ -6,6 +6,9 @@ import { useDarkMode } from "@/hooks/useDarkMode.js";
 import axios from "axios";
 import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
 import Pagination from "../../../Components/Pagination/Pagination.jsx";
+import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx"; // Оставляем как есть
+import {jwtDecode} from "jwt-decode";
+import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -19,16 +22,23 @@ function OnlineLessonsListPage() {
     const {t} = useTranslation();
     const [filtrationText, setFiltrationText] = useState("");
     const darkMode = useDarkMode();
+    const [authorized, setAuthorized] = useState(false);
     const effectRan = useRef(false);
 
     const [sortBy, setSortBy] = useState("");
     const [sortDirection, setSortDirection] = useState("");
-    const [isFirstLoad, setIsFirstLoad] = useState(true); 
-    
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+
     const fetchLessons = async (useCache = false) => {
         try {
             setIsLoading(true);
-
+            const token = Cookies.get("token");
+            if (token) {
+                setAuthorized(true);
+            }
+            else{
+                return;
+            }
             const url = useCache
                 ? `${API_BASE_URL}/api/Lessons/lessons/params/cache`
                 : `${API_BASE_URL}/api/Lessons/lessons/params`;
@@ -49,7 +59,7 @@ function OnlineLessonsListPage() {
             setTotalPages(Math.ceil(response.data.totalCount / pageSize));
             setIsLoading(false);
             setHasError(false);
-            
+
             if (isFirstLoad) {
                 setIsFirstLoad(false);
             }
@@ -59,7 +69,7 @@ function OnlineLessonsListPage() {
             setHasError(true);
         }
     };
-    
+
     useEffect(() => {
         if (effectRan.current === true) {
             return;
@@ -69,7 +79,7 @@ function OnlineLessonsListPage() {
             effectRan.current = true;
         };
     }, []);
-    
+
     useEffect(() => {
         if (!isFirstLoad) {
             fetchLessons(false);
@@ -93,6 +103,11 @@ function OnlineLessonsListPage() {
     const handleSearch = () => {
         setCurrentPage(1);
     };
+
+    // Используем тот же подход, что и в MyDictPage
+    if (!authorized) {
+        return plsAuthorizeBlock; // Без JSX-синтаксиса, как переменную
+    }
 
     return (
         <div className="lessons-container">

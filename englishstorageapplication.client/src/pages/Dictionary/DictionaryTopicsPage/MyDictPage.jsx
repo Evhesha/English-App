@@ -6,6 +6,7 @@ import YourOwnDict from "../dict-images/YourOwnDict.png";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
+import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -43,23 +44,6 @@ function MyDictPage() {
   const handleDelete = (id) => {
     setCards(cards.filter((card) => card.id !== id));
   };
-
-  const plsAuthorizeBlock = (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "40vh",
-      }}
-    >
-      <div className="alert alert-danger" role="alert">
-        <h1>You are not logged in or signed-up in the system</h1>
-        <h3>Please login or sign-up</h3>
-      </div>
-    </div>
-  );
 
   return (
     <>
