@@ -103,30 +103,6 @@ export const SubmitButton = styled.button`
     }
 `;
 
-export const RememberMe = styled.div`
-    margin: 20px 0;
-
-    input {
-        cursor: pointer;
-        background-color: ${props => props.$darkMode ? '#2c3e50' : 'white'};
-        border: 2px solid ${props => props.$darkMode ? '#34495e' : '#e0e0e0'};
-
-        &:checked {
-            background-color: #3498db;
-            border-color: #3498db;
-        }
-
-        &:focus {
-            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
-        }
-    }
-
-    label {
-        color: ${props => props.$darkMode ? '#ecf0f1' : '#2c3e50'};
-        cursor: pointer;
-    }
-`;
-
 export const Copyright = styled.p`
     text-align: center;
     color: ${props => props.$darkMode ? '#95a5a6' : '#95a5a6'};

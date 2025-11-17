@@ -2,6 +2,7 @@ using System.Diagnostics;
 using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
+using EnglishApp.Core.Params.LessonParams;
 using EnglishApp.DataAccess;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

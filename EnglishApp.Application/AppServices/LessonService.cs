@@ -2,6 +2,7 @@
 using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
+using EnglishApp.Core.Params.LessonParams;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.Application.AppServices

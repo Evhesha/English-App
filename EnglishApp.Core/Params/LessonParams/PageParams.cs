@@ -1,4 +1,4 @@
-﻿namespace EnglishApp.Core.Params;
+﻿namespace EnglishApp.Core.Params.LessonParams;
 
 public class PageParams
 {
