@@ -16,7 +16,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +129,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/authorize-lessons",
+    "git-widget-placeholder": "feature/login-signup-errors",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -385,6 +387,7 @@
     <MESSAGE value="Fix: can easily update users in admin page. Adding new putch method for changing user role." />
     <MESSAGE value="Feature: benchmark controller was added for testing getting lessons with cache and without cache." />
     <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
+    <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Now if user is not authorized - he cant get lessons." />
   </component>
 </project>

@@ -60,6 +60,10 @@ function ProfilePage() {
                         <b>Email: </b>
                         {user.email}
                     </h4>
+                    <h4>
+                        <b>Role: </b>
+                        {user.role}
+                    </h4>
                     <EditUserPopUp
                         id={user.id}
                         name={user.name}
@@ -72,10 +76,10 @@ function ProfilePage() {
             </div>
           )}
         </div>
-        <div className="profile-activity">
+        {/*<div className="profile-activity">
           <h2>User data</h2>
           
-        </div>
+        </div>*/}
       </div>
     </>
   );

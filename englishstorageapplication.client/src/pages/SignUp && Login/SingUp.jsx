@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import {
@@ -6,10 +7,10 @@ import {
     FormCard,
     Title,
     SubmitButton,
-    RememberMe,
     Copyright
 } from '../../Components/StyledComponents/Common.jsx';
 import FormField from "../../Components/Auth/FormField";
+import failedToSignUp from "@/Components/Auth/FailedToSignUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -23,6 +24,8 @@ function SignUp() {
 
     const [showPopup, setShowPopup] = useState(false);
     const darkMode = useDarkMode();
+    const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setFormData({
@@ -49,8 +52,14 @@ function SignUp() {
                 }
             );
             console.log("User created:", response.data);
+            
+            navigate("/login");
+            window.location.reload();
+            
+            setError(false);
         } catch (error) {
             console.error("Error creating user:", error);
+            setError(true);
         }
     };
 
@@ -104,12 +113,7 @@ function SignUp() {
                         darkMode={darkMode}
                     />
 
-                    <RememberMe className="form-check text-start" $darkMode={darkMode}>
-                        <input className="form-check-input" type="checkbox" id="remember" />
-                        <label className="form-check-label" htmlFor="remember">
-                            Remember me
-                        </label>
-                    </RememberMe>
+                    {error ? failedToSignUp : false}
 
                     <SubmitButton className="btn btn-primary w-100" type="submit">
                         Sign Up

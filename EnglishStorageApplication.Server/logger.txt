@@ -1,359 +1,872 @@
 The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[16.11.2025 20:42:41] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
-[16.11.2025 20:42:41] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
-[16.11.2025 20:42:41] Now listening on: https://localhost:7298
-[16.11.2025 20:42:41] Now listening on: http://localhost:5020
-[16.11.2025 20:42:41] Application started. Press Ctrl+C to shut down.
-[16.11.2025 20:42:41] Hosting environment: Development
-[16.11.2025 20:42:41] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
-[16.11.2025 20:42:41] Unable to connect to the SPA development server at 'https://localhost:5173'.
-[16.11.2025 20:44:43] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:07:01] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
-   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
-   at Npgsql.TaskTimeoutAndCancellation.ExecuteAsync(Func`2 getTaskFunc, NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[16.11.2025 21:07:01] Unhandled exception occurred.
-[16.11.2025 21:07:01] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:07:01] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
-   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
-   at Npgsql.TaskTimeoutAndCancellation.ExecuteAsync(Func`2 getTaskFunc, NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[16.11.2025 21:07:01] Unhandled exception occurred.
-[16.11.2025 21:07:01] Cache backend read failure.
-[16.11.2025 21:07:03] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:07:03] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
-   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.Open()
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
-[16.11.2025 21:07:03] Unhandled exception occurred.
-[16.11.2025 21:07:03] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:10:54] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
-   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
-   at Npgsql.TaskTimeoutAndCancellation.ExecuteAsync(Func`2 getTaskFunc, NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[16.11.2025 21:10:54] Unhandled exception occurred.
-[16.11.2025 21:10:54] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:11:00] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
-   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
-   at Npgsql.TaskTimeoutAndCancellation.ExecuteAsync(Func`2 getTaskFunc, NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[16.11.2025 21:11:00] Unhandled exception occurred.
-[16.11.2025 21:11:00] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:11:00] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
-   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
-   at Npgsql.TaskTimeoutAndCancellation.ExecuteAsync(Func`2 getTaskFunc, NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[16.11.2025 21:11:00] Unhandled exception occurred.
-[16.11.2025 21:11:00] Cache backend read failure.
-[16.11.2025 21:11:03] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:11:03] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
-   at Npgsql.Internal.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.Open()
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
-[16.11.2025 21:11:03] Unhandled exception occurred.
-[16.11.2025 21:11:03] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:17:23] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
-   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
-   at Npgsql.TaskTimeoutAndCancellation.ExecuteAsync(Func`2 getTaskFunc, NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[16.11.2025 21:17:23] Unhandled exception occurred.
-[16.11.2025 21:17:23] An error occurred using the connection to database 'db' on server 'tcp://localhost:5433'.
-[16.11.2025 21:17:23] An exception occurred while iterating over the results of a query for context type 'EnglishApp.DataAccess.ApplicationDbContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
- ---> Npgsql.NpgsqlException (0x80004005): Failed to connect to 127.0.0.1:5433
- ---> System.Net.Sockets.SocketException (61): Connection refused
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
-   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
-   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
-   at Npgsql.TaskTimeoutAndCancellation.ExecuteAsync(Func`2 getTaskFunc, NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
-   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
-   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
-   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-[16.11.2025 21:17:23] Unhandled exception occurred.
-[16.11.2025 21:17:23] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
-FROM "Users" AS u
-[16.11.2025 21:47:36] Executed DbCommand (21ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[16.11.2025 21:49:32] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[16.11.2025 21:49:32] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-[16.11.2025 21:52:12] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[16.11.2025 21:52:12] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[16.11.2025 21:52:12] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-LIMIT @__p_1 OFFSET @__p_0
-[16.11.2025 21:52:12] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:25:15] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[17.11.2025 14:25:15] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+[17.11.2025 14:25:16] Now listening on: https://localhost:7298
+[17.11.2025 14:25:16] Now listening on: http://localhost:5020
+[17.11.2025 14:25:16] Application started. Press Ctrl+C to shut down.
+[17.11.2025 14:25:16] Hosting environment: Development
+[17.11.2025 14:25:16] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
+[17.11.2025 14:25:16] Executed DbCommand (36ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
 FROM "Users" AS u
 WHERE u."Id" = @__id_0
 LIMIT 2
-[16.11.2025 21:52:21] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:25:22] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
 SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
 FROM "Users" AS u
 WHERE u."Id" = @__id_0
 LIMIT 2
-[16.11.2025 21:52:21] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT count(*)::int
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-[16.11.2025 21:52:50] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."Title"
-LIMIT @__p_1 OFFSET @__p_0
-[16.11.2025 21:52:50] Executed DbCommand (6ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:25:22] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:25:24] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:25:24] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
 SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
 FROM "Users" AS u
 WHERE u."Email" = @__email_0
 LIMIT 2
-[16.11.2025 21:57:39] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
-FROM "Lessons" AS l
-WHERE l."UserId" = @__userId_0
-[16.11.2025 21:57:41] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[16.11.2025 21:57:46] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
-FROM "UsersCards" AS u
-WHERE u."UserId" = @__userId_0
-[16.11.2025 21:57:46] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:25:38] Executed DbCommand (1ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:25:48] Unable to connect to the SPA development server at 'https://localhost:5173'.
+[17.11.2025 14:27:17] Executed DbCommand (6ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:29:59] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:30:04] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:30:09] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:30:54] Unhandled exception occurred.
+[17.11.2025 14:30:54] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:30:56] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:31:01] Unhandled exception occurred.
+[17.11.2025 14:31:01] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:34:40] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:36:56] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:37:52] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:37:55] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:37:55] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:37:58] Executed DbCommand (5ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:39:43] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:39:48] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:39:48] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:40:53] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:40:53] Executed DbCommand (4ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:43:02] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:44:21] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:44:21] Executed DbCommand (5ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:44:44] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:44:44] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:44:44] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:45:30] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:46:11] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:46:24] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:46:24] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:46:24] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:46:39] Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT count(*)::int
 FROM "Lessons" AS l
-WHERE l."IsPublic"
-[16.11.2025 21:59:16] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:43] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17.11.2025 14:46:43] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17.11.2025 14:46:43] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
-WHERE l."IsPublic"
-ORDER BY l."CreatedDate"
 LIMIT @__p_1 OFFSET @__p_0
-[16.11.2025 21:59:16] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:43] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT count(*)::int
 FROM "Lessons" AS l
 WHERE l."IsPublic"
-[16.11.2025 21:59:17] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:47] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic"
 ORDER BY l."WatchCount"
 LIMIT @__p_1 OFFSET @__p_0
-[16.11.2025 21:59:17] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:47] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT count(*)::int
 FROM "Lessons" AS l
 WHERE l."IsPublic"
-[16.11.2025 21:59:21] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:48] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic"
 ORDER BY l."WatchCount"
 LIMIT @__p_1 OFFSET @__p_0
-[16.11.2025 21:59:21] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:48] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT count(*)::int
 FROM "Lessons" AS l
 WHERE l."IsPublic"
-[16.11.2025 21:59:23] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:51] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic"
 ORDER BY l."WatchCount" DESC
 LIMIT @__p_1 OFFSET @__p_0
-[16.11.2025 21:59:23] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:46:51] Executed DbCommand (2ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."Id" = @__lessonId_0
+LIMIT 1
+[17.11.2025 14:46:54] Executed DbCommand (10ms) [Parameters=[@__lessonId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Lessons" AS l
+SET "WatchCount" = l."WatchCount" + 1
+WHERE l."Id" = @__lessonId_0
+[17.11.2025 14:46:54] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:03] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:03] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:03] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:03] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:03] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:03] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:03] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:03] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:04] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:04] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:04] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:04] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:04] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:04] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:05] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:05] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:05] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:05] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:05] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:09] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:09] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:09] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:09] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:09] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:09] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:09] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:09] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (0ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:10] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:10] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT count(*)::int
 FROM "Lessons" AS l
 WHERE l."IsPublic"
-[16.11.2025 21:59:25] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+[17.11.2025 14:47:10] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
 FROM "Lessons" AS l
 WHERE l."IsPublic"
-ORDER BY l."WatchCount"
+ORDER BY l."WatchCount" DESC
 LIMIT @__p_1 OFFSET @__p_0
-[16.11.2025 21:59:25] Application is shutting down...
-[16.11.2025 22:05:22] 
+[17.11.2025 14:47:10] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:26] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:26] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:26] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:26] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:47:30] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:47:30] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[17.11.2025 14:47:30] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_1 OFFSET @__p_0
+[17.11.2025 14:47:30] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:48:03] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:48:03] Executed DbCommand (3ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:48:04] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:48:04] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+[17.11.2025 14:48:05] Executed DbCommand (2ms) [Parameters=[@__lessonFilter_Title_0='?', @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic" AND l."Title" = @__lessonFilter_Title_0
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_2 OFFSET @__p_1
+[17.11.2025 14:48:05] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[17.11.2025 14:48:05] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_1 OFFSET @__p_0
+[17.11.2025 14:48:05] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[17.11.2025 14:48:10] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[17.11.2025 14:48:10] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:48:23] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:48:25] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:48:27] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:48:27] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:48:41] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:48:41] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Email", "Name", "PasswordHash", "Role")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+[17.11.2025 14:51:29] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:51:50] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:51:50] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:51:50] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:51:53] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:51:54] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:52:12] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:52:12] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:52:12] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:52:17] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:52:17] Executed DbCommand (4ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:52:58] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:52:58] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:52:58] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:53:14] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:53:14] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:53:14] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:58:49] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:58:49] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:58:52] Unhandled exception occurred.
+[17.11.2025 14:58:53] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:58:57] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:58:57] Unhandled exception occurred.
+[17.11.2025 14:58:57] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:58:58] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:58:58] Executed DbCommand (1ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:59:13] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:14] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:14] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:14] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:14] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+[17.11.2025 14:59:17] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+LIMIT @__p_1 OFFSET @__p_0
+[17.11.2025 14:59:17] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[17.11.2025 14:59:21] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."NameOfUsersCard", u."UserCardData", u."UserId"
+FROM "UsersCards" AS u
+WHERE u."UserId" = @__userId_0
+[17.11.2025 14:59:21] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:59:26] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:27] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:27] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:27] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 14:59:29] Executed DbCommand (3ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 14:59:33] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:33] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:33] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 14:59:33] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 15:02:04] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:02:04] Unhandled exception occurred.
+[17.11.2025 15:02:04] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:02:04] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:02:04] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Email", "Name", "PasswordHash", "Role")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+[17.11.2025 15:03:30] Executed DbCommand (4ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[17.11.2025 15:03:38] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:03:38] Unhandled exception occurred.
+[17.11.2025 15:03:38] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:03:38] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:03:38] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[17.11.2025 15:03:47] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[17.11.2025 15:03:53] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+DELETE FROM "Users"
+WHERE "Id" = @p0;
+[17.11.2025 15:03:53] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+[17.11.2025 15:03:56] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+DELETE FROM "Users"
+WHERE "Id" = @p0;
+[17.11.2025 15:03:56] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:05:38] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[17.11.2025 15:05:38] 

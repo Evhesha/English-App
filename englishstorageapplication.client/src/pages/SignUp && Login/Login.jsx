@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {useNavigate} from "react-router-dom";
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useDarkMode } from '../../hooks/useDarkMode';
@@ -8,10 +9,10 @@ import {
     Title,
     FormFloating,
     SubmitButton,
-    RememberMe,
     Copyright,
     ForgotPassword
 } from '../../Components/StyledComponents/Common.jsx';
+import failedToLogin from "@/Components/Auth/FailedToLogin.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -19,24 +20,24 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const darkMode = useDarkMode();
+    const [mistake, setmistake] = useState(false);
+    const navigate = useNavigate();
 
     const handleLogin = async (event) => {
         event.preventDefault();
         try {
-            if (!API_BASE_URL) {
-                console.error('API_BASE_URL is undefined. Check your .env file');
-                return;
-            }
             const response = await axios.post(
                 `${API_BASE_URL}/api/Auth/login`,
                 { email, password }
             );
-
-            console.log("Token received:", response.data.token);
+            
             Cookies.set('token', response.data.token, { expires: 7 });
+            navigate("/profile-page")
             window.location.reload();
+            setmistake(false);
         } catch (error) {
             console.error("Error logging in:", error);
+            setmistake(true);
         }
     };
 
@@ -44,7 +45,7 @@ function Login() {
         <Container $darkMode={darkMode}>
             <FormCard $darkMode={darkMode}>
                 <form onSubmit={handleLogin}>
-                    <Title $darkMode={darkMode}>Welcome Back</Title>
+                    <Title $darkMode={darkMode}>Please login</Title>
 
                     <FormFloating className="form-floating" $darkMode={darkMode}>
                         <input
@@ -70,18 +71,9 @@ function Login() {
                         <label htmlFor="floatingPassword">Password</label>
                     </FormFloating>
 
-                    <ForgotPassword href="#">Forgot password?</ForgotPassword>
+                    {mistake ? failedToLogin : false}
 
-                    <RememberMe className="form-check text-start" $darkMode={darkMode}>
-                        <input
-                            className="form-check-input"
-                            type="checkbox"
-                            id="flexCheckDefault"
-                        />
-                        <label className="form-check-label" htmlFor="flexCheckDefault">
-                            Remember me
-                        </label>
-                    </RememberMe>
+                    <ForgotPassword href="#">Forgot password?</ForgotPassword>
 
                     <SubmitButton className="btn btn-primary w-100" type="submit">
                         Login
