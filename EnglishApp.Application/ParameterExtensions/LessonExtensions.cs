@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
+using EnglishApp.Core.Params.LessonParams;
 
 namespace EnglishApp.Application.ParameterExtensions;
 

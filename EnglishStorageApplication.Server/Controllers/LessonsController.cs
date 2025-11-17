@@ -3,6 +3,7 @@ using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Exceptions.LessonExceptions;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
+using EnglishApp.Core.Params.LessonParams;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Hybrid;
 
