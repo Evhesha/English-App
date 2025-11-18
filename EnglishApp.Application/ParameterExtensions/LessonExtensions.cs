@@ -15,7 +15,8 @@ public static class LessonExtensions
         
         if (!string.IsNullOrEmpty(lessonFilter.Title))
         {
-            query = query.Where(l => l.Title == lessonFilter.Title);
+            query = query.Where(l => l.Title.Substring
+                (0, lessonFilter.Title.Length) == lessonFilter.Title);
         }
 
         if (lessonFilter.CreatedDate != null)

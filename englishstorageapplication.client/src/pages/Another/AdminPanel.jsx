@@ -91,7 +91,7 @@ function AdminPanel() {
       </p>
         <Dropdown>
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                Sort dropdown
+                Filter dropdown
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
