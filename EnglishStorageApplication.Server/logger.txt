@@ -1,0 +1,195 @@
+The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[18.11.2025 22:01:53] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[18.11.2025 22:01:53] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+[18.11.2025 22:01:53] Now listening on: https://localhost:7298
+[18.11.2025 22:01:53] Now listening on: http://localhost:5020
+[18.11.2025 22:01:53] Application started. Press Ctrl+C to shut down.
+[18.11.2025 22:01:53] Hosting environment: Development
+[18.11.2025 22:01:53] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
+[18.11.2025 22:01:53] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+[18.11.2025 22:01:59] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:02:04] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:02:04] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+[18.11.2025 22:02:09] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[18.11.2025 22:02:09] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[18.11.2025 22:02:09] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:02:09] Unable to connect to the SPA development server at 'https://localhost:5173'.
+[18.11.2025 22:03:55] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:04:37] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:04:37] Executed DbCommand (4ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[18.11.2025 22:04:43] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:04:43] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:04:43] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:04:43] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:04:43] Executed DbCommand (2ms) [Parameters=[@__email_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 2
+[18.11.2025 22:04:50] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:04:50] Unhandled exception occurred.
+[18.11.2025 22:04:50] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:04:50] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 2
+[18.11.2025 22:04:50] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:10:07] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:10:07] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:10:07] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."CreatedDate"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:10:07] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:10:08] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:10:08] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:10:10] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:10:10] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:11:33] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:11:33] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:13:33] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:13:33] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:17:30] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."Title"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:17:30] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+[18.11.2025 22:17:33] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:17:33] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:17:35] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:17:35] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:17:36] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount"
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:17:36] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+[18.11.2025 22:17:37] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+FROM "Lessons" AS l
+WHERE l."IsPublic"
+ORDER BY l."WatchCount" DESC
+LIMIT @__p_1 OFFSET @__p_0
+[18.11.2025 22:17:37] 

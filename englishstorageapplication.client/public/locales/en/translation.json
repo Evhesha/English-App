@@ -95,5 +95,17 @@
     "authors": "Authors",
     "created-by": "This project was created by Medvedskii Evgenii & Zuhta Kirill",
     "group": "FITR BNTU, Group 10701222"
+  },
+  "online-lessons": {
+    "online-lessons": "Online lessons",
+    "filters-sorting": "Filters and sorting",
+    "filter-title": "Filter by title",
+    "find-lessons": "Find lessons",
+    "sort-by": "Sort by",
+    "watching-count": "Watch count",
+    "created-date": "Created date",
+    "sort-direction": "Sort direction",
+    "ascending" : "Ascending",
+    "descending": "Descending"
   }
 }

@@ -12,10 +12,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Tests for lessons. New files separation for tetst (thanks to dotCover(test coverage))">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/AuthControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/AuthControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LessonControllerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LessonControllerTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +137,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "feature",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -234,7 +237,6 @@
       <workItem from="1762771100838" duration="2078000" />
       <workItem from="1762966073802" duration="7360000" />
       <workItem from="1763314953588" duration="4104000" />
-      <workItem from="1763471947778" duration="1384000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -358,12 +360,12 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="382" />
+    <option name="symbolColumnWidth" value="431" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 33% 1246/1870" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 38% 1198/1925" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -402,7 +404,6 @@
     <MESSAGE value="Feature: benchmark controller was added for testing getting lessons with cache and without cache." />
     <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
     <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
-    <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Now if user is not authorized - he cant get lessons." />
   </component>
 </project>
