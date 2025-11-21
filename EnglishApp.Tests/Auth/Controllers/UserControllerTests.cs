@@ -11,7 +11,7 @@ using Xunit;
 
 namespace EnglishApp.Tests.Auth.Controllers;
 
-public class UserControllerTest
+public class UserControllerTests
 {
     PasswordHasher ph = new PasswordHasher();
     CancellationToken  ct = new CancellationToken();

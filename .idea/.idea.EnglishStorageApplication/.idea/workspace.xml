@@ -14,12 +14,10 @@
   <component name="ChangeListManager">
     <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Tests for auth controller were added. New localization for online lessons page.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UserControllerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UserControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/EnglishApp.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/EnglishApp.Tests.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,6 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/559e28422bbc44d6a9b794bc4c0eb1eff83600/1c/2b3bec6e/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -91,7 +88,7 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/AuthControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LessonControllerTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LikesControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UserControllerTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UserControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersCardsControllersTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/EmailTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/JwtTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,6 +96,10 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LessonsServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LikeServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LessonsRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LikeRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserCardRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,26 +130,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature/tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
     <configuration name="HTTPS" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj" />
