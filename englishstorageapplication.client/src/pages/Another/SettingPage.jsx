@@ -5,6 +5,8 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {useTheme} from "@/Components/ThemeProvider/ThemeProvider.jsx";
 
 const fadeIn = keyframes`
   from {
@@ -71,55 +73,11 @@ const LanguageButton = styled.button`
   }
 `;
 
-const ThemeSwitch = styled.label`
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  span {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-
-    &:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      transition: .4s;
-      border-radius: 50%;
-    }
-  }
-
-  input:checked + span {
-    background-color: #2196F3;
-  }
-
-  input:checked + span:before {
-    transform: translateX(26px);
-  }
-`;
-
 function SettingPage() {
     const { t, i18n } = useTranslation();
     const [currentLang, setCurrentLang] = useState(i18n.language);
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const navigate = useNavigate();
+    const { darkMode, toggleTheme } = useTheme();
 
     const notify = () => {
       toast.success("Language changed!", {
@@ -137,8 +95,7 @@ function SettingPage() {
       const confirmLogout = window.confirm("Are you sure that you want to logout?");
       if (!confirmLogout) return;
       
-      Cookies.remove("token"); 
-      setAuthorized(false);
+      Cookies.remove("token");
       navigate("/login"); 
       window.location.reload();
     };
@@ -147,7 +104,6 @@ function SettingPage() {
         <Container>
           <ToastContainer />
             <Title>{t("account-page.settings")}</Title>
-            
             <Section>
                 <h3>{t("account-page.language")}</h3>
                 <ButtonGroup>
@@ -165,31 +121,30 @@ function SettingPage() {
                     </LanguageButton>
                 </ButtonGroup>
             </Section>
-
             <Section>
                 <h3>{t("account-page.theme")}</h3>
-                <ThemeSwitch>
-                    <input 
-                        type="checkbox" 
-                        checked={isDarkTheme}
-                        onChange={() => setIsDarkTheme(!isDarkTheme)}
-                    />
-                    <span></span>
-                </ThemeSwitch>
+                <button
+                    className="theme-toggle-btn"
+                    onClick={() => {
+                        toggleTheme();
+                        notify();
+                    }}
+                    title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+                >
+                    <i className={`bi ${darkMode ? "bi-sun" : "bi-moon"}`}></i>
+                </button>
             </Section>
-
             <Section>
-                <h3 style={{color : "red"}}>{t("sidebar.sign-out")}</h3>
+                <h3>{t("sidebar.sign-out")}</h3>
                 
                 <Link
                     to="#"
                     onClick={handleLogout}
-                    className="btn-danger"
+                    className=""
                   >
                     <i className="bi bi-door-closed"></i> {t("sidebar.sign-out")}
                   </Link>
                     <span></span>
-               
             </Section>
         </Container>
     );
