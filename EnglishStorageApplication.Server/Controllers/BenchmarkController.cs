@@ -37,8 +37,7 @@ public class BenchmarkController : Controller
         await _lessonService.GetLessonsWithPageParameters(pageParams, cancellationToken);
 
         var stopwatch = new Stopwatch();
-
-        // 🔹 1. Без кэша
+        
         var timesNoCache = new List<long>();
         for (int i = 0; i < 10; i++)
         {
@@ -47,8 +46,7 @@ public class BenchmarkController : Controller
             stopwatch.Stop();
             timesNoCache.Add(stopwatch.ElapsedMilliseconds);
         }
-
-        // 🔹 2. С кэшем
+        
         var timesCache = new List<long>();
         for (int i = 0; i < 10; i++)
         {
