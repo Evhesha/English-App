@@ -95,9 +95,9 @@ function AdminPanel() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item >User</Dropdown.Item>
-                <Dropdown.Item >Admin</Dropdown.Item>
-                <Dropdown.Item >Teacher</Dropdown.Item>
+                <Dropdown.Item>User</Dropdown.Item>
+                <Dropdown.Item>Admin</Dropdown.Item>
+                <Dropdown.Item>Teacher</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
       <p></p>
