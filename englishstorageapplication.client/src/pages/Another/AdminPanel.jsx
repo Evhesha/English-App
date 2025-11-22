@@ -6,6 +6,7 @@ import CreateUserPopUp from "../../Components/PopUps/User/CreateUserPopUp.jsx";
 import { useTranslation } from "react-i18next";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import {Dropdown} from "react-bootstrap";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -15,7 +16,7 @@ function AdminPanel() {
   const [hasError, setHasError] = useState(false);
   const [delayCompleted, setDelayCompleted] = useState(false);
   const {t} = useTranslation();
-    const effectRan = useRef(false);
+  const effectRan = useRef(false);
 
   const receiveNotify = () => {
     toast.success("Data received!", {
@@ -86,10 +87,19 @@ function AdminPanel() {
         <h1 style={{ marginLeft: "20px" }}>{t("admin-panel")}</h1>
       </div>
       <p>
-        {t("accoutn-page.num-of-users")} <b>{users.length}</b> * Num of admins <b>{users.length} </b>
-         * Num of teaches <b>{users.length}</b> * Num of users <b>{users.length}</b>
+        {t("account-page.num-of-users")} <b>{users.length}</b> 
       </p>
-      Отсортировать по роли
+        <Dropdown>
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                Filter dropdown
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+                <Dropdown.Item>User</Dropdown.Item>
+                <Dropdown.Item>Admin</Dropdown.Item>
+                <Dropdown.Item>Teacher</Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
       <p></p>
       <CreateUserPopUp onPost={(newUser) => setUsers([...users, newUser])} />
       <p></p>

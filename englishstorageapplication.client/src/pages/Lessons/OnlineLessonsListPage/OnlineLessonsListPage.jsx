@@ -6,6 +6,8 @@ import { useDarkMode } from "@/hooks/useDarkMode.js";
 import axios from "axios";
 import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
 import Pagination from "../../../Components/Pagination/Pagination.jsx";
+import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx"; // Оставляем как есть
+import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -19,16 +21,23 @@ function OnlineLessonsListPage() {
     const {t} = useTranslation();
     const [filtrationText, setFiltrationText] = useState("");
     const darkMode = useDarkMode();
+    const [authorized, setAuthorized] = useState(false);
     const effectRan = useRef(false);
 
     const [sortBy, setSortBy] = useState("");
     const [sortDirection, setSortDirection] = useState("");
-    const [isFirstLoad, setIsFirstLoad] = useState(true); 
-    
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+
     const fetchLessons = async (useCache = false) => {
         try {
             setIsLoading(true);
-
+            const token = Cookies.get("token");
+            if (token) {
+                setAuthorized(true);
+            }
+            else{
+                return;
+            }
             const url = useCache
                 ? `${API_BASE_URL}/api/Lessons/lessons/params/cache`
                 : `${API_BASE_URL}/api/Lessons/lessons/params`;
@@ -49,7 +58,7 @@ function OnlineLessonsListPage() {
             setTotalPages(Math.ceil(response.data.totalCount / pageSize));
             setIsLoading(false);
             setHasError(false);
-            
+
             if (isFirstLoad) {
                 setIsFirstLoad(false);
             }
@@ -59,7 +68,7 @@ function OnlineLessonsListPage() {
             setHasError(true);
         }
     };
-    
+
     useEffect(() => {
         if (effectRan.current === true) {
             return;
@@ -69,7 +78,7 @@ function OnlineLessonsListPage() {
             effectRan.current = true;
         };
     }, []);
-    
+
     useEffect(() => {
         if (!isFirstLoad) {
             fetchLessons(false);
@@ -93,13 +102,17 @@ function OnlineLessonsListPage() {
     const handleSearch = () => {
         setCurrentPage(1);
     };
+    
+    if (!authorized) {
+        return plsAuthorizeBlock;
+    }
 
     return (
         <div className="lessons-container">
-            <h1 className="text-center main-title mb-5">Online lessons</h1>
+            <h1 className="text-center main-title mb-5">{t("online-lessons.online-lessons")}</h1>
 
             <div className="filtration-section mb-4">
-                <h3>Filters and Sorting</h3>
+                <h3>{t("online-lessons.filters-sorting")}</h3>
 
                 <div className="row mb-3">
                     <div className="col-md-8">
@@ -113,7 +126,7 @@ function OnlineLessonsListPage() {
                                 onChange={(e) => setFiltrationText(e.target.value)}
                                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                             />
-                            <label htmlFor="filterInput">Filter by title</label>
+                            <label htmlFor="filterInput">{t("online-lessons.filter-title")}</label>
                         </div>
                     </div>
                     <div className="col-md-4">
@@ -121,7 +134,7 @@ function OnlineLessonsListPage() {
                             className="btn btn-primary w-100 h-100"
                             onClick={handleSearch}
                         >
-                            Find lessons
+                            {t("online-lessons.find-lessons")}
                         </button>
                     </div>
                 </div>
@@ -130,7 +143,7 @@ function OnlineLessonsListPage() {
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
-                                <h6 className="mb-0">Sort By</h6>
+                                <h6 className="mb-0">{t("online-lessons.sort-by")}</h6>
                             </div>
                             <div className="card-body">
                                 <div className="form-check">
@@ -143,7 +156,7 @@ function OnlineLessonsListPage() {
                                         onChange={() => handleSortByChange("WatchCount")}
                                     />
                                     <label className="form-check-label" htmlFor="sortByWatchCount">
-                                        Watch Count
+                                        {t("online-lessons.watching-count")}
                                     </label>
                                 </div>
                                 <div className="form-check">
@@ -156,7 +169,7 @@ function OnlineLessonsListPage() {
                                         onChange={() => handleSortByChange("CreatedDate")}
                                     />
                                     <label className="form-check-label" htmlFor="sortByCreatedDate">
-                                        Created Date
+                                        {t("online-lessons.created-date")}
                                     </label>
                                 </div>
                             </div>
@@ -166,7 +179,7 @@ function OnlineLessonsListPage() {
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
-                                <h6 className="mb-0">Sort Direction</h6>
+                                <h6 className="mb-0">{t("online-lessons.sort-direction")}</h6>
                             </div>
                             <div className="card-body">
                                 <div className="form-check">
@@ -180,7 +193,7 @@ function OnlineLessonsListPage() {
                                         disabled={!sortBy}
                                     />
                                     <label className="form-check-label" htmlFor="sortAscending">
-                                        Ascending
+                                        {t("online-lessons.ascending")}
                                     </label>
                                 </div>
                                 <div className="form-check">
@@ -194,7 +207,7 @@ function OnlineLessonsListPage() {
                                         disabled={!sortBy}
                                     />
                                     <label className="form-check-label" htmlFor="sortDescending">
-                                        Descending
+                                        {t("online-lessons.descending")}
                                     </label>
                                 </div>
                             </div>

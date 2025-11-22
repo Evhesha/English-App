@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
+using EnglishApp.Core.Params.LessonParams;
 
 namespace EnglishApp.Application.ParameterExtensions;
 
@@ -14,7 +15,8 @@ public static class LessonExtensions
         
         if (!string.IsNullOrEmpty(lessonFilter.Title))
         {
-            query = query.Where(l => l.Title == lessonFilter.Title);
+            var titleLower = lessonFilter.Title.ToLower();
+            query = query.Where(l => l.Title.ToLower().StartsWith(titleLower));
         }
 
         if (lessonFilter.CreatedDate != null)
