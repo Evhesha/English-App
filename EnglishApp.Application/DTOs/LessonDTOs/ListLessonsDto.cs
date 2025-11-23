@@ -9,4 +9,5 @@ public class ListLessonsDto
     public string Title { get; set; } = string.Empty;
     public int WatchCount { get; set; }
     public DateTime CreatedDate { get; set; }
+    public string UserName {get; set;}
 }

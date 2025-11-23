@@ -1,5 +1,4 @@
 ﻿namespace EnglishApp.Core.Abstractions.Lesson;
-
 public interface ILessonRepository
 {
     IQueryable<Models.Lesson> GetLessonsQueryable();

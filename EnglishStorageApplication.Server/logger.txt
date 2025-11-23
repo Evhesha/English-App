@@ -1,0 +1,24 @@
+The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[23.11.2025 18:42:39] The WebRootPath was not found: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/wwwroot. Static files may be unavailable.
+[23.11.2025 18:42:39] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+[23.11.2025 18:42:39] Now listening on: https://localhost:7298
+[23.11.2025 18:42:39] Now listening on: http://localhost:5020
+[23.11.2025 18:42:39] Application started. Press Ctrl+C to shut down.
+[23.11.2025 18:42:39] Hosting environment: Development
+[23.11.2025 18:42:39] Content root path: /Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server
+[23.11.2025 18:42:39] Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Lessons" AS l
+[23.11.2025 18:42:44] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[23.11.2025 18:42:44] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[23.11.2025 18:42:44] Executed DbCommand (9ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT t."Id", t."CreatedDate", t."IsPublic", t."Text", t."Title", t."UserId", t."WatchCount", u."Id", u."Email", u."Name", u."PasswordHash", u."Role"
+FROM (
+    SELECT l."Id", l."CreatedDate", l."IsPublic", l."Text", l."Title", l."UserId", l."WatchCount"
+    FROM "Lessons" AS l
+    LIMIT @__p_1 OFFSET @__p_0
+) AS t
+INNER JOIN "Users" AS u ON t."UserId" = u."Id"
+[23.11.2025 18:42:44] There was an error trying to launch the SPA proxy.
+[23.11.2025 18:43:23] Application is shutting down...
+[23.11.2025 18:43:23] 
