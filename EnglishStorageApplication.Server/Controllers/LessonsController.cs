@@ -78,7 +78,8 @@ namespace EnglishStorageApplication.Server.Controllers
                         UserId = lesson.UserId,
                         Title = lesson.Title,
                         WatchCount = lesson.WatchCount,
-                        CreatedDate = lesson.CreatedDate
+                        CreatedDate = lesson.CreatedDate,
+                        UserName = lesson.User.Name
                     }).ToList();
                 
                     return new PagedLessonsResponse
@@ -110,7 +111,8 @@ namespace EnglishStorageApplication.Server.Controllers
                 UserId = lesson.UserId,
                 Title = lesson.Title,
                 WatchCount = lesson.WatchCount,
-                CreatedDate = lesson.CreatedDate
+                CreatedDate = lesson.CreatedDate,
+                UserName = lesson.User.Name
             }).ToList();
             
             var result = new PagedLessonsResponse
