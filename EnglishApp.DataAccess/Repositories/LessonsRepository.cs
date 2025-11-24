@@ -17,7 +17,8 @@ namespace EnglishApp.DataAccess.Repositories
         public IQueryable<Lesson> GetLessonsQueryable()
         {
             return _context.Lessons
-                .Include(l => l.User);
+                .Include(l => l.User)
+                .AsNoTracking();
         }
         
         public async Task<List<Lesson>> GetLessonsAsync(CancellationToken cancellationToken)

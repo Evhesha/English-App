@@ -5,11 +5,10 @@ import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 function Home() {
     const { t } = useTranslation();
-    const { darkMode, toggleTheme } = useTheme();
+    const { darkMode } = useTheme();
 
     return (
         <div className={`minimal-home ${darkMode ? 'dark-theme' : ''}`}>
-            {/* Hero Section */}
             <section className="hero">
                 <Container>
                     <div className="hero-content">
