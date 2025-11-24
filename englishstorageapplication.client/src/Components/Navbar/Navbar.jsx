@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../Navbar/Navbar.css";
-import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";

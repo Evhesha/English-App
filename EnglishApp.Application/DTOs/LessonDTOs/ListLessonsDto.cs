@@ -1,6 +1,4 @@
-﻿using EnglishApp.Core.Models;
-
-namespace EnglishApp.Application.DTOs.LessonDTOs;
+﻿namespace EnglishApp.Application.DTOs.LessonDTOs;
 
 public class ListLessonsDto
 {

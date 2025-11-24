@@ -56,7 +56,7 @@ function ChangeUserRolePopUp({ id,
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3>Edit user</h3>
+                        <h3>Edit user role</h3>
                         <form onSubmit={handleEditRole}>
                             <div className="mb-3">
                                 <label htmlFor="role" className="form-label">

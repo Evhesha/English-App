@@ -12,16 +12,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Tests files renaming. New cs files for tests were added to project.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Tests for auth controller were added. New localization for online lessons page.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/ListLessonsDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/ListLessonsDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Lesson/ILessonRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Lesson/ILessonRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/logger.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ListGroupElement/ListGroupElement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ListGroupElement/ListGroupElement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CreateDictCardPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CreateDictCardPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/ChangeUserRolePopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/ChangeUserRolePopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/CreateUserPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/CreateUserPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/EditUserPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/EditUserPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,6 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonWithUserNameDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/ListLessonsDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/UpdateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/CreateLessonImageDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -248,7 +250,6 @@
       <workItem from="1763553462267" duration="2383000" />
       <workItem from="1763711738040" duration="2000" />
       <workItem from="1763713084975" duration="5734000" />
-      <workItem from="1763830395478" duration="6692000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -362,15 +363,7 @@
       <option name="project" value="LOCAL" />
       <updated>1763381167415</updated>
     </task>
-    <task id="LOCAL-00017" summary="Feature: Tests files renaming. New cs files for tests were added to project.">
-      <option name="closed" value="true" />
-      <created>1763747926115</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1763747926115</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +418,6 @@
     <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
     <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
     <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
-    <MESSAGE value="Feature: Tests files renaming. New cs files for tests were added to project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Tests files renaming. New cs files for tests were added to project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
   </component>
 </project>

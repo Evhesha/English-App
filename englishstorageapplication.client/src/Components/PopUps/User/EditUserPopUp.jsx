@@ -20,7 +20,7 @@ function EditUserPopUp({
     const togglePopup = () => {
         setIsOpen(!isOpen);
         setError(null);
-        setPassword(""); // Сбрасываем пароль при закрытии
+        setPassword("");
     };
 
     const handleEdit = async (event) => {
@@ -29,13 +29,11 @@ function EditUserPopUp({
         setError(null);
 
         try {
-            // Подготавливаем данные для отправки
             const updateData = {
                 name,
                 email,
             };
 
-            // Добавляем пароль только если он был введен
             if (password.trim() !== "") {
                 updateData.password = password;
             }
@@ -50,7 +48,6 @@ function EditUserPopUp({
                     onPut(response.data);
                 }
                 togglePopup();
-                // Убираем window.location.reload() - используем callback
             } else {
                 setError(response.data.message || "Ошибка при изменении пользователя.");
             }

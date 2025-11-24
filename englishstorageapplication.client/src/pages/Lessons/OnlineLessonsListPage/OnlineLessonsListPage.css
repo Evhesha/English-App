@@ -68,24 +68,6 @@
     opacity: 1;
 }
 
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 768px) {
-    .lessons-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 0 1rem;
-    }
-
-    .main-title {
-        font-size: 2rem;
-    }
-
-    .lesson-card {
-        padding: 1.5rem;
-    }
-}
-
-/* Анимация при появлении карточек */
 @keyframes fadeIn {
     from {
         opacity: 0;
