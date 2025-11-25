@@ -3,6 +3,7 @@
 public interface IUsersRepository
 {
     Task<List<EnglishStorageApplication.EnglishApp.Core.Models.User>> GetUsersAsync(CancellationToken cancellationToken);
+    IQueryable<EnglishStorageApplication.EnglishApp.Core.Models.User> GetUsersQueryable();
     Task<EnglishStorageApplication.EnglishApp.Core.Models.User?> GetUserByIdAsync(Guid id,
         CancellationToken cancellationToken);
     Task<EnglishStorageApplication.EnglishApp.Core.Models.User?> GetUserByEmailAsync(string email,
