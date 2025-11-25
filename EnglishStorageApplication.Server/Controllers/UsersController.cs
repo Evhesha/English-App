@@ -1,6 +1,7 @@
 ﻿using EnglishApp.Application.DTOs.UserDTOs;
 using EnglishApp.Core.Abstractions.User;
 using EnglishApp.Core.Exceptions.UserExceptions;
+using EnglishApp.Core.Params.UserParams;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
@@ -30,6 +31,16 @@ namespace EnglishStorageApplication.Server.Controllers
         {
             var users = await _userService.GetAllUsers(cancellationToken);
            
+            return Ok(users);
+        }
+
+        [HttpGet("/role")]
+        [EnableCors("AllowSpecificOrigin")]
+        public async Task<ActionResult<List<UserDto>>> GetRoleUsers(
+            [FromQuery] UserFilter userFilter,
+            CancellationToken cancellationToken)
+        {
+            var users = await _userService.GetUsersWithParams(userFilter, cancellationToken);
             return Ok(users);
         }
 
