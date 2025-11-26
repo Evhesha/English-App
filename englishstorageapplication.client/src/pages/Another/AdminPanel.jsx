@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ListGroupElement from "../../Components/ListGroupElement/ListGroupElement";
 import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
@@ -16,7 +16,7 @@ function AdminPanel() {
   const [hasError, setHasError] = useState(false);
   const [delayCompleted, setDelayCompleted] = useState(false);
   const {t} = useTranslation();
-  const effectRan = useRef(false);
+  const [role, setRole] = useState("");
 
   const receiveNotify = () => {
     toast.success("Data received!", {
@@ -36,31 +36,36 @@ function AdminPanel() {
     });
   }
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-        if (effectRan.current === true) {
-            return;
-        }
-      try {
-        const response = await axios.get(`${API_BASE_URL}/api/users`);
-        setUsers(response.data);
-        setIsLoading(false);
-        setHasError(false); 
-        console.log("Данные успешно загружены:", response.data);
-        receiveNotify();
-      } catch (error) {
-        console.error("Ошибка при получении пользователей:", error);
-        setIsLoading(false);
-        setHasError(true);
-        mistakeNotify();
-      }
-    };
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                setIsLoading(true);
+                setHasError(false);
 
-    fetchUsers();
-      return () => {
-          effectRan.current = true;
-      };
-  }, []);
+                const url = `${API_BASE_URL}/api/users/role`;
+
+                const params = {};
+                if (role) {
+                    params.Role = role;
+                }
+
+                const response = await axios.get(url, { params });
+
+                setUsers(response.data);
+                setIsLoading(false);
+                console.log("Данные успешно загружены:", response.data);
+                receiveNotify();
+            } catch (error) {
+                console.error("Ошибка при получении пользователей:", error);
+                setIsLoading(false);
+                setHasError(true);
+                mistakeNotify();
+            }
+        };
+
+        fetchUsers();
+
+    }, [role]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -79,6 +84,10 @@ function AdminPanel() {
     deleteNotify();
   };
 
+    const handleRole = (role) => {
+        setRole(role);
+    };
+
   return (
     <>
       <ToastContainer />
@@ -89,15 +98,16 @@ function AdminPanel() {
       <p>
         {t("account-page.num-of-users")} <b>{users.length}</b> 
       </p>
-        <Dropdown>
+        <Dropdown onSelect={handleRole}>
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                Filter dropdown
+                {role || "Filter by role"}
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item>User</Dropdown.Item>
-                <Dropdown.Item>Admin</Dropdown.Item>
-                <Dropdown.Item>Teacher</Dropdown.Item>
+                <Dropdown.Item eventKey={""}>No filter</Dropdown.Item>
+                <Dropdown.Item eventKey={"User"}>User</Dropdown.Item>
+                <Dropdown.Item eventKey={"Admin"}>Admin</Dropdown.Item>
+                <Dropdown.Item eventKey={"Teacher"}>Teacher</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
       <p></p>

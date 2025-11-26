@@ -34,7 +34,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(users);
         }
 
-        [HttpGet("/role")]
+        [HttpGet("role")]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UserDto>>> GetRoleUsers(
             [FromQuery] UserFilter userFilter,
