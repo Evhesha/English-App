@@ -2,8 +2,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
 import "./LessonsListElement.css"
+import { useTranslation } from "react-i18next";
 
 function LessonListElementForUsers({ id, name, text, watchCount, author, createdDate }) {
+    const { t } = useTranslation();
     const formatDate = (dateString) => {
         if (!dateString) return '';
         return new Date(dateString).toLocaleDateString('en-CA');
@@ -15,18 +17,18 @@ function LessonListElementForUsers({ id, name, text, watchCount, author, created
                 <h3 className="lesson-title">{name}</h3>
                 <div className="lesson-info">
                     <div className="info-item">
-                        <span className="info-label">Views:</span>
+                        <span className="info-label">{t("online-lessons.views")}:</span>
                         <span className="info-value">{watchCount}</span>
                     </div>
                     <div className="info-item">
-                        <span className="info-label">Author:</span>
+                        <span className="info-label">{t("online-lessons.author")}:</span>
                         <span className="info-value">{author}</span>
                     </div>
                     <div className="info-item">
-                        <span className="info-label">Created date:</span>
+                        <span className="info-label">{t("online-lessons.created-date")}:</span>
                         <span className="info-value">{createdDate && (
                             <small className="text-muted">
-                                Created: {formatDate(createdDate)}
+                                {formatDate(createdDate)}
                             </small>
                         )}</span>
                     </div>

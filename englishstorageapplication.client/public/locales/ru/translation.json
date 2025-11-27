@@ -69,6 +69,14 @@
     "final-cta-subtitle": "Присоединяйтесь к тысячам успешных студентов, достигших своих языковых целей",
     "final-cta-button": "Начать сейчас"
   },
+  "teacher-page" : {
+    "label": "Панель учителя(ваши урки)",
+    "create-lesson": "Создать урок",
+    "views": "Просмотры",
+    "is-public": "Публичность",
+    "check-lessons": "Просмотреть урок",
+    "delete": "Удалить"
+  },
   "aboutapp": {
     "about-program": "О программе",
     "key-features": "Ключевые особенности",
@@ -106,6 +114,8 @@
     "created-date": "Дата создания",
     "sort-direction": "Направление сортировки",
     "ascending" : "Возрастание",
-    "descending": "Убывание"
+    "descending": "Убывание",
+    "views": "Просмотры",
+    "author": "Автор"
   }
 }

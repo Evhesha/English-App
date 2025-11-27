@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckLessonPopUp from "@/Components/PopUps/Lesson/CheckLessonPopUp.jsx";
 import "./LessonsListElement.css"
-import ChangeUserRolePopUp from "@/Components/PopUps/User/ChangeUserRolePopUp.jsx";
+import {useTranslation} from "react-i18next";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDelete, onUpdate }) {
+    const { t } = useTranslation();
     const handleDelete = async () => {
         const confirmDelete = window.confirm("Are you sure that you want to delete the article?");
         if (!confirmDelete) return;
@@ -26,11 +27,11 @@ function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDel
                 <h3 className="lesson-title">{name}</h3>
                 <div className="lesson-info">
                     <div className="info-item">
-                        <span className="info-label">Views:</span>
+                        <span className="info-label">{t("teacher-page.views")}:</span>
                         <span className="info-value">{watches}</span>
                     </div>
                     <div className="info-item">
-                        <span className="info-label">Is public:</span>
+                        <span className="info-label">{t("teacher-page.is-public")}:</span>
                         <span className="info-value">{isPublic ? "true" : "false"}</span>
                     </div>
                 </div>
@@ -38,7 +39,7 @@ function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDel
             <div className="lesson-actions">
                 <CheckLessonPopUp id={id} title={name} text={text} onPut={onUpdate} isPublic={isPublic} />
                 <button type="button" className="btn btn-danger ms-2" onClick={handleDelete}>
-                    <i className="bi bi-trash3"></i> Delete
+                    <i className="bi bi-trash3"></i> {t("teacher-page.delete")}
                 </button>
             </div>
         </li>

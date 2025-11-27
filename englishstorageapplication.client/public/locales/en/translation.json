@@ -69,6 +69,14 @@
     "final-cta-subtitle": "Join thousands of successful students who achieved their language goals",
     "final-cta-button": "Get Started Now"
   },
+  "teacher-page" : {
+    "label": "Teacher panel (your lessons)",
+    "create-lesson": "Create lesson",
+    "views": "Views",
+    "is-public": "Is public",
+    "check-lessons": "Check lessons",
+    "delete": "Delete"
+  },
   "aboutapp": {
     "about-program": "About Program",
     "key-features": "Key Features",
@@ -106,6 +114,8 @@
     "created-date": "Created date",
     "sort-direction": "Sort direction",
     "ascending" : "Ascending",
-    "descending": "Descending"
+    "descending": "Descending",
+    "views": "Views",
+    "author": "Author"
   }
 }
