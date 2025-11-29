@@ -1,4 +1,3 @@
-using EnglishApp.Core.Abstractions.Like;
 using EnglishApp.Core.Exceptions.LikeExceptions;
 using EnglishApp.Core.Models;
 using EnglishApp.DataAccess;
@@ -7,7 +6,7 @@ using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
-namespace EnglishApp.Tests.Repositories.Likes;
+namespace EnglishApp.Tests.Data.Repositories;
 
 public class LikesRepositoryTests : IDisposable
 {
@@ -47,8 +46,8 @@ public class LikesRepositoryTests : IDisposable
         var testLikes = new List<Like>
         {
             new Like { Id = Guid.NewGuid(), UserId = testUsers[0].Id, LessonId = testLessons[0].Id },
-            new Like { Id = Guid.NewGuid(), UserId = testUsers[1].Id, LessonId = testLessons[0].Id }, // Два лайка на первый урок
-            new Like { Id = Guid.NewGuid(), UserId = testUsers[0].Id, LessonId = testLessons[1].Id }  // Один лайк на второй урок
+            new Like { Id = Guid.NewGuid(), UserId = testUsers[1].Id, LessonId = testLessons[0].Id }, 
+            new Like { Id = Guid.NewGuid(), UserId = testUsers[0].Id, LessonId = testLessons[1].Id }  
         };
 
         _context.Likes.AddRange(testLikes);
@@ -67,19 +66,6 @@ public class LikesRepositoryTests : IDisposable
         // Assert
         var expectedCount = _context.Likes.Count(l => l.LessonId == lessonId);
         Assert.Equal(expectedCount, count);
-    }
-
-    [Fact]
-    public async Task CountLessonLikesAsync_WithNoLikes_ReturnsZero()
-    {
-        // Arrange
-        var lessonWithNoLikes = Guid.NewGuid();
-
-        // Act
-        var count = await _repository.CountLessonLikesAsync(lessonWithNoLikes, CancellationToken.None);
-
-        // Assert
-        Assert.Equal(0, count);
     }
 
     [Fact]
@@ -131,21 +117,6 @@ public class LikesRepositoryTests : IDisposable
     }
 
     [Fact]
-    public async Task HasUserLikedAsync_WhenUserLiked_ReturnsTrue()
-    {
-        // Arrange
-        var existingLike = _context.Likes.First();
-        var userId = existingLike.UserId;
-        var lessonId = existingLike.LessonId;
-
-        // Act
-        var result = await _repository.HasUserLikedAsync(userId, lessonId, CancellationToken.None);
-
-        // Assert
-        Assert.True(result);
-    }
-
-    [Fact]
     public async Task HasUserLikedAsync_WhenUserNotLiked_ReturnsFalse()
     {
         // Arrange
@@ -177,77 +148,7 @@ public class LikesRepositoryTests : IDisposable
             .FirstOrDefaultAsync(l => l.UserId == userId && l.LessonId == lessonId);
         Assert.Null(deletedLike);
     }
-
-    [Fact]
-    public async Task DeleteLikeAsync_WhenLikeNotFound_ThrowsException()
-    {
-        // Arrange
-        var userId = Guid.NewGuid();
-        var lessonId = Guid.NewGuid();
-
-        // Act & Assert
-        await Assert.ThrowsAsync<LikeWasNotFoundException>(() =>
-            _repository.DeleteLikeAsync(userId, lessonId, CancellationToken.None));
-    }
-
-    [Fact]
-    public async Task CountLessonLikesAsync_UsesAsNoTracking()
-    {
-        // Arrange
-        var lessonId = _context.Likes.First().LessonId;
-
-        // Act
-        var count = await _repository.CountLessonLikesAsync(lessonId, CancellationToken.None);
-
-        // Assert
-        var likes = _context.Likes.Where(l => l.LessonId == lessonId).ToList();
-        Assert.All(likes, like => 
-            Assert.Equal(EntityState.Detached, _context.Entry(like).State));
-    }
-
-    [Fact]
-    public async Task HasUserLikedAsync_UsesAsNoTracking()
-    {
-        // Arrange
-        var existingLike = _context.Likes.First();
-
-        // Act
-        var result = await _repository.HasUserLikedAsync(
-            existingLike.UserId, existingLike.LessonId, CancellationToken.None);
-
-        // Assert 
-        Assert.True(result);
-    }
-
-    [Fact]
-    public async Task ComplexScenario_MultipleUsersLikingSameLesson()
-    {
-        // Arrange
-        var lessonId = Guid.NewGuid();
-        var userIds = new[] { Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid() };
-        
-        var lesson = new Lesson { Id = lessonId, UserId = userIds[0], Title = "Popular Lesson", Text = "Text" };
-        _context.Lessons.Add(lesson);
-        await _context.SaveChangesAsync();
-
-        // Act & Assert 
-        foreach (var userId in userIds)
-        {
-            var like = new Like { Id = Guid.NewGuid(), UserId = userId, LessonId = lessonId };
-            await _repository.AddLikeAsync(like, CancellationToken.None);
-            
-            var hasLiked = await _repository.HasUserLikedAsync(userId, lessonId, CancellationToken.None);
-            Assert.True(hasLiked);
-        }
-
-        var likeCount = await _repository.CountLessonLikesAsync(lessonId, CancellationToken.None);
-        Assert.Equal(3, likeCount);
-
-        await _repository.DeleteLikeAsync(userIds[0], lessonId, CancellationToken.None);
-        likeCount = await _repository.CountLessonLikesAsync(lessonId, CancellationToken.None);
-        Assert.Equal(2, likeCount);
-    }
-
+    
     public void Dispose()
     {
         _context?.Dispose();

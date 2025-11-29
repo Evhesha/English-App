@@ -1,10 +1,10 @@
+using EnglishApp.Application.AppServices;
 using EnglishApp.Core.Abstractions.UserCard;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using EnglishApp.Application.AppServices;
 using NSubstitute;
 using Xunit;
 
-namespace EnglishApp.Tests.Data.UsersCards;
+namespace EnglishApp.Tests.Data.MediumServices;
 
 public class UserCardServiceTests
 {
