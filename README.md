@@ -31,6 +31,17 @@ A modern, interactive English learning application designed to make language acq
 - **CSS3** - Custom animations and responsive design
 - **React i18next** - Internationalization support
 
+### Backend
+- **ASP.NET Core** - Robust and scalable web API
+- **Entity Framework Core** - Database management and ORM
+- **JWT Authentication** - Secure user authentication
+- **RESTful API** - Clean and structured endpoints
+
+### Database
+- **PosrgreSQL** - Primary data storage
+- **Mongo db** - Storing messages and chats
+- **Entity Framework Migrations** - Database version control
+  
 ### Features
 - **Dark/Light Theme** - Customizable interface
 - **Multi-language Support** - English and Russian interfaces
