@@ -51,7 +51,7 @@ const StyledLink = styled(Link)`
   }
 
   i {
-    line-height: 50px; /* Центрирование иконки внутри круга */
+    line-height: 50px;
   }
 `;
 

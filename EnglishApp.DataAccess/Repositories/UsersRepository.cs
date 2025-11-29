@@ -21,6 +21,12 @@ namespace EnglishApp.DataAccess.Repositories
                 .ToListAsync(cancellationToken);
         }
 
+        public IQueryable<User> GetUsersQueryable()
+        {
+            return _context.Users
+                .AsNoTracking();
+        }
+
         public async Task<User?> GetUserByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             var user =  await _context.Users

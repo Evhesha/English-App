@@ -1,6 +1,4 @@
-﻿using EnglishApp.Core.Models;
-
-namespace EnglishApp.Application.DTOs.LessonDTOs;
+﻿namespace EnglishApp.Application.DTOs.LessonDTOs;
 
 public class ListLessonsDto
 {
@@ -9,4 +7,5 @@ public class ListLessonsDto
     public string Title { get; set; } = string.Empty;
     public int WatchCount { get; set; }
     public DateTime CreatedDate { get; set; }
+    public string UserName {get; set;}
 }

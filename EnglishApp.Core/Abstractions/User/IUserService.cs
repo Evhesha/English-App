@@ -1,8 +1,13 @@
-﻿namespace EnglishApp.Core.Abstractions.User;
+﻿using EnglishApp.Core.Params.UserParams;
+
+namespace EnglishApp.Core.Abstractions.User;
 
 public interface IUserService
 {
     Task<List<EnglishStorageApplication.EnglishApp.Core.Models.User>> GetAllUsers(CancellationToken cancellationToken);
+    Task<List<EnglishStorageApplication.EnglishApp.Core.Models.User>> GetUsersWithParams(
+        UserFilter userFilter,
+        CancellationToken cancellationToken);
     Task<EnglishStorageApplication.EnglishApp.Core.Models.User?> GetUserById(Guid id,
         CancellationToken  cancellationToken);
     Task<EnglishStorageApplication.EnglishApp.Core.Models.User?> GetUserByEmail(string email,

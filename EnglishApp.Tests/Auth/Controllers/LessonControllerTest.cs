@@ -1,5 +1,7 @@
+using EnglishApp.Application.DTOs.LessonDTOs;
 using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Exceptions.LessonExceptions;
+using EnglishApp.Core.Models;
 using EnglishStorageApplication.Server.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Hybrid;
@@ -19,11 +21,20 @@ public class LessonControllerTest
     public async Task GetUserLessonByLessonId_ReturnsOkObjectResult()
     {
         // Arrange
+        var userId = Guid.NewGuid();
+        var lesson = new Lesson();
+   
+
+        mockService.GetUserLessonByLessonId(userId, ct)
+            .Returns(lesson);
+        
+        var controller = new LessonsController(mockService, hybridCache);
         
         // Act
+        var result = await controller.GetUserLessonByLessonId(userId, ct);
         
         // Assert
-        
+        Assert.IsType<ActionResult<List<LessonDto>>>(result);
     }
     
     [Fact]

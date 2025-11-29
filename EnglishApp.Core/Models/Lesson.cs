@@ -1,4 +1,6 @@
-﻿namespace EnglishApp.Core.Models
+﻿using EnglishStorageApplication.EnglishApp.Core.Models;
+
+namespace EnglishApp.Core.Models
 {
     public class Lesson
     {
@@ -10,5 +12,6 @@
         public List<LessonImage> Images { get; set; } = new();
         public int WatchCount { get; set; }
         public DateTime CreatedDate { get; set; }
+        public User User { get; set; }
     }
 }

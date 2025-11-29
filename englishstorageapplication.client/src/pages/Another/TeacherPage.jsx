@@ -8,12 +8,14 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import CreateLesson from "@/pages/Another/TeacherPageComponents/CreateLesson.jsx";
 import AddLesson from "./TeacherPageComponents/AddLesson.png";
+import { useTranslation } from "react-i18next";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function TeacherPage() {
   const [articles, setArticles] = useState([]);
     const effectRan = useRef(false);
-
+    const {t} = useTranslation();
   const handleDeleteArticle = (id) => {
     setArticles(articles.filter(article => article.id !== id));
     deleteNotify();
@@ -66,7 +68,7 @@ function TeacherPage() {
     
   return (
     <>
-      <h1>Teacher panel (your lessons)</h1>
+      <h1>{t("teacher-page.label")}</h1>
       <Section>
           <CreateLesson title={"Add lesson"} image={
               <img
