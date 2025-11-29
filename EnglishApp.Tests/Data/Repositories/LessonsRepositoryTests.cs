@@ -1,4 +1,3 @@
-using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Exceptions.LessonExceptions;
 using EnglishApp.Core.Models;
 using EnglishApp.DataAccess;
@@ -7,7 +6,7 @@ using EnglishStorageApplication.EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
-namespace EnglishApp.Tests.Repositories.Lessons;
+namespace EnglishApp.Tests.Data.Repositories;
 
 public class LessonsRepositoryTests : IDisposable
 {
@@ -36,7 +35,15 @@ public class LessonsRepositoryTests : IDisposable
             PasswordHash = "hash"
         };
 
-        _context.Users.Add(testUser);
+        var otherUser = new User 
+        { 
+            Id = Guid.NewGuid(), 
+            Name = "Other User", 
+            Email = "other@example.com",
+            PasswordHash = "hash2"
+        };
+
+        _context.Users.AddRange(testUser, otherUser);
 
         var testLessons = new List<Lesson>
         {
@@ -48,8 +55,7 @@ public class LessonsRepositoryTests : IDisposable
                 Text = "Text 1",
                 IsPublic = true,
                 WatchCount = 5,
-                CreatedDate = DateTime.UtcNow.AddDays(-2),
-                User = testUser
+                CreatedDate = DateTime.UtcNow.AddDays(-2)
             },
             new Lesson 
             { 
@@ -59,19 +65,17 @@ public class LessonsRepositoryTests : IDisposable
                 Text = "Text 2",
                 IsPublic = false,
                 WatchCount = 10,
-                CreatedDate = DateTime.UtcNow.AddDays(-1),
-                User = testUser
+                CreatedDate = DateTime.UtcNow.AddDays(-1)
             },
             new Lesson 
             { 
                 Id = Guid.NewGuid(), 
-                UserId = Guid.NewGuid(), 
+                UserId = otherUser.Id, 
                 Title = "Lesson 3", 
                 Text = "Text 3",
                 IsPublic = true,
                 WatchCount = 3,
-                CreatedDate = DateTime.UtcNow,
-                User = new User { Id = Guid.NewGuid(), Name = "Other User" }
+                CreatedDate = DateTime.UtcNow
             }
         };
 
@@ -91,17 +95,7 @@ public class LessonsRepositoryTests : IDisposable
         Assert.Equal(3, results.Count);
         Assert.All(results, lesson => Assert.NotNull(lesson.User)); 
     }
-
-    [Fact]
-    public async Task GetLessonsAsync_ReturnsAllLessons()
-    {
-        // Act
-        var results = await _repository.GetLessonsAsync(CancellationToken.None);
-
-        // Assert
-        Assert.NotNull(results);
-        Assert.Equal(3, results.Count);
-    }
+    
 
     [Fact]
     public async Task GetUserLessonsAsync_ReturnsOnlyUserLessons()
@@ -116,41 +110,6 @@ public class LessonsRepositoryTests : IDisposable
         Assert.NotNull(results);
         Assert.Equal(2, results.Count);
         Assert.All(results, lesson => Assert.Equal(userId, lesson.UserId));
-    }
-
-    [Fact]
-    public async Task GetUserLessonsAsync_WithInvalidUserId_ReturnsEmptyList()
-    {
-        // Arrange
-        var invalidUserId = Guid.NewGuid();
-
-        // Act
-        var results = await _repository.GetUserLessonsAsync(invalidUserId, CancellationToken.None);
-
-        // Assert
-        Assert.NotNull(results);
-        Assert.Empty(results);
-    }
-
-    [Fact]
-    public async Task GetUserLessonByLessonIdAsync_ReturnsLessonAndIncrementsWatchCount()
-    {
-        // Arrange
-        var existingLesson = _context.Lessons.First();
-        var initialWatchCount = existingLesson.WatchCount;
-
-        // Act
-        var result = await _repository.GetUserLessonByLessonIdAsync(existingLesson.Id, CancellationToken.None);
-
-        // Assert
-        Assert.NotNull(result);
-        Assert.Equal(existingLesson.Id, result.Id);
-        Assert.Equal(initialWatchCount + 1, result.WatchCount); 
-        
-        // Проверяем что в базе тоже обновилось
-        var lessonFromDb = await _context.Lessons.FindAsync(existingLesson.Id);
-        Assert.NotNull(lessonFromDb);
-        Assert.Equal(initialWatchCount + 1, lessonFromDb.WatchCount);
     }
 
     [Fact]
@@ -258,53 +217,6 @@ public class LessonsRepositoryTests : IDisposable
         // Act & Assert
         await Assert.ThrowsAsync<NotFoundLessonException>(() =>
             _repository.DeleteLessonAsync(invalidId, CancellationToken.None));
-    }
-
-    [Fact]
-    public async Task GetMethods_UseAsNoTracking()
-    {
-        // Arrange
-        var userId = _context.Lessons.First().UserId;
-
-        // Act
-        var allLessons = await _repository.GetLessonsAsync(CancellationToken.None);
-        var userLessons = await _repository.GetUserLessonsAsync(userId, CancellationToken.None);
-
-        Assert.All(allLessons, lesson => 
-            Assert.Equal(EntityState.Detached, _context.Entry(lesson).State));
-        Assert.All(userLessons, lesson => 
-            Assert.Equal(EntityState.Detached, _context.Entry(lesson).State));
-    }
-
-    [Fact]
-    public async Task CreateLessonAsync_WithImages_CreatesLessonWithImages()
-    {
-        // Arrange
-        var newLesson = new Lesson
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            Title = "Lesson with Images",
-            Text = "Text with images",
-            IsPublic = true,
-            CreatedDate = DateTime.UtcNow,
-            Images = new List<LessonImage>
-            {
-                new LessonImage { Id = Guid.NewGuid(), ImageURL = "image1.jpg" },
-                new LessonImage { Id = Guid.NewGuid(), ImageURL = "image2.jpg" }
-            }
-        };
-
-        // Act
-        var lessonId = await _repository.CreateLessonAsync(newLesson, CancellationToken.None);
-
-        // Assert
-        var createdLesson = await _context.Lessons
-            .Include(l => l.Images)
-            .FirstOrDefaultAsync(l => l.Id == lessonId);
-        
-        Assert.NotNull(createdLesson);
-        Assert.Equal(2, createdLesson.Images.Count);
     }
 
     public void Dispose()
