@@ -32,6 +32,41 @@ public class LikesControllerTests
         var okResult = Assert.IsType<OkObjectResult>(result.Result);
         Assert.Equal(expectedCount, okResult.Value);
     }
+    
+    [Fact]
+    public async Task HasUserLiked_WhenUserLikedArticle_ReturnsTrue()
+    {
+        // Arrange
+        var userId = Guid.NewGuid();
+        var articleId = Guid.NewGuid();
+    
+        mockService.HasUserLiked(userId, articleId, ct).Returns(true);
+        var controller = new LikesController(mockService);
+    
+        // Act
+        var result = await controller.HasUserLiked(articleId, userId, ct);
+
+        // Assert
+        var okResult = Assert.IsType<OkObjectResult>(result.Result);
+        Assert.True((bool)okResult.Value);
+    }
+
+    [Fact]
+    public async Task HasUserLiked_WhenUserNotLikedArticle_ReturnsFalse()
+    {
+        // Arrange
+        var userId = Guid.NewGuid();
+        var articleId = Guid.NewGuid();
+    
+        mockService.HasUserLiked(userId, articleId, ct).Returns(false);
+        var controller = new LikesController(mockService);
+    
+        // Act
+        var result = await controller.HasUserLiked(articleId, userId, ct);
+
+        // Assert
+        Assert.IsType<NotFoundObjectResult>(result.Result);
+    }
 
     [Fact]
     public async Task AddLike_WithValidDto_ReturnsOkWithLike()

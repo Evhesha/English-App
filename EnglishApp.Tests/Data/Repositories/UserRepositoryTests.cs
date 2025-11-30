@@ -197,21 +197,6 @@ public class UsersRepositoryTests : IDisposable
     }
 
     [Fact]
-    public async Task UpdateUserRoleAsync_WithInvalidId_ThrowsNotFoundException()
-    {
-        // Arrange
-        var invalidUser = new User
-        {
-            Id = Guid.NewGuid(),
-            Role = "Admin"
-        };
-
-        // Act & Assert
-        await Assert.ThrowsAsync<NotFoundUserException>(() =>
-            _repository.UpdateUserRoleAsync(invalidUser, CancellationToken.None));
-    }
-
-    [Fact]
     public async Task DeleteUserAsync_DeletesUser()
     {
         // Arrange

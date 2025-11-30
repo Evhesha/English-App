@@ -12,18 +12,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: New home page style and formation.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: Some tests were fixed for repository. Changed theirs namespases.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/PasswordHasher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/PasswordHasher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LikesControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LikesControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UserControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UserControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersStudyResultsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersStudyResultsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/JwtTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/JwtTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/PasswordTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/PasswordTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LessonsServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LessonsServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LikeServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/LikeServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserCardServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserCardServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/MediumServices/UserStudyResultServiceTest.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LessonsRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LessonsRepositoryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LikeRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LikeRepositoryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserCardRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserCardRepositoryTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserRepositoryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserStudyResultRepositoryTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LikesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LikesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +174,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "fix/repository-tests",
+    "git-widget-placeholder": "feature/tests",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -234,6 +235,7 @@
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +285,9 @@
       <workItem from="1763711738040" duration="2000" />
       <workItem from="1763713084975" duration="5734000" />
       <workItem from="1764136834244" duration="7808000" />
-      <workItem from="1764418942837" duration="1707000" />
+      <workItem from="1764418942837" duration="2660000" />
+      <workItem from="1764421670363" duration="1792000" />
+      <workItem from="1764490038109" duration="1661000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -397,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763381167415</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix: Some tests were fixed for repository. Changed theirs namespases.">
+      <option name="closed" value="true" />
+      <created>1764420926210</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764420926210</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +469,8 @@
     <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
     <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
     <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
+    <MESSAGE value="Fix: Some tests were fixed for repository. Changed theirs namespases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Some tests were fixed for repository. Changed theirs namespases." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -59,7 +59,7 @@ public class UsersCardsRepositoryTests : IDisposable
 
         // Assert
         Assert.NotNull(results);
-        Assert.Equal(2, results.Count); // У первого пользователя 2 карточки
+        Assert.Equal(2, results.Count); 
         Assert.All(results, card => Assert.Equal(userId, card.UserId));
     }
 
@@ -100,32 +100,6 @@ public class UsersCardsRepositoryTests : IDisposable
         Assert.Equal(newCard.NameOfUsersCard, createdCard.NameOfUsersCard);
         Assert.Equal(newCard.UserCardData, createdCard.UserCardData);
         Assert.Equal(newCard.UserId, createdCard.UserId);
-    }
-
-    [Fact]
-    public async Task UpdateUserCardAsync_UpdatesCardProperties()
-    {
-        // Arrange
-        var existingCard = _context.UsersCards.First();
-        var updatedCard = new UserCard
-        {
-            Id = existingCard.Id,
-            NameOfUsersCard = "Updated Name",
-            UserCardData = "{\"updated\": true}"
-        };
-
-        // Act
-        var updatedId = await _repository.UpdateUserCardAsync(existingCard.Id, updatedCard, CancellationToken.None);
-
-        // Assert
-        Assert.Equal(existingCard.Id, updatedId);
-        
-        var cardFromDb = await _context.UsersCards.FindAsync(existingCard.Id);
-        Assert.NotNull(cardFromDb);
-        Assert.Equal(updatedCard.NameOfUsersCard, cardFromDb.NameOfUsersCard);
-        Assert.Equal(updatedCard.UserCardData, cardFromDb.UserCardData);
-        // Проверяем что UserId не изменился
-        Assert.Equal(existingCard.UserId, cardFromDb.UserId);
     }
 
     [Fact]

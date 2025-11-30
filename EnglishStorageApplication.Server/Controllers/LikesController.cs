@@ -29,14 +29,14 @@ public class LikesController : ControllerBase
         [FromQuery] Guid userId,
         CancellationToken cancellationToken)
     {
-        var deleted = await _likeService.DeleteLike(userId, articleId, cancellationToken);
+        var hasUserLiked = await _likeService.HasUserLiked(userId, articleId, cancellationToken);
 
-        if (!deleted)
+        if (!hasUserLiked)
         {
             return NotFound("Like not found");
         }
 
-        return NoContent();
+        return Ok(hasUserLiked);
     }
 
     [HttpPost]

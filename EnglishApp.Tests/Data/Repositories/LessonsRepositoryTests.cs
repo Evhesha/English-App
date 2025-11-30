@@ -96,7 +96,6 @@ public class LessonsRepositoryTests : IDisposable
         Assert.All(results, lesson => Assert.NotNull(lesson.User)); 
     }
     
-
     [Fact]
     public async Task GetUserLessonsAsync_ReturnsOnlyUserLessons()
     {

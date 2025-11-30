@@ -100,4 +100,33 @@ public class JwtTests
         Assert.True(jwt.ValidTo > DateTime.UtcNow);
         Assert.True(jwt.ValidTo <= DateTime.UtcNow.AddHours(1.1));
     }
+    
+    [Fact]
+    public void GenerateToken_HasCorrectThreePartStructure()
+    {
+        // Arrange
+        var options = Options.Create(new JwtOptions
+        {
+            Issuer = "TestIssuer",
+            Audience = "TestAudience",
+            SecretKey = "ab123_2024projecThisIsExtraSecKey32Chars",
+            ExpiresHours = 1
+        });
+
+        var jwtProvider = new JwtProvider(options);
+
+        var user = new User
+        {
+            Id = Guid.NewGuid(),
+            Name = "John Doe",
+            Email = "john@example.com",
+        };
+
+        // Act
+        var token = jwtProvider.GenerateToken(user);
+        var parts = token.Split('.');
+    
+        // Assert
+        Assert.Equal(3, parts.Length);
+    }
 }
