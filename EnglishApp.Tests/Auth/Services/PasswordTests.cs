@@ -1,4 +1,4 @@
-﻿using EnglishStorageApplication.EnglishApp.Infrastructure;
+﻿using EnglishApp.Infrastructure;
 using Xunit;
 
 namespace EnglishApp.Tests.Auth.Services;
@@ -65,5 +65,15 @@ public class PasswordTests
         
         // Assert
         Assert.NotEqual(hash1, hash2);
+    }
+
+    [Fact]
+    public void Generate_NullPassword_ThrowsException()
+    {
+        // Arrange
+        var passwordHasher = new PasswordHasher();
+    
+        // Act & Assert
+        Assert.Throws<ArgumentNullException>(() => passwordHasher.Generate(null));
     }
 }
