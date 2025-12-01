@@ -5,7 +5,6 @@ using EnglishApp.Core.Params.UserParams;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 
 namespace EnglishStorageApplication.Server.Controllers
