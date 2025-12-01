@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnglishApp.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishApp.Tests", "EnglishApp.Tests\EnglishApp.Tests.csproj", "{3DED0FC5-37B9-46DD-98BE-353A88A46940}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishStorageApplication.AiServer", "EnglishStorageApplication.AiServer\EnglishStorageApplication.AiServer.csproj", "{1095DEDA-2586-476B-B6C0-87BAE2A4815D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{3DED0FC5-37B9-46DD-98BE-353A88A46940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DED0FC5-37B9-46DD-98BE-353A88A46940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DED0FC5-37B9-46DD-98BE-353A88A46940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1095DEDA-2586-476B-B6C0-87BAE2A4815D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1095DEDA-2586-476B-B6C0-87BAE2A4815D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1095DEDA-2586-476B-B6C0-87BAE2A4815D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1095DEDA-2586-476B-B6C0-87BAE2A4815D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
