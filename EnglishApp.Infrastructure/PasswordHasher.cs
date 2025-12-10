@@ -1,6 +1,6 @@
 ﻿using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 
-namespace EnglishStorageApplication.EnglishApp.Infrastructure
+namespace EnglishApp.Infrastructure
 {
     public class PasswordHasher : IPasswordHasher
     {

@@ -1,10 +1,10 @@
 using EnglishApp.Core.Abstractions.User;
-using EnglishStorageApplication.EnglishApp.Core.Models;
 using EnglishStorageApplication.EnglishApp.Application.AppServices;
+using EnglishStorageApplication.EnglishApp.Core.Models;
 using NSubstitute;
 using Xunit;
 
-namespace EnglishApp.Tests.Data.Users;
+namespace EnglishApp.Tests.Data.MediumServices;
 
 public class UserServiceTests
 {

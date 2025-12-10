@@ -1,10 +1,10 @@
+using EnglishApp.Application.AppServices;
 using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Models;
-using EnglishApp.Application.AppServices;
 using NSubstitute;
 using Xunit;
 
-namespace EnglishApp.Tests.Data.Lessons;
+namespace EnglishApp.Tests.Data.MediumServices;
 
 public class LessonsServiceTests
 {
