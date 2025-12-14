@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Cookies from "js-cookie";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import Form from 'react-bootstrap/Form';
 function Sidebar() {
     const [isAuthorized, setAuthorized] = useState(true);
     const navigate = useNavigate();
@@ -14,12 +14,11 @@ function Sidebar() {
     const handleLogout = () => {
         const confirmLogout = window.confirm("Are you sure that you want to logout?");
         if (!confirmLogout) return;
-
-
-        Cookies.remove("token"); // Удаляем токен из куки 
-        setAuthorized(false); // Обновляем состояние авторизации
-        navigate("/login"); // Перенаправляем на страницу входа
-        window.location.reload(); // Обновляем страницу
+        
+        Cookies.remove("token"); 
+        setAuthorized(false);
+        navigate("/login"); 
+        window.location.reload();
 
     };
 
@@ -177,6 +176,31 @@ function Sidebar() {
                                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                                     >
                                         <i className="bi bi-door-closed"></i> {t("sidebar.sign-out")}
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li className="border-top my-3"></li>
+                    <li className="mb-1">
+                        <button
+                            className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#assistant-collapse"
+                            aria-expanded="false"
+                        >
+                            <i className="bi bi-magic"></i>
+                            <strong className="large-text">{t("sidebar.assistant")}</strong>
+                        </button>
+                        <div className="collapse" id="assistant-collapse">
+                            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <Form.Control size="sm" type="text" placeholder="Search" className="search-control"/>
+                                <li>
+                                    <Link
+                                        to="/profile-page"
+                                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                                    >
+                                        lesson
                                     </Link>
                                 </li>
                             </ul>
