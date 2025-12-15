@@ -5,6 +5,9 @@ import Cookies from "js-cookie";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Form from 'react-bootstrap/Form';
+import ChatLink from "./ChatButtons/ChatLink.jsx";
+import NewChatButton from "./ChatButtons/NewChatButton.jsx";
+
 function Sidebar() {
     const [isAuthorized, setAuthorized] = useState(true);
     const navigate = useNavigate();
@@ -194,15 +197,9 @@ function Sidebar() {
                         </button>
                         <div className="collapse" id="assistant-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <NewChatButton></NewChatButton>
                                 <Form.Control size="sm" type="text" placeholder="Search" className="search-control"/>
-                                <li>
-                                    <Link
-                                        to="/profile-page"
-                                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                                    >
-                                        lesson
-                                    </Link>
-                                </li>
+                                <ChatLink name={"Chat"}></ChatLink>
                             </ul>
                         </div>
                     </li>
