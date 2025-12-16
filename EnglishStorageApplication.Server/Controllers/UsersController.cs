@@ -5,6 +5,7 @@ using EnglishApp.Core.Params.UserParams;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -96,8 +97,8 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(userId);
         }
         
-        //[Authorize(Roles = "Admin")]
-        [HttpPost("assign-role")]
+        [Authorize(Roles = "Admin")]
+        [HttpPatch("assign-role")]
         public async Task<IActionResult> AssignRole(Guid userId, string role, CancellationToken ct)
         {
             var user = await _userService.GetUserById(userId, ct);

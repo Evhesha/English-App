@@ -4,7 +4,7 @@ function NewChatButton(){
     
     return(
         <Link
-            to="/profile-page"
+            to="/chat"
             className="link-body-emphasis d-inline-flex text-decoration-none rounded"
         >
             New chat <i className="bi bi-plus-circle"></i>
