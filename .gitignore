@@ -64,3 +64,4 @@ Thumbs.db
 *.swp
 *.vscode/
 
+.workspace.xml
