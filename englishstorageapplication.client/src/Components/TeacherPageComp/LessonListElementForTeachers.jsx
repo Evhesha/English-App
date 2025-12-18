@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckLessonPopUp from "@/Components/PopUps/Lesson/CheckLessonPopUp.jsx";
 import "./LessonsListElement.css"
 import {useTranslation} from "react-i18next";
+import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -14,7 +15,18 @@ function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDel
         if (!confirmDelete) return;
 
         try {
-            await axios.delete(`${API_BASE_URL}/api/Lessons/${id}`);
+            const token = Cookies.get('token');
+
+            if (!token) {
+                alert('Ошибка авторизации. Пожалуйста, войдите заново.');
+                return;
+            }
+            
+            await axios.delete(`${API_BASE_URL}/api/Lessons/${id}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
             onDelete(id);
         } catch (error) {
             console.error('Ошибка при удалении статьи:', error);

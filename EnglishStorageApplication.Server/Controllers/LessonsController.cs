@@ -3,6 +3,7 @@ using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Exceptions.LessonExceptions;
 using EnglishApp.Core.Models;
 using EnglishApp.Core.Params.LessonParams;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Hybrid;
 
@@ -47,7 +48,7 @@ namespace EnglishStorageApplication.Server.Controllers
             
             return Ok(listLessonsDto);
         }
-
+        
         [HttpGet("lessons/{userId:guid}")]
         public async Task<ActionResult<List<LessonDto>>> GetUserLessons(
             Guid userId,
@@ -133,6 +134,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(lessons);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateLesson(
             [FromBody]CreateLessonDto createLessonDto,
@@ -153,6 +155,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(lesson.Id);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<Guid>> UpdateLesson(
             Guid id,
@@ -171,6 +174,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(articleId);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<Guid>> DeleteLesson(Guid id, CancellationToken cancellationToken)
         {
