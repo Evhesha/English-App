@@ -1,6 +1,7 @@
 import "../PopUp.css";
 import { useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -19,10 +20,15 @@ function ChangeUserRolePopUp({ id,
     const handleEditRole = async (event) => {
         event.preventDefault();
         try {
+            const token = Cookies.get("token");
             const response = await axios.patch(
                 `${API_BASE_URL}/api/users/${id}`,
+                { role },
                 {
-                    role
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
                 }
             );
 

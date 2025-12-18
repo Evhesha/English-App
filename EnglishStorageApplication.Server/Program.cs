@@ -18,8 +18,6 @@ builder.Services.AddDatabaseServices(builder.Configuration);
 builder.Services.AddDistributedCacheServices(builder.Configuration);
 builder.Services.AddHybridCache();
 
-builder.Logging.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
-
 var app = builder.Build();
 
 app.UseDefaultFiles();
