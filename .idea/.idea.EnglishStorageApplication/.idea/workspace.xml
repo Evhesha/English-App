@@ -14,12 +14,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: new containers for mongo db and mongo GUI.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: new repositories for chats and messages were added to ai server project.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/MongoDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/MongoDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/ChatsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/ChatsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/MessagesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/MessagesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/ChatsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/ChatsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/MessagesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/MessagesService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,8 +130,11 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LikeRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserCardRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Controllers/ChatsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Controllers/MessagesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/MongoDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/ChatsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.AiServer/DataAccess/Repositories/ChatsRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/MessagesRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/ChatsService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/MessagesService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -195,7 +199,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="HTTPS" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -301,7 +305,6 @@
       <workItem from="1765824049311" duration="1095000" />
       <workItem from="1765872356956" duration="39000" />
       <workItem from="1765883305983" duration="1329000" />
-      <workItem from="1766131270032" duration="1825000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -503,7 +506,8 @@
     <MESSAGE value="Feature: chat and message models were described. New packages for mongo db and json data." />
     <MESSAGE value="Feature: buttons &quot;new chat&quot; &quot;any chat&quot; was added to project. New component for chat container." />
     <MESSAGE value="Feature: now some operations available only for some roles. Legacy logging was deleted (was file, seq will be used)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: now some operations available only for some roles. Legacy logging was deleted (was file, seq will be used)." />
+    <MESSAGE value="Feature: new repositories for chats and messages were added to ai server project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: new repositories for chats and messages were added to ai server project." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
