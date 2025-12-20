@@ -1,4 +1,4 @@
-﻿namespace EnglishStorageApplication.EnglishApp.Extensions
+﻿namespace EnglishStorageApplication.Server.Extensions
 {
     public static class CorsExtensions
     {
