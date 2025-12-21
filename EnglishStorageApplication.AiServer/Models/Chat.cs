@@ -12,11 +12,8 @@ public class Chat
     [BsonElement("userId")]
     public string UserId { get; set; }
 
-    [BsonElement("text")]
-    public string Text { get; set; }
-
-    [BsonElement("chatName")]
-    public string ChatName { get; set; }
+    [BsonElement("title")]
+    public string Title { get; set; }
 
     [BsonElement("messages")]
     public List<Message> Messages { get; set; }
