@@ -5,6 +5,7 @@ using EnglishStorageApplication.Server.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.UseSerilogLogging();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerWithAuth();
@@ -14,10 +15,8 @@ builder.Services.AddApplicationServices();
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddCustomCors(builder.Configuration);
 builder.Services.AddDatabaseServices(builder.Configuration);
-builder.Services.AddDistributedCacheServices(builder.Configuration); // distributed cache
-builder.Services.AddHybridCache(); // hybrid cache (includes memory)
-
-builder.Logging.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
+builder.Services.AddDistributedCacheServices(builder.Configuration);
+builder.Services.AddHybridCache();
 
 var app = builder.Build();
 

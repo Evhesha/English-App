@@ -5,6 +5,7 @@ using EnglishApp.Core.Params.UserParams;
 using Microsoft.AspNetCore.Mvc;
 using EnglishStorageApplication.EnglishApp.Core.Abstractions;
 using EnglishStorageApplication.EnglishApp.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 
 namespace EnglishStorageApplication.Server.Controllers
@@ -24,6 +25,7 @@ namespace EnglishStorageApplication.Server.Controllers
             _passwordHasher = passwordHasher;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<List<UserDto>>> GetUsers(CancellationToken cancellationToken)
@@ -96,19 +98,6 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(userId);
         }
         
-        //[Authorize(Roles = "Admin")]
-        [HttpPost("assign-role")]
-        public async Task<IActionResult> AssignRole(Guid userId, string role, CancellationToken ct)
-        {
-            var user = await _userService.GetUserById(userId, ct);
-            if (user == null) return NotFound();
-
-            user.Role = role;
-            await _userService.UpdateUser(user, ct);
-
-            return Ok($"Role {role} assigned to {user.Name}");
-        }
-        
         [HttpPut("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> UpdateUser(
@@ -129,6 +118,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(user.Id);
         }
         
+        [Authorize(Roles = "Admin")]
         [HttpPatch("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> UpdateUserRole(
@@ -147,6 +137,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(user.Id);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUser(Guid id, CancellationToken cansellationToken)

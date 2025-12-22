@@ -20,7 +20,7 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "123"
     volumes:
-      - postgres-data:/var/lib/postgresql 
+      - postgres-data:/var/lib/postgresql
     ports:
       - "5433:5432"
     networks:
@@ -37,7 +37,7 @@ services:
     command: redis-server --appendonly yes --requirepass "redis123"
     networks:
       - bridge_network
-      
+  
   redis-insight:
     image: redislabs/redisinsight:latest
     container_name: redis-insight
@@ -49,7 +49,42 @@ services:
       - redis
     networks:
       - bridge_network
-      
+  
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - bridge_network 
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: 123
+      ME_CONFIG_MONGODB_URL: mongodb://root:123@mongo:27017/
+      ME_CONFIG_BASICAUTH: "false"
+    depends_on:
+      - mongo
+    networks:
+      - bridge_network
+
 networks:
   bridge_network:
     driver: bridge
@@ -58,3 +93,4 @@ volumes:
   postgres-data:
   redis-data:
   redis-insight-data:
+  mongo-data:  

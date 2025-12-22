@@ -1,11 +1,10 @@
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
-  NavLink,
   Navigate
 } from "react-router-dom";
 
+import ChatContainer from "../ChatContainer/ChatContainer";
 import LessonsListPage from "../../pages/Lessons/LessonsListPage/LessonsListPage";
 import OnlineLessonsListPage from "@/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx";
 
@@ -85,9 +84,11 @@ function RoutesList() {
         <Route path="/setting-page" element={<SettingPage />} />
 
         // Sidebar
+        <Route path="/chat" element={<ChatContainer />} />
+        
         // Sidebar.Lessons
         <Route path="/list-lessons-page" element={<LessonsListPage />} />
-          <Route path="/online-list-lessons-page" element={<OnlineLessonsListPage />} />
+        <Route path="/online-list-lessons-page" element={<OnlineLessonsListPage />} />
 
         <Route path="/present-simple" element={<PresentSimple />} />
         <Route path="/future-simple" element={<FutureSimple />} />

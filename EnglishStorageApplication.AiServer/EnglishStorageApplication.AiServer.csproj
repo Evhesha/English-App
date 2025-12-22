@@ -13,9 +13,4 @@
         <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.3" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Abstractions\Repositories\" />
-      <Folder Include="Abstractions\Services\" />
-    </ItemGroup>
-
 </Project>
