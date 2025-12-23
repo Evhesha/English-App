@@ -5,10 +5,9 @@ namespace EnglishStorageApplication.AiServer.Models;
 
 public class Message
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
-
+    [BsonElement("type")]
+    public string Type { get; set; }
+    
     [BsonElement("chatId")]
     public string ChatId { get; set; }
 
