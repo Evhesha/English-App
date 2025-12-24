@@ -21,12 +21,16 @@ public static class MessageEndpoints
         {
             var message = new Message
             {
-                ChatId = messageDto.ChatId,
-                Text = messageDto.Text
+                Text = messageDto.Text,
+                DateOfCreation = DateTime.UtcNow,
+                Type = "userMessage"
             };
     
             await messageService.AddMessage(chatId, message);
-            return Results.Ok();
+            
+            // send a message to llm service
+            
+            //return Results.Ok();
         });
     }
 }

@@ -1,4 +1,3 @@
-using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace EnglishStorageApplication.AiServer.Models;
@@ -13,4 +12,7 @@ public class Message
 
     [BsonElement("text")]
     public string Text { get; set; }
+    
+    [BsonElement("date")]
+    public DateTime DateOfCreation { get; set; }
 }
