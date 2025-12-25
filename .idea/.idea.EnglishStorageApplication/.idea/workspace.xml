@@ -14,11 +14,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: minimal api endpoints for chats were added to project (ai server).">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: message model changes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DTOs/MessagesDtos/AddMessageDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DTOs/MessagesDtos/AddMessageDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/MessagesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/MessagesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Chat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Chat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Message.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/NewChatButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/NewChatButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,6 +331,7 @@
       <workItem from="1766233219148" duration="3053000" />
       <workItem from="1766384864552" duration="3132000" />
       <workItem from="1766514989735" duration="2377000" />
+      <workItem from="1766681608387" duration="2637000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
