@@ -23,6 +23,10 @@ public class MessagesRepository : IMessagesRepository
     public async Task AddMessageAsync(string chatId, Message message)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
+        if (filter == null)
+        {
+            throw new ArgumentNullException(nameof(filter));
+        }
         var update = Builders<Chat>.Update.Push("messages", message);
         await _chats.UpdateOneAsync(filter, update);
     }

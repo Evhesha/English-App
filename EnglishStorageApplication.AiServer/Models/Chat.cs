@@ -15,6 +15,6 @@ public class Chat
     [BsonElement("title")]
     public string Title { get; set; }
 
-    [BsonElement("messages")]
-    public List<Message> Messages { get; set; }
+    [BsonElement("messages")] 
+    public List<Message> Messages { get; set; } = new List<Message>();
 }

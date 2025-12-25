@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { Button, Form, Spinner, Alert } from "react-bootstrap";
 import { Send, Clock, PersonFill, Robot } from "react-bootstrap-icons";
 import "./ChatContainer.css";
+import Cookies from "js-cookie";
+
 
 import { useTranslation } from "react-i18next";
 
