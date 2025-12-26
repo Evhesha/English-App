@@ -19,7 +19,8 @@ public static class ChatsEndpoints
             var chat = new Chat
             {
                 UserId = createChatDto.UserId,
-                Title = createChatDto.Title
+                Title = createChatDto.Title,
+                Messages = new List<Message>()
             };
     
             await chatsService.CreateChat(chat);
