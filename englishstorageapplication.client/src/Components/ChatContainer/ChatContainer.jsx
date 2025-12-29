@@ -5,11 +5,11 @@ import "./ChatContainer.css";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 const ChatContainer = ({
                            messages,
                            setMessages,
-                           darkMode,
                            isWaitingForResponse,
                            setIsWaitingForResponse,
                        }) => {
@@ -17,29 +17,45 @@ const ChatContainer = ({
     const [error, setError] = useState(null);
     const messagesEndRef = useRef(null);
     const { t } = useTranslation();
+    const { darkMode } = useTheme(); // Получаем darkMode из ThemeProvider
 
     const PostQuestion = async (data) => {
         try {
             const token = Cookies.get("tasty-cookie");
 
-            const decoded = jwtDecode(token);
-            console.log(decoded.userId);
+            if (!token) {
+                throw new Error("No authentication token found");
+            }
 
+            const decoded = jwtDecode(token);
+            console.log("User ID:", decoded.userId);
+
+            const chatId = "your-chat-id-here";
             const response = await fetch(
-                "https://localhost:5199/chat/message/{chatId}",
+                `https://localhost:5199/chat/message/${chatId}`,
                 {
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        ...data,
+                        userId: decoded.userId
+                    }),
                     credentials: "include",
                 }
             );
+
+            console.log("Response status:", response.status);
 
             if (!response.ok) {
                 throw new Error(`Error HTTP: ${response.status}`);
             }
 
-            return await response.json();
+            const result = await response.json();
+            console.log("Success:", result);
+            return result;
         } catch (error) {
             console.error("Error:", error);
             throw error;
@@ -62,56 +78,92 @@ const ChatContainer = ({
 
         const userMessage = {
             text: inputMessage,
+            type: "sent",
+            timestamp: new Date(),
         };
-        
+
+        console.log("Sending message:", userMessage);
+
         setMessages((prev) => [...prev, userMessage]);
         setInputMessage("");
         setIsWaitingForResponse(true);
         setError(null);
 
         try {
-            await PostQuestion({ question: inputMessage });
+            const response = await PostQuestion({
+                question: inputMessage,
+                message: inputMessage
+            });
+
+            console.log("Response from server:", response);
+
+            const botMessage = {
+                text: response.message || response.text || response.answer || t("chat.received", "Received"),
+                type: "received",
+                timestamp: new Date(),
+            };
+
+            setMessages((prev) => [...prev, botMessage]);
+
         } catch (error) {
-            console.error("Error sending:", error);
-            setError(t("sendingError"));
+            console.error("Error sending message:", error);
+
+            const errorMessage = {
+                text: t("chat.error", "Error sending message. Please try again."),
+                type: "received",
+                timestamp: new Date(),
+            };
+
+            setMessages((prev) => [...prev, errorMessage]);
+            setError(t("chat.error", "Error sending message. Please try again."));
+        } finally {
             setIsWaitingForResponse(false);
         }
     };
 
     useEffect(() => {
         scrollToBottom();
-    }, [messages]); 
+    }, [messages]);
 
     return (
         <div className={`chat-container ${darkMode ? "dark" : ""}`}>
             <div className="messages">
-                {messages && messages.map((msg, index) => (
-                    <div
-                        key={index}
-                        className={`message-container ${msg.type}-container animate__animated animate__fadeIn`}
-                        style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                        <div className={`message ${msg.type}`}>
-                            <div className="message-header">
-                                {msg.type === "sent" ? (
-                                    <PersonFill className="user-icon" />
-                                ) : (
-                                    <Robot className="bot-icon" />
-                                )}
-                            </div>
-                            <div className="message-content">
-                                <div className="message-text">{msg.text}</div>
-                                <div className="message-time">
-                                    <Clock size={12} className="time-icon" />
-                                    {new Date(msg.timestamp).toLocaleTimeString([], {
-                                        hour: "2-digit",
-                                        minute: "2-digit",
-                                    })}
+                {messages && messages.length > 0 ? (
+                    messages.map((msg, index) => (
+                        <div
+                            key={index}
+                            className={`message-container ${msg.type}-container animate__animated animate__fadeIn`}
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                            <div className={`message ${msg.type}`}>
+                                <div className="message-header">
+                                    {msg.type === "sent" ? (
+                                        <PersonFill className="user-icon" />
+                                    ) : (
+                                        <Robot className="bot-icon" />
+                                    )}
+                                </div>
+                                <div className="message-content">
+                                    <div className="message-text">{msg.text}</div>
+                                    <div className="message-time">
+                                        <Clock size={12} className="time-icon" />
+                                        {msg.timestamp ? new Date(msg.timestamp).toLocaleTimeString([], {
+                                            hour: "2-digit",
+                                            minute: "2-digit",
+                                        }) : new Date().toLocaleTimeString([], {
+                                            hour: "2-digit",
+                                            minute: "2-digit",
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    ))
+                ) : (
+                    <div className="empty-chat-message">
+                        {t("chat.empty", "Start a conversation with AI Assistant")}
                     </div>
-                ))}
+                )}
 
                 {isWaitingForResponse && (
                     <div className="message-container received-container">
@@ -122,7 +174,9 @@ const ChatContainer = ({
                             <div className="message-content">
                                 <div className="message-text typing-indicator">
                                     <Spinner animation="border" size="sm" role="status" />
-                                    <span className="ms-2">{t("chatBotTyping")}</span>
+                                    <span className="ms-2">
+                    {t("chat.typing", "AI Assistant is typing...")}
+                  </span>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +184,7 @@ const ChatContainer = ({
                 )}
 
                 {error && (
-                    <Alert variant="danger" className="mt-2">
+                    <Alert variant="danger" className="mt-2" dismissible onClose={() => setError(null)}>
                         {error}
                     </Alert>
                 )}
@@ -145,8 +199,8 @@ const ChatContainer = ({
                     value={inputMessage}
                     placeholder={
                         isWaitingForResponse
-                            ? t("chatWaitResponse")
-                            : t("chatEnterMessage")
+                            ? t("chat.waiting", "Waiting for response...")
+                            : t("chat.placeholder", "Type your message...")
                     }
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
@@ -154,10 +208,11 @@ const ChatContainer = ({
                     disabled={isWaitingForResponse}
                 />
                 <Button
-                    variant="none"
+                    variant="primary"
                     className="send-button"
                     onClick={handleSendMessage}
                     disabled={isWaitingForResponse || !inputMessage.trim()}
+                    title={t("chat.sendButton", "Send")}
                 >
                     {isWaitingForResponse ? (
                         <Spinner animation="border" size="sm" />
