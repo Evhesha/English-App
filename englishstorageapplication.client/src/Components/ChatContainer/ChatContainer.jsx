@@ -3,8 +3,7 @@ import { Button, Form, Spinner, Alert } from "react-bootstrap";
 import { Send, Clock, PersonFill, Robot } from "react-bootstrap-icons";
 import "./ChatContainer.css";
 import Cookies from "js-cookie";
-
-
+import { jwtDecode } from "jwt-decode";
 import { useTranslation } from "react-i18next";
 
 const ChatContainer = ({
@@ -18,19 +17,21 @@ const ChatContainer = ({
     const [error, setError] = useState(null);
     const messagesEndRef = useRef(null);
     const { t } = useTranslation();
+
     const PostQuestion = async (data) => {
         try {
-            const token = getCookie("tasty-cookie");
+            const token = Cookies.get("tasty-cookie");
+
             const decoded = jwtDecode(token);
             console.log(decoded.userId);
 
             const response = await fetch(
-                "https://localhost:7151/api/kafka/create-ollama-question",
+                "https://localhost:5199/chat/message/{chatId}",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),
-                    credentials: 'include'
+                    credentials: "include",
                 }
             );
 
@@ -44,6 +45,7 @@ const ChatContainer = ({
             throw error;
         }
     };
+
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
@@ -60,9 +62,8 @@ const ChatContainer = ({
 
         const userMessage = {
             text: inputMessage,
-            type: "sent",
-            timestamp: new Date(),
         };
+        
         setMessages((prev) => [...prev, userMessage]);
         setInputMessage("");
         setIsWaitingForResponse(true);
@@ -79,12 +80,12 @@ const ChatContainer = ({
 
     useEffect(() => {
         scrollToBottom();
-    }, [messages]);
+    }, [messages]); 
 
     return (
         <div className={`chat-container ${darkMode ? "dark" : ""}`}>
             <div className="messages">
-                {/*{messages.map((msg, index) => (
+                {messages && messages.map((msg, index) => (
                     <div
                         key={index}
                         className={`message-container ${msg.type}-container animate__animated animate__fadeIn`}
@@ -110,7 +111,7 @@ const ChatContainer = ({
                             </div>
                         </div>
                     </div>
-                ))}*/}
+                ))}
 
                 {isWaitingForResponse && (
                     <div className="message-container received-container">

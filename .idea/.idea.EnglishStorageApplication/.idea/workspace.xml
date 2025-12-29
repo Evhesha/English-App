@@ -14,13 +14,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: chats can be successfuly can store messages.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Refactoring about app page">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/assets/Authors.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/assets/about.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AboutApp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AboutApp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,33 +172,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor": "Run",
+    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature/chat-container",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http">
     <configuration name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -327,7 +325,9 @@
       <workItem from="1766233219148" duration="3053000" />
       <workItem from="1766384864552" duration="3132000" />
       <workItem from="1766514989735" duration="2377000" />
-      <workItem from="1766762606414" duration="11803000" />
+      <workItem from="1766762606414" duration="645000" />
+      <workItem from="1766912611055" duration="5944000" />
+      <workItem from="1767006552835" duration="2488000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -465,15 +465,7 @@
       <option name="project" value="LOCAL" />
       <updated>1765825036659</updated>
     </task>
-    <task id="LOCAL-00020" summary="Feature: chats can be successfuly can store messages.">
-      <option name="closed" value="true" />
-      <created>1766763280482</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1766763280482</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,6 +505,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="WorkSpace changes. Compound start." />
     <MESSAGE value="Feature: Pagination, filtration, sorting features for lessons. Watch couting for lessons;" />
     <MESSAGE value="Fix: rename articles to lessons in like repo, service and controller." />
     <MESSAGE value="Feature: images controller was added to project. New dto for lesson images model." />
@@ -537,8 +530,7 @@
     <MESSAGE value="Feature: now some operations available only for some roles. Legacy logging was deleted (was file, seq will be used)." />
     <MESSAGE value="Feature: new repositories for chats and messages were added to ai server project." />
     <MESSAGE value="Feature: minimal api endpoints for chats were added to project (ai server)." />
-    <MESSAGE value="Feature: chats can be successfuly can store messages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: chats can be successfuly can store messages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: minimal api endpoints for chats were added to project (ai server)." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
