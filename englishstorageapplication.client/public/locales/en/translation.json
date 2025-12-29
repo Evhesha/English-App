@@ -120,5 +120,19 @@
     "descending": "Descending",
     "views": "Views",
     "author": "Author"
+  },
+  "chat": {
+    "sendButton": "Send",
+    "placeholder": "Type your message...",
+    "waiting": "Waiting for response...",
+    "typing": "AI Assistant is typing...",
+    "error": "Error sending message. Please try again.",
+    "empty": "Start a conversation with AI Assistant",
+    "sent": "Sent",
+    "received": "Received",
+    "online": "Online",
+    "timestamp": "Time",
+    "clear": "Clear chat",
+    "copy": "Copy message"
   }
 }
