@@ -25,17 +25,21 @@ public static class MessageEndpoints
                 Date = DateTime.UtcNow,
                 Type = "userMessage"
             };
-
-            try
-            {
-                await messageService.AddMessage(chatId, message);
-            }
-            catch (ArgumentException)
-            {
-                return Results.BadRequest();
-            }
+            
+            await messageService.AddMessage(chatId, message);
             
             // send a message to llm service
+            // get answer from llm service
+            
+            var response = new Message
+            {
+                Text = messageDto.Text, // text from llm
+                Date = DateTime.UtcNow,
+                Type = "llmResponse"
+            };
+            
+            // await messageService.AddMessage(chatId, response);
+            // return response
             
             return Results.Created();
         });
