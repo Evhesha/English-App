@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles.css"; // Не забудьте добавить импорт стилей
+import "../styles.css";
 
 function TestCardLink({ link, text, title, icon }) {
   return (
