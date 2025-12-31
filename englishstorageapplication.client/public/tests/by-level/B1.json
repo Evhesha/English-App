@@ -1,0 +1,148 @@
+{
+  "testInfo": {
+    "id": "b1c2d3e4-f5g6-7890-abcd-ef0123456789",
+    "level": "B1",
+    "name": "B1 Intermediate Level Test",
+    "description": "Dealing with most situations while traveling",
+    "totalQuestions": 18,
+    "timeLimit": 35,
+    "difficulty": "Intermediate"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "What is the past participle of the verb \"to grow\"?",
+      "options": ["grew", "grown", "growed", "growing"],
+      "correctAnswer": "grown",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "question": "Fill in the blank: \"She has ____ (complete) her assignment.\"",
+      "correctAnswer": "completed",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "question": "Which sentence uses the correct form of \"its, it's\"?",
+      "options": ["Its raining outside.", "It's raining outside.", "Its' raining outside.", "It is raining outside."],
+      "correctAnswer": "It's raining outside.",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "input",
+      "question": "Fill in the blank: \"They ____ (go) to the park every Sunday.\"",
+      "correctAnswer": "go",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "choice",
+      "question": "Choose the correct preposition: \"She is good ____ playing the piano.\"",
+      "options": ["at", "in", "on", "with"],
+      "correctAnswer": "at",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "input",
+      "question": "What is the superlative form of \"happy\"?",
+      "correctAnswer": "happiest",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "choice",
+      "question": "Which of these is an adjective?",
+      "options": ["Running", "Quickly", "Beautiful", "Happily"],
+      "correctAnswer": "Beautiful",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "input",
+      "question": "Fill in the blank: \"They ____ (prepare) for the exam all week.\"",
+      "correctAnswer": "have been preparing",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "choice",
+      "question": "Which sentence is correct?",
+      "options": ["She don't like tea.", "She doesn't like tea.", "She not like tea.", "She doesn't liking tea."],
+      "correctAnswer": "She doesn't like tea.",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "input",
+      "question": "What is the past tense of \"to swim\"?",
+      "correctAnswer": "swam",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "choice",
+      "question": "Choose the correct article: \"This is ____ best decision we made.\"",
+      "options": ["a", "an", "the", "no article"],
+      "correctAnswer": "the",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "input",
+      "question": "Fill in the blank: \"He ____ (work) at this company since 2010.\"",
+      "correctAnswer": "has worked",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "choice",
+      "question": "Which word is an adverb?",
+      "options": ["Happy", "Happily", "Happiness", "Happier"],
+      "correctAnswer": "Happily",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "input",
+      "question": "Fill in the blank: \"She ____ (eat) lunch when I called her.\"",
+      "correctAnswer": "was eating",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "choice",
+      "question": "Choose the correct relative pronoun: \"The girl ____ won the prize is my sister.\"",
+      "options": ["who", "which", "whose", "whom"],
+      "correctAnswer": "who",
+      "points": 1
+    },
+    {
+      "id": 16,
+      "type": "input",
+      "question": "Fill in the blank: \"She ____ (visit) her grandparents every summer.\"",
+      "correctAnswer": "visits",
+      "points": 1
+    },
+    {
+      "id": 17,
+      "type": "choice",
+      "question": "Which sentence is in the past perfect tense?",
+      "options": ["I have finished my homework.", "I had finished my homework.", "I will finish my homework.", "I am finishing my homework."],
+      "correctAnswer": "I had finished my homework.",
+      "points": 1
+    },
+    {
+      "id": 18,
+      "type": "input",
+      "question": "Fill in the blank: \"They ____ (build) a new house by the end of next year.\"",
+      "correctAnswer": "will have built",
+      "points": 1
+    }
+  ]
+}

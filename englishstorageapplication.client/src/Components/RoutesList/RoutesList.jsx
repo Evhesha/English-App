@@ -46,13 +46,7 @@ import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
 import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
 
 import ByLevelTestPage from "../../pages/Tests/By level/ByLevelTestPage";
-import A0 from "../../pages/Tests/By level/ByLevelTests/A0";
-import A1 from "../../pages/Tests/By level/ByLevelTests/A1";
-import A2 from "../../pages/Tests/By level/ByLevelTests/A2";
-import B1 from "../../pages/Tests/By level/ByLevelTests/B1";
-import B2 from "../../pages/Tests/By level/ByLevelTests/B2";
-import C1 from "../../pages/Tests/By level/ByLevelTests/C1";
-import C2 from "../../pages/Tests/By level/ByLevelTests/C2";
+import DynamicTest from "@/pages/Tests/Components/DynamicTest.jsx";
 
 import ByTopicsPage from "../../pages/Tests/By topics/ByTopicsPage";
 import PresentSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PresentSimpleTest";
@@ -109,7 +103,7 @@ function RoutesList() {
         <Route path="/thousamd-popular" element={<ThousandPopular />}/>
         <Route path="/words-in-parts" element={<WordsInParts />}/>
 
-        //Sidebar.Dictioranary.Topics
+        //Sidebar.Dictionary.Topics
         <Route path="/traveling-topic" element={<Traveling />}/>
         <Route path="/cooking-topic" element={<Cooking />}/>
         <Route path="/shopping-topic" element={<Shopping />}/>
@@ -118,15 +112,9 @@ function RoutesList() {
         <Route path="/nature-topic" element={<Nature />}/>
         <Route path="/work-topic" element={<Work />}/>
 
-        //Sideber.Tests
+        //Sidebar.Tests
         <Route path="/level-tests" element={<ByLevelTestPage />}/>
-        <Route path="/A0-test" element={<A0 />}/>
-        <Route path="/A1-test" element={<A1 />}/>
-        <Route path="/A2-test" element={<A2 />}/>
-        <Route path="/B1-test" element={<B1 />}/>
-        <Route path="/B2-test" element={<B2 />}/>
-        <Route path="/C1-test" element={<C1 />}/>
-        <Route path="/C2-test" element={<C1 />}/>
+        <Route path="/:level" element={<DynamicTest />} />
 
         <Route path="/topics-tests" element={<ByTopicsPage />}/>
         <Route path="/present-simple-test" element={<PresentSimpleTest />}/>
