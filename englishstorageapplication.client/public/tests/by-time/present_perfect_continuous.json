@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "tenses_004",
+    "topic": "Present Perfect Continuous",
+    "name": "Тест по Present Perfect Continuous",
+    "description": "Тест на настоящее совершенное продолженное время",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "B1-B2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct form: She ___ for three hours.",
+      "options": ["has studied", "has been studying", "studied", "is studying"],
+      "correctAnswer": "has been studying",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "What is the structure of Present Perfect Continuous?",
+      "options": ["have/has been + verb+ing", "have/has + past participle", "had been + verb+ing", "will have been + verb+ing"],
+      "correctAnswer": "have/has been + verb+ing",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (wait) for you since 2 o'clock.",
+      "correctAnswer": "have been waiting",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "When do we use Present Perfect Continuous?",
+      "options": ["For completed actions", "For actions started in past and continuing", "For future plans", "For specific past times"],
+      "correctAnswer": "For actions started in past and continuing",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: How long ___ you ___ (learn) English?",
+      "correctAnswer": "have, been learning",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Which time expression is used with Present Perfect Continuous?",
+      "options": ["yesterday", "for two hours", "last week", "in 2020"],
+      "correctAnswer": "for two hours",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: I ___ (work) here since 2015.",
+      "correctAnswer": "have been working",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What is the difference: 'I have read the book' vs 'I have been reading the book'?",
+      "options": ["No difference", "First: completed, second: still reading", "First: future, second: past", "Both are incorrect"],
+      "correctAnswer": "First: completed, second: still reading",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: He ___ (not sleep) well recently.",
+      "correctAnswer": "hasn't been sleeping",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct sentence:",
+      "options": ["It has been raining all day.", "It has rained all day.", "It is raining all day.", "It was raining all day."],
+      "correctAnswer": "It has been raining all day.",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (talk) on the phone for an hour.",
+      "correctAnswer": "have been talking",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Which is used to emphasize duration?",
+      "options": ["Present Perfect", "Present Perfect Continuous", "Past Simple", "Future Simple"],
+      "correctAnswer": "Present Perfect Continuous",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: She looks tired because she ___ (study) all night.",
+      "correctAnswer": "has been studying",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "What preposition is used with 'since'?",
+      "options": ["a specific point in time", "a period of time", "future time", "present time"],
+      "correctAnswer": "a specific point in time",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: We ___ (live) in this city for ten years.",
+      "correctAnswer": "have been living",
+      "points": 1
+    }
+  ]
+}

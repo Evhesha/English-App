@@ -2,10 +2,16 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import TestTemplate from "@/pages/Tests/TestTemplateComponent/TestTemplate.jsx";
 
-function DynamicTest() {
-    const { level } = useParams();
+function DynamicTimeTest() {
+    const { time } = useParams();
 
-    const levelCode = level ? level.replace('-test', '') : '';
+    const getFileName = (param) => {
+        if (!param) return '';
+        const withoutTest = param.replace('-test', '');
+        return withoutTest.replace(/-/g, '_');
+    };
+
+    const fileName = getFileName(time);
 
     const [testData, setTestData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -14,37 +20,41 @@ function DynamicTest() {
     useEffect(() => {
         async function loadTest() {
             try {
-                const response = await fetch(`/tests/by-level/${levelCode}.json`);
+                if (!fileName) {
+                    throw new Error('No file name specified');
+                }
+
+                const response = await fetch(`/tests/by-time/${fileName}.json`);
 
                 if (!response.ok) {
-                    throw new Error(`Test not found for level ${levelCode} (Status: ${response.status})`);
+                    if (response.status === 404) {
+                        throw new Error(`File not found: ${fileName}.json`);
+                    }
+                    throw new Error(`Server error: ${response.status}`);
                 }
 
                 const contentType = response.headers.get('content-type');
                 if (!contentType || !contentType.includes('application/json')) {
                     const text = await response.text();
                     console.error('Received non-JSON response:', text.substring(0, 200));
-                    throw new Error('Server returned non-JSON response (HTML page)');
+                    throw new Error('Server returned non-JSON response');
                 }
 
                 const data = await response.json();
-                console.log('Test data loaded:', data);
                 setTestData(data);
             } catch (err) {
-                console.error(`Failed to load test for level ${levelCode}:`, err);
-                setError(`Test for level ${levelCode} not found or failed to load. Error: ${err.message}`);
+                console.error(`Failed to load test for ${fileName}:`, err);
+                setError(`Failed to load test. Error: ${err.message}`);
             } finally {
                 setLoading(false);
             }
         }
 
-        if (levelCode) {
-            loadTest();
-        }
-    }, [level, levelCode]);
+        loadTest();
+    }, [time, fileName]);
 
     if (loading) {
-        return <div className="text-center p-5">Loading {levelCode} test...</div>;
+        return <div className="text-center p-5">Loading {time?.replace('-test', '')} test...</div>;
     }
 
     if (error) {
@@ -53,12 +63,15 @@ function DynamicTest() {
                 <div className="alert alert-danger" role="alert">
                     <h4 className="alert-heading">Error Loading Test!</h4>
                     <p>{error}</p>
-                    <p className="mt-2">Tried to load: /tests/by-level/{levelCode}.json</p>
+                    <p className="mt-2">
+                        Tried to load file: <code>/tests/by-time/{fileName}.json</code>
+                    </p>
                     <hr />
                     <p className="mb-0">
                         <strong>Debug info:</strong><br />
-                        Check if file exists: <code>public/tests/by-level/{levelCode}.json</code><br />
-                        Current URL: {window.location.href}
+                        URL Parameter: {time}<br />
+                        File name: {fileName}<br />
+                        Check if file exists in: <code>public/tests/by-time/</code>
                     </p>
                 </div>
             </div>
@@ -69,7 +82,7 @@ function DynamicTest() {
         return (
             <div className="container mt-5 text-center">
                 <div className="alert alert-warning" role="alert">
-                    No test data available for level {levelCode}
+                    No test data available for {time?.replace('-test', '') || 'this test'}
                 </div>
             </div>
         );
@@ -77,11 +90,11 @@ function DynamicTest() {
 
     return (
         <TestTemplate
-            testName={testData.testInfo?.name || `${levelCode} Level Test`}
+            testName={testData.testInfo?.name || `${time?.replace('-test', '')} Test`}
             questions={testData.questions}
             testInfo={testData.testInfo}
         />
     );
 }
 
-export default DynamicTest;
+export default DynamicTimeTest;
