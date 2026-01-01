@@ -72,7 +72,6 @@
   opacity: 1;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
   .lessons-grid {
     grid-template-columns: 1fr;
@@ -89,7 +88,13 @@
   }
 }
 
-/* Animation for card appearance */
+.card-container {
+  padding-left: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem; 
+}
+
 @keyframes fadeInCard {
   from {
     opacity: 0;

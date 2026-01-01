@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "conditionals_test_001",
+    "topic": "Условные предложения",
+    "name": "Тест по условным предложениям английского языка",
+    "description": "Тест на Conditionals: 0, 1, 2, 3 тип",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "B1-B2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Which conditional is used for general truths?",
+      "options": ["Zero Conditional", "First Conditional", "Second Conditional", "Third Conditional"],
+      "correctAnswer": "Zero Conditional",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "Choose the correct form: If it rains, we ___ cancel the picnic.",
+      "options": ["will cancel", "would cancel", "cancel", "cancelled"],
+      "correctAnswer": "will cancel",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: If you heat water to 100°C, it ___ (boil).",
+      "correctAnswer": "boils",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "Which conditional talks about unreal present situations?",
+      "options": ["Zero", "First", "Second", "Third"],
+      "correctAnswer": "Second",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: If I ___ (be) you, I would study more.",
+      "correctAnswer": "were",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Choose the correct form: If I had known, I ___ told you.",
+      "options": ["will have", "would have", "would", "will"],
+      "correctAnswer": "would have",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: If she ___ (study) harder, she would pass the exam.",
+      "correctAnswer": "studied",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "Which conditional is used for past unreal situations?",
+      "options": ["Zero", "First", "Second", "Third"],
+      "correctAnswer": "Third",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: If you ___ (call) me, I will help you.",
+      "correctAnswer": "call",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct sentence:",
+      "options": ["If I win the lottery, I would buy a house.", "If I win the lottery, I will buy a house.", "If I won the lottery, I will buy a house.", "If I won the lottery, I buy a house."],
+      "correctAnswer": "If I win the lottery, I will buy a house.",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: If I ___ (have) more time, I would travel more.",
+      "correctAnswer": "had",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "What is the structure of Third Conditional?",
+      "options": ["If + present, will + base", "If + past, would + base", "If + past perfect, would have + past participle", "If + present, present"],
+      "correctAnswer": "If + past perfect, would have + past participle",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: If he ___ (not miss) the bus, he wouldn't have been late.",
+      "correctAnswer": "hadn't missed",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "Choose the correct form: If you touch fire, you ___ burned.",
+      "options": ["get", "will get", "would get", "got"],
+      "correctAnswer": "get",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: If they ___ (invite) us, we would have come.",
+      "correctAnswer": "had invited",
+      "points": 1
+    }
+  ]
+}
