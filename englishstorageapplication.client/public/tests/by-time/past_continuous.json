@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "tenses_006",
+    "topic": "Past Continuous",
+    "name": "Тест по Past Continuous",
+    "description": "Тест на прошедшее продолженное время",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "A2-B1"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct form: At 8 PM yesterday, I ___ TV.",
+      "options": ["watched", "was watching", "am watching", "have watched"],
+      "correctAnswer": "was watching",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "What is the structure of Past Continuous?",
+      "options": ["was/were + verb+ing", "did + verb", "had + past participle", "have/has + verb+ing"],
+      "correctAnswer": "was/were + verb+ing",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (not work) when I called.",
+      "correctAnswer": "weren't working",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "When do we use Past Continuous?",
+      "options": ["For completed actions", "For actions in progress at specific past time", "For future plans", "For experiences"],
+      "correctAnswer": "For actions in progress at specific past time",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: What ___ you ___ (do) at 5 o'clock yesterday?",
+      "correctAnswer": "were, doing",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Which sentence describes interrupted action?",
+      "options": ["I was cooking when the phone rang.", "I cooked dinner.", "I have cooked dinner.", "I will cook dinner."],
+      "correctAnswer": "I was cooking when the phone rang.",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: While I ___ (walk) home, it started to rain.",
+      "correctAnswer": "was walking",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What is the question form for 'they were sleeping'?",
+      "options": ["Were they sleeping?", "Did they sleeping?", "Are they sleeping?", "Do they sleeping?"],
+      "correctAnswer": "Were they sleeping?",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: She ___ (study) all evening yesterday.",
+      "correctAnswer": "was studying",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct sentence with two simultaneous actions:",
+      "options": ["While I cooked, she was setting the table.", "While I was cooking, she was setting the table.", "I cooked while she set the table.", "I was cooking while she set the table."],
+      "correctAnswer": "While I was cooking, she was setting the table.",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: The children ___ (play) in the garden at that time.",
+      "correctAnswer": "were playing",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Which time expression is often used with Past Continuous?",
+      "options": ["yesterday", "at that moment", "last week", "in 2020"],
+      "correctAnswer": "at that moment",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: I ___ (read) a book when you called.",
+      "correctAnswer": "was reading",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "What is the negative form of 'I was working'?",
+      "options": ["I wasn't working.", "I didn't working.", "I not working.", "I don't working."],
+      "correctAnswer": "I wasn't working.",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: We ___ (have) dinner when the guests arrived.",
+      "correctAnswer": "were having",
+      "points": 1
+    }
+  ]
+}

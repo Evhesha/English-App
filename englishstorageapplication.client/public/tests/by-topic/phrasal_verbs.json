@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "phrasal_verbs_test_001",
+    "topic": "Фразовые глаголы",
+    "name": "Тест по фразовым глаголам английского языка",
+    "description": "Тест на распространенные фразовые глаголы",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "B1-B2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "What does 'give up' mean?",
+      "options": ["start", "stop trying", "increase", "continue"],
+      "correctAnswer": "stop trying",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "Choose the correct phrasal verb: Please ___ the light when you leave.",
+      "options": ["turn on", "turn off", "turn up", "turn down"],
+      "correctAnswer": "turn off",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: Could you ___ (увеличить) the volume?",
+      "correctAnswer": "turn up",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "What does 'look after' mean?",
+      "options": ["search for", "take care of", "look at", "ignore"],
+      "correctAnswer": "take care of",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: I need to ___ (искать) my keys.",
+      "correctAnswer": "look for",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Choose the correct meaning: 'get along with'",
+      "options": ["arrive", "have a good relationship", "leave", "understand"],
+      "correctAnswer": "have a good relationship",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: The plane will ___ (взлететь) in 10 minutes.",
+      "correctAnswer": "take off",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What does 'put off' mean?",
+      "options": ["postpone", "wear clothes", "stop", "continue"],
+      "correctAnswer": "postpone",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: Don't ___ (откладывать) until tomorrow what you can do today.",
+      "correctAnswer": "put off",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct phrasal verb: I need to ___ smoking.",
+      "options": ["give up", "give in", "give out", "give away"],
+      "correctAnswer": "give up",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: Could you ___ (позаботиться) my cat while I'm away?",
+      "correctAnswer": "look after",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "What does 'run out of' mean?",
+      "options": ["have none left", "run quickly", "buy more", "save"],
+      "correctAnswer": "have none left",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: We've ___ (закончилось) milk.",
+      "correctAnswer": "run out of",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "Choose the correct meaning: 'find out'",
+      "options": ["lose", "discover information", "look for", "invent"],
+      "correctAnswer": "discover information",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: I need to ___ (узнать) what time the meeting starts.",
+      "correctAnswer": "find out",
+      "points": 1
+    }
+  ]
+}

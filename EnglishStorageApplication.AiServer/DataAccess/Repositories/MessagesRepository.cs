@@ -10,7 +10,7 @@ public class MessagesRepository : IMessagesRepository
     public MessagesRepository(IMongoClient mongoClient)
     {
         var database = mongoClient.GetDatabase("ChatDatabase");
-        _chats = database.GetCollection<Chat>("Chat");
+        _chats = database.GetCollection<Chat>("Chats");
     }
 
     public async Task<List<Message>> GetChatMessagesAsync(string chatId)
@@ -23,6 +23,10 @@ public class MessagesRepository : IMessagesRepository
     public async Task AddMessageAsync(string chatId, Message message)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
+        if (filter == null)
+        {
+            throw new ArgumentNullException(nameof(filter));
+        }
         var update = Builders<Chat>.Update.Push("messages", message);
         await _chats.UpdateOneAsync(filter, update);
     }

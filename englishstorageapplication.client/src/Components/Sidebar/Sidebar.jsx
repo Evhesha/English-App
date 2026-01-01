@@ -12,8 +12,7 @@ function Sidebar() {
     const [isAuthorized, setAuthorized] = useState(true);
     const navigate = useNavigate();
     const {t} = useTranslation();
-
-
+    
     const handleLogout = () => {
         const confirmLogout = window.confirm("Are you sure that you want to logout?");
         if (!confirmLogout) return;
@@ -24,6 +23,10 @@ function Sidebar() {
         window.location.reload();
 
     };
+    
+    const handleGetUserChats = async () => {
+        
+    }
 
     return (
         <>
@@ -195,7 +198,7 @@ function Sidebar() {
                             <i className="bi bi-magic"></i>
                             <strong className="large-text">{t("sidebar.assistant")}</strong>
                         </button>
-                        <div className="collapse" id="assistant-collapse">
+                        <div className="collapse" id="assistant-collapse" onClick={handleGetUserChats}>
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <NewChatButton></NewChatButton>
                                 <Form.Control size="sm" type="text" placeholder="Search" className="search-control"/>

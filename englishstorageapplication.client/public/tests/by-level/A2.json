@@ -1,0 +1,148 @@
+{
+  "testInfo": {
+    "id": "a3b4c5d6-e7f8-9012-abcd-ef0123456789",
+    "level": "A2",
+    "name": "A2 Pre-Intermediate Level Test",
+    "description": "Simple direct communication on familiar topics",
+    "totalQuestions": 18,
+    "timeLimit": 30,
+    "difficulty": "Pre-Intermediate"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "What is the past participle of the verb \"to write\"?",
+      "options": ["wrote", "written", "writing", "write"],
+      "correctAnswer": "written",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "question": "Fill in the blank: \"He has ____ (finish) his project.\"",
+      "correctAnswer": "finished",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "question": "Which sentence uses the correct form of \"there, their, they're\"?",
+      "options": ["There going to the store.", "They're going to the store.", "Their going to the store.", "Their're going to the store."],
+      "correctAnswer": "They're going to the store.",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "input",
+      "question": "Fill in the blank: \"She ____ (have) already eaten.\"",
+      "correctAnswer": "has",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "choice",
+      "question": "Choose the correct preposition: \"The keys are ____ the table.\"",
+      "options": ["on", "in", "under", "beside"],
+      "correctAnswer": "on",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "input",
+      "question": "What is the comparative form of \"good\"?",
+      "correctAnswer": "better",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "choice",
+      "question": "Which of these is a noun?",
+      "options": ["Quickly", "Running", "Happiness", "Beautiful"],
+      "correctAnswer": "Happiness",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "input",
+      "question": "Fill in the blank: \"They ____ (travel) to France next summer.\"",
+      "correctAnswer": "will travel",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "choice",
+      "question": "Which sentence is correct?",
+      "options": ["He don't like ice cream.", "He doesn't like ice cream.", "He not like ice cream.", "He doesn't liking ice cream."],
+      "correctAnswer": "He doesn't like ice cream.",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "input",
+      "question": "What is the past tense of \"to teach\"?",
+      "correctAnswer": "taught",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "choice",
+      "question": "Choose the correct article: \"____ best way to learn is practice.\"",
+      "options": ["A", "An", "The", "No article"],
+      "correctAnswer": "The",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "input",
+      "question": "Fill in the blank: \"He ____ (live) in New York for ten years.\"",
+      "correctAnswer": "has lived",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "choice",
+      "question": "Which word is an adverb?",
+      "options": ["Quick", "Quickly", "Quicker", "Quickest"],
+      "correctAnswer": "Quickly",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "input",
+      "question": "Fill in the blank: \"She is ____ (run) every day.\"",
+      "correctAnswer": "running",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "choice",
+      "question": "Choose the correct relative pronoun: \"The book ____ you lent me is fascinating.\"",
+      "options": ["who", "which", "whose", "whom"],
+      "correctAnswer": "which",
+      "points": 1
+    },
+    {
+      "id": 16,
+      "type": "input",
+      "question": "Fill in the blank: \"She ____ (visit) her grandparents this weekend.\"",
+      "correctAnswer": "will visit",
+      "points": 1
+    },
+    {
+      "id": 17,
+      "type": "choice",
+      "question": "Which sentence is in the present perfect tense?",
+      "options": ["I have seen that movie.", "I saw that movie.", "I will see that movie.", "I am seeing that movie."],
+      "correctAnswer": "I have seen that movie.",
+      "points": 1
+    },
+    {
+      "id": 18,
+      "type": "input",
+      "question": "Fill in the blank: \"They ____ (build) a new house.\"",
+      "correctAnswer": "are building",
+      "points": 1
+    }
+  ]
+}

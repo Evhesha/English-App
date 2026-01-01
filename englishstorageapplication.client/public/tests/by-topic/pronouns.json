@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "pronouns_test_001",
+    "topic": "Местоимения",
+    "name": "Тест по местоимениям английского языка",
+    "description": "Тест на знание личных, притяжательных, возвратных и указательных местоимений",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "A1-A2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct pronoun: ___ am a student.",
+      "options": ["I", "Me", "My", "Mine"],
+      "correctAnswer": "I",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "Which is a possessive pronoun?",
+      "options": ["I", "me", "my", "mine"],
+      "correctAnswer": "mine",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: This book is ___ (я).",
+      "correctAnswer": "mine",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "Choose the correct pronoun: She bought the dress for ___.",
+      "options": ["she", "her", "hers", "herself"],
+      "correctAnswer": "herself",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: ___ (они) are going to the park.",
+      "correctAnswer": "They",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Which is a reflexive pronoun?",
+      "options": ["he", "him", "his", "himself"],
+      "correctAnswer": "himself",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: Is this ___ (твой) pen?",
+      "correctAnswer": "your",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "Choose the correct pronoun: Those books are ___.",
+      "options": ["they", "them", "their", "theirs"],
+      "correctAnswer": "theirs",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: We enjoyed ___ at the party.",
+      "correctAnswer": "ourselves",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Which is a demonstrative pronoun for singular nearby object?",
+      "options": ["this", "that", "these", "those"],
+      "correctAnswer": "this",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: ___ car is faster than mine.",
+      "correctAnswer": "His",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Choose the correct pronoun: Can you help ___?",
+      "options": ["I", "me", "my", "mine"],
+      "correctAnswer": "me",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: She made the cake ___.",
+      "correctAnswer": "herself",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "Which pronoun would you use for objects far away?",
+      "options": ["this", "that", "these", "those"],
+      "correctAnswer": "that",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: ___ house is bigger than ___.",
+      "correctAnswer": "Our, theirs",
+      "points": 1
+    }
+  ]
+}

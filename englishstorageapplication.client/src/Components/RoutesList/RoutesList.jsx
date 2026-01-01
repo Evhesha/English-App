@@ -45,104 +45,76 @@ import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
 import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
 import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
 
-import ByLevelTestPage from "../../pages/Tests/By level/ByLevelTestPage";
-import A0 from "../../pages/Tests/By level/ByLevelTests/A0";
-import A1 from "../../pages/Tests/By level/ByLevelTests/A1";
-import A2 from "../../pages/Tests/By level/ByLevelTests/A2";
-import B1 from "../../pages/Tests/By level/ByLevelTests/B1";
-import B2 from "../../pages/Tests/By level/ByLevelTests/B2";
-import C1 from "../../pages/Tests/By level/ByLevelTests/C1";
-import C2 from "../../pages/Tests/By level/ByLevelTests/C2";
+import ByTimeTestsPage from "@/pages/Tests/Pages/ByTimeTestsPage.jsx";
+import ByLevelTestPage from "@/pages/Tests/Pages/ByLevelTestPage.jsx";
+import ByTopicTestsPage from "@/pages/Tests/Pages/ByTopicTestsPage.jsx";
 
-import ByTopicsPage from "../../pages/Tests/By topics/ByTopicsPage";
-import PresentSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PresentSimpleTest";
-import FutureSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/FutureSimpleTest";
-import PastSimpleTest from "../../pages/Tests/By topics/ByTopicsTests/PastSimpleTest";
-import PresentContinuousTest from "../../pages/Tests/By topics/ByTopicsTests/PresentContinuousTest";
-
-import MixedTestsPage from "../../pages/Tests/Mixed/MixedTestsPage";
-import MixedTest1 from "../../pages/Tests/Mixed/MixedTests/MixedTest1";
-import MixedTest2 from "../../pages/Tests/Mixed/MixedTests/MixedTest2";
-import MixedTest3 from "../../pages/Tests/Mixed/MixedTests/MixedTest3";
-
+import DynamicTest from "@/pages/Tests/Components/DynamicTest.jsx";
+import DynamicTopicTest from "@/pages/Tests/Components/DynamicTopicTest.jsx";
+import DynamicTimeTest from "@/pages/Tests/Components/DynamicTimeTest.jsx";
 
 function RoutesList() {
   return (
-    <>
-      <Routes>
-        // Link to default page
-        <Route path="/" element={<Navigate to="/home" />} />
+      <>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
 
-        // Navbar
-        <Route path="/about-app" element={<AboutApp />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<AdminPanel />} />
-        <Route path="/teacher" element={<TeacherPage />} />
-        <Route path="/profile-page" element={<ProfilePage />} />
-        <Route path="/setting-page" element={<SettingPage />} />
+          {/* Navbar */}
+          <Route path="/about-app" element={<AboutApp />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/teacher" element={<TeacherPage />} />
+          <Route path="/profile-page" element={<ProfilePage />} />
+          <Route path="/setting-page" element={<SettingPage />} />
 
-        // Sidebar
-        <Route path="/chat" element={<ChatContainer />} />
-        
-        // Sidebar.Lessons
-        <Route path="/list-lessons-page" element={<LessonsListPage />} />
-        <Route path="/online-list-lessons-page" element={<OnlineLessonsListPage />} />
+          {/* Sidebar */}
+          <Route path="/chat" element={<ChatContainer />} />
 
-        <Route path="/present-simple" element={<PresentSimple />} />
-        <Route path="/future-simple" element={<FutureSimple />} />
-        <Route path="/past-simple" element={<PastSimple />} />
-        <Route path="/present-continuous" element={<PresentContinuous />} />
-        <Route path="/past-continuous" element={<PastContinuous />} />
-        <Route path="/future-continuous" element={<FutureContinuous />} />
-        <Route path="/present-perfect" element={<PresentPerfect />} />
-        <Route path="/past-perfect" element={<PastPerfect />} />
-        <Route path="/future-perfect" element={<FuturePerfect />} />
-        <Route path="/present-perfect-continuous" element={<PresentPerfectContinuous />} />
-        <Route path="/past-perfect-continuous" element={<PastPerfectContinuous />} />
-        <Route path="/future-perfect-continuous" element={<FuturePerfectContinuous />} />
+          {/* Sidebar.Lessons */}
+          <Route path="/list-lessons-page" element={<LessonsListPage />} />
+          <Route path="/online-list-lessons-page" element={<OnlineLessonsListPage />} />
 
-        //Sidebar.Dictionary
-        <Route path="/topics-page" element={<TopicsPage />}/>
-        <Route path="/my-dict-page" element={<MyDictPage />}/>
-        <Route path="/thousamd-popular" element={<ThousandPopular />}/>
-        <Route path="/words-in-parts" element={<WordsInParts />}/>
+          <Route path="/present-simple" element={<PresentSimple />} />
+          <Route path="/future-simple" element={<FutureSimple />} />
+          <Route path="/past-simple" element={<PastSimple />} />
+          <Route path="/present-continuous" element={<PresentContinuous />} />
+          <Route path="/past-continuous" element={<PastContinuous />} />
+          <Route path="/future-continuous" element={<FutureContinuous />} />
+          <Route path="/present-perfect" element={<PresentPerfect />} />
+          <Route path="/past-perfect" element={<PastPerfect />} />
+          <Route path="/future-perfect" element={<FuturePerfect />} />
+          <Route path="/present-perfect-continuous" element={<PresentPerfectContinuous />} />
+          <Route path="/past-perfect-continuous" element={<PastPerfectContinuous />} />
+          <Route path="/future-perfect-continuous" element={<FuturePerfectContinuous />} />
 
-        //Sidebar.Dictioranary.Topics
-        <Route path="/traveling-topic" element={<Traveling />}/>
-        <Route path="/cooking-topic" element={<Cooking />}/>
-        <Route path="/shopping-topic" element={<Shopping />}/>
-        <Route path="/sport-topic" element={<Sport />}/>
-        <Route path="/programming-topic" element={<Programming />}/>
-        <Route path="/nature-topic" element={<Nature />}/>
-        <Route path="/work-topic" element={<Work />}/>
+          {/* Sidebar.Dictionary */}
+          <Route path="/topics-page" element={<TopicsPage />}/>
+          <Route path="/my-dict-page" element={<MyDictPage />}/>
+          <Route path="/thousamd-popular" element={<ThousandPopular />}/>
+          <Route path="/words-in-parts" element={<WordsInParts />}/>
 
-        //Sideber.Tests
-        <Route path="/level-tests" element={<ByLevelTestPage />}/>
-        <Route path="/A0-test" element={<A0 />}/>
-        <Route path="/A1-test" element={<A1 />}/>
-        <Route path="/A2-test" element={<A2 />}/>
-        <Route path="/B1-test" element={<B1 />}/>
-        <Route path="/B2-test" element={<B2 />}/>
-        <Route path="/C1-test" element={<C1 />}/>
-        <Route path="/C2-test" element={<C1 />}/>
+          {/* Sidebar.Dictionary.Topics */}
+          <Route path="/traveling-topic" element={<Traveling />}/>
+          <Route path="/cooking-topic" element={<Cooking />}/>
+          <Route path="/shopping-topic" element={<Shopping />}/>
+          <Route path="/sport-topic" element={<Sport />}/>
+          <Route path="/programming-topic" element={<Programming />}/>
+          <Route path="/nature-topic" element={<Nature />}/>
+          <Route path="/work-topic" element={<Work />}/>
 
-        <Route path="/topics-tests" element={<ByTopicsPage />}/>
-        <Route path="/present-simple-test" element={<PresentSimpleTest />}/>
-        <Route path="/future-simple-test" element={<FutureSimpleTest />}/>
-        <Route path="/past-simple-test" element={<PastSimpleTest />}/>
-        <Route path="/present-continuous-test" element={<PresentContinuousTest />}/>
+          {/* Sidebar.Tests */}
+          <Route path="/level-tests" element={<ByLevelTestPage />} />
+          <Route path="/mixed-tests" element={<ByTopicTestsPage />} />
+          <Route path="/topics-tests" element={<ByTimeTestsPage />}/>
 
-        <Route path="/mixed-tests" element={<MixedTestsPage />}/>
-        <Route path="/mixed-test-1" element={<MixedTest1 />}/>
-        <Route path="/mixed-test-2" element={<MixedTest2 />}/>
-        <Route path="/mixed-test-3" element={<MixedTest3 />}/>
-        
-        // Footer
-
-      </Routes>
-    </>
+          <Route path="/test/level/:level" element={<DynamicTest />} />
+          <Route path="/test/topic/:topic" element={<DynamicTopicTest />} />
+          <Route path="/test/time/:time" element={<DynamicTimeTest />} />
+          <Route path="/:level" element={<DynamicTest />} />
+        </Routes>
+      </>
   );
 }
 

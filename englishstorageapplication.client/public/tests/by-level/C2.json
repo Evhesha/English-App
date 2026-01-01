@@ -1,0 +1,163 @@
+{
+  "testInfo": {
+    "id": "c2d3e4f5-g6h7-9012-abcd-ef0123456789",
+    "level": "C2",
+    "name": "C2 Proficiency Level Test",
+    "description": "Understand virtually everything read or heard",
+    "totalQuestions": 20,
+    "timeLimit": 50,
+    "difficulty": "Proficiency"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Which sentence uses the correct form of \"affect\" and \"effect\"?",
+      "options": ["The weather will effect my plans.", "The weather will affect my plans.", "The weather will affects my plans.", "The weather will effected my plans."],
+      "correctAnswer": "The weather will affect my plans.",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "question": "Fill in the blank: \"If I ____ (know) the answer, I would tell you.\"",
+      "correctAnswer": "knew",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "choice",
+      "question": "Which sentence uses the correct form of \"their, there, they're\"?",
+      "options": ["There going to the park.", "They're going to the park.", "Their going to the park.", "Their're going to the park."],
+      "correctAnswer": "They're going to the park.",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "input",
+      "question": "Fill in the blank: \"She ____ (be) working here for five years next month.\"",
+      "correctAnswer": "will have been",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "choice",
+      "question": "Choose the correct form of the verb: \"By the time she arrives, we ____ (finish) our homework.\"",
+      "options": ["will have finished", "will finish", "finish", "are finishing"],
+      "correctAnswer": "will have finished",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "input",
+      "question": "What is the passive voice form of: \"They will deliver the package tomorrow.\"?",
+      "correctAnswer": "The package will be delivered tomorrow.",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "choice",
+      "question": "Which of these is a compound noun?",
+      "options": ["toothbrush", "quickly", "beautiful", "run"],
+      "correctAnswer": "toothbrush",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "input",
+      "question": "Fill in the blank: \"He ____ (finish) the project by the end of this week.\"",
+      "correctAnswer": "will have finished",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "choice",
+      "question": "Which sentence is correct?",
+      "options": ["She have completed her work.", "She has completed her work.", "She has complete her work.", "She have complete her work."],
+      "correctAnswer": "She has completed her work.",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "input",
+      "question": "What is the past participle of \"to see\"?",
+      "correctAnswer": "seen",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "choice",
+      "question": "Choose the correct conjunction: \"She is intelligent ____ hardworking.\"",
+      "options": ["but", "or", "and", "nor"],
+      "correctAnswer": "and",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "input",
+      "question": "Fill in the blank: \"If he ____ (study) harder, he would have passed the exam.\"",
+      "correctAnswer": "had studied",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "choice",
+      "question": "Which word is a synonym for \"begin\"?",
+      "options": ["end", "start", "stop", "finish"],
+      "correctAnswer": "start",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "input",
+      "question": "Fill in the blank: \"She was ____ (choose) to represent the company at the conference.\"",
+      "correctAnswer": "chosen",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "choice",
+      "question": "Choose the correct relative pronoun: \"The book ____ I borrowed from you is excellent.\"",
+      "options": ["who", "whom", "which", "whose"],
+      "correctAnswer": "which",
+      "points": 1
+    },
+    {
+      "id": 16,
+      "type": "input",
+      "question": "Fill in the blank: \"She ____ (complete) the report by the end of the day.\"",
+      "correctAnswer": "will have completed",
+      "points": 1
+    },
+    {
+      "id": 17,
+      "type": "choice",
+      "question": "Which sentence is in the present perfect continuous tense?",
+      "options": ["I have been working here for five years.", "I had been working here for five years.", "I will have been working here for five years.", "I am working here for five years."],
+      "correctAnswer": "I have been working here for five years.",
+      "points": 1
+    },
+    {
+      "id": 18,
+      "type": "input",
+      "question": "Fill in the blank: \"They ____ (build) a new house by the end of the year.\"",
+      "correctAnswer": "will have built",
+      "points": 1
+    },
+    {
+      "id": 19,
+      "type": "choice",
+      "question": "Which sentence is a correct usage of a conditional? \"If it ____ tomorrow, we will cancel the picnic.\"",
+      "options": ["rains", "rained", "rain", "will rain"],
+      "correctAnswer": "rains",
+      "points": 1
+    },
+    {
+      "id": 20,
+      "type": "input",
+      "question": "Fill in the blank: \"Despite ____ (be) a challenging project, she completed it on time.\"",
+      "correctAnswer": "being",
+      "points": 1
+    }
+  ]
+}

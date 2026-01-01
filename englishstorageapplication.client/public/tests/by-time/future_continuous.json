@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "tenses_010",
+    "topic": "Future Continuous",
+    "name": "Тест по Future Continuous",
+    "description": "Тест на будущее продолженное время, действия в процессе в будущем",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "B1-B2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct form: At 8 PM tomorrow, I ___ TV.",
+      "options": ["will watch", "will be watching", "am watching", "watch"],
+      "correctAnswer": "will be watching",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "What is the structure of Future Continuous?",
+      "options": ["will be + verb+ing", "will + base verb", "am/is/are going to + verb", "will have + past participle"],
+      "correctAnswer": "will be + verb+ing",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: This time next week, we ___ (lie) on the beach.",
+      "correctAnswer": "will be lying",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "When do we use Future Continuous?",
+      "options": ["For completed future actions", "For actions in progress at specific future time", "For predictions", "For plans"],
+      "correctAnswer": "For actions in progress at specific future time",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: What ___ you ___ (do) at 5 PM tomorrow?",
+      "correctAnswer": "will, be doing",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Which time expression is often used with Future Continuous?",
+      "options": ["yesterday", "at this time tomorrow", "already", "last week"],
+      "correctAnswer": "at this time tomorrow",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: Don't call at 9 - I ___ (have) dinner.",
+      "correctAnswer": "will be having",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What is the question form for 'she will be working'?",
+      "options": ["Will she be working?", "Will she working?", "Is she will be working?", "Does she will be working?"],
+      "correctAnswer": "Will she be working?",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (not work) next Friday.",
+      "correctAnswer": "won't be working",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct sentence:",
+      "options": ["At midnight, I will sleep.", "At midnight, I will be sleeping.", "At midnight, I am sleeping.", "At midnight, I sleep."],
+      "correctAnswer": "At midnight, I will be sleeping.",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: This time next year, I ___ (study) at university.",
+      "correctAnswer": "will be studying",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Which describes a fixed future arrangement as a matter of course?",
+      "options": ["Future Simple", "Future Continuous", "Present Continuous", "Present Simple"],
+      "correctAnswer": "Future Continuous",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: We ___ (travel) to Paris at this time tomorrow.",
+      "correctAnswer": "will be traveling",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "What is the negative form of 'I will be waiting'?",
+      "options": ["I won't be waiting.", "I will not be waiting.", "Both are correct", "Neither is correct"],
+      "correctAnswer": "Both are correct",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: ___ you ___ (use) the car tomorrow morning?",
+      "correctAnswer": "Will, be using",
+      "points": 1
+    }
+  ]
+}

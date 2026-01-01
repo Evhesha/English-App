@@ -5,72 +5,72 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
-import {useNavigate} from "react-router-dom";
-import {useTheme} from "@/Components/ThemeProvider/ThemeProvider.jsx";
+import { useNavigate } from "react-router-dom";
+import { useTheme } from "@/Components/ThemeProvider/ThemeProvider.jsx";
 
 const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1; 
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 `;
 
 const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  animation: ${fadeIn} 0.6s ease-out;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    animation: ${fadeIn} 0.6s ease-out;
 `;
 
 const Title = styled.h1`
-  color: #2c3e50;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
 `;
 
 const Section = styled.div`
-  background: #fff;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-  
-  h3 {
-    color: #34495e;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+
+    h3 {
+        color: #34495e;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
 `;
 
 const ButtonGroup = styled.div`
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 `;
 
 const LanguageButton = styled.button`
-  padding: 10px 25px;
-  border: 2px solid #3498db;
-  border-radius: 8px;
-  background: ${props => props.active ? '#3498db' : 'transparent'};
-  color: ${props => props.active ? '#fff' : '#3498db'};
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    padding: 10px 25px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background: ${({ $active }) => $active ? '#3498db' : 'transparent'};
+    color: ${({ $active }) => $active ? '#fff' : '#3498db'}; 
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(52,152,219,0.2);
-  }
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(52,152,219,0.2);
+    }
 
-  &:active {
-    transform: translateY(0);
-  }
+    &:active {
+        transform: translateY(0);
+    }
 `;
 
 function SettingPage() {
@@ -80,9 +80,9 @@ function SettingPage() {
     const { darkMode, toggleTheme } = useTheme();
 
     const notify = () => {
-      toast.success("Language changed!", {
-        position: "bottom-right"
-      });
+        toast.success("Language changed!", {
+            position: "bottom-right"
+        });
     }
 
     const changeLanguage = (language) => {
@@ -91,36 +91,39 @@ function SettingPage() {
         notify();
     };
 
-    const handleLogout = () => { 
-      const confirmLogout = window.confirm("Are you sure that you want to logout?");
-      if (!confirmLogout) return;
-      
-      Cookies.remove("token");
-      navigate("/login"); 
-      window.location.reload();
+    const handleLogout = () => {
+        const confirmLogout = window.confirm("Are you sure that you want to logout?");
+        if (!confirmLogout) return;
+
+        Cookies.remove("token");
+        navigate("/login");
+        window.location.reload();
     };
 
     return (
         <Container>
-          <ToastContainer />
+            <ToastContainer />
             <Title>{t("account-page.settings")}</Title>
+
             <Section>
                 <h3>{t("account-page.language")}</h3>
                 <ButtonGroup>
-                    <LanguageButton 
-                        active={currentLang === "en"} 
+                    {/* РЕШЕНИЕ 1: Используем префикс $ для styled-components */}
+                    <LanguageButton
+                        $active={currentLang === "en"} // Используем $active
                         onClick={() => changeLanguage("en")}
                     >
                         English
                     </LanguageButton>
-                    <LanguageButton 
-                        active={currentLang === "ru"} 
+                    <LanguageButton
+                        $active={currentLang === "ru"} // Используем $active
                         onClick={() => changeLanguage("ru")}
                     >
                         Русский
                     </LanguageButton>
                 </ButtonGroup>
             </Section>
+
             <Section>
                 <h3>{t("account-page.theme")}</h3>
                 <button
@@ -134,17 +137,18 @@ function SettingPage() {
                     <i className={`bi ${darkMode ? "bi-sun" : "bi-moon"}`}></i>
                 </button>
             </Section>
+
             <Section>
                 <h3>{t("sidebar.sign-out")}</h3>
-                
+
                 <Link
                     to="#"
                     onClick={handleLogout}
                     className=""
-                  >
+                >
                     <i className="bi bi-door-closed"></i> {t("sidebar.sign-out")}
-                  </Link>
-                    <span></span>
+                </Link>
+                <span></span>
             </Section>
         </Container>
     );

@@ -14,10 +14,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: extensions were added successfuly. First well-work minimal api endpoint.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: set tests by level to json file. Tests will be updated more simple by AI.">
+      <change afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/TestCardLink.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Chat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Chat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/By level/ByLevelTestPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByLevelTestPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/By topics/ByTopicsPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/By topics/ByTopicsTests/FutureSimpleTest.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/By topics/ByTopicsTests/PastSimpleTest.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/By topics/ByTopicsTests/PresentContinuousTest.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/By topics/ByTopicsTests/PresentSimpleTest.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTest.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Mixed/MixedTests/MixedTest1.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Mixed/MixedTests/MixedTest2.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Mixed/MixedTests/MixedTest3.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Mixed/MixedTestsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTopicTestsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/PagesStyles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/ProgressBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/ProgressBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Question.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Question.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/ResultMessage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/ResultMessage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Results.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Results.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/StyleConstant.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/StyleConstant.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestCardLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplate.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/TestTemplate.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/handleAnswer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/handleAnswer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/handleOptionSelect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/handleOptionSelect.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/handleRetry.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/handleRetry.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/handleSkip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/handleSkip.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,14 +151,14 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/LikeRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserCardRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Data/Repositories/UserRepositoryTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Controllers/ChatsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Controllers/MessagesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DTOs/ChatsDtos/CreateChatDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DTOs/MessagesDtos/AddMessageDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/MongoDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/ChatsRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Repositories/MessagesRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/ChatsService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/DataAccess/Services/MessagesService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/ChatsEndpoints.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Extensions/CorsExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Extensions/DataBaseExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Extensions/ServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -171,33 +195,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor": "Run",
-    ".NET Launch Settings Profile.HTTPS.executor": "Run",
-    ".NET Launch Settings Profile.Unnamed.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "feature/ai-server-chats",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
     <configuration name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -321,7 +345,14 @@
       <workItem from="1765824049311" duration="1095000" />
       <workItem from="1765872356956" duration="39000" />
       <workItem from="1765883305983" duration="1329000" />
-      <workItem from="1766308129252" duration="1063000" />
+      <workItem from="1766233219148" duration="3053000" />
+      <workItem from="1766384864552" duration="3132000" />
+      <workItem from="1766514989735" duration="2377000" />
+      <workItem from="1766762606414" duration="645000" />
+      <workItem from="1766912611055" duration="5944000" />
+      <workItem from="1767006552835" duration="2488000" />
+      <workItem from="1767190450998" duration="635000" />
+      <workItem from="1767260732059" duration="9136000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -499,8 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Like migrations." />
-    <MESSAGE value="WorkSpace changes. Compound start." />
     <MESSAGE value="Feature: Pagination, filtration, sorting features for lessons. Watch couting for lessons;" />
     <MESSAGE value="Fix: rename articles to lessons in like repo, service and controller." />
     <MESSAGE value="Feature: images controller was added to project. New dto for lesson images model." />
@@ -524,7 +553,9 @@
     <MESSAGE value="Feature: buttons &quot;new chat&quot; &quot;any chat&quot; was added to project. New component for chat container." />
     <MESSAGE value="Feature: now some operations available only for some roles. Legacy logging was deleted (was file, seq will be used)." />
     <MESSAGE value="Feature: new repositories for chats and messages were added to ai server project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: new repositories for chats and messages were added to ai server project." />
+    <MESSAGE value="Feature: minimal api endpoints for chats were added to project (ai server)." />
+    <MESSAGE value="Fix: setting page fixes in activate variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: setting page fixes in activate variable" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
