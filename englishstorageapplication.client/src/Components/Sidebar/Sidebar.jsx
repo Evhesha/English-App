@@ -125,7 +125,7 @@ function Sidebar() {
                                         to="/topics-tests"
                                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                                     >
-                                        {t("sidebar.by-topics")}
+                                        {t("sidebar.by-time")}
                                     </Link>
                                 </li>
                                 <li>
@@ -133,7 +133,7 @@ function Sidebar() {
                                         to="/mixed-tests"
                                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                                     >
-                                        {t("sidebar.mixed")}
+                                        {t("sidebar.by-topic")}
                                     </Link>
                                 </li>
                                 <li>
