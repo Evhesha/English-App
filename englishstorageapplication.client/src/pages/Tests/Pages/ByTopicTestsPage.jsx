@@ -3,130 +3,116 @@ import TestCardLink from "../TestTemplateComponent/TestCardLink.jsx";
 
 const testConfig = [
     {
-        id: "articles_test_001",
+        id: "34567890-1678-9012-def0-123456789abc",
         topic: "articles",
-        name: "Тест по артиклям",
+        name: "Articles Test",
         path: "/test/topic/articles-test",
         icon: "📚",
-        description: "Тест на знание артиклей: a, an, the и нулевой артикль",
-        jsonFile: "/tests/by-topic/articles.json"
+        description: "Test knowledge of articles: a, an, the and zero article",
     },
     {
-        id: "prepositions_test_001",
+        id: "45678901-2789-0123-ef01-23456789abcd",
         topic: "prepositions",
-        name: "Тест по предлогам",
+        name: "Prepositions Test",
         path: "/test/topic/prepositions-test",
         icon: "📍",
-        description: "Тест на предлоги времени, места и движения",
-        jsonFile: "/tests/by-topic/prepositions.json"
+        description: "Test prepositions of time, place and movement",
     },
     {
-        id: "pronouns_test_001",
+        id: "56789012-3890-1234-f012-3456789abcde",
         topic: "pronouns",
-        name: "Тест по местоимениям",
+        name: "Pronouns Test",
         path: "/test/topic/pronouns-test",
         icon: "👤",
-        description: "Тест на личные, притяжательные и возвратные местоимения",
-        jsonFile: "/tests/by-topic/pronouns.json"
+        description: "Test personal, possessive and reflexive pronouns",
     },
     {
-        id: "nouns_test_001",
+        id: "67890123-4901-2345-0123-456789abcdef",
         topic: "nouns",
-        name: "Тест по существительным",
+        name: "Nouns Test",
         path: "/test/topic/nouns-test",
         icon: "📖",
-        description: "Тест на исчисляемые/неисчисляемые существительные",
-        jsonFile: "/tests/by-topic/nouns.json"
+        description: "Test countable/uncountable nouns",
     },
     {
-        id: "adjectives_test_001",
+        id: "78901234-5012-3456-1234-56789abcdef0",
         topic: "adjectives",
-        name: "Тест по прилагательным",
+        name: "Adjectives Test",
         path: "/test/topic/adjectives-test",
         icon: "🎨",
-        description: "Тест на степени сравнения прилагательных",
-        jsonFile: "/tests/by-topic/adjectives.json"
+        description: "Test degrees of comparison of adjectives",
     },
     {
-        id: "adverbs_test_001",
+        id: "89012345-6123-4567-2345-6789abcdef01",
         topic: "adverbs",
-        name: "Тест по наречиям",
+        name: "Adverbs Test",
         path: "/test/topic/adverbs-test",
         icon: "⏱️",
-        description: "Тест на наречия образа действия, времени и места",
-        jsonFile: "/tests/by-topic/adverbs.json"
+        description: "Test adverbs of manner, time and place",
     },
     {
-        id: "modal_verbs_test_001",
+        id: "90123456-7234-5678-3456-789abcdef012",
         topic: "modal-verbs",
-        name: "Тест по модальным глаголам",
+        name: "Modal Verbs Test",
         path: "/test/topic/modal-verbs-test",
         icon: "🔧",
-        description: "Тест на can, could, may, might, must, should, would",
-        jsonFile: "/tests/by-topic/modal_verbs.json"
+        description: "Test can, could, may, might, must, should, would",
     },
     {
-        id: "conditionals_test_001",
+        id: "01234567-8345-6789-4567-89abcdef0123",
         topic: "conditionals",
-        name: "Тест по условным предложениям",
+        name: "Conditionals Test",
         path: "/test/topic/conditionals-test",
         icon: "🔄",
-        description: "Тест на Conditionals: 0, 1, 2, 3 тип",
-        jsonFile: "/tests/by-topic/conditionals.json"
+        description: "Test Conditionals: 0, 1, 2, 3 types",
     },
     {
-        id: "passive_voice_test_001",
+        id: "12345678-9456-7890-5678-9abcdef01234",
         topic: "passive-voice",
-        name: "Тест по пассивному залогу",
+        name: "Passive Voice Test",
         path: "/test/topic/passive-voice-test",
         icon: "🎭",
-        description: "Тест на Passive Voice в разных временах",
-        jsonFile: "/tests/by-topic/passive_voice.json"
+        description: "Test Passive Voice in different tenses",
     },
     {
-        id: "reported_speech_test_001",
+        id: "23456789-0567-8901-6789-0abcdef01234",
         topic: "reported-speech",
-        name: "Тест по косвенной речи",
+        name: "Reported Speech Test",
         path: "/test/topic/reported-speech-test",
         icon: "🗣️",
-        description: "Тест на Reported Speech с изменениями времен",
-        jsonFile: "/tests/by-topic/reported_speech.json"
+        description: "Test Reported Speech with tense changes",
     },
     {
-        id: "relative_pronouns_test_001",
+        id: "34567890-1678-9012-7890-abcdef012345",
         topic: "relative-pronouns",
-        name: "Тест по относительным местоимениям",
+        name: "Relative Pronouns Test",
         path: "/test/topic/relative-pronouns-test",
         icon: "🔗",
-        description: "Тест на who, which, that, whose, whom",
-        jsonFile: "/tests/by-topic/relative_pronouns.json"
+        description: "Test who, which, that, whose, whom",
     },
     {
-        id: "gerund_infinitive_test_001",
+        id: "45678901-2789-0123-8901-bcdef0123456",
         topic: "gerund-infinitive",
-        name: "Тест по герундию и инфинитиву",
+        name: "Gerund and Infinitive Test",
         path: "/test/topic/gerund-infinitive-test",
         icon: "∞",
-        description: "Тест на Gerund vs Infinitive после глаголов",
-        jsonFile: "/tests/by-topic/gerund_infinitive.json"
+        description: "Test Gerund vs Infinitive after verbs",
     },
     {
-        id: "phrasal_verbs_test_001",
+        id: "56789012-3890-1234-9012-cdef01234567",
         topic: "phrasal-verbs",
-        name: "Тест по фразовым глаголам",
+        name: "Phrasal Verbs Test",
         path: "/test/topic/phrasal-verbs-test",
         icon: "💬",
-        description: "Тест на распространенные фразовые глаголы",
-        jsonFile: "/tests/by-topic/phrasal_verbs.json"
+        description: "Test common phrasal verbs",
     },
     {
-        id: "conjunctions_test_001",
+        id: "67890123-4901-2345-0123-def012345678",
         topic: "conjunctions",
-        name: "Тест по союзам",
+        name: "Conjunctions Test",
         path: "/test/topic/conjunctions-test",
         icon: "➕",
-        description: "Тест на союзы and, but, or, so, because, although",
-        jsonFile: "/tests/by-topic/conjunctions.json"
+        description: "Test conjunctions and, but, or, so, because, although",
     }
 ];
 
