@@ -22,6 +22,11 @@ namespace EnglishApp.Application.AppServices
             return await _usersStudyResultsRepository.GetUserStudyResultsByIdAsync(userId, cancellationToken);
         }
 
+        public async Task<(double, int)> GetUserStudyPercentById(Guid userId, CancellationToken cancellationToken)
+        {
+            return await _usersStudyResultsRepository.GetUserStudyPercentByIdAsync(userId, cancellationToken);
+        }
+
         public async Task<Guid> CreateUserResult(UserStudyResult userStudyResult, CancellationToken cancellationToken)
         {
             return await _usersStudyResultsRepository.CreateUserStudyResultAsync(userStudyResult, cancellationToken);
