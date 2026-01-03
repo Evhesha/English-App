@@ -14,14 +14,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix &amp;&amp; Feature: refactoring on tests, deleted uneccessary .jsx files. New json files for tests by different topics. refactoring on tests components templates placement.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: names of links to tests were changed. Id of tests were changed to normal guid.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByLevelTestPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByLevelTestPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTimeTestsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTimeTestsPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTopicTestsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTopicTestsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/CreateUserStudyResultDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/CreateUserStudyResultDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UpdateUserStudyResultDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UpdateUserStudyResultDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyResultDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyResultDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUsersStudyResultsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersStudyResultsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersStudyResultsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Results.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Results.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/TestCardLink.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/TestCardLink.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +65,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,8 +100,10 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/LoginUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UpdateUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/DTOs/UserStudyResultDTOs/CreateUserStudyResultDto.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/CreateUserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UpdateUserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyPercentDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/UserExtensions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -175,32 +182,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor": "Run",
+    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature/user-study-percent",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
     <configuration name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" />
@@ -331,7 +338,8 @@
       <workItem from="1766762606414" duration="645000" />
       <workItem from="1766912611055" duration="5944000" />
       <workItem from="1767006552835" duration="2488000" />
-      <workItem from="1767353154085" duration="3758000" />
+      <workItem from="1767353154085" duration="4170000" />
+      <workItem from="1767442372922" duration="5349000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -469,7 +477,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765825036659</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fix: names of links to tests were changed. Id of tests were changed to normal guid.">
+      <option name="closed" value="true" />
+      <created>1767374907126</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1767374907126</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +525,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix: rename articles to lessons in like repo, service and controller." />
     <MESSAGE value="Feature: images controller was added to project. New dto for lesson images model." />
     <MESSAGE value="Feature: base operations with lessons with hardcode in fronted." />
     <MESSAGE value="Feature: tests for passwordHasher service." />
@@ -534,7 +549,8 @@
     <MESSAGE value="Feature: minimal api endpoints for chats were added to project (ai server)." />
     <MESSAGE value="Fix: setting page fixes in activate variable" />
     <MESSAGE value="Fix &amp;&amp; Feature: refactoring on tests, deleted uneccessary .jsx files. New json files for tests by different topics. refactoring on tests components templates placement." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix &amp;&amp; Feature: refactoring on tests, deleted uneccessary .jsx files. New json files for tests by different topics. refactoring on tests components templates placement." />
+    <MESSAGE value="Fix: names of links to tests were changed. Id of tests were changed to normal guid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: names of links to tests were changed. Id of tests were changed to normal guid." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

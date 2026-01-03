@@ -1,4 +1,4 @@
-using EnglishApp.Application.DTOs.UserStudyResult;
+using EnglishApp.Application.DTOs.UserStudyResultDTOs;
 using EnglishApp.Core.Abstractions.UserStudyResult;
 using EnglishApp.Core.Models;
 using EnglishStorageApplication.Server.Controllers;

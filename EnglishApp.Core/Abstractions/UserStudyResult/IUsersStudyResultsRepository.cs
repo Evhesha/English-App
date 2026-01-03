@@ -8,6 +8,10 @@ public interface IUsersStudyResultsRepository
         Guid userId,
         CancellationToken cancellationToken);
 
+    Task<(double, int)> GetUserStudyPercentByIdAsync(
+        Guid userId,
+        CancellationToken cancellationToken);
+    
     Task<Guid> CreateUserStudyResultAsync(
         Models.UserStudyResult userStudyResult,
         CancellationToken cancellationToken);
