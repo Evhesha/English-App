@@ -3,7 +3,6 @@ import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
-import axios from "axios";
 
 function CreateCard({image, title, text, onCreate}) {
   const [userId, setUserId] = useState(null);
