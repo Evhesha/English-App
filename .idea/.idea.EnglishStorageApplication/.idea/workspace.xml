@@ -14,10 +14,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: user study results and count passed tests were added.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: New part for profile page with data about tests.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/dict-images/YourOwnDict.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,7 +333,7 @@
       <workItem from="1767006552835" duration="2488000" />
       <workItem from="1767353154085" duration="4170000" />
       <workItem from="1767442372922" duration="5349000" />
-      <workItem from="1767531192147" duration="2110000" />
+      <workItem from="1767642044182" duration="8701000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -517,7 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: images controller was added to project. New dto for lesson images model." />
     <MESSAGE value="Feature: base operations with lessons with hardcode in fronted." />
     <MESSAGE value="Feature: tests for passwordHasher service." />
     <MESSAGE value="Feature: unit tests for email were added." />
@@ -542,7 +543,8 @@
     <MESSAGE value="Fix: setting page fixes in activate variable" />
     <MESSAGE value="Fix &amp;&amp; Feature: refactoring on tests, deleted uneccessary .jsx files. New json files for tests by different topics. refactoring on tests components templates placement." />
     <MESSAGE value="Fix: names of links to tests were changed. Id of tests were changed to normal guid." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: names of links to tests were changed. Id of tests were changed to normal guid." />
+    <MESSAGE value="Feature: New part for profile page with data about tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: New part for profile page with data about tests." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

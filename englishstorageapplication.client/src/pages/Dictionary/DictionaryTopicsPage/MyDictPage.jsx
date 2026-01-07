@@ -46,44 +46,65 @@ function MyDictPage() {
   };
 
   return (
-    <>
-      {authorized ? (
-       <div className="card-container">
-         <>
-          {cards.map((card, index) => (
-            <Card
-              key={index}
-              id={card.id}
-              image={
-                <img
-                  src={YourOwnDict}
-                  className="card-img-top"
-                  alt="..."
-                  style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
+      <>
+        {authorized ? (
+            <div className="card-container" style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+              gap: "1.5rem",
+              padding: "1.5rem",
+              maxWidth: "1400px",
+              margin: "0 auto"
+            }}>
+              {cards.map((card, index) => (
+                  <Card 
+                      key={index}
+                      id={card.id}
+                      image={
+                        <img
+                            src={YourOwnDict}
+                            alt="Dictionary card"
+                            style={{
+                              width: "100%",
+                              height: "140px",
+                              objectFit: "contain",
+                              padding: "0.5rem"
+                            }}
+                        />
+                      }
+                      title={card.nameOfUsersCard}
+                      text={card.userCardData}
+                      onDelete={() => handleDelete(card.id)}
+                  />
+              ))}
+                <CreateCard
+                    image={
+                      <img
+                          src={AddDict}
+                          alt="Add new dictionary"
+                          style={{
+                            width: "100%",
+                            height: "200px",
+                            objectFit: "contain",
+                            padding: "0.5rem"
+                          }}
+                      />
+                    }
+                    text={"Add your own dict"}
                 />
-              }
-              title={card.nameOfUsersCard}
-              text={card.userCardData}
-              onDelete={() => handleDelete(card.id)}
-            />
-          ))}
-          <CreateCard
-            image={
-              <img
-                src={AddDict}
-                className="card-img-top"
-                alt="..."
-                style={{ paddingLeft: "50px", width: "70%", height: "70%" }}
-              />
-            }
-            text={"Add your own dict"}
-          />
-        </>
-       </div>
-      ) : (
-        plsAuthorizeBlock
-      )}
-    </>
+            </div>
+        ) : (
+            <div style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "70vh",
+              padding: "2rem"
+            }}>
+              {plsAuthorizeBlock}
+            </div>
+        )}
+      </>
   );
 }
 
