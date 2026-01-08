@@ -14,12 +14,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: New part for profile page with data about tests.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: my dict page cards view impovment.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/dict-images/YourOwnDict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +105,6 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/LoginUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UpdateUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserDTOs/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/DTOs/UserStudyResultDTOs/CreateUserStudyResultDto.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/CreateUserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UpdateUserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyPercentDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,6 +152,7 @@
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Extensions/CorsExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Extensions/DataBaseExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Extensions/OllamaExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Extensions/ServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Chat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Message.cs" root0="FORCE_HIGHLIGHTING" />
@@ -201,7 +213,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -261,8 +273,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
@@ -334,6 +346,7 @@
       <workItem from="1767353154085" duration="4170000" />
       <workItem from="1767442372922" duration="5349000" />
       <workItem from="1767642044182" duration="8701000" />
+      <workItem from="1767862538228" duration="1887000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
