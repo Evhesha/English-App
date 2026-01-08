@@ -84,6 +84,16 @@ services:
       - mongo
     networks:
       - bridge_network
+  
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - bridge_network
 
 networks:
   bridge_network:
@@ -93,4 +103,5 @@ volumes:
   postgres-data:
   redis-data:
   redis-insight-data:
-  mongo-data:  
+  mongo-data:
+  ollama-data:

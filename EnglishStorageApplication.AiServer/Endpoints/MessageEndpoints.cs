@@ -1,6 +1,7 @@
 using EnglishStorageApplication.AiServer.Abstractions.Services;
 using EnglishStorageApplication.AiServer.DTOs.MessagesDtos;
 using EnglishStorageApplication.AiServer.Models;
+using OllamaSharp;
 
 namespace EnglishStorageApplication.AiServer.Endpoints;
 
@@ -17,7 +18,8 @@ public static class MessageEndpoints
         app.MapPost("chat/message/{chatId}", async (
             string chatId,
             AddMessageDto messageDto,
-            IMessagesService messageService) =>
+            IMessagesService messageService,
+            IOllamaApiClient ollamaApiClient) =>
         {
             var message = new Message
             {
@@ -27,21 +29,22 @@ public static class MessageEndpoints
             };
             
             await messageService.AddMessage(chatId, message);
-            
-            // send a message to llm service
-            // get answer from llm service
-            
-            var response = new Message
+
+            string llmText = "";
+            await foreach (var chunk in ollamaApiClient.GenerateAsync(messageDto.Text))
             {
-                Text = messageDto.Text, // text from llm
+                llmText += chunk?.Response;
+            }
+            
+            var responseMessage = new Message
+            {
+                Text = llmText, 
                 Date = DateTime.UtcNow,
                 Type = "llmResponse"
             };
             
-            // await messageService.AddMessage(chatId, response);
-            // return response
-            
-            return Results.Created();
+            await messageService.AddMessage(chatId, responseMessage);
+            return Results.Ok(responseMessage);
         });
     }
 }
