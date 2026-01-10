@@ -18,6 +18,12 @@ public class ChatsRepository : IChatsRepository
         var filter = Builders<Chat>.Filter.Eq(c => c.UserId, userId);
         return await _chats.Find(filter).ToListAsync();
     }
+    
+    public async Task<Chat> GetChatByChatIdAsync(string chatId)
+    {
+        var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
+        return await _chats.Find(filter).FirstOrDefaultAsync();
+    }
 
     public async Task CreateChatAsync(Chat chat)
     {

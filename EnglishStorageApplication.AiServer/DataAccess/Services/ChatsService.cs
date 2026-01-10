@@ -18,6 +18,11 @@ public class ChatsService : IChatsService
         return await _chatsRepository.GetUserChatsByUserIdAsync(userId);
     }
 
+    public async Task<Chat> GetChatByChatId(string chatId)
+    {
+        return await _chatsRepository.GetChatByChatIdAsync(chatId);
+    }
+
     public async Task CreateChat(Chat chat)
     {
         await _chatsRepository.CreateChatAsync(chat);
