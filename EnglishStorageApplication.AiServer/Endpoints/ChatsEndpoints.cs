@@ -8,10 +8,17 @@ public static class ChatsEndpoints
 {
     public static void MapChatEndpoints(this IEndpointRouteBuilder app)
     {
+        
         app.MapGet("/user/{userId}/chats", async (string userId, IChatsService chatsService) =>
         {
             var userChats = await chatsService.GetUserChatsByUserId(userId);
             return Results.Ok(userChats);
+        });
+
+        app.MapGet("/chat/{chatId}", async (string chatId, IChatsService chatsService) =>
+        {
+            var userChat = await chatsService.GetChatByChatId(chatId);
+            return Results.Ok(userChat);
         });
 
         app.MapPost("/chat", async (CreateChatDto createChatDto, IChatsService chatsService) =>
