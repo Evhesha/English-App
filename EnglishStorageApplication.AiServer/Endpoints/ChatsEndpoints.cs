@@ -9,19 +9,37 @@ public static class ChatsEndpoints
     public static void MapChatEndpoints(this IEndpointRouteBuilder app)
     {
         
-        app.MapGet("/user/{userId}/chats", async (string userId, IChatsService chatsService) =>
+        app.MapGet("/user/{userId}/chats", async (
+            string userId,
+            IChatsService chatsService,
+            CancellationToken cancellationToken) =>
         {
-            var userChats = await chatsService.GetUserChatsByUserId(userId);
+            var userChats = await chatsService.GetUserChatsByUserId(userId, cancellationToken);
+            return Results.Ok(userChats);
+        });
+        
+        app.MapGet("/user/{userId}/chats/summary", async (
+            string userId,
+            IChatsService chatsService,
+            CancellationToken cancellationToken) =>
+        {
+            var userChats = await chatsService.GetUserChatsWithoutMessages(userId, cancellationToken);
             return Results.Ok(userChats);
         });
 
-        app.MapGet("/chat/{chatId}", async (string chatId, IChatsService chatsService) =>
+        app.MapGet("/chat/{chatId}", async (
+            string chatId,
+            IChatsService chatsService,
+            CancellationToken cancellationToken) =>
         {
-            var userChat = await chatsService.GetChatByChatId(chatId);
+            var userChat = await chatsService.GetChatByChatId(chatId, cancellationToken);
             return Results.Ok(userChat);
         });
 
-        app.MapPost("/chat", async (CreateChatDto createChatDto, IChatsService chatsService) =>
+        app.MapPost("/chat", async (
+            CreateChatDto createChatDto,
+            IChatsService chatsService,
+            CancellationToken cancellationToken) =>
         {
             var chat = new Chat
             {
@@ -30,13 +48,16 @@ public static class ChatsEndpoints
                 Messages = new List<Message>()
             };
     
-            await chatsService.CreateChat(chat);
+            await chatsService.CreateChat(chat, cancellationToken);
             return Results.Created(); 
         });
         
-        app.MapDelete("/chat/{chatId}", async (string chatId, IChatsService chatsService) =>
+        app.MapDelete("/chat/{chatId}", async (
+            string chatId,
+            IChatsService chatsService,
+            CancellationToken cancellationToken) =>
         {
-            await chatsService.DeleteChat(chatId);
+            await chatsService.DeleteChat(chatId, cancellationToken);
             return Results.NoContent();
         });
     }

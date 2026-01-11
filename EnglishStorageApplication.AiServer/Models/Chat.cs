@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace EnglishStorageApplication.AiServer.Models;
 
+[BsonIgnoreExtraElements]
 public class Chat
 {
     [BsonId]

@@ -13,13 +13,13 @@ public class MessagesService : IMessagesService
         _messagesRepository = messagesRepository;
     }
 
-    public async Task<List<Message>> GetChatMessages(string userId)
+    public async Task<List<Message>> GetChatMessages(string userId, CancellationToken cancellationToken)
     {
-        return await _messagesRepository.GetChatMessagesAsync(userId);
+        return await _messagesRepository.GetChatMessagesAsync(userId, cancellationToken);
     }
 
-    public async Task AddMessage(string chatId, Message message)
+    public async Task AddMessage(string chatId, Message message, CancellationToken cancellationToken)
     {
-        await _messagesRepository.AddMessageAsync(chatId, message);
+        await _messagesRepository.AddMessageAsync(chatId, message, cancellationToken);
     }
 }
