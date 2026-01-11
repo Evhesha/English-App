@@ -13,26 +13,35 @@ public class ChatsRepository : IChatsRepository
         _chats = database.GetCollection<Chat>("Chats");
     }
     
-    public async Task<List<Chat>> GetUserChatsByUserIdAsync(string userId)
+    public async Task<List<Chat>> GetUserChatsByUserIdAsync(string userId, CancellationToken cancellationToken)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.UserId, userId);
-        return await _chats.Find(filter).ToListAsync();
+        return await _chats.Find(filter).ToListAsync(cancellationToken);
+    }
+
+    public async Task<List<Chat>> GetUserChatsWithoutMessagesAsync(string userId, CancellationToken cancellationToken)
+    {
+        var filter = Builders<Chat>.Filter.Eq(c => c.UserId, userId);
+        return await _chats.Find(filter)
+            .Project<Chat>(Builders<Chat>.Projection
+                .Exclude(c => c.Messages)) 
+            .ToListAsync(cancellationToken);
     }
     
-    public async Task<Chat> GetChatByChatIdAsync(string chatId)
+    public async Task<Chat> GetChatByChatIdAsync(string chatId,CancellationToken cancellationToken)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
-        return await _chats.Find(filter).FirstOrDefaultAsync();
+        return await _chats.Find(filter).FirstOrDefaultAsync(cancellationToken);
     }
 
-    public async Task CreateChatAsync(Chat chat)
+    public async Task CreateChatAsync(Chat chat, CancellationToken cancellationToken)
     {
-        await _chats.InsertOneAsync(chat);   
+        await _chats.InsertOneAsync(chat, cancellationToken: cancellationToken);   
     }
 
-    public async Task DeleteChatByChatIdAsync(string chatId)
+    public async Task DeleteChatByChatIdAsync(string chatId, CancellationToken cancellationToken)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
-        var result = await _chats.DeleteOneAsync(filter);
+        var result = await _chats.DeleteOneAsync(filter, cancellationToken);
     }
 }

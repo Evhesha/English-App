@@ -9,9 +9,12 @@ public static class MessageEndpoints
 {
     public static void MapMessageEndpoints(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/chat/{chatId}/messages", async (string chatId, IMessagesService messageService) =>
+        app.MapGet("/chat/{chatId}/messages", async (
+            string chatId,
+            IMessagesService messageService,
+            CancellationToken cancellationToken) =>
         {
-            var chatMessages = await messageService.GetChatMessages(chatId);
+            var chatMessages = await messageService.GetChatMessages(chatId, cancellationToken);
             return Results.Ok(chatMessages);
         });
 
@@ -19,7 +22,8 @@ public static class MessageEndpoints
             string chatId,
             AddMessageDto messageDto,
             IMessagesService messageService,
-            IOllamaApiClient ollamaApiClient) =>
+            IOllamaApiClient ollamaApiClient,
+            CancellationToken cancellationToken) =>
         {
             var message = new Message
             {
@@ -28,10 +32,11 @@ public static class MessageEndpoints
                 Type = "userMessage"
             };
             
-            await messageService.AddMessage(chatId, message);
+            await messageService.AddMessage(chatId, message, cancellationToken);
 
             string llmText = "";
-            await foreach (var chunk in ollamaApiClient.GenerateAsync(messageDto.Text))
+            await foreach (var chunk 
+                           in ollamaApiClient.GenerateAsync(messageDto.Text, cancellationToken: cancellationToken))
             {
                 llmText += chunk?.Response;
             }
@@ -43,7 +48,7 @@ public static class MessageEndpoints
                 Type = "llmResponse"
             };
             
-            await messageService.AddMessage(chatId, responseMessage);
+            await messageService.AddMessage(chatId, responseMessage, cancellationToken);
             return Results.Ok(responseMessage);
         });
     }
