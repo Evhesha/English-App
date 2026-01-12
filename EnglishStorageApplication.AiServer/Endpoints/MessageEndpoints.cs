@@ -33,10 +33,17 @@ public static class MessageEndpoints
             };
             
             await messageService.AddMessage(chatId, message, cancellationToken);
+            
+            var systemInstruction = "You are a strict English Language Tutor. Answer only questions about English language. " +
+                                    "If the question is not about English, refuse politely. " +
+                                    "If the question is on Russian ask in Russian for English tasks" +
+                                    "Always end with a 'Useful Vocabulary' section (word, translation(in russian)).";
+
+            var prompt = $"System: {systemInstruction}\n\nUser: {messageDto.Text}\n\nAssistant:";
 
             string llmText = "";
             await foreach (var chunk 
-                           in ollamaApiClient.GenerateAsync(messageDto.Text, cancellationToken: cancellationToken))
+                           in ollamaApiClient.GenerateAsync(prompt, cancellationToken: cancellationToken))
             {
                 llmText += chunk?.Response;
             }
