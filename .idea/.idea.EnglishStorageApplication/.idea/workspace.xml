@@ -14,9 +14,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: get summary chats without message data. Cancellation tokens for ai server methods.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: prompt before asking question was added.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.AiServer/Endpoints/MessageEndpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ChatContainer/ChatContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/ChatLink.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/ChatLink.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +186,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/chats-list&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -333,7 +337,7 @@
       <workItem from="1767642044182" duration="8701000" />
       <workItem from="1767971548012" duration="5288000" />
       <workItem from="1768130784063" duration="1237000" />
-      <workItem from="1768218163416" duration="622000" />
+      <workItem from="1768305979953" duration="2095000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -519,6 +523,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feature: tests for passwordHasher service." />
     <MESSAGE value="Feature: unit tests for email were added." />
     <MESSAGE value="Fix: resolving all migrations into 1. New configurations" />
     <MESSAGE value="Feature: .env was added" />
@@ -543,8 +548,7 @@
     <MESSAGE value="Fix: names of links to tests were changed. Id of tests were changed to normal guid." />
     <MESSAGE value="Feature: New part for profile page with data about tests." />
     <MESSAGE value="Feature: connected gemma:2, now can asnwer questions and save it to mongo database like response successfully." />
-    <MESSAGE value="Feature: get summary chats without message data. Cancellation tokens for ai server methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: get summary chats without message data. Cancellation tokens for ai server methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: connected gemma:2, now can asnwer questions and save it to mongo database like response successfully." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

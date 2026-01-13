@@ -6,7 +6,7 @@ import { useDarkMode } from "@/hooks/useDarkMode.js";
 import axios from "axios";
 import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
 import Pagination from "../../../Components/Pagination/Pagination.jsx";
-import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx"; // Оставляем как есть
+import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;

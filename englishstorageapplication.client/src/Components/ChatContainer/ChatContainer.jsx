@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Button, Form, Spinner, Alert } from "react-bootstrap";
-import { Send, Clock, PersonFill, Robot } from "react-bootstrap-icons";
+import { Send, Clock, PersonFill, Robot, Magic } from "react-bootstrap-icons";
 import "./ChatContainer.css";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
@@ -17,20 +17,12 @@ const ChatContainer = ({
     const [error, setError] = useState(null);
     const messagesEndRef = useRef(null);
     const { t } = useTranslation();
-    const { darkMode } = useTheme(); // Получаем darkMode из ThemeProvider
+    const { darkMode } = useTheme(); 
 
     const PostQuestion = async (data) => {
         try {
             const token = Cookies.get("tasty-cookie");
-
-            if (!token) {
-                throw new Error("No authentication token found");
-            }
-
             const decoded = jwtDecode(token);
-            console.log("User ID:", decoded.userId);
-
-            const chatId = "your-chat-id-here";
             const response = await fetch(
                 `https://localhost:5199/chat/message/${chatId}`,
                 {
@@ -46,13 +38,6 @@ const ChatContainer = ({
                     credentials: "include",
                 }
             );
-
-            console.log("Response status:", response.status);
-
-            if (!response.ok) {
-                throw new Error(`Error HTTP: ${response.status}`);
-            }
-
             const result = await response.json();
             console.log("Success:", result);
             return result;
@@ -108,12 +93,6 @@ const ChatContainer = ({
         } catch (error) {
             console.error("Error sending message:", error);
 
-            const errorMessage = {
-                text: t("chat.error", "Error sending message. Please try again."),
-                type: "received",
-                timestamp: new Date(),
-            };
-
             setMessages((prev) => [...prev, errorMessage]);
             setError(t("chat.error", "Error sending message. Please try again."));
         } finally {
@@ -160,8 +139,10 @@ const ChatContainer = ({
                         </div>
                     ))
                 ) : (
-                    <div className="empty-chat-message">
-                        {t("chat.empty", "Start a conversation with AI Assistant")}
+                    <div className="empty-chat-message centered-border">
+                        
+                        {t("chat.empty", "Start a conversation with AI Assistant")} 
+                        <Magic></Magic>
                     </div>
                 )}
 
