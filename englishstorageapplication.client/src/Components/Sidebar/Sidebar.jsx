@@ -2,30 +2,63 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Sidebar/Sidebar.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Cookies from "js-cookie";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import {jwtDecode} from "jwt-decode";
 import Form from 'react-bootstrap/Form';
 import ChatLink from "./ChatButtons/ChatLink.jsx";
 import NewChatButton from "./ChatButtons/NewChatButton.jsx";
+import axios from "axios";
 
 function Sidebar() {
-    const [isAuthorized, setAuthorized] = useState(true);
+    const [chats, setChats] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
     const {t} = useTranslation();
-    
+
     const handleLogout = () => {
         const confirmLogout = window.confirm("Are you sure that you want to logout?");
         if (!confirmLogout) return;
-        
-        Cookies.remove("token"); 
-        setAuthorized(false);
-        navigate("/login"); 
-        window.location.reload();
 
+        Cookies.remove("token");
+        navigate("/login");
+        window.location.reload() 
     };
-    
-    const handleGetUserChats = async () => {
-        
+
+    useEffect(() => {
+        const token = Cookies.get("token");
+        if (!token) {
+            setIsLoading(false);
+            return;
+        }
+
+        const fetchChats = async () => {
+            try {
+                const decodedToken = jwtDecode(token);
+                const userId = decodedToken.userId;
+
+                const response = await axios.get(`http://localhost:5199/user/${userId}/chats/summary`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                setChats(response.data);
+            } catch (error) {
+                console.log("Error fetching chats:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchChats();
+    }, []); 
+
+    if (isLoading) {
+        return (
+            <div className="flex-shrink-0 p-3" style={{ width: "280px" }}>
+                <div className="text-muted">Loading...</div>
+            </div>
+        );
     }
 
     return (
@@ -198,11 +231,21 @@ function Sidebar() {
                             <i className="bi bi-magic"></i>
                             <strong className="large-text">{t("sidebar.assistant")}</strong>
                         </button>
-                        <div className="collapse" id="assistant-collapse" onClick={handleGetUserChats}>
+                        <div className="collapse" id="assistant-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <NewChatButton></NewChatButton>
+                                <NewChatButton />
                                 <Form.Control size="sm" type="text" placeholder="Search" className="search-control"/>
-                                <ChatLink name={"Chat"}></ChatLink>
+                                {chats.length === 0 ? (
+                                    <div className="text-muted small p-2">No chats yet</div>
+                                ) : (
+                                    chats.map(chat => (
+                                        <ChatLink
+                                            key={chat.id}
+                                            id={chat.id}
+                                            name={chat.title}
+                                        />
+                                    ))
+                                )}
                             </ul>
                         </div>
                     </li>
