@@ -13,14 +13,14 @@ public class MessagesRepository : IMessagesRepository
         _chats = database.GetCollection<Chat>("Chats");
     }
 
-    public async Task<List<Message>> GetChatMessagesAsync(string chatId)
+    public async Task<List<Message>> GetChatMessagesAsync(string chatId, CancellationToken cancellationToken)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
-        var chat = await _chats.Find(filter).FirstOrDefaultAsync();
+        var chat = await _chats.Find(filter).FirstOrDefaultAsync(cancellationToken);
         return chat?.Messages ?? new List<Message>();
     }
 
-    public async Task AddMessageAsync(string chatId, Message message)
+    public async Task AddMessageAsync(string chatId, Message message, CancellationToken cancellationToken)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
         if (filter == null)
@@ -28,6 +28,6 @@ public class MessagesRepository : IMessagesRepository
             throw new ArgumentNullException(nameof(filter));
         }
         var update = Builders<Chat>.Update.Push("messages", message);
-        await _chats.UpdateOneAsync(filter, update);
+        await _chats.UpdateOneAsync(filter, update, cancellationToken: cancellationToken);
     }
 }

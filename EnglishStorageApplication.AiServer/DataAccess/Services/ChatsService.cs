@@ -13,18 +13,28 @@ public class ChatsService : IChatsService
         _chatsRepository = chatsRepository;
     }
 
-    public async Task<List<Chat>> GetUserChatsByUserId(string userId)
+    public async Task<List<Chat>> GetUserChatsByUserId(string userId, CancellationToken cancellationToken)
     {
-        return await _chatsRepository.GetUserChatsByUserIdAsync(userId);
+        return await _chatsRepository.GetUserChatsByUserIdAsync(userId, cancellationToken);
     }
 
-    public async Task CreateChat(Chat chat)
+    public async Task<List<Chat>> GetUserChatsWithoutMessages(string userId, CancellationToken cancellationToken)
     {
-        await _chatsRepository.CreateChatAsync(chat);
+        return await _chatsRepository.GetUserChatsWithoutMessagesAsync(userId, cancellationToken);
     }
 
-    public async Task DeleteChat(string chatId)
+    public async Task<Chat> GetChatByChatId(string chatId, CancellationToken cancellationToken)
     {
-        await _chatsRepository.DeleteChatByChatIdAsync(chatId);
+        return await _chatsRepository.GetChatByChatIdAsync(chatId, cancellationToken);
+    }
+
+    public async Task CreateChat(Chat chat, CancellationToken cancellationToken)
+    {
+        await _chatsRepository.CreateChatAsync(chat, cancellationToken);
+    }
+
+    public async Task DeleteChat(string chatId, CancellationToken cancellationToken)
+    {
+        await _chatsRepository.DeleteChatByChatIdAsync(chatId, cancellationToken);
     }
 }

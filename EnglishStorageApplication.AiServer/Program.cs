@@ -7,6 +7,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddApplicationServices();
 builder.Services.AddDataBase(builder.Configuration);
 builder.Services.AddCustomCors(builder.Configuration);
+builder.Services.AddOllamaApiClient(new Uri("http://localhost:11434")); 
 
 var app = builder.Build();
 

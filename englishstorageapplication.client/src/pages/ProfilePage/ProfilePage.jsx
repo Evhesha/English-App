@@ -9,25 +9,24 @@ import { useTranslation } from "react-i18next";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-
 function ProfilePage() {
   const [user, setUser] = useState(null);
+  const [userPercent, setUserPercent] = useState(0);
+  const [testsCount, setTestsCount] = useState(0);
   const [isAuthorized, setAuthorized] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchUserData = async () => {
       const token = Cookies.get("token");
       console.log("Token:", token);
       if (token) {
-        // Use jwt-decode to decode the token
         const decodedToken = jwtDecode(token);
-        const id = decodedToken.userId; // Extract id from token
+        const id = decodedToken.userId;
         try {
           const response = await axios.get(
-            `${API_BASE_URL}/api/Users/${id}`
+              `${API_BASE_URL}/api/Users/${id}`
           );
-          console.log("User data:", response.data);
           setUser(response.data);
           setAuthorized(true);
         } catch (error) {
@@ -35,53 +34,77 @@ function ProfilePage() {
         }
       }
     };
-    fetchData();
+
+    const fetchTestData = async () => {
+      const token = Cookies.get("token");
+      if (token) {
+        const decodedToken = jwtDecode(token);
+        const id = decodedToken.userId;
+        try {
+          const response = await axios.get(
+              `${API_BASE_URL}/api/UsersStudyResults/percent/${id}`
+          );
+          console.log("User data:", response.data);
+          setUserPercent(response.data.percent);
+          setTestsCount(response.data.count);
+        } catch (error) {
+        }
+      }
+    };
+
+    fetchUserData();
+    fetchTestData();
   }, []);
 
   return (
-    <>
-      <h1>{t("account-page.profile")}</h1>
-      <div className="profile-container">
-        <div className="profile-main">
-          <button className="profile-avatar-btn">
-            <img
-              src={profilePicture}
-              className="profile-avatar"
-              alt="User Avatar"
-            />
-          </button>
+      <>
+        <h1>{t("account-page.profile")}</h1>
+        <div className="profile-container">
+          <div className="profile-main">
+            <button className="profile-avatar-btn">
+              <img
+                  src={profilePicture}
+                  className="profile-avatar"
+                  alt="User Avatar"
+              />
+            </button>
+
             {user ? (
-                <div className="profile-info">
+                <div className="profile-content">
+                  <div className="profile-info">
                     <h2>
-                        <b>Name: </b>
-                        {user.name}
+                      <b>Name: </b>
+                      {user.name}
                     </h2>
                     <h4>
-                        <b>Email: </b>
-                        {user.email}
+                      <b>Email: </b>
+                      {user.email}
                     </h4>
                     <h4>
-                        <b>Role: </b>
-                        {user.role}
+                      <b>Role: </b>
+                      {user.role}
                     </h4>
                     <EditUserPopUp
                         id={user.id}
                         name={user.name}
                         email={user.email}
                     />
+                  </div>
+
+                  <div className="profile-activity">
+                    <h2>Your activity</h2>
+                    <h3>Your tests percentage: <b>{userPercent}%</b></h3>
+                    <h3>Tests completed: <b>{testsCount}</b></h3>
+                  </div>
                 </div>
             ) : (
                 <div className="alert alert-danger" role="alert">
-              You are not authorized or not login
-            </div>
-          )}
+                  You are not authorized or not login
+                </div>
+            )}
+          </div>
         </div>
-        {/*<div className="profile-activity">
-          <h2>User data</h2>
-          
-        </div>*/}
-      </div>
-    </>
+      </>
   );
 }
 

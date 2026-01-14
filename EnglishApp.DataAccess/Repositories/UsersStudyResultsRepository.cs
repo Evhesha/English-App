@@ -30,6 +30,26 @@ namespace EnglishApp.DataAccess.Repositories
                 .Where(x => x.UserId == userId)
                 .ToListAsync(cancellationToken);
         }
+        
+        public async Task<(double, int)> GetUserStudyPercentByIdAsync(
+            Guid userId,
+            CancellationToken cancellationToken)
+        {
+            var userResults = await _context.UsersStudyResults
+                .AsNoTracking()
+                .Where(x => x.UserId == userId)
+                .ToListAsync(cancellationToken);
+
+            if (!userResults.Any())
+            {
+                return (0, 0);
+            }
+            
+            int passedTestsCount = userResults.Count;
+            double resultPercent = userResults.Average(x => x.PercentResult);
+            
+            return (resultPercent, passedTestsCount);
+        }
 
         public async Task<Guid> CreateUserStudyResultAsync(
             UserStudyResult userStudyResult,

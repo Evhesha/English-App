@@ -1,6 +1,7 @@
 using EnglishStorageApplication.AiServer.Abstractions.Services;
 using EnglishStorageApplication.AiServer.DTOs.MessagesDtos;
 using EnglishStorageApplication.AiServer.Models;
+using OllamaSharp;
 
 namespace EnglishStorageApplication.AiServer.Endpoints;
 
@@ -8,16 +9,21 @@ public static class MessageEndpoints
 {
     public static void MapMessageEndpoints(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/chat/{chatId}/messages", async (string chatId, IMessagesService messageService) =>
+        app.MapGet("/chat/{chatId}/messages", async (
+            string chatId,
+            IMessagesService messageService,
+            CancellationToken cancellationToken) =>
         {
-            var chatMessages = await messageService.GetChatMessages(chatId);
+            var chatMessages = await messageService.GetChatMessages(chatId, cancellationToken);
             return Results.Ok(chatMessages);
         });
 
         app.MapPost("chat/message/{chatId}", async (
             string chatId,
             AddMessageDto messageDto,
-            IMessagesService messageService) =>
+            IMessagesService messageService,
+            IOllamaApiClient ollamaApiClient,
+            CancellationToken cancellationToken) =>
         {
             var message = new Message
             {
@@ -26,22 +32,31 @@ public static class MessageEndpoints
                 Type = "userMessage"
             };
             
-            await messageService.AddMessage(chatId, message);
+            await messageService.AddMessage(chatId, message, cancellationToken);
             
-            // send a message to llm service
-            // get answer from llm service
-            
-            var response = new Message
+            var systemInstruction = "You are a strict English Language Tutor. Answer only questions about English language. " +
+                                    "If the question is not about English, refuse politely. " +
+                                    "If the question is on Russian ask in Russian for English tasks" +
+                                    "Always end with a 'Useful Vocabulary' section (word, translation(in russian)).";
+
+            var prompt = $"System: {systemInstruction}\n\nUser: {messageDto.Text}\n\nAssistant:";
+
+            string llmText = "";
+            await foreach (var chunk 
+                           in ollamaApiClient.GenerateAsync(prompt, cancellationToken: cancellationToken))
             {
-                Text = messageDto.Text, // text from llm
+                llmText += chunk?.Response;
+            }
+            
+            var responseMessage = new Message
+            {
+                Text = llmText, 
                 Date = DateTime.UtcNow,
                 Type = "llmResponse"
             };
             
-            // await messageService.AddMessage(chatId, response);
-            // return response
-            
-            return Results.Created();
+            await messageService.AddMessage(chatId, responseMessage, cancellationToken);
+            return Results.Ok(responseMessage);
         });
     }
 }

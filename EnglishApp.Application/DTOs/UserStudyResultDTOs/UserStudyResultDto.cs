@@ -1,4 +1,4 @@
-﻿namespace EnglishApp.Application.DTOs.UserStudyResult;
+﻿namespace EnglishApp.Application.DTOs.UserStudyResultDTOs;
 
 public class UserStudyResultDto
 {

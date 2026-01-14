@@ -1,4 +1,4 @@
-﻿using EnglishApp.Application.DTOs.UserStudyResult;
+﻿using EnglishApp.Application.DTOs.UserStudyResultDTOs;
 using EnglishApp.Core.Abstractions.UserStudyResult;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
@@ -20,7 +20,8 @@ namespace EnglishStorageApplication.Server.Controllers
 
         [HttpGet]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UserStudyResultDto>>> GetUsersStudyResults(CancellationToken cancellationToken)
+        public async Task<ActionResult<List<UserStudyResultDto>>> GetUsersStudyResults(
+            CancellationToken cancellationToken)
         {
             var usersResults = await _service.GetAllUsersResults(cancellationToken);
                 
@@ -29,7 +30,9 @@ namespace EnglishStorageApplication.Server.Controllers
 
         [HttpGet("{userId:guid}")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UserStudyResultDto>>> GetUserStudyResults(Guid userId, CancellationToken cancellationToken)
+        public async Task<ActionResult<List<UserStudyResultDto>>> GetUserStudyResults(
+            Guid userId,
+            CancellationToken cancellationToken)
         {
             var userResults = await _service.GetUserResults(userId, cancellationToken);
             
@@ -39,6 +42,23 @@ namespace EnglishStorageApplication.Server.Controllers
             }
             
             return Ok(userResults);
+        }
+        
+        [HttpGet("percent/{userId:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
+        public async Task<ActionResult> GetUserStudyPercentById(
+            Guid userId,
+            CancellationToken cancellationToken)
+        {
+            var userResults = await _service.GetUserStudyPercentById(userId, cancellationToken);
+
+            var userStudyPercentDto = new UserStudyPercentDto
+            {
+                Percent = userResults.Item1,
+                Count = userResults.Item2
+            };
+            
+            return Ok(userStudyPercentDto);
         }
 
         [HttpPost]

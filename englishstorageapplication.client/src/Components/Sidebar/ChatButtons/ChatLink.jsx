@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-function ChatLink({name}){
+function ChatLink({name, id}){
+    
     
     return(
         <li>
