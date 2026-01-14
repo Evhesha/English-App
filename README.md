@@ -1,29 +1,29 @@
-# 🚀 English Learning Platform
+# English Learning Platform
 
-## 📖 Overview
+## Overview
 A modern, interactive English learning application designed to make language acquisition effective and enjoyable. The platform combines structured learning with AI-powered assistance to create a personalized educational experience.
 
-## 🌟 Key Features
+## Key Features
 
-### 🤖 AI-Powered Learning Assistant
+### AI-Powered Learning Assistant
 - **Smart Lesson Generation**: Creates personalized lessons based on your level and goals
 - **Intelligent Dictionary Builder**: Generates thematic word lists for effective memorization
 - **Conversation Practice**: Engage in English dialogues on various topics
 - **Topic Explanations**: Get detailed clarifications of complex grammar rules
 
-### 📝 Personal Learning Space
+### Personal Learning Space
 - **Custom Notebooks**: Create and organize thematic notebooks
 - **Word & Expression Collection**: Build your personal vocabulary library
 - **Cross-Device Sync**: Access your notes from any device
 - **Structured Organization**: Keep your learning materials well-organized
 
-### 🎯 Interactive Learning Modules
+### Interactive Learning Modules
 - **Grammar Lessons**: Step-by-step grammar learning with practical examples
 - **Vocabulary Building**: Thematic dictionaries and expression collections
 - **Practice Exercises**: Interactive activities to reinforce learning
 - **Progress Tracking**: Monitor your improvement with detailed analytics
 
-## 💡 Technology Stack
+## Technology Stack
 
 ### Frontend
 - **React** - Modern UI framework
@@ -48,7 +48,7 @@ A modern, interactive English learning application designed to make language acq
 - **Mobile-First Design** - Optimized for all devices
 - **Smooth Animations** - Enhanced user experience
 
-## 🎨 Design Philosophy
+## Design Philosophy
 - **Minimalist Interface**: Clean, distraction-free learning environment
 - **User-Centric**: Intuitive navigation and clear information hierarchy
 - **Engaging Visuals**: Animated elements and thoughtful micro-interactions
