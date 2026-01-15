@@ -25,6 +25,10 @@ function Sidebar() {
         window.location.reload() 
     };
 
+    const handleDelete = (id) => {
+        setChats(chats.filter((chat) => chat.id !== id));
+    };
+
     useEffect(() => {
         const token = Cookies.get("token");
         if (!token) {
@@ -243,6 +247,7 @@ function Sidebar() {
                                             key={chat.id}
                                             id={chat.id}
                                             name={chat.title}
+                                            onDelete={() => handleDelete(chat.id)}
                                         />
                                     ))
                                 )}
