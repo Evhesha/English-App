@@ -14,12 +14,23 @@ function ChatLink({name, id, onDelete}){
             console.error('Mistake on deleting chat:', error);
         }
     };
+
+    const getChatMessages = async () => {
+
+        try {
+            var data = await axios.get(` http://localhost:5199/chat/${id}/messages`);
+            console.log(data);
+        } catch (error) {
+            console.error('Mistake on deleting chat:', error);
+        }
+    };
     
     return(
         <li>
             <Link
-                to="/chat"
+                to={`/chat/${id}`}
                 className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                onClick={getChatMessages}
             >
                 {name}
             </Link>
