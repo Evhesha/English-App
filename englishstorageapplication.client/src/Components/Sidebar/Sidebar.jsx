@@ -28,6 +28,10 @@ function Sidebar() {
     const handleDelete = (id) => {
         setChats(chats.filter((chat) => chat.id !== id));
     };
+    
+    const handleCreate = (newChat) => {
+        setChats(prevChats => [newChat, ...prevChats]);
+    };
 
     useEffect(() => {
         const token = Cookies.get("token");
@@ -237,7 +241,7 @@ function Sidebar() {
                         </button>
                         <div className="collapse" id="assistant-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <NewChatButton />
+                                <NewChatButton onPost={handleCreate}/>
                                 <Form.Control size="sm" type="text" placeholder="Search" className="search-control"/>
                                 {chats.length === 0 ? (
                                     <div className="text-muted small p-2">No chats yet</div>

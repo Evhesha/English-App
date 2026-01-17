@@ -38,6 +38,10 @@ function CreateLessonPopUp({ onPost, userId }) {
             text: text,
             isPublic: isPublic,          
             images: []
+        },{
+        headers: {
+            'Authorization': `Bearer ${token}`
+            }
         }
       )
 

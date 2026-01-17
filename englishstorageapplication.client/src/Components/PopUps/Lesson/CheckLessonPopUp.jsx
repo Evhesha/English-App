@@ -1,6 +1,7 @@
 import "../PopUp.css";
 import { useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -24,6 +25,7 @@ function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsP
     const handleEdit = async (event) => {
         event.preventDefault();
         try {
+            const token = Cookies.get("token");
             const response = await axios.put(
                 `${API_BASE_URL}/api/Lessons/${id}`,
                 {
@@ -31,6 +33,10 @@ function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsP
                     text: lessonText,
                     isPublic: isPublic,
                     images: []
+                },{
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
                 }
             );
 

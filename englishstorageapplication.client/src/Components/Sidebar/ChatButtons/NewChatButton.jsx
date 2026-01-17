@@ -3,24 +3,24 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 
-function NewChatButton() {
+function NewChatButton({onPost}) {
     const navigate = useNavigate();
 
     const handleCreate = async () => {
         try {
             const token = Cookies.get("token");
-            const userId  = jwtDecode(token);
+            const decodedToken = jwtDecode(token);
 
             const response = await axios.post(
                 "http://localhost:5199/chat",
                 {
-                    userId,
+                    userId: decodedToken.userId,
                     title: "New Chat",
                 }
-            );
-
+            )
+            console.log(response)
+            onPost(response.data);
             navigate(`/chat/${response.data.id}`);
-
         } catch (error) {
             console.error("Error creating chat:", error);
         }
@@ -30,7 +30,7 @@ function NewChatButton() {
         <button
             type="button"
             onClick={handleCreate}
-            className="btn btn-link text-decoration-none d-inline-flex align-items-center gap-1"
+            className="btn  "
         >
             New chat <i className="bi bi-plus-circle"></i>
         </button>
