@@ -10,6 +10,7 @@ function ChatLink({name, id, onDelete}){
         try {
             await axios.delete(` http://localhost:5199/chat/${id}`);
             onDelete(id);
+            console.log("Chat deleted successfully");
         } catch (error) {
             console.error('Mistake on deleting chat:', error);
         }
