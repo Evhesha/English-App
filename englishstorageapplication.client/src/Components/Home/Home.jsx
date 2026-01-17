@@ -9,6 +9,7 @@ function Home() {
 
     return (
         <div className={`minimal-home ${darkMode ? "dark-theme" : ""}`}>
+            {/* Герой секция */}
             <section className="hero">
                 <Container>
                     <div className="hero-content">
@@ -22,6 +23,8 @@ function Home() {
                     </div>
                 </Container>
             </section>
+
+            {/* Основные особенности */}
             <section className="features">
                 <Container>
                     <h2 className="section-title">{t("home.notes-title")}</h2>
@@ -32,11 +35,6 @@ function Home() {
                                     <Col md={6}>
                                         <div className="feature-visual">
                                             <div className="visual-emoji">📝</div>
-                                            <div className="floating-elements">
-                                                <div className="floating-element element-1">✨</div>
-                                                <div className="floating-element element-2">📚</div>
-                                                <div className="floating-element element-3">🔖</div>
-                                            </div>
                                         </div>
                                     </Col>
                                     <Col md={6}>
@@ -61,6 +59,8 @@ function Home() {
                     </Row>
                 </Container>
             </section>
+
+            {/* Преимущества */}
             <section className="benefits">
                 <Container>
                     <h2 className="section-title">{t("home.lessons-title")}</h2>
@@ -89,6 +89,8 @@ function Home() {
                     </Row>
                 </Container>
             </section>
+
+            {/* AI помощник */}
             <section className="ai-showcase">
                 <Container>
                     <div className="ai-container">
@@ -98,9 +100,9 @@ function Home() {
                             <p className="ai-subtitle">{t("home.ai-subtitle")}</p>
                         </div>
 
-                        <Row className="ai-features-grid">
-                            <Col lg={6}>
-                                <div className="ai-feature-card primary">
+                        <Row>
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">🎯</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature1-title")}</h4>
@@ -108,8 +110,8 @@ function Home() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={6}>
-                                <div className="ai-feature-card secondary">
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">📖</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature2-title")}</h4>
@@ -117,8 +119,8 @@ function Home() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={6}>
-                                <div className="ai-feature-card tertiary">
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">💬</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature3-title")}</h4>
@@ -126,8 +128,8 @@ function Home() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={6}>
-                                <div className="ai-feature-card quaternary">
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">🔍</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature4-title")}</h4>
@@ -138,25 +140,26 @@ function Home() {
                         </Row>
 
                         <div className="ai-cta">
-                            <Button className="btn-primary btn-large">
+                            <Button className="btn-primary">
                                 {t("home.ai-button")}
                             </Button>
                         </div>
                     </div>
                 </Container>
             </section>
+
+            {/* Финальный призыв */}
             <section className="final-cta">
                 <Container>
                     <div className="cta-content">
                         <h2>{t("home.final-cta-title")}</h2>
                         <p className="cta-subtitle">{t("home.final-cta-subtitle")}</p>
-                        <Button className="btn-primary btn-large">
+                        <Button className="btn-primary">
                             {t("home.final-cta-button")}
                         </Button>
                     </div>
                 </Container>
             </section>
-
         </div>
     );
 }
