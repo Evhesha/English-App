@@ -9,7 +9,6 @@ function Home() {
 
     return (
         <div className={`minimal-home ${darkMode ? "dark-theme" : ""}`}>
-            {/* Герой секция */}
             <section className="hero">
                 <Container>
                     <div className="hero-content">
@@ -18,13 +17,10 @@ function Home() {
                         <p className="subtitle">{t("home.hero-subtitle")}</p>
                         <div className="cta-container">
                             <Button className="btn-primary">{t("home.start-button")}</Button>
-                            <Button variant="outline-secondary">{t("home.learn-more")}</Button>
                         </div>
                     </div>
                 </Container>
             </section>
-
-            {/* Основные особенности */}
             <section className="features">
                 <Container>
                     <h2 className="section-title">{t("home.notes-title")}</h2>
@@ -59,8 +55,6 @@ function Home() {
                     </Row>
                 </Container>
             </section>
-
-            {/* Преимущества */}
             <section className="benefits">
                 <Container>
                     <h2 className="section-title">{t("home.lessons-title")}</h2>
@@ -89,8 +83,6 @@ function Home() {
                     </Row>
                 </Container>
             </section>
-
-            {/* AI помощник */}
             <section className="ai-showcase">
                 <Container>
                     <div className="ai-container">
@@ -138,25 +130,11 @@ function Home() {
                                 </div>
                             </Col>
                         </Row>
-
                         <div className="ai-cta">
                             <Button className="btn-primary">
                                 {t("home.ai-button")}
                             </Button>
                         </div>
-                    </div>
-                </Container>
-            </section>
-
-            {/* Финальный призыв */}
-            <section className="final-cta">
-                <Container>
-                    <div className="cta-content">
-                        <h2>{t("home.final-cta-title")}</h2>
-                        <p className="cta-subtitle">{t("home.final-cta-subtitle")}</p>
-                        <Button className="btn-primary">
-                            {t("home.final-cta-button")}
-                        </Button>
                     </div>
                 </Container>
             </section>
