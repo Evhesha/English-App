@@ -2,11 +2,21 @@ import "../Home/Home.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
     const { t } = useTranslation();
     const { darkMode } = useTheme();
+    const navigate = useNavigate();
+    
+    const moveToLessons = () => {
+        navigate(`/online-list-lessons-page`);    
+    }
 
+    const moveToNotes = () => {
+        navigate(`/my-dict-page`);
+    }
+    
     return (
         <div className={`minimal-home ${darkMode ? "dark-theme" : ""}`}>
             <section className="hero">
@@ -16,7 +26,7 @@ function Home() {
                         <h1>{t("home.hero-title")}</h1>
                         <p className="subtitle">{t("home.hero-subtitle")}</p>
                         <div className="cta-container">
-                            <Button className="btn-primary">{t("home.start-button")}</Button>
+                            <Button onClick={moveToLessons} className="btn-primary">{t("home.start-button")}</Button>
                         </div>
                     </div>
                 </Container>
@@ -46,6 +56,8 @@ function Home() {
                                                     <span className="list-icon">✅</span>
                                                     <span>{t("home.notes-feature2")}</span>
                                                 </div>
+                                                <Button onClick={moveToNotes}
+                                                        className="btn-primary">{t("home.try-notes")}</Button>
                                             </div>
                                         </div>
                                     </Col>

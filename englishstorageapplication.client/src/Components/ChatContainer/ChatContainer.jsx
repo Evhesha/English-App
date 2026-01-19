@@ -17,10 +17,13 @@ const ChatContainer = () => {
     const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
     const [error, setError] = useState(null);
 
+    const messagesContainerRef = useRef(null);
     const messagesEndRef = useRef(null);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        if (messagesContainerRef.current && messagesEndRef.current) {
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+        }
     };
 
     useEffect(() => {
@@ -55,7 +58,7 @@ const ChatContainer = () => {
     }, [chatId, t]);
 
     useEffect(() => {
-        scrollToBottom();
+        setTimeout(scrollToBottom, 5);
     }, [messages]);
 
     const sendMessage = async (text) => {
@@ -122,7 +125,7 @@ const ChatContainer = () => {
 
     return (
         <div className={`chat-container ${darkMode ? "dark" : ""}`}>
-            <div className="messages">
+            <div className="messages" ref={messagesContainerRef}>
                 {messages.length > 0 ? (
                     messages.map((msg, index) => (
                         <div
