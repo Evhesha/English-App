@@ -93,7 +93,7 @@ function AdminPanel() {
       <ToastContainer />
       <div style={{ display: "flex", alignItems: "center" }}>
         <ToLinkButton link="/home" placeholder={"Home"} />
-        <h1 style={{ marginLeft: "20px" }}>{t("admin-panel")}</h1>
+        <h1 style={{ marginLeft: "20px" }}>{t("account-page.admin-panel")}</h1>
       </div>
       <p>
         {t("account-page.num-of-users")} <b>{users.length}</b> 
@@ -102,7 +102,6 @@ function AdminPanel() {
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
                 {role || "Filter by role"}
             </Dropdown.Toggle>
-
             <Dropdown.Menu>
                 <Dropdown.Item eventKey={""}>No filter</Dropdown.Item>
                 <Dropdown.Item eventKey={"User"}>User</Dropdown.Item>

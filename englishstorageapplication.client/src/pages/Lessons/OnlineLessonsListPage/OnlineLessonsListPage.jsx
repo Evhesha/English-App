@@ -6,7 +6,7 @@ import { useDarkMode } from "@/hooks/useDarkMode.js";
 import axios from "axios";
 import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
 import Pagination from "../../../Components/Pagination/Pagination.jsx";
-import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx";
+import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
@@ -104,7 +104,7 @@ function OnlineLessonsListPage() {
     };
     
     if (!authorized) {
-        return plsAuthorizeBlock;
+        return <PlsAuthorizeBlock />;
     }
 
     return (
