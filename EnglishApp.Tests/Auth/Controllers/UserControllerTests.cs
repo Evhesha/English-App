@@ -74,7 +74,7 @@ public async Task GetRoleUsers_ReturnsUsersWithTheSameRole()
     var controller = new UsersController(mockService, ph);
 
     // Act
-    var result = await controller.GetRoleUsers(userFilter, ct);
+    var result = await controller.GetUsersWithParams(userFilter, ct);
 
     // Assert
     var okResult = Assert.IsType<OkObjectResult>(result.Result);
@@ -94,7 +94,7 @@ public async Task GetRoleUsers_ReturnsEmptyListWhenNoUsersWithRole()
     var controller = new UsersController(mockService, ph);
 
     // Act
-    var result = await controller.GetRoleUsers(userFilter, ct);
+    var result = await controller.GetUsersWithParams(userFilter, ct);
 
     // Assert
     var okResult = Assert.IsType<OkObjectResult>(result.Result);
@@ -121,7 +121,7 @@ public async Task GetRoleUsers_ReturnsUsersWithMultipleFilters()
     var controller = new UsersController(mockService, ph);
 
     // Act
-    var result = await controller.GetRoleUsers(userFilter, ct);
+    var result = await controller.GetUsersWithParams(userFilter, ct);
 
     // Assert
     var okResult = Assert.IsType<OkObjectResult>(result.Result);

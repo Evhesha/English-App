@@ -42,7 +42,7 @@ function AdminPanel() {
                 setIsLoading(true);
                 setHasError(false);
 
-                const url = `${API_BASE_URL}/api/users/role`;
+                const url = `${API_BASE_URL}/api/users/params/users`;
 
                 const params = {};
                 if (role) {
