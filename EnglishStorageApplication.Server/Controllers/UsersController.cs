@@ -35,9 +35,9 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(users);
         }
 
-        [HttpGet("role")]
+        [HttpGet("params/users")]
         [EnableCors("AllowSpecificOrigin")]
-        public async Task<ActionResult<List<UserDto>>> GetRoleUsers(
+        public async Task<ActionResult<List<UserDto>>> GetUsersWithParams(
             [FromQuery] UserFilter userFilter,
             CancellationToken cancellationToken)
         {
@@ -60,7 +60,6 @@ namespace EnglishStorageApplication.Server.Controllers
             {
                 return NotFound(ex.Message);
             }
-            
         }
 
         [HttpGet("/byEmail")]
