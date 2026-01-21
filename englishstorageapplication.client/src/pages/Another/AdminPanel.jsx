@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import axios from "axios";
 import ListGroupElement from "../../Components/ListGroupElement/ListGroupElement";
 import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
@@ -16,13 +16,14 @@ function AdminPanel() {
     const [hasError, setHasError] = useState(false);
     const [delayCompleted, setDelayCompleted] = useState(false);
     const {t} = useTranslation();
-    const [role, setRole] = useState("");
 
-    const receiveNotify = () => {
-        toast.success("Data received!", {
-            position: "bottom-right"
-        });
-    }
+    const [nameInput, setNameInput] = useState("");
+    const [emailInput, setEmailInput] = useState("");
+    const [roleInput, setRoleInput] = useState("");
+
+    const [appliedName, setAppliedName] = useState("");
+    const [appliedEmail, setAppliedEmail] = useState("");
+    const [appliedRole, setAppliedRole] = useState("");
 
     const deleteNotify = () => {
         toast.success("Data delete successfully!", {
@@ -45,8 +46,16 @@ function AdminPanel() {
                 const url = `${API_BASE_URL}/api/users/params/users`;
 
                 const params = {};
-                if (role) {
-                    params.Role = role;
+                if (appliedRole) {
+                    params.Role = appliedRole;
+                }
+
+                if (appliedName) {
+                    params.Name = appliedName;
+                }
+
+                if (appliedEmail) {
+                    params.Email = appliedEmail;
                 }
 
                 const response = await axios.get(url, {params});
@@ -54,7 +63,6 @@ function AdminPanel() {
                 setUsers(response.data);
                 setIsLoading(false);
                 console.log("Данные успешно загружены:", response.data);
-                receiveNotify();
             } catch (error) {
                 console.error("Ошибка при получении пользователей:", error);
                 setIsLoading(false);
@@ -62,10 +70,8 @@ function AdminPanel() {
                 mistakeNotify();
             }
         };
-
         fetchUsers();
-
-    }, [role]);
+    }, [appliedName, appliedEmail, appliedRole]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -85,7 +91,13 @@ function AdminPanel() {
     };
 
     const handleRole = (role) => {
-        setRole(role);
+        setRoleInput(role);
+        setAppliedRole(role);
+    };
+
+    const handleSearch = () => {
+        setAppliedName(nameInput);
+        setAppliedEmail(emailInput);
     };
 
     return (
@@ -96,10 +108,35 @@ function AdminPanel() {
                 <h1 style={{marginLeft: "20px"}}>{t("account-page.admin-panel")}</h1>
             </div>
             <p></p>
+
+            <div style={{display: "flex", gap: "10px", marginBottom: "10px"}}>
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Filter by name"
+                    value={nameInput}
+                    onChange={(e) => setNameInput(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                />
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Filter by email"
+                    value={emailInput}
+                    onChange={(e) => setEmailInput(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                />
+                <button
+                    className="btn btn-primary"
+                    onClick={handleSearch}
+                >
+                    Search
+                </button>
+            </div>
             <div style={{display: "flex", alignItems: "center"}}>
                 <Dropdown onSelect={handleRole}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                        {role || "Filter by role"}
+                        {roleInput || "Filter by role"}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                         <Dropdown.Item eventKey={""}>No filter</Dropdown.Item>

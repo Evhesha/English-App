@@ -14,15 +14,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: links for buttons in home page. Refactoring PlsAuthorizeBlock.jsx to convinient component, tow buttons for login and sign up in it.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: new functionality in getting users with name and email params">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/UserExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/UserExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/PageParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Params/PageParams.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/SortDirection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Params/SortDirection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/SortParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Params/SortParams.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Params/UserParams/UserFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Params/UserParams/UserFilter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +48,7 @@
             <value>
               <list>
                 <branch-info repo="$PROJECT_DIR$" source="feature/translation" />
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
               </list>
             </value>
           </entry>
@@ -204,7 +200,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
+  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http">
     <configuration name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EnglishStorageApplication.AiServer/EnglishStorageApplication.AiServer.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -350,6 +346,7 @@
       <workItem from="1768764022681" duration="547000" />
       <workItem from="1768808455787" duration="3521000" />
       <workItem from="1768891385170" duration="1672000" />
+      <workItem from="1768984125379" duration="2554000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -503,7 +500,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768641950265</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Feature: new functionality in getting users with name and email params">
+      <option name="closed" value="true" />
+      <created>1768901044235</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1768901044235</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: Styles and componenting lessons data for teachers and online lessons." />
     <MESSAGE value="Fix: popup fixes in naming and width. Delete no need delete button for user cards." />
     <MESSAGE value="Feature: new docker containers for redis and redis managing." />
     <MESSAGE value="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data." />
@@ -563,7 +567,8 @@
     <MESSAGE value="Feature: user can chatting with llm in GUI." />
     <MESSAGE value="Fix: optimized home page, delete not used css and made home page more compact." />
     <MESSAGE value="Feature: links for buttons in home page. Refactoring PlsAuthorizeBlock.jsx to convinient component, tow buttons for login and sign up in it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: links for buttons in home page. Refactoring PlsAuthorizeBlock.jsx to convinient component, tow buttons for login and sign up in it." />
+    <MESSAGE value="Feature: new functionality in getting users with name and email params" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: new functionality in getting users with name and email params" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
