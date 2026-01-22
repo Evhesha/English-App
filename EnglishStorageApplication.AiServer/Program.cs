@@ -3,6 +3,7 @@ using EnglishStorageApplication.AiServer.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.UseSerilogLogging();
 builder.Services.AddOpenApi();
 builder.Services.AddApplicationServices();
 builder.Services.AddDataBase(builder.Configuration);
