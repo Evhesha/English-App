@@ -23,8 +23,10 @@ public static class MessageEndpoints
             AddMessageDto messageDto,
             IMessagesService messageService,
             IOllamaApiClient ollamaApiClient,
+            ILoggerFactory loggerFactory,
             CancellationToken cancellationToken) =>
         {
+            var logger = loggerFactory.CreateLogger("MessageEndpoints");
             var message = new Message
             {
                 Text = messageDto.Text,
@@ -38,7 +40,7 @@ public static class MessageEndpoints
                                     "If the question is not about English, refuse politely. " +
                                     "If the question is on Russian ask in Russian for English tasks" +
                                     "Always end with a 'Useful Vocabulary' section (word, translation(in russian)).";
-
+        
             var prompt = $"System: {systemInstruction}\n\nUser: {messageDto.Text}\n\nAssistant:";
 
             string llmText = "";
@@ -56,6 +58,7 @@ public static class MessageEndpoints
             };
             
             await messageService.AddMessage(chatId, responseMessage, cancellationToken);
+            logger.LogInformation("Message and answer were successfully created.");
             return Results.Ok(responseMessage);
         });
     }

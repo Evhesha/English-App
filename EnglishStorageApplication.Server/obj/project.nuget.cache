@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8v3hPRSiQKI=",
+  "dgSpecHash": "rLcrk3AHCuw=",
   "success": true,
   "projectFilePath": "/Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.1.1/microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.extensions/2.1.1/microsoft.aspnetcore.http.extensions.2.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.features/2.1.1/microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
-    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.spaproxy/8.0.22/microsoft.aspnetcore.spaproxy.8.0.22.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.spaproxy/8.0.23/microsoft.aspnetcore.spaproxy.8.0.23.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
@@ -65,6 +65,7 @@
     "/Users/evgenii/.nuget/packages/serilog.sinks.console/6.1.1/serilog.sinks.console.6.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/serilog.sinks.debug/3.0.0/serilog.sinks.debug.3.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/serilog.sinks.seq/9.0.0/serilog.sinks.seq.9.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/stackexchange.redis/2.7.27/stackexchange.redis.2.7.27.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
