@@ -1,45 +1,40 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
-import {jwtDecode} from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
-function NewChatButton(){
+function NewChatButton({onPost}) {
     const navigate = useNavigate();
 
-    const handleCreate = async (event) => {
-        event.preventDefault();
-        event.stopPropagation(); 
-
+    const handleCreate = async () => {
         try {
             const token = Cookies.get("token");
             const decodedToken = jwtDecode(token);
-            const userId = decodedToken.userId;
 
             const response = await axios.post(
-                `http://localhost:5199/chat`,
+                "http://localhost:5199/chat",
                 {
-                    userId: userId,
+                    userId: decodedToken.userId,
                     title: "New Chat",
                 }
-            );
-
-            navigate("/chat", { state: { chatId: response.data.id } });
-
+            )
+            console.log(response)
+            onPost(response.data);
+            navigate(`/chat/${response.data.id}`);
         } catch (error) {
-            console.error("Error creating chat:", error.response?.data || error.message);
+            console.error("Error creating chat:", error);
         }
     };
 
-    return(
-        <Link
-            to="#"
-            className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+    return (
+        <button
+            type="button"
             onClick={handleCreate}
+            className="btn  "
         >
             New chat <i className="bi bi-plus-circle"></i>
-        </Link>
-    )
+        </button>
+    );
 }
 
 export default NewChatButton;

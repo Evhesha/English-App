@@ -3,6 +3,7 @@ using EnglishStorageApplication.AiServer.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.UseSerilogLogging();
 builder.Services.AddOpenApi();
 builder.Services.AddApplicationServices();
 builder.Services.AddDataBase(builder.Configuration);
@@ -16,11 +17,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-
 app.UseHttpsRedirection();
 app.UseCors("AllowSpecificOrigin");
-
 app.MapChatEndpoints();
 app.MapMessageEndpoints();
-
 app.Run();

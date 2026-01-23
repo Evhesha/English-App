@@ -49,7 +49,7 @@ public static class ChatsEndpoints
             };
     
             await chatsService.CreateChat(chat, cancellationToken);
-            return Results.Created(); 
+            return Results.Ok(chat.Id); 
         });
         
         app.MapDelete("/chat/{chatId}", async (

@@ -2,11 +2,21 @@ import "../Home/Home.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
     const { t } = useTranslation();
     const { darkMode } = useTheme();
+    const navigate = useNavigate();
+    
+    const moveToLessons = () => {
+        navigate(`/online-list-lessons-page`);    
+    }
 
+    const moveToNotes = () => {
+        navigate(`/my-dict-page`);
+    }
+    
     return (
         <div className={`minimal-home ${darkMode ? "dark-theme" : ""}`}>
             <section className="hero">
@@ -16,8 +26,7 @@ function Home() {
                         <h1>{t("home.hero-title")}</h1>
                         <p className="subtitle">{t("home.hero-subtitle")}</p>
                         <div className="cta-container">
-                            <Button className="btn-primary">{t("home.start-button")}</Button>
-                            <Button variant="outline-secondary">{t("home.learn-more")}</Button>
+                            <Button onClick={moveToLessons} className="btn-primary">{t("home.start-button")}</Button>
                         </div>
                     </div>
                 </Container>
@@ -32,11 +41,6 @@ function Home() {
                                     <Col md={6}>
                                         <div className="feature-visual">
                                             <div className="visual-emoji">📝</div>
-                                            <div className="floating-elements">
-                                                <div className="floating-element element-1">✨</div>
-                                                <div className="floating-element element-2">📚</div>
-                                                <div className="floating-element element-3">🔖</div>
-                                            </div>
                                         </div>
                                     </Col>
                                     <Col md={6}>
@@ -52,6 +56,8 @@ function Home() {
                                                     <span className="list-icon">✅</span>
                                                     <span>{t("home.notes-feature2")}</span>
                                                 </div>
+                                                <Button onClick={moveToNotes}
+                                                        className="btn-primary">{t("home.try-notes")}</Button>
                                             </div>
                                         </div>
                                     </Col>
@@ -98,9 +104,9 @@ function Home() {
                             <p className="ai-subtitle">{t("home.ai-subtitle")}</p>
                         </div>
 
-                        <Row className="ai-features-grid">
-                            <Col lg={6}>
-                                <div className="ai-feature-card primary">
+                        <Row>
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">🎯</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature1-title")}</h4>
@@ -108,8 +114,8 @@ function Home() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={6}>
-                                <div className="ai-feature-card secondary">
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">📖</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature2-title")}</h4>
@@ -117,8 +123,8 @@ function Home() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={6}>
-                                <div className="ai-feature-card tertiary">
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">💬</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature3-title")}</h4>
@@ -126,8 +132,8 @@ function Home() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={6}>
-                                <div className="ai-feature-card quaternary">
+                            <Col md={6}>
+                                <div className="ai-feature-card">
                                     <div className="ai-feature-icon">🔍</div>
                                     <div className="ai-feature-content">
                                         <h4>{t("home.ai-feature4-title")}</h4>
@@ -136,27 +142,14 @@ function Home() {
                                 </div>
                             </Col>
                         </Row>
-
                         <div className="ai-cta">
-                            <Button className="btn-primary btn-large">
+                            <Button className="btn-primary">
                                 {t("home.ai-button")}
                             </Button>
                         </div>
                     </div>
                 </Container>
             </section>
-            <section className="final-cta">
-                <Container>
-                    <div className="cta-content">
-                        <h2>{t("home.final-cta-title")}</h2>
-                        <p className="cta-subtitle">{t("home.final-cta-subtitle")}</p>
-                        <Button className="btn-primary btn-large">
-                            {t("home.final-cta-button")}
-                        </Button>
-                    </div>
-                </Container>
-            </section>
-
         </div>
     );
 }

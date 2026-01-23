@@ -14,7 +14,21 @@ public static class UserExtensions
         {
             query = query.Where(u => u.Role == userFilter.Role);
         }
+
+        if (!string.IsNullOrEmpty(userFilter.Name))
+        {
+            var usersLower = userFilter.Name.ToLower();
+            query = query.Where(u => u.Name.ToLower().StartsWith(usersLower));
+        }
+
+        if (!string.IsNullOrEmpty(userFilter.Email))
+        {
+            var usersEmail = userFilter.Email.ToLower();
+            query = query.Where(u => u.Email.ToLower().StartsWith(usersEmail));
+        }
         
         return query;
     }
+    
+    //pagination
 }

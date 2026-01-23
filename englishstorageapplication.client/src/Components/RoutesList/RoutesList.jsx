@@ -70,7 +70,7 @@ function RoutesList() {
           <Route path="/setting-page" element={<SettingPage />} />
 
           {/* Sidebar */}
-          <Route path="/chat" element={<ChatContainer />} />
+          <Route path="/chat/:chatId" element={<ChatContainer />} />
 
           {/* Sidebar.Lessons */}
           <Route path="/list-lessons-page" element={<LessonsListPage />} />

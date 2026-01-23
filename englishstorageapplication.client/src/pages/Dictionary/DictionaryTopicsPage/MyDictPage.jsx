@@ -6,8 +6,7 @@ import YourOwnDict from "../dict-images/YourOwnDict.png";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
-import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx";
-
+import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function MyDictPage() {
@@ -101,7 +100,7 @@ function MyDictPage() {
               minHeight: "70vh",
               padding: "2rem"
             }}>
-              {plsAuthorizeBlock}
+              <PlsAuthorizeBlock/>
             </div>
         )}
       </>

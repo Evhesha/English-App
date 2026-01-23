@@ -6,7 +6,7 @@ import { useDarkMode } from "@/hooks/useDarkMode.js";
 import axios from "axios";
 import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
 import Pagination from "../../../Components/Pagination/Pagination.jsx";
-import plsAuthorizeBlock from "@/Components/Auth/plsAuthorizeBlock.jsx";
+import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
@@ -20,6 +20,7 @@ function OnlineLessonsListPage() {
     const [pageSize] = useState(10);
     const {t} = useTranslation();
     const [filtrationText, setFiltrationText] = useState("");
+    const [appliedFiltrationText, setAppliedFiltrationText] = useState("");
     const darkMode = useDarkMode();
     const [authorized, setAuthorized] = useState(false);
     const effectRan = useRef(false);
@@ -45,7 +46,7 @@ function OnlineLessonsListPage() {
             const params = {
                 Page: currentPage,
                 PageSize: pageSize,
-                Title: filtrationText || undefined,
+                Title: appliedFiltrationText || undefined,
                 OrderBy: sortBy || undefined,
                 Direction: sortDirection || undefined
             };
@@ -83,7 +84,7 @@ function OnlineLessonsListPage() {
         if (!isFirstLoad) {
             fetchLessons(false);
         }
-    }, [currentPage, sortBy, sortDirection, filtrationText]);
+    }, [currentPage, sortBy, sortDirection, appliedFiltrationText]);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -100,11 +101,18 @@ function OnlineLessonsListPage() {
     };
 
     const handleSearch = () => {
+        setAppliedFiltrationText(filtrationText);
         setCurrentPage(1);
     };
-    
+
+    const handleClearSearch = () => {
+        setFiltrationText("");
+        setAppliedFiltrationText("");
+        setCurrentPage(1);
+    };
+
     if (!authorized) {
-        return plsAuthorizeBlock;
+        return <PlsAuthorizeBlock />;
     }
 
     return (
@@ -130,15 +138,25 @@ function OnlineLessonsListPage() {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <button
-                            className="btn btn-primary w-100 h-100"
-                            onClick={handleSearch}
-                        >
-                            {t("online-lessons.find-lessons")}
-                        </button>
+                        <div className="d-flex gap-2 h-100">
+                            <button
+                                className="btn btn-primary flex-grow-1"
+                                onClick={handleSearch}
+                            >
+                                {t("online-lessons.find-lessons")}
+                            </button>
+                            {appliedFiltrationText && (
+                                <button
+                                    className="btn btn-outline-secondary"
+                                    onClick={handleClearSearch}
+                                    title="Clear search"
+                                >
+                                    ✕
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
-
                 <div className="row mb-3">
                     <div className="col-md-6">
                         <div className="card">
@@ -175,7 +193,6 @@ function OnlineLessonsListPage() {
                             </div>
                         </div>
                     </div>
-
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
@@ -215,7 +232,6 @@ function OnlineLessonsListPage() {
                     </div>
                 </div>
             </div>
-
             {isLoading ? (
                 <div className="text-center">
                     <div className="spinner-border" role="status">
@@ -241,13 +257,11 @@ function OnlineLessonsListPage() {
                             />
                         ))}
                     </div>
-
                     <Pagination
                         currentPage={currentPage}
                         totalPages={totalPages}
                         onPageChange={handlePageChange}
                     />
-
                     <div className="text-center text-muted mt-2">
                         Page {currentPage} of {totalPages}
                     </div>

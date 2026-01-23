@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kliWw6AtGdw=",
+  "dgSpecHash": "lFvo9UvQuiM=",
   "success": true,
   "projectFilePath": "/Users/evgenii/RiderProjects/English-App/EnglishApp.Tests/EnglishApp.Tests.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.1.1/microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.extensions/2.1.1/microsoft.aspnetcore.http.extensions.2.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.features/2.1.1/microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
-    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.spaproxy/8.0.22/microsoft.aspnetcore.spaproxy.8.0.22.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.spaproxy/8.0.23/microsoft.aspnetcore.spaproxy.8.0.23.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.codecoverage/17.12.0/microsoft.codecoverage.17.12.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.entityframeworkcore/9.0.0/microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0/microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
@@ -64,6 +64,7 @@
     "/Users/evgenii/.nuget/packages/serilog.sinks.console/6.1.1/serilog.sinks.console.6.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/serilog.sinks.debug/3.0.0/serilog.sinks.debug.3.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/serilog.sinks.seq/9.0.0/serilog.sinks.seq.9.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/stackexchange.redis/2.7.27/stackexchange.redis.2.7.27.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",

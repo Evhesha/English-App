@@ -38,15 +38,12 @@
     "hero-title": "Learn English for free with pleasure",
     "hero-subtitle": "Effective methodology for quick language acquisition",
     "start-button": "Start Learning",
-    "learn-more": "Learn More",
-
+    "try-notes": "Try notes",
     "notes-title": "Your Personal Notes",
     "notes-heading": "Organize Your Thoughts",
     "notes-description": "Create, edit and structure your notes for effective English learning.",
     "notes-feature1": "Create thematic notebooks",
     "notes-feature2": "Add words and expressions",
-    "notes-feature3": "Sync across devices",
-
     "lessons-title": "Interactive Lessons",
     "lesson1-title": "Grammar",
     "lesson1-desc": "Step-by-step English grammar learning with examples and practice",
@@ -54,7 +51,6 @@
     "lesson2-desc": "Thematic dictionaries and expressions to expand your vocabulary",
     "lesson3-title": "Practice",
     "lesson3-desc": "Interactive exercises to reinforce the material",
-
     "ai-title": "AI Assistant",
     "ai-subtitle": "Your personal English learning companion",
     "ai-feature1-title": "Lesson Generation",
@@ -65,11 +61,7 @@
     "ai-feature3-desc": "Practice spoken English in dialogues on any topic",
     "ai-feature4-title": "Topic Explanation",
     "ai-feature4-desc": "Get detailed explanations of complex grammar rules",
-    "ai-button": "Try AI Assistant",
-
-    "final-cta-title": "Start Your English Journey Today",
-    "final-cta-subtitle": "Join thousands of successful students who achieved their language goals",
-    "final-cta-button": "Get Started Now"
+    "ai-button": "Try AI Assistant"
   },
   "teacher-page" : {
     "label": "Teacher panel (your lessons)",
