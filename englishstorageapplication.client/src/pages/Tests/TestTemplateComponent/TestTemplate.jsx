@@ -21,7 +21,6 @@ function TestTemplate({ testName, questions }) {
         <div className="test-container">
             <style>{styles}</style>
             <h1>{testName}</h1>
-            
             {showResults ? (
                 <Results 
                     score={score}
