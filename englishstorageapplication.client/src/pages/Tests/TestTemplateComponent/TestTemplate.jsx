@@ -9,7 +9,7 @@ import handleSkip from './handleSkip';
 import handleOptionSelect from './handleOptionSelect';
 import handleRetry from './handleRetry';
 
-function TestTemplate({ testName, questions }) {
+function TestTemplate({testId, testName, questions }) {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
     const [userAnswers, setUserAnswers] = useState({});
@@ -23,6 +23,7 @@ function TestTemplate({ testName, questions }) {
             <h1>{testName}</h1>
             {showResults ? (
                 <Results 
+                    testId={testId}
                     score={score}
                     questionsLength={questions.length}
                     mistakes={mistakes}

@@ -90,6 +90,7 @@ function DynamicTimeTest() {
 
     return (
         <TestTemplate
+            testId={testData.testInfo.id}
             testName={testData.testInfo?.name || `${time?.replace('-test', '')} Test`}
             questions={testData.questions}
             testInfo={testData.testInfo}
