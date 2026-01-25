@@ -6,7 +6,7 @@ import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function Results({score, questionsLength, mistakes, onRetry}) {
+function Results({testId, score, questionsLength, mistakes, onRetry}) {
     const hasRun = useRef(false);
     
     useEffect(() => {
@@ -26,7 +26,7 @@ function Results({score, questionsLength, mistakes, onRetry}) {
                 await axios.post(`${API_BASE_URL}/api/UsersStudyResults`,
                     {
                         userId: userId,
-                        testId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                        testId: testId,
                         percentResult: ((score / questionsLength) * 100).toFixed(1)
                     }
                 );

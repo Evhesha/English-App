@@ -24,9 +24,7 @@ function DynamicTopicTest() {
                 if (!fileName) {
                     throw new Error('No topic specified');
                 }
-
-                console.log(`Loading topic test: ${fileName}.json`);
-
+                
                 const response = await fetch(`/tests/by-topic/${fileName}.json`);
 
                 if (!response.ok) {
@@ -91,6 +89,7 @@ function DynamicTopicTest() {
 
     return (
         <TestTemplate
+            testId={testData.testInfo.id}
             testName={testData.testInfo?.name || `${displayName} Test`}
             questions={testData.questions}
             testInfo={testData.testInfo}

@@ -77,6 +77,7 @@ function DynamicTest() {
 
     return (
         <TestTemplate
+            testId={testData.testInfo.id}
             testName={testData.testInfo?.name || `${levelCode} Level Test`}
             questions={testData.questions}
             testInfo={testData.testInfo}
