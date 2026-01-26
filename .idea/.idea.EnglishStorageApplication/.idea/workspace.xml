@@ -14,39 +14,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: now after passing test user can save test percentage but with hard code testId.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: now tests results save with correct test id. Changed id's of some tests to guid type.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_simple.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_simple.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_simple.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adjectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adjectives.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adverbs.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adverbs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/articles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conditionals.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conditionals.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conjunctions.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conjunctions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/gerund_infinitive.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/gerund_infinitive.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/modal_verbs.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/modal_verbs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/nouns.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/nouns.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/passive_voice.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/passive_voice.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/phrasal_verbs.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/phrasal_verbs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/prepositions.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/prepositions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/pronouns.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/pronouns.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/relative_pronouns.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/relative_pronouns.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/reported_speech.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/reported_speech.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTest.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTimeTest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTimeTest.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTopicTest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Components/DynamicTopicTest.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Results.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Results.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/TestTemplate.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/TestTemplate.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUsersStudyResultsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -397,7 +371,7 @@
       <workItem from="1769089636982" duration="3316000" />
       <workItem from="1769166654804" duration="2656000" />
       <workItem from="1769241312375" duration="3823000" />
-      <workItem from="1769349166180" duration="1815000" />
+      <workItem from="1769411072292" duration="8838000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />

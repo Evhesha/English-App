@@ -61,6 +61,15 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(userStudyPercentDto);
         }
 
+        [HttpPost("users/{userId:guid}/test-results/batch")]
+        public async Task<ActionResult<List<UserStudyResult>>> GetUserTestResultsBatch(
+            Guid userId,
+            [FromBody] List<Guid> testIds,
+            CancellationToken cancellationToken)
+        {
+            return Ok(await _service.GetTestsStudyResultsByUserIdAndTestId(userId, testIds, cancellationToken));
+        }
+        
         [HttpPost]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<ActionResult<Guid>> CreateUserStudyResult(
@@ -99,6 +108,13 @@ namespace EnglishStorageApplication.Server.Controllers
         public async Task<IActionResult> DeleteUserStudyResult(Guid id, CancellationToken cancellationToken)
         {
             return Ok(await _service.DeleteUserResult(id, cancellationToken));
+        }
+
+        [HttpDelete("tests/{userId:guid}")]
+        [EnableCors("AllowSpecificOrigin")]
+        public async Task<IActionResult> DeleteUsersTestsStudyResults(Guid userId, CancellationToken cancellationToken)
+        {
+            return Ok(await _service.DeleteUsersStudyResultByUserId(userId, cancellationToken));
         }
     }
 }

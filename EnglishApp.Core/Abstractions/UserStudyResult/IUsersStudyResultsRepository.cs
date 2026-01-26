@@ -11,6 +11,12 @@ public interface IUsersStudyResultsRepository
     Task<(double, int)> GetUserStudyPercentByIdAsync(
         Guid userId,
         CancellationToken cancellationToken);
+
+    Task<List<Models.UserStudyResult>> GetTestsStudyResultsByUserIdAndTestIdAsync(
+        Guid userId,
+        List<Guid> testsId,
+        CancellationToken cancellationToken);
+    
     
     Task<Guid> CreateUserStudyResultAsync(
         Models.UserStudyResult userStudyResult,
@@ -24,4 +30,9 @@ public interface IUsersStudyResultsRepository
     Task<Guid> DeleteUserStudyResultAsync(
         Guid id,
         CancellationToken cancellationToken);
+    
+    Task<Guid> DeleteUsersStudyResultByUserIdAsync(
+        Guid userId,
+        CancellationToken cancellationToken
+    );
 }
