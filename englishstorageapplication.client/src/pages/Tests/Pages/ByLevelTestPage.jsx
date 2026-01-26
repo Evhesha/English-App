@@ -3,7 +3,7 @@ import TestCardLink from "../TestTemplateComponent/TestCardLink.jsx";
 
 const testConfig = [
     {
-        id: "00000000-0000-0000-0000-000000000000",
+        id: "a0b1c2d3-e4f5-6789-abcd-ef0123456789",
         level: "A0",
         name: "A0 Beginner Level Test",
         path: "/A0-test",
@@ -11,7 +11,7 @@ const testConfig = [
         description: "Basic vocabulary and simple sentences for absolute beginners",
     },
     {
-        id: "11111111-1111-1111-1111-111111111111",
+        id: "a1b2c3d4-e5f6-7890-abcd-ef0123456789",
         level: "A1",
         name: "A1 Elementary Level Test",
         path: "/A1-test",
@@ -19,7 +19,7 @@ const testConfig = [
         description: "Everyday expressions and basic phrases",
     },
     {
-        id: "22222222-2222-2222-2222-222222222222",
+        id: "a3b4c5d6-e7f8-9012-abcd-ef0123456789",
         level: "A2",
         name: "A2 Pre-Intermediate Test",
         path: "/A2-test",
@@ -27,7 +27,7 @@ const testConfig = [
         description: "Simple direct communication on familiar topics",
     },
     {
-        id: "33333333-3333-3333-3333-333333333333",
+        id: "b1c2d3e4-f5g6-7890-abcd-ef0123456789",
         level: "B1",
         name: "B1 Intermediate Test",
         path: "/B1-test",
@@ -35,7 +35,7 @@ const testConfig = [
         description: "Dealing with most situations while traveling",
     },
     {
-        id: "44444444-4444-4444-4444-444444444444",
+        id: "b2c3d4e5-f6g7-8901-abcd-ef0123456789",
         level: "B2",
         name: "B2 Upper-Intermediate Test",
         path: "/B2-test",
@@ -43,7 +43,7 @@ const testConfig = [
         description: "Main ideas of complex text on both concrete and abstract topics",
     },
     {
-        id: "55555555-5555-5555-5555-555555555555",
+        id: "c1d2e3f4-g5h6-7890-abcd-ef0123456789",
         level: "C1",
         name: "C1 Advanced Test",
         path: "/C1-test",
@@ -51,7 +51,7 @@ const testConfig = [
         description: "Express ideas fluently and spontaneously",
     },
     {
-        id: "66666666-6666-6666-6666-666666666666",
+        id: "c2d3e4f5-g6h7-9012-abcd-ef0123456789",
         level: "C2",
         name: "C2 Proficiency Test",
         path: "/C2-test",

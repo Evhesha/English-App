@@ -3,7 +3,7 @@ import TestCardLink from "../TestTemplateComponent/TestCardLink.jsx";
 
 const timeTestConfig = [
     {
-        id: "12345678-9abc-def0-1234-567890abcdef",
+        id: "8a2d7f4c-1b3e-4f9a-8c5d-6e7f8a9b0c1d",
         name: "Present Simple Test",
         path: "/test/time/present-simple-test",
         fileName: "present_simple",
@@ -12,7 +12,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "23456789-0bcd-ef01-2345-67890abcdef0",
+        id: "9b3e8f5d-2c4f-5a0b-9d6e-7f8a9b0c1d2e",
         name: "Present Continuous Test",
         path: "/test/time/present-continuous-test",
         fileName: "present_continuous",
@@ -21,7 +21,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "34567890-1cde-f012-3456-7890abcdef01",
+        id: "a0b1c2d3-e4f5-6789-0123-456789abcdef",
         name: "Present Perfect Test",
         path: "/test/time/present-perfect-test",
         fileName: "present_perfect",
@@ -30,7 +30,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "45678901-2def-0123-4567-890abcdef012",
+        id: "b1c2d3e4-f5a6-7890-1234-56789abcde0f",
         name: "Present Perfect Continuous Test",
         path: "/test/time/present-perfect-continuous-test",
         fileName: "present_perfect_continuous",
@@ -39,7 +39,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "56789012-3ef0-1234-5678-90abcdef0123",
+        id: "c2d3e4f5-a6b7-8901-2345-6789abcdef01",
         name: "Past Simple Test",
         path: "/test/time/past-simple-test",
         fileName: "past_simple",
@@ -48,7 +48,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "67890123-4f01-2345-6789-0abcdef01234",
+        id: "d3e4f5a6-b7c8-9012-3456-789abcdef012",
         name: "Past Continuous Test",
         path: "/test/time/past-continuous-test",
         fileName: "past_continuous",
@@ -57,7 +57,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "78901234-5012-3456-789a-bcdef0123456",
+        id: "e4f5a6b7-c8d9-0123-4567-89abcdef0123",
         name: "Past Perfect Test",
         path: "/test/time/past-perfect-test",
         fileName: "past_perfect",
@@ -66,7 +66,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "89012345-6123-4567-89ab-cdef01234567",
+        id: "f5a6b7c8-d9e0-1234-5678-9abcdef01234",
         name: "Past Perfect Continuous Test",
         path: "/test/time/past-perfect-continuous-test",
         fileName: "past_perfect_continuous",
@@ -75,7 +75,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "90123456-7234-5678-9abc-def012345678",
+        id: "0a1b2c3d-4e5f-6789-0abc-def123456789",
         name: "Future Simple Test",
         path: "/test/time/future-simple-test",
         fileName: "future_simple",
@@ -84,7 +84,7 @@ const timeTestConfig = [
         category: "Future Tenses"
     },
     {
-        id: "01234567-8345-6789-abcd-ef0123456789",
+        id: "1b2c3d4e-5f6a-7890-bcde-f1234567890a",
         name: "Future Continuous Test",
         path: "/test/time/future-continuous-test",
         fileName: "future_continuous",
@@ -93,7 +93,7 @@ const timeTestConfig = [
         category: "Future Tenses"
     },
     {
-        id: "12345678-9456-7890-bcde-f0123456789a",
+        id: "2c3d4e5f-6a7b-8901-cdef-234567890ab1",
         name: "Future Perfect Test",
         path: "/test/time/future-perfect-test",
         fileName: "future_perfect",
@@ -102,7 +102,7 @@ const timeTestConfig = [
         category: "Future Tenses"
     },
     {
-        id: "23456789-0567-8901-cdef-0123456789ab",
+        id: "3d4e5f6a-7b8c-9012-def3-4567890abc12",
         name: "Future Perfect Continuous Test",
         path: "/test/time/future-perfect-continuous-test",
         fileName: "future_perfect_continuous",
