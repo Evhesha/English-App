@@ -30,6 +30,17 @@ namespace EnglishApp.DataAccess.Repositories
                 .Where(x => x.UserId == userId)
                 .ToListAsync(cancellationToken);
         }
+
+        public async Task<List<UserStudyResult>> GetTestsStudyResultsByUserIdAndTestIdAsync(
+            Guid userId,
+            List<Guid> testsId,
+            CancellationToken cancellationToken)
+        {
+            return await _context.UsersStudyResults
+                .AsNoTracking()
+                .Where(x => x.UserId == userId && testsId.Contains(x.TestId))
+                .ToListAsync(cancellationToken);
+        }
         
         public async Task<(double, int)> GetUserStudyPercentByIdAsync(
             Guid userId,
@@ -100,6 +111,21 @@ namespace EnglishApp.DataAccess.Repositories
             await _context.SaveChangesAsync(cancellationToken);
 
             return id;
+        }
+
+        public async Task<Guid> DeleteUsersStudyResultByUserIdAsync(
+            Guid userId,
+            CancellationToken cancellationToken
+        )
+        {
+            var results = await _context.UsersStudyResults
+                .Where(x => x.UserId == userId)
+                .ToListAsync(cancellationToken);
+            
+            _context.UsersStudyResults.RemoveRange(results);
+            await _context.SaveChangesAsync(cancellationToken);
+            
+            return userId;
         }
     }
 }
