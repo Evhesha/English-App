@@ -16,11 +16,9 @@
   <component name="ChangeListManager">
     <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: now tests results save with correct test id. Changed id's of some tests to guid type.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/UserStudyResultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUserStudyResultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/UserStudyResult/IUsersStudyResultsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByLevelTestPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByLevelTestPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTimeTestsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTimeTestsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTopicTestsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTopicTestsPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -568,7 +566,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: new docker containers for redis and redis managing." />
     <MESSAGE value="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data." />
     <MESSAGE value="Feature: filtering and sorting for lessons is available for users" />
     <MESSAGE value="Fix: can easily update users in admin page. Adding new putch method for changing user role." />
@@ -593,7 +590,8 @@
     <MESSAGE value="Feature: links for buttons in home page. Refactoring PlsAuthorizeBlock.jsx to convinient component, tow buttons for login and sign up in it." />
     <MESSAGE value="Feature: new functionality in getting users with name and email params" />
     <MESSAGE value="Feature: serilog for ai server was added. New seq libraries for storing program logs were added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: serilog for ai server was added. New seq libraries for storing program logs were added." />
+    <MESSAGE value="Feature: now we can get only spicific tests results, for example for one page. We also can delete all users tests results;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: now we can get only spicific tests results, for example for one page. We also can delete all users tests results;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
