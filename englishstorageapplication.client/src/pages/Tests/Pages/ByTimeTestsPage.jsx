@@ -1,7 +1,13 @@
 import "../styles.css";
 import TestCardLink from "../TestTemplateComponent/TestCardLink.jsx";
+import {useEffect, useState, useRef} from "react";
+import Cookies from "js-cookie";
+import axios from "axios";
+import {jwtDecode} from "jwt-decode";
 
-const timeTestConfig = [
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+const testConfig = [
     {
         id: "8a2d7f4c-1b3e-4f9a-8c5d-6e7f8a9b0c1d",
         name: "Present Simple Test",
@@ -113,13 +119,48 @@ const timeTestConfig = [
 ];
 
 function ByTimeTestsPage() {
-    const testsByCategory = timeTestConfig.reduce((acc, test) => {
+    const testsByCategory = testConfig.reduce((acc, test) => {
         if (!acc[test.category]) {
             acc[test.category] = [];
         }
         acc[test.category].push(test);
         return acc;
     }, {});
+
+    const ids = testConfig.map(item => item.id);
+    const [results, setResults] = useState([]);
+    const effectRan = useRef(null);
+
+    useEffect(() => {
+        if (effectRan.current === true) {
+            return;
+        }
+        const fetchData = async () => {
+            const token = Cookies.get("token");
+            if (!token) return;
+            try {
+                const decodedToken = jwtDecode(token);
+                const userId = decodedToken.userId;
+
+                const response = await axios.post(`${API_BASE_URL}/api/UsersStudyResults/users/${userId}/tests-results`,
+                    ids);
+                console.log(response.data)
+                setResults(response.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+        return () => {
+            effectRan.current = true;
+        };
+    }, []);
+
+    const getTestResult = (testId) => {
+        const result = results.find(result => result.testId === testId);
+        return result ? result.percentResult : null;
+    };
 
     return (
         <div className="lessons-container">
@@ -132,9 +173,16 @@ function ByTimeTestsPage() {
                 <div key={category} className="mb-5">
                     <h2 className="category-title mb-3">{category}</h2>
                     <div className="lessons-grid">
-                        {tests.map((test) => (
-                            <TestCardLink key={test.id} test={test} />
-                        ))}
+                        {tests.map((test) => {
+                            const testResult = getTestResult(test.id);
+                            return (
+                                <TestCardLink
+                                    key={test.id}
+                                    test={test}
+                                    testResult={testResult}
+                                />
+                            );
+                        })}
                     </div>
                 </div>
             ))}

@@ -1,5 +1,11 @@
 import "../styles.css";
 import TestCardLink from "../TestTemplateComponent/TestCardLink.jsx";
+import {useEffect, useState, useRef} from "react";
+import Cookies from "js-cookie";
+import axios from "axios";
+import {jwtDecode} from "jwt-decode";
+
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const testConfig = [
     {
@@ -35,7 +41,7 @@ const testConfig = [
         description: "Test countable/uncountable nouns",
     },
     {
-        id: "4e5f6a7b-8c9d-0a1b-2c3d-4e5f6a7b8c9d",
+        id: "8c9d0a1b-2c3d-4e5f-6a7b-8c9d0a1b2c3d",
         topic: "adjectives",
         name: "Adjectives Test",
         path: "/test/topic/adjectives-test",
@@ -59,7 +65,7 @@ const testConfig = [
         description: "Test can, could, may, might, must, should, would",
     },
     {
-        id: "7b8c9d0a-1b2c-3d4e-5f6a-7b8c9d0a1b2c",
+        id: "9d0a1b2c-3d4e-5f6a-7b8c-9d0a1b2c3d4e",
         topic: "conditionals",
         name: "Conditionals Test",
         path: "/test/topic/conditionals-test",
@@ -75,7 +81,7 @@ const testConfig = [
         description: "Test Passive Voice in different tenses",
     },
     {
-        id: "6a7b8c9d-0a1b-2c3d-4e5f-6a7b8c9d0a1b",
+        id: "2c3d4e5f-6a7b-8c9d-0a1b-2c3d4e5f6a7b",
         topic: "reported-speech",
         name: "Reported Speech Test",
         path: "/test/topic/reported-speech-test",
@@ -83,7 +89,7 @@ const testConfig = [
         description: "Test Reported Speech with tense changes",
     },
     {
-        id: "5f6a7b8c-9d0a-1b2c-3d4e-5f6a7b8c9d0a",
+        id: "3d4e5f6a-7b8c-9d0a-1b2c-3d4e5f6a7b8c",
         topic: "relative-pronouns",
         name: "Relative Pronouns Test",
         path: "/test/topic/relative-pronouns-test",
@@ -91,7 +97,7 @@ const testConfig = [
         description: "Test who, which, that, whose, whom",
     },
     {
-        id: "9d0a1b2c-3d4e-5f6a-7b8c-9d0a1b2c3d4e",
+        id: "4e5f6a7b-8c9d-0a1b-2c3d-4e5f6a7b8c9d",
         topic: "gerund-infinitive",
         name: "Gerund and Infinitive Test",
         path: "/test/topic/gerund-infinitive-test",
@@ -99,7 +105,7 @@ const testConfig = [
         description: "Test Gerund vs Infinitive after verbs",
     },
     {
-        id: "2c3d4e5f-6a7b-8c9d-0a1b-2c3d4e5f6a7b",
+        id: "6a7b8c9d-0a1b-2c3d-4e5f-6a7b8c9d0a1c",
         topic: "phrasal-verbs",
         name: "Phrasal Verbs Test",
         path: "/test/topic/phrasal-verbs-test",
@@ -107,7 +113,7 @@ const testConfig = [
         description: "Test common phrasal verbs",
     },
     {
-        id: "7b8c9d0a-1b2c-3d4e-5f6a-7b8c9d0a1b2c",
+        id: "7b8c9d0a-1b2c-3d4e-5f6a-7b8c9d0a1b2d",
         topic: "conjunctions",
         name: "Conjunctions Test",
         path: "/test/topic/conjunctions-test",
@@ -117,6 +123,41 @@ const testConfig = [
 ];
 
 function ByTopicTestsPage() {
+    const ids = testConfig.map(item => item.id);
+    const [results, setResults] = useState([]);
+    const effectRan = useRef(null);
+
+    useEffect(() => {
+        if (effectRan.current === true) {
+            return;
+        }
+        const fetchData = async () => {
+            const token = Cookies.get("token");
+            if (!token) return;
+            try {
+                const decodedToken = jwtDecode(token);
+                const userId = decodedToken.userId;
+
+                const response = await axios.post(`${API_BASE_URL}/api/UsersStudyResults/users/${userId}/tests-results`,
+                    ids);
+                console.log(response.data)
+                setResults(response.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+        return () => {
+            effectRan.current = true;
+        };
+    }, []);
+    
+    const getTestResult = (testId) => {
+        const result = results.find(result => result.testId === testId);
+        return result ? result.percentResult : null;
+    };
+    
     return (
         <div className="lessons-container">
             <h1 className="text-center main-title mb-5">Grammar Topics Tests</h1>
@@ -124,9 +165,16 @@ function ByTopicTestsPage() {
                 Select a grammar topic to test your knowledge
             </p>
             <div className="lessons-grid">
-                {testConfig.map((test) => (
-                    <TestCardLink key={test.id} test={test} />
-                ))}
+                {testConfig.map((test) => {
+                    const testResult = getTestResult(test.id);
+                    return (
+                        <TestCardLink
+                            key={test.id}
+                            test={test}
+                            testResult={testResult}
+                        />
+                    );
+                })}
             </div>
         </div>
     );
