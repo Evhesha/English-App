@@ -61,7 +61,7 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(userStudyPercentDto);
         }
 
-        [HttpPost("users/{userId:guid}/test-results/batch")]
+        [HttpPost("users/{userId:guid}/tests-results")]
         public async Task<ActionResult<List<UserStudyResult>>> GetUserTestResultsBatch(
             Guid userId,
             [FromBody] List<Guid> testIds,
