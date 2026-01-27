@@ -1,103 +1,111 @@
-.lessons-container {
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
+/* Основные стили для PC (как было) */
+.lesson-list-element {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  margin-bottom: 12px !important;
+  padding: 16px !important;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.lesson-content {
+  flex: 1;
+}
+
+.lesson-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.lesson-info {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.info-label {
+  font-weight: 500;
+}
+
+.info-value {
+  color: #007bff;
+}
+
+.lesson-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Медиа-запросы для планшетов и мобильных */
+@media (max-width: 768px) {
+  .lesson-list-element {
+    flex-direction: column;
+    padding: 12px !important;
+    margin-bottom: 10px !important;
   }
-  
-  .main-title {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .lessons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .lesson-card {
-    position: relative;
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    text-decoration: none;
-    color: #2c3e50;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-  
-  .lesson-card:hover {
-    transform: translateY(-5px);
-    color: #2c3e50;
-  }
-  
-  .lesson-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
+
   .lesson-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 12px;
   }
-  
-  .lesson-description {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 0;
+
+  .lesson-info {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-bottom: 12px;
   }
-  
-  .hover-effect {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .info-item {
+    flex: 1 0 calc(50% - 6px);
+    min-width: 100px;
+  }
+
+  .info-item.date-item {
+    flex: 1 0 100%;
+    order: 3;
+  }
+
+  .lesson-actions {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(130,217,210,0.2) 0%, rgba(255,255,255,0.2) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    justify-content: center;
   }
-  
-  .lesson-card:hover .hover-effect {
-    opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .lesson-list-element {
+    padding: 10px !important;
   }
-  
-  /* Медиа-запрос для мобильных устройств */
-  @media (max-width: 768px) {
-    .lessons-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      padding: 0 1rem;
-    }
-    
-    .main-title {
-      font-size: 2rem;
-    }
-    
-    .lesson-card {
-      padding: 1.5rem;
-    }
+
+  .lesson-info {
+    flex-direction: column;
+    gap: 8px;
   }
-  
-  /* Анимация при появлении карточек */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  .info-item {
+    flex: 1 0 100%;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f0f0f0;
   }
-  
-  .lesson-card {
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: calc(var(--animation-order) * 0.1s);
+
+  .info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
+
+  .info-item.date-item {
+    order: initial;
+  }
+}

@@ -6,13 +6,14 @@ import { useTranslation } from "react-i18next";
 
 function LessonListElementForUsers({ id, name, text, watchCount, author, createdDate }) {
     const { t } = useTranslation();
+
     const formatDate = (dateString) => {
         if (!dateString) return '';
         return new Date(dateString).toLocaleDateString('en-CA');
     };
-    
+
     return (
-        <li className="list-group-item d-flex justify-content-between align-items-center lesson-list-element">
+        <li className="list-group-item lesson-list-element">
             <div className="lesson-content">
                 <h3 className="lesson-title">{name}</h3>
                 <div className="lesson-info">
@@ -24,13 +25,15 @@ function LessonListElementForUsers({ id, name, text, watchCount, author, created
                         <span className="info-label">{t("online-lessons.author")}:</span>
                         <span className="info-value">{author}</span>
                     </div>
-                    <div className="info-item">
+                    <div className="info-item date-item">
                         <span className="info-label">{t("online-lessons.created-date")}:</span>
-                        <span className="info-value">{createdDate && (
-                            <small className="text-muted">
-                                {formatDate(createdDate)}
-                            </small>
-                        )}</span>
+                        <span className="info-value">
+                            {createdDate && (
+                                <small className="text-muted">
+                                    {formatDate(createdDate)}
+                                </small>
+                            )}
+                        </span>
                     </div>
                 </div>
             </div>
