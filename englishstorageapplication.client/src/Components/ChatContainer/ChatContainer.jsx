@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
 import "./ChatContainer.css";
+import removeMd from 'remove-markdown';
 
 const ChatContainer = () => {
     const { chatId } = useParams();
@@ -42,7 +43,7 @@ const ChatContainer = () => {
                 const data = await response.json();
 
                 const formatted = data.map(m => ({
-                    text: m.text,
+                    text: removeMd(m.text),
                     type: m.type === "userMessage" ? "sent" : "received",
                     timestamp: m.date
                 }));
@@ -103,7 +104,7 @@ const ChatContainer = () => {
             setMessages(prev => [
                 ...prev,
                 {
-                    text: response.text,
+                    text: removeMd(response.text),
                     type: "received",
                     timestamp: response.date
                 }
