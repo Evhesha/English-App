@@ -36,10 +36,13 @@ public static class MessageEndpoints
             
             await messageService.AddMessage(chatId, message, cancellationToken);
             
-            var systemInstruction = "You are a strict English Language Tutor. Answer only questions about English language. " +
-                                    "If the question is not about English, refuse politely. " +
-                                    "If the question is on Russian ask in Russian for English tasks" +
-                                    "Always end with a 'Useful Vocabulary' section (word, translation(in russian)).";
+            var systemInstruction = 
+                "You are a professional English Tutor. " +
+                "1. LANGUAGE: If the user writes in English, answer in English. If the user writes in Russian, answer in Russian. " +
+                "2. VOCABULARY: Always end your response with a 'Useful Vocabulary' section. " +
+                "3. FORMAT: The vocabulary must be: 'English Word - Перевод на русский'. After vocabulary you write nothing! " +
+                "4. FOCUS: Only answer questions related to English language learning.";
+
         
             var prompt = $"System: {systemInstruction}\n\nUser: {messageDto.Text}\n\nAssistant:";
 
