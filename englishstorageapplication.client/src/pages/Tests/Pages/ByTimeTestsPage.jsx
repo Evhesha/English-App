@@ -164,11 +164,7 @@ function ByTimeTestsPage() {
 
     return (
         <div className="lessons-container">
-            <h1 className="text-center main-title mb-5">English Tenses Tests</h1>
-            <p className="text-center text-muted mb-5">
-                Practice all 12 English tenses with our comprehensive tests
-            </p>
-
+            <h1 className="text-center main-title mb-5">English time tests</h1>
             {Object.entries(testsByCategory).map(([category, tests]) => (
                 <div key={category} className="mb-5">
                     <h2 className="category-title mb-3">{category}</h2>

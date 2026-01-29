@@ -32,7 +32,10 @@
     "sign-out": "Sign out",
     "app-lessons": "App lessons",
     "online-lessons": "Online lessons",
-    "assistant": "Assistant"
+    "assistant": "Assistant",
+    "new-chat": "New chat",
+    "search": "Search",
+    "no-chats-yet": "No chats yet"
   },
   "home": {
     "hero-title": "Learn English for free with pleasure",
