@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Trash } from "react-bootstrap-icons";
+import { Trash, Pen } from "react-bootstrap-icons";
 import axios from "axios";
 
 function ChatLink({name, id, onDelete}){
@@ -17,10 +17,8 @@ function ChatLink({name, id, onDelete}){
     };
 
     const getChatMessages = async () => {
-
         try {
-            var data = await axios.get(` http://localhost:5199/chat/${id}/messages`);
-            console.log(data);
+            await axios.get(` http://localhost:5199/chat/${id}/messages`);
         } catch (error) {
             console.error('Mistake on deleting chat:', error);
         }
@@ -35,9 +33,13 @@ function ChatLink({name, id, onDelete}){
             >
                 {name}
             </Link>
-            <button className="btn" style={{ border: "always" }} onClick={handleDelete}>
+            <button className="btn" style={{  border: "1px solid black", padding: "4px 8px" }} onClick={handleDelete}>
                 <Trash/>
             </button>
+            <button className="btn" style={{  border: "1px solid black", padding: "4px 8px" }} onClick={handleDelete}>
+                <Pen/>
+            </button>
+            <p></p>
         </li>
     )
 }

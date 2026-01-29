@@ -2,10 +2,12 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
+import { useTranslation } from "react-i18next";
 
 function NewChatButton({onPost}) {
     const navigate = useNavigate();
-
+    const {t} = useTranslation();
+    
     const handleCreate = async () => {
         try {
             const token = Cookies.get("token");
@@ -18,7 +20,6 @@ function NewChatButton({onPost}) {
                     title: "New Chat",
                 }
             )
-            console.log(response)
             onPost(response.data);
             navigate(`/chat/${response.data.id}`);
         } catch (error) {
@@ -32,7 +33,7 @@ function NewChatButton({onPost}) {
             onClick={handleCreate}
             className="btn  "
         >
-            New chat <i className="bi bi-plus-circle"></i>
+            {t("sidebar.new-chat")} <i className="bi bi-plus-circle"></i>
         </button>
     );
 }

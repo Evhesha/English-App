@@ -104,10 +104,7 @@ function ByLevelTestPage() {
 
     return (
         <div className="lessons-container">
-            <h1 className="text-center main-title mb-5">Language Level Tests</h1>
-            <p className="text-center text-muted mb-4">
-                Select your proficiency level to take a test
-            </p>
+            <h1 className="text-center main-title mb-5">Language level tests</h1>
             <div className="lessons-grid">
                 {testConfig.map((test) => {
                     const testResult = getTestResult(test.id);

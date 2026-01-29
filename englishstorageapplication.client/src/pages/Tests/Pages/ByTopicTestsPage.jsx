@@ -160,10 +160,7 @@ function ByTopicTestsPage() {
     
     return (
         <div className="lessons-container">
-            <h1 className="text-center main-title mb-5">Grammar Topics Tests</h1>
-            <p className="text-center text-muted mb-4">
-                Select a grammar topic to test your knowledge
-            </p>
+            <h1 className="text-center main-title mb-5">English topics tests</h1>
             <div className="lessons-grid">
                 {testConfig.map((test) => {
                     const testResult = getTestResult(test.id);
