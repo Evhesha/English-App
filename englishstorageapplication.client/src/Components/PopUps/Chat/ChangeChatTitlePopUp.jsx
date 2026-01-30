@@ -1,13 +1,11 @@
 import "../PopUp.css";
 import {useState} from "react";
 import axios from "axios";
+import {Pen} from "react-bootstrap-icons";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL;
-
-function CheckDictCardPopUp({title, cardText, userId, id}) {
+function ChangeChatTitlePopUp({title, id, OnPatch}) {
     const [isOpen, setIsOpen] = useState(false);
     const [name, setName] = useState(title);
-    const [text, setText] = useState(cardText);
     const [error, setError] = useState(null);
 
     const togglePopup = () => {
@@ -20,32 +18,28 @@ function CheckDictCardPopUp({title, cardText, userId, id}) {
         setIsOpen(false);
     };
 
-    const handleEdit = async (event) => {
+    const handleChangeName = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.put(
-                `${API_BASE_URL}/api/UsersCards/${id}`,
+            const response = await axios.patch(
+                `http://localhost:5199/chat/${id}/title`,
                 {
-                    userId: userId,
-                    nameOfUsersCard: name,
-                    userCardData: text,
+                    newChatTitle: name
                 }
             );
 
             console.log(response);
+            togglePopup();
             window.location.reload();
         } catch (error) {
             console.error(error);
-            setError(
-                error.response?.data?.message || "Ошибка при изменении карточки."
-            );
         }
     };
 
     return (
-        <div>
-            <button className="btn btn-primary" onClick={togglePopup}>
-                Check card <i className="bi bi-cloud-check"></i>
+        <div style={{ display: 'inline-block' }}>
+            <button className="btn" style={{border: "1px solid black", padding: "4px 8px"}} onClick={togglePopup}>
+                <Pen/>
             </button>
             {isOpen && (
                 <div className="popup">
@@ -53,11 +47,11 @@ function CheckDictCardPopUp({title, cardText, userId, id}) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3 style={{color: "black"}}>Check card</h3>
-                        <form onSubmit={handleEdit}>
+                        <h3 style={{color: "black"}}>Change chat title</h3>
+                        <form onSubmit={handleChangeName}>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label" style={{color: "black"}}>
-                                    Card name
+                                    New chat title
                                 </label>
                                 <input
                                     type="text"
@@ -65,18 +59,6 @@ function CheckDictCardPopUp({title, cardText, userId, id}) {
                                     id="name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="text" className="form-label" style={{color: "black"}}>
-                                    Card text
-                                </label>
-                                <textarea
-                                    className="form-control"
-                                    id="text"
-                                    rows="5"
-                                    value={text}
-                                    onChange={(e) => setText(e.target.value)}
                                 />
                             </div>
                             {error && (
@@ -98,4 +80,4 @@ function CheckDictCardPopUp({title, cardText, userId, id}) {
     );
 }
 
-export default CheckDictCardPopUp;
+export default ChangeChatTitlePopUp;

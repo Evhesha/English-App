@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Trash, Pen } from "react-bootstrap-icons";
+import { Trash } from "react-bootstrap-icons";
 import axios from "axios";
+import ChangeChatTitlePopUp from "@/Components/PopUps/Chat/ChangeChatTitlePopUp.jsx";
 
 function ChatLink({name, id, onDelete}){
     const handleDelete = async () => {
@@ -36,9 +37,7 @@ function ChatLink({name, id, onDelete}){
             <button className="btn" style={{  border: "1px solid black", padding: "4px 8px" }} onClick={handleDelete}>
                 <Trash/>
             </button>
-            <button className="btn" style={{  border: "1px solid black", padding: "4px 8px" }} onClick={handleDelete}>
-                <Pen/>
-            </button>
+            <ChangeChatTitlePopUp title={name} id={id}></ChangeChatTitlePopUp>
             <p></p>
         </li>
     )

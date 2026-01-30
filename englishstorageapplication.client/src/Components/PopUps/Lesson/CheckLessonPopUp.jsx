@@ -48,8 +48,6 @@ function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsP
                 }
                 togglePopup();
                 window.location.reload();
-            } else {
-                setError(response.data.message || "Ошибка при изменении урока.");
             }
         } catch (error) {
             console.error(error);
