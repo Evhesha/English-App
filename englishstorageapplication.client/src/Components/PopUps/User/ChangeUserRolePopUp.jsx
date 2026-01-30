@@ -6,8 +6,7 @@ import Cookies from "js-cookie";
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function ChangeUserRolePopUp({ id,
-                           role: initialRole,
-                           onPatch }) {
+                           role: initialRole}) {
     const [isOpen, setIsOpen] = useState(false);
     const [role, setRole] = useState(initialRole);
     const [error, setError] = useState(null);
@@ -35,9 +34,6 @@ function ChangeUserRolePopUp({ id,
             console.log(response);
 
             if (response.status === 200 || response.status === 201) {
-                if (typeof onPut === 'function') {
-                    onPatch(response.data);
-                }
                 togglePopup();
                 window.location.reload();
             } else {
@@ -45,9 +41,7 @@ function ChangeUserRolePopUp({ id,
             }
         } catch (error) {
             console.error(error);
-            setError(
-                error.response?.data?.message || "Вы можете задать только роли Admin, Teacher, User"
-            );
+            setError( error.response?.data?.message || "Вы можете задать только роли Admin, Teacher, User");
         }
     };
 
