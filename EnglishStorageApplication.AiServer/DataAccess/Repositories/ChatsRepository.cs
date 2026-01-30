@@ -39,6 +39,24 @@ public class ChatsRepository : IChatsRepository
         await _chats.InsertOneAsync(chat, cancellationToken: cancellationToken);   
     }
 
+    public async Task<string> UpdateChatTitleAsync(
+        string chatId,
+        string newChatName,
+        CancellationToken cancellationToken)
+    {
+        var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);
+        var update = Builders<Chat>.Update.Set(c => c.Title, newChatName);
+
+        var result = await _chats.UpdateOneAsync(filter, update, null, cancellationToken);
+
+        if (result.MatchedCount == 0)
+        {
+            throw new Exception("Chat not found");
+        }
+
+        return chatId;
+    }
+
     public async Task DeleteChatByChatIdAsync(string chatId, CancellationToken cancellationToken)
     {
         var filter = Builders<Chat>.Filter.Eq(c => c.Id, chatId);

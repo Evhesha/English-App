@@ -51,6 +51,20 @@ public static class ChatsEndpoints
             await chatsService.CreateChat(chat, cancellationToken);
             return Results.Ok(chat.Id); 
         });
+
+        app.MapPatch("/chat/{chatId}/title", async (
+            string chatId,
+            UpdateChatTitleDto updateChatTitleDto,
+            IChatsService chatsService,
+            CancellationToken cancellationToken) =>
+        {
+            var result = await chatsService.UpdateChatTitle(
+                chatId,
+                updateChatTitleDto.NewChatTitle,
+                cancellationToken);
+            
+            return Results.Ok(result);
+        });
         
         app.MapDelete("/chat/{chatId}", async (
             string chatId,
