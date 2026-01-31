@@ -33,6 +33,14 @@ function Sidebar() {
         setChats(prevChats => [newChat, ...prevChats]);
     };
 
+    const handleUpdate = (updatedChat) => {
+        setChats(prevChats =>
+            prevChats.map(chat =>
+                chat.id === updatedChat.id ? { ...chat, title: updatedChat.title } : chat
+            )
+        );
+    };
+
     useEffect(() => {
         const token = Cookies.get("token");
         if (!token) {
@@ -254,6 +262,7 @@ function Sidebar() {
                                             id={chat.id}
                                             name={chat.title}
                                             onDelete={() => handleDelete(chat.id)}
+                                            onUpdate={handleUpdate}
                                         />
                                     ))
                                 )}

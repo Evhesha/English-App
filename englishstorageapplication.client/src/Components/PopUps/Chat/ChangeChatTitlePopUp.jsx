@@ -28,9 +28,13 @@ function ChangeChatTitlePopUp({title, id, OnPatch}) {
                 }
             );
 
-            console.log(response);
+            const updatedChat ={
+                id: response.data,
+                title: name
+            }
+            
+            OnPatch(updatedChat);
             togglePopup();
-            window.location.reload();
         } catch (error) {
             console.error(error);
         }
