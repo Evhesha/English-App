@@ -14,14 +14,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: New button for change chat name, without functionality. New translations for assistant block.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: pop up for changing chat title, microchanges for pop ups responses.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CheckDictCardPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CheckDictCardPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CreateDictCardPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CreateDictCardPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/ChangeUserRolePopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/ChangeUserRolePopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Chat/ChangeChatTitlePopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Chat/ChangeChatTitlePopUp.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/ChatLink.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/ChatLink.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/NewChatButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/NewChatButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "feature/pop-ups",
+    "git-widget-placeholder": "feature/chat",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -284,6 +282,7 @@
       <list>
         <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
@@ -377,6 +376,7 @@
       <workItem from="1769499827485" duration="1440000" />
       <workItem from="1769674231061" duration="3169000" />
       <workItem from="1769758396612" duration="2739000" />
+      <workItem from="1769845111367" duration="4539000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -546,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769457151874</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Feature: pop up for changing chat title, microchanges for pop ups responses.">
+      <option name="closed" value="true" />
+      <created>1769780728463</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1769780728463</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +589,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature &amp; fix: new like exception was added. New tests for likes controller. Correcting mistakes in parameter line when delete data." />
     <MESSAGE value="Feature: filtering and sorting for lessons is available for users" />
     <MESSAGE value="Fix: can easily update users in admin page. Adding new putch method for changing user role." />
     <MESSAGE value="Feature: benchmark controller was added for testing getting lessons with cache and without cache." />
@@ -606,7 +613,8 @@
     <MESSAGE value="Feature: new functionality in getting users with name and email params" />
     <MESSAGE value="Feature: serilog for ai server was added. New seq libraries for storing program logs were added." />
     <MESSAGE value="Feature: now we can get only spicific tests results, for example for one page. We also can delete all users tests results;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: now we can get only spicific tests results, for example for one page. We also can delete all users tests results;" />
+    <MESSAGE value="Feature: pop up for changing chat title, microchanges for pop ups responses." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: pop up for changing chat title, microchanges for pop ups responses." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
