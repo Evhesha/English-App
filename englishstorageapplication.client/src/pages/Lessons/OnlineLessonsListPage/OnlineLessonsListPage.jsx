@@ -52,9 +52,7 @@ function OnlineLessonsListPage() {
             };
 
             const response = await axios.get(url, { params });
-
-            console.log(useCache ? "📦 Из кэша:" : "🗄️ Из базы:", response.data);
-
+            
             setLessons(response.data.lessons);
             setTotalPages(Math.ceil(response.data.totalCount / pageSize));
             setIsLoading(false);
@@ -118,10 +116,8 @@ function OnlineLessonsListPage() {
     return (
         <div className="lessons-container">
             <h1 className="text-center main-title mb-5">{t("online-lessons.online-lessons")}</h1>
-
             <div className="filtration-section mb-4">
                 <h3>{t("online-lessons.filters-sorting")}</h3>
-
                 <div className="row mb-3">
                     <div className="col-md-8">
                         <div className="form-floating">

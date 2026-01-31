@@ -8,5 +8,9 @@ public interface IChatsService
     Task<List<Chat>> GetUserChatsWithoutMessages(string userId, CancellationToken cancellationToken);
     Task<Chat> GetChatByChatId(string chatId, CancellationToken cancellationToken);
     Task CreateChat(Chat chat, CancellationToken cancellationToken);
+    Task<string> UpdateChatTitle(
+        string chatId,
+        string newChatName,
+        CancellationToken cancellationToken);
     Task DeleteChat(string chatId, CancellationToken cancellationToken);
 }

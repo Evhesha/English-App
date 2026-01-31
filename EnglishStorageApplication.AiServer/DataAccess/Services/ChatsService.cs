@@ -33,6 +33,14 @@ public class ChatsService : IChatsService
         await _chatsRepository.CreateChatAsync(chat, cancellationToken);
     }
 
+    public async Task<string> UpdateChatTitle(
+        string chatId,
+        string newChatName,
+        CancellationToken cancellationToken)
+    {
+        return await _chatsRepository.UpdateChatTitleAsync(chatId, newChatName, cancellationToken);
+    }
+
     public async Task DeleteChat(string chatId, CancellationToken cancellationToken)
     {
         await _chatsRepository.DeleteChatByChatIdAsync(chatId, cancellationToken);

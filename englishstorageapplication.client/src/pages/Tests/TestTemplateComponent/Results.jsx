@@ -1,6 +1,43 @@
 import getResultMessage from "./ResultMessage";
+import {useEffect, useRef} from "react";
+import Cookies from "js-cookie";
+import {jwtDecode} from "jwt-decode";
+import axios from "axios";
 
-function Results({ score, questionsLength, mistakes, onRetry }) {
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+function Results({testId, score, questionsLength, mistakes, onRetry}) {
+    const hasRun = useRef(false);
+    
+    useEffect(() => {
+        if (hasRun.current) return;
+        hasRun.current = true;
+
+        const token = Cookies.get("token");
+        if (!token) {
+            return;
+        }
+
+        const CreateResult = async () => {
+            try {
+                const decodedToken = jwtDecode(token);
+                const userId = decodedToken.userId;
+
+                await axios.post(`${API_BASE_URL}/api/UsersStudyResults`,
+                    {
+                        userId: userId,
+                        testId: testId,
+                        percentResult: ((score / questionsLength) * 100).toFixed(1)
+                    }
+                );
+                console.log("The result saved");
+            } catch (error) {
+                console.log("Error fetching chats:", error);
+            }
+        };
+
+        CreateResult();
+    }, []);
     const getMistakeAnalysis = () => {
         if (mistakes.length === 0) {
             return (
@@ -60,9 +97,7 @@ function Results({ score, questionsLength, mistakes, onRetry }) {
                     <div className="score-value">{questionsLength - score}</div>
                 </div>
             </div>
-
             {getMistakeAnalysis()}
-
             <button className="retry-btn" onClick={onRetry}>
                 Try Again 🔄
             </button>

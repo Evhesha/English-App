@@ -22,6 +22,15 @@ namespace EnglishApp.Application.AppServices
             return await _usersStudyResultsRepository.GetUserStudyResultsByIdAsync(userId, cancellationToken);
         }
 
+        public async Task<List<UserStudyResult>> GetTestsStudyResultsByUserIdAndTestId(
+            Guid userId,
+            List<Guid> testsId,
+            CancellationToken cancellationToken)
+        {
+            return await _usersStudyResultsRepository
+                .GetTestsStudyResultsByUserIdAndTestIdAsync(userId, testsId, cancellationToken);
+        }
+
         public async Task<(double, int)> GetUserStudyPercentById(Guid userId, CancellationToken cancellationToken)
         {
             return await _usersStudyResultsRepository.GetUserStudyPercentByIdAsync(userId, cancellationToken);
@@ -40,6 +49,14 @@ namespace EnglishApp.Application.AppServices
         public async Task<Guid> DeleteUserResult(Guid id, CancellationToken cancellationToken)
         {
             return await _usersStudyResultsRepository.DeleteUserStudyResultAsync(id, cancellationToken);
+        }
+
+        public async Task<Guid> DeleteUsersStudyResultByUserId(
+            Guid userId,
+            CancellationToken cancellationToken
+        )
+        {
+            return await _usersStudyResultsRepository.DeleteUsersStudyResultByUserIdAsync(userId, cancellationToken);
         }
     }
 }

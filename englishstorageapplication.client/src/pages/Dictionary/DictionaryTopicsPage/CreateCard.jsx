@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
 
-function CreateCard({image, title, text, onCreate}) {
+function CreateCard({image, title, text}) {
   const [userId, setUserId] = useState(null);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function CreateCard({image, title, text, onCreate}) {
           <p className="card-text">
             {text}
           </p>
-          <CreateDictCardPop onPost={onCreate} userId={userId}></CreateDictCardPop>
+          <CreateDictCardPop userId={userId}></CreateDictCardPop>
         </div>
       </div>
     </>

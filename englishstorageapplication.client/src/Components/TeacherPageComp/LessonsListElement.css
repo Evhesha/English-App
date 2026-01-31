@@ -43,3 +43,68 @@
     display: flex;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .lesson-list-element {
+        padding: 12px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .lesson-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .lesson-info {
+        gap: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .info-item {
+        min-width: 100px;
+        flex: 1 0 calc(50% - 6px);
+    }
+
+    .info-item.date-item {
+        min-width: 120px;
+        flex: 1 0 100%;
+        order: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .lesson-list-element {
+        padding: 10px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .lesson-title {
+        font-size: 0.95rem;
+    }
+
+    .lesson-info {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .info-item {
+        flex: 1 0 100%;
+        min-width: 100%;
+        justify-content: space-between;
+        padding: 4px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+    .info-item.date-item {
+        order: initial;
+    }
+
+    .lesson-actions {
+        justify-content: center;
+        margin-top: 12px;
+    }
+}

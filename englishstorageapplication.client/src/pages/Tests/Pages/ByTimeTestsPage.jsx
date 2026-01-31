@@ -1,9 +1,15 @@
 import "../styles.css";
 import TestCardLink from "../TestTemplateComponent/TestCardLink.jsx";
+import {useEffect, useState, useRef} from "react";
+import Cookies from "js-cookie";
+import axios from "axios";
+import {jwtDecode} from "jwt-decode";
 
-const timeTestConfig = [
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+const testConfig = [
     {
-        id: "12345678-9abc-def0-1234-567890abcdef",
+        id: "8a2d7f4c-1b3e-4f9a-8c5d-6e7f8a9b0c1d",
         name: "Present Simple Test",
         path: "/test/time/present-simple-test",
         fileName: "present_simple",
@@ -12,7 +18,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "23456789-0bcd-ef01-2345-67890abcdef0",
+        id: "9b3e8f5d-2c4f-5a0b-9d6e-7f8a9b0c1d2e",
         name: "Present Continuous Test",
         path: "/test/time/present-continuous-test",
         fileName: "present_continuous",
@@ -21,7 +27,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "34567890-1cde-f012-3456-7890abcdef01",
+        id: "a0b1c2d3-e4f5-6789-0123-456789abcdef",
         name: "Present Perfect Test",
         path: "/test/time/present-perfect-test",
         fileName: "present_perfect",
@@ -30,7 +36,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "45678901-2def-0123-4567-890abcdef012",
+        id: "b1c2d3e4-f5a6-7890-1234-56789abcde0f",
         name: "Present Perfect Continuous Test",
         path: "/test/time/present-perfect-continuous-test",
         fileName: "present_perfect_continuous",
@@ -39,7 +45,7 @@ const timeTestConfig = [
         category: "Present Tenses"
     },
     {
-        id: "56789012-3ef0-1234-5678-90abcdef0123",
+        id: "c2d3e4f5-a6b7-8901-2345-6789abcdef01",
         name: "Past Simple Test",
         path: "/test/time/past-simple-test",
         fileName: "past_simple",
@@ -48,7 +54,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "67890123-4f01-2345-6789-0abcdef01234",
+        id: "d3e4f5a6-b7c8-9012-3456-789abcdef012",
         name: "Past Continuous Test",
         path: "/test/time/past-continuous-test",
         fileName: "past_continuous",
@@ -57,7 +63,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "78901234-5012-3456-789a-bcdef0123456",
+        id: "e4f5a6b7-c8d9-0123-4567-89abcdef0123",
         name: "Past Perfect Test",
         path: "/test/time/past-perfect-test",
         fileName: "past_perfect",
@@ -66,7 +72,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "89012345-6123-4567-89ab-cdef01234567",
+        id: "f5a6b7c8-d9e0-1234-5678-9abcdef01234",
         name: "Past Perfect Continuous Test",
         path: "/test/time/past-perfect-continuous-test",
         fileName: "past_perfect_continuous",
@@ -75,7 +81,7 @@ const timeTestConfig = [
         category: "Past Tenses"
     },
     {
-        id: "90123456-7234-5678-9abc-def012345678",
+        id: "0a1b2c3d-4e5f-6789-0abc-def123456789",
         name: "Future Simple Test",
         path: "/test/time/future-simple-test",
         fileName: "future_simple",
@@ -84,7 +90,7 @@ const timeTestConfig = [
         category: "Future Tenses"
     },
     {
-        id: "01234567-8345-6789-abcd-ef0123456789",
+        id: "1b2c3d4e-5f6a-7890-bcde-f1234567890a",
         name: "Future Continuous Test",
         path: "/test/time/future-continuous-test",
         fileName: "future_continuous",
@@ -93,7 +99,7 @@ const timeTestConfig = [
         category: "Future Tenses"
     },
     {
-        id: "12345678-9456-7890-bcde-f0123456789a",
+        id: "2c3d4e5f-6a7b-8901-cdef-234567890ab1",
         name: "Future Perfect Test",
         path: "/test/time/future-perfect-test",
         fileName: "future_perfect",
@@ -102,7 +108,7 @@ const timeTestConfig = [
         category: "Future Tenses"
     },
     {
-        id: "23456789-0567-8901-cdef-0123456789ab",
+        id: "3d4e5f6a-7b8c-9012-def3-4567890abc12",
         name: "Future Perfect Continuous Test",
         path: "/test/time/future-perfect-continuous-test",
         fileName: "future_perfect_continuous",
@@ -113,7 +119,7 @@ const timeTestConfig = [
 ];
 
 function ByTimeTestsPage() {
-    const testsByCategory = timeTestConfig.reduce((acc, test) => {
+    const testsByCategory = testConfig.reduce((acc, test) => {
         if (!acc[test.category]) {
             acc[test.category] = [];
         }
@@ -121,20 +127,58 @@ function ByTimeTestsPage() {
         return acc;
     }, {});
 
+    const ids = testConfig.map(item => item.id);
+    const [results, setResults] = useState([]);
+    const effectRan = useRef(null);
+
+    useEffect(() => {
+        if (effectRan.current === true) {
+            return;
+        }
+        const fetchData = async () => {
+            const token = Cookies.get("token");
+            if (!token) return;
+            try {
+                const decodedToken = jwtDecode(token);
+                const userId = decodedToken.userId;
+
+                const response = await axios.post(`${API_BASE_URL}/api/UsersStudyResults/users/${userId}/tests-results`,
+                    ids);
+                console.log(response.data)
+                setResults(response.data);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+        return () => {
+            effectRan.current = true;
+        };
+    }, []);
+
+    const getTestResult = (testId) => {
+        const result = results.find(result => result.testId === testId);
+        return result ? result.percentResult : null;
+    };
+
     return (
         <div className="lessons-container">
-            <h1 className="text-center main-title mb-5">English Tenses Tests</h1>
-            <p className="text-center text-muted mb-5">
-                Practice all 12 English tenses with our comprehensive tests
-            </p>
-
+            <h1 className="text-center main-title mb-5">English time tests</h1>
             {Object.entries(testsByCategory).map(([category, tests]) => (
                 <div key={category} className="mb-5">
                     <h2 className="category-title mb-3">{category}</h2>
                     <div className="lessons-grid">
-                        {tests.map((test) => (
-                            <TestCardLink key={test.id} test={test} />
-                        ))}
+                        {tests.map((test) => {
+                            const testResult = getTestResult(test.id);
+                            return (
+                                <TestCardLink
+                                    key={test.id}
+                                    test={test}
+                                    testResult={testResult}
+                                />
+                            );
+                        })}
                     </div>
                 </div>
             ))}

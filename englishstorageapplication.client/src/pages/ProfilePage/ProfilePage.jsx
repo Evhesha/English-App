@@ -45,7 +45,7 @@ function ProfilePage() {
               `${API_BASE_URL}/api/UsersStudyResults/percent/${id}`
           );
           console.log("User data:", response.data);
-          setUserPercent(response.data.percent);
+          setUserPercent(response.data.percent.toFixed(2));
           setTestsCount(response.data.count);
         } catch (error) {
         }

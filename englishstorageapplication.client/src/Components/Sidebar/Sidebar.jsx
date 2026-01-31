@@ -242,9 +242,11 @@ function Sidebar() {
                         <div className="collapse" id="assistant-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <NewChatButton onPost={handleCreate}/>
-                                <Form.Control size="sm" type="text" placeholder="Search" className="search-control"/>
+                                <Form.Control size="sm" type="text" placeholder={t("sidebar.search")}
+                                              className="search-control"/>
+                                <p></p>
                                 {chats.length === 0 ? (
-                                    <div className="text-muted small p-2">No chats yet</div>
+                                    <div className="text-muted small p-2">{t("sidebar.no-chats-yet")}</div>
                                 ) : (
                                     chats.map(chat => (
                                         <ChatLink
