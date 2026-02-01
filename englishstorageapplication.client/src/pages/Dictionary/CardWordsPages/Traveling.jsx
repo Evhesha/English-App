@@ -5,41 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Traveling() {
-    const [response, setResponse] = useState('');
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    const handlePollClick = (option) => {
-        switch (option) {
-            case 'Cultural Exploration':
-                setResponse("Ah, the art lover! Don’t forget to take a selfie with the Mona Lisa!");
-                break;
-            case 'Adventure and Hiking':
-                setResponse("You adventurous soul! Just remember, even the best explorers need to hydrate!");
-                break;
-            case 'Relaxing on the Beach':
-                setResponse("Beach bum alert! Sunscreen is your best friend in paradise!");
-                break;
-            case 'City Breaks':
-                setResponse("City slicker! Just make sure to explore the hidden gems, not just the tourist traps!");
-                break;
-            default:
-                setResponse('');
-        }
-    };
 
     const handleMouseMove = (event) => {
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    const headerStyle = {
-        transform: `translate(${(mousePosition.x / 100) - 5}px, ${(mousePosition.y / 100) - 5}px)`,
-        transition: 'transform 0.1s',
-    };
-
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
             <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
-            <h1 className="header" style={headerStyle}>Exploring the World</h1>
             <section className="section">
                 <h2 className="subHeader">Words about travel</h2>
                 <div className="row">
@@ -107,17 +81,6 @@ function Traveling() {
                 <p className="paragraph"><strong>Catch a glimpse of</strong> - увидеть. Whether it's a famous landmark or a stunning sunset, these moments are unforgettable.</p>
                 <p className="paragraph"><strong>Explore the local cuisine</strong> - исследовать местную кухню. Trying new foods is a delicious way to experience a culture.</p>
                 <p className="paragraph"><strong>Make lasting memories</strong> - создавать незабываемые воспоминания. Travel enriches our lives and connects us with others.</p>
-            </section>
-            <section className="section">
-                <h2 className="subHeader">Quick Travel Poll</h2>
-                <p className="paragraph">What's your favorite type of travel experience?</p>
-                <div className="poll-options">
-                    <button className="btn btn-primary m-2" onClick={() => handlePollClick('Cultural Exploration')}>Cultural Exploration</button>
-                    <button className="btn btn-success m-2" onClick={() => handlePollClick('Adventure and Hiking')}>Adventure and Hiking</button>
-                    <button className="btn btn-warning m-2" onClick={() => handlePollClick('Relaxing on the Beach')}>Relaxing on the Beach</button>
-                    <button className="btn btn-info m-2" onClick={() => handlePollClick('City Breaks')}>City Breaks</button>
-                </div>
-                {response && <p className="response mt-4">{response}</p>}
             </section>
         </div>
     );

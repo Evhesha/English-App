@@ -4,41 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Sport() {
-    const [response, setResponse] = useState('');
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    const handlePollClick = (option) => {
-        switch (option) {
-            case 'Football':
-                setResponse("Football fan! The beautiful game brings people together!");
-                break;
-            case 'Basketball': 
-                setResponse("Basketball enthusiast! Nothing but net!");
-                break;
-            case 'Tennis':
-                setResponse("Tennis lover! Serve it up!");
-                break;
-            case 'Swimming':
-                setResponse("Swimming champion! Make waves!");
-                break;
-            default:
-                setResponse('');
-        }
-    };
 
     const handleMouseMove = (event) => {
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    const headerStyle = {
-        transform: `translate(${(mousePosition.x / 100) - 5}px, ${(mousePosition.y / 100) - 5}px)`,
-        transition: 'transform 0.1s',
-    };
-
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
             <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
-            <h1 className="header" style={headerStyle}>Sport Topic</h1>
             <section className="section">
                 <h2 className="subHeader">Words about Sport</h2>
                 <div className="row">
@@ -106,17 +80,6 @@ function Sport() {
                 <p className="paragraph"><strong>Train hard</strong> - усердно тренироваться. Athletes train hard for competitions.</p>
                 <p className="paragraph"><strong>Set a personal best</strong> - установить личный рекорд. She set a personal best in the marathon.</p>
                 <p className="paragraph"><strong>Make the team</strong> - попасть в команду. He finally made the national team.</p>
-            </section>
-            <section className="section">
-                <h2 className="subHeader">Quick Sport Poll</h2>
-                <p className="paragraph">What's your favorite sport?</p>
-                <div className="poll-options">
-                    <button className="btn btn-primary m-2" onClick={() => handlePollClick('Football')}>Football</button>
-                    <button className="btn btn-success m-2" onClick={() => handlePollClick('Basketball')}>Basketball</button>
-                    <button className="btn btn-warning m-2" onClick={() => handlePollClick('Tennis')}>Tennis</button>
-                    <button className="btn btn-info m-2" onClick={() => handlePollClick('Swimming')}>Swimming</button>
-                </div>
-                {response && <p className="response mt-4">{response}</p>}
             </section>
         </div>
     );

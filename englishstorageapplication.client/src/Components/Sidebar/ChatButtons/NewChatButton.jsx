@@ -36,7 +36,7 @@ function NewChatButton({onPost}) {
         <button
             type="button"
             onClick={handleCreate}
-            className="btn  "
+            className="btn"
         >
             {t("sidebar.new-chat")} <i className="bi bi-plus-circle"></i>
         </button>

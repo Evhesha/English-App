@@ -27,8 +27,6 @@ import AdminPanel from "../../pages/Another/AdminPanel";
 import TeacherPage from "../../pages/Another/TeacherPage";
 
 import TopicsPage from "../../pages/Dictionary/DictionaryTopicsPage/TopicsPage";
-import ThousandPopular from "../../pages/Dictionary/ThousandPopular/ThousandPopular";
-import WordsInParts from "../../pages/Dictionary/WordsInParts/WordsInParts";
 import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
 import Sport from "../../pages/Dictionary/CardWordsPages/Sport";
 import Programming from "../../pages/Dictionary/CardWordsPages/Programming";
@@ -92,8 +90,6 @@ function RoutesList() {
           {/* Sidebar.Dictionary */}
           <Route path="/topics-page" element={<TopicsPage />}/>
           <Route path="/my-dict-page" element={<MyDictPage />}/>
-          <Route path="/thousamd-popular" element={<ThousandPopular />}/>
-          <Route path="/words-in-parts" element={<WordsInParts />}/>
 
           {/* Sidebar.Dictionary.Topics */}
           <Route path="/traveling-topic" element={<Traveling />}/>

@@ -4,41 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Work() {
-  const [response, setResponse] = useState('');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const handlePollClick = (option) => {
-    switch (option) {
-      case 'Office':
-        setResponse("Office work is your thing! Stay organized and focused!");
-        break;
-      case 'Remote':
-        setResponse("Remote work enthusiast! Work-life balance is key!");
-        break;
-      case 'Freelance': 
-        setResponse("Freelancing is your path! Keep building your portfolio!");
-        break;
-      case 'Hybrid':
-        setResponse("Hybrid work lover! Best of both worlds!");
-        break;
-      default:
-        setResponse('');
-    }
-  };
-
+  
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
-  };
-
-  const headerStyle = {
-    transform: `translate(${(mousePosition.x / 100) - 5}px, ${(mousePosition.y / 100) - 5}px)`,
-    transition: 'transform 0.1s',
   };
 
   return (
     <div className="container text-center" onMouseMove={handleMouseMove}>
       <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
-      <h1 className="header" style={headerStyle}>Work Topic</h1>
       <section className="section">
         <h2 className="subHeader">Words about Work</h2>
         <div className="row">
@@ -106,17 +80,6 @@ function Work() {
         <p className="paragraph"><strong>Gain experience</strong> - получать опыт. Each project helps you gain valuable experience.</p>
         <p className="paragraph"><strong>Clock in/out</strong> - отмечать начало/конец рабочего дня. Don't forget to clock in when you arrive.</p>
         <p className="paragraph"><strong>Take breaks</strong> - делать перерывы. Regular breaks improve productivity.</p>
-      </section>
-      <section className="section">
-        <h2 className="subHeader">Quick Work Poll</h2>
-        <p className="paragraph">What's your preferred work style?</p>
-        <div className="poll-options">
-          <button className="btn btn-primary m-2" onClick={() => handlePollClick('Office')}>Office</button>
-          <button className="btn btn-success m-2" onClick={() => handlePollClick('Remote')}>Remote</button>
-          <button className="btn btn-warning m-2" onClick={() => handlePollClick('Freelance')}>Freelance</button>
-          <button className="btn btn-info m-2" onClick={() => handlePollClick('Hybrid')}>Hybrid</button>
-        </div>
-        {response && <p className="response mt-4">{response}</p>}
       </section>
     </div>
   );

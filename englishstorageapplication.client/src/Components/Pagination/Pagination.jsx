@@ -1,11 +1,9 @@
 import './Pagination.css';
-import {useDarkMode} from "@/hooks/useDarkMode.js";
 
 function Pagination({ currentPage, totalPages, onPageChange }) {
     const renderPagination = () => {
         const pages = [];
         const maxVisiblePages = 5;
-
         let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
         let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
 
@@ -75,7 +73,6 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
     };
 
     if (totalPages <= 1) return null;
-
     return (
         <nav aria-label="Lesson pagination" className="mt-4">
             <ul className="pagination justify-content-center">
