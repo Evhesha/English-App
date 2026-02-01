@@ -7,7 +7,6 @@ function ChatLink({name, id, onDelete, onUpdate}){
     const handleDelete = async () => {
         const confirmDelete = window.confirm("Are you sure that you want to delete the chat?");
         if (!confirmDelete) return;
-
         try {
             await axios.delete(` http://localhost:5199/chat/${id}`);
             onDelete(id);
@@ -27,8 +26,7 @@ function ChatLink({name, id, onDelete, onUpdate}){
     
     return(
         <li>
-            <Link style={{"width": "100px", "height": "35px"}}
-                to={`/chat/${id}`}
+            <Link style={{"width": "100px", "height": "35px"}} to={`/chat/${id}`}
                 className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 onClick={getChatMessages}
             >

@@ -5,21 +5,18 @@ import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {jwtDecode} from "jwt-decode";
-import Form from 'react-bootstrap/Form';
 import ChatLink from "./ChatButtons/ChatLink.jsx";
 import NewChatButton from "./ChatButtons/NewChatButton.jsx";
 import axios from "axios";
 
 function Sidebar() {
     const [chats, setChats] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
     const {t} = useTranslation();
 
     const handleLogout = () => {
         const confirmLogout = window.confirm("Are you sure that you want to logout?");
         if (!confirmLogout) return;
-
         Cookies.remove("token");
         navigate("/login");
         window.location.reload() 
@@ -43,10 +40,6 @@ function Sidebar() {
 
     useEffect(() => {
         const token = Cookies.get("token");
-        if (!token) {
-            setIsLoading(false);
-            return;
-        }
 
         const fetchChats = async () => {
             try {
@@ -61,21 +54,11 @@ function Sidebar() {
                 setChats(response.data);
             } catch (error) {
                 console.log("Error fetching chats:", error);
-            } finally {
-                setIsLoading(false);
             }
         };
 
         fetchChats();
-    }, []); 
-
-    if (isLoading) {
-        return (
-            <div className="flex-shrink-0 p-3" style={{ width: "280px" }}>
-                <div className="text-muted">Loading...</div>
-            </div>
-        );
-    }
+    }, []);
 
     return (
         <>
@@ -111,7 +94,6 @@ function Sidebar() {
                             </ul>
                         </div>
                     </li>
-
                     <li className="mb-1">
                         <button
                             className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
@@ -137,22 +119,6 @@ function Sidebar() {
                                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                                     >
                                         {t("sidebar.topics")}
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to="/thousamd-popular"
-                                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                                    >
-                                        {t("sidebar.100-popular")}
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to="/words-in-parts"
-                                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
-                                    >
-                                        {t("sidebar.words-in-parts")}
                                     </Link>
                                 </li>
                             </ul>
@@ -250,9 +216,6 @@ function Sidebar() {
                         <div className="collapse" id="assistant-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <NewChatButton onPost={handleCreate}/>
-                                <Form.Control size="sm" type="text" placeholder={t("sidebar.search")}
-                                              className="search-control"/>
-                                <p></p>
                                 {chats.length === 0 ? (
                                     <div className="text-muted small p-2">{t("sidebar.no-chats-yet")}</div>
                                 ) : (

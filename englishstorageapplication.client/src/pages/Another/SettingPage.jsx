@@ -104,26 +104,23 @@ function SettingPage() {
         <Container>
             <ToastContainer />
             <Title>{t("account-page.settings")}</Title>
-
             <Section>
                 <h3>{t("account-page.language")}</h3>
                 <ButtonGroup>
-                    {/* РЕШЕНИЕ 1: Используем префикс $ для styled-components */}
                     <LanguageButton
-                        $active={currentLang === "en"} // Используем $active
+                        $active={currentLang === "en"}
                         onClick={() => changeLanguage("en")}
                     >
                         English
                     </LanguageButton>
                     <LanguageButton
-                        $active={currentLang === "ru"} // Используем $active
+                        $active={currentLang === "ru"}
                         onClick={() => changeLanguage("ru")}
                     >
                         Русский
                     </LanguageButton>
                 </ButtonGroup>
             </Section>
-
             <Section>
                 <h3>{t("account-page.theme")}</h3>
                 <button
@@ -137,7 +134,6 @@ function SettingPage() {
                     <i className={`bi ${darkMode ? "bi-sun" : "bi-moon"}`}></i>
                 </button>
             </Section>
-
             <Section>
                 <h3>{t("sidebar.sign-out")}</h3>
 
