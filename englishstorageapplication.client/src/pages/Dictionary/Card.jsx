@@ -3,7 +3,6 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import CheckDictCardPopUp from "../../Components/PopUps/Dict/CheckDictCardPopUp";
-
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function Card({ id, image, title, text, onDelete, onUpdate }) {
@@ -44,14 +43,12 @@ function Card({ id, image, title, text, onDelete, onUpdate }) {
             </button>
           </div>
         </div>
-
         <div className="card-body p-3 d-flex flex-column">
           <div className="flex-grow-1 mb-3">
             <div className="ratio ratio-16x9 ">
               {image }
             </div>
           </div>
-
           <div className="mt-auto">
             <CheckDictCardPopUp
                 title={title}

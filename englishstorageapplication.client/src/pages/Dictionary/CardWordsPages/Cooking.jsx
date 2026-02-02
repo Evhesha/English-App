@@ -9,16 +9,10 @@ function Cooking() {
     const handleMouseMove = (event) => {
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
-
-    const headerStyle = {
-        transform: `translate(${(mousePosition.x / 100) - 5}px, ${(mousePosition.y / 100) - 5}px)`,
-        transition: 'transform 0.1s',
-    };
-
+    
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
             <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
-            <h1 className="header" style={headerStyle}>Cooking Topic</h1>
             <section className="section">
                 <h2 className="subHeader">Words about Cooking</h2>
                 <div className="row">
