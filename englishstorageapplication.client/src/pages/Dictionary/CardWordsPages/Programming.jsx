@@ -41,7 +41,6 @@ function Programming() {
             </ul>
           </div>
         </div>
-
         <div className="sentences mt-4">
           <p><strong>Algorithm</strong>: Learning algorithms is fundamental to programming. - Изучение алгоритмов является основой программирования.</p>
           <p><strong>Function</strong>: Functions allow us to reuse code efficiently. - Функции позволяют нам эффективно переиспользовать код.</p>
@@ -61,7 +60,6 @@ function Programming() {
           <p><strong>API</strong>: APIs enable interaction between different software systems. - API позволяют взаимодействовать между различными программными системами.</p>
         </div>
       </section>
-
       <section className="section">
         <h2 className="subHeader">Common Programming Questions</h2>
         <ul className="list">
@@ -72,7 +70,6 @@ function Programming() {
           <li>When do you use recursion in your code?</li>
         </ul>
       </section>
-
       <section className="section">
         <h2 className="subHeader">English Collocations About Programming</h2>
         <p className="paragraph"><strong>Write code</strong> - писать код. Writing clean code is essential for maintainability.</p>
