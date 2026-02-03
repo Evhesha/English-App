@@ -157,8 +157,10 @@ const ChatContainer = () => {
                     ))
                 ) : (
                     <div className="empty-chat-message centered-border">
-                        {t("chat.empty", "Start a conversation with AI Assistant")}
-                        <Magic />
+                        <p>Start a conversation with AI Assistant  <Magic /></p>
+                        <p>This chat for people who can understand English text (B1 lvl)</p>
+                        <p>You can ask in any language but answer you will receive in English</p>
+                        
                     </div>
                 )}
 
