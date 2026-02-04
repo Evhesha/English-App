@@ -4,41 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Nature() {
-    const [response, setResponse] = useState('');
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    const handlePollClick = (option) => {
-        switch (option) {
-            case 'Forest':
-                setResponse("You love forests! The sounds of nature are truly magical there!");
-                break;
-            case 'Ocean': 
-                setResponse("Ocean lover! The waves and salty air are so refreshing!");
-                break;
-            case 'Mountains':
-                setResponse("Mountain enthusiast! The views from the peaks are breathtaking!");
-                break;
-            case 'Desert':
-                setResponse("Desert explorer! The vastness and silence are incredible!");
-                break;
-            default:
-                setResponse('');
-        }
-    };
 
     const handleMouseMove = (event) => {
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    const headerStyle = {
-        transform: `translate(${(mousePosition.x / 100) - 5}px, ${(mousePosition.y / 100) - 5}px)`,
-        transition: 'transform 0.1s',
-    };
-
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
             <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
-            <h1 className="header" style={headerStyle}>Nature Topic</h1>
             <section className="section">
                 <h2 className="subHeader">Words about Nature</h2>
                 <div className="row">
@@ -106,17 +80,6 @@ function Nature() {
                 <p className="paragraph"><strong>Wildlife conservation</strong> - охрана дикой природы. Wildlife conservation is crucial for biodiversity.</p>
                 <p className="paragraph"><strong>Climate change</strong> - изменение климата. Climate change affects ecosystems worldwide.</p>
                 <p className="paragraph"><strong>Biodiversity hotspot</strong> - точка биоразнообразия. Rainforests are important biodiversity hotspots.</p>
-            </section>
-            <section className="section">
-                <h2 className="subHeader">Quick Nature Poll</h2>
-                <p className="paragraph">What's your favorite natural environment?</p>
-                <div className="poll-options">
-                    <button className="btn btn-success m-2" onClick={() => handlePollClick('Forest')}>Forest</button>
-                    <button className="btn btn-info m-2" onClick={() => handlePollClick('Ocean')}>Ocean</button>
-                    <button className="btn btn-secondary m-2" onClick={() => handlePollClick('Mountains')}>Mountains</button>
-                    <button className="btn btn-warning m-2" onClick={() => handlePollClick('Desert')}>Desert</button>
-                </div>
-                {response && <p className="response mt-4">{response}</p>}
             </section>
         </div>
     );

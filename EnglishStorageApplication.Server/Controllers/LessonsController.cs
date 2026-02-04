@@ -9,12 +9,6 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 namespace EnglishStorageApplication.Server.Controllers
 {
-    public class PagedLessonsResponse
-    {
-        public List<ListLessonsDto> Lessons { get; set; } = new();
-        public int TotalCount { get; set; }
-    }
-    
     [Route("api/[controller]")]
     [ApiController]
     public class LessonsController : ControllerBase

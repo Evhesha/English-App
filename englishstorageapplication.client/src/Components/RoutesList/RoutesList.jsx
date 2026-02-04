@@ -27,13 +27,15 @@ import AdminPanel from "../../pages/Another/AdminPanel";
 import TeacherPage from "../../pages/Another/TeacherPage";
 
 import TopicsPage from "../../pages/Dictionary/DictionaryTopicsPage/TopicsPage";
-import ThousandPopular from "../../pages/Dictionary/ThousandPopular/ThousandPopular";
-import WordsInParts from "../../pages/Dictionary/WordsInParts/WordsInParts";
 import Traveling from "../../pages/Dictionary/CardWordsPages/Traveling";
 import Sport from "../../pages/Dictionary/CardWordsPages/Sport";
 import Programming from "../../pages/Dictionary/CardWordsPages/Programming";
 import Nature from "../../pages/Dictionary/CardWordsPages/Nature";
 import Work from "../../pages/Dictionary/CardWordsPages/Work";
+import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
+import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
+import PopularWords from "@/pages/Dictionary/CardWordsPages/PopularWords.jsx";
+import GrammarDictionary from "@/pages/Dictionary/CardWordsPages/GrammarDictionary.jsx";
 
 import SignUp from "../../pages/SignUp && Login/SingUp";
 import Login from "../../pages/SignUp && Login/Login";
@@ -41,9 +43,6 @@ import ProfilePage from "../../pages/ProfilePage/ProfilePage";
 import SettingPage from "../../pages/Another/SettingPage";
 
 import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
-
-import Cooking from "../../pages/Dictionary/CardWordsPages/Cooking";
-import Shopping from "../../pages/Dictionary/CardWordsPages/Shopping";
 
 import ByTimeTestsPage from "@/pages/Tests/Pages/ByTimeTestsPage.jsx";
 import ByLevelTestPage from "@/pages/Tests/Pages/ByLevelTestPage.jsx";
@@ -92,8 +91,6 @@ function RoutesList() {
           {/* Sidebar.Dictionary */}
           <Route path="/topics-page" element={<TopicsPage />}/>
           <Route path="/my-dict-page" element={<MyDictPage />}/>
-          <Route path="/thousamd-popular" element={<ThousandPopular />}/>
-          <Route path="/words-in-parts" element={<WordsInParts />}/>
 
           {/* Sidebar.Dictionary.Topics */}
           <Route path="/traveling-topic" element={<Traveling />}/>
@@ -103,6 +100,8 @@ function RoutesList() {
           <Route path="/programming-topic" element={<Programming />}/>
           <Route path="/nature-topic" element={<Nature />}/>
           <Route path="/work-topic" element={<Work />}/>
+          <Route path="/popular" element={<PopularWords />} />
+          <Route path="/grammar" element={<GrammarDictionary />} />
 
           {/* Sidebar.Tests */}
           <Route path="/level-tests" element={<ByLevelTestPage />} />

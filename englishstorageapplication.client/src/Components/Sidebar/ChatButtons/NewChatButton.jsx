@@ -20,8 +20,13 @@ function NewChatButton({onPost}) {
                     title: "New Chat",
                 }
             )
-            onPost(response.data);
-            navigate(`/chat/${response.data.id}`);
+            const newChat = {
+                id: response.data, 
+                title: "New Chat" 
+            };
+            
+            onPost(newChat);
+            navigate(`/chat/${response.data}`);
         } catch (error) {
             console.error("Error creating chat:", error);
         }
@@ -31,7 +36,7 @@ function NewChatButton({onPost}) {
         <button
             type="button"
             onClick={handleCreate}
-            className="btn  "
+            className="btn"
         >
             {t("sidebar.new-chat")} <i className="bi bi-plus-circle"></i>
         </button>

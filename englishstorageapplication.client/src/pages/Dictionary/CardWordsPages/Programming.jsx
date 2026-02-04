@@ -4,43 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Programming() {
-  const [response, setResponse] = useState('');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const handlePollClick = (option) => {
-    switch (option) {
-      case 'Web Development':
-        setResponse("Web Development is essential! Don't forget to learn about responsive design!");
-        break;
-      case 'Data Science':
-        setResponse("Data Science is fascinating! Remember, data is the new oil!");
-        break;
-      case 'Machine Learning':
-        setResponse("Machine Learning is the future! Keep experimenting with new algorithms!");
-        break;
-      case 'Cybersecurity':
-        setResponse("Cybersecurity is crucial! Always stay ahead of potential threats!");
-        break;
-      default:
-        setResponse('');
-    }
-  };
 
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
 
-  const headerStyle = {
-    transform: `translate(${(mousePosition.x / 100) - 5}px, ${(mousePosition.y / 100) - 5}px)`,
-    transition: 'transform 0.1s',
-  };
-
   return (
     <div className="container text-center" onMouseMove={handleMouseMove}>
       <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
-
-      <h1 className="header" style={headerStyle}>Programming Topic</h1>
-
       <section className="section">
         <h2 className="subHeader">Words about Programming</h2>
         <div className="row">
@@ -69,7 +41,6 @@ function Programming() {
             </ul>
           </div>
         </div>
-
         <div className="sentences mt-4">
           <p><strong>Algorithm</strong>: Learning algorithms is fundamental to programming. - Изучение алгоритмов является основой программирования.</p>
           <p><strong>Function</strong>: Functions allow us to reuse code efficiently. - Функции позволяют нам эффективно переиспользовать код.</p>
@@ -89,7 +60,6 @@ function Programming() {
           <p><strong>API</strong>: APIs enable interaction between different software systems. - API позволяют взаимодействовать между различными программными системами.</p>
         </div>
       </section>
-
       <section className="section">
         <h2 className="subHeader">Common Programming Questions</h2>
         <ul className="list">
@@ -100,7 +70,6 @@ function Programming() {
           <li>When do you use recursion in your code?</li>
         </ul>
       </section>
-
       <section className="section">
         <h2 className="subHeader">English Collocations About Programming</h2>
         <p className="paragraph"><strong>Write code</strong> - писать код. Writing clean code is essential for maintainability.</p>
@@ -111,18 +80,6 @@ function Programming() {
         <p className="paragraph"><strong>Deploy an application</strong> - развернуть приложение. Deploying an application makes it available to users.</p>
         <p className="paragraph"><strong>Update software</strong> - обновлять ПО. Updating software keeps it secure and adds new features.</p>
         <p className="paragraph"><strong>Develop an algorithm</strong> - разрабатывать алгоритм. Developing efficient algorithms is key to solving complex problems.</p>
-      </section>
-
-      <section className="section">
-        <h2 className="subHeader">Quick Programming Poll</h2>
-        <p className="paragraph">What's your favorite programming domain?</p>
-        <div className="poll-options">
-          <button className="btn btn-primary m-2" onClick={() => handlePollClick('Web Development')}>Web Development</button>
-          <button className="btn btn-success m-2" onClick={() => handlePollClick('Data Science')}>Data Science</button>
-          <button className="btn btn-warning m-2" onClick={() => handlePollClick('Machine Learning')}>Machine Learning</button>
-          <button className="btn btn-info m-2" onClick={() => handlePollClick('Cybersecurity')}>Cybersecurity</button>
-        </div>
-        {response && <p className="response mt-4">{response}</p>}
       </section>
     </div>
   );

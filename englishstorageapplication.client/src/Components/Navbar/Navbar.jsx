@@ -4,7 +4,7 @@ import "../Navbar/Navbar.css";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
 
@@ -40,7 +40,6 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
                         setIsTeacher(false);
                     }
                 } catch (error) {
-                    console.error("Error decoding token:", error);
                     setIsAdmin(false);
                     setIsTeacher(false);
                 }
@@ -49,7 +48,6 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
                 setIsTeacher(false);
             }
         };
-
         fetchData();
     }, []);
 

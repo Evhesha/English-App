@@ -3,11 +3,10 @@ import { Trash } from "react-bootstrap-icons";
 import axios from "axios";
 import ChangeChatTitlePopUp from "@/Components/PopUps/Chat/ChangeChatTitlePopUp.jsx";
 
-function ChatLink({name, id, onDelete}){
+function ChatLink({name, id, onDelete, onUpdate}){
     const handleDelete = async () => {
         const confirmDelete = window.confirm("Are you sure that you want to delete the chat?");
         if (!confirmDelete) return;
-
         try {
             await axios.delete(` http://localhost:5199/chat/${id}`);
             onDelete(id);
@@ -27,8 +26,7 @@ function ChatLink({name, id, onDelete}){
     
     return(
         <li>
-            <Link
-                to={`/chat/${id}`}
+            <Link style={{"width": "100px", "height": "35px"}} to={`/chat/${id}`}
                 className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 onClick={getChatMessages}
             >
@@ -37,7 +35,7 @@ function ChatLink({name, id, onDelete}){
             <button className="btn" style={{  border: "1px solid black", padding: "4px 8px" }} onClick={handleDelete}>
                 <Trash/>
             </button>
-            <ChangeChatTitlePopUp title={name} id={id}></ChangeChatTitlePopUp>
+            <ChangeChatTitlePopUp OnPatch={onUpdate} title={name} id={id}></ChangeChatTitlePopUp>
             <p></p>
         </li>
     )

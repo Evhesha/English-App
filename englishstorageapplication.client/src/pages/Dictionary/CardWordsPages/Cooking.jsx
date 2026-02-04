@@ -4,41 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ToLinkButton from '../../../Components/Buttons/ToLinkButton/ToLinkButton';
 
 function Cooking() {
-    const [response, setResponse] = useState('');
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    const handlePollClick = (option) => {
-        switch (option) {
-            case 'Baking':
-                setResponse("You love baking! Don't forget to try new recipes to impress your friends!");
-                break;
-            case 'Grilling':
-                setResponse("Grilling enthusiast! Remember, it's all about the right seasoning!");
-                break;
-            case 'Frying':
-                setResponse("Frying fan! Crispy is the way to go, but watch out for the oil!");
-                break;
-            case 'Steaming':
-                setResponse("Steaming lover! Healthy cooking is the best cooking!");
-                break;
-            default:
-                setResponse('');
-        }
-    };
 
     const handleMouseMove = (event) => {
         setMousePosition({ x: event.clientX, y: event.clientY });
     };
-
-    const headerStyle = {
-        transform: `translate(${(mousePosition.x / 100) - 5}px, ${(mousePosition.y / 100) - 5}px)`,
-        transition: 'transform 0.1s',
-    };
-
+    
     return (
         <div className="container text-center" onMouseMove={handleMouseMove}>
             <ToLinkButton link={"/topics-page"} placeholder={"Topics"} />
-            <h1 className="header" style={headerStyle}>Cooking Topic</h1>
             <section className="section">
                 <h2 className="subHeader">Words about Cooking</h2>
                 <div className="row">
@@ -106,17 +80,6 @@ function Cooking() {
                 <p className="paragraph"><strong>Preheat the oven</strong> - разогреть духовку. Preheating ensures even cooking of baked goods.</p>
                 <p className="paragraph"><strong>Garnish with herbs</strong> - украсить зеленью. A garnish adds a touch of elegance to any meal.</p>
                 <p className="paragraph"><strong>Cook from scratch</strong> - готовить с нуля. Cooking from scratch is rewarding and healthier.</p>
-            </section>
-            <section className="section">
-                <h2 className="subHeader">Quick Cooking Poll</h2>
-                <p className="paragraph">What's your favorite cooking method?</p>
-                <div className="poll-options">
-                    <button className="btn btn-primary m-2" onClick={() => handlePollClick('Baking')}>Baking</button>
-                    <button className="btn btn-success m-2" onClick={() => handlePollClick('Grilling')}>Grilling</button>
-                    <button className="btn btn-warning m-2" onClick={() => handlePollClick('Frying')}>Frying</button>
-                    <button className="btn btn-info m-2" onClick={() => handlePollClick('Steaming')}>Steaming</button>
-                </div>
-                {response && <p className="response mt-4">{response}</p>}
             </section>
         </div>
     );
