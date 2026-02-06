@@ -41,7 +41,6 @@ function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsP
             );
 
             console.log(response);
-
             if (response.status === 200 || response.status === 201) {
                 if (typeof onPut === "function") {
                     onPut(response.data);

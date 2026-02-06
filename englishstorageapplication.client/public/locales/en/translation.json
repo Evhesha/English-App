@@ -35,7 +35,8 @@
     "assistant": "Assistant",
     "new-chat": "New chat",
     "search": "Search",
-    "no-chats-yet": "No chats yet"
+    "no-chats-yet": "No chats yet",
+    "delete-account": "Delete account"
   },
   "home": {
     "hero-title": "Learn English for free with pleasure",

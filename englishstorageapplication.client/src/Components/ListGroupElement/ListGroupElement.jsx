@@ -2,7 +2,6 @@ import EditUserPopUp from '../PopUps/User/EditUserPopUp.jsx';
 import ChangeUserRolePopUp from '../PopUps/User/ChangeUserRolePopUp.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import Cookies from 'js-cookie';
 import './ListGroupElement.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
@@ -13,18 +12,7 @@ function ListGroupElement({id, name, email, role, onDelete, onUpdate}) {
         if (!confirmDelete) return;
 
         try {
-            const token = Cookies.get('token');
-
-            if (!token) {
-                alert('Ошибка авторизации. Пожалуйста, войдите заново.');
-                return;
-            }
-
-            await axios.delete(`${API_BASE_URL}/api/users/${id}`, {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
+            await axios.delete(`${API_BASE_URL}/api/users/${id}`);
             onDelete(id);
         } catch (error) {
             console.error('Ошибка при удалении пользователя:', error);

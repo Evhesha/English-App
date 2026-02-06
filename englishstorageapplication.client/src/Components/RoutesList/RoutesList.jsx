@@ -107,7 +107,6 @@ function RoutesList() {
           <Route path="/level-tests" element={<ByLevelTestPage />} />
           <Route path="/mixed-tests" element={<ByTopicTestsPage />} />
           <Route path="/topics-tests" element={<ByTimeTestsPage />}/>
-
           <Route path="/test/level/:level" element={<DynamicTest />} />
           <Route path="/test/topic/:topic" element={<DynamicTopicTest />} />
           <Route path="/test/time/:time" element={<DynamicTimeTest />} />
