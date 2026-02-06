@@ -3,11 +3,14 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
 import { useNavigate } from "react-router-dom";
+import NewChatButton from "@/Components/Sidebar/ChatButtons/NewChatButton.jsx";
+import { useState } from "react";
 
 function Home() {
     const { t } = useTranslation();
     const { darkMode } = useTheme();
     const navigate = useNavigate();
+    const [chats, setChats] = useState([]);
     
     const moveToLessons = () => {
         navigate(`/online-list-lessons-page`);    
@@ -16,6 +19,10 @@ function Home() {
     const moveToNotes = () => {
         navigate(`/my-dict-page`);
     }
+
+    const handleCreateChat = (newChat) => {
+        setChats(prevChats => [newChat, ...prevChats]);
+    };
     
     return (
         <div className={`minimal-home ${darkMode ? "dark-theme" : ""}`}>
@@ -143,9 +150,7 @@ function Home() {
                             </Col>
                         </Row>
                         <div className="ai-cta">
-                            <Button className="btn-primary">
-                                {t("home.ai-button")}
-                            </Button>
+                           <NewChatButton onPost={handleCreateChat} Primary={"btn-primary"}/>
                         </div>
                     </div>
                 </Container>

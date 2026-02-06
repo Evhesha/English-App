@@ -215,7 +215,7 @@ function Sidebar() {
                         </button>
                         <div className="collapse" id="assistant-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <NewChatButton onPost={handleCreate}/>
+                                <NewChatButton onPost={handleCreate} Primary={"btn"}/>
                                 {chats.length === 0 ? (
                                     <div className="text-muted small p-2">{t("sidebar.no-chats-yet")}</div>
                                 ) : (
