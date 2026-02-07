@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "8c9d0a1b-2c3d-4e5f-6a7b-8c9d0a1b2c3d",
+    "topic": "Прилагательные",
+    "name": "Тест по прилагательным английского языка",
+    "description": "Тест на степени сравнения прилагательных",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "A2-B1"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "What is the comparative form of 'big'?",
+      "options": ["bigger", "more big", "biger", "biggest"],
+      "correctAnswer": "bigger",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "What is the superlative form of 'good'?",
+      "options": ["gooder", "more good", "better", "best"],
+      "correctAnswer": "best",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: This is the ___ (interesting) book I've ever read.",
+      "correctAnswer": "most interesting",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "What is the comparative form of 'beautiful'?",
+      "options": ["beautifuller", "more beautiful", "beautifuler", "most beautiful"],
+      "correctAnswer": "more beautiful",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: She is ___ (tall) than her sister.",
+      "correctAnswer": "taller",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "What is the superlative form of 'bad'?",
+      "options": ["badder", "more bad", "worse", "worst"],
+      "correctAnswer": "worst",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: This test is ___ (difficult) than the last one.",
+      "correctAnswer": "more difficult",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "Which is correct?",
+      "options": ["the most happiest", "the happiest", "the most happy", "the happier"],
+      "correctAnswer": "the happiest",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: He is the ___ (smart) student in the class.",
+      "correctAnswer": "smartest",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "What is the comparative form of 'far'?",
+      "options": ["farrer", "more far", "further", "farest"],
+      "correctAnswer": "further",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: This is ___ (good) coffee I've ever tasted.",
+      "correctAnswer": "the best",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Which is the irregular comparative?",
+      "options": ["big - bigger", "happy - happier", "good - better", "small - smaller"],
+      "correctAnswer": "good - better",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: She feels ___ (bad) today than yesterday.",
+      "correctAnswer": "worse",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "What is the superlative form of 'little' (amount)?",
+      "options": ["littler", "less", "least", "littlest"],
+      "correctAnswer": "least",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: This road is ___ (dangerous) than that one.",
+      "correctAnswer": "more dangerous",
+      "points": 1
+    }
+  ]
+}

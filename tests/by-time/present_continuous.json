@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "9b3e8f5d-2c4f-5a0b-9d6e-7f8a9b0c1d2e",
+    "topic": "Present Continuous",
+    "name": "Тест по Present Continuous",
+    "description": "Тест на настоящее продолженное время, действия в процессе",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "A1-A2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct form: She ___ TV now.",
+      "options": ["watch", "watches", "is watching", "watched"],
+      "correctAnswer": "is watching",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "What is the structure of Present Continuous?",
+      "options": ["am/is/are + verb", "am/is/are + verb+ing", "do/does + verb", "have/has + verb"],
+      "correctAnswer": "am/is/are + verb+ing",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (not work) at the moment.",
+      "correctAnswer": "aren't working",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "When do we use Present Continuous?",
+      "options": ["For permanent situations", "For actions happening now", "For past experiences", "For future predictions"],
+      "correctAnswer": "For actions happening now",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: ___ you ___ (listen) to me?",
+      "correctAnswer": "Are, listening",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Choose the correct form: Look! It ___.",
+      "options": ["rain", "rains", "is raining", "rained"],
+      "correctAnswer": "is raining",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: I ___ (study) English this year.",
+      "correctAnswer": "am studying",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "Which time expression is used with Present Continuous?",
+      "options": ["always", "usually", "at the moment", "often"],
+      "correctAnswer": "at the moment",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: He ___ (not sleep) right now.",
+      "correctAnswer": "isn't sleeping",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "What is the question form for 'they are working'?",
+      "options": ["Are they working?", "Do they working?", "Is they working?", "Working they?"],
+      "correctAnswer": "Are they working?",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: What ___ you ___ (do)?",
+      "correctAnswer": "are, doing",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Which verb is NOT usually used in Continuous?",
+      "options": ["run", "know", "eat", "talk"],
+      "correctAnswer": "know",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: The children ___ (play) in the garden.",
+      "correctAnswer": "are playing",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "Choose the correct sentence:",
+      "options": ["I am understanding you.", "I understand you.", "I am understand you.", "I understanding you."],
+      "correctAnswer": "I understand you.",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: She ___ (wear) a blue dress today.",
+      "correctAnswer": "is wearing",
+      "points": 1
+    }
+  ]
+}

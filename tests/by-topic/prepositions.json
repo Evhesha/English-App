@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "3d4e5f6a-7b8c-9d0a-1b2c-3d4e5f6a7b8c",
+    "topic": "Предлоги",
+    "name": "Тест по предлогам английского языка",
+    "description": "Тест на знание предлогов времени, места и движения",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "A2-B1"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct preposition: I'll see you ___ Friday.",
+      "options": ["in", "on", "at", "by"],
+      "correctAnswer": "on",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "Which preposition is used for months?",
+      "options": ["in", "on", "at", "to"],
+      "correctAnswer": "in",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: The meeting starts ___ 9 o'clock.",
+      "correctAnswer": "at",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "Choose the correct preposition: The book is ___ the table.",
+      "options": ["in", "on", "at", "under"],
+      "correctAnswer": "on",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: She lives ___ London.",
+      "correctAnswer": "in",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Which preposition means 'inside'?",
+      "options": ["on", "in", "at", "by"],
+      "correctAnswer": "in",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: We're going ___ the cinema tonight.",
+      "correctAnswer": "to",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "Choose the correct preposition: She is good ___ mathematics.",
+      "options": ["at", "in", "on", "with"],
+      "correctAnswer": "at",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: I'm interested ___ learning languages.",
+      "correctAnswer": "in",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Which preposition is used for specific addresses?",
+      "options": ["in", "on", "at", "to"],
+      "correctAnswer": "at",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: Look ___ this beautiful picture!",
+      "correctAnswer": "at",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Choose the correct preposition: He arrived ___ the airport.",
+      "options": ["in", "on", "at", "to"],
+      "correctAnswer": "at",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: She was born ___ 1990.",
+      "correctAnswer": "in",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "Which preposition is used for surfaces?",
+      "options": ["in", "on", "at", "under"],
+      "correctAnswer": "on",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: The cat jumped ___ the wall.",
+      "correctAnswer": "over",
+      "points": 1
+    }
+  ]
+}

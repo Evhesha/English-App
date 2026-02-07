@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "3d4e5f6a-7b8c-9012-def3-4567890abc12",
+    "topic": "Future Perfect Continuous",
+    "name": "Тест по Future Perfect Continuous",
+    "description": "Тест на будущее совершенное продолженное время",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "C1-C2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct form: By next month, I ___ here for five years.",
+      "options": ["will work", "will be working", "will have worked", "will have been working"],
+      "correctAnswer": "will have been working",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "What is the structure of Future Perfect Continuous?",
+      "options": ["will have been + verb+ing", "will have + past participle", "will be + verb+ing", "will + base verb"],
+      "correctAnswer": "will have been + verb+ing",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: By 2025, we ___ (live) in this house for 10 years.",
+      "correctAnswer": "will have been living",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "When do we use Future Perfect Continuous?",
+      "options": ["For completed future actions", "For duration up to a point in future", "For predictions", "For plans"],
+      "correctAnswer": "For duration up to a point in future",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: How long ___ you ___ (study) English by next year?",
+      "correctAnswer": "will, have been studying",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Which emphasizes duration before a point in future?",
+      "options": ["Future Perfect", "Future Perfect Continuous", "Future Continuous", "Future Simple"],
+      "correctAnswer": "Future Perfect Continuous",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: By the time she arrives, I ___ (wait) for two hours.",
+      "correctAnswer": "will have been waiting",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What is the question form for 'they will have been working'?",
+      "options": ["Will they have been working?", "Will they have working?", "Have they been working?", "Will they been working?"],
+      "correctAnswer": "Will they have been working?",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: Next year, I ___ (teach) at this school for 15 years.",
+      "correctAnswer": "will have been teaching",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct sentence:",
+      "options": ["By 5 PM, I will have been driving for 8 hours.", "By 5 PM, I will have driven for 8 hours.", "By 5 PM, I will be driving for 8 hours.", "By 5 PM, I will drive for 8 hours."],
+      "correctAnswer": "By 5 PM, I will have been driving for 8 hours.",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (not work) here long by December.",
+      "correctAnswer": "won't have been working",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Which time expression is typical?",
+      "options": ["for + period of time + by + point", "at + time", "on + day", "in + year"],
+      "correctAnswer": "for + period of time + by + point",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: By tomorrow, it ___ (rain) for three days.",
+      "correctAnswer": "will have been raining",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "What is the negative form of 'I will have been studying'?",
+      "options": ["I won't have been studying.", "I will not have been studying.", "Both are correct", "Neither is correct"],
+      "correctAnswer": "Both are correct",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: ___ you ___ (work) here for 10 years by 2030?",
+      "correctAnswer": "Will, have been working",
+      "points": 1
+    }
+  ]
+}

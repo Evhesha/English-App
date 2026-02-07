@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "8a2d7f4c-1b3e-4f9a-8c5d-6e7f8a9b0c1d",
+    "topic": "Present Simple",
+    "name": "Тест по Present Simple",
+    "description": "Тест на настоящее простое время, факты, регулярные действия",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "A1-A2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct form: She ___ to school every day.",
+      "options": ["go", "goes", "is going", "went"],
+      "correctAnswer": "goes",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "Which sentence is in Present Simple?",
+      "options": ["I am reading a book.", "I read books every day.", "I was reading a book.", "I will read a book."],
+      "correctAnswer": "I read books every day.",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (not like) coffee.",
+      "correctAnswer": "don't like",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "When do we use Present Simple?",
+      "options": ["For actions happening now", "For regular habits", "For completed actions", "For future plans"],
+      "correctAnswer": "For regular habits",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: ___ he ___ (work) here?",
+      "correctAnswer": "Does, work",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Choose the correct form: The sun ___ in the east.",
+      "options": ["rise", "rises", "is rising", "rose"],
+      "correctAnswer": "rises",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: We usually ___ (have) dinner at 7 PM.",
+      "correctAnswer": "have",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What is the question form for 'he works'?",
+      "options": ["Do he work?", "Does he work?", "Is he work?", "Working he?"],
+      "correctAnswer": "Does he work?",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: She ___ (not speak) French.",
+      "correctAnswer": "doesn't speak",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Which time expression is used with Present Simple?",
+      "options": ["now", "at the moment", "every day", "yesterday"],
+      "correctAnswer": "every day",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: What time ___ you ___ (get up)?",
+      "correctAnswer": "do, get up",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Choose the correct negative: I play tennis.",
+      "options": ["I not play tennis.", "I don't play tennis.", "I doesn't play tennis.", "I am not play tennis."],
+      "correctAnswer": "I don't play tennis.",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: Water ___ (boil) at 100°C.",
+      "correctAnswer": "boils",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "Which sentence is correct?",
+      "options": ["She don't like apples.", "She doesn't likes apples.", "She doesn't like apples.", "She not like apples."],
+      "correctAnswer": "She doesn't like apples.",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: My parents ___ (live) in London.",
+      "correctAnswer": "live",
+      "points": 1
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "1b2c3d4e-5f6a-7b8c-9d0a-1b2c3d4e5f6a",
+    "topic": "Пассивный залог",
+    "name": "Тест по пассивному залогу английского языка",
+    "description": "Тест на Passive Voice в разных временах",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "B1-B2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "What is the passive form of: 'They build houses.'?",
+      "options": ["Houses are built.", "Houses were built.", "Houses are being built.", "Houses have been built."],
+      "correctAnswer": "Houses are built.",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "Choose the passive form: 'Someone stole my car.'",
+      "options": ["My car was stolen.", "My car is stolen.", "My car has been stolen.", "My car had been stolen."],
+      "correctAnswer": "My car was stolen.",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Change to passive: They are repairing the road.",
+      "correctAnswer": "The road is being repaired.",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "What is the structure of Present Simple Passive?",
+      "options": ["am/is/are + past participle", "was/were + past participle", "have/has been + past participle", "will be + past participle"],
+      "correctAnswer": "am/is/are + past participle",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Change to passive: They will deliver the package tomorrow.",
+      "correctAnswer": "The package will be delivered tomorrow.",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Choose the passive form: 'Shakespeare wrote Hamlet.'",
+      "options": ["Hamlet was written by Shakespeare.", "Hamlet is written by Shakespeare.", "Hamlet has been written by Shakespeare.", "Hamlet had been written by Shakespeare."],
+      "correctAnswer": "Hamlet was written by Shakespeare.",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Change to passive: They have finished the project.",
+      "correctAnswer": "The project has been finished.",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What is the passive form of: 'They are painting the house.'?",
+      "options": ["The house is painted.", "The house was painted.", "The house is being painted.", "The house has been painted."],
+      "correctAnswer": "The house is being painted.",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Change to passive: Someone had cleaned the room before we arrived.",
+      "correctAnswer": "The room had been cleaned before we arrived.",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct passive sentence:",
+      "options": ["The letter was write yesterday.", "The letter was wrote yesterday.", "The letter was written yesterday.", "The letter is written yesterday."],
+      "correctAnswer": "The letter was written yesterday.",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Change to passive: They make these cars in Germany.",
+      "correctAnswer": "These cars are made in Germany.",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "What is the structure of Past Perfect Passive?",
+      "options": ["was/were + past participle", "had been + past participle", "have been + past participle", "will have been + past participle"],
+      "correctAnswer": "had been + past participle",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Change to passive: They were watching the movie.",
+      "correctAnswer": "The movie was being watched.",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "Choose the active form of: 'The book was read by many people.'",
+      "options": ["Many people read the book.", "Many people are reading the book.", "Many people have read the book.", "Many people will read the book."],
+      "correctAnswer": "Many people read the book.",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Change to passive: They must complete the work by Friday.",
+      "correctAnswer": "The work must be completed by Friday.",
+      "points": 1
+    }
+  ]
+}

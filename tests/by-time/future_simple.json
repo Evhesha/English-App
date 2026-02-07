@@ -1,0 +1,126 @@
+{
+  "testInfo": {
+    "id": "0a1b2c3d-4e5f-6789-0abc-def123456789",
+    "topic": "Future Simple",
+    "name": "Тест по Future Simple",
+    "description": "Тест на простое будущее время, предсказания, спонтанные решения",
+    "totalQuestions": 15,
+    "timeLimit": 20,
+    "difficulty": "A1-A2"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "choice",
+      "question": "Choose the correct form: I ___ you tomorrow.",
+      "options": ["see", "will see", "am seeing", "saw"],
+      "correctAnswer": "will see",
+      "points": 1
+    },
+    {
+      "id": 2,
+      "type": "choice",
+      "question": "What is the structure of Future Simple?",
+      "options": ["will + base verb", "am/is/are + going to + verb", "will + verb+ing", "do/does + will + verb"],
+      "correctAnswer": "will + base verb",
+      "points": 1
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "question": "Fill in the blank: She ___ (not come) to the party.",
+      "correctAnswer": "won't come",
+      "points": 1
+    },
+    {
+      "id": 4,
+      "type": "choice",
+      "question": "When do we use Future Simple?",
+      "options": ["For predictions", "For fixed arrangements", "For plans", "For timetables"],
+      "correctAnswer": "For predictions",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "question": "Fill in the blank: ___ you ___ (help) me with this?",
+      "correctAnswer": "Will, help",
+      "points": 1
+    },
+    {
+      "id": 6,
+      "type": "choice",
+      "question": "Which sentence shows spontaneous decision?",
+      "options": ["I'll help you.", "I'm going to help you.", "I help you.", "I helped you."],
+      "correctAnswer": "I'll help you.",
+      "points": 1
+    },
+    {
+      "id": 7,
+      "type": "input",
+      "question": "Fill in the blank: I think it ___ (rain) tomorrow.",
+      "correctAnswer": "will rain",
+      "points": 1
+    },
+    {
+      "id": 8,
+      "type": "choice",
+      "question": "What is the question form for 'he will come'?",
+      "options": ["Will he come?", "Does he will come?", "Is he will come?", "Will he comes?"],
+      "correctAnswer": "Will he come?",
+      "points": 1
+    },
+    {
+      "id": 9,
+      "type": "input",
+      "question": "Fill in the blank: They ___ (not be) late, I promise.",
+      "correctAnswer": "won't be",
+      "points": 1
+    },
+    {
+      "id": 10,
+      "type": "choice",
+      "question": "Choose the correct sentence for promise:",
+      "options": ["I will call you tomorrow.", "I'm going to call you tomorrow.", "I call you tomorrow.", "I'm calling you tomorrow."],
+      "correctAnswer": "I will call you tomorrow.",
+      "points": 1
+    },
+    {
+      "id": 11,
+      "type": "input",
+      "question": "Fill in the blank: What time ___ you ___ (arrive)?",
+      "correctAnswer": "will, arrive",
+      "points": 1
+    },
+    {
+      "id": 12,
+      "type": "choice",
+      "question": "Which is NOT a use of Future Simple?",
+      "options": ["Predictions", "Spontaneous decisions", "Promises", "Plans made in advance"],
+      "correctAnswer": "Plans made in advance",
+      "points": 1
+    },
+    {
+      "id": 13,
+      "type": "input",
+      "question": "Fill in the blank: I'm sure you ___ (pass) the exam.",
+      "correctAnswer": "will pass",
+      "points": 1
+    },
+    {
+      "id": 14,
+      "type": "choice",
+      "question": "What is the negative form of 'I will go'?",
+      "options": ["I won't go.", "I will not go.", "Both are correct", "Neither is correct"],
+      "correctAnswer": "Both are correct",
+      "points": 1
+    },
+    {
+      "id": 15,
+      "type": "input",
+      "question": "Fill in the blank: Don't worry, I ___ (not tell) anyone.",
+      "correctAnswer": "won't tell",
+      "points": 1
+    }
+  ]
+}
