@@ -10,6 +10,7 @@ const target = process.env.ASPNETCORE_HTTPS_PORT
 
 export default defineConfig({
   plugins: [plugin()],
+  base: '/English-App/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
