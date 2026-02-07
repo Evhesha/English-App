@@ -11,6 +11,10 @@
                     builder.WithOrigins(configuration["Cors:AllowedOrigins"]?.Split(",") ?? new string[] { })
                            .AllowAnyMethod()
                            .AllowAnyHeader();
+                    
+                    builder.WithOrigins(configuration["Cors:GitHubOrigins"]?.Split(",") ?? new string[] { })
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
                 });
             });
 

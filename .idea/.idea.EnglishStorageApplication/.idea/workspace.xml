@@ -14,13 +14,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: now user can go to chat page from home page, user can delete his account.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/package.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/package.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/dict-images/nature.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/CorsExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/CorsExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,32 +171,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor": "Run",
+    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature/gh-pages-cors",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" />
@@ -281,8 +278,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
@@ -385,7 +382,7 @@
       <workItem from="1770198896348" duration="7062000" />
       <workItem from="1770301680383" duration="6482000" />
       <workItem from="1770392578601" duration="828000" />
-      <workItem from="1770454045534" duration="4604000" />
+      <workItem from="1770454045534" duration="5610000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -571,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769849767080</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package.">
+      <option name="closed" value="true" />
+      <created>1770459732322</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1770459732322</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: benchmark controller was added for testing getting lessons with cache and without cache." />
     <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
     <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
     <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
@@ -631,7 +635,8 @@
     <MESSAGE value="Feature: pop up for changing chat title, microchanges for pop ups responses." />
     <MESSAGE value="Feature: now we can rename and create chats without pages reloading." />
     <MESSAGE value="Feature: new topics pages for dictionaries." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: new topics pages for dictionaries." />
+    <MESSAGE value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
