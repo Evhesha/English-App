@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "Choose the correct form: I enjoy ___ books.",
       "options": ["to read", "reading", "read", "reads"],
-      "correctAnswer": "reading",
-      "points": 1
+      "correctAnswer": "reading"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "Which verb is followed by infinitive?",
       "options": ["enjoy", "finish", "want", "avoid"],
-      "correctAnswer": "want",
-      "points": 1
+      "correctAnswer": "want"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: She promised ___ (help) me.",
-      "correctAnswer": "to help",
-      "points": 1
+      "correctAnswer": "to help"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "Choose the correct form: He stopped ___ when he saw me.",
       "options": ["to smoke", "smoking", "smoke", "smokes"],
-      "correctAnswer": "smoking",
-      "points": 1
+      "correctAnswer": "smoking"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: I need ___ (buy) some milk.",
-      "correctAnswer": "to buy",
-      "points": 1
+      "correctAnswer": "to buy"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which verb can be followed by both gerund and infinitive?",
       "options": ["enjoy", "finish", "start", "avoid"],
-      "correctAnswer": "start",
-      "points": 1
+      "correctAnswer": "start"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: She avoids ___ (meet) him.",
-      "correctAnswer": "meeting",
-      "points": 1
+      "correctAnswer": "meeting"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "Choose the correct form: I forgot ___ the door.",
       "options": ["to lock", "locking", "lock", "locks"],
-      "correctAnswer": "to lock",
-      "points": 1
+      "correctAnswer": "to lock"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: They decided ___ (go) to the cinema.",
-      "correctAnswer": "to go",
-      "points": 1
+      "correctAnswer": "to go"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Which verb is always followed by gerund?",
       "options": ["want", "like", "suggest", "plan"],
-      "correctAnswer": "suggest",
-      "points": 1
+      "correctAnswer": "suggest"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: He finished ___ (write) the report.",
-      "correctAnswer": "writing",
-      "points": 1
+      "correctAnswer": "writing"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Choose the correct sentence:",
       "options": ["I like to swim in the sea.", "I like swimming in the sea.", "Both are correct", "Neither is correct"],
-      "correctAnswer": "Both are correct",
-      "points": 1
+      "correctAnswer": "Both are correct"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: We hope ___ (see) you soon.",
-      "correctAnswer": "to see",
-      "points": 1
+      "correctAnswer": "to see"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "What is the difference: 'I remember locking the door' vs 'I remembered to lock the door'?",
       "options": ["No difference", "First: past action, second: future action", "First: action done, second: action to do", "Both are incorrect"],
-      "correctAnswer": "First: action done, second: action to do",
-      "points": 1
+      "correctAnswer": "First: action done, second: action to do"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: She suggested ___ (go) for a walk.",
-      "correctAnswer": "going",
-      "points": 1
+      "correctAnswer": "going"
     }
   ]
 }

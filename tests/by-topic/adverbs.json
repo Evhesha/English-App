@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "What is the adverb form of 'quick'?",
       "options": ["quickly", "quickily", "quicky", "quick"],
-      "correctAnswer": "quickly",
-      "points": 1
+      "correctAnswer": "quickly"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "Which is an adverb of frequency?",
       "options": ["here", "now", "often", "well"],
-      "correctAnswer": "often",
-      "points": 1
+      "correctAnswer": "often"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: She sings ___ (beautiful).",
-      "correctAnswer": "beautifully",
-      "points": 1
+      "correctAnswer": "beautifully"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "What is the adverb form of 'good'?",
       "options": ["goodly", "well", "good", "gooder"],
-      "correctAnswer": "well",
-      "points": 1
+      "correctAnswer": "well"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: He speaks English ___ (fluent).",
-      "correctAnswer": "fluently",
-      "points": 1
+      "correctAnswer": "fluently"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which is an adverb of place?",
       "options": ["today", "always", "outside", "quickly"],
-      "correctAnswer": "outside",
-      "points": 1
+      "correctAnswer": "outside"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: They arrived ___ (late) for the meeting.",
-      "correctAnswer": "late",
-      "points": 1
+      "correctAnswer": "late"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "Which sentence has the adverb in correct position?",
       "options": ["She often is late.", "She is often late.", "Often she is late.", "She is late often."],
-      "correctAnswer": "She is often late.",
-      "points": 1
+      "correctAnswer": "She is often late."
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: He drives ___ (careful).",
-      "correctAnswer": "carefully",
-      "points": 1
+      "correctAnswer": "carefully"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "What is the adverb form of 'fast'?",
       "options": ["fastly", "fast", "fastily", "fasten"],
-      "correctAnswer": "fast",
-      "points": 1
+      "correctAnswer": "fast"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: I ___ (usual) have coffee in the morning.",
-      "correctAnswer": "usually",
-      "points": 1
+      "correctAnswer": "usually"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Which is an adverb of manner?",
       "options": ["never", "here", "slowly", "yesterday"],
-      "correctAnswer": "slowly",
-      "points": 1
+      "correctAnswer": "slowly"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: She works ___ (hard) than anyone else.",
-      "correctAnswer": "harder",
-      "points": 1
+      "correctAnswer": "harder"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "Which adverb goes at the end of the sentence?",
       "options": ["often", "never", "here", "sometimes"],
-      "correctAnswer": "here",
-      "points": 1
+      "correctAnswer": "here"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: They will meet us ___ (there) tomorrow.",
-      "correctAnswer": "there",
-      "points": 1
+      "correctAnswer": "there"
     }
   ]
 }

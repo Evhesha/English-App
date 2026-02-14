@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "What is the plural form of 'child'?",
       "options": ["childs", "children", "childes", "childrens"],
-      "correctAnswer": "children",
-      "points": 1
+      "correctAnswer": "children"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "Which noun is uncountable?",
       "options": ["apple", "water", "book", "cat"],
-      "correctAnswer": "water",
-      "points": 1
+      "correctAnswer": "water"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: There are three ___ (box) on the table.",
-      "correctAnswer": "boxes",
-      "points": 1
+      "correctAnswer": "boxes"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "What is the plural of 'potato'?",
       "options": ["potatos", "potatoes", "potato", "potatoies"],
-      "correctAnswer": "potatoes",
-      "points": 1
+      "correctAnswer": "potatoes"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: This is ___ (Tom) car.",
-      "correctAnswer": "Tom's",
-      "points": 1
+      "correctAnswer": "Tom's"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which noun has an irregular plural form?",
       "options": ["table", "woman", "computer", "pen"],
-      "correctAnswer": "woman",
-      "points": 1
+      "correctAnswer": "woman"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: I need some ___ (information) about this course.",
-      "correctAnswer": "information",
-      "points": 1
+      "correctAnswer": "information"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "What is the possessive form of 'children'?",
       "options": ["childrens'", "children's", "childrens's", "childs'"],
-      "correctAnswer": "children's",
-      "points": 1
+      "correctAnswer": "children's"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: There are many ___ (person) in the room.",
-      "correctAnswer": "people",
-      "points": 1
+      "correctAnswer": "people"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Which noun is always plural?",
       "options": ["news", "scissors", "money", "furniture"],
-      "correctAnswer": "scissors",
-      "points": 1
+      "correctAnswer": "scissors"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: These are my ___ (friend) houses.",
-      "correctAnswer": "friends'",
-      "points": 1
+      "correctAnswer": "friends'"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "What is the plural of 'knife'?",
       "options": ["knifes", "knives", "knife", "knivs"],
-      "correctAnswer": "knives",
-      "points": 1
+      "correctAnswer": "knives"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: We don't have much ___ (time) left.",
-      "correctAnswer": "time",
-      "points": 1
+      "correctAnswer": "time"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "Which is correct for a plural possessive?",
       "options": ["the girls's bags", "the girls' bags", "the girl's bags", "the girls bags"],
-      "correctAnswer": "the girls' bags",
-      "points": 1
+      "correctAnswer": "the girls' bags"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: There are five ___ (woman) in the office.",
-      "correctAnswer": "women",
-      "points": 1
+      "correctAnswer": "women"
     }
   ]
 }

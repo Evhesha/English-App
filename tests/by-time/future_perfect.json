@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "Choose the correct form: By next year, I ___ my studies.",
       "options": ["will finish", "will be finishing", "will have finished", "am finishing"],
-      "correctAnswer": "will have finished",
-      "points": 1
+      "correctAnswer": "will have finished"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "What is the structure of Future Perfect?",
       "options": ["will be + verb+ing", "will + base verb", "will have + past participle", "will have been + verb+ing"],
-      "correctAnswer": "will have + past participle",
-      "points": 1
+      "correctAnswer": "will have + past participle"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: By the time you arrive, we ___ (prepare) everything.",
-      "correctAnswer": "will have prepared",
-      "points": 1
+      "correctAnswer": "will have prepared"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "When do we use Future Perfect?",
       "options": ["For actions in progress at specific future time", "For actions completed before a specific future time", "For predictions without evidence", "For scheduled events"],
-      "correctAnswer": "For actions completed before a specific future time",
-      "points": 1
+      "correctAnswer": "For actions completed before a specific future time"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: By 2030, scientists ___ (discover) new treatments for many diseases.",
-      "correctAnswer": "will have discovered",
-      "points": 1
+      "correctAnswer": "will have discovered"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which time expression is commonly used with Future Perfect?",
       "options": ["right now", "by this time tomorrow", "yesterday", "at the moment"],
-      "correctAnswer": "by this time tomorrow",
-      "points": 1
+      "correctAnswer": "by this time tomorrow"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: By the end of this month, she ___ (read) five books.",
-      "correctAnswer": "will have read",
-      "points": 1
+      "correctAnswer": "will have read"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "What is the question form for 'they will have finished'?",
       "options": ["Will they have finished?", "Have they will finished?", "Will they finished?", "Do they will have finished?"],
-      "correctAnswer": "Will they have finished?",
-      "points": 1
+      "correctAnswer": "Will they have finished?"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: I ___ (not complete) the project by Friday.",
-      "correctAnswer": "will not have completed / won't have completed",
-      "points": 1
+      "correctAnswer": "will not have completed / won't have completed"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Choose the correct sentence:",
       "options": ["By 10 PM, I will do my homework.", "By 10 PM, I will be doing my homework.", "By 10 PM, I will have done my homework.", "By 10 PM, I do my homework."],
-      "correctAnswer": "By 10 PM, I will have done my homework.",
-      "points": 1
+      "correctAnswer": "By 10 PM, I will have done my homework."
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: By the time we get to the cinema, the movie ___ (start).",
-      "correctAnswer": "will have started",
-      "points": 1
+      "correctAnswer": "will have started"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Which tense emphasizes completion before another future action?",
       "options": ["Future Simple", "Future Continuous", "Future Perfect", "Present Perfect"],
-      "correctAnswer": "Future Perfect",
-      "points": 1
+      "correctAnswer": "Future Perfect"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: By next summer, they ___ (build) the new hospital.",
-      "correctAnswer": "will have built",
-      "points": 1
+      "correctAnswer": "will have built"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "What is the negative form of 'he will have arrived'?",
       "options": ["He won't have arrived.", "He will not have arrived.", "Both are correct", "He will haven't arrived."],
-      "correctAnswer": "Both are correct",
-      "points": 1
+      "correctAnswer": "Both are correct"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: ___ you ___ (finish) the report by tomorrow evening?",
-      "correctAnswer": "Will, have finished",
-      "points": 1
+      "correctAnswer": "Will, have finished"
     }
   ]
 }

@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "Choose the correct conjunction: I like tea ___ coffee.",
       "options": ["and", "but", "or", "so"],
-      "correctAnswer": "and",
-      "points": 1
+      "correctAnswer": "and"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "Which conjunction shows contrast?",
       "options": ["and", "but", "or", "so"],
-      "correctAnswer": "but",
-      "points": 1
+      "correctAnswer": "but"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: She didn't go to work ___ she was ill.",
-      "correctAnswer": "because",
-      "points": 1
+      "correctAnswer": "because"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "Choose the correct conjunction: It was raining, ___ we stayed at home.",
       "options": ["and", "but", "or", "so"],
-      "correctAnswer": "so",
-      "points": 1
+      "correctAnswer": "so"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: Would you like tea ___ coffee?",
-      "correctAnswer": "or",
-      "points": 1
+      "correctAnswer": "or"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which conjunction gives a reason?",
       "options": ["and", "but", "because", "so"],
-      "correctAnswer": "because",
-      "points": 1
+      "correctAnswer": "because"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: ___ it was cold, we went for a walk.",
-      "correctAnswer": "Although",
-      "points": 1
+      "correctAnswer": "Although"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "Choose the correct conjunction: He studied hard, ___ he failed the exam.",
       "options": ["and", "but", "so", "because"],
-      "correctAnswer": "but",
-      "points": 1
+      "correctAnswer": "but"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: I want to go to the party, ___ I have too much work.",
-      "correctAnswer": "but",
-      "points": 1
+      "correctAnswer": "but"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Which conjunction shows result?",
       "options": ["and", "but", "so", "because"],
-      "correctAnswer": "so",
-      "points": 1
+      "correctAnswer": "so"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: She was tired, ___ she continued working.",
-      "correctAnswer": "but",
-      "points": 1
+      "correctAnswer": "but"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Choose the correct sentence:",
       "options": ["Although it was late, but we continued.", "Although it was late, we continued.", "It was late, although we continued.", "It was late, we continued although."],
-      "correctAnswer": "Although it was late, we continued.",
-      "points": 1
+      "correctAnswer": "Although it was late, we continued."
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: I'll call you ___ I arrive.",
-      "correctAnswer": "when",
-      "points": 1
+      "correctAnswer": "when"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "Which is NOT a conjunction?",
       "options": ["and", "but", "however", "because"],
-      "correctAnswer": "however",
-      "points": 1
+      "correctAnswer": "however"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: You can have cake ___ ice cream, but not both.",
-      "correctAnswer": "or",
-      "points": 1
+      "correctAnswer": "or"
     }
   ]
 }

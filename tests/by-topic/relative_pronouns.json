@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "Choose the correct relative pronoun: The woman ___ lives next door is a doctor.",
       "options": ["who", "which", "that", "whose"],
-      "correctAnswer": "who",
-      "points": 1
+      "correctAnswer": "who"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "Which relative pronoun is used for things?",
       "options": ["who", "which", "whose", "whom"],
-      "correctAnswer": "which",
-      "points": 1
+      "correctAnswer": "which"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: This is the book ___ I bought yesterday.",
-      "correctAnswer": "that/which",
-      "points": 1
+      "correctAnswer": "that/which"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "Choose the correct relative pronoun: The man ___ car was stolen called the police.",
       "options": ["who", "which", "that", "whose"],
-      "correctAnswer": "whose",
-      "points": 1
+      "correctAnswer": "whose"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: She is the student ___ won the competition.",
-      "correctAnswer": "who/that",
-      "points": 1
+      "correctAnswer": "who/that"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which relative pronoun shows possession?",
       "options": ["who", "which", "whose", "whom"],
-      "correctAnswer": "whose",
-      "points": 1
+      "correctAnswer": "whose"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: The house ___ they bought is very old.",
-      "correctAnswer": "that/which",
-      "points": 1
+      "correctAnswer": "that/which"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "Choose the correct relative pronoun: The person to ___ you spoke is my brother.",
       "options": ["who", "which", "that", "whom"],
-      "correctAnswer": "whom",
-      "points": 1
+      "correctAnswer": "whom"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: I have a friend ___ father is a pilot.",
-      "correctAnswer": "whose",
-      "points": 1
+      "correctAnswer": "whose"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Which relative pronoun can be used for both people and things?",
       "options": ["who", "which", "that", "whose"],
-      "correctAnswer": "that",
-      "points": 1
+      "correctAnswer": "that"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: The movie ___ we saw was very interesting.",
-      "correctAnswer": "that/which",
-      "points": 1
+      "correctAnswer": "that/which"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Choose the correct sentence:",
       "options": ["The girl which is singing is my sister.", "The girl who is singing is my sister.", "The girl whose is singing is my sister.", "The girl whom is singing is my sister."],
-      "correctAnswer": "The girl who is singing is my sister.",
-      "points": 1
+      "correctAnswer": "The girl who is singing is my sister."
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: He is the doctor ___ helped me.",
-      "correctAnswer": "who/that",
-      "points": 1
+      "correctAnswer": "who/that"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "When is 'whom' used?",
       "options": ["Subject of the clause", "Object of the clause", "Shows possession", "For things only"],
-      "correctAnswer": "Object of the clause",
-      "points": 1
+      "correctAnswer": "Object of the clause"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: This is the restaurant ___ food is excellent.",
-      "correctAnswer": "whose",
-      "points": 1
+      "correctAnswer": "whose"
     }
   ]
 }

@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "Choose the correct article: ___ apple a day keeps the doctor away.",
       "options": ["a", "an", "the", "no article"],
-      "correctAnswer": "an",
-      "points": 1
+      "correctAnswer": "an"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "Which sentence is correct?",
       "options": ["I saw a cat in the garden.", "I saw the cat in a garden.", "I saw cat in garden.", "I saw an cat in the garden."],
-      "correctAnswer": "I saw a cat in the garden.",
-      "points": 1
+      "correctAnswer": "I saw a cat in the garden."
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: She is ___ honest person.",
-      "correctAnswer": "an",
-      "points": 1
+      "correctAnswer": "an"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "Choose the correct article: We need ___ water and ___ bread.",
       "options": ["a, a", "the, the", "no article, no article", "an, a"],
-      "correctAnswer": "no article, no article",
-      "points": 1
+      "correctAnswer": "no article, no article"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: ___ sun is shining brightly today.",
-      "correctAnswer": "The",
-      "points": 1
+      "correctAnswer": "The"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which article is used with unique objects?",
       "options": ["a", "an", "the", "no article"],
-      "correctAnswer": "the",
-      "points": 1
+      "correctAnswer": "the"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: He plays ___ piano very well.",
-      "correctAnswer": "the",
-      "points": 1
+      "correctAnswer": "the"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "Choose the correct sentence:",
       "options": ["I'm going to United States.", "I'm going to the United States.", "I'm going to an United States.", "I'm going to a United States."],
-      "correctAnswer": "I'm going to the United States.",
-      "points": 1
+      "correctAnswer": "I'm going to the United States."
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: She has ___ university degree.",
-      "correctAnswer": "a",
-      "points": 1
+      "correctAnswer": "a"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Which requires no article?",
       "options": ["___ Mount Everest", "___ Pacific Ocean", "___ love", "___ Eiffel Tower"],
-      "correctAnswer": "love",
-      "points": 1
+      "correctAnswer": "love"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: Let's have ___ lunch together.",
-      "correctAnswer": "no article",
-      "points": 1
+      "correctAnswer": "no article"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Choose the correct article: He is ___ European citizen.",
       "options": ["a", "an", "the", "no article"],
-      "correctAnswer": "a",
-      "points": 1
+      "correctAnswer": "a"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: I need ___ hour to finish this work.",
-      "correctAnswer": "an",
-      "points": 1
+      "correctAnswer": "an"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "Which sentence is incorrect?",
       "options": ["The happiness is important.", "Happiness is important.", "A cat is on the roof.", "An apple fell from the tree."],
-      "correctAnswer": "The happiness is important.",
-      "points": 1
+      "correctAnswer": "The happiness is important."
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: They live in ___ Netherlands.",
-      "correctAnswer": "the",
-      "points": 1
+      "correctAnswer": "the"
     }
   ]
 }

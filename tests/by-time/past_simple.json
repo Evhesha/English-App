@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "Choose the correct form: Yesterday, I ___ to the cinema.",
       "options": ["go", "went", "have gone", "going"],
-      "correctAnswer": "went",
-      "points": 1
+      "correctAnswer": "went"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "What is the past form of 'see'?",
       "options": ["seeed", "saw", "seen", "seeing"],
-      "correctAnswer": "saw",
-      "points": 1
+      "correctAnswer": "saw"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: She ___ (not like) the movie.",
-      "correctAnswer": "didn't like",
-      "points": 1
+      "correctAnswer": "didn't like"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "When do we use Past Simple?",
       "options": ["For actions happening now", "For completed past actions", "For future plans", "For ongoing actions"],
-      "correctAnswer": "For completed past actions",
-      "points": 1
+      "correctAnswer": "For completed past actions"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: ___ you ___ (enjoy) the party?",
-      "correctAnswer": "Did, enjoy",
-      "points": 1
+      "correctAnswer": "Did, enjoy"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which time expression is used with Past Simple?",
       "options": ["now", "yesterday", "already", "yet"],
-      "correctAnswer": "yesterday",
-      "points": 1
+      "correctAnswer": "yesterday"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: They ___ (arrive) at 8 PM.",
-      "correctAnswer": "arrived",
-      "points": 1
+      "correctAnswer": "arrived"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "What is the question form for 'he worked'?",
       "options": ["Did he work?", "Does he work?", "Was he work?", "Working he?"],
-      "correctAnswer": "Did he work?",
-      "points": 1
+      "correctAnswer": "Did he work?"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: We ___ (not see) him last week.",
-      "correctAnswer": "didn't see",
-      "points": 1
+      "correctAnswer": "didn't see"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Choose the correct negative: I went to school.",
       "options": ["I didn't went to school.", "I didn't go to school.", "I not go to school.", "I don't go to school."],
-      "correctAnswer": "I didn't go to school.",
-      "points": 1
+      "correctAnswer": "I didn't go to school."
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: What time ___ you ___ (get up) this morning?",
-      "correctAnswer": "did, get up",
-      "points": 1
+      "correctAnswer": "did, get up"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "What is the past form of regular verb 'study'?",
       "options": ["studyed", "studied", "study", "studying"],
-      "correctAnswer": "studied",
-      "points": 1
+      "correctAnswer": "studied"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: She ___ (buy) a new car last month.",
-      "correctAnswer": "bought",
-      "points": 1
+      "correctAnswer": "bought"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "Which sentence is correct?",
       "options": ["I didn't saw him.", "I didn't see him.", "I not saw him.", "I don't saw him."],
-      "correctAnswer": "I didn't see him.",
-      "points": 1
+      "correctAnswer": "I didn't see him."
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: They ___ (meet) in 2010.",
-      "correctAnswer": "met",
-      "points": 1
+      "correctAnswer": "met"
     }
   ]
 }

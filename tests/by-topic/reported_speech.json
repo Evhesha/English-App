@@ -14,113 +14,98 @@
       "type": "choice",
       "question": "Change to reported speech: 'I am tired.' He said...",
       "options": ["he is tired", "he was tired", "he had been tired", "he will be tired"],
-      "correctAnswer": "he was tired",
-      "points": 1
+      "correctAnswer": "he was tired"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "What changes in reported speech?",
       "options": ["Only pronouns", "Only tenses", "Tenses, pronouns, time expressions", "Nothing changes"],
-      "correctAnswer": "Tenses, pronouns, time expressions",
-      "points": 1
+      "correctAnswer": "Tenses, pronouns, time expressions"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Change to reported speech: 'I will help you.' She said...",
-      "correctAnswer": "she would help me",
-      "points": 1
+      "correctAnswer": "she would help me"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "Change to reported speech: 'I have finished my homework.' He said...",
       "options": ["he has finished his homework", "he had finished his homework", "he finished his homework", "he finishes his homework"],
-      "correctAnswer": "he had finished his homework",
-      "points": 1
+      "correctAnswer": "he had finished his homework"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Change to reported speech: 'I saw this movie yesterday.' She said...",
-      "correctAnswer": "she had seen that movie the day before",
-      "points": 1
+      "correctAnswer": "she had seen that movie the day before"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "What does 'now' change to in reported speech?",
       "options": ["now", "then", "at that time", "at the moment"],
-      "correctAnswer": "then",
-      "points": 1
+      "correctAnswer": "then"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Change to reported speech: 'I can speak French.' He said...",
-      "correctAnswer": "he could speak French",
-      "points": 1
+      "correctAnswer": "he could speak French"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "Change to reported speech: 'We are going to the park.' They said...",
       "options": ["they are going to the park", "they were going to the park", "they go to the park", "they will go to the park"],
-      "correctAnswer": "they were going to the park",
-      "points": 1
+      "correctAnswer": "they were going to the park"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Change to reported speech: 'I bought a new car.' He said...",
-      "correctAnswer": "he had bought a new car",
-      "points": 1
+      "correctAnswer": "he had bought a new car"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "What does 'tomorrow' change to in reported speech?",
       "options": ["tomorrow", "the next day", "yesterday", "today"],
-      "correctAnswer": "the next day",
-      "points": 1
+      "correctAnswer": "the next day"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Change to reported speech: 'I must leave early.' She said...",
-      "correctAnswer": "she had to leave early",
-      "points": 1
+      "correctAnswer": "she had to leave early"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Which sentence is correct in reported speech?",
       "options": ["She said she is happy.", "She said she was happy.", "She said she will be happy.", "She said she can be happy."],
-      "correctAnswer": "She said she was happy.",
-      "points": 1
+      "correctAnswer": "She said she was happy."
     },
     {
       "id": 13,
       "type": "input",
       "question": "Change to reported speech: 'I don't like coffee.' He said...",
-      "correctAnswer": "he didn't like coffee",
-      "points": 1
+      "correctAnswer": "he didn't like coffee"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "What does 'here' change to in reported speech?",
       "options": ["here", "there", "this place", "that place"],
-      "correctAnswer": "there",
-      "points": 1
+      "correctAnswer": "there"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Change to reported speech: 'I will call you later.' She said...",
-      "correctAnswer": "she would call me later",
-      "points": 1
+      "correctAnswer": "she would call me later"
     }
   ]
 }
