@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "c2d3e4f5-f6f7-9012-abcd-ef0123456789",
-    "level": "C2",
     "name": "C2 Proficiency Level Test",
     "description": "Understand virtually everything read or heard",
-    "totalQuestions": 20,
-    "timeLimit": 50,
-    "difficulty": "Proficiency"
+    "totalQuestions": 20
   },
   "questions": [
     {

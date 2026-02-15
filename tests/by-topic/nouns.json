@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "7b8c9d0a-1b2c-3d4e-5f6a-7b8c9d0a1b2c",
-    "topic": "Существительные",
     "name": "Тест по существительным английского языка",
     "description": "Тест на исчисляемые и неисчисляемые существительные, множественное число, притяжательный падеж",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A1-A2"
+    "totalQuestions": 15
   },
   "questions": [
     {

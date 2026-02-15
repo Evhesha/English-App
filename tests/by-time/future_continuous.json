@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "1b2c3d4e-5f6a-7890-bcde-f1234567890a",
-    "topic": "Future Continuous",
     "name": "Тест по Future Continuous",
     "description": "Тест на будущее продолженное время, действия в процессе в будущем",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "B1-B2"
+    "totalQuestions": 15
   },
   "questions": [
     {

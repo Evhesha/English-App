@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "3d4e5f6a-7b8c-9d0a-1b2c-3d4e5f6a7b7c",
-    "topic": "Предлоги",
     "name": "Тест по предлогам английского языка",
     "description": "Тест на знание предлогов времени, места и движения",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A2-B1"
+    "totalQuestions": 15
   },
   "questions": [
     {

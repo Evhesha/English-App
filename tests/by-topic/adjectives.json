@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "8c9d0a1b-2c3d-4e5f-6a7b-8c9d0a1b2c3d",
-    "topic": "Прилагательные",
     "name": "Тест по прилагательным английского языка",
     "description": "Тест на степени сравнения прилагательных",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A2-B1"
+    "totalQuestions": 15
   },
   "questions": [
     {

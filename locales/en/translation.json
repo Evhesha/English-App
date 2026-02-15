@@ -26,6 +26,7 @@
     "by-time": "By time",
     "by-topic": "By topic",
     "by-level": "By level",
+    "online-tests": "Online tests",
     "account": "Account",
     "profile": "Profile",
     "settings": "Settings",
@@ -130,5 +131,10 @@
     "timestamp": "Time",
     "clear": "Clear chat",
     "copy": "Copy message"
+  },
+  "settings": {
+    "logout-sure": "Are you sure that you want to logout?",
+    "delete-sure": "If you want to delete the account, please write 'delete'",
+    "delete-cancel": "Account deletion cancelled - incorrect confirmation text"
   }
 }

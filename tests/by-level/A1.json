@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "a1b2c3d4-e5f6-7890-abcd-ef0123456789",
-    "level": "A1",
     "name": "A1 Elementary Level Test",
     "description": "Everyday expressions and basic phrases",
-    "totalQuestions": 20,
-    "timeLimit": 25,
-    "difficulty": "Elementary"
+    "totalQuestions": 20
   },
   "questions": [
     {

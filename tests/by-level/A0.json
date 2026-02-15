@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "a0b1c2d3-e4f5-6789-abcd-ef0123456789",
-    "level": "A0",
     "name": "A0 Beginner Level Test",
     "description": "Basic vocabulary and simple sentences for absolute beginners",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "Beginner"
+    "totalQuestions": 15
   },
   "questions": [
     {

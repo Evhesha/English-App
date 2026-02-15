@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "7b8c9d0a-1b2c-3d4e-5f6a-7b8c9d0a1b2d",
-    "topic": "Союзы",
     "name": "Тест по союзам английского языка",
     "description": "Тест на союзы and, but, or, so, because, although, however",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A2-B1"
+    "totalQuestions": 15
   },
   "questions": [
     {

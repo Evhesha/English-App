@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "a0b1c2d3-e4f5-6789-0123-456789abcdef",
-    "topic": "Present Perfect",
     "name": "Тест по Present Perfect",
     "description": "Тест на настоящее совершенное время, опыт, результат",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A2-B1"
+    "totalQuestions": 15
   },
   "questions": [
     {

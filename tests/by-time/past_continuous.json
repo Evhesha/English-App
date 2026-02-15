@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "d3e4f5a6-b7c8-9012-3456-789abcdef012",
-    "topic": "Past Continuous",
     "name": "Тест по Past Continuous",
     "description": "Тест на прошедшее продолженное время",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A2-B1"
+    "totalQuestions": 15
   },
   "questions": [
     {

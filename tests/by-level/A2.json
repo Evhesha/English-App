@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "a3b4c5d6-e7f8-9012-abcd-ef0123456789",
-    "level": "A2",
     "name": "A2 Pre-Intermediate Level Test",
     "description": "Simple direct communication on familiar topics",
-    "totalQuestions": 18,
-    "timeLimit": 30,
-    "difficulty": "Pre-Intermediate"
+    "totalQuestions": 18
   },
   "questions": [
     {

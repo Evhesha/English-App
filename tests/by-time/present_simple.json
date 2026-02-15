@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "8a2d7f4c-1b3e-4f9a-8c5d-6e7f8a9b0c1d",
-    "topic": "Present Simple",
     "name": "Тест по Present Simple",
     "description": "Тест на настоящее простое время, факты, регулярные действия",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A1-A2"
+    "totalQuestions": 15
   },
   "questions": [
     {

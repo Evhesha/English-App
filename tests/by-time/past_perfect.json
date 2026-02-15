@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "e4f5a6b7-c8d9-0123-4567-89abcdef0123",
-    "topic": "Past Perfect",
     "name": "Тест по Past Perfect",
     "description": "Тест на прошедшее совершенное время",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "B1-B2"
+    "totalQuestions": 15
   },
   "questions": [
     {
