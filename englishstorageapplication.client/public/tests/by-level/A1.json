@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "a1b2c3d4-e5f6-7890-abcd-ef0123456789",
-    "level": "A1",
     "name": "A1 Elementary Level Test",
     "description": "Everyday expressions and basic phrases",
-    "totalQuestions": 20,
-    "timeLimit": 25,
-    "difficulty": "Elementary"
+    "totalQuestions": 20
   },
   "questions": [
     {
@@ -14,113 +11,98 @@
       "type": "choice",
       "question": "What is the past tense of the verb \"to go\"?",
       "options": ["goes", "went", "gone", "going"],
-      "correctAnswer": "went",
-      "points": 1
+      "correctAnswer": "went"
     },
     {
       "id": 2,
       "type": "input",
       "question": "Fill in the blank: \"She ____ (run) every morning.\"",
-      "correctAnswer": "runs",
-      "points": 1
+      "correctAnswer": "runs"
     },
     {
       "id": 3,
       "type": "choice",
       "question": "Which is the correct preposition: \"The cat is ____ the bed.\"?",
       "options": ["on", "in", "under", "over"],
-      "correctAnswer": "under",
-      "points": 1
+      "correctAnswer": "under"
     },
     {
       "id": 4,
       "type": "input",
       "question": "Fill in the blank: \"They ____ (eat) dinner at 7 PM.\"",
-      "correctAnswer": "eat",
-      "points": 1
+      "correctAnswer": "eat"
     },
     {
       "id": 5,
       "type": "choice",
       "question": "Choose the correct article: \"____ sun is shining.\"",
       "options": ["A", "An", "The", "No article"],
-      "correctAnswer": "The",
-      "points": 1
+      "correctAnswer": "The"
     },
     {
       "id": 6,
       "type": "input",
       "question": "What is the plural form of \"mouse\"?",
-      "correctAnswer": "mice",
-      "points": 1
+      "correctAnswer": "mice"
     },
     {
       "id": 7,
       "type": "choice",
       "question": "Which of these is an animal?",
       "options": ["Table", "Lion", "Car", "Bottle"],
-      "correctAnswer": "Lion",
-      "points": 1
+      "correctAnswer": "Lion"
     },
     {
       "id": 8,
       "type": "input",
       "question": "Fill in the blank: \"She ____ (sleep) at 10 PM every night.\"",
-      "correctAnswer": "sleeps",
-      "points": 1
+      "correctAnswer": "sleeps"
     },
     {
       "id": 9,
       "type": "choice",
       "question": "Which sentence is correct?",
       "options": ["I has a pen.", "I have a pen.", "I having a pen.", "I is a pen."],
-      "correctAnswer": "I have a pen.",
-      "points": 1
+      "correctAnswer": "I have a pen."
     },
     {
       "id": 10,
       "type": "input",
       "question": "What is the opposite of \"old\"?",
-      "correctAnswer": "young",
-      "points": 1
+      "correctAnswer": "young"
     },
     {
       "id": 11,
       "type": "choice",
       "question": "Choose the correct verb: \"They ____ to the market every Sunday.\"",
       "options": ["go", "goes", "going", "gone"],
-      "correctAnswer": "go",
-      "points": 1
+      "correctAnswer": "go"
     },
     {
       "id": 12,
       "type": "input",
       "question": "Fill in the blank: \"He ____ (cook) dinner tonight.\"",
-      "correctAnswer": "is cooking",
-      "points": 1
+      "correctAnswer": "is cooking"
     },
     {
       "id": 13,
       "type": "choice",
       "question": "Which word is a mode of transport?",
       "options": ["Train", "Table", "Tree", "Book"],
-      "correctAnswer": "Train",
-      "points": 1
+      "correctAnswer": "Train"
     },
     {
       "id": 14,
       "type": "input",
       "question": "Fill in the blank: \"She ____ (write) a letter now.\"",
-      "correctAnswer": "is writing",
-      "points": 1
+      "correctAnswer": "is writing"
     },
     {
       "id": 15,
       "type": "choice",
       "question": "Which is a season?",
       "options": ["Monday", "Winter", "Day", "Week"],
-      "correctAnswer": "Winter",
-      "points": 1
+      "correctAnswer": "Winter"
     },
     {
       "id": 16,
@@ -137,30 +119,26 @@
         "angry": "злой",
         "sad": "грустный",
         "excited": "взволнованный"
-      },
-      "points": 4
+      }
     },
     {
       "id": 17,
       "type": "input",
       "question": "Fill in the blank: \"The sky is ____ (blue).\"",
-      "correctAnswer": "blue",
-      "points": 1
+      "correctAnswer": "blue"
     },
     {
       "id": 18,
       "type": "choice",
       "question": "Which sentence is in the future tense?",
       "options": ["I eat breakfast.", "I am eating breakfast.", "I will eat breakfast.", "I ate breakfast."],
-      "correctAnswer": "I will eat breakfast.",
-      "points": 1
+      "correctAnswer": "I will eat breakfast."
     },
     {
       "id": 19,
       "type": "input",
       "question": "Fill in the blank: \"She ____ (read) every day.\"",
-      "correctAnswer": "reads",
-      "points": 1
+      "correctAnswer": "reads"
     },
     {
       "id": 20,
@@ -177,8 +155,7 @@
         "cat": "кошка",
         "bird": "птица",
         "fish": "рыба"
-      },
-      "points": 4
+      }
     }
   ]
 }
