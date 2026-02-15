@@ -14,42 +14,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: new more useful prompt for llm model, changes in configurations for deploy and local running">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: new cors politics for server">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/A0.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/A0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/A1.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/A1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/A2.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/A2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/B1.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/B1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/B2.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/B2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/C1.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/C1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/C2.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-level/C2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_perfect_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/future_simple.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_perfect_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/past_simple.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect_continuous.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_perfect_continuous.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_simple.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-time/present_simple.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adjectives.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adjectives.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adverbs.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/adverbs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/articles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conditionals.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conditionals.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conjunctions.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/conjunctions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/gerund_infinitive.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/gerund_infinitive.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/modal_verbs.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/modal_verbs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/nouns.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/nouns.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/passive_voice.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/passive_voice.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/phrasal_verbs.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/phrasal_verbs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/prepositions.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/prepositions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/pronouns.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/pronouns.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/relative_pronouns.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/relative_pronouns.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/reported_speech.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/tests/by-topic/reported_speech.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +72,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Evhesha/English-App.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/Evhesha/English-App&quot;,
     &quot;accountId&quot;: &quot;6586b0e4-d491-494a-b002-50d2254c4d41&quot;
   }
 }</component>
@@ -128,6 +99,7 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyPercentDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/UserExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonExceptions/NotFoundLessonException.cs" root0="FORCE_HIGHLIGHTING" />
@@ -203,33 +175,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor": "Run",
+    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" />
       <toRun name="HTTPS" type="LaunchSettings" />
@@ -415,6 +387,13 @@
       <workItem from="1770301680383" duration="6482000" />
       <workItem from="1770392578601" duration="828000" />
       <workItem from="1770454045534" duration="5610000" />
+      <workItem from="1770474224772" duration="883000" />
+      <workItem from="1770642599607" duration="54000" />
+      <workItem from="1770811778753" duration="2878000" />
+      <workItem from="1770839668306" duration="1515000" />
+      <workItem from="1770884034081" duration="118000" />
+      <workItem from="1770980443326" duration="1631000" />
+      <workItem from="1771051690759" duration="2345000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -643,6 +622,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
     <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
     <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
     <MESSAGE value="Fix: Some tests were fixed for repository. Changed theirs namespases." />
@@ -667,8 +647,7 @@
     <MESSAGE value="Feature: now we can rename and create chats without pages reloading." />
     <MESSAGE value="Feature: new topics pages for dictionaries." />
     <MESSAGE value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
-    <MESSAGE value="Fix: new more useful prompt for llm model, changes in configurations for deploy and local running" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: new more useful prompt for llm model, changes in configurations for deploy and local running" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
