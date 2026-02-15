@@ -1,10 +1,7 @@
 import {useTranslation} from "react-i18next";
 import {useState} from "react";
 import styled from "styled-components";
-import {toast, ToastContainer} from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
 import Cookies from "js-cookie";
-import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import {useTheme} from "@/Components/ThemeProvider/ThemeProvider.jsx";
 import axios from "axios";
@@ -70,20 +67,13 @@ function SettingPage() {
     const navigate = useNavigate();
     const {darkMode, toggleTheme} = useTheme();
 
-    const notify = () => {
-        toast.success("Language changed!", {
-            position: "bottom-right"
-        });
-    }
-
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
         setCurrentLang(language);
-        notify();
     };
 
     const handleLogout = () => {
-        const confirmLogout = window.confirm("Are you sure that you want to logout?");
+        const confirmLogout = window.confirm(t("settings.logout-sure"));
         if (!confirmLogout) return;
         Cookies.remove("token");
         navigate("/login");
@@ -91,15 +81,18 @@ function SettingPage() {
     };
 
     const deleteAccount = async() => {
-        const confirmLogout = window.confirm("Are you sure that you want to delete your account?");
-        if (!confirmLogout) return;
+        const confirmLogout = window.prompt(t("settings.delete-sure"));
+        if (confirmLogout !== "delete"){
+            alert(t("settings.delete-cancel"));
+            return;
+        }
         try {
             const token = Cookies.get("token");
             const decodedToken = jwtDecode(token);
             const id = decodedToken.userId;
             await axios.delete(`${API_BASE_URL}/api/users/${id}`);
         } catch (error) {
-            console.error('Ошибка при удалении пользователя:', error);
+            console.error(error);
         }
         Cookies.remove("token");
         navigate("/login");
@@ -107,7 +100,6 @@ function SettingPage() {
     }
 
     return (<Container>
-            <ToastContainer/>
             <Title>{t("account-page.settings")}</Title>
             <Section>
                 <h3>{t("account-page.language")}</h3>
@@ -126,13 +118,12 @@ function SettingPage() {
                     </LanguageButton>
                 </ButtonGroup>
             </Section>
-            <Section>
+            <Section >
                 <h3>{t("account-page.theme")}</h3>
                 <button
                     className="theme-toggle-btn"
                     onClick={() => {
                         toggleTheme();
-                        notify();
                     }}
                     title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
                 >
@@ -141,13 +132,7 @@ function SettingPage() {
             </Section>
             <Section>
                 <h3>{t("sidebar.sign-out")}</h3>
-                <Link
-                    to="#"
-                    onClick={handleLogout}
-                    className=""
-                >
-                    <i className="bi bi-door-closed"></i> {t("sidebar.sign-out")}
-                </Link>
+                <button onClick={handleLogout} className={"btn btn-primary"}>{t("sidebar.sign-out")} <i className="bi bi-door-closed"></i></button>
                 <span></span>
             </Section>
             <Section>
