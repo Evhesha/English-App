@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "a0b1c2d3-e4f5-6789-0123-456789abcdef",
-    "topic": "Present Perfect",
     "name": "Тест по Present Perfect",
     "description": "Тест на настоящее совершенное время, опыт, результат",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "A2-B1"
+    "totalQuestions": 15
   },
   "questions": [
     {
@@ -14,113 +11,98 @@
       "type": "choice",
       "question": "Choose the correct form: I ___ that movie.",
       "options": ["see", "saw", "have seen", "seeing"],
-      "correctAnswer": "have seen",
-      "points": 1
+      "correctAnswer": "have seen"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "What is the structure of Present Perfect?",
       "options": ["have/has + past participle", "have/has + verb+ing", "had + past participle", "will have + past participle"],
-      "correctAnswer": "have/has + past participle",
-      "points": 1
+      "correctAnswer": "have/has + past participle"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: She ___ (not finish) her homework yet.",
-      "correctAnswer": "hasn't finished",
-      "points": 1
+      "correctAnswer": "hasn't finished"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "When do we use Present Perfect?",
       "options": ["For specific past time", "For actions in progress", "For experiences in life", "For future plans"],
-      "correctAnswer": "For experiences in life",
-      "points": 1
+      "correctAnswer": "For experiences in life"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: ___ you ever ___ (be) to Paris?",
-      "correctAnswer": "Have, been",
-      "points": 1
+      "correctAnswer": "Have, been"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which time expression is used with Present Perfect?",
       "options": ["yesterday", "last week", "already", "in 2010"],
-      "correctAnswer": "already",
-      "points": 1
+      "correctAnswer": "already"
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: We ___ (live) here for five years.",
-      "correctAnswer": "have lived",
-      "points": 1
+      "correctAnswer": "have lived"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "What is the past participle of 'go'?",
       "options": ["goed", "went", "gone", "going"],
-      "correctAnswer": "gone",
-      "points": 1
+      "correctAnswer": "gone"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: He ___ (just arrive).",
-      "correctAnswer": "has just arrived",
-      "points": 1
+      "correctAnswer": "has just arrived"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Choose the correct question:",
       "options": ["Have you eaten lunch?", "Did you eaten lunch?", "Do you have eaten lunch?", "Are you eaten lunch?"],
-      "correctAnswer": "Have you eaten lunch?",
-      "points": 1
+      "correctAnswer": "Have you eaten lunch?"
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: I ___ (never try) sushi.",
-      "correctAnswer": "have never tried",
-      "points": 1
+      "correctAnswer": "have never tried"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "What is the difference: 'I have been to London' vs 'I went to London'?",
       "options": ["No difference", "First: experience, second: specific time", "First: future, second: past", "Both are incorrect"],
-      "correctAnswer": "First: experience, second: specific time",
-      "points": 1
+      "correctAnswer": "First: experience, second: specific time"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: How long ___ you ___ (know) him?",
-      "correctAnswer": "have, known",
-      "points": 1
+      "correctAnswer": "have, known"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "Which is NOT used with Present Perfect?",
       "options": ["yet", "already", "just", "yesterday"],
-      "correctAnswer": "yesterday",
-      "points": 1
+      "correctAnswer": "yesterday"
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: They ___ (not see) that film yet.",
-      "correctAnswer": "haven't seen",
-      "points": 1
+      "correctAnswer": "haven't seen"
     }
   ]
 }

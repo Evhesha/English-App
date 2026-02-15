@@ -25,7 +25,7 @@ function App() {
         </div>
         <footer className="footer">
           <p className="copyright">
-            © 2026 English Learning for BNTU. Все права защищены.
+            © 2026 English Learning for BNTU.
           </p>
         </footer>
       </div>

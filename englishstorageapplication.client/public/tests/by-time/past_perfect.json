@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "e4f5a6b7-c8d9-0123-4567-89abcdef0123",
-    "topic": "Past Perfect",
     "name": "Тест по Past Perfect",
     "description": "Тест на прошедшее совершенное время",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "B1-B2"
+    "totalQuestions": 15
   },
   "questions": [
     {
@@ -14,113 +11,98 @@
       "type": "choice",
       "question": "Choose the correct form: She ___ the letter before I arrived.",
       "options": ["wrote", "had written", "has written", "was writing"],
-      "correctAnswer": "had written",
-      "points": 1
+      "correctAnswer": "had written"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "What is the structure of Past Perfect?",
       "options": ["had + past participle", "have/has + past participle", "was/were + verb+ing", "did + verb"],
-      "correctAnswer": "had + past participle",
-      "points": 1
+      "correctAnswer": "had + past participle"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: They ___ (not finish) work when we called.",
-      "correctAnswer": "hadn't finished",
-      "points": 1
+      "correctAnswer": "hadn't finished"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "When do we use Past Perfect?",
       "options": ["For first past action", "For second past action", "For action before another past action", "For future in the past"],
-      "correctAnswer": "For action before another past action",
-      "points": 1
+      "correctAnswer": "For action before another past action"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: After I ___ (eat), I washed the dishes.",
-      "correctAnswer": "had eaten",
-      "points": 1
+      "correctAnswer": "had eaten"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which sentence shows correct order of events?",
       "options": ["I had eaten before I went to bed.", "I went to bed before I had eaten.", "I eat before I went to bed.", "I was eating before I went to bed."],
-      "correctAnswer": "I had eaten before I went to bed.",
-      "points": 1
+      "correctAnswer": "I had eaten before I went to bed."
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: By the time we arrived, the film ___ (already start).",
-      "correctAnswer": "had already started",
-      "points": 1
+      "correctAnswer": "had already started"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "What is the question form for 'he had left'?",
       "options": ["Had he left?", "Did he had left?", "Has he left?", "Was he left?"],
-      "correctAnswer": "Had he left?",
-      "points": 1
+      "correctAnswer": "Had he left?"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: She was tired because she ___ (not sleep) well.",
-      "correctAnswer": "hadn't slept",
-      "points": 1
+      "correctAnswer": "hadn't slept"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Choose the correct sentence:",
       "options": ["When I got home, my sister cooked dinner.", "When I got home, my sister had cooked dinner.", "When I got home, my sister has cooked dinner.", "When I got home, my sister was cooking dinner."],
-      "correctAnswer": "When I got home, my sister had cooked dinner.",
-      "points": 1
+      "correctAnswer": "When I got home, my sister had cooked dinner."
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: They realized they ___ (lose) their way.",
-      "correctAnswer": "had lost",
-      "points": 1
+      "correctAnswer": "had lost"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Which conjunction is often used with Past Perfect?",
       "options": ["while", "when", "after", "during"],
-      "correctAnswer": "after",
-      "points": 1
+      "correctAnswer": "after"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: Before I met her, I ___ (never see) such beauty.",
-      "correctAnswer": "had never seen",
-      "points": 1
+      "correctAnswer": "had never seen"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "What is the negative form of 'I had finished'?",
       "options": ["I hadn't finished.", "I didn't had finished.", "I not had finished.", "I haven't finished."],
-      "correctAnswer": "I hadn't finished.",
-      "points": 1
+      "correctAnswer": "I hadn't finished."
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: The train ___ (already leave) when we reached the station.",
-      "correctAnswer": "had already left",
-      "points": 1
+      "correctAnswer": "had already left"
     }
   ]
 }
