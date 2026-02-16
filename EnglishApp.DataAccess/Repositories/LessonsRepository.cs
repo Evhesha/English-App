@@ -66,21 +66,10 @@ namespace EnglishApp.DataAccess.Repositories
             Lesson lesson,
             CancellationToken cancellationToken)
         {
-            var lessonEntity = new Lesson
-            {
-                Id = lesson.Id,
-                UserId = lesson.UserId,
-                Title = lesson.Title,
-                Text = lesson.Text,
-                IsPublic = lesson.IsPublic,
-                Images = lesson.Images,
-                CreatedDate = lesson.CreatedDate
-            };
-
-            await _context.Lessons.AddAsync(lessonEntity, cancellationToken);
+            _context.Lessons.Add(lesson);
             await _context.SaveChangesAsync(cancellationToken);
 
-            return lessonEntity.Id;
+            return lesson.Id;
         }
 
         public async Task<Guid> UpdateLessonAsync(

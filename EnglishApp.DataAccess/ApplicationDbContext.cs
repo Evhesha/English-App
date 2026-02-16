@@ -13,6 +13,8 @@ namespace EnglishApp.DataAccess
         public DbSet<UserCard> UsersCards { get; set; }
         public DbSet<UserStudyResult> UsersStudyResults { get; set; }
         public DbSet<Like> Likes { get; set; }
+        public DbSet<Test> Tests { get; set; }
+        public DbSet<TestQuestion> TestQuestions { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

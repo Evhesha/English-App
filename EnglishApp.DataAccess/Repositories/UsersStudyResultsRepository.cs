@@ -66,15 +66,7 @@ namespace EnglishApp.DataAccess.Repositories
             UserStudyResult userStudyResult,
             CancellationToken cancellationToken)
         {
-            var userStudyResultEntity = new UserStudyResult
-            {
-                Id = userStudyResult.Id,
-                UserId = userStudyResult.UserId,
-                TestId = userStudyResult.TestId,
-                PercentResult = userStudyResult.PercentResult
-            };
-
-            await _context.AddAsync(userStudyResultEntity, cancellationToken);
+            _context.Add(userStudyResult);
             await _context.SaveChangesAsync(cancellationToken);
 
             return userStudyResult.Id;

@@ -57,17 +57,9 @@ namespace EnglishApp.DataAccess.Repositories
 
         public async Task<Guid> CreateUserAsync(User user, CancellationToken cancellationToken)
         {
-            var userEntity = new User
-            {
-                Id = user.Id,
-                Name = user.Name,
-                Email = user.Email,
-                PasswordHash = user.PasswordHash,
-            };
-
-            await _context.Users.AddAsync(userEntity, cancellationToken);
+            _context.Users.Add(user);
             await _context.SaveChangesAsync(cancellationToken);
-            return userEntity.Id;
+            return user.Id;
         }
 
         public async Task<Guid> UpdateUserAsync(User user, CancellationToken cancellationToken)

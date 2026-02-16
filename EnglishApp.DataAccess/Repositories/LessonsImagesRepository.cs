@@ -35,17 +35,10 @@ public class LessonsImagesRepository : ILessonsImagesRepository
         LessonImage lessonImage,
         CancellationToken cancellationToken)
     {
-        var lessonImageEntity = new LessonImage
-        {
-            Id = lessonImage.Id,
-            LessonId = lessonImage.LessonId,
-            ImageURL = lessonImage.ImageURL
-        };
-
-        await _context.LessonImages.AddAsync(lessonImageEntity, cancellationToken);
+        _context.LessonImages.Add(lessonImage);
         await _context.SaveChangesAsync(cancellationToken);
         
-        return lessonImageEntity;
+        return lessonImage;
     }
 
     public async Task<Guid> DeleteLessonImageAsync(
