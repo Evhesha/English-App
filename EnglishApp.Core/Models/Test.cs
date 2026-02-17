@@ -1,3 +1,5 @@
+using EnglishStorageApplication.EnglishApp.Core.Models;
+
 namespace EnglishApp.Core.Models;
 
 public class Test
@@ -6,6 +8,6 @@ public class Test
     public Guid UserId { get; set; }
     public string Name {get; set;}
     public string Description {get; set;}
-    public DateTime CreatedAt {get; set;}
-    public DateTime UpdatedAt {get; set;}
+    public DateTime LastUpdateAt {get; set;}
+    public User User {get; set;}
 }

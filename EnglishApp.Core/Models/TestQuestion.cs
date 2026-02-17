@@ -7,4 +7,5 @@ public class TestQuestion
     public string Type {get; set;}
     public string[] Options {get; set;}
     public string CorrectAnswer {get; set;}
+    public Test Test {get; set;}
 }
