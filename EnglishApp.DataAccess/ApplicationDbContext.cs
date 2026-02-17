@@ -30,6 +30,8 @@ namespace EnglishApp.DataAccess
             modelBuilder.ApplyConfiguration(new UserCardConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserStudyResultConfiguration());
+            modelBuilder.ApplyConfiguration(new TestConfiguration());
+            modelBuilder.ApplyConfiguration(new TestQuestionConfiguration());
         }
     }
 }

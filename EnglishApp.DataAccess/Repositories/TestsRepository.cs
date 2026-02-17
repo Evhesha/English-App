@@ -1,9 +1,11 @@
+using EnglishApp.Core.Abstractions.Test;
+using EnglishApp.Core.Exceptions.TestExceptions;
 using EnglishApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.DataAccess.Repositories;
 
-public class TestsRepository
+public class TestsRepository : ITestsRepository
 {
     private readonly ApplicationDbContext _context;
     
@@ -46,9 +48,13 @@ public class TestsRepository
         var testEntity = await _context.Tests.FirstOrDefaultAsync(t => t.Id == test.Id, cancellationToken);
         if (testEntity == null)
         {
-            
+            throw new TestWasNotFoundException("Test test was not found");
         }
 
+        testEntity.Name = test.Name;
+        testEntity.Description = test.Description;
+        testEntity.LastUpdateAt = test.LastUpdateAt;
+        
         await _context.SaveChangesAsync(cancellationToken);
         return test.Id;
     }
@@ -58,7 +64,7 @@ public class TestsRepository
         var testEntity = await _context.Tests.FirstOrDefaultAsync(t => t.Id == testId, cancellationToken);
         if (testEntity == null)
         {
-            
+            throw new TestWasNotFoundException("Test test was not found");
         }
         
         _context.Tests.Remove(testEntity);
