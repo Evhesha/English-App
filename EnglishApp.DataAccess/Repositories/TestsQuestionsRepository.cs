@@ -43,6 +43,7 @@ public class TestsQuestionsRepository : ITestsQuestionsRepository
             throw new TestQuestionWasNotFoundException("Test question was not found");
         }
         
+        testQuestionEntity.Question = testQuestion.Question;
         testQuestionEntity.CorrectAnswer = testQuestion.CorrectAnswer;
         testQuestionEntity.Options = testQuestion.Options;
         testQuestionEntity.Type = testQuestion.Type;

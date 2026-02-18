@@ -3,6 +3,7 @@ using System;
 using EnglishApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EnglishApp.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260217200145_TestPartMigration")]
+    partial class TestPartMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -134,10 +137,6 @@ namespace EnglishApp.DataAccess.Migrations
                     b.Property<string[]>("Options")
                         .IsRequired()
                         .HasColumnType("text[]");
-
-                    b.Property<string>("Question")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<Guid>("TestId")
                         .HasColumnType("uuid");
