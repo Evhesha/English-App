@@ -103,6 +103,7 @@
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
 }
 
 .profile-activity h2 {
@@ -131,4 +132,14 @@
     align-items: center;
     border-left: 4px solid transparent;
     transition: all 0.3s ease;
+}
+
+.supporting {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    margin-top: 20px;
+    order: 999;
 }

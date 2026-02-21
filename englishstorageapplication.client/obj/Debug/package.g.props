@@ -32,6 +32,7 @@
     <PackageJsonDependenciesRemoveMarkdown Condition="$(PackageJsonDependenciesRemoveMarkdown) == ''">^0.6.3</PackageJsonDependenciesRemoveMarkdown>
     <PackageJsonDependenciesSortBy Condition="$(PackageJsonDependenciesSortBy) == ''">^1.2.0</PackageJsonDependenciesSortBy>
     <PackageJsonDependenciesStyledComponents Condition="$(PackageJsonDependenciesStyledComponents) == ''">^6.1.13</PackageJsonDependenciesStyledComponents>
+    <PackageJsonDependenciesTelegramBotApi Condition="$(PackageJsonDependenciesTelegramBotApi) == ''">^2.0.1</PackageJsonDependenciesTelegramBotApi>
     <PackageJsonDevdependenciesEslintJs Condition="$(PackageJsonDevdependenciesEslintJs) == ''">^9.9.0</PackageJsonDevdependenciesEslintJs>
     <PackageJsonDevdependenciesTypesReact Condition="$(PackageJsonDevdependenciesTypesReact) == ''">^18.3.3</PackageJsonDevdependenciesTypesReact>
     <PackageJsonDevdependenciesTypesReactDom Condition="$(PackageJsonDevdependenciesTypesReactDom) == ''">^18.3.0</PackageJsonDevdependenciesTypesReactDom>
