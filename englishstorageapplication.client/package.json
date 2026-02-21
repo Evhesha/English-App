@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy" : "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -32,7 +32,8 @@
     "react-toastify": "^10.0.6",
     "remove-markdown": "^0.6.3",
     "sort-by": "^1.2.0",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "telegram-bot-api": "^2.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
