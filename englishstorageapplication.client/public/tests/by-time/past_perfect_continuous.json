@@ -1,12 +1,9 @@
 {
   "testInfo": {
     "id": "f5a6b7c8-d9e0-1234-5678-9abcdef01234",
-    "topic": "Past Perfect Continuous",
     "name": "Тест по Past Perfect Continuous",
     "description": "Тест на прошедшее совершенное продолженное время",
-    "totalQuestions": 15,
-    "timeLimit": 20,
-    "difficulty": "B2-C1"
+    "totalQuestions": 15
   },
   "questions": [
     {
@@ -14,113 +11,98 @@
       "type": "choice",
       "question": "Choose the correct form: She ___ for two hours when I arrived.",
       "options": ["had studied", "had been studying", "was studying", "studied"],
-      "correctAnswer": "had been studying",
-      "points": 1
+      "correctAnswer": "had been studying"
     },
     {
       "id": 2,
       "type": "choice",
       "question": "What is the structure of Past Perfect Continuous?",
       "options": ["had been + verb+ing", "have been + verb+ing", "was/were + verb+ing", "had + past participle"],
-      "correctAnswer": "had been + verb+ing",
-      "points": 1
+      "correctAnswer": "had been + verb+ing"
     },
     {
       "id": 3,
       "type": "input",
       "question": "Fill in the blank: They ___ (wait) for over an hour when the bus finally came.",
-      "correctAnswer": "had been waiting",
-      "points": 1
+      "correctAnswer": "had been waiting"
     },
     {
       "id": 4,
       "type": "choice",
       "question": "When do we use Past Perfect Continuous?",
       "options": ["For short completed actions", "For actions continuing up to a point in the past", "For future predictions", "For present habits"],
-      "correctAnswer": "For actions continuing up to a point in the past",
-      "points": 1
+      "correctAnswer": "For actions continuing up to a point in the past"
     },
     {
       "id": 5,
       "type": "input",
       "question": "Fill in the blank: How long ___ you ___ (work) there before you quit?",
-      "correctAnswer": "had, been working",
-      "points": 1
+      "correctAnswer": "had, been working"
     },
     {
       "id": 6,
       "type": "choice",
       "question": "Which sentence emphasizes duration before another past action?",
       "options": ["I had worked there for 5 years.", "I had been working there for 5 years when I got promoted.", "I worked there for 5 years.", "I was working there for 5 years."],
-      "correctAnswer": "I had been working there for 5 years when I got promoted.",
-      "points": 1
+      "correctAnswer": "I had been working there for 5 years when I got promoted."
     },
     {
       "id": 7,
       "type": "input",
       "question": "Fill in the blank: His eyes were red because he ___ (cry).",
-      "correctAnswer": "had been crying",
-      "points": 1
+      "correctAnswer": "had been crying"
     },
     {
       "id": 8,
       "type": "choice",
       "question": "What is the question form for 'they had been working'?",
       "options": ["Had they been working?", "Did they had been working?", "Have they been working?", "Were they working?"],
-      "correctAnswer": "Had they been working?",
-      "points": 1
+      "correctAnswer": "Had they been working?"
     },
     {
       "id": 9,
       "type": "input",
       "question": "Fill in the blank: She was tired because she ___ (study) all night.",
-      "correctAnswer": "had been studying",
-      "points": 1
+      "correctAnswer": "had been studying"
     },
     {
       "id": 10,
       "type": "choice",
       "question": "Choose the correct sentence:",
       "options": ["It had been raining for hours when we decided to cancel.", "It had rained for hours when we decided to cancel.", "It was raining for hours when we decided to cancel.", "It rained for hours when we decided to cancel."],
-      "correctAnswer": "It had been raining for hours when we decided to cancel.",
-      "points": 1
+      "correctAnswer": "It had been raining for hours when we decided to cancel."
     },
     {
       "id": 11,
       "type": "input",
       "question": "Fill in the blank: We ___ (live) in that house for ten years before we moved.",
-      "correctAnswer": "had been living",
-      "points": 1
+      "correctAnswer": "had been living"
     },
     {
       "id": 12,
       "type": "choice",
       "question": "Which emphasizes cause and result in the past?",
       "options": ["Past Simple", "Past Continuous", "Past Perfect", "Past Perfect Continuous"],
-      "correctAnswer": "Past Perfect Continuous",
-      "points": 1
+      "correctAnswer": "Past Perfect Continuous"
     },
     {
       "id": 13,
       "type": "input",
       "question": "Fill in the blank: The ground was wet. It ___ (rain).",
-      "correctAnswer": "had been raining",
-      "points": 1
+      "correctAnswer": "had been raining"
     },
     {
       "id": 14,
       "type": "choice",
       "question": "What is the negative form of 'I had been waiting'?",
       "options": ["I hadn't been waiting.", "I didn't had been waiting.", "I not had been waiting.", "I haven't been waiting."],
-      "correctAnswer": "I hadn't been waiting.",
-      "points": 1
+      "correctAnswer": "I hadn't been waiting."
     },
     {
       "id": 15,
       "type": "input",
       "question": "Fill in the blank: They ___ (travel) for months before they found a place to stay.",
-      "correctAnswer": "had been traveling",
-      "points": 1
+      "correctAnswer": "had been traveling"
     }
   ]
 }

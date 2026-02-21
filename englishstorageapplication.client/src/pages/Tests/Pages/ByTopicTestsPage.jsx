@@ -17,7 +17,7 @@ const testConfig = [
         description: "Test knowledge of articles: a, an, the and zero article",
     },
     {
-        id: "3d4e5f6a-7b8c-9d0a-1b2c-3d4e5f6a7b8c",
+        id: "3d4e5f6a-7b8c-9d0a-1b2c-3d4e5f6a7b7c",
         topic: "prepositions",
         name: "Prepositions Test",
         path: "/test/topic/prepositions-test",
@@ -97,7 +97,7 @@ const testConfig = [
         description: "Test who, which, that, whose, whom",
     },
     {
-        id: "4e5f6a7b-8c9d-0a1b-2c3d-4e5f6a7b8c9d",
+        id: "4e5f6a7b-8c9d-0a1b-2c3d-4e5f6a7b8c1d",
         topic: "gerund-infinitive",
         name: "Gerund and Infinitive Test",
         path: "/test/topic/gerund-infinitive-test",

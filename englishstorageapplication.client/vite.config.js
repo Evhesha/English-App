@@ -10,18 +10,13 @@ const target = process.env.ASPNETCORE_HTTPS_PORT
 
 export default defineConfig({
   plugins: [plugin()],
+  base: '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
   server: {
-    proxy: {
-      '^/weatherforecast': {
-        target,
-        secure: false
-      }
-    },
     port: 5173,
     https: false
   }

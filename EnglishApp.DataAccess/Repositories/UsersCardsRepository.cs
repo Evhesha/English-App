@@ -36,17 +36,9 @@ namespace EnglishStorageApplication.EnglishApp.DataAccess.Repositories
             UserCard userCard,
             CancellationToken cancellationToken)
         {
-            var userCardEntity = new UserCard
-            {
-                Id = userCard.Id,
-                UserId = userCard.UserId,
-                NameOfUsersCard = userCard.NameOfUsersCard,
-                UserCardData = userCard.UserCardData,
-            };
-
-            await _context.UsersCards.AddAsync(userCardEntity, cancellationToken);
+            _context.UsersCards.Add(userCard);
             await _context.SaveChangesAsync(cancellationToken);
-            return userCardEntity.Id;
+            return userCard.Id;
         }
 
         public async Task<Guid> UpdateUserCardAsync(

@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import { useTranslation } from "react-i18next";
 
-function NewChatButton({onPost}) {
+function NewChatButton({onPost, Primary}) {
     const navigate = useNavigate();
     const {t} = useTranslation();
     
@@ -36,7 +36,7 @@ function NewChatButton({onPost}) {
         <button
             type="button"
             onClick={handleCreate}
-            className="btn"
+            className={Primary}
         >
             {t("sidebar.new-chat")} <i className="bi bi-plus-circle"></i>
         </button>

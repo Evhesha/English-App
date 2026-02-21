@@ -138,10 +138,9 @@
     background: transparent;
     border: none;
     color: var(--text-color);
-    padding: 6px;
     border-radius: 8px;
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using EnglishApp.Core.Exceptions.LessonExceptions;
 using EnglishApp.Core.Exceptions.LikeExceptions;
+using EnglishApp.Core.Exceptions.TestExceptions;
+using EnglishApp.Core.Exceptions.TestQuestionExceptions;
 using EnglishApp.Core.Exceptions.UserCardExceptions;
 using EnglishApp.Core.Exceptions.UserExceptions;
 using EnglishApp.Core.Exceptions.UserStudyResultExceptions;
@@ -63,6 +65,16 @@ public class ExceptionHandlingMiddleware
                 break;
             
             case LikeWasNotFoundException:
+                statusCode = HttpStatusCode.NotFound;
+                break;
+            
+            // Test entity
+            case TestWasNotFoundException:
+                statusCode = HttpStatusCode.NotFound;
+                break;
+            
+            // TestQuestion entity
+            case TestQuestionWasNotFoundException:
                 statusCode = HttpStatusCode.NotFound;
                 break;
 

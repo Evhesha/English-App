@@ -136,7 +136,6 @@ namespace EnglishStorageApplication.Server.Controllers
             return Ok(user.Id);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpDelete("{id:guid}")]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUser(Guid id, CancellationToken cansellationToken)

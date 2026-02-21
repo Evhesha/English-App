@@ -2,6 +2,8 @@
 using EnglishApp.Core.Abstractions.Lesson;
 using EnglishApp.Core.Abstractions.LessonImage;
 using EnglishApp.Core.Abstractions.Like;
+using EnglishApp.Core.Abstractions.Test;
+using EnglishApp.Core.Abstractions.TestQuestion;
 using EnglishApp.Core.Abstractions.User;
 using EnglishApp.Core.Abstractions.UserCard;
 using EnglishApp.Core.Abstractions.UserStudyResult;
@@ -34,6 +36,12 @@ namespace EnglishStorageApplication.Server.Extensions
             
             services.AddScoped<ILikeService, LikeService>();
             services.AddScoped<ILikesRepository, LikesRepository>();
+            
+            services.AddScoped<ITestService, TestService>();
+            services.AddScoped<ITestsRepository, TestsRepository>();
+            
+            services.AddScoped<ITestQuestionService, TestQuestionService>();
+            services.AddScoped<ITestsQuestionsRepository, TestsQuestionsRepository>();
 
             services.AddScoped<JwtProvider>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();

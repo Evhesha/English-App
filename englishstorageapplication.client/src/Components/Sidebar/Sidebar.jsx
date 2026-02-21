@@ -159,6 +159,14 @@ function Sidebar() {
                                         {t("sidebar.by-level")}
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link
+                                        to="/level-tests"
+                                        className="link-body-emphasis d-inline-flex text-decoration-none rounded"
+                                    >
+                                        {t("sidebar.online-tests")}
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -215,9 +223,10 @@ function Sidebar() {
                         </button>
                         <div className="collapse" id="assistant-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <NewChatButton onPost={handleCreate}/>
+                                <NewChatButton onPost={handleCreate} Primary={"btn"}/>
                                 {chats.length === 0 ? (
-                                    <div className="text-muted small p-2">{t("sidebar.no-chats-yet")}</div>
+                                    <div className="text-muted small p-2 ps-4">
+                                        {t("sidebar.no-chats-yet")}</div>
                                 ) : (
                                     chats.map(chat => (
                                         <ChatLink
