@@ -40,3 +40,24 @@
     font-size: 1.1em;
     color: #343a40;
 }
+
+.dark-theme .header {
+    color: #ecf0f1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.dark-theme .section {
+    background-color: rgba(23, 32, 42, 0.9);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme .subHeader {
+    color: #4aa3ff;
+    border-bottom: 2px solid #4aa3ff;
+}
+
+.dark-theme .paragraph,
+.dark-theme .list li {
+    color: #cfd8e3;
+}

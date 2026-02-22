@@ -143,3 +143,29 @@
     margin-top: 20px;
     order: 999;
 }
+
+.dark-theme .profile-info,
+.dark-theme .profile-activity,
+.dark-theme .supporting {
+    background: rgba(23, 32, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    color: #ecf0f1;
+}
+
+.dark-theme .profile-info h2,
+.dark-theme .profile-activity h2,
+.dark-theme .profile-info h4,
+.dark-theme .profile-info h4 b {
+    color: #ecf0f1;
+}
+
+.dark-theme .profile-info h2 b {
+    color: #4aa3ff;
+}
+
+.dark-theme .profile-activity h3 {
+    background: rgba(255, 255, 255, 0.05);
+    color: #cfd8e3;
+    border-left: 4px solid rgba(74, 163, 255, 0.6);
+}

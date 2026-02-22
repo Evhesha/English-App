@@ -48,10 +48,10 @@ function CreateDictCardPopUp({userId}) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3 style={{color: "black"}}>Add card</h3>
+                        <h3>Add card</h3>
                         <form onSubmit={handleCreate}>
                             <div className="mb-3">
-                                <label htmlFor="name" className="form-label" style={{color: "black"}}>
+                                <label htmlFor="name" className="form-label">
                                     Card name
                                 </label>
                                 <input
@@ -63,7 +63,7 @@ function CreateDictCardPopUp({userId}) {
                                 />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="text" className="form-label" style={{color: "black"}}>
+                                <label htmlFor="text" className="form-label">
                                     Card text
                                 </label>
                                 <textarea
