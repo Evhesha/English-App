@@ -75,13 +75,12 @@ function CreateLessonPopUp({ onPost, userId }) {
               <span className="close" onClick={togglePopup}>
                 &times;
               </span>
-              <h3 style={{ color: "black" }}>Add lesson</h3>
+              <h3>Add lesson</h3>
               <form onSubmit={handleCreate}>
                 <div className="mb-3">
                   <label
                     htmlFor="name"
                     className="form-label"
-                    style={{ color: "black" }}
                   >
                     Lesson name
                   </label>
@@ -97,7 +96,6 @@ function CreateLessonPopUp({ onPost, userId }) {
                   <label
                     htmlFor="text"
                     className="form-label"
-                    style={{ color: "black" }}
                   >
                     Lesson text
                   </label>
@@ -117,7 +115,7 @@ function CreateLessonPopUp({ onPost, userId }) {
                           checked={isPublic}
                           onChange={(e) => setIsPublic(e.target.checked)}
                       />
-                      <label className="form-check-label" htmlFor="Public" style={{ color: "black" }}>
+                      <label className="form-check-label" htmlFor="Public">
                           Public lesson
                       </label>
                   </div>

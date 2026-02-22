@@ -57,3 +57,26 @@
 .btn-action {
     white-space: nowrap;
 }
+
+.dark-theme .user-list-element {
+    background: rgba(23, 32, 42, 0.9);
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.dark-theme .user-name {
+    color: #ecf0f1;
+}
+
+.dark-theme .user-info {
+    color: #b9c3cf;
+}
+
+.dark-theme .info-value {
+    color: #4aa3ff;
+}
+
+.dark-theme .role-badge {
+    background-color: rgba(74, 163, 255, 0.15);
+    color: #a7d1ff;
+}

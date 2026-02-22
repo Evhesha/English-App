@@ -4,11 +4,12 @@ import styled from 'styled-components';
 const StyledCard = styled.div`
   width: 18rem;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--panel-shadow);
+  border: 1px solid var(--panel-border);
   transition: transform 0.3s ease;
   margin: 20px 0;
   overflow: hidden;
-  border: none;
+  background-color: var(--panel-bg);
 
   &:hover {
     transform: translateY(-5px);
@@ -17,17 +18,17 @@ const StyledCard = styled.div`
 
 const CardBody = styled.div`
   padding: 25px;
-  background-color: white;
+  background-color: var(--panel-bg);
 `;
 
 const CardTitle = styled.h5`
-  color: #2c3e50;
+  color: var(--panel-text);
   font-weight: 700;
   margin-bottom: 20px;
 `;
 
 const CardText = styled.p`
-  color: #34495e;
+  color: var(--panel-muted);
   line-height: 1.6;
   margin-bottom: 25px;
 `;
@@ -49,14 +50,14 @@ const AnswerItem = styled.li`
       case 'bg-danger':
         return '#dc3545';
       default:
-        return 'white';
+        return 'var(--panel-bg)';
     }
   }};
-  color: ${props => props.bgColor === 'bg-light' ? '#34495e' : 'white'};
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: ${props => props.bgColor === 'bg-light' ? 'var(--panel-text)' : 'white'};
+  border-top: 1px solid var(--panel-border);
 
   &:hover {
-    background-color: ${props => props.bgColor === 'bg-light' ? '#f8f9fa' : ''};
+    background-color: ${props => props.bgColor === 'bg-light' ? 'var(--panel-hover)' : ''};
     transform: translateX(5px);
   }
 

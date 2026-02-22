@@ -14,7 +14,7 @@ function Question({
             {question.type === 'choice' ? (
                 <div className="options">
                     {question.options.map((option, index) => (
-                        <div style={{color : "rgba(23, 32, 42, 0.9)"}}
+                        <div
                             key={index}
                             className={`option ${userAnswers[question.id - 1] === option ? 'selected' : ''}`}
                             onClick={() => onOptionSelect(option)}

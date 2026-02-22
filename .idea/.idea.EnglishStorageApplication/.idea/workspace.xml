@@ -14,13 +14,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Now hav test questions and tests possibilities in backend">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: now users can send messages to author tg bot with their issues">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/package.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/package.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Exercise/ChooseExercise.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Exercise/ChooseExercise.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Exercise/InputExercise.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Exercise/InputExercise.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ListGroupElement/ListGroupElement.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/ListGroupElement/ListGroupElement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Pagination/Pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Pagination/Pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Chat/ChangeChatTitlePopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Chat/ChangeChatTitlePopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CheckDictCardPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CheckDictCardPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CreateDictCardPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Dict/CreateDictCardPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CheckLessonPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CreateLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/CreateLessonPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/ReadLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Lesson/ReadLessonPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/PopUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/PopUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/ChatLink.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/ChatLink.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonsListElement.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonsListElement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AboutApp.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AboutApp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/Section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/Section.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/CardWordsPages/CardWordsPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/CardWordsPages/CardWordsPages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/LessonsListPage/LessonsListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/LessonsListPage/LessonsListPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/ProfilePage/ProfilePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/SignUp &amp;&amp; Login/SingUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Question.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Question.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/StyleConstant.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/StyleConstant.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +219,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/tg-message&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fix/dark-theme&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -214,7 +235,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
+  <component name="RunManager" selected=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" />
       <toRun name="HTTPS" type="LaunchSettings" />
@@ -413,6 +434,8 @@
       <workItem from="1771525585198" duration="3483000" />
       <workItem from="1771585152681" duration="7684000" />
       <workItem from="1771667023891" duration="1668000" />
+      <workItem from="1771700831917" duration="1155000" />
+      <workItem from="1771741732390" duration="357000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -641,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: Tests for users controller were added to project. Files localization refactoring in Tests project." />
     <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
     <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
     <MESSAGE value="Fix: Some tests were fixed for repository. Changed theirs namespases." />
@@ -666,7 +688,8 @@
     <MESSAGE value="Feature: now we can rename and create chats without pages reloading." />
     <MESSAGE value="Feature: new topics pages for dictionaries." />
     <MESSAGE value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
+    <MESSAGE value="Feature: now users can send messages to author tg bot with their issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: now users can send messages to author tg bot with their issues" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

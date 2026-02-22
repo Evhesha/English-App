@@ -125,7 +125,6 @@ function OnlineLessonsListPage() {
                                 type="text"
                                 className="form-control"
                                 id="filterInput"
-                                placeholder="Filter by title"
                                 value={filtrationText}
                                 onChange={(e) => setFiltrationText(e.target.value)}
                                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}

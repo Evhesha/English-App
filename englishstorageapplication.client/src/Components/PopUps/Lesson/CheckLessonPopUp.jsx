@@ -67,10 +67,10 @@ function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsP
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3 style={{color : "black"}}>Check Lesson</h3>
+                        <h3>Check Lesson</h3>
                         <form onSubmit={handleEdit}>
                             <div className="mb-3">
-                                <label htmlFor="name" className="form-label" style={{color : "black"}}>
+                                <label htmlFor="name" className="form-label">
                                     Lesson name
                                 </label>
                                 <input
@@ -82,7 +82,7 @@ function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsP
                                 />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="text" className="form-label" style={{color : "black"}}>
+                                <label htmlFor="text" className="form-label">
                                     Lesson text
                                 </label>
                                 <textarea
@@ -101,7 +101,7 @@ function CheckLessonPopUp({ title, text, onPut, userId, id, isPublic: initialIsP
                                     checked={isPublic}
                                     onChange={(e) => setIsPublic(e.target.checked)}
                                 />
-                                <label className="form-check-label" htmlFor="isPublic" style={{ color: "black" }}>
+                                <label className="form-check-label" htmlFor="isPublic">
                                     Public lesson
                                 </label>
                             </div>
