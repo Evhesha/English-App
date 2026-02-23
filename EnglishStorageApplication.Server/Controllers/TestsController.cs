@@ -22,7 +22,7 @@ public class TestsController : ControllerBase
         return Ok(await _testService.GetAllTets(cancellationToken));
     }
 
-    [HttpGet("/{userId}")]
+    [HttpGet("{userId}")]
     public async Task<ActionResult<List<TestDto>>> GetTestByUserId(Guid userId, CancellationToken cancellationToken)
     {
         return Ok(await _testService.GetUserTests(userId, cancellationToken));
