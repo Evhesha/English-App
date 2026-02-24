@@ -14,12 +14,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: black thme for app.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: now can get tests in Teacher page, new files for future features">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/TestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/TestService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/UpdateTestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/UpdateTestDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TestsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TestsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersStudyResultsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/UsersStudyResultsTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersStudyResultsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CreateTestPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CreateTestPopUp.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +82,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -414,6 +421,7 @@
       <workItem from="1771667023891" duration="1668000" />
       <workItem from="1771768946953" duration="1601000" />
       <workItem from="1771855588928" duration="1035000" />
+      <workItem from="1771923459879" duration="4603000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />

@@ -40,6 +40,8 @@ public class TestsController : ControllerBase
             Name = createTestDto.Name,
             Description = createTestDto.Description,
             LastUpdateAt =  DateTime.UtcNow,
+            IsPublic =  true,
+            PassCount =  0,
         };
         
         await _testService.CreateTest(test, cancellationToken);
@@ -58,6 +60,7 @@ public class TestsController : ControllerBase
             Name = updateTestDto.Name,
             Description = updateTestDto.Description,
             LastUpdateAt = DateTime.UtcNow,
+            IsPublic = updateTestDto.IsPublic,
         };
 
         await _testService.UpdateTest(test, cancellationToken);

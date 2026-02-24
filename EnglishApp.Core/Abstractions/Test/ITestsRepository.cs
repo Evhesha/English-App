@@ -7,5 +7,6 @@ public interface ITestsRepository
     Task<Models.Test?> GetTestByIdAsync(Guid id, CancellationToken cancellationToken);
     Task<Guid> CreateTestAsync(Models.Test test, CancellationToken cancellationToken);
     Task<Guid> UpdateTestAsync(Models.Test test, CancellationToken cancellationToken);
+    Task<Guid> IncrementTestPassCountAsync(Guid testId, CancellationToken cancellationToken);
     Task<Guid> DeleteTestAsync(Guid testId, CancellationToken cancellationToken);
 }

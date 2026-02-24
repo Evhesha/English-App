@@ -37,6 +37,11 @@ public class TestService : ITestService
         return await _testsRepository.UpdateTestAsync(test, cancellationToken);
     }
 
+    public async Task<Guid> IncrementTestPassCount(Guid testId, CancellationToken cancellationToken)
+    {
+        return await _testsRepository.IncrementTestPassCountAsync(testId, cancellationToken);
+    }
+
     public async Task<Guid> DeleteTest(Guid testId, CancellationToken cancellationToken)
     {
         return await _testsRepository.DeleteTestAsync(testId, cancellationToken);

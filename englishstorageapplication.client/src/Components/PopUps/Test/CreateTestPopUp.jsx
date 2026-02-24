@@ -34,8 +34,8 @@ function CreateTestPopUp() {
                 `${API_BASE_URL}/api/Lessons`,
                 {
                     userId: userId,
-                    title: name,
-                    text: text,
+                    name: name,
+                    description: description,
                     isPublic: isPublic,
                     images: []
                 },{
