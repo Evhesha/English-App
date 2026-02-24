@@ -54,9 +54,26 @@ public class TestsRepository : ITestsRepository
         testEntity.Name = test.Name;
         testEntity.Description = test.Description;
         testEntity.LastUpdateAt = test.LastUpdateAt;
+        testEntity.IsPublic = test.IsPublic;
         
         await _context.SaveChangesAsync(cancellationToken);
         return test.Id;
+    }
+
+    public async Task<Guid> IncrementTestPassCountAsync(Guid testId, CancellationToken cancellationToken)
+    {
+        var rowsAffected = await _context.Tests
+            .Where(t => t.Id == testId)
+            .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(t => t.PassCount, t => t.PassCount + 1),
+                cancellationToken);
+    
+        if (rowsAffected == 0)
+        {
+            throw new TestWasNotFoundException($"Test with id {testId} was not found");
+        }
+    
+        return testId;
     }
 
     public async Task<Guid> DeleteTestAsync(Guid testId, CancellationToken cancellationToken)
