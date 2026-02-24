@@ -5,6 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var base = "/English-App/";
+        var params = new URLSearchParams(window.location.search);
+        var redirect = params.get("redirect");
+        if (redirect) {
+          var newUrl = base.replace(/\\/$/, "") + decodeURIComponent(redirect);
+          window.history.replaceState(null, "", newUrl);
+        }
+      })();
+    </script>
     <title>English app</title>
   </head>
   <body>

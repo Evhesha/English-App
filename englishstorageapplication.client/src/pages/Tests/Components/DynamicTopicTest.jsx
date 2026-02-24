@@ -25,7 +25,7 @@ function DynamicTopicTest() {
                     throw new Error('No topic specified');
                 }
                 
-                const response = await fetch(`/tests/by-topic/${fileName}.json`);
+                const response = await fetch(`${import.meta.env.BASE_URL}tests/by-topic/${fileName}.json`);
 
                 if (!response.ok) {
                     if (response.status === 404) {
@@ -70,7 +70,7 @@ function DynamicTopicTest() {
                         <strong>Check if JSON file is accessible</strong><br />
                         URL Parameter: {topic}<br />
                         File name: {fileName}.json<br />
-                        Expected path: /tests/by-topic/{fileName}.json
+                        Expected path: {import.meta.env.BASE_URL}tests/by-topic/{fileName}.json
                     </p>
                 </div>
             </div>
