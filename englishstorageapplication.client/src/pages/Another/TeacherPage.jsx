@@ -7,15 +7,20 @@ import Cookies from "js-cookie";
 import {toast, ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import CreateLesson from "@/pages/Another/TeacherPageComponents/CreateLesson.jsx";
+import CreateTest from "@/pages/Another/TeacherPageComponents/CreateTest.jsx";
 import AddLesson from "./TeacherPageComponents/AddLesson.png";
 import {useTranslation} from "react-i18next";
+import TestListElementForTeachers from "@/Components/TeacherPageComp/TestListElementForTeachers.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function TeacherPage() {
     const [articles, setArticles] = useState([]);
+    const [tests, setTests] = useState([]); 
     const effectRan = useRef(false);
     const {t} = useTranslation();
+    const [section, setSection] = useState(true);
+
     const handleDeleteArticle = (id) => {
         setArticles(articles.filter(article => article.id !== id));
         deleteNotify();
@@ -31,8 +36,11 @@ function TeacherPage() {
             try {
                 const decodedToken = jwtDecode(token);
                 const userId = decodedToken.userId;
-                const response = await axios.get(`${API_BASE_URL}/api/Lessons/lessons/${userId}`);
-                setArticles(response.data);
+                const responseLessons = await axios.get(`${API_BASE_URL}/api/Lessons/lessons/${userId}`);
+                const responseTests = await axios.get(`${API_BASE_URL}/api/Tests/${userId}`)
+                setArticles(responseLessons.data);
+                setTests(responseTests.data);
+                console.log(responseTests.data);
                 receiveNotify();
             } catch (error) {
                 console.log("Error fetching data:", error);
@@ -67,27 +75,56 @@ function TeacherPage() {
     return (
         <>
             <h1>{t("teacher-page.label")}</h1>
-            <Section>
-                <CreateLesson title={"Add lesson"} image={
-                    <img
-                        src={AddLesson}
-                        className="card-img-top"
-                        alt="..."
-                        style={{paddingLeft: "50px", width: "70%", height: "70%"}}
-                    />
-                }></CreateLesson>
-                {articles.map(article => (
-                    <LessonListElementForTeachers
-                        key={article.id}
-                        id={article.id}
-                        name={article.title}
-                        text={article.text}
-                        watches={article.watchCount}
-                        isPublic={article.isPublic}
-                        onDelete={handleDeleteArticle}
-                    />
-                ))}
-            </Section>
+            <button className={section ? "btn-primary" : "btn-outline-secondary"}
+                    onClick={() => setSection(true)}>Lessons</button>
+            <button className={section ? "btn-outline-secondary" : "btn-primary"}
+                    onClick={() => setSection(false)}>Tests</button>
+
+            {section ? <Section>
+                    <h2>Your lessons</h2>
+                    <CreateLesson title={"Add lesson"} image={
+                        <img
+                            src={AddLesson}
+                            className="card-img-top"
+                            alt="..."
+                            style={{paddingLeft: "50px", width: "70%", height: "70%"}}
+                        />
+                    }></CreateLesson>
+                    {articles.map(article => (
+                        <LessonListElementForTeachers
+                            key={article.id}
+                            id={article.id}
+                            name={article.title}
+                            text={article.text}
+                            watches={article.watchCount}
+                            isPublic={article.isPublic}
+                            onDelete={handleDeleteArticle}
+                        />
+                    ))}
+                </Section> :
+                <Section>
+                    <h2>Your tests</h2>
+                    <CreateTest title={"Add test"} image={
+                        <img
+                            src={AddLesson}
+                            className="card-img-top"
+                            alt="..."
+                            style={{paddingLeft: "50px", width: "70%", height: "70%"}}
+                        />
+                    }></CreateTest>
+                    {articles.map(article => (
+                        <TestListElementForTeachers
+                            key={article.id}
+                            id={article.id}
+                            name={article.title}
+                            text={article.text}
+                            watches={article.watchCount}
+                            isPublic={article.isPublic}
+                            onDelete={handleDeleteArticle}
+                        />
+                    ))}
+                </Section>
+            }
             <ToastContainer/>
         </>
     );

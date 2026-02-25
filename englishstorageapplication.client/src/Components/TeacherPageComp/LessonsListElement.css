@@ -44,6 +44,24 @@
     align-items: center;
 }
 
+.dark-theme .lesson-list-element {
+    background: rgba(23, 32, 42, 0.9);
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.dark-theme .lesson-title {
+    color: #ecf0f1;
+}
+
+.dark-theme .lesson-info {
+    color: #b9c3cf;
+}
+
+.dark-theme .info-value {
+    color: #4aa3ff;
+}
+
 @media (max-width: 768px) {
     .lesson-list-element {
         padding: 12px !important;

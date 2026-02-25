@@ -86,12 +86,37 @@
     margin-bottom: 0.5rem;
   }
   
-  .authors-image {
+.authors-image {
     max-width: 50%;
     height: auto;
     border-radius: 10px;
     margin-top: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark-theme .header-section h1,
+  .dark-theme .features-section h2,
+  .dark-theme .authors-section h2 {
+    color: #ecf0f1;
+  }
+
+  .dark-theme .feature-group {
+    background-color: rgba(23, 32, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  }
+
+  .dark-theme .feature-group li {
+    color: #cfd8e3;
+  }
+
+  .dark-theme .feature-group h3,
+  .dark-theme .number {
+    color: #4aa3ff;
+  }
+
+  .dark-theme .authors-section p {
+    color: #b9c3cf;
   }
   
   @media (max-width: 768px) {

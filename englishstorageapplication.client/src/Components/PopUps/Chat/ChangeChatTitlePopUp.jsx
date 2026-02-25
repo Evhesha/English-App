@@ -42,7 +42,7 @@ function ChangeChatTitlePopUp({title, id, OnPatch}) {
 
     return (
         <div style={{ display: 'inline-block' }}>
-            <button className="btn" style={{border: "1px solid black", padding: "4px 8px"}} onClick={togglePopup}>
+            <button className="btn icon-btn" onClick={togglePopup}>
                 <Pen/>
             </button>
             {isOpen && (
@@ -51,10 +51,10 @@ function ChangeChatTitlePopUp({title, id, OnPatch}) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3 style={{color: "black"}}>Change chat title</h3>
+                        <h3>Change chat title</h3>
                         <form onSubmit={handleChangeName}>
                             <div className="mb-3">
-                                <label htmlFor="name" className="form-label" style={{color: "black"}}>
+                                <label htmlFor="name" className="form-label">
                                     New chat title
                                 </label>
                                 <input

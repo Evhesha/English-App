@@ -32,6 +32,7 @@ const styles = `
         margin: 5px 0;
         cursor: pointer;
         border-radius: 5px;
+        color: #2c3e50;
     }
     .option.selected {
         background: #007bff;
@@ -122,6 +123,32 @@ const styles = `
     .mistake-details span {
         color: #dc3545;
         font-weight: bold;
+    }
+    .dark-theme .test-container {
+        color: #ecf0f1;
+    }
+    .dark-theme .progress-bar {
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+    .dark-theme .question {
+        color: #ecf0f1;
+    }
+    .dark-theme .option {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.15);
+        color: #ecf0f1;
+    }
+    .dark-theme .input-answer {
+        background: rgba(255, 255, 255, 0.04);
+        color: #ecf0f1;
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+    .dark-theme .mistake-item {
+        background-color: rgba(220, 53, 69, 0.15);
+        border-color: rgba(220, 53, 69, 0.35);
+    }
+    .dark-theme .mistake-details span {
+        color: #ffb3bb;
     }
     @keyframes fadeIn {
         0% { opacity: 0; transform: translateY(-10px); }

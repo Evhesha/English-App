@@ -69,7 +69,7 @@
     "ai-button": "Try AI Assistant"
   },
   "teacher-page" : {
-    "label": "Teacher panel (your lessons)",
+    "label": "Teacher panel",
     "create-lesson": "Create lesson",
     "views": "Views",
     "is-public": "Is public",

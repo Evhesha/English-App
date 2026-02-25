@@ -14,7 +14,7 @@ function DynamicTest() {
     useEffect(() => {
         async function loadTest() {
             try {
-                const response = await fetch(`/tests/by-level/${levelCode}.json`);
+                const response = await fetch(`${import.meta.env.BASE_URL}tests/by-level/${levelCode}.json`);
 
                 if (!response.ok) {
                     throw new Error(`Test not found for level ${levelCode} (Status: ${response.status})`);
@@ -53,7 +53,7 @@ function DynamicTest() {
                 <div className="alert alert-danger" role="alert">
                     <h4 className="alert-heading">Error Loading Test!</h4>
                     <p>{error}</p>
-                    <p className="mt-2">Tried to load: /tests/by-level/{levelCode}.json</p>
+                    <p className="mt-2">Tried to load: {import.meta.env.BASE_URL}tests/by-level/{levelCode}.json</p>
                     <hr />
                     <p className="mb-0">
                         <strong>Debug info:</strong><br />

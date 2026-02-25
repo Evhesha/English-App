@@ -74,7 +74,6 @@ function SignUp() {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Email address"
                         value={formData.email}
                         onChange={handleChange}
                         darkMode={darkMode}
@@ -85,7 +84,6 @@ function SignUp() {
                         type="password"
                         id="password"
                         name="password"
-                        placeholder="Password"
                         value={formData.password}
                         onChange={handleChange}
                         darkMode={darkMode}
@@ -96,7 +94,6 @@ function SignUp() {
                         type="password"
                         id="confirmPassword"
                         name="confirmPassword"
-                        placeholder="Confirm Password"
                         value={formData.confirmPassword}
                         onChange={handleChange}
                         darkMode={darkMode}
@@ -107,7 +104,6 @@ function SignUp() {
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Name"
                         value={formData.name}
                         onChange={handleChange}
                         darkMode={darkMode}

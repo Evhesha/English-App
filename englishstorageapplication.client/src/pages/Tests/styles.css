@@ -72,6 +72,34 @@
   opacity: 1;
 }
 
+.dark-theme .lessons-container {
+  background: linear-gradient(135deg, #1a2a3d 0%, #223246 100%);
+}
+
+.dark-theme .main-title {
+  color: #ecf0f1;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.35);
+}
+
+.dark-theme .lesson-card {
+  background: rgba(23, 32, 42, 0.9);
+  color: #ecf0f1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+.dark-theme .lesson-card:hover {
+  color: #ecf0f1;
+}
+
+.dark-theme .lesson-description {
+  color: #b9c3cf;
+}
+
+.dark-theme .hover-effect {
+  background: linear-gradient(135deg, rgba(74,163,255,0.2) 0%, rgba(255,255,255,0.04) 100%);
+}
+
 @media (max-width: 768px) {
   .lessons-grid {
     grid-template-columns: 1fr;

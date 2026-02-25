@@ -8,9 +8,11 @@ const target = process.env.ASPNETCORE_HTTPS_PORT
     ? process.env.ASPNETCORE_URLS.split(';')[0] 
     : 'https://localhost:7298';
 
-export default defineConfig({
+const repoName = 'English-App';
+
+export default defineConfig(({ command }) => ({
   plugins: [plugin()],
-  base: '/',
+  base: command === 'build' ? `/${repoName}/` : '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -20,4 +22,4 @@ export default defineConfig({
     port: 5173,
     https: false
   }
-});
+}));

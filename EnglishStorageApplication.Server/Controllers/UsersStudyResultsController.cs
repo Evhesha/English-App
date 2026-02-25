@@ -1,4 +1,5 @@
 ﻿using EnglishApp.Application.DTOs.UserStudyResultDTOs;
+using EnglishApp.Core.Abstractions.Test;
 using EnglishApp.Core.Abstractions.UserStudyResult;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
@@ -10,12 +11,15 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class UsersStudyResultsController : ControllerBase
     {
+        private readonly IUserStudyResultService _userStudyResultService;
+        private readonly ITestService _testService;
 
-        private readonly IUserStudyResultService _service;
-
-        public UsersStudyResultsController(IUserStudyResultService userStudyResultService)
+        public UsersStudyResultsController(
+            IUserStudyResultService userStudyResultUserStudyResultService,
+            ITestService testService)
         {
-            _service = userStudyResultService;
+            _userStudyResultService = userStudyResultUserStudyResultService;
+            _testService = testService;
         }
 
         [HttpGet]
@@ -23,7 +27,7 @@ namespace EnglishStorageApplication.Server.Controllers
         public async Task<ActionResult<List<UserStudyResultDto>>> GetUsersStudyResults(
             CancellationToken cancellationToken)
         {
-            var usersResults = await _service.GetAllUsersResults(cancellationToken);
+            var usersResults = await _userStudyResultService.GetAllUsersResults(cancellationToken);
                 
             return Ok(usersResults);
         }
@@ -34,7 +38,7 @@ namespace EnglishStorageApplication.Server.Controllers
             Guid userId,
             CancellationToken cancellationToken)
         {
-            var userResults = await _service.GetUserResults(userId, cancellationToken);
+            var userResults = await _userStudyResultService.GetUserResults(userId, cancellationToken);
             
             if (!userResults.Any())
             {
@@ -50,7 +54,7 @@ namespace EnglishStorageApplication.Server.Controllers
             Guid userId,
             CancellationToken cancellationToken)
         {
-            var userResults = await _service.GetUserStudyPercentById(userId, cancellationToken);
+            var userResults = await _userStudyResultService.GetUserStudyPercentById(userId, cancellationToken);
 
             var userStudyPercentDto = new UserStudyPercentDto
             {
@@ -67,7 +71,7 @@ namespace EnglishStorageApplication.Server.Controllers
             [FromBody] List<Guid> testIds,
             CancellationToken cancellationToken)
         {
-            return Ok(await _service.GetTestsStudyResultsByUserIdAndTestId(userId, testIds, cancellationToken));
+            return Ok(await _userStudyResultService.GetTestsStudyResultsByUserIdAndTestId(userId, testIds, cancellationToken));
         }
         
         [HttpPost]
@@ -85,7 +89,8 @@ namespace EnglishStorageApplication.Server.Controllers
                 PercentResult = createUserStudyResultDto.PercentResult
             };
 
-            var userResultId = await _service.CreateUserResult(userResult, cancellationToken);
+            var userResultId = await _userStudyResultService.CreateUserResult(userResult, cancellationToken);
+            await _testService.IncrementTestPassCount(createUserStudyResultDto.TestId, cancellationToken);
             return Ok(userResultId);
         }
 
@@ -97,7 +102,7 @@ namespace EnglishStorageApplication.Server.Controllers
             CancellationToken cancellationToken
             )
         {
-            var userResult = await _service.UpdateUserResult(
+            var userResult = await _userStudyResultService.UpdateUserResult(
                 id, updateUserStudyResultDto.PercentResult, cancellationToken);
             
             return Ok(userResult);
@@ -107,14 +112,14 @@ namespace EnglishStorageApplication.Server.Controllers
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUserStudyResult(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await _service.DeleteUserResult(id, cancellationToken));
+            return Ok(await _userStudyResultService.DeleteUserResult(id, cancellationToken));
         }
 
         [HttpDelete("tests/{userId:guid}")]
         [EnableCors("AllowSpecificOrigin")]
         public async Task<IActionResult> DeleteUsersTestsStudyResults(Guid userId, CancellationToken cancellationToken)
         {
-            return Ok(await _service.DeleteUsersStudyResultByUserId(userId, cancellationToken));
+            return Ok(await _userStudyResultService.DeleteUsersStudyResultByUserId(userId, cancellationToken));
         }
     }
 }

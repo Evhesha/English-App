@@ -26,13 +26,13 @@ function ChatLink({name, id, onDelete, onUpdate}){
     
     return(
         <li>
-            <Link style={{"width": "100px", "height": "35px"}} to={`/chat/${id}`}
+            <Link style={{"width": "90px", "height": "35px"}} to={`/chat/${id}`}
                 className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                 onClick={getChatMessages}
             >
                 {name}
             </Link>
-            <button className="btn" style={{  border: "1px solid black", padding: "4px 8px" }} onClick={handleDelete}>
+            <button className="btn icon-btn" onClick={handleDelete}>
                 <Trash/>
             </button>
             <ChangeChatTitlePopUp OnPatch={onUpdate} title={name} id={id}></ChangeChatTitlePopUp>

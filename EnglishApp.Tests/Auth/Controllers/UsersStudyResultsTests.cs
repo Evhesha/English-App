@@ -1,4 +1,5 @@
 using EnglishApp.Application.DTOs.UserStudyResultDTOs;
+using EnglishApp.Core.Abstractions.Test;
 using EnglishApp.Core.Abstractions.UserStudyResult;
 using EnglishApp.Core.Models;
 using EnglishStorageApplication.Server.Controllers;
@@ -11,6 +12,7 @@ namespace EnglishApp.Tests.Auth.Controllers;
 public class UsersStudyResultsTests
 {
     private readonly IUserStudyResultService _mockService = Substitute.For<IUserStudyResultService>();
+    private readonly ITestService _testService = Substitute.For<ITestService>();
     private readonly CancellationToken _ct = new CancellationToken();
 
     [Fact]
@@ -25,7 +27,7 @@ public class UsersStudyResultsTests
         };
         
         _mockService.GetUserResults(userId, _ct).Returns(expectedResults);
-        var controller = new UsersStudyResultsController(_mockService);
+        var controller = new UsersStudyResultsController(_mockService,  _testService);
 
         // Act
         var result = await controller.GetUserStudyResults(userId, _ct);
@@ -45,7 +47,7 @@ public class UsersStudyResultsTests
         var emptyResults = new List<UserStudyResult>();
         
         _mockService.GetUserResults(userId, _ct).Returns(emptyResults);
-        var controller = new UsersStudyResultsController(_mockService);
+        var controller = new UsersStudyResultsController(_mockService,  _testService);
 
         // Act
         var result = await controller.GetUserStudyResults(userId, _ct);
@@ -67,7 +69,7 @@ public class UsersStudyResultsTests
         
         var expectedId = Guid.NewGuid();
         _mockService.CreateUserResult(Arg.Any<UserStudyResult>(), _ct).Returns(expectedId);
-        var controller = new UsersStudyResultsController(_mockService);
+        var controller = new UsersStudyResultsController(_mockService,  _testService);
 
         // Act
         var result = await controller.CreateUserStudyResult(createDto, _ct);

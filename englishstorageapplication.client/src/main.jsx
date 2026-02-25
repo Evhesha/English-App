@@ -9,7 +9,7 @@ import { Suspense } from "react";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Suspense fallback={<div>Loading translations...</div>}>
         <App />
       </Suspense>

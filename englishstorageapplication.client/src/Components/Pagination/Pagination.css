@@ -10,3 +10,15 @@
 .pagination .page-item.disabled .page-link {
     color: #6c757d;
 }
+
+.dark-theme .pagination .page-link {
+    color: #a7c7ff;
+}
+
+.dark-theme .pagination .page-link:hover {
+    color: #4aa3ff;
+}
+
+.dark-theme .pagination .page-item.disabled .page-link {
+    color: rgba(255, 255, 255, 0.35);
+}

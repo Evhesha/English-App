@@ -15,8 +15,15 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="app-layout">
+      <div className={`app-layout ${isSidebarOpen ? "sidebar-open" : ""}`}>
         <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+        {isSidebarOpen && (
+          <div
+            className="sidebar-backdrop"
+            onClick={toggleSidebar}
+            aria-hidden="true"
+          />
+        )}
         <div className="app-container">
           {isSidebarOpen && <Sidebar />}
           <div className="content">

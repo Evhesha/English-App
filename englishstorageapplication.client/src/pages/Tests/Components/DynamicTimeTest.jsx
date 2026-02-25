@@ -24,7 +24,7 @@ function DynamicTimeTest() {
                     throw new Error('No file name specified');
                 }
 
-                const response = await fetch(`/tests/by-time/${fileName}.json`);
+                const response = await fetch(`${import.meta.env.BASE_URL}tests/by-time/${fileName}.json`);
 
                 if (!response.ok) {
                     if (response.status === 404) {
@@ -64,7 +64,7 @@ function DynamicTimeTest() {
                     <h4 className="alert-heading">Error Loading Test!</h4>
                     <p>{error}</p>
                     <p className="mt-2">
-                        Tried to load file: <code>/tests/by-time/{fileName}.json</code>
+                        Tried to load file: <code>{import.meta.env.BASE_URL}tests/by-time/{fileName}.json</code>
                     </p>
                     <hr />
                     <p className="mb-0">

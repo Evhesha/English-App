@@ -22,7 +22,7 @@ public class TestsController : ControllerBase
         return Ok(await _testService.GetAllTets(cancellationToken));
     }
 
-    [HttpGet("/{userId}")]
+    [HttpGet("{userId}")]
     public async Task<ActionResult<List<TestDto>>> GetTestByUserId(Guid userId, CancellationToken cancellationToken)
     {
         return Ok(await _testService.GetUserTests(userId, cancellationToken));
@@ -40,6 +40,8 @@ public class TestsController : ControllerBase
             Name = createTestDto.Name,
             Description = createTestDto.Description,
             LastUpdateAt =  DateTime.UtcNow,
+            IsPublic =  createTestDto.IsPublic,
+            PassCount =  0,
         };
         
         await _testService.CreateTest(test, cancellationToken);
@@ -58,6 +60,7 @@ public class TestsController : ControllerBase
             Name = updateTestDto.Name,
             Description = updateTestDto.Description,
             LastUpdateAt = DateTime.UtcNow,
+            IsPublic = updateTestDto.IsPublic,
         };
 
         await _testService.UpdateTest(test, cancellationToken);
