@@ -40,7 +40,7 @@ public class TestsController : ControllerBase
             Name = createTestDto.Name,
             Description = createTestDto.Description,
             LastUpdateAt =  DateTime.UtcNow,
-            IsPublic =  true,
+            IsPublic =  createTestDto.IsPublic,
             PassCount =  0,
         };
         

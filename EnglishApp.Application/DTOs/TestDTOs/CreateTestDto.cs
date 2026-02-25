@@ -12,4 +12,7 @@ public class CreateTestDto
     public string Name { get; set; }
     
     public string Description { get; set; }
+    
+    [Required]
+    public bool IsPublic { get; set; }
 }

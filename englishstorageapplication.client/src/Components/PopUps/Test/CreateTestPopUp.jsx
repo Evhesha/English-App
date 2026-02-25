@@ -3,13 +3,14 @@ import {useState} from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import {jwtDecode} from "jwt-decode";
+import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function CreateTestPopUp() {
     const [isOpen, setIsOpen] = useState(false);
-    const [name, setName] = useState("Name");
-    const [text, setText] = useState("Text");
+    const [name, setName] = useState("Title");
+    const [description, setDescription] = useState("Description");
     const [error, setError] = useState(null);
     const [isPublic, setIsPublic] = useState(true);
 
@@ -31,7 +32,7 @@ function CreateTestPopUp() {
             const userId = decodedToken.userId;
 
             const response = await axios.post(
-                `${API_BASE_URL}/api/Lessons`,
+                `${API_BASE_URL}/api/Test`,
                 {
                     userId: userId,
                     name: name,
@@ -67,7 +68,7 @@ function CreateTestPopUp() {
         <>
             <div>
                 <button className="btn btn-primary" onClick={togglePopup}>
-                    Create lesson <i className="bi bi-plus-circle"></i>
+                    Create test <i className="bi bi-plus-circle"></i>
                 </button>
                 {isOpen && (
                     <div className="popup">
@@ -75,14 +76,14 @@ function CreateTestPopUp() {
               <span className="close" onClick={togglePopup}>
                 &times;
               </span>
-                            <h3>Add lesson</h3>
+                            <h3>Add test</h3>
                             <form onSubmit={handleCreate}>
                                 <div className="mb-3">
                                     <label
                                         htmlFor="name"
                                         className="form-label"
                                     >
-                                        Lesson name
+                                        Test title
                                     </label>
                                     <input
                                         type="text"
@@ -97,15 +98,24 @@ function CreateTestPopUp() {
                                         htmlFor="text"
                                         className="form-label"
                                     >
-                                        Lesson text
+                                        Test description
                                     </label>
-                                    <textarea
+                                    <input
+                                        type="text"
                                         className="form-control"
-                                        id="text"
-                                        rows="5"
-                                        value={text}
-                                        onChange={(e) => setText(e.target.value)}
+                                        id="name"
+                                        value={description}
+                                        onChange={(e) => setDescription(e.target.value)}
                                     />
+                                </div>
+                                <div>
+                                    <label
+                                        htmlFor="text"
+                                        className="form-label"
+                                    >
+                                        Test questions
+                                    </label>
+                                    <TestQuestion></TestQuestion>
                                 </div>
                                 <div className="mb-3 form-check">
                                     <input
@@ -124,6 +134,7 @@ function CreateTestPopUp() {
                                         {error}
                                     </div>
                                 )}
+                               
                                 <button type="submit" className="btn btn-primary">
                                     Save
                                 </button>

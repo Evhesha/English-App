@@ -1,10 +1,9 @@
 import axios from "axios";
-import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CheckLessonPopUp from "@/Components/PopUps/Lesson/CheckLessonPopUp.jsx";
 import "./LessonsListElement.css"
 import {useTranslation} from "react-i18next";
 import Cookies from "js-cookie";
+import CheckTestPopUp from "@/Components/PopUps/Test/CheckTestPopUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -48,7 +47,7 @@ function TestListElementForTeachers({ id, text, name, watches, isPublic, onDelet
             </div>
         </div>
         <div className="lesson-actions">
-            <CheckLessonPopUp id={id} title={name} text={text} onPut={onUpdate} isPublic={isPublic} />
+            <CheckTestPopUp id={id} title={name} text={text} onPut={onUpdate} isPublic={isPublic} />
             <button type="button" className="btn btn-danger ms-2" onClick={handleDelete}>
                 <i className="bi bi-trash3"></i> {t("teacher-page.delete")}
             </button>
