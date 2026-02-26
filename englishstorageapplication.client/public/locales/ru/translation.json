@@ -74,7 +74,8 @@
     "views": "Просмотры",
     "is-public": "Публичность",
     "check-lessons": "Просмотреть урок",
-    "delete": "Удалить"
+    "delete": "Удалить",
+    "pass-count": "Количество прохождений"
   },
   "aboutapp": {
     "about-program": "О программе",

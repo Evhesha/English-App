@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Cookies from "js-cookie";
 import CreateTestPopUp from "@/Components/PopUps/Test/CreateTestPopUp.jsx";
 
-function CreateTest({image, title, text, onCreate}) {
+function CreateTest() {
     const [userId, setUserId] = useState(null);
 
     useEffect(() => {

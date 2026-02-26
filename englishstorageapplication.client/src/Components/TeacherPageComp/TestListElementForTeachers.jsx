@@ -7,7 +7,7 @@ import CheckTestPopUp from "@/Components/PopUps/Test/CheckTestPopUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function TestListElementForTeachers({ id, text, name, watches, isPublic, onDelete, onUpdate }) {
+function TestListElementForTeachers({ id, description, name, passCount, isPublic, onDelete, onUpdate }) {
     const { t } = useTranslation();
     const handleDelete = async () => {
         const confirmDelete = window.confirm("Are you sure that you want to delete the article?");
@@ -21,7 +21,7 @@ function TestListElementForTeachers({ id, text, name, watches, isPublic, onDelet
                 return;
             }
 
-            await axios.delete(`${API_BASE_URL}/api/Lessons/${id}`, {
+            await axios.delete(`${API_BASE_URL}/api/Tests/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -37,8 +37,8 @@ function TestListElementForTeachers({ id, text, name, watches, isPublic, onDelet
             <h3 className="lesson-title">{name}</h3>
             <div className="lesson-info">
                 <div className="info-item">
-                    <span className="info-label">{t("teacher-page.views")}:</span>
-                    <span className="info-value">{watches}</span>
+                    <span className="info-label">{t("teacher-page.pass-count")}:</span>
+                    <span className="info-value">{passCount}</span>
                 </div>
                 <div className="info-item">
                     <span className="info-label">{t("teacher-page.is-public")}:</span>
@@ -47,7 +47,7 @@ function TestListElementForTeachers({ id, text, name, watches, isPublic, onDelet
             </div>
         </div>
         <div className="lesson-actions">
-            <CheckTestPopUp id={id} title={name} text={text} onPut={onUpdate} isPublic={isPublic} />
+            <CheckTestPopUp id={id} name={name} description={description} onPut={onUpdate} isPublic={isPublic} />
             <button type="button" className="btn btn-danger ms-2" onClick={handleDelete}>
                 <i className="bi bi-trash3"></i> {t("teacher-page.delete")}
             </button>

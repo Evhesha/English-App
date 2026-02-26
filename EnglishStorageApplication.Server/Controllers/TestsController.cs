@@ -1,6 +1,7 @@
 using EnglishApp.Application.DTOs.TestDTOs;
 using EnglishApp.Core.Abstractions.Test;
 using EnglishApp.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EnglishStorageApplication.Server.Controllers;
@@ -28,6 +29,7 @@ public class TestsController : ControllerBase
         return Ok(await _testService.GetUserTests(userId, cancellationToken));
     }
 
+    [Authorize(Roles = "Teacher")]
     [HttpPost]
     public async Task<ActionResult<Guid>> CreateTest(
         [FromBody] CreateTestDto createTestDto,
@@ -48,6 +50,7 @@ public class TestsController : ControllerBase
         return test.Id;
     }
 
+    [Authorize(Roles = "Teacher")]
     [HttpPut("{testId:guid}")]
     public async Task<ActionResult<Guid>> UpdateTest(
         Guid testId,
