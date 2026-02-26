@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
 
-function CreateLesson({image, title, text, onCreate}) {
+function CreateLesson({onCreate}) {
     const [userId, setUserId] = useState(null);
 
     useEffect(() => {

@@ -2,14 +2,15 @@ import "../PopUp.css";
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPublic }) {
+function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPublic }) {
     const [isOpen, setIsOpen] = useState(false);
     const [error, setError] = useState(null);
-    const [lessonTitle, setLessonTitle] = useState(title);
-    const [lessonText, setLessonText] = useState(text);
+    const [testName, setTestName] = useState(name);
+    const [testDescription, setTestDescription] = useState(description);
     const [isPublic, setIsPublic] = useState(initialIsPublic);
 
     const togglePopup = () => {
@@ -27,12 +28,11 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
         try {
             const token = Cookies.get("token");
             const response = await axios.put(
-                `${API_BASE_URL}/api/Lessons/${id}`,
+                `${API_BASE_URL}/api/Tests/${id}`,
                 {
-                    title: lessonTitle,
-                    text: lessonText,
+                    name: testName,
+                    description: testDescription,
                     isPublic: isPublic,
-                    images: []
                 },{
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -51,7 +51,7 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
         } catch (error) {
             console.error(error);
             setError(
-                error.response?.data?.message || "Ошибка при изменении урока."
+                error.response?.data?.message
             );
         }
     };
@@ -77,8 +77,8 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
                                     type="text"
                                     className="form-control"
                                     id="name"
-                                    value={lessonTitle}
-                                    onChange={(e) => setLessonTitle(e.target.value)}
+                                    value={testName}
+                                    onChange={(e) => setTestName(e.target.value)}
                                 />
                             </div>
                             <div className="mb-3">
@@ -89,10 +89,11 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
                                     type="text"
                                     className="form-control"
                                     id="name"
-                                    value={lessonTitle}
-                                    onChange={(e) => setLessonTitle(e.target.value)}
+                                    value={testDescription}
+                                    onChange={(e) => setTestDescription(e.target.value)}
                                 />
                             </div>
+                            <TestQuestion></TestQuestion>
                             <div className="mb-3 form-check">
                                 <input
                                     className="form-check-input"
@@ -102,7 +103,7 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
                                     onChange={(e) => setIsPublic(e.target.checked)}
                                 />
                                 <label className="form-check-label" htmlFor="isPublic">
-                                    Public lesson
+                                    Public test
                                 </label>
                             </div>
                             {error && (

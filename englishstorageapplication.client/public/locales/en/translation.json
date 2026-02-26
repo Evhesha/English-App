@@ -74,7 +74,8 @@
     "views": "Views",
     "is-public": "Is public",
     "check-lessons": "Check lessons",
-    "delete": "Delete"
+    "delete": "Delete",
+    "pass-count": "Pass count"
   },
   "aboutapp": {
     "about-program": "About Program",
