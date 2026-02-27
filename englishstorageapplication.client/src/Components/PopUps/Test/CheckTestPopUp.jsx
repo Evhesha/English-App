@@ -1,5 +1,5 @@
 import "../PopUp.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
@@ -22,6 +22,22 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
         e.preventDefault();
         setIsOpen(false);
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            const fetchTestQuestions = async () => {
+                try{
+                    const response = await axios.get(`https://localhost:7298/api/TestQuestion/${id}`);
+                    console.log(response.data);
+                }
+                catch(e){
+                    console.log(e);
+                }
+            }
+
+            fetchTestQuestions();
+        }
+    }, [isOpen, id]); 
 
     const handleEdit = async (event) => {
         event.preventDefault();

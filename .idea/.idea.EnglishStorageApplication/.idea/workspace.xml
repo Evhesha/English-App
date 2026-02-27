@@ -14,17 +14,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Test creating pop up, new test question component for creating and changing test quesions in tests pop ups.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Now teacher can create, update, delete tests, but without test questions.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CheckTestPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CheckTestPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CreateTestPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CreateTestPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForTeachers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForTeachers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/CreateLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/CreateLesson.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/CreateTest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/CreateTest.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +83,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/21c12b75b72ded3579a2533dad7d6ecc6997b19ffd5a7daf7a3bba1c381f53a/TaskContinuation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2280f6b68568823fe54b6fb0be31b9cbce4c9aa7882ea9482c7f66bc84f4930/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a6f52f75db0c77bb83f322fb52f52cef9cff6cdafbb94dfec214bab243d18/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c9bf75a927ea72a46ae68f11cbb9fb42e5fa16518e6464fdbc938ce3d913d6a/EventSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db7395f4add94e6d10e515b3e55373f2821f8323de7dc8e314d78feefacf5584/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5ace92664429b8b34b68b587316fb211811b58aeb53422b43cecca2ad2bdaf3/AsyncTaskMethodBuilderT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -169,7 +177,6 @@
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Middleware/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/englishstorageapplication.client/public/tests/by-level/A2.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="file://$USER_HOME$/AppData/Local/Temp/whats-new-dir/whats-new.http" environment="test" />
@@ -193,32 +200,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor": "Run",
+    ".NET Launch Settings Profile.HTTPS.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" />
@@ -422,6 +429,7 @@
       <workItem from="1771855588928" duration="1035000" />
       <workItem from="1772006787309" duration="7191000" />
       <workItem from="1772094164305" duration="2564000" />
+      <workItem from="1772183059439" duration="6424000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />

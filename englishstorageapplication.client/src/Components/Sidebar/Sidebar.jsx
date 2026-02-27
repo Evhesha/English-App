@@ -161,7 +161,7 @@ function Sidebar() {
                                 </li>
                                 <li>
                                     <Link
-                                        to="/level-tests"
+                                        to="/online-tests"
                                         className="link-body-emphasis d-inline-flex text-decoration-none rounded"
                                     >
                                         {t("sidebar.online-tests")}

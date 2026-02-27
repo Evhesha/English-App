@@ -44,6 +44,7 @@ import SettingPage from "../../pages/Another/SettingPage";
 
 import MyDictPage from "../../pages/Dictionary/DictionaryTopicsPage/MyDictPage";
 
+import OnlineTestsListPage from "@/pages/Tests/Pages/OnlineTestPage.jsx";
 import ByTimeTestsPage from "@/pages/Tests/Pages/ByTimeTestsPage.jsx";
 import ByLevelTestPage from "@/pages/Tests/Pages/ByLevelTestPage.jsx";
 import ByTopicTestsPage from "@/pages/Tests/Pages/ByTopicTestsPage.jsx";
@@ -104,6 +105,7 @@ function RoutesList() {
           <Route path="/grammar" element={<GrammarDictionary />} />
 
           {/* Sidebar.Tests */}
+          <Route path="/online-tests" element={<OnlineTestsListPage />} />
           <Route path="/level-tests" element={<ByLevelTestPage />} />
           <Route path="/mixed-tests" element={<ByTopicTestsPage />} />
           <Route path="/topics-tests" element={<ByTimeTestsPage />}/>
