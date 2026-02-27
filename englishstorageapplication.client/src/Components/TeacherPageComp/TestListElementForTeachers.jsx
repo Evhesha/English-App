@@ -7,8 +7,13 @@ import CheckTestPopUp from "@/Components/PopUps/Test/CheckTestPopUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function TestListElementForTeachers({ id, description, name, passCount, isPublic, onDelete, onUpdate }) {
+function TestListElementForTeachers({ id, description, name, date, passCount, isPublic, onDelete, onUpdate }) {
     const { t } = useTranslation();
+    const formatDate = (dateString) => {
+        if (!dateString) return '';
+        return new Date(dateString).toLocaleDateString('en-CA');
+    };
+    
     const handleDelete = async () => {
         const confirmDelete = window.confirm("Are you sure that you want to delete the article?");
         if (!confirmDelete) return;
@@ -43,6 +48,10 @@ function TestListElementForTeachers({ id, description, name, passCount, isPublic
                 <div className="info-item">
                     <span className="info-label">{t("teacher-page.is-public")}:</span>
                     <span className="info-value">{isPublic ? "true" : "false"}</span>
+                </div>
+                <div className="info-item">
+                    <span className="info-label">{t("teacher-page.last-update-date")}:</span>
+                    <span className="info-value">{formatDate(date)}</span>
                 </div>
             </div>
         </div>

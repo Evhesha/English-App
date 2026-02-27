@@ -93,6 +93,7 @@ function TeacherPage() {
                             id={article.id}
                             name={article.title}
                             text={article.text}
+                            date={article.createdDate}
                             watches={article.watchCount}
                             isPublic={article.isPublic}
                             onDelete={handleDeleteArticle}
@@ -108,6 +109,7 @@ function TeacherPage() {
                             id={test.id}
                             name={test.name}
                             description={test.description}
+                            date={test.lastUpdateAt}
                             passCount={test.passCount}
                             isPublic={test.isPublic}
                             onDelete={handleDeleteTest}

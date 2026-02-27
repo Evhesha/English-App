@@ -75,7 +75,8 @@
     "is-public": "Is public",
     "check-lessons": "Check lessons",
     "delete": "Delete",
-    "pass-count": "Pass count"
+    "pass-count": "Pass count",
+    "last-update-date": "last update date"
   },
   "aboutapp": {
     "about-program": "About Program",
