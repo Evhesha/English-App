@@ -1,13 +1,13 @@
 import React, {useState, useEffect, useRef} from "react";
-import Section from "./TeacherPageComponents/Section";
+import Section from "../../Components/TeacherPageComp/Section.jsx"
 import LessonListElementForTeachers from "../../Components/TeacherPageComp/LessonListElementForTeachers.jsx";
 import axios from "axios";
 import {jwtDecode} from "jwt-decode";
 import Cookies from "js-cookie";
 import {toast, ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import CreateLesson from "@/pages/Another/TeacherPageComponents/CreateLesson.jsx";
-import CreateTest from "@/pages/Another/TeacherPageComponents/CreateTest.jsx";
+import CreateLesson from "../../Components/TeacherPageComp/CreateLesson.jsx"
+import CreateTest from "../../Components/TeacherPageComp/CreateTest.jsx"
 import {useTranslation} from "react-i18next";
 import TestListElementForTeachers from "@/Components/TeacherPageComp/TestListElementForTeachers.jsx";
 

@@ -1,14 +1,46 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { useState, useEffect } from 'react';
+import axios from "axios";
+import Cookies from "js-cookie";
 
-function TestQuestion() {
-    const [type, setType] = useState("choice");
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+function TestQuestion({testId}) {
     const [question, setQuestion] = useState("");
     const [options, setOptions] = useState("");
     const [correctAnswer, setCorrectAnswer] = useState("");
     const [dropDownTitle, setDropDownTitle] = useState("Select type");
-    
+
+    const AddTestQuestion = async (event) => {
+        event.preventDefault();
+        try {
+            const token = Cookies.get("token");
+            const response = await axios.post(
+                `${API_BASE_URL}/api/TestQuestion`,
+                {
+                    testId: testId,
+                    type: dropDownTitle,
+                    question: question,
+                    options: options.split(","),
+                    correctAnswer: correctAnswer,
+                },{
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                }
+            )
+
+            setQuestion("");
+            setOptions("");
+            setCorrectAnswer("");
+            setDropDownTitle("Select type");
+            console.log(response);
+        } catch (error) {
+            console.log(error);       
+        }
+    };
+
     return <li className="list-group-item d-flex justify-content-between align-items-center lesson-list-element">
         <div className="mb-3">
             <label htmlFor="name" className="form-label">
@@ -61,7 +93,7 @@ function TestQuestion() {
                 onChange={(e) => setCorrectAnswer(e.target.value)}
             />
         </div>
-        <button className="btn btn-primary">
+        <button className="btn btn-primary" onClick={AddTestQuestion}>
             Add
         </button>
     </li>
