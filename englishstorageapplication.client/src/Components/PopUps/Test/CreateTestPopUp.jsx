@@ -3,7 +3,6 @@ import {useState} from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import {jwtDecode} from "jwt-decode";
-import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -74,6 +73,7 @@ function CreateTestPopUp({onPost}) {
                 &times;
               </span>
                             <h3>Add test</h3>
+                            <h4>All questions add in created test by clicking "Check test" button</h4>
                             <form onSubmit={handleCreate}>
                                 <div className="mb-3">
                                     <label
@@ -112,7 +112,6 @@ function CreateTestPopUp({onPost}) {
                                     >
                                         Test questions
                                     </label>
-                                    <TestQuestion></TestQuestion>
                                 </div>
                                 <div className="mb-3 form-check">
                                     <input

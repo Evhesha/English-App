@@ -14,19 +14,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Now teacher can create, update, delete tests, but without test questions.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: New page for online lessons was added. Teacher page date components fixing, now can get test guestions. New route for online lessons.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CheckTestPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CheckTestPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/LessonListElementForTeachers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForTeachers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForTeachers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CreateTestPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/Test/CreateTestPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestQuestion.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestQuestion.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/SettingPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/AddLesson.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/CreateLesson.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/CreateLesson.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/CreateTest.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/CreateTest.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/TeacherPageComponents/Section.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/Section.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,6 +204,7 @@
     ".NET Launch Settings Profile.HTTPS.executor": "Run",
     ".NET Launch Settings Profile.Unnamed.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Node.js.TestQuestion.jsx.executor": "dotMemory",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -280,6 +279,9 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="ExistTestQuestion.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/ExistTestQuestion.jsx" working-dir="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp">
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -303,15 +305,16 @@
       <item itemvalue=".NET Launch Settings Profile.HTTPS" />
       <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Node.js.ExistTestQuestion.jsx" />
       <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.ExistTestQuestion.jsx" />
         <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
       </list>
     </recent_temporary>
   </component>
@@ -430,6 +433,8 @@
       <workItem from="1772006787309" duration="7191000" />
       <workItem from="1772094164305" duration="2564000" />
       <workItem from="1772183059439" duration="6424000" />
+      <workItem from="1772222452946" duration="230000" />
+      <workItem from="1772266978174" duration="4081000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -666,7 +671,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature: Now if user is not authorized - he cant get lessons." />
     <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
     <MESSAGE value="Fix: Some tests were fixed for repository. Changed theirs namespases." />
     <MESSAGE value="Feature: chat and message models were described. New packages for mongo db and json data." />
@@ -691,7 +695,8 @@
     <MESSAGE value="Feature: new topics pages for dictionaries." />
     <MESSAGE value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
     <MESSAGE value="Feature: Test creating pop up, new test question component for creating and changing test quesions in tests pop ups." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Test creating pop up, new test question component for creating and changing test quesions in tests pop ups." />
+    <MESSAGE value="Feature: New page for online lessons was added. Teacher page date components fixing, now can get test guestions. New route for online lessons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: New page for online lessons was added. Teacher page date components fixing, now can get test guestions. New route for online lessons." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

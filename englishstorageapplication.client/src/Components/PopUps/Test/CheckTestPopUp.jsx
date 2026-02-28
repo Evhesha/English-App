@@ -2,6 +2,9 @@ import "../PopUp.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import ExistTestQuestion from "@/Components/TeacherPageComp/ExistTestQuestion.jsx";
+import testQuestion from "@/Components/TeacherPageComp/ExistTestQuestion.jsx";
+import ListGroupElement from "@/Components/ListGroupElement/ListGroupElement.jsx";
 import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
@@ -12,6 +15,7 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
     const [testName, setTestName] = useState(name);
     const [testDescription, setTestDescription] = useState(description);
     const [isPublic, setIsPublic] = useState(initialIsPublic);
+    const [testQuestions, setTestQuestions] = useState([]);
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -28,7 +32,9 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
             const fetchTestQuestions = async () => {
                 try{
                     const response = await axios.get(`https://localhost:7298/api/TestQuestion/${id}`);
-                    console.log(response.data);
+                    setTestQuestions(response.data);
+                    console.log(testQuestions);
+                    console.log(response);
                 }
                 catch(e){
                     console.log(e);
@@ -57,18 +63,11 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
             );
 
             console.log(response);
-            if (response.status === 200 || response.status === 201) {
-                if (typeof onPut === "function") {
-                    onPut(response.data);
-                }
-                togglePopup();
-                window.location.reload();
-            }
+            togglePopup();
+            window.location.reload();
         } catch (error) {
             console.error(error);
-            setError(
-                error.response?.data?.message
-            );
+            setError(error.response?.data?.message);
         }
     };
 
@@ -109,7 +108,25 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
                                     onChange={(e) => setTestDescription(e.target.value)}
                                 />
                             </div>
-                            <TestQuestion></TestQuestion>
+                            <div className="questions-container" style={{
+                                maxHeight: '400px',
+                                overflowY: 'auto',
+                                marginBottom: '15px',
+                                paddingRight: '10px'
+                            }}>
+                                {testQuestions.map((testQuestion, index) => (
+                                    <ExistTestQuestion
+                                        key={index}
+                                        id={testQuestion.id}
+                                        question={testQuestion.question}
+                                        correctAnswer={testQuestion.correctAnswer}
+                                        options={testQuestion.options}
+                                        type={testQuestion.type}
+                                        // onDelete={() => handleDelete(user.id)}
+                                    />
+                                ))}
+                                <TestQuestion testId={id}/>
+                            </div>
                             <div className="mb-3 form-check">
                                 <input
                                     className="form-check-input"
