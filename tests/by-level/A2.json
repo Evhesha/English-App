@@ -11,8 +11,7 @@
       "type": "choice",
       "question": "What is the past participle of the verb \"to write\"?",
       "options": ["wrote", "written", "writing", "write"],
-      "correctAnswer": "written",
-      
+      "correctAnswer": "written"
     },
     {
       "id": 2,
