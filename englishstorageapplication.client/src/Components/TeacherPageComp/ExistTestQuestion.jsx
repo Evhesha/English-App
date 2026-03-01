@@ -1,12 +1,30 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function ExistTestQuestion({type, question, options, correctAnswer}) {
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+function ExistTestQuestion({id, type, question, options, correctAnswer, onDelete}) {
     const [testQuestion, setTestQuestion] = useState(question);
     const [testOptions, setTestOptions] = useState(options);
     const [testCorrectAnswer, setTestCorrectAnswer] = useState(correctAnswer);
     const [dropDownType, setDropDownType] = useState(type);
+
+    const handleDelete = async () => {
+        const confirmDelete = window.confirm("Are you sure that you want to delete the question?");
+        if (!confirmDelete) return;
+
+        try {
+            await axios.delete(`${API_BASE_URL}/api/TestQuestion/${id}`);
+            onDelete(id);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    
+    const handleUpdate = async () => {
+        
+    }
     
     return <li className="list-group-item d-flex justify-content-between align-items-center lesson-list-element">
         <div className="mb-3">
@@ -63,7 +81,7 @@ function ExistTestQuestion({type, question, options, correctAnswer}) {
         <button className="btn btn-primary">
             Save
         </button>
-        <button className="btn btn-danger">
+        <button type="button" className="btn btn-danger" onClick={handleDelete}>
             Delete
         </button>
     </li>

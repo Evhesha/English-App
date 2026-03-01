@@ -44,15 +44,8 @@ function CreateTestPopUp({onPost}) {
                 }
             )
 
-            if (response.status === 200 || response.status === 201) {
-                if (onPost) {
-                    onPost(response.data);
-                }
-                togglePopup();
-                window.location.reload();
-            } else {
-                setError(response.data.message);
-            }
+            togglePopup();
+            window.location.reload();
         } catch (error) {
             if (error.response) {
                 setError(error.response.data.message);

@@ -243,39 +243,6 @@ body {
     margin-top: 2rem;
 }
 
-.final-cta {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #0056b3 100%);
-    text-align: center;
-    color: white;
-}
-
-.cta-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.cta-subtitle {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.final-cta .btn-primary {
-    background-color: white;
-    color: var(--secondary-color);
-    border: 1px solid white;
-}
-
-.final-cta .btn-primary:hover {
-    background-color: transparent;
-    color: white;
-}
-
 .container {
     width: 100%;
     padding-right: 15px;
@@ -328,8 +295,7 @@ body {
 
     .features,
     .benefits,
-    .ai-showcase,
-    .final-cta {
+    .ai-showcase {
         padding: 60px 0;
     }
 
@@ -342,10 +308,6 @@ body {
     }
 
     .ai-header h2 {
-        font-size: 1.75rem;
-    }
-
-    .cta-content h2 {
         font-size: 1.75rem;
     }
 }

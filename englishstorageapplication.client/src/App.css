@@ -123,12 +123,9 @@ body {
 
 .dark-theme .card,
 .dark-theme .list-group-item,
-.dark-theme .modal-content,
 .dark-theme .dropdown-menu,
 .dark-theme .table,
-.dark-theme .form-control,
-.dark-theme .form-select,
-.dark-theme .input-group-text {
+.dark-theme .form-control {
     background-color: rgba(23, 32, 42, 0.9);
     color: #ecf0f1;
     border-color: rgba(255, 255, 255, 0.12);
@@ -140,10 +137,6 @@ body {
 
 .dark-theme .bg-light {
     background-color: rgba(255, 255, 255, 0.05) !important;
-    color: #ecf0f1 !important;
-}
-
-.dark-theme .text-dark {
     color: #ecf0f1 !important;
 }
 
@@ -256,8 +249,7 @@ body {
 .dark-theme .sidebar,
 .dark-theme .sidebar .btn-toggle,
 .dark-theme .sidebar .btn-toggle-nav a,
-.dark-theme .sidebar .large-text,
-.dark-theme .sidebar .scrollarea {
+.dark-theme .sidebar .large-text {
     color: #ffffff !important;
 }
 
