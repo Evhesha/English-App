@@ -44,6 +44,10 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
             fetchTestQuestions();
         }
     }, [isOpen, id]); 
+    
+    const handleDelete = (id) => {
+        setTestQuestions(testQuestions.filter(testQuestions => testQuestions.id !== id));
+    }
 
     const handleEdit = async (event) => {
         event.preventDefault();
@@ -122,7 +126,7 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
                                         correctAnswer={testQuestion.correctAnswer}
                                         options={testQuestion.options}
                                         type={testQuestion.type}
-                                        // onDelete={() => handleDelete(user.id)}
+                                        onDelete={() => handleDelete(testQuestion.id)}
                                     />
                                 ))}
                                 <TestQuestion testId={id}/>

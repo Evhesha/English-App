@@ -6,11 +6,12 @@ import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function TestQuestion({testId}) {
+function TestQuestion({testId, onCreate}) {
     const [question, setQuestion] = useState("");
     const [options, setOptions] = useState("");
     const [correctAnswer, setCorrectAnswer] = useState("");
     const [dropDownTitle, setDropDownTitle] = useState("Select type");
+    const [error, setError] = useState(false);
 
     const AddTestQuestion = async (event) => {
         event.preventDefault();
@@ -37,11 +38,13 @@ function TestQuestion({testId}) {
             setDropDownTitle("Select type");
             console.log(response);
         } catch (error) {
-            console.log(error);       
+            console.log(error);  
+            setError(true);
+            setTimeout(() => setError(false),2000);
         }
     };
 
-    return <li className="list-group-item d-flex justify-content-between align-items-center lesson-list-element">
+    return <div className="list-group-item d-flex justify-content-between align-items-center lesson-list-element">
         <div className="mb-3">
             <label htmlFor="name" className="form-label">
                 Question type
@@ -96,7 +99,10 @@ function TestQuestion({testId}) {
         <button className="btn btn-primary" onClick={AddTestQuestion}>
             Add
         </button>
-    </li>
+        <div>
+            {error ? <p style={{color: "red"}}>error</p> : null}
+        </div>
+    </div>
 }
 
 export default TestQuestion;
