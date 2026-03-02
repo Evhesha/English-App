@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import ExistTestQuestion from "@/Components/TeacherPageComp/ExistTestQuestion.jsx";
-import testQuestion from "@/Components/TeacherPageComp/ExistTestQuestion.jsx";
-import ListGroupElement from "@/Components/ListGroupElement/ListGroupElement.jsx";
 import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
@@ -43,10 +41,15 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
 
             fetchTestQuestions();
         }
-    }, [isOpen, id]); 
-    
-    const handleDelete = (id) => {
-        setTestQuestions(testQuestions.filter(testQuestions => testQuestions.id !== id));
+    }, [isOpen, id]);
+
+    const handleDelete = (deletedId) => {
+        setTestQuestions(testQuestions.filter(question => question.id !== deletedId));
+    }
+
+    const handleCreate = (newQuestion) => {
+        const createdQuestion = newQuestion.data || newQuestion;
+        setTestQuestions(prevQuestions => [...prevQuestions, createdQuestion]);
     }
 
     const handleEdit = async (event) => {
@@ -118,18 +121,18 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
                                 marginBottom: '15px',
                                 paddingRight: '10px'
                             }}>
-                                {testQuestions.map((testQuestion, index) => (
+                                {testQuestions.map((testQuestion) => (
                                     <ExistTestQuestion
-                                        key={index}
+                                        key={testQuestion.id || `temp-${Date.now()}-${Math.random()}`}
                                         id={testQuestion.id}
                                         question={testQuestion.question}
                                         correctAnswer={testQuestion.correctAnswer}
                                         options={testQuestion.options}
                                         type={testQuestion.type}
-                                        onDelete={() => handleDelete(testQuestion.id)}
+                                        onDelete={handleDelete}
                                     />
                                 ))}
-                                <TestQuestion testId={id}/>
+                                <TestQuestion testId={id} onCreate={handleCreate} />
                             </div>
                             <div className="mb-3 form-check">
                                 <input

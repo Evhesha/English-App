@@ -36,6 +36,7 @@ function TestQuestion({testId, onCreate}) {
             setOptions("");
             setCorrectAnswer("");
             setDropDownTitle("Select type");
+            onCreate(response);
             console.log(response);
         } catch (error) {
             console.log(error);  
