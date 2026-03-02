@@ -4,7 +4,7 @@ import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
 import "./LessonsListElement.css"
 import { useTranslation } from "react-i18next";
 
-function TestListElementForUsers({ id, name, text, watchCount, author, createdDate }) {
+function TestListElementForUsers({ id, name, description, passCount, author, createdDate }) {
     const { t } = useTranslation();
 
     const formatDate = (dateString) => {
@@ -19,11 +19,14 @@ function TestListElementForUsers({ id, name, text, watchCount, author, createdDa
                 <div className="lesson-info">
                     <div className="info-item">
                         <span className="info-label">{t("online-lessons.pass-count")}:</span>
-                        <span className="info-value">{watchCount}</span>
+                        <span className="info-value">{passCount}</span>
                     </div>
                     <div className="info-item">
                         <span className="info-label">{t("online-lessons.author")}:</span>
                         <span className="info-value">{author}</span>
+                    </div>
+                    <div className="info-item">
+                        <span className="info-value">{description}</span>
                     </div>
                     <div className="info-item date-item">
                         <span className="info-label">{t("online-lessons.created-date")}:</span>

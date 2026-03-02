@@ -13,6 +13,13 @@ public class TestsQuestionsRepository : ITestsQuestionsRepository
     {
         _context = context;
     }
+    
+    public IQueryable<Test> GetTestsQueryable()
+    {
+        return _context.Tests
+            .Include(t => t.User)
+            .AsNoTracking();
+    }
 
     public async Task<List<TestQuestion>> GetTestsQuestionsByTestIdAsync(
         Guid testId,
@@ -35,7 +42,7 @@ public class TestsQuestionsRepository : ITestsQuestionsRepository
 
     public async Task<Guid> UpdateTestQuestionAsync(TestQuestion testQuestion, CancellationToken cancellationToken)
     {
-        var  testQuestionEntity = await _context.TestQuestions
+        var testQuestionEntity = await _context.TestQuestions
             .FirstOrDefaultAsync(q => q.Id == testQuestion.Id,  cancellationToken);
 
         if (testQuestionEntity == null)
@@ -48,7 +55,6 @@ public class TestsQuestionsRepository : ITestsQuestionsRepository
         testQuestionEntity.Options = testQuestion.Options;
         testQuestionEntity.Type = testQuestion.Type;
         
-        _context.TestQuestions.Update(testQuestionEntity);
         await _context.SaveChangesAsync(cancellationToken);
         return testQuestion.Id;
     }
