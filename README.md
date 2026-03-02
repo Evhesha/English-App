@@ -56,4 +56,5 @@ A modern, interactive English learning application designed to make language acq
 
 
 # App architecture
-<img width="889" height="632" alt="Screenshot 2025-11-29 at 12 29 20" src="https://github.com/user-attachments/assets/40251b25-bb2b-4605-bee9-14e9e94f7a86" />
+<img width="857" height="655" alt="Screenshot 2026-03-02 at 20 46 32" src="https://github.com/user-attachments/assets/b4bd9b35-4800-4382-80f6-cd1d55cb92f8" />
+
