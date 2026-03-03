@@ -76,7 +76,8 @@
     "check-lessons": "Check lessons",
     "delete": "Delete",
     "pass-count": "Pass count",
-    "last-update-date": "last update date"
+    "last-update-date": "last update date",
+    "description" : "Description"
   },
   "aboutapp": {
     "about-program": "About Program",

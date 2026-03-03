@@ -54,6 +54,11 @@ function TestListElementForTeachers({ id, description, name, date, passCount, is
                     <span className="info-value">{formatDate(date)}</span>
                 </div>
             </div>
+            <p></p>
+            <div className="lesson-content description-text">
+                <span className="info-label">{t("teacher-page.description")}:</span>
+                <span className="info-value">{description}</span>
+            </div>
         </div>
         <div className="lesson-actions">
             <CheckTestPopUp id={id} name={name} description={description} onPut={onUpdate} isPublic={isPublic} />

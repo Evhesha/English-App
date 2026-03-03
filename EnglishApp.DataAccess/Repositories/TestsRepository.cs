@@ -13,6 +13,13 @@ public class TestsRepository : ITestsRepository
     {
         _context = context;
     }
+    
+    public IQueryable<Test> GetLessonsQueryable()
+    {
+        return _context.Tests
+            .Include(t => t.User)
+            .AsNoTracking();
+    }
 
     public async Task<List<Test>> GetAllTestsAsync(CancellationToken cancellationToken)
     {

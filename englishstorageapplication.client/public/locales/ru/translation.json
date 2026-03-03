@@ -76,7 +76,8 @@
     "check-lessons": "Просмотреть урок",
     "delete": "Удалить",
     "pass-count": "Количество прохождений",
-    "last-update-date": "Последняя дата обновления"
+    "last-update-date": "Последняя дата обновления",
+    "description" : "Описание"
   },
   "aboutapp": {
     "about-program": "О программе",

@@ -62,6 +62,13 @@
     color: #4aa3ff;
 }
 
+.description-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 60%;
+}
+
 @media (max-width: 768px) {
     .lesson-list-element {
         padding: 12px !important;
