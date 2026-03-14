@@ -1,15 +1,20 @@
 import "../PopUp.css";
-import { useState } from "react";
+import {useState} from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import Dropdown from 'react-bootstrap/Dropdown';
+import Form from 'react-bootstrap/Form';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function ChangeUserRolePopUp({ id,
-                           role: initialRole}) {
+function ChangeUserRolePopUp({
+                                 id,
+                                 role: initialRole
+                             }) {
     const [isOpen, setIsOpen] = useState(false);
     const [role, setRole] = useState(initialRole);
     const [error, setError] = useState(null);
+    const options = ['User', 'Admin', 'Teacher'];
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -22,7 +27,7 @@ function ChangeUserRolePopUp({ id,
             const token = Cookies.get("token");
             const response = await axios.patch(
                 `${API_BASE_URL}/api/users/${id}`,
-                { role },
+                {role},
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -32,15 +37,15 @@ function ChangeUserRolePopUp({ id,
             );
 
             console.log(response);
-            if (response.status === 200 || response.status === 201) {
+            if (response.status === 200) {
                 togglePopup();
                 window.location.reload();
             } else {
-                setError(response.data.message || "Ошибка при изменении пользователя.");
+                setError(response.data.message);
             }
         } catch (error) {
             console.error(error);
-            setError( error.response?.data?.message || "Вы можете задать только роли Admin, Teacher, User");
+            setError(error.response?.data?.message || "Вы можете задать только роли Admin, Teacher, User");
         }
     };
 
@@ -51,23 +56,31 @@ function ChangeUserRolePopUp({ id,
             </button>
             {isOpen && (
                 <div className="popup">
-                    <div className="popup-content">
+                    <div className="popup-content" style={{
+
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '100px'
+                    }}>
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
                         <h3>Edit user role</h3>
                         <form onSubmit={handleEditRole}>
                             <div className="mb-3">
-                                <label htmlFor="role" className="form-label">
-                                    Role
-                                </label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="role"
-                                    value={role}
-                                    onChange={(e) => setRole(e.target.value)}
-                                />
+                                <Dropdown onSelect={(eventKey) => setRole(eventKey)}>
+                                    <Dropdown.Toggle variant="secondary" id="dropdown-role">
+                                        {role || 'Выберите роль...'}
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        {options.map((option) => (
+                                            <Dropdown.Item key={option} eventKey={option}>
+                                                {option}
+                                            </Dropdown.Item>
+                                        ))}
+                                    </Dropdown.Menu>
+                                </Dropdown>
+
                             </div>
                             {error && (
                                 <div className="alert alert-danger" role="alert">
