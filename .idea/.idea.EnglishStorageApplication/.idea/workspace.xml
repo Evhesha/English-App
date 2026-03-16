@@ -14,11 +14,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: Added description to testElement, test filtration features">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: corrected admin's pop up for correcting role with dropdown.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/ChangeUserRolePopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/PopUps/User/ChangeUserRolePopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Another/AdminPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/LessonFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/LessonFilter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,9 +312,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Node.js.ExistTestQuestion.jsx" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Node.js.ExistTestQuestion.jsx" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
@@ -439,13 +439,7 @@
       <workItem from="1772266978174" duration="4081000" />
       <workItem from="1772371776030" duration="62000" />
       <workItem from="1772450119544" duration="3765000" />
-      <workItem from="1772635663856" duration="119000" />
-      <workItem from="1772640441169" duration="71000" />
-      <workItem from="1772697204414" duration="37000" />
-      <workItem from="1773134749058" duration="29000" />
-      <workItem from="1773212166846" duration="1114000" />
-      <workItem from="1773249754417" duration="259000" />
-      <workItem from="1773486686582" duration="1635000" />
+      <workItem from="1773662931445" duration="1442000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -647,15 +641,7 @@
       <option name="project" value="LOCAL" />
       <updated>1772016506242</updated>
     </task>
-    <task id="LOCAL-00028" summary="Feature: Added description to testElement, test filtration features">
-      <option name="closed" value="true" />
-      <created>1772567344208</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1772567344208</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,6 +676,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feature: New abilities for users filter. New dropdown button for role sorting in role page. New test file for auth service." />
     <MESSAGE value="Fix: Some tests were fixed for repository. Changed theirs namespases." />
     <MESSAGE value="Feature: chat and message models were described. New packages for mongo db and json data." />
     <MESSAGE value="Feature: buttons &quot;new chat&quot; &quot;any chat&quot; was added to project. New component for chat container." />
@@ -714,8 +701,7 @@
     <MESSAGE value="Feature: change frontend data for deploying, new lighter picture, gh-pages hosting npm package." />
     <MESSAGE value="Feature: Test creating pop up, new test question component for creating and changing test quesions in tests pop ups." />
     <MESSAGE value="Feature: New page for online lessons was added. Teacher page date components fixing, now can get test guestions. New route for online lessons." />
-    <MESSAGE value="Feature: Added description to testElement, test filtration features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Added description to testElement, test filtration features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: New page for online lessons was added. Teacher page date components fixing, now can get test guestions. New route for online lessons." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

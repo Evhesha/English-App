@@ -17,15 +17,16 @@ public static class LessonExtensions
             var titleLower = lessonFilter.Title.ToLower();
             query = query.Where(l => l.Title.ToLower().StartsWith(titleLower));
         }
+        
+        if (!string.IsNullOrEmpty(lessonFilter.AuthorName))
+        {
+            var authorNameLower = lessonFilter.AuthorName.ToLower();
+            query = query.Where(l => l.User.Name.ToLower().StartsWith(authorNameLower));
+        }
 
         if (lessonFilter.CreatedDate != null)
         {
             query = query.Where(l => l.CreatedDate >= lessonFilter.CreatedDate);
-        }
-
-        if (lessonFilter.Author != null)
-        {
-            query = query.Where(l => l.User == lessonFilter.Author);
         }
         
         return query;
