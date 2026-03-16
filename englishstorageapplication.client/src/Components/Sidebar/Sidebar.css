@@ -22,10 +22,6 @@ main {
     overflow-y: hidden;
 }
 
-.dropdown-toggle {
-    outline: 0;
-}
-
 .btn-toggle {
     padding: 0.25rem 0.5rem;
     font-weight: 600;
@@ -64,10 +60,6 @@ main {
 .btn-toggle-nav a:focus {
     background-color: var(--sidebar-hover-bg);
     color: var(--sidebar-text-color);
-}
-
-.scrollarea {
-    overflow-y: auto;
 }
 
 .large-text {

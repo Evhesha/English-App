@@ -1,14 +1,13 @@
 import React, {useState, useEffect, useRef} from "react";
-import Section from "./TeacherPageComponents/Section";
+import Section from "../../Components/TeacherPageComp/Section.jsx"
 import LessonListElementForTeachers from "../../Components/TeacherPageComp/LessonListElementForTeachers.jsx";
 import axios from "axios";
 import {jwtDecode} from "jwt-decode";
 import Cookies from "js-cookie";
 import {toast, ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import CreateLesson from "@/pages/Another/TeacherPageComponents/CreateLesson.jsx";
-import CreateTest from "@/pages/Another/TeacherPageComponents/CreateTest.jsx";
-import AddLesson from "./TeacherPageComponents/AddLesson.png";
+import CreateLesson from "../../Components/TeacherPageComp/CreateLesson.jsx"
+import CreateTest from "../../Components/TeacherPageComp/CreateTest.jsx"
 import {useTranslation} from "react-i18next";
 import TestListElementForTeachers from "@/Components/TeacherPageComp/TestListElementForTeachers.jsx";
 
@@ -23,6 +22,11 @@ function TeacherPage() {
 
     const handleDeleteArticle = (id) => {
         setArticles(articles.filter(article => article.id !== id));
+        deleteNotify();
+    };
+
+    const handleDeleteTest = (id) => {
+        setTests(tests.filter(test => test.id !== id));
         deleteNotify();
     };
 
@@ -82,20 +86,14 @@ function TeacherPage() {
 
             {section ? <Section>
                     <h2>Your lessons</h2>
-                    <CreateLesson title={"Add lesson"} image={
-                        <img
-                            src={AddLesson}
-                            className="card-img-top"
-                            alt="..."
-                            style={{paddingLeft: "50px", width: "70%", height: "70%"}}
-                        />
-                    }></CreateLesson>
+                    <CreateLesson title={"Add lesson"}></CreateLesson>
                     {articles.map(article => (
                         <LessonListElementForTeachers
                             key={article.id}
                             id={article.id}
                             name={article.title}
                             text={article.text}
+                            date={article.createdDate}
                             watches={article.watchCount}
                             isPublic={article.isPublic}
                             onDelete={handleDeleteArticle}
@@ -104,23 +102,17 @@ function TeacherPage() {
                 </Section> :
                 <Section>
                     <h2>Your tests</h2>
-                    <CreateTest title={"Add test"} image={
-                        <img
-                            src={AddLesson}
-                            className="card-img-top"
-                            alt="..."
-                            style={{paddingLeft: "50px", width: "70%", height: "70%"}}
-                        />
-                    }></CreateTest>
-                    {articles.map(article => (
+                    <CreateTest title={"Add test"}></CreateTest>
+                    {tests.map(test => (
                         <TestListElementForTeachers
-                            key={article.id}
-                            id={article.id}
-                            name={article.title}
-                            text={article.text}
-                            watches={article.watchCount}
-                            isPublic={article.isPublic}
-                            onDelete={handleDeleteArticle}
+                            key={test.id}
+                            id={test.id}
+                            name={test.name}
+                            description={test.description}
+                            date={test.lastUpdateAt}
+                            passCount={test.passCount}
+                            isPublic={test.isPublic}
+                            onDelete={handleDeleteTest}
                         />
                     ))}
                 </Section>

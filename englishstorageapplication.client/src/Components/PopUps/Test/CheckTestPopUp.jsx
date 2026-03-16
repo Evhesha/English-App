@@ -1,16 +1,19 @@
 import "../PopUp.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import ExistTestQuestion from "@/Components/TeacherPageComp/ExistTestQuestion.jsx";
+import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPublic }) {
+function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPublic }) {
     const [isOpen, setIsOpen] = useState(false);
     const [error, setError] = useState(null);
-    const [lessonTitle, setLessonTitle] = useState(title);
-    const [lessonText, setLessonText] = useState(text);
+    const [testName, setTestName] = useState(name);
+    const [testDescription, setTestDescription] = useState(description);
     const [isPublic, setIsPublic] = useState(initialIsPublic);
+    const [testQuestions, setTestQuestions] = useState([]);
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -22,17 +25,43 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
         setIsOpen(false);
     };
 
+    useEffect(() => {
+        if (isOpen) {
+            const fetchTestQuestions = async () => {
+                try{
+                    const response = await axios.get(`https://localhost:7298/api/TestQuestion/${id}`);
+                    setTestQuestions(response.data);
+                    console.log(testQuestions);
+                    console.log(response);
+                }
+                catch(e){
+                    console.log(e);
+                }
+            }
+
+            fetchTestQuestions();
+        }
+    }, [isOpen, id]);
+
+    const handleDelete = (deletedId) => {
+        setTestQuestions(testQuestions.filter(question => question.id !== deletedId));
+    }
+
+    const handleCreate = (newQuestion) => {
+        const createdQuestion = newQuestion.data || newQuestion;
+        setTestQuestions(prevQuestions => [...prevQuestions, createdQuestion]);
+    }
+
     const handleEdit = async (event) => {
         event.preventDefault();
         try {
             const token = Cookies.get("token");
             const response = await axios.put(
-                `${API_BASE_URL}/api/Lessons/${id}`,
+                `${API_BASE_URL}/api/Tests/${id}`,
                 {
-                    title: lessonTitle,
-                    text: lessonText,
+                    name: testName,
+                    description: testDescription,
                     isPublic: isPublic,
-                    images: []
                 },{
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -41,18 +70,11 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
             );
 
             console.log(response);
-            if (response.status === 200 || response.status === 201) {
-                if (typeof onPut === "function") {
-                    onPut(response.data);
-                }
-                togglePopup();
-                window.location.reload();
-            }
+            togglePopup();
+            window.location.reload();
         } catch (error) {
             console.error(error);
-            setError(
-                error.response?.data?.message || "Ошибка при изменении урока."
-            );
+            setError(error.response?.data?.message);
         }
     };
 
@@ -77,8 +99,8 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
                                     type="text"
                                     className="form-control"
                                     id="name"
-                                    value={lessonTitle}
-                                    onChange={(e) => setLessonTitle(e.target.value)}
+                                    value={testName}
+                                    onChange={(e) => setTestName(e.target.value)}
                                 />
                             </div>
                             <div className="mb-3">
@@ -89,9 +111,28 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
                                     type="text"
                                     className="form-control"
                                     id="name"
-                                    value={lessonTitle}
-                                    onChange={(e) => setLessonTitle(e.target.value)}
+                                    value={testDescription}
+                                    onChange={(e) => setTestDescription(e.target.value)}
                                 />
+                            </div>
+                            <div className="questions-container" style={{
+                                maxHeight: '400px',
+                                overflowY: 'auto',
+                                marginBottom: '15px',
+                                paddingRight: '10px'
+                            }}>
+                                {testQuestions.map((testQuestion) => (
+                                    <ExistTestQuestion
+                                        key={testQuestion.id || `temp-${Date.now()}-${Math.random()}`}
+                                        id={testQuestion.id}
+                                        question={testQuestion.question}
+                                        correctAnswer={testQuestion.correctAnswer}
+                                        options={testQuestion.options}
+                                        type={testQuestion.type}
+                                        onDelete={handleDelete}
+                                    />
+                                ))}
+                                <TestQuestion testId={id} onCreate={handleCreate} />
                             </div>
                             <div className="mb-3 form-check">
                                 <input
@@ -102,7 +143,7 @@ function CheckTestPopUp({ title, text, onPut, userId, id, isPublic: initialIsPub
                                     onChange={(e) => setIsPublic(e.target.checked)}
                                 />
                                 <label className="form-check-label" htmlFor="isPublic">
-                                    Public lesson
+                                    Public test
                                 </label>
                             </div>
                             {error && (

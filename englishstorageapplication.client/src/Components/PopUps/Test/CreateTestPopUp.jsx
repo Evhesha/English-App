@@ -3,11 +3,10 @@ import {useState} from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import {jwtDecode} from "jwt-decode";
-import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CreateTestPopUp() {
+function CreateTestPopUp({onPost}) {
     const [isOpen, setIsOpen] = useState(false);
     const [name, setName] = useState("Title");
     const [description, setDescription] = useState("Description");
@@ -32,13 +31,12 @@ function CreateTestPopUp() {
             const userId = decodedToken.userId;
 
             const response = await axios.post(
-                `${API_BASE_URL}/api/Test`,
+                `${API_BASE_URL}/api/Tests`,
                 {
                     userId: userId,
                     name: name,
                     description: description,
                     isPublic: isPublic,
-                    images: []
                 },{
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -46,20 +44,11 @@ function CreateTestPopUp() {
                 }
             )
 
-            if (response.status === 200 || response.status === 201) {
-                if (onPost) {
-                    onPost(response.data);
-                }
-                togglePopup();
-                window.location.reload();
-            } else {
-                setError(response.data.message || "Ошибка при создании статьи.");
-            }
+            togglePopup();
+            window.location.reload();
         } catch (error) {
             if (error.response) {
-                setError(error.response.data.message || "Ошибка при создании статьи.");
-            } else {
-                setError("Ошибка при создании статьи.");
+                setError(error.response.data.message);
             }
         }
     };
@@ -77,6 +66,7 @@ function CreateTestPopUp() {
                 &times;
               </span>
                             <h3>Add test</h3>
+                            <h4>All questions add in created test by clicking "Check test" button</h4>
                             <form onSubmit={handleCreate}>
                                 <div className="mb-3">
                                     <label
@@ -115,7 +105,6 @@ function CreateTestPopUp() {
                                     >
                                         Test questions
                                     </label>
-                                    <TestQuestion></TestQuestion>
                                 </div>
                                 <div className="mb-3 form-check">
                                     <input
@@ -126,7 +115,7 @@ function CreateTestPopUp() {
                                         onChange={(e) => setIsPublic(e.target.checked)}
                                     />
                                     <label className="form-check-label" htmlFor="Public">
-                                        Public lesson
+                                        Public test
                                     </label>
                                 </div>
                                 {error && (

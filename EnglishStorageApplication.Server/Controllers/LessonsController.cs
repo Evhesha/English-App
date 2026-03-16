@@ -161,7 +161,8 @@ namespace EnglishStorageApplication.Server.Controllers
                 Id =  id,
                 Title = updateLessonDto.Title,
                 Text = updateLessonDto.Text,
-                IsPublic = updateLessonDto.IsPublic
+                IsPublic = updateLessonDto.IsPublic,
+                CreatedDate = DateTime.UtcNow
             };
             
             var articleId = await _lessonService.UpdateLesson(lesson, cancellationToken); 

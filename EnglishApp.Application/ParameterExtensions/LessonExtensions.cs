@@ -22,6 +22,11 @@ public static class LessonExtensions
         {
             query = query.Where(l => l.CreatedDate >= lessonFilter.CreatedDate);
         }
+
+        if (lessonFilter.Author != null)
+        {
+            query = query.Where(l => l.User == lessonFilter.Author);
+        }
         
         return query;
     }

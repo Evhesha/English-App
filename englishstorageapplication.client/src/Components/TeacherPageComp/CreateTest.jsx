@@ -1,10 +1,10 @@
-import CreateLessonPopUp from "@/Components/PopUps/Lesson/CreateLessonPopUp.jsx";
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
+import CreateTestPopUp from "@/Components/PopUps/Test/CreateTestPopUp.jsx";
 
-function CreateLesson({image, title, text, onCreate}) {
+function CreateTest() {
     const [userId, setUserId] = useState(null);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ function CreateLesson({image, title, text, onCreate}) {
         <div className="create-lesson-card">
             <div className="create-lesson-right-content">
                 <div className="create-lesson-actions">
-                    <CreateLessonPopUp onPost={onCreate} userId={userId} />
+                    <CreateTestPopUp/>
                     <p></p>
                 </div>
             </div>
@@ -31,4 +31,4 @@ function CreateLesson({image, title, text, onCreate}) {
     );
 }
 
-export default CreateLesson;
+export default CreateTest;

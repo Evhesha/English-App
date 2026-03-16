@@ -136,24 +136,6 @@
     color: #fff;
 }
 
-.send-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background: linear-gradient(135deg, #00b09b, #96c93d);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0; 
-}
-
-.send-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
 .empty-chat-message {
     flex: 1;
     display: flex;

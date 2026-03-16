@@ -86,6 +86,7 @@ namespace EnglishApp.DataAccess.Repositories
             lessonEntity.Title = lesson.Title;
             lessonEntity.Text = lesson.Text;
             lessonEntity.IsPublic = lesson.IsPublic;
+            lessonEntity.CreatedDate = lesson.CreatedDate;
             await _context.SaveChangesAsync(cancellationToken);
 
             return lessonEntity.Id;

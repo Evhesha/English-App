@@ -124,6 +124,7 @@ function SettingPage() {
                 <h3>{t("account-page.theme")}</h3>
                 <button
                     className="theme-toggle-btn"
+                    style={{display: "inline"}}
                     onClick={() => {
                         toggleTheme();
                     }}
@@ -131,6 +132,7 @@ function SettingPage() {
                 >
                     <i className={`bi ${darkMode ? "bi-sun" : "bi-moon"}`}></i>
                 </button>
+                {darkMode ? " Light Mode" : " Dark Mode"}
             </Section>
             <Section $darkMode={darkMode}>
                 <h3>{t("sidebar.sign-out")}</h3>

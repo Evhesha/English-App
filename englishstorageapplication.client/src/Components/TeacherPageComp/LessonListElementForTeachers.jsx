@@ -8,8 +8,14 @@ import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDelete, onUpdate }) {
+function LessonListElementForTeachers({ id, text, name, watches, date, isPublic, onDelete, onUpdate }) {
     const { t } = useTranslation();
+
+    const formatDate = (dateString) => {
+        if (!dateString) return '';
+        return new Date(dateString).toLocaleDateString('en-CA');
+    };
+    
     const handleDelete = async () => {
         const confirmDelete = window.confirm("Are you sure that you want to delete the article?");
         if (!confirmDelete) return;
@@ -45,6 +51,10 @@ function LessonListElementForTeachers({ id, text, name, watches, isPublic, onDel
                     <div className="info-item">
                         <span className="info-label">{t("teacher-page.is-public")}:</span>
                         <span className="info-value">{isPublic ? "true" : "false"}</span>
+                    </div>
+                    <div className="info-item">
+                        <span className="info-label">{t("teacher-page.last-update-date")}:</span>
+                        <span className="info-value">{formatDate(date)}</span>
                     </div>
                 </div>
             </div>
