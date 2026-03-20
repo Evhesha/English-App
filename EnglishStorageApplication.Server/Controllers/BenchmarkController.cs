@@ -4,6 +4,7 @@ using EnglishApp.Core.Models;
 using EnglishApp.Core.Params;
 using EnglishApp.Core.Params.LessonParams;
 using EnglishApp.DataAccess;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -28,12 +29,12 @@ public class BenchmarkController : Controller
         _context = context;
     }
     
+    [Authorize(Roles = "Admin")]
     [HttpGet("benchmark/cache")]
     public async Task<IActionResult> BenchmarkCacheTest(CancellationToken cancellationToken)
     {
         var pageParams = new PageParams { Page = 1, PageSize = 10 };
-
-        // Warm-up: один прогон, чтобы EF подгрузил контекст и план
+        
         await _lessonService.GetLessonsWithPageParameters(pageParams, cancellationToken);
 
         var stopwatch = new Stopwatch();
@@ -71,6 +72,7 @@ public class BenchmarkController : Controller
         return Ok(result);
     }
     
+    [Authorize(Roles = "Admin")]
     [HttpGet("nocache")]
     public async Task<IActionResult> GetLessonsWithoutCache(CancellationToken cancellationToken)
     {
@@ -92,6 +94,7 @@ public class BenchmarkController : Controller
         });
     }
     
+    [Authorize(Roles = "Admin")]
     [HttpGet("cache")]
     public async Task<IActionResult> GetLessonsWithCache(CancellationToken cancellationToken)
     {
@@ -124,6 +127,7 @@ public class BenchmarkController : Controller
         });
     }
     
+    [Authorize(Roles = "Admin")]
     [HttpPost("seed-lessons")]
     public async Task<IActionResult> SeedLessons(CancellationToken cancellationToken)
     {
@@ -148,6 +152,7 @@ public class BenchmarkController : Controller
         return Ok($"Inserted {lessons.Count} lessons");
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpDelete("seed-lessons")]
     public async Task<IActionResult> DeleteSeededLessons(CancellationToken cancellationToken)
     {

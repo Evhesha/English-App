@@ -66,9 +66,21 @@ namespace EnglishApp.DataAccess.Repositories
             UserStudyResult userStudyResult,
             CancellationToken cancellationToken)
         {
-            _context.Add(userStudyResult);
-            await _context.SaveChangesAsync(cancellationToken);
+            var existingResult = await _context.UsersStudyResults
+                .FirstOrDefaultAsync(r => r.TestId == userStudyResult.TestId 
+                                          && r.UserId == userStudyResult.UserId, 
+                    cancellationToken);
 
+            if (existingResult != null)
+            {
+                _context.Entry(existingResult).CurrentValues.SetValues(userStudyResult);
+            }
+            else
+            {
+                _context.UsersStudyResults.Add(userStudyResult);
+            }
+    
+            await _context.SaveChangesAsync(cancellationToken);
             return userStudyResult.Id;
         }
 

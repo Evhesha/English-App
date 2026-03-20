@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
-import "./LessonsListElement.css"
+import { Link } from "react-router-dom";
+import "./LessonsListElement.css";
 import { useTranslation } from "react-i18next";
 
-function TestListElementForUsers({ id, name, description, passCount, author, createdDate }) {
+function TestListElementForUsers({ id, name, description, passCount, author, createdDate, to }) {
     const { t } = useTranslation();
 
     const formatDate = (dateString) => {
@@ -18,30 +18,42 @@ function TestListElementForUsers({ id, name, description, passCount, author, cre
                 <h3 className="lesson-title">{name}</h3>
                 <div className="lesson-info">
                     <div className="info-item">
-                        <span className="info-label">{t("online-lessons.pass-count")}:</span>
+                        <span className="info-label">{t("online-tests.pass-count", "Pass count")}:</span>
                         <span className="info-value">{passCount}</span>
                     </div>
-                    <div className="info-item">
-                        <span className="info-label">{t("online-lessons.author")}:</span>
-                        <span className="info-value">{author}</span>
-                    </div>
-                    <div className="info-item">
-                        <span className="info-value">{description}</span>
-                    </div>
-                    <div className="info-item date-item">
-                        <span className="info-label">{t("online-lessons.created-date")}:</span>
-                        <span className="info-value">
-                            {createdDate && (
+                    {author && (
+                        <div className="info-item">
+                            <span className="info-label">{t("online-lessons.author")}:</span>
+                            <span className="info-value">{author}</span>
+                        </div>
+                    )}
+                    {description && (
+                        <div className="info-item">
+                            <span className="info-value">{description}</span>
+                        </div>
+                    )}
+                    {createdDate && (
+                        <div className="info-item date-item">
+                            <span className="info-label">{t("online-lessons.created-date")}:</span>
+                            <span className="info-value">
                                 <small className="text-muted">
                                     {formatDate(createdDate)}
                                 </small>
-                            )}
-                        </span>
-                    </div>
+                            </span>
+                        </div>
+                    )}
                 </div>
             </div>
             <div className="lesson-actions">
-                <button className="btn-primary">Pass the test</button>
+                {to ? (
+                    <Link to={to} className="btn-primary">
+                        {t("online-tests.pass-test", "Pass the test")}
+                    </Link>
+                ) : (
+                    <button className="btn-primary">
+                        {t("online-tests.pass-test", "Pass the test")}
+                    </button>
+                )}
             </div>
         </li>
     );
@@ -50,9 +62,11 @@ function TestListElementForUsers({ id, name, description, passCount, author, cre
 TestListElementForUsers.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    text: PropTypes.string,
-    watchCount: PropTypes.number,
-    author: PropTypes.string
+    description: PropTypes.string,
+    passCount: PropTypes.number,
+    author: PropTypes.string,
+    createdDate: PropTypes.string,
+    to: PropTypes.string
 };
 
 export default TestListElementForUsers;
