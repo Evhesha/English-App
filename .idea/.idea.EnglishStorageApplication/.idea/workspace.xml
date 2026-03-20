@@ -14,11 +14,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Fix: corrected admin's pop up for correcting role with dropdown.">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: search lessons by author name in online lessons page">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/LessonFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/LessonFilter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/CreateLessonImageDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/LessonImageDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/LessonImage/ILessonImageService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/LessonImage/ILessonsImagesRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonImageExceptions/LessonImageWasntFoundException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/LessonImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/LessonImageConfiguration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsImagesRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/OnlineTestPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/OnlineTestPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +100,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c9bf75a927ea72a46ae68f11cbb9fb42e5fa16518e6464fdbc938ce3d913d6a/EventSource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db7395f4add94e6d10e515b3e55373f2821f8323de7dc8e314d78feefacf5584/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5ace92664429b8b34b68b587316fb211811b58aeb53422b43cecca2ad2bdaf3/AsyncTaskMethodBuilderT.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/CreateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/ListLessonsDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/UpdateLessonDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/CreateLessonImageDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/LessonImageDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LikeDTOs/AddLikeDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LikeDTOs/LikeDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/CreateTestDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -109,13 +125,10 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyPercentDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/UserStudyResultDTOs/UserStudyResultDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Application/ParameterExtensions/LessonExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/TestExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/UserExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/obj/EnglishApp.Application.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Core/Abstractions/Test/ITestsRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonExceptions/NotFoundLessonException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonImageExceptions/LessonImageWasntFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LikeExceptions/LessonHadAlreadyLikedException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/LikeExceptions/LikeWasNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Exceptions/UserCardExceptions/NotFoundUserCardException.cs" root0="FORCE_HIGHLIGHTING" />
@@ -124,16 +137,12 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Models/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Models/TestQuestion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/LessonParams/LessonFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.Core/Params/LessonParams/LessonFilter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/TestParams/TestFilter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Core/Params/UserParams/UserFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/LessonImageConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/TestConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/TestQuestionConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsImagesRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TestsQuestionsRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TestsRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishApp.DataAccess/Repositories/TestsRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/AuthControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LessonControllerTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Tests/Auth/Controllers/LikesControllerTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -166,17 +175,16 @@
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Chat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.AiServer/Models/Message.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestQuestionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/DistributedCacheExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/LoggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Middleware/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/englishstorageapplication.client/public/locales/en/translation.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/englishstorageapplication.client/public/locales/ru/translation.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="file://$USER_HOME$/AppData/Local/Temp/whats-new-dir/whats-new.http" environment="test" />
@@ -197,7 +205,9 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
@@ -440,6 +450,12 @@
       <workItem from="1772371776030" duration="62000" />
       <workItem from="1772450119544" duration="3765000" />
       <workItem from="1773662931445" duration="1442000" />
+      <workItem from="1773737193225" duration="5511000" />
+      <workItem from="1773750323053" duration="918000" />
+      <workItem from="1773832914155" duration="3000" />
+      <workItem from="1773943020815" duration="1900000" />
+      <workItem from="1773945095441" duration="1081000" />
+      <workItem from="1774028356800" duration="921000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />

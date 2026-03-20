@@ -52,6 +52,7 @@ import ByTopicTestsPage from "@/pages/Tests/Pages/ByTopicTestsPage.jsx";
 import DynamicTest from "@/pages/Tests/Components/DynamicTest.jsx";
 import DynamicTopicTest from "@/pages/Tests/Components/DynamicTopicTest.jsx";
 import DynamicTimeTest from "@/pages/Tests/Components/DynamicTimeTest.jsx";
+import DynamicOnlineTest from "@/pages/Tests/Components/DynamicOnlineTest.jsx";
 
 function RoutesList() {
   return (
@@ -112,6 +113,7 @@ function RoutesList() {
           <Route path="/test/level/:level" element={<DynamicTest />} />
           <Route path="/test/topic/:topic" element={<DynamicTopicTest />} />
           <Route path="/test/time/:time" element={<DynamicTimeTest />} />
+          <Route path="/test/online/:id" element={<DynamicOnlineTest />} />
           <Route path="/:level" element={<DynamicTest />} />
         </Routes>
       </>

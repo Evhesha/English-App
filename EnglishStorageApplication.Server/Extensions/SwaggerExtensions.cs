@@ -13,8 +13,7 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
                     Title = "EnglishStorage API",
                     Version = "v1"
                 });
-
-                // 🔑 JWT схема
+                
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
@@ -23,8 +22,7 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
                     Type = SecuritySchemeType.ApiKey,
                     Scheme = "Bearer"
                 });
-
-                // 🔒 Требование безопасности
+                
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
