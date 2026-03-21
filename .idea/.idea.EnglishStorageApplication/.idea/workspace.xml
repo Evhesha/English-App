@@ -14,29 +14,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: search lessons by author name in online lessons page">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: now users can pass the tests, tests are updating when the test result exists">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/LessonImageService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonDTOs/LessonDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/CreateLessonImageDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/LessonImageDTOs/LessonImageDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/LessonImage/ILessonImageService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/LessonImage/ILessonsImagesRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Exceptions/LessonImageExceptions/LessonImageWasntFoundException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Models/Lesson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Models/LessonImage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Configurations/LessonImageConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/LessonsImagesRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/UsersStudyResultsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/BenchmarkController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/LessonsImagesController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/public/locales/ru/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/RoutesList/RoutesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/TeacherPageComp/TestListElementForUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/AppServices/TestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/AppServices/TestService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/TestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/TestDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/TestExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Application/ParameterExtensions/TestExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Abstractions/Test/ITestsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.Core/Params/TestParams/TestFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Core/Params/TestParams/TestFilter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TestsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.DataAccess/Repositories/TestsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/TestsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/OnlineTestPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/OnlineTestPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +94,8 @@
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LikeDTOs/AddLikeDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/LikeDTOs/LikeDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/CreateTestDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/ListTestsDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/PagedTestsResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/TestDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/TestDTOs/UpdateTestDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishApp.Application/DTOs/TestQuestionDTOs/CreateTestQuestionDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -180,9 +169,7 @@
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/DistributedCacheExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/LoggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/Extensions/ServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/Extensions/SwaggerExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnglishStorageApplication.Server/Middleware/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/englishstorageapplication.client/package-lock.json" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -450,12 +437,7 @@
       <workItem from="1772371776030" duration="62000" />
       <workItem from="1772450119544" duration="3765000" />
       <workItem from="1773662931445" duration="1442000" />
-      <workItem from="1773737193225" duration="5511000" />
-      <workItem from="1773750323053" duration="918000" />
-      <workItem from="1773832914155" duration="3000" />
-      <workItem from="1773943020815" duration="1900000" />
-      <workItem from="1773945095441" duration="1081000" />
-      <workItem from="1774028356800" duration="921000" />
+      <workItem from="1774080426895" duration="2939000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />

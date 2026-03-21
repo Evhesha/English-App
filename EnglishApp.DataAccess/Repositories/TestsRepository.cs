@@ -14,7 +14,7 @@ public class TestsRepository : ITestsRepository
         _context = context;
     }
     
-    public IQueryable<Test> GetLessonsQueryable()
+    public IQueryable<Test> GetTestsQueryable()
     {
         return _context.Tests
             .Include(t => t.User)

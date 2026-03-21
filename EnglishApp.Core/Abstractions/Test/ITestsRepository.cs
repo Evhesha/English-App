@@ -2,7 +2,7 @@ namespace EnglishApp.Core.Abstractions.Test;
 
 public interface ITestsRepository
 {
-    IQueryable<Models.Test> GetLessonsQueryable();
+    IQueryable<Models.Test> GetTestsQueryable();
     Task<List<Models.Test>> GetAllTestsAsync(CancellationToken cancellationToken);
     Task<List<Models.Test>> GetUsersTestsAsync(Guid userId, CancellationToken cancellationToken);
     Task<Models.Test?> GetTestByIdAsync(Guid id, CancellationToken cancellationToken);

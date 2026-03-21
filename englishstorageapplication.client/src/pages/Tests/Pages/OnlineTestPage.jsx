@@ -37,6 +37,7 @@ function OnlineTestPage() {
                 setIsLoading(true);
                 const response = await axios.get(`${API_BASE_URL}/api/Tests`);
                 setTests(Array.isArray(response.data) ? response.data : []);
+                console.log(response.data);
                 setHasError(false);
             } catch (error) {
                 console.error("Ошибка при получении тестов:", error);
@@ -258,6 +259,7 @@ function OnlineTestPage() {
                                 key={test.id}
                                 id={test.id}
                                 name={test.name}
+                                author={test.author}
                                 description={test.description}
                                 passCount={test.passCount}
                                 createdDate={test.lastUpdateAt}

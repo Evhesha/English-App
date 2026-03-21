@@ -19,9 +19,10 @@ public static class TestExtensions
             query = query.Where(l => l.Name.ToLower().StartsWith(titleLower));
         }
 
-        if (testFilter.Author != null)
+        if (!string.IsNullOrEmpty(testFilter.AuthorName))
         {
-            query = query.Where(l => l.User == testFilter.Author);
+            var authorNameLower = testFilter.AuthorName.ToLower();
+            query = query.Where(l => l.User.Name.ToLower().StartsWith(authorNameLower));
         }
         
         return query;
