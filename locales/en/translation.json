@@ -76,7 +76,8 @@
     "check-lessons": "Check lessons",
     "delete": "Delete",
     "pass-count": "Pass count",
-    "last-update-date": "last update date"
+    "last-update-date": "last update date",
+    "description" : "Description"
   },
   "aboutapp": {
     "about-program": "About Program",
@@ -119,6 +120,20 @@
     "descending": "Descending",
     "views": "Views",
     "author": "Author"
+  },
+  "online-tests": {
+    "online-tests": "Online tests",
+    "filters-sorting": "Filters and sorting",
+    "filter-title": "Filter by title",
+    "find-tests": "Find tests",
+    "sort-by": "Sort by",
+    "pass-count": "Pass count",
+    "updated-date": "Updated date",
+    "sort-direction": "Sort direction",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "pass-test": "Pass the test",
+    "empty": "No tests found."
   },
   "chat": {
     "sendButton": "Send",

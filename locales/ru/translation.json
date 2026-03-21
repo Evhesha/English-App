@@ -76,7 +76,8 @@
     "check-lessons": "Просмотреть урок",
     "delete": "Удалить",
     "pass-count": "Количество прохождений",
-    "last-update-date": "Последняя дата обновления"
+    "last-update-date": "Последняя дата обновления",
+    "description" : "Описание"
   },
   "aboutapp": {
     "about-program": "О программе",
@@ -119,6 +120,20 @@
     "descending": "Убывание",
     "views": "Просмотры",
     "author": "Автор"
+  },
+  "online-tests": {
+    "online-tests": "Онлайн тесты",
+    "filters-sorting": "Фильтрация и сортировка",
+    "filter-title": "Фильтр по названию",
+    "find-tests": "Найти тесты",
+    "sort-by": "Сортировать по",
+    "pass-count": "Количество прохождений",
+    "updated-date": "Дата обновления",
+    "sort-direction": "Направление сортировки",
+    "ascending": "Возрастание",
+    "descending": "Убывание",
+    "pass-test": "Пройти тест",
+    "empty": "Тестов не найдено."
   },
   "chat": {
     "sendButton": "Отправить",
