@@ -18,4 +18,8 @@ public class TestDto
     
     [Required]
     public DateTime LastUpdateAt { get; set; }
+    
+    public int PassCount { get; set; }
+    
+    public string AuthorName { get; set; }
 }

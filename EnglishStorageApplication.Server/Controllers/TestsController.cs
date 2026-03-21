@@ -1,6 +1,8 @@
 using EnglishApp.Application.DTOs.TestDTOs;
 using EnglishApp.Core.Abstractions.Test;
 using EnglishApp.Core.Models;
+using EnglishApp.Core.Params.LessonParams;
+using EnglishApp.Core.Params.LessonParams.TestParams;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +23,36 @@ public class TestsController : ControllerBase
     public async Task<ActionResult<List<TestDto>>> GetTests(CancellationToken cancellationToken)
     {
         return Ok(await _testService.GetAllTets(cancellationToken));
+    }
+
+    [HttpGet("/params")]
+    public async Task<ActionResult<List<PagedTestsResponse>>> GetAllTestsWithParams(
+        [FromQuery] TestFilter testFilter,
+        [FromQuery] SortParams sortParams,
+        [FromQuery] PageParams pageParams,
+        CancellationToken cancellationToken)
+    {
+        var (tests, totalCount) = await 
+            _testService.GetTestsWithParameters(testFilter, sortParams, pageParams, cancellationToken);
+
+        var testsDto = tests.Select(test => new ListTestsDto()
+            {
+                Id = test.Id,
+                Name = test.Name,
+                Description = test.Description,
+                LastUpdateAt = test.LastUpdateAt,
+                PassCount = test.PassCount,
+                //AuthorName = test.
+            }
+        ).ToList();
+
+        var response = new PagedTestsResponse
+        {
+            Tests = testsDto,
+            TotalCount = totalCount,
+        };
+        
+        return Ok(response);
     }
 
     [HttpGet("{userId}")]
