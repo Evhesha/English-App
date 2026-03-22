@@ -22,6 +22,8 @@ function OnlineTestPage() {
     const [sortBy, setSortBy] = useState("");
     const [sortDirection, setSortDirection] = useState("");
     const [authorized, setAuthorized] = useState(false);
+    const [author, setAuthor] = useState("");
+    const [totalPages, setTotalPages] = useState(1);
 
     useEffect(() => {
         const token = Cookies.get("token");
@@ -31,13 +33,38 @@ function OnlineTestPage() {
             return;
         }
         setAuthorized(true);
+    }, []);
+
+    useEffect(() => {
+        if (!authorized) return;
 
         const fetchTests = async () => {
             try {
                 setIsLoading(true);
-                const response = await axios.get(`${API_BASE_URL}/api/Tests`);
-                setTests(Array.isArray(response.data) ? response.data : []);
-                console.log(response.data);
+                const params = {
+                    Page: currentPage,
+                    PageSize: pageSize,
+                    AuthorName: author || undefined,
+                    Title: appliedFiltrationText || undefined,
+                    OrderBy: sortBy || undefined,
+                    Direction: sortDirection || undefined
+                };
+                const response = await axios.get(`${API_BASE_URL}/api/Tests/params`, { params });
+
+                console.log("Response data:", response.data);
+
+                // Проверяем структуру ответа
+                if (response.data && Array.isArray(response.data.tests)) {
+                    setTests(response.data.tests);
+                    setTotalPages(Math.ceil(response.data.totalCount / pageSize));
+                } else if (Array.isArray(response.data)) {
+                    setTests(response.data);
+                    setTotalPages(Math.ceil(response.data.length / pageSize));
+                } else {
+                    setTests([]);
+                    setTotalPages(1);
+                }
+
                 setHasError(false);
             } catch (error) {
                 console.error("Ошибка при получении тестов:", error);
@@ -48,53 +75,7 @@ function OnlineTestPage() {
         };
 
         fetchTests();
-    }, []);
-
-    const filteredTests = useMemo(() => {
-        const normalizedFilter = appliedFiltrationText.trim().toLowerCase();
-        let data = tests;
-
-        if (data.some((test) => typeof test.isPublic === "boolean")) {
-            data = data.filter((test) => test.isPublic);
-        }
-
-        if (normalizedFilter) {
-            data = data.filter((test) =>
-                (test.name || "").toLowerCase().includes(normalizedFilter)
-            );
-        }
-
-        if (sortBy) {
-            data = [...data].sort((a, b) => {
-                if (sortBy === "PassCount") {
-                    return (a.passCount || 0) - (b.passCount || 0);
-                }
-
-                const aDate = new Date(a.lastUpdateAt || 0).getTime();
-                const bDate = new Date(b.lastUpdateAt || 0).getTime();
-                return aDate - bDate;
-            });
-        }
-
-        if (sortDirection === "descending") {
-            data = [...data].reverse();
-        }
-
-        return data;
-    }, [tests, appliedFiltrationText, sortBy, sortDirection]);
-
-    const totalPages = Math.max(1, Math.ceil(filteredTests.length / pageSize));
-
-    useEffect(() => {
-        if (currentPage > totalPages) {
-            setCurrentPage(1);
-        }
-    }, [currentPage, totalPages]);
-
-    const pagedTests = useMemo(() => {
-        const startIndex = (currentPage - 1) * pageSize;
-        return filteredTests.slice(startIndex, startIndex + pageSize);
-    }, [filteredTests, currentPage, pageSize]);
+    }, [authorized, currentPage, pageSize, author, appliedFiltrationText, sortBy, sortDirection]);
 
     const handleSearch = () => {
         setAppliedFiltrationText(filtrationText);
@@ -140,6 +121,19 @@ function OnlineTestPage() {
                                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                             />
                             <label htmlFor="filterInput">{t("online-tests.filter-title", "Filter by title")}</label>
+                        </div>
+                    </div>
+                    <div className="col-md-8">
+                        <div className="form-floating">
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="filterInput"
+                                value={author}
+                                onChange={(e) => setAuthor(e.target.value)}
+                                onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                            />
+                            <label htmlFor="filterInput">{t("online-lessons.author")}</label>
                         </div>
                     </div>
                     <div className="col-md-4">
@@ -247,19 +241,19 @@ function OnlineTestPage() {
                 <div className="alert alert-danger text-center">
                     Failed to load tests. Please try again later.
                 </div>
-            ) : filteredTests.length === 0 ? (
+            ) : tests.length === 0 ? (
                 <div className="alert alert-info text-center">
                     {t("online-tests.empty", "No tests found.")}
                 </div>
             ) : (
                 <>
                     <ul className="lessons-list list-group">
-                        {pagedTests.map((test) => (
+                        {tests.map((test) => (
                             <TestListElementForUsers
                                 key={test.id}
                                 id={test.id}
                                 name={test.name}
-                                author={test.author}
+                                author={test.authorName}
                                 description={test.description}
                                 passCount={test.passCount}
                                 createdDate={test.lastUpdateAt}
