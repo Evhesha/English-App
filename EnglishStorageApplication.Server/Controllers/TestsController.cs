@@ -25,7 +25,7 @@ public class TestsController : ControllerBase
         return Ok(await _testService.GetAllTets(cancellationToken));
     }
 
-    [HttpGet("/params")]
+    [HttpGet("params")]
     public async Task<ActionResult<List<PagedTestsResponse>>> GetAllTestsWithParams(
         [FromQuery] TestFilter testFilter,
         [FromQuery] SortParams sortParams,
@@ -42,7 +42,7 @@ public class TestsController : ControllerBase
                 Description = test.Description,
                 LastUpdateAt = test.LastUpdateAt,
                 PassCount = test.PassCount,
-                //AuthorName = test.
+                AuthorName = test.User.Name
             }
         ).ToList();
 
