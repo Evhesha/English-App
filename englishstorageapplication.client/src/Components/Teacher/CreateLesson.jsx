@@ -2,9 +2,9 @@ import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
-import CreateTestPopUp from "@/Components/PopUps/Test/CreateTestPopUp.jsx";
+import { CreateLessonPopUp } from "@/Components/Modals";
 
-function CreateTest() {
+function CreateLesson({onCreate}) {
     const [userId, setUserId] = useState(null);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ function CreateTest() {
         <div className="create-lesson-card">
             <div className="create-lesson-right-content">
                 <div className="create-lesson-actions">
-                    <CreateTestPopUp/>
+                    <CreateLessonPopUp onPost={onCreate} userId={userId} />
                     <p></p>
                 </div>
             </div>
@@ -31,4 +31,4 @@ function CreateTest() {
     );
 }
 
-export default CreateTest;
+export default CreateLesson;

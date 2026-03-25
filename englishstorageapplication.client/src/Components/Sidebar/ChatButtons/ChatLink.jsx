@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Trash } from "react-bootstrap-icons";
 import axios from "axios";
-import ChangeChatTitlePopUp from "@/Components/PopUps/Chat/ChangeChatTitlePopUp.jsx";
+import { ChangeChatTitlePopUp } from "@/Components/Modals";
 
 function ChatLink({name, id, onDelete, onUpdate}){
     const handleDelete = async () => {

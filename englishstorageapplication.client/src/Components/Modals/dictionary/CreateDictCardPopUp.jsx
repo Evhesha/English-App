@@ -1,13 +1,13 @@
-import "../PopUp.css";
+import "../modal.css";
 import {useState} from "react";
 import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CheckDictCardPopUp({title, cardText, userId, id}) {
+function CreateDictCardPopUp({userId}) {
     const [isOpen, setIsOpen] = useState(false);
-    const [name, setName] = useState(title);
-    const [text, setText] = useState(cardText);
+    const [name, setName] = useState("Name");
+    const [text, setText] = useState("");
     const [error, setError] = useState(null);
 
     const togglePopup = () => {
@@ -20,32 +20,27 @@ function CheckDictCardPopUp({title, cardText, userId, id}) {
         setIsOpen(false);
     };
 
-    const handleEdit = async (event) => {
+    const handleCreate = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.put(
-                `${API_BASE_URL}/api/UsersCards/${id}`,
+            const response = await axios.post(
+                `${API_BASE_URL}/api/UsersCards`,
                 {
                     userId: userId,
                     nameOfUsersCard: name,
                     userCardData: text,
                 }
             );
-
-            console.log(response);
             window.location.reload();
         } catch (error) {
-            console.error(error);
-            setError(
-                error.response?.data?.message || "Ошибка при изменении карточки."
-            );
+            setError("Ошибка при создании карточки.");
         }
     };
 
     return (
         <div>
             <button className="btn btn-primary" onClick={togglePopup}>
-                Check card <i className="bi bi-cloud-check"></i>
+                Create card <i className="bi bi-plus-circle"></i>
             </button>
             {isOpen && (
                 <div className="popup">
@@ -53,8 +48,8 @@ function CheckDictCardPopUp({title, cardText, userId, id}) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3>Check card</h3>
-                        <form onSubmit={handleEdit}>
+                        <h3>Add card</h3>
+                        <form onSubmit={handleCreate}>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label">
                                     Card name
@@ -98,4 +93,4 @@ function CheckDictCardPopUp({title, cardText, userId, id}) {
     );
 }
 
-export default CheckDictCardPopUp;
+export default CreateDictCardPopUp;

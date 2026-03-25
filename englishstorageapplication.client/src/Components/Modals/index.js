@@ -1,0 +1,10 @@
+export { default as ChangeChatTitlePopUp } from "./chat/ChangeChatTitlePopUp.jsx";
+export { default as CheckDictCardPopUp } from "./dictionary/CheckDictCardPopUp.jsx";
+export { default as CreateDictCardPopUp } from "./dictionary/CreateDictCardPopUp.jsx";
+export { default as CheckLessonPopUp } from "./lessons/CheckLessonPopUp.jsx";
+export { default as CreateLessonPopUp } from "./lessons/CreateLessonPopUp.jsx";
+export { default as CheckTestPopUp } from "./tests/CheckTestPopUp.jsx";
+export { default as CreateTestPopUp } from "./tests/CreateTestPopUp.jsx";
+export { default as ChangeUserRolePopUp } from "./users/ChangeUserRolePopUp.jsx";
+export { default as CreateUserPopUp } from "./users/CreateUserPopUp.jsx";
+export { default as EditUserPopUp } from "./users/EditUserPopUp.jsx";

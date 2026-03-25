@@ -1,7 +1,7 @@
 import axios from "axios";
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CheckLessonPopUp from "@/Components/PopUps/Lesson/CheckLessonPopUp.jsx";
+import { CheckLessonPopUp } from "@/Components/Modals";
 import "./LessonsListElement.css"
 import {useTranslation} from "react-i18next";
 import Cookies from "js-cookie";

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./LessonsListElement.css"
 import {useTranslation} from "react-i18next";
 import Cookies from "js-cookie";
-import CheckTestPopUp from "@/Components/PopUps/Test/CheckTestPopUp.jsx";
+import { CheckTestPopUp } from "@/Components/Modals";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 

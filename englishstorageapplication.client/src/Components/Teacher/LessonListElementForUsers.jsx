@@ -1,8 +1,8 @@
-﻿import PropTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ReadLessonPopUp from "@/Components/PopUps/Lesson/ReadLessonPopUp.jsx";
-import "./LessonsListElement.css"
+﻿import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useTranslation } from "react-i18next";
+import "./LessonsListElement.css";
 
 function LessonListElementForUsers({ id, name, text, watchCount, author, createdDate }) {
     const { t } = useTranslation();
@@ -38,7 +38,9 @@ function LessonListElementForUsers({ id, name, text, watchCount, author, created
                 </div>
             </div>
             <div className="lesson-actions">
-                <ReadLessonPopUp id={id} title={name} text={text} />
+                <Link to={`/lesson/${id}`} className="btn btn-primary">
+                    Read <i className="bi bi-book"></i>
+                </Link>
             </div>
         </li>
     );
