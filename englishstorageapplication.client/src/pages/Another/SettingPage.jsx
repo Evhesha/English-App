@@ -3,7 +3,7 @@ import {useState} from "react";
 import styled from "styled-components";
 import Cookies from "js-cookie";
 import {useNavigate} from "react-router-dom";
-import {useTheme} from "@/Components/ThemeProvider/ThemeProvider.jsx";
+import { useTheme } from "@/app/providers/ThemeProvider.jsx";
 import axios from "axios";
 import {jwtDecode} from "jwt-decode";
 const API_BASE_URL = import.meta.env.VITE_API_URL;

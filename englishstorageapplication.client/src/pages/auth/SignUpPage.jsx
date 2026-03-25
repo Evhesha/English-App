@@ -14,7 +14,7 @@ import failedToSignUp from "@/Components/Auth/FailedToSignUp.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function SignUp() {
+function SignUpPage() {
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -122,4 +122,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default SignUpPage;

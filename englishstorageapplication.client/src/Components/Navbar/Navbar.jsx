@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useTheme } from "../ThemeProvider/ThemeProvider";
+import { useTheme } from "@/app/providers/ThemeProvider.jsx";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
     const [isAdmin, setIsAdmin] = useState(false);

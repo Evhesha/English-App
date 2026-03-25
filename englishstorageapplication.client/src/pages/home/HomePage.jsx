@@ -1,12 +1,12 @@
-import "../Home/Home.css";
+import { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "../ThemeProvider/ThemeProvider";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "@/app/providers/ThemeProvider.jsx";
 import NewChatButton from "@/Components/Sidebar/ChatButtons/NewChatButton.jsx";
-import { useState } from "react";
+import "./HomePage.css";
 
-function Home() {
+function HomePage() {
     const { t } = useTranslation();
     const { darkMode } = useTheme();
     const navigate = useNavigate();
@@ -159,4 +159,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default HomePage;
