@@ -16,7 +16,7 @@ import failedToLogin from "@/Components/Auth/FailedToLogin.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function Login() {
+function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const darkMode = useDarkMode();
@@ -84,4 +84,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default LoginPage;

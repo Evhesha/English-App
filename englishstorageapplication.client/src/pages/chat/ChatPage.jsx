@@ -1,14 +1,14 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Form, Spinner, Alert } from "react-bootstrap";
 import { Send, Clock, PersonFill, Robot, Magic } from "react-bootstrap-icons";
 import { useParams } from "react-router-dom";
 import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "../ThemeProvider/ThemeProvider";
-import "./ChatContainer.css";
-import removeMd from 'remove-markdown';
+import removeMd from "remove-markdown";
+import { useTheme } from "@/app/providers/ThemeProvider.jsx";
+import "./ChatPage.css";
 
-const ChatContainer = () => {
+const ChatPage = () => {
     const { chatId } = useParams();
     const { t } = useTranslation();
     const { darkMode } = useTheme();
@@ -214,4 +214,4 @@ const ChatContainer = () => {
     );
 };
 
-export default ChatContainer;
+export default ChatPage;
