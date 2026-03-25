@@ -223,28 +223,6 @@ body {
     color: #ffffff;
 }
 
-.dark-theme .navbar .btn-apple.btn-signup {
-    background: #007AFF !important;
-    color: white !important;
-    border: 1px solid #007AFF !important;
-}
-
-.dark-theme .navbar .btn-apple.btn-signup:hover {
-    background: #0066dd !important;
-    color: white !important;
-}
-
-.dark-theme .navbar .btn-apple.btn-login {
-    background: transparent !important;
-    color: #007AFF !important;
-    border: 1px solid #007AFF !important;
-}
-
-.dark-theme .navbar .btn-apple.btn-login:hover {
-    background: #007AFF !important;
-    color: white !important;
-}
-
 /* САЙДБАР В ТЕМНОЙ ТЕМЕ - БЕЛЫЙ ТЕКСТ */
 .dark-theme .sidebar,
 .dark-theme .sidebar .btn-toggle,

@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import {
-  AboutApp,
-  AdminPanel,
+  AboutPage,
+  AdminPage,
   ByLevelTestPage,
   ByTimeTestsPage,
   ByTopicTestsPage,
@@ -33,7 +33,7 @@ import {
   PresentSimple,
   ProfilePage,
   Programming,
-  SettingPage,
+  SettingsPage,
   Shopping,
   SignUpPage,
   Sport,
@@ -49,14 +49,14 @@ function AppRouter() {
     <Routes>
       <Route path="/" element={<Navigate to="/home" replace />} />
 
-      <Route path="/about-app" element={<AboutApp />} />
+      <Route path="/about-app" element={<AboutPage />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/signUp" element={<SignUpPage />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/admin" element={<AdminPanel />} />
+      <Route path="/admin" element={<AdminPage />} />
       <Route path="/teacher" element={<TeacherPage />} />
       <Route path="/profile-page" element={<ProfilePage />} />
-      <Route path="/setting-page" element={<SettingPage />} />
+      <Route path="/setting-page" element={<SettingsPage />} />
 
       <Route path="/chat/:chatId" element={<ChatPage />} />
 

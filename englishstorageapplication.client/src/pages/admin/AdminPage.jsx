@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import ListGroupElement from "../../Components/ListGroupElement/ListGroupElement";
 import ToLinkButton from "../../Components/Buttons/ToLinkButton/ToLinkButton";
 import CreateUserPopUp from "../../Components/PopUps/User/CreateUserPopUp.jsx";
-import {useTranslation} from "react-i18next";
-import {toast, ToastContainer} from 'react-toastify';
+import { useTranslation } from "react-i18next";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {Dropdown} from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function AdminPanel() {
+function AdminPage() {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
@@ -180,4 +180,4 @@ function AdminPanel() {
     );
 }
 
-export default AdminPanel;
+export default AdminPage;

@@ -1,14 +1,13 @@
-import profilePicture from "../ProfilePage/blank-profile-picture.png";
+import { useEffect, useState } from "react";
+import { Form, InputGroup, Button } from "react-bootstrap";
+import { Check } from "react-bootstrap-icons";
 import "./ProfilePage.css";
 import axios from "axios";
-import {jwtDecode} from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
-import React, {useState, useEffect} from "react";
 import EditUserPopUp from "../../Components/PopUps/User/EditUserPopUp.jsx";
-import {useTranslation} from "react-i18next";
-import {Check} from "react-bootstrap-icons";
-
-import { Form, InputGroup, Button } from 'react-bootstrap';
+import { useTranslation } from "react-i18next";
+import profilePicture from "./blank-profile-picture.png";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
