@@ -1,11 +1,12 @@
-import {useTranslation} from "react-i18next";
-import {useState} from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import Cookies from "js-cookie";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/app/providers/ThemeProvider.jsx";
 import axios from "axios";
-import {jwtDecode} from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
+
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 const Container = styled.div`
@@ -63,11 +64,11 @@ const LanguageButton = styled.button`
     }
 `;
 
-function SettingPage() {
-    const {t, i18n} = useTranslation();
+function SettingsPage() {
+    const { t, i18n } = useTranslation();
     const [currentLang, setCurrentLang] = useState(i18n.language);
     const navigate = useNavigate();
-    const {darkMode, toggleTheme} = useTheme();
+    const { darkMode, toggleTheme } = useTheme();
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
@@ -147,4 +148,4 @@ function SettingPage() {
         </Container>);
 }
 
-export default SettingPage;
+export default SettingsPage;

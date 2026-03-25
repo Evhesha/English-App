@@ -1,9 +1,9 @@
-import Authors from "../../assets/Authors.jpg"
-import About from "../../assets/about.png"
-import './AboutApp.css'
+import Authors from "../../assets/Authors.jpg";
+import About from "../../assets/about.png";
 import { useTranslation } from "react-i18next";
+import "./AboutPage.css";
 
-function AboutApp() {
+function AboutPage() {
   const { t } = useTranslation();
   return (
     <div className="about-container">
@@ -50,4 +50,4 @@ function AboutApp() {
   );
 }
 
-export default AboutApp;
+export default AboutPage;

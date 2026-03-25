@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #007AFF;   
-    --secondary-color: #5856D6;
+    --navbar-accent: #007aff;
+    --navbar-accent-hover: #0066dd;
     --text-color: #000000;
     --bg-color: rgba(255, 255, 255, 0.85);
     --glass-effect: rgba(255, 255, 255, 0.8);
@@ -57,7 +57,7 @@
 
 .nav-link:hover {
     background-color: rgba(0, 122, 255, 0.12);
-    color: var(--primary-color);
+    color: var(--navbar-accent);
 }
 
 
@@ -90,24 +90,25 @@
 
 .btn-login {
     background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    color: var(--navbar-accent);
+    border: 1px solid var(--navbar-accent);
 }
 
 .btn-login:hover {
-    background: var(--primary-color);
+    background: var(--navbar-accent);
     color: white;
     transform: scale(1.03);
 }
 
 
 .btn-signup {
-    background: var(--primary-color);
+    background: var(--navbar-accent);
     color: white;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--navbar-accent);
 }
 
 .btn-signup:hover {
+    background: var(--navbar-accent-hover);
     transform: scale(1.03);
 }
 
@@ -193,7 +194,7 @@
 
 .dark-theme .nav-link:hover {
     background-color: rgba(0, 122, 255, 0.15);
-    color: var(--primary-color);
+    color: var(--navbar-accent);
 }
 
 .dark-theme .toggle-btn:hover,
@@ -205,23 +206,23 @@
 
 .dark-theme .btn-login {
     background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    color: var(--navbar-accent);
+    border: 1px solid var(--navbar-accent);
 }
 
 .dark-theme .btn-login:hover {
-    background: var(--primary-color);
+    background: var(--navbar-accent);
     color: white;
 }
 
 .dark-theme .btn-signup {
-    background: var(--primary-color);
-    color: white !important; 
-    border: 1px solid var(--primary-color);
+    background: var(--navbar-accent);
+    color: white !important;
+    border: 1px solid var(--navbar-accent);
 }
 
 .dark-theme .btn-signup:hover {
-    background: #0066dd;
+    background: var(--navbar-accent-hover);
     color: white !important;
 }
 
@@ -231,7 +232,7 @@
 }
 
 .dark-theme .btn-login i {
-    color: var(--primary-color);
+    color: var(--navbar-accent);
 }
 
 .dark-theme .btn-login:hover i {

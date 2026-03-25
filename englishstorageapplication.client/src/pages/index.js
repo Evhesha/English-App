@@ -1,7 +1,5 @@
-export { default as AboutApp } from "@/pages/Another/AboutApp.jsx";
-export { default as AdminPanel } from "@/pages/Another/AdminPanel.jsx";
-export { default as SettingPage } from "@/pages/Another/SettingPage.jsx";
-export { default as TeacherPage } from "@/pages/Another/TeacherPage.jsx";
+export { default as AboutPage } from "@/pages/about/AboutPage.jsx";
+export { default as AdminPage } from "@/pages/admin/AdminPage.jsx";
 export { default as ChatPage } from "@/pages/chat/ChatPage.jsx";
 export { default as MyDictPage } from "@/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx";
 export { default as TopicsPage } from "@/pages/Dictionary/DictionaryTopicsPage/TopicsPage.jsx";
@@ -31,7 +29,9 @@ export { default as PresentPerfect } from "@/pages/Lessons/Lessons/PresentPerfec
 export { default as PresentPerfectContinuous } from "@/pages/Lessons/Lessons/PresentPerfectContinuous.jsx";
 export { default as PresentSimple } from "@/pages/Lessons/Lessons/PresentSimple.jsx";
 export { default as OnlineLessonsListPage } from "@/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx";
-export { default as ProfilePage } from "@/pages/ProfilePage/ProfilePage.jsx";
+export { default as ProfilePage } from "@/pages/profile/ProfilePage.jsx";
+export { default as SettingsPage } from "@/pages/settings/SettingsPage.jsx";
+export { default as TeacherPage } from "@/pages/teacher/TeacherPage.jsx";
 export { default as DynamicOnlineTest } from "@/pages/Tests/Components/DynamicOnlineTest.jsx";
 export { default as DynamicTest } from "@/pages/Tests/Components/DynamicTest.jsx";
 export { default as DynamicTimeTest } from "@/pages/Tests/Components/DynamicTimeTest.jsx";
