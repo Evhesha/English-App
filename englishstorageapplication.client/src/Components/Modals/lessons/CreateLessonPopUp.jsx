@@ -1,4 +1,4 @@
-import "../PopUp.css";
+import "../modal.css";
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";

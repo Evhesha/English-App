@@ -1,13 +1,11 @@
-import "../PopUp.css";
+import "../modal.css";
 import {useState} from "react";
 import axios from "axios";
+import {Pen} from "react-bootstrap-icons";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL;
-
-function CreateDictCardPopUp({userId}) {
+function ChangeChatTitlePopUp({title, id, OnPatch}) {
     const [isOpen, setIsOpen] = useState(false);
-    const [name, setName] = useState("Name");
-    const [text, setText] = useState("");
+    const [name, setName] = useState(title);
     const [error, setError] = useState(null);
 
     const togglePopup = () => {
@@ -20,27 +18,32 @@ function CreateDictCardPopUp({userId}) {
         setIsOpen(false);
     };
 
-    const handleCreate = async (event) => {
+    const handleChangeName = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post(
-                `${API_BASE_URL}/api/UsersCards`,
+            const response = await axios.patch(
+                `http://localhost:5199/chat/${id}/title`,
                 {
-                    userId: userId,
-                    nameOfUsersCard: name,
-                    userCardData: text,
+                    newChatTitle: name
                 }
             );
-            window.location.reload();
+
+            const updatedChat ={
+                id: response.data,
+                title: name
+            }
+            
+            OnPatch(updatedChat);
+            togglePopup();
         } catch (error) {
-            setError("Ошибка при создании карточки.");
+            console.error(error);
         }
     };
 
     return (
-        <div>
-            <button className="btn btn-primary" onClick={togglePopup}>
-                Create card <i className="bi bi-plus-circle"></i>
+        <div style={{ display: 'inline-block' }}>
+            <button className="btn icon-btn" onClick={togglePopup}>
+                <Pen/>
             </button>
             {isOpen && (
                 <div className="popup">
@@ -48,11 +51,11 @@ function CreateDictCardPopUp({userId}) {
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3>Add card</h3>
-                        <form onSubmit={handleCreate}>
+                        <h3>Change chat title</h3>
+                        <form onSubmit={handleChangeName}>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label">
-                                    Card name
+                                    New chat title
                                 </label>
                                 <input
                                     type="text"
@@ -60,18 +63,6 @@ function CreateDictCardPopUp({userId}) {
                                     id="name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="text" className="form-label">
-                                    Card text
-                                </label>
-                                <textarea
-                                    className="form-control"
-                                    id="text"
-                                    rows="5"
-                                    value={text}
-                                    onChange={(e) => setText(e.target.value)}
                                 />
                             </div>
                             {error && (
@@ -93,4 +84,4 @@ function CreateDictCardPopUp({userId}) {
     );
 }
 
-export default CreateDictCardPopUp;
+export default ChangeChatTitlePopUp;

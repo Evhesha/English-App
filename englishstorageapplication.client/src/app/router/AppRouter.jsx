@@ -20,6 +20,7 @@ import {
   LoginPage,
   MyDictPage,
   Nature,
+  OnlineLessonPage,
   OnlineLessonsListPage,
   OnlineTestsListPage,
   PastContinuous,
@@ -65,6 +66,7 @@ function AppRouter() {
         path="/online-list-lessons-page"
         element={<OnlineLessonsListPage />}
       />
+      <Route path="/lesson/:id" element={<OnlineLessonPage />} />
       <Route path="/present-simple" element={<PresentSimple />} />
       <Route path="/future-simple" element={<FutureSimple />} />
       <Route path="/past-simple" element={<PastSimple />} />

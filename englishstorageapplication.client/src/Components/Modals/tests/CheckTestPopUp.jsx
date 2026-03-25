@@ -1,9 +1,8 @@
-import "../PopUp.css";
+import "../modal.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import ExistTestQuestion from "@/Components/TeacherPageComp/ExistTestQuestion.jsx";
-import TestQuestion from "@/Components/TeacherPageComp/TestQuestion.jsx";
+import { ExistTestQuestion, TestQuestion } from "@/Components/Teacher";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 

@@ -1,8 +1,7 @@
-import EditUserPopUp from '../PopUps/User/EditUserPopUp.jsx';
-import ChangeUserRolePopUp from '../PopUps/User/ChangeUserRolePopUp.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import './ListGroupElement.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import { ChangeUserRolePopUp, EditUserPopUp } from "@/Components/Modals";
+import "./ListGroupElement.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 

@@ -5,7 +5,7 @@ import "./ProfilePage.css";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
-import EditUserPopUp from "../../Components/PopUps/User/EditUserPopUp.jsx";
+import { EditUserPopUp } from "@/Components/Modals";
 import { useTranslation } from "react-i18next";
 import profilePicture from "./blank-profile-picture.png";
 

@@ -28,6 +28,7 @@ export { default as PresentContinuous } from "@/pages/Lessons/Lessons/PresentCon
 export { default as PresentPerfect } from "@/pages/Lessons/Lessons/PresentPerfect.jsx";
 export { default as PresentPerfectContinuous } from "@/pages/Lessons/Lessons/PresentPerfectContinuous.jsx";
 export { default as PresentSimple } from "@/pages/Lessons/Lessons/PresentSimple.jsx";
+export { default as OnlineLessonPage } from "@/pages/Lessons/OnlineLessonPage/OnlineLessonPage.jsx";
 export { default as OnlineLessonsListPage } from "@/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.jsx";
 export { default as ProfilePage } from "@/pages/profile/ProfilePage.jsx";
 export { default as SettingsPage } from "@/pages/settings/SettingsPage.jsx";

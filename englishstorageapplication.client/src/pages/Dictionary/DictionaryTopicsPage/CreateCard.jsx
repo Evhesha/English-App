@@ -1,8 +1,7 @@
-import CreateDictCardPop from "../../../Components/PopUps/Dict/CreateDictCardPopUp"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
-import { useEffect } from "react";
 import Cookies from "js-cookie";
+import { CreateDictCardPopUp } from "@/Components/Modals";
 
 function CreateCard({image, title, text}) {
   const [userId, setUserId] = useState(null);
@@ -28,7 +27,7 @@ function CreateCard({image, title, text}) {
           <p className="card-text">
             {text}
           </p>
-          <CreateDictCardPop userId={userId}></CreateDictCardPop>
+          <CreateDictCardPopUp userId={userId}></CreateDictCardPopUp>
         </div>
       </div>
     </>

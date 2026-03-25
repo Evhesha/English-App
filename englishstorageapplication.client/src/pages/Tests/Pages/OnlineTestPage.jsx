@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from "react-i18next";
 import axios from "axios";
-import TestListElementForUsers from "@/Components/TeacherPageComp/TestListElementForUsers.jsx";
+import { TestListElementForUsers } from "@/Components/Teacher";
 import Pagination from "@/Components/Pagination/Pagination.jsx";
 import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";

@@ -4,7 +4,7 @@ import './OnlineLessonsListPage.css';
 import { useTranslation } from "react-i18next";
 import { useDarkMode } from "@/hooks/useDarkMode.js";
 import axios from "axios";
-import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
+import { LessonListElementForUsers } from "@/Components/Teacher";
 import Pagination from "../../../Components/Pagination/Pagination.jsx";
 import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";

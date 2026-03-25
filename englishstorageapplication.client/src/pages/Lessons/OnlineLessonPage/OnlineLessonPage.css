@@ -1,0 +1,69 @@
+.online-lesson-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.online-lesson-page--status {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.online-lesson-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.online-lesson-page__views {
+  color: var(--panel-muted, #6c757d);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.online-lesson-page__article {
+  background: var(--panel-bg, rgba(255, 255, 255, 0.92));
+  border: 1px solid var(--panel-border, rgba(0, 0, 0, 0.08));
+  border-radius: 18px;
+  box-shadow: var(--panel-shadow, 0 10px 30px rgba(0, 0, 0, 0.08));
+  padding: 32px;
+}
+
+.online-lesson-page__title {
+  margin: 0 0 12px;
+  color: var(--panel-text, #2c3e50);
+}
+
+.online-lesson-page__date {
+  margin: 0 0 24px;
+  color: var(--panel-muted, #6c757d);
+}
+
+.online-lesson-page__content {
+  color: var(--panel-text, #2c3e50);
+  font-size: 1rem;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .online-lesson-page {
+    padding-top: 12px;
+  }
+
+  .online-lesson-page__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .online-lesson-page__article {
+    padding: 20px;
+  }
+}
