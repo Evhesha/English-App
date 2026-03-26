@@ -1,0 +1,125 @@
+import { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import axios from "axios";
+import { useDarkMode } from "../../hooks/useDarkMode";
+import {
+    Container,
+    FormCard,
+    Title,
+    SubmitButton,
+    Copyright
+} from '../../Components/StyledComponents/Common.jsx';
+import FormField from "../../Components/Auth/FormField";
+import failedToSignUp from "@/Components/Auth/FailedToSignUp.jsx";
+
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+function SignUpPage() {
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+        confirmPassword: "",
+        name: "",
+    });
+
+    const [showPopup, setShowPopup] = useState(false);
+    const darkMode = useDarkMode();
+    const [error, setError] = useState(false);
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+        setShowPopup(false);
+    };
+
+    const handleCreate = async (event) => {
+        event.preventDefault();
+        if (formData.password !== formData.confirmPassword) {
+            setShowPopup(true);
+            return;
+        }
+
+        try {
+            const response = await axios.post(
+                `${API_BASE_URL}/api/Auth/register`,
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    password: formData.password,
+                }
+            );
+            console.log("User created:", response.data);
+            
+            navigate("/login");
+            window.location.reload();
+            
+            setError(false);
+        } catch (error) {
+            console.error("Error creating user:", error);
+            setError(true);
+        }
+    };
+
+    return (
+        <Container $darkMode={darkMode}>
+            <FormCard $darkMode={darkMode} $wide={true}>
+                <form onSubmit={handleCreate}>
+                    <Title $darkMode={darkMode}>Create Account</Title>
+
+                    <FormField
+                        label="Введите ваш email"
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        darkMode={darkMode}
+                    />
+
+                    <FormField
+                        label="Придумайте пароль"
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        darkMode={darkMode}
+                    />
+
+                    <FormField
+                        label="Повторите пароль"
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        value={formData.confirmPassword}
+                        onChange={handleChange}
+                        darkMode={darkMode}
+                    />
+
+                    <FormField
+                        label="Придумайте имя"
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        darkMode={darkMode}
+                    />
+
+                    {error ? failedToSignUp : false}
+
+                    <SubmitButton className="btn btn-primary w-100" type="submit">
+                        Sign Up
+                    </SubmitButton>
+
+                    <Copyright $darkMode={darkMode}>&copy; 2024-2026</Copyright>
+                </form>
+            </FormCard>
+        </Container>
+    );
+}
+
+export default SignUpPage;

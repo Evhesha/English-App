@@ -1,5 +1,9 @@
+using EnglishApp.Application.ParameterExtensions;
 using EnglishApp.Core.Abstractions.Test;
 using EnglishApp.Core.Models;
+using EnglishApp.Core.Params.LessonParams;
+using EnglishApp.Core.Params.LessonParams.TestParams;
+using Microsoft.EntityFrameworkCore;
 
 namespace EnglishApp.Application.AppServices;
 
@@ -15,6 +19,24 @@ public class TestService : ITestService
     public async Task<List<Test>> GetAllTets(CancellationToken cancellationToken)
     {
         return await _testsRepository.GetAllTestsAsync(cancellationToken);
+    }
+    
+    public async Task<(List<Test> test, int totalCount)> GetTestsWithParameters(
+        TestFilter lessonFilter,
+        SortParams sortParams,
+        PageParams pageParams,
+        CancellationToken cancellationToken)
+    {
+        var query = _testsRepository.GetTestsQueryable();
+
+        query = query
+            .Filter(lessonFilter)
+            .Sort(sortParams);
+
+        var (pagedQuery, totalCount) = query.PageWithCount(pageParams);
+        var lessons = await pagedQuery.ToListAsync(cancellationToken);
+
+        return (lessons, totalCount);
     }
     
     public async Task<List<Test>> GetUserTests(Guid userId, CancellationToken cancellationToken)

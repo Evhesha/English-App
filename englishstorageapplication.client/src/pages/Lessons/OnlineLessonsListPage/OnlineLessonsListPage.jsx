@@ -4,7 +4,7 @@ import './OnlineLessonsListPage.css';
 import { useTranslation } from "react-i18next";
 import { useDarkMode } from "@/hooks/useDarkMode.js";
 import axios from "axios";
-import LessonListElementForUsers from "@/Components/TeacherPageComp/LessonListElementForUsers.jsx";
+import { LessonListElementForUsers } from "@/Components/Teacher";
 import Pagination from "../../../Components/Pagination/Pagination.jsx";
 import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";
@@ -21,6 +21,7 @@ function OnlineLessonsListPage() {
     const {t} = useTranslation();
     const [filtrationText, setFiltrationText] = useState("");
     const [appliedFiltrationText, setAppliedFiltrationText] = useState("");
+    const [author, setAuthor] = useState("");
     const darkMode = useDarkMode();
     const [authorized, setAuthorized] = useState(false);
     const effectRan = useRef(false);
@@ -46,6 +47,7 @@ function OnlineLessonsListPage() {
             const params = {
                 Page: currentPage,
                 PageSize: pageSize,
+                AuthorName: author || undefined,
                 Title: appliedFiltrationText || undefined,
                 OrderBy: sortBy || undefined,
                 Direction: sortDirection || undefined
@@ -105,6 +107,7 @@ function OnlineLessonsListPage() {
 
     const handleClearSearch = () => {
         setFiltrationText("");
+        setAuthor("");
         setAppliedFiltrationText("");
         setCurrentPage(1);
     };
@@ -130,6 +133,19 @@ function OnlineLessonsListPage() {
                                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                             />
                             <label htmlFor="filterInput">{t("online-lessons.filter-title")}</label>
+                        </div>
+                    </div>
+                    <div className="col-md-8">
+                        <div className="form-floating">
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="filterInput"
+                                value={author}
+                                onChange={(e) => setAuthor(e.target.value)}
+                                onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+                            />
+                            <label htmlFor="filterInput">{t("online-lessons.author")}</label>
                         </div>
                     </div>
                     <div className="col-md-4">

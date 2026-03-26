@@ -1,8 +1,17 @@
+using EnglishApp.Core.Params.LessonParams;
+using EnglishApp.Core.Params.LessonParams.TestParams;
+
 namespace EnglishApp.Core.Abstractions.Test;
 
 public interface ITestService
 {
     Task<List<Models.Test>> GetAllTets(CancellationToken cancellationToken);
+
+    Task<(List<Models.Test> test, int totalCount)> GetTestsWithParameters(
+        TestFilter lessonFilter,
+        SortParams sortParams,
+        PageParams pageParams,
+        CancellationToken cancellationToken);
     Task<List<Models.Test>> GetUserTests(Guid userId, CancellationToken cancellationToken);
     Task<Models.Test?> GetTestById(Guid testId, CancellationToken cancellationToken);
     Task<Guid> CreateTest(Models.Test test, CancellationToken cancellationToken);

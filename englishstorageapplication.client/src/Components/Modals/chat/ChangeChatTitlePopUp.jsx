@@ -1,0 +1,87 @@
+import "../modal.css";
+import {useState} from "react";
+import axios from "axios";
+import {Pen} from "react-bootstrap-icons";
+
+function ChangeChatTitlePopUp({title, id, OnPatch}) {
+    const [isOpen, setIsOpen] = useState(false);
+    const [name, setName] = useState(title);
+    const [error, setError] = useState(null);
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+        setError(null);
+    };
+
+    const closePopup = (e) => {
+        e.preventDefault();
+        setIsOpen(false);
+    };
+
+    const handleChangeName = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await axios.patch(
+                `http://localhost:5199/chat/${id}/title`,
+                {
+                    newChatTitle: name
+                }
+            );
+
+            const updatedChat ={
+                id: response.data,
+                title: name
+            }
+            
+            OnPatch(updatedChat);
+            togglePopup();
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    return (
+        <div style={{ display: 'inline-block' }}>
+            <button className="btn icon-btn" onClick={togglePopup}>
+                <Pen/>
+            </button>
+            {isOpen && (
+                <div className="popup">
+                    <div className="popup-content">
+            <span className="close" onClick={togglePopup}>
+              &times;
+            </span>
+                        <h3>Change chat title</h3>
+                        <form onSubmit={handleChangeName}>
+                            <div className="mb-3">
+                                <label htmlFor="name" className="form-label">
+                                    New chat title
+                                </label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+                            {error && (
+                                <div className="alert alert-danger" role="alert">
+                                    {error}
+                                </div>
+                            )}
+                            <button type="submit" className="btn btn-primary">
+                                Save
+                            </button>
+                            <button type="button" onClick={closePopup} className="btn btn-danger">
+                                Close
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+}
+
+export default ChangeChatTitlePopUp;
