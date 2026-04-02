@@ -1,6 +1,6 @@
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./LessonsListElement.css"
+import "../shared/TeacherListElement.css"
 import {useTranslation} from "react-i18next";
 import Cookies from "js-cookie";
 import { CheckTestPopUp } from "@/Components/Modals";

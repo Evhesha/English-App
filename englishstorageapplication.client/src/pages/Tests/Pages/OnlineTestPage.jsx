@@ -6,7 +6,7 @@ import { TestListElementForUsers } from "@/Components/Teacher";
 import Pagination from "@/Components/Pagination/Pagination.jsx";
 import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";
-import "@/pages/Lessons/OnlineLessonsListPage/OnlineLessonsListPage.css";
+import "@/pages/lessons/online-list/OnlineLessonsListPage.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 

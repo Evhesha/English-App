@@ -1,12 +1,11 @@
 import "../modal.css";
 import { useState } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
-import {jwtDecode} from "jwt-decode";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-function CreateLessonPopUp({ onPost, userId }) {
+function CreateLessonPopUp({ onPost }) {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState("Name");
   const [text, setText] = useState("Text");
@@ -26,21 +25,23 @@ function CreateLessonPopUp({ onPost, userId }) {
   const handleCreate = async (event) => {
     event.preventDefault(); 
     try {
-        const token = Cookies.get("token");
-        const decodedToken = jwtDecode(token);
-        const userId = decodedToken.userId;
+        const tokenClaims = getAuthTokenClaims();
+        if (!tokenClaims?.userId || !tokenClaims.token) {
+          setError("Authorization token is missing.");
+          return;
+        }
         
         const response = await axios.post(
         `${API_BASE_URL}/api/Lessons`,
         {
-            userId: userId,
+            userId: tokenClaims.userId,
             title: name,
             text: text,
             isPublic: isPublic,          
             images: []
         },{
         headers: {
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${tokenClaims.token}`
             }
         }
       )

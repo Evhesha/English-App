@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useTranslation } from "react-i18next";
-import "./LessonsListElement.css";
+import "../shared/TeacherListElement.css";
 
 function LessonListElementForUsers({ id, name, text, watchCount, author, createdDate }) {
     const { t } = useTranslation();

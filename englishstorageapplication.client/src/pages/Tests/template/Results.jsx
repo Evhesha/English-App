@@ -1,8 +1,7 @@
 import getResultMessage from "./ResultMessage";
 import {useEffect, useRef} from "react";
-import Cookies from "js-cookie";
-import {jwtDecode} from "jwt-decode";
 import axios from "axios";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -13,19 +12,16 @@ function Results({testId, score, questionsLength, mistakes, onRetry}) {
         if (hasRun.current) return;
         hasRun.current = true;
 
-        const token = Cookies.get("token");
-        if (!token) {
+        const tokenClaims = getAuthTokenClaims();
+        if (!tokenClaims?.userId) {
             return;
         }
 
         const CreateResult = async () => {
             try {
-                const decodedToken = jwtDecode(token);
-                const userId = decodedToken.userId;
-
                 await axios.post(`${API_BASE_URL}/api/UsersStudyResults`,
                     {
-                        userId: userId,
+                        userId: tokenClaims.userId,
                         testId: testId,
                         percentResult: ((score / questionsLength) * 100).toFixed(1)
                     }

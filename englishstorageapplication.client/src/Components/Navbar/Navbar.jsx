@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../Navbar/Navbar.css";
-import { jwtDecode } from "jwt-decode";
-import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTheme } from "@/app/providers/ThemeProvider.jsx";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 function Navbar({ toggleSidebar, isSidebarOpen }) {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -22,11 +21,10 @@ function Navbar({ toggleSidebar, isSidebarOpen }) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const token = Cookies.get("token");
-            if (token) {
+            const tokenClaims = getAuthTokenClaims();
+            if (tokenClaims) {
                 try {
-                    const decodedToken = jwtDecode(token);
-                    const userRole = decodedToken.role;
+                    const userRole = tokenClaims.role;
 
                     if (userRole === "Admin") {
                         setIsAdmin(true);

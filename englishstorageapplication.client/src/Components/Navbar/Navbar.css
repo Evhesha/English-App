@@ -1,6 +1,8 @@
 :root {
     --navbar-accent: #007aff;
     --navbar-accent-hover: #0066dd;
+    --navbar-accent-soft: rgba(0, 122, 255, 0.12);
+    --navbar-accent-glow: rgba(0, 122, 255, 0.22);
     --text-color: #000000;
     --bg-color: rgba(255, 255, 255, 0.85);
     --glass-effect: rgba(255, 255, 255, 0.8);
@@ -72,44 +74,104 @@
 
 
 .btn-apple {
-    padding: 7px 16px;
-    border-radius: 8px;
-    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 16px;
+    min-height: 40px;
+    min-width: 104px;
+    border-radius: 999px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 7px;
     font-size: 13px;
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
-    letter-spacing: -0.1px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    border: 1px solid transparent;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
+.btn-apple i {
+    font-size: 14px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-apple:hover {
+    transform: translateY(-1px) scale(1.01);
+    text-decoration: none;
+}
+
+.btn-apple:active {
+    transform: translateY(0);
+}
+
+.btn-apple:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.14), 0 12px 28px rgba(0, 122, 255, 0.18);
+}
 
 .btn-login {
-    background: transparent;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(247, 250, 255, 0.82) 100%);
     color: var(--navbar-accent);
-    border: 1px solid var(--navbar-accent);
+    border: 1px solid rgba(0, 122, 255, 0.16);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 8px 18px rgba(15, 23, 42, 0.05);
 }
 
 .btn-login:hover {
-    background: var(--navbar-accent);
-    color: white;
-    transform: scale(1.03);
+    background:
+        linear-gradient(180deg, rgba(236, 245, 255, 0.96) 0%, rgba(226, 239, 255, 0.9) 100%);
+    color: var(--navbar-accent-hover);
+    border-color: rgba(0, 122, 255, 0.28);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.82),
+        0 14px 26px rgba(0, 122, 255, 0.12);
 }
 
+.btn-login:hover i {
+    transform: translateX(1px);
+}
 
 .btn-signup {
-    background: var(--navbar-accent);
+    background: linear-gradient(135deg, #1f8fff 0%, #007aff 52%, #005fd1 100%);
     color: white;
-    border: 1px solid var(--navbar-accent);
+    border: 1px solid rgba(0, 102, 221, 0.24);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.24),
+        0 14px 28px rgba(0, 122, 255, 0.24);
 }
 
 .btn-signup:hover {
-    background: var(--navbar-accent-hover);
-    transform: scale(1.03);
+    background: linear-gradient(135deg, #35a0ff 0%, #118aff 52%, #0a70eb 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.28),
+        0 18px 34px var(--navbar-accent-glow);
+}
+
+.btn-signup:hover i {
+    transform: translateY(-1px);
+}
+
+.btn-signup::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, 0.22) 50%, transparent 75%);
+    transform: translateX(-130%);
+    transition: transform 0.45s ease;
+}
+
+.btn-signup:hover::after {
+    transform: translateX(130%);
 }
 
 
@@ -205,25 +267,30 @@
 
 
 .dark-theme .btn-login {
-    background: transparent;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(22, 29, 40, 0.7) 100%);
     color: var(--navbar-accent);
-    border: 1px solid var(--navbar-accent);
+    border: 1px solid rgba(74, 163, 255, 0.26);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 .dark-theme .btn-login:hover {
-    background: var(--navbar-accent);
-    color: white;
+    background: linear-gradient(180deg, rgba(74, 163, 255, 0.22) 0%, rgba(21, 53, 93, 0.78) 100%);
+    color: #ffffff;
+    border-color: #4aa3ff;
+    box-shadow: 0 12px 24px rgba(0, 122, 255, 0.18);
 }
 
 .dark-theme .btn-signup {
-    background: var(--navbar-accent);
+    background: linear-gradient(135deg, #2793ff 0%, #0a84ff 52%, #006fe8 100%);
     color: white !important;
-    border: 1px solid var(--navbar-accent);
+    border: 1px solid rgba(74, 163, 255, 0.28);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 14px 28px rgba(0, 122, 255, 0.24);
 }
 
 .dark-theme .btn-signup:hover {
-    background: var(--navbar-accent-hover);
+    background: linear-gradient(135deg, #39a0ff 0%, #1990ff 52%, #0a7fff 100%);
     color: white !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 18px 34px rgba(0, 122, 255, 0.28);
 }
 
 
@@ -255,7 +322,8 @@
     }
 
     .btn-apple {
-        padding: 6px 12px;
+        padding: 7px 12px;
         font-size: 12px;
+        min-height: 34px;
     }
 }

@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
-import { jwtDecode } from "jwt-decode";
-import Cookies from "js-cookie";
 import { CreateDictCardPopUp } from "@/Components/Modals";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 function CreateCard({image, title, text}) {
   const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const token = Cookies.get("token");
-      if (token) {
-        const decodedToken = jwtDecode(token);
-        setUserId(decodedToken.userId);
+      const tokenClaims = getAuthTokenClaims();
+      if (tokenClaims?.userId) {
+        setUserId(tokenClaims.userId);
       }
     };
 

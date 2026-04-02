@@ -3,11 +3,10 @@ import { Form, InputGroup, Button } from "react-bootstrap";
 import { Check } from "react-bootstrap-icons";
 import "./ProfilePage.css";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
-import Cookies from "js-cookie";
 import { EditUserPopUp } from "@/Components/Modals";
 import { useTranslation } from "react-i18next";
 import profilePicture from "./blank-profile-picture.png";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
@@ -24,11 +23,9 @@ function ProfilePage() {
 
     useEffect(() => {
         const fetchUserData = async () => {
-            const token = Cookies.get("token");
-            console.log("Token:", token);
-            if (token) {
-                const decodedToken = jwtDecode(token);
-                const id = decodedToken.userId;
+            const tokenClaims = getAuthTokenClaims();
+            if (tokenClaims?.userId) {
+                const id = tokenClaims.userId;
                 try {
                     const response = await axios.get(
                         `${API_BASE_URL}/api/Users/${id}`
@@ -42,10 +39,9 @@ function ProfilePage() {
         };
 
         const fetchTestData = async () => {
-            const token = Cookies.get("token");
-            if (token) {
-                const decodedToken = jwtDecode(token);
-                const id = decodedToken.userId;
+            const tokenClaims = getAuthTokenClaims();
+            if (tokenClaims?.userId) {
+                const id = tokenClaims.userId;
                 try {
                     const response = await axios.get(
                         `${API_BASE_URL}/api/UsersStudyResults/percent/${id}`
