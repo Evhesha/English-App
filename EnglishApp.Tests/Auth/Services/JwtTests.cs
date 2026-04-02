@@ -66,7 +66,8 @@ public class JwtTests
         
         // Assert
         Assert.Contains(jwt.Claims, c => c.Type == "userId");
-        Assert.Contains(jwt.Claims, c => c.Type == "name" && c.Value == "john@example.com");
+        Assert.Contains(jwt.Claims, c => c.Type == "name" && c.Value == "John Doe");
+        Assert.Contains(jwt.Claims, c => c.Type == "email" && c.Value == "john@example.com");
         Assert.Contains(jwt.Claims, c => c.Type == "role" && c.Value == "User");
     }
     

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import TestTemplate from "@/pages/Tests/TestTemplateComponent/TestTemplate.jsx";
+import TestTemplate from "@/pages/tests/template/TestTemplate.jsx";
 import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
 import Cookies from "js-cookie";
 

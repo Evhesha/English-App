@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card";
 import CreateCard from "./CreateCard";
-import AddDict from "../dict-images/AddPicture.png";
-import YourOwnDict from "../dict-images/YourOwnDict.png";
+import AddDict from "../assets/AddPicture.png";
+import YourOwnDict from "../assets/YourOwnDict.png";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
-import Cookies from "js-cookie";
 import PlsAuthorizeBlock from "@/Components/Auth/PlsAuthorizeBlock.jsx";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function MyDictPage() {
@@ -15,10 +14,9 @@ function MyDictPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const token = Cookies.get("token");
-      if (token) {
-        const decodedToken = jwtDecode(token);
-        const userId = decodedToken.userId;
+      const tokenClaims = getAuthTokenClaims();
+      if (tokenClaims?.userId) {
+        const userId = tokenClaims.userId;
 
         try {
           const response = await axios.get(`${API_BASE_URL}/api/UsersCards/${userId}`);

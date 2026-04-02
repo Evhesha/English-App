@@ -11,11 +11,15 @@
     <PackageJsonScriptsLint Condition="$(PackageJsonScriptsLint) == ''">eslint .</PackageJsonScriptsLint>
     <PackageJsonScriptsPreview Condition="$(PackageJsonScriptsPreview) == ''">vite preview</PackageJsonScriptsPreview>
     <PackageJsonScriptsDeploy Condition="$(PackageJsonScriptsDeploy) == ''">npm run build &amp;&amp; gh-pages -d dist</PackageJsonScriptsDeploy>
+    <PackageJsonDependenciesTiptapPm Condition="$(PackageJsonDependenciesTiptapPm) == ''">^3.20.5</PackageJsonDependenciesTiptapPm>
+    <PackageJsonDependenciesTiptapReact Condition="$(PackageJsonDependenciesTiptapReact) == ''">^3.20.5</PackageJsonDependenciesTiptapReact>
+    <PackageJsonDependenciesTiptapStarterKit Condition="$(PackageJsonDependenciesTiptapStarterKit) == ''">^3.20.5</PackageJsonDependenciesTiptapStarterKit>
     <PackageJsonDependenciesAos Condition="$(PackageJsonDependenciesAos) == ''">^2.3.4</PackageJsonDependenciesAos>
     <PackageJsonDependenciesAxios Condition="$(PackageJsonDependenciesAxios) == ''">^1.7.7</PackageJsonDependenciesAxios>
     <PackageJsonDependenciesBootstrap Condition="$(PackageJsonDependenciesBootstrap) == ''">^5.3.3</PackageJsonDependenciesBootstrap>
     <PackageJsonDependenciesBootstrapIcons Condition="$(PackageJsonDependenciesBootstrapIcons) == ''">^1.11.3</PackageJsonDependenciesBootstrapIcons>
     <PackageJsonDependenciesCors Condition="$(PackageJsonDependenciesCors) == ''">^2.8.5</PackageJsonDependenciesCors>
+    <PackageJsonDependenciesDompurify Condition="$(PackageJsonDependenciesDompurify) == ''">^3.3.3</PackageJsonDependenciesDompurify>
     <PackageJsonDependenciesI18next Condition="$(PackageJsonDependenciesI18next) == ''">^24.0.2</PackageJsonDependenciesI18next>
     <PackageJsonDependenciesI18nextBrowserLanguagedetector Condition="$(PackageJsonDependenciesI18nextBrowserLanguagedetector) == ''">^8.0.0</PackageJsonDependenciesI18nextBrowserLanguagedetector>
     <PackageJsonDependenciesI18nextHttpBackend Condition="$(PackageJsonDependenciesI18nextHttpBackend) == ''">^3.0.1</PackageJsonDependenciesI18nextHttpBackend>

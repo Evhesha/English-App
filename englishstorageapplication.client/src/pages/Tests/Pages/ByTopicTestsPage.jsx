@@ -1,9 +1,8 @@
 import "../styles.css";
-import TestCardLink from "../TestTemplateComponent/TestCardLink.jsx";
+import TestCardLink from "../template/TestCardLink.jsx";
 import {useEffect, useState, useRef} from "react";
-import Cookies from "js-cookie";
 import axios from "axios";
-import {jwtDecode} from "jwt-decode";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -132,11 +131,10 @@ function ByTopicTestsPage() {
             return;
         }
         const fetchData = async () => {
-            const token = Cookies.get("token");
-            if (!token) return;
+            const tokenClaims = getAuthTokenClaims();
+            if (!tokenClaims?.userId) return;
             try {
-                const decodedToken = jwtDecode(token);
-                const userId = decodedToken.userId;
+                const userId = tokenClaims.userId;
 
                 const response = await axios.post(`${API_BASE_URL}/api/UsersStudyResults/users/${userId}/tests-results`,
                     ids);

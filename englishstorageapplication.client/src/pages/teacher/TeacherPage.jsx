@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
-import Cookies from "js-cookie";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
@@ -12,6 +10,7 @@ import {
     Section,
     TestListElementForTeachers,
 } from "@/Components/Teacher";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -37,11 +36,10 @@ function TeacherPage() {
             return;
         }
         const fetchData = async () => {
-            const token = Cookies.get("token");
-            if (!token) return;
+            const tokenClaims = getAuthTokenClaims();
+            if (!tokenClaims?.userId) return;
             try {
-                const decodedToken = jwtDecode(token);
-                const userId = decodedToken.userId;
+                const userId = tokenClaims.userId;
                 const responseLessons = await axios.get(`${API_BASE_URL}/api/Lessons/lessons/${userId}`);
                 const responseTests = await axios.get(`${API_BASE_URL}/api/Tests/${userId}`)
                 setArticles(responseLessons.data);
