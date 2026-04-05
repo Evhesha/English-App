@@ -14,41 +14,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: add lesson route view and rich text editing for teacher lessons, tests, file frontend app refactoring">
+    <list default="true" id="08e1fafe-5205-465c-a0f2-29671da60b4d" name="Changes" comment="Feature: file app client structure, jwt naming, routes refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EnglishStorageApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Infrastructure/JwtProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Infrastructure/JwtProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/JwtTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishApp.Tests/Auth/Services/JwtTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/AuthenticationExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnglishStorageApplication.Server/Extensions/AuthenticationExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/package.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/obj/Debug/package.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Modals/lessons/CreateLessonPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Modals/lessons/CreateLessonPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Modals/tests/CreateTestPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Modals/tests/CreateTestPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/NewChatButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/ChatButtons/NewChatButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/CreateLesson.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/CreateTest.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/ExistTestQuestion.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/LessonListElementForTeachers.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/LessonListElementForUsers.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/LessonsListElement.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/Section.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/TestListElementForTeachers.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/TestListElementForUsers.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/TestQuestion.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Teacher/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/CreateCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Dictionary/DictionaryTopicsPage/MyDictPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByLevelTestPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByLevelTestPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTimeTestsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTimeTestsPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTopicTestsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/Pages/ByTopicTestsPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Results.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/Tests/TestTemplateComponent/Results.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/home/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/home/HomePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/profile/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/profile/ProfilePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/settings/SettingsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/settings/SettingsPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/teacher/TeacherPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/pages/teacher/TeacherPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Modals/users/ChangeUserRolePopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/Components/Modals/users/ChangeUserRolePopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/englishstorageapplication.client/src/utils/authToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/englishstorageapplication.client/src/utils/authToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,33 +194,33 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.HTTPS.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.TestQuestion.jsx.executor&quot;: &quot;dotMemory&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http.executor": "Run",
+    ".NET Launch Settings Profile.HTTPS.executor": "Debug",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Node.js.TestQuestion.jsx.executor": "dotMemory",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "feature",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/Rider.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HTTPS">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="EnglishStorageApplication.AiServer: http" type="LaunchSettings" />
@@ -337,8 +309,8 @@
         <item itemvalue="Node.js.ExistTestQuestion.jsx" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
+        <item itemvalue=".NET Launch Settings Profile.EnglishStorageApplication.AiServer: http" />
         <item itemvalue="Node.js.ExistTestQuestion.jsx" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -465,10 +437,8 @@
       <workItem from="1774080426895" duration="2939000" />
       <workItem from="1774165747195" duration="2346000" />
       <workItem from="1774465150176" duration="1608000" />
-      <workItem from="1774696961099" duration="2734000" />
-      <workItem from="1774787600259" duration="1725000" />
-      <workItem from="1774988514543" duration="8000" />
-      <workItem from="1775160452568" duration="1119000" />
+      <workItem from="1775371763904" duration="3417000" />
+      <workItem from="1775384837287" duration="8000" />
     </task>
     <task id="LOCAL-00003" summary="Feature: only public lessons can get in online lessons.">
       <option name="closed" value="true" />
@@ -678,15 +648,7 @@
       <option name="project" value="LOCAL" />
       <updated>1774466428174</updated>
     </task>
-    <task id="LOCAL-00029" summary="Feature: add lesson route view and rich text editing for teacher lessons, tests, file frontend app refactoring">
-      <option name="closed" value="true" />
-      <created>1774470918134</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1774470918134</updated>
-    </task>
-    <option name="localTasksCounter" value="30" />
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,6 +683,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feature: chat and message models were described. New packages for mongo db and json data." />
     <MESSAGE value="Feature: buttons &quot;new chat&quot; &quot;any chat&quot; was added to project. New component for chat container." />
     <MESSAGE value="Feature: now some operations available only for some roles. Legacy logging was deleted (was file, seq will be used)." />
     <MESSAGE value="Feature: new repositories for chats and messages were added to ai server project." />
@@ -745,8 +708,7 @@
     <MESSAGE value="Feature: New page for online lessons was added. Teacher page date components fixing, now can get test guestions. New route for online lessons." />
     <MESSAGE value="Feature: getting tests with params (page, filter, sorting)" />
     <MESSAGE value="Feature: project structuring refactoring" />
-    <MESSAGE value="Feature: add lesson route view and rich text editing for teacher lessons, tests, file frontend app refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: add lesson route view and rich text editing for teacher lessons, tests, file frontend app refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: project structuring refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
