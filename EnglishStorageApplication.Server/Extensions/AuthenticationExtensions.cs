@@ -21,6 +21,8 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
                 })
                 .AddJwtBearer(options =>
                 {
+                    options.MapInboundClaims = false;
+
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,

@@ -2,6 +2,7 @@ import "../modal.css";
 import { useState } from "react";
 import axios from "axios";
 import { getAuthTokenClaims } from "@/utils/authToken.js";
+import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -25,27 +26,28 @@ function CreateLessonPopUp({ onPost }) {
   const handleCreate = async (event) => {
     event.preventDefault(); 
     try {
-        const tokenClaims = getAuthTokenClaims();
-        if (!tokenClaims?.userId || !tokenClaims.token) {
-          setError("Authorization token is missing.");
-          return;
-        }
+        const token = Cookies.get("token");
+        
+        console.log(token);
+        const tokenClaims = JSON.parse(atob(token.split('.')[1]));
+        const userId = tokenClaims.userId || tokenClaims.sub || tokenClaims.id;
         
         const response = await axios.post(
         `${API_BASE_URL}/api/Lessons`,
         {
-            userId: tokenClaims.userId,
+            userId: userId,
             title: name,
             text: text,
             isPublic: isPublic,          
             images: []
         },{
         headers: {
-            'Authorization': `Bearer ${tokenClaims.token}`
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
             }
         }
       )
-
+        
       if (response.status === 200 || response.status === 201) {
         if (onPost) {
           onPost(response.data);
