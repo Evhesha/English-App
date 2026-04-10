@@ -1,13 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import "../Sidebar/Sidebar.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ChatLink from "./ChatButtons/ChatLink.jsx";
 import NewChatButton from "./ChatButtons/NewChatButton.jsx";
 import axios from "axios";
-import { getAuthTokenClaims } from "@/utils/authToken.js";
+import { getAuthTokenClaims, removeAuthToken } from "@/utils/authToken.js";
 
 function Sidebar() {
     const [chats, setChats] = useState([]);
@@ -17,7 +16,7 @@ function Sidebar() {
     const handleLogout = () => {
         const confirmLogout = window.confirm("Are you sure that you want to logout?");
         if (!confirmLogout) return;
-        Cookies.remove("token");
+        removeAuthToken();
         navigate("/login");
         window.location.reload() 
     };
