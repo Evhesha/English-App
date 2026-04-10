@@ -2,7 +2,6 @@ import "../modal.css";
 import { useState } from "react";
 import axios from "axios";
 import { getAuthTokenClaims } from "@/utils/authToken.js";
-import Cookies from "js-cookie";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -26,23 +25,23 @@ function CreateLessonPopUp({ onPost }) {
   const handleCreate = async (event) => {
     event.preventDefault(); 
     try {
-        const token = Cookies.get("token");
-        
-        console.log(token);
-        const tokenClaims = JSON.parse(atob(token.split('.')[1]));
-        const userId = tokenClaims.userId || tokenClaims.sub || tokenClaims.id;
+        const tokenClaims = getAuthTokenClaims();
+        if (!tokenClaims?.token || !tokenClaims.userId) {
+          setError("Требуется авторизация.");
+          return;
+        }
         
         const response = await axios.post(
         `${API_BASE_URL}/api/Lessons`,
         {
-            userId: userId,
+            userId: tokenClaims.userId,
             title: name,
             text: text,
             isPublic: isPublic,          
             images: []
         },{
         headers: {
-            'Authorization': `Bearer ${token}`,
+            'Authorization': `Bearer ${tokenClaims.token}`,
             'Content-Type': 'application/json'
             }
         }

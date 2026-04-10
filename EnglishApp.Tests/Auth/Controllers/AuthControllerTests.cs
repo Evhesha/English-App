@@ -53,7 +53,7 @@ public class AuthControllerTests
         var responseValue = okResult.Value;
         
         var setCookieHeader = _httpContext.Response.Headers["Set-Cookie"].ToString();
-        Assert.Contains("tasty-cookies", setCookieHeader);
+        Assert.Contains("token", setCookieHeader);
         Assert.Contains(expectedToken, setCookieHeader);
         
         var tokenProperty = responseValue?.GetType().GetProperty("token");
