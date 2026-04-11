@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
-import { jwtDecode } from "jwt-decode";
 import { CheckDictCardPopUp } from "@/Components/Modals";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 function Card({ id, image, title, text, onDelete, onUpdate }) {
   const [userId, setUserId] = useState(null);
 
   useEffect(() => {
-    const token = Cookies.get("token");
-    if (token) {
-      const decodedToken = jwtDecode(token);
-      setUserId(decodedToken.userId);
+    const tokenClaims = getAuthTokenClaims();
+    if (tokenClaims?.userId) {
+      setUserId(tokenClaims.userId);
     }
   }, []);
 

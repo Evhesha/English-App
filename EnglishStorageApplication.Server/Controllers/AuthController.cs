@@ -9,6 +9,8 @@ namespace EnglishStorageApplication.Server.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private const string AuthCookieName = "token";
+        private const string LegacyAuthCookieName = "tasty-cookies";
         private readonly IAuthenticationService _authService;
 
         public AuthController(IAuthenticationService authAuthService)
@@ -46,7 +48,19 @@ namespace EnglishStorageApplication.Server.Controllers
             CancellationToken cancellationToken)
         {
             var token = await _authService.Login(loginDto.Email, loginDto.Password, cancellationToken);
-            HttpContext.Response.Cookies.Append("tasty-cookies", token);
+            HttpContext.Response.Cookies.Delete(LegacyAuthCookieName, new CookieOptions
+            {
+                Path = "/"
+            });
+            HttpContext.Response.Cookies.Append(AuthCookieName, token, new CookieOptions
+            {
+                Expires = DateTimeOffset.UtcNow.AddDays(7),
+                IsEssential = true,
+                Path = "/",
+                SameSite = SameSiteMode.Lax,
+                Secure = HttpContext.Request.IsHttps
+            });
+
             return Ok(new {token});
         }
     }

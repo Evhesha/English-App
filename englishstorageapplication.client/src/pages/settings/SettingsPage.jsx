@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/app/providers/ThemeProvider.jsx";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
+import { getAuthTokenClaims, removeAuthToken } from "@/utils/authToken.js";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -78,7 +77,7 @@ function SettingsPage() {
     const handleLogout = () => {
         const confirmLogout = window.confirm(t("settings.logout-sure"));
         if (!confirmLogout) return;
-        Cookies.remove("token");
+        removeAuthToken();
         navigate("/login");
         window.location.reload();
     };
@@ -90,14 +89,14 @@ function SettingsPage() {
             return;
         }
         try {
-            const token = Cookies.get("token");
-            const decodedToken = jwtDecode(token);
-            const id = decodedToken.userId;
-            await axios.delete(`${API_BASE_URL}/api/users/${id}`);
+            const tokenClaims = getAuthTokenClaims();
+            if (tokenClaims?.userId) {
+                await axios.delete(`${API_BASE_URL}/api/users/${tokenClaims.userId}`);
+            }
         } catch (error) {
             console.error(error);
         }
-        Cookies.remove("token");
+        removeAuthToken();
         navigate("/login");
         window.location.reload()
     }

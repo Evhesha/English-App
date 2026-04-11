@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
-import "./LessonsListElement.css";
+import "../shared/TeacherListElement.css";
 import { useTranslation } from "react-i18next";
 
 function TestListElementForUsers({ id, name, description, passCount, author, createdDate, to }) {

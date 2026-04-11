@@ -1,15 +1,15 @@
 import TopicCard from "../TopicCard";
-import "../DictionaryTopicsPage/TopicsPage.css"
+import "./TopicsPage.css"
 
-import travelingImage from "../dict-images/traveling.png";
-import cookingImage from "../dict-images/cooking.png";
-import shoppingImage from "../dict-images/shopping.png";
-import natureImage from "../dict-images/nature.png";
-import sportImage from "../dict-images/sport.png";
-import workImage from "../dict-images/work.png";
-import programmingPage from "../dict-images/programming.png";
-import top100 from "../dict-images/top100.png";
-import differentTopics from "../dict-images/differentTopics.png";
+import travelingImage from "../assets/traveling.png";
+import cookingImage from "../assets/cooking.png";
+import shoppingImage from "../assets/shopping.png";
+import natureImage from "../assets/nature.png";
+import sportImage from "../assets/sport.png";
+import workImage from "../assets/work.png";
+import programmingPage from "../assets/programming.png";
+import top100 from "../assets/top100.png";
+import differentTopics from "../assets/differentTopics.png";
 
 import styled, {keyframes} from "styled-components";
 

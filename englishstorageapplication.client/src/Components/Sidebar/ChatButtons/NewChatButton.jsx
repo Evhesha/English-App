@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
-import { jwtDecode } from "jwt-decode";
 import { useTranslation } from "react-i18next";
+import { getAuthTokenClaims } from "@/utils/authToken.js";
 
 function NewChatButton({onPost, Primary}) {
     const navigate = useNavigate();
@@ -10,13 +9,15 @@ function NewChatButton({onPost, Primary}) {
     
     const handleCreate = async () => {
         try {
-            const token = Cookies.get("token");
-            const decodedToken = jwtDecode(token);
+            const tokenClaims = getAuthTokenClaims();
+            if (!tokenClaims?.userId) {
+                return;
+            }
 
             const response = await axios.post(
                 "http://localhost:5199/chat",
                 {
-                    userId: decodedToken.userId,
+                    userId: tokenClaims.userId,
                     title: "New Chat",
                 }
             )

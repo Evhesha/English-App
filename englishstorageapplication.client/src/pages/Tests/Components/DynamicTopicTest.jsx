@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import TestTemplate from "@/pages/Tests/TestTemplateComponent/TestTemplate.jsx";
+import TestTemplate from "@/pages/tests/template/TestTemplate.jsx";
 
 function DynamicTopicTest() {
     const { topic } = useParams();

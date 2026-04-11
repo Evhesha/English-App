@@ -3,7 +3,6 @@ import {useState} from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import Dropdown from 'react-bootstrap/Dropdown';
-import Form from 'react-bootstrap/Form';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -14,7 +13,7 @@ function ChangeUserRolePopUp({
     const [isOpen, setIsOpen] = useState(false);
     const [role, setRole] = useState(initialRole);
     const [error, setError] = useState(null);
-    const options = ['User', 'Admin', 'Teacher'];
+    const options = ["User", "Admin", "Teacher"];
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -27,7 +26,7 @@ function ChangeUserRolePopUp({
             const token = Cookies.get("token");
             const response = await axios.patch(
                 `${API_BASE_URL}/api/users/${id}`,
-                {role},
+                {role : role},
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`,

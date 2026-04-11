@@ -24,7 +24,8 @@ namespace EnglishApp.Infrastructure
             var claims = new List<Claim>
             {
                 new Claim("userId", user.Id.ToString()),
-                new Claim("name", user.Email),
+                new Claim("name", user.Name),
+                new Claim("email", user.Email),
                 new Claim("role", user.Role)
             };
 

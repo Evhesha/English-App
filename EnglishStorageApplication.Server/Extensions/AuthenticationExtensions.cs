@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
-using System.Security.Claims;
 using System.Text;
 
 namespace EnglishStorageApplication.EnglishApp.Extensions
 {
     public static class AuthenticationExtensions
     {
+        private const string AuthCookieName = "token";
+        private const string LegacyAuthCookieName = "tasty-cookies";
+
         public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
             var secretKey = configuration["JwtOptions:SecretKey"];
@@ -22,6 +25,8 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
                 })
                 .AddJwtBearer(options =>
                 {
+                    options.MapInboundClaims = false;
+
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
@@ -32,8 +37,8 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
                         ValidAudience = configuration["JwtOptions:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
                         ClockSkew = TimeSpan.Zero,
-                        RoleClaimType = ClaimTypes.Role,
-                        NameClaimType = ClaimTypes.Name
+                        RoleClaimType = "role",
+                        NameClaimType = "name"
                     };
                     
                     options.Events = new JwtBearerEvents
@@ -48,13 +53,18 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
                             
                             if (string.IsNullOrEmpty(context.Token))
                             {
-                                var cookieToken = context.Request.Cookies["token"];
+                                var cookieToken = context.Request.Cookies[AuthCookieName];
                                 if (!string.IsNullOrEmpty(cookieToken))
                                 {
                                     context.Token = cookieToken;
                                 }
                             }
 
+                            return Task.CompletedTask;
+                        },
+                        OnAuthenticationFailed = context =>
+                        {
+                            DeleteAuthCookies(context.Response.Cookies);
                             return Task.CompletedTask;
                         }
                     };
@@ -67,6 +77,17 @@ namespace EnglishStorageApplication.EnglishApp.Extensions
             });
 
             return services;
+        }
+
+        private static void DeleteAuthCookies(IResponseCookies cookies)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                Path = "/"
+            };
+
+            cookies.Delete(AuthCookieName, cookieOptions);
+            cookies.Delete(LegacyAuthCookieName, cookieOptions);
         }
     }
 }
