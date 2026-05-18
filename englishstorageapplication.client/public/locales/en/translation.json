@@ -153,5 +153,18 @@
     "logout-sure": "Are you sure that you want to logout?",
     "delete-sure": "If you want to delete the account, please write 'delete'",
     "delete-cancel": "Account deletion cancelled - incorrect confirmation text"
+  },
+  "auth": {
+    "login-title": "Please login",
+    "email": "Email address",
+    "password": "Password",
+    "forgot-password": "Forgot password?",
+    "login": "Login",
+    "create-account": "Create Account",
+    "enter-email": "Enter your email",
+    "create-password": "Create a password",
+    "confirm-password": "Confirm password",
+    "create-name": "Create a name",
+    "sign-up": "Sign Up"
   }
 }

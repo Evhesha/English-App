@@ -11,6 +11,7 @@ import {
 } from '../../Components/StyledComponents/Common.jsx';
 import FormField from "../../Components/Auth/FormField";
 import failedToSignUp from "@/Components/Auth/FailedToSignUp.jsx";
+import { useTranslation } from "react-i18next";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -26,6 +27,7 @@ function SignUpPage() {
     const darkMode = useDarkMode();
     const [error, setError] = useState(false);
     const navigate = useNavigate();
+    const {t} = useTranslation();
 
     const handleChange = (e) => {
         setFormData({
@@ -43,7 +45,7 @@ function SignUpPage() {
         }
 
         try {
-            const response = await axios.post(
+            await axios.post(
                 `${API_BASE_URL}/api/Auth/register`,
                 {
                     name: formData.name,
@@ -51,14 +53,11 @@ function SignUpPage() {
                     password: formData.password,
                 }
             );
-            console.log("User created:", response.data);
-            
+
             navigate("/login");
             window.location.reload();
-            
             setError(false);
         } catch (error) {
-            console.error("Error creating user:", error);
             setError(true);
         }
     };
@@ -67,10 +66,10 @@ function SignUpPage() {
         <Container $darkMode={darkMode}>
             <FormCard $darkMode={darkMode} $wide={true}>
                 <form onSubmit={handleCreate}>
-                    <Title $darkMode={darkMode}>Create Account</Title>
+                    <Title $darkMode={darkMode}>{t("auth.create-account") || "Create Account"}</Title>
 
                     <FormField
-                        label="Введите ваш email"
+                        label={t("auth.enter-email") || "Enter your email"}
                         type="email"
                         id="email"
                         name="email"
@@ -80,7 +79,7 @@ function SignUpPage() {
                     />
 
                     <FormField
-                        label="Придумайте пароль"
+                        label={t("auth.create-password") || "Create a password"}
                         type="password"
                         id="password"
                         name="password"
@@ -90,7 +89,7 @@ function SignUpPage() {
                     />
 
                     <FormField
-                        label="Повторите пароль"
+                        label={t("auth.confirm-password") || "Confirm password"}
                         type="password"
                         id="confirmPassword"
                         name="confirmPassword"
@@ -100,7 +99,7 @@ function SignUpPage() {
                     />
 
                     <FormField
-                        label="Придумайте имя"
+                        label={t("auth.create-name") || "Create a name"}
                         type="text"
                         id="name"
                         name="name"
@@ -112,7 +111,7 @@ function SignUpPage() {
                     {error ? failedToSignUp : false}
 
                     <SubmitButton className="btn btn-primary w-100" type="submit">
-                        Sign Up
+                        {t("auth.sign-up") || "Sign Up"}
                     </SubmitButton>
 
                     <Copyright $darkMode={darkMode}>&copy; 2024-2026</Copyright>
