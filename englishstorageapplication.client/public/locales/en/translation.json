@@ -166,5 +166,21 @@
     "confirm-password": "Confirm password",
     "create-name": "Create a name",
     "sign-up": "Sign Up"
+  },
+  "profile": {
+    "user-avatar": "User Avatar",
+    "name": "Name: ",
+    "email": "Email: ",
+    "role": "Role: ",
+    "your-activity": "Your activity",
+    "your-tests-percentage": "Your tests percentage: ",
+    "tests-completed": "Tests completed: ",
+    "supporting": "Supporting",
+    "support-message": "Let me know if you have any questions, issues, or want to have teacher role!",
+    "message-input-label": "Text input with dropdown button",
+    "message-placeholder": "Type your message...",
+    "send": "Send",
+    "message-sent": "Your message was sent successfully!",
+    "not-authorized": "You are not authorized or not login"
   }
 }
