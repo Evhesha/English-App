@@ -87,7 +87,7 @@ function ProfilePage() {
             if (success) {
                 setStatus(true)
                 setTimeout(() => setStatus(false), 3000);
-                setMessage(""); 
+                setMessage("");
             }
         } catch (error) {
             console.error(error)
@@ -103,7 +103,7 @@ function ProfilePage() {
                         <img
                             src={profilePicture}
                             className="profile-avatar"
-                            alt="User Avatar"
+                            alt={t("profile.user-avatar") || "User Avatar"}
                         />
                     </button>
 
@@ -112,15 +112,15 @@ function ProfilePage() {
                             <div className="profile-content">
                                 <div className="profile-info">
                                     <h2>
-                                        <b>Name: </b>
+                                        <b>{t("profile.name") || "Name: "}</b>
                                         {user.name}
                                     </h2>
                                     <h4>
-                                        <b>Email: </b>
+                                        <b>{t("profile.email") || "Email: "}</b>
                                         {user.email}
                                     </h4>
                                     <h4>
-                                        <b>Role: </b>
+                                        <b>{t("profile.role") || "Role: "}</b>
                                         {user.role}
                                     </h4>
                                     <EditUserPopUp
@@ -131,28 +131,29 @@ function ProfilePage() {
                                 </div>
 
                                 <div className="profile-activity">
-                                    <h2>Your activity</h2>
-                                    <h3>Your tests percentage: <b>{userPercent}%</b></h3>
-                                    <h3>Tests completed: <b>{testsCount}</b></h3>
+                                    <h2>{t("profile.your-activity") || "Your activity"}</h2>
+                                    <h3>{t("profile.your-tests-percentage") || "Your tests percentage: "}<b>{userPercent}%</b></h3>
+                                    <h3>{t("profile.tests-completed") || "Tests completed: "}<b>{testsCount}</b></h3>
                                 </div>
                             </div>
 
                             <div className="supporting">
-                                <h2>Supporting</h2>
-                                <p>Let me know if you have any questions, issues, or want to have teacher role!</p>
+                                <h2>{t("profile.supporting") || "Supporting"}</h2>
+                                <p>{t("profile.support-message") || "Let me know if you have any questions, issues, or want to have teacher role!"}</p>
                                 <InputGroup className="mb-3">
-                                    <Form.Control 
-                                        aria-label="Text input with dropdown button"
+                                    <Form.Control
+                                        aria-label={t("profile.message-input-label") || "Text input with dropdown button"}
+                                        placeholder={t("profile.message-placeholder") || "Type your message..."}
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}/>
-                                    <Button variant="outline-primary" onClick={handleSubmit}>Send</Button>
+                                    <Button variant="outline-primary" onClick={handleSubmit}>{t("profile.send") || "Send"}</Button>
                                 </InputGroup>
-                                {status ? <p>Your message was sent successfully! <Check/></p> : null}
+                                {status ? <p>{t("profile.message-sent") || "Your message was sent successfully!"} <Check/></p> : null}
                             </div>
                         </div>
                     ) : (
                         <div className="alert alert-danger" role="alert">
-                            You are not authorized or not login
+                            {t("profile.not-authorized") || "You are not authorized or not login"}
                         </div>
                     )}
                 </div>

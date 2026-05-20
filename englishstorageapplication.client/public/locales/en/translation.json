@@ -153,5 +153,34 @@
     "logout-sure": "Are you sure that you want to logout?",
     "delete-sure": "If you want to delete the account, please write 'delete'",
     "delete-cancel": "Account deletion cancelled - incorrect confirmation text"
+  },
+  "auth": {
+    "login-title": "Please login",
+    "email": "Email address",
+    "password": "Password",
+    "forgot-password": "Forgot password?",
+    "login": "Login",
+    "create-account": "Create Account",
+    "enter-email": "Enter your email",
+    "create-password": "Create a password",
+    "confirm-password": "Confirm password",
+    "create-name": "Create a name",
+    "sign-up": "Sign Up"
+  },
+  "profile": {
+    "user-avatar": "User Avatar",
+    "name": "Name: ",
+    "email": "Email: ",
+    "role": "Role: ",
+    "your-activity": "Your activity",
+    "your-tests-percentage": "Your tests percentage: ",
+    "tests-completed": "Tests completed: ",
+    "supporting": "Supporting",
+    "support-message": "Let me know if you have any questions, issues, or want to have teacher role!",
+    "message-input-label": "Text input with dropdown button",
+    "message-placeholder": "Type your message...",
+    "send": "Send",
+    "message-sent": "Your message was sent successfully!",
+    "not-authorized": "You are not authorized or not login"
   }
 }
