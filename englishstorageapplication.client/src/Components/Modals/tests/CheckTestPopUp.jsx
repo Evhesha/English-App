@@ -13,6 +13,7 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
     const [testDescription, setTestDescription] = useState(description);
     const [isPublic, setIsPublic] = useState(initialIsPublic);
     const [testQuestions, setTestQuestions] = useState([]);
+    const [pendingUpdates, setPendingUpdates] = useState({});
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -27,57 +28,78 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
     useEffect(() => {
         if (isOpen) {
             const fetchTestQuestions = async () => {
-                try{
-                    const response = await axios.get(`https://localhost:7298/api/TestQuestion/${id}`);
+                try {
+                    const response = await axios.get(`${API_BASE_URL}/api/TestQuestion/${id}`);
                     setTestQuestions(response.data);
-                    console.log(testQuestions);
-                    console.log(response);
+                } catch (e) {
+                    console.error(e);
                 }
-                catch(e){
-                    console.log(e);
-                }
-            }
-
+            };
             fetchTestQuestions();
+        } else {
+            setPendingUpdates({});
         }
     }, [isOpen, id]);
 
     const handleDelete = (deletedId) => {
-        setTestQuestions(testQuestions.filter(question => question.id !== deletedId));
-    }
+        setTestQuestions(prev => prev.filter(q => q.id !== deletedId));
+        setPendingUpdates(prev => {
+            const updated = { ...prev };
+            delete updated[deletedId];
+            return updated;
+        });
+    };
 
     const handleCreate = (newQuestion) => {
         const createdQuestion = newQuestion.data || newQuestion;
-        setTestQuestions(prevQuestions => [...prevQuestions, createdQuestion]);
-    }
+        setTestQuestions(prev => [...prev, createdQuestion]);
+    };
+
+    const handleQuestionUpdate = (questionId, updatedData) => {
+        setPendingUpdates(prev => ({
+            ...prev,
+            [questionId]: updatedData,
+        }));
+    };
 
     const handleEdit = async (event) => {
         event.preventDefault();
         try {
             const token = Cookies.get("token");
-            const response = await axios.put(
+
+            await axios.put(
                 `${API_BASE_URL}/api/Tests/${id}`,
                 {
                     name: testName,
                     description: testDescription,
                     isPublic: isPublic,
-                },{
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
+                },
+                {
+                    headers: { 'Authorization': `Bearer ${token}` }
                 }
             );
 
-            console.log(response);
+            await Promise.all(
+                Object.entries(pendingUpdates).map(([questionId, data]) =>
+                    axios.put(`${API_BASE_URL}/api/TestQuestion/${questionId}`, {
+                        type: data.type,
+                        question: data.question,
+                        options: data.options.split(',').map(o => o.trim()).filter(Boolean),
+                        correctAnswer: data.correctAnswer,
+                    })
+                )
+            );
+
+            setPendingUpdates({});
             togglePopup();
             window.location.reload();
         } catch (error) {
             console.error(error);
-            setError(error.response?.data?.message);
+            setError(error.response?.data?.message ?? "Something went wrong");
         }
     };
 
-    return <>
+    return (
         <div>
             <button className="btn btn-primary" onClick={togglePopup}>
                 Check test <i className="bi bi-cloud-check"></i>
@@ -85,50 +107,47 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
             {isOpen && (
                 <div className="popup">
                     <div className="popup-content">
-            <span className="close" onClick={togglePopup}>
-              &times;
-            </span>
+                        <span className="close" onClick={togglePopup}>&times;</span>
                         <h3>Check test</h3>
                         <form onSubmit={handleEdit}>
                             <div className="mb-3">
-                                <label htmlFor="name" className="form-label">
+                                <label htmlFor="testName" className="form-label">
                                     Test title
                                 </label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="name"
+                                    id="testName"
                                     value={testName}
                                     onChange={(e) => setTestName(e.target.value)}
                                 />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="text" className="form-label">
-                                    Test Description
+                                <label htmlFor="testDescription" className="form-label">
+                                    Test description
                                 </label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="name"
+                                    id="testDescription"
                                     value={testDescription}
                                     onChange={(e) => setTestDescription(e.target.value)}
                                 />
                             </div>
-                            <div className="questions-container" style={{
-                                maxHeight: '400px',
-                                overflowY: 'auto',
-                                marginBottom: '15px',
-                                paddingRight: '10px'
-                            }}>
+                            <div
+                                className="questions-container"
+                                style={{ maxHeight: '400px', overflowY: 'auto', marginBottom: '15px', paddingRight: '10px' }}
+                            >
                                 {testQuestions.map((testQuestion) => (
                                     <ExistTestQuestion
-                                        key={testQuestion.id || `temp-${Date.now()}-${Math.random()}`}
+                                        key={testQuestion.id}
                                         id={testQuestion.id}
                                         question={testQuestion.question}
                                         correctAnswer={testQuestion.correctAnswer}
                                         options={testQuestion.options}
                                         type={testQuestion.type}
                                         onDelete={handleDelete}
+                                        onUpdate={handleQuestionUpdate}
                                     />
                                 ))}
                                 <TestQuestion testId={id} onCreate={handleCreate} />
@@ -145,23 +164,30 @@ function CheckTestPopUp({ name, description, onPut, id, isPublic: initialIsPubli
                                     Public test
                                 </label>
                             </div>
+                            {Object.keys(pendingUpdates).length > 0 && (
+                                <div className="alert alert-warning py-1 mb-2">
+                                    {Object.keys(pendingUpdates).length} question(s) have unsaved changes
+                                </div>
+                            )}
                             {error && (
                                 <div className="alert alert-danger" role="alert">
                                     {error}
                                 </div>
                             )}
-                            <button type="submit" className="btn btn-primary">
-                                Save
-                            </button>
-                            <button type="button" onClick={closePopup} className="btn btn-danger">
-                                Close
-                            </button>
+                            <div className="d-flex gap-2">
+                                <button type="submit" className="btn btn-primary">
+                                    Save
+                                </button>
+                                <button type="button" onClick={closePopup} className="btn btn-danger">
+                                    Close
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
             )}
         </div>
-    </>;
+    );
 }
 
 export default CheckTestPopUp;
