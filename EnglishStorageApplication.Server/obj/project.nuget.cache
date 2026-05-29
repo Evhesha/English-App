@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rLcrk3AHCuw=",
+  "dgSpecHash": "Ilb78WGAv5k=",
   "success": true,
   "projectFilePath": "/Users/evgenii/RiderProjects/English-App/EnglishStorageApplication.Server/EnglishStorageApplication.Server.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.1.1/microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.extensions/2.1.1/microsoft.aspnetcore.http.extensions.2.1.1.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.http.features/2.1.1/microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
-    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.spaproxy/8.0.23/microsoft.aspnetcore.spaproxy.8.0.23.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.spaproxy/8.0.27/microsoft.aspnetcore.spaproxy.8.0.27.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
@@ -88,7 +88,10 @@
     "/Users/evgenii/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/system.text.encodings.web/10.0.0/system.text.encodings.web.10.0.0.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/system.text.json/10.0.0/system.text.json.10.0.0.nupkg.sha512",
-    "/Users/evgenii/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
+    "/Users/evgenii/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.netcore.app.ref/9.0.16/microsoft.netcore.app.ref.9.0.16.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.16/microsoft.aspnetcore.app.ref.9.0.16.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.netcore.app.host.osx-arm64/9.0.16/microsoft.netcore.app.host.osx-arm64.9.0.16.nupkg.sha512"
   ],
   "logs": []
 }
