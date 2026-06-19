@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gTi9OfoOqaA=",
+  "dgSpecHash": "56fzbgO3wE0=",
   "success": true,
   "projectFilePath": "/Users/evgenii/RiderProjects/English-App/EnglishApp.Infrastructure/EnglishApp.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,9 @@
     "/Users/evgenii/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "/Users/evgenii/.nuget/packages/microsoft.identitymodel.tokens/7.1.2/microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
-    "/Users/evgenii/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
+    "/Users/evgenii/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.netcore.app.ref/9.0.16/microsoft.netcore.app.ref.9.0.16.nupkg.sha512",
+    "/Users/evgenii/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.16/microsoft.aspnetcore.app.ref.9.0.16.nupkg.sha512"
   ],
   "logs": []
 }

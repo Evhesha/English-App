@@ -148,7 +148,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/8.0.23": {
+      "Microsoft.AspNetCore.SpaProxy/8.0.27": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -1825,10 +1825,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/8.0.23": {
-      "sha512": "g7whRdNtTf+ngEbr1HMeb4hzR5JWDeTOcycZFp6vPb1GYN8KLeqPdR/nmmbs6r8yxFqh4VTcoPSSexFS8ZiX0A==",
+    "Microsoft.AspNetCore.SpaProxy/8.0.27": {
+      "sha512": "xE0GUhCU31MOiFHEqqubuuZyFNRh1Fmv47/p6TC2L4cuzvnFEnJ20E6kNnVPKZl+kVGPbXzUEZDos1X1SK62WA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.23",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.27",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1836,7 +1836,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.8.0.23.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.8.0.27.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -4414,7 +4414,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -4478,6 +4478,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.16, 9.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[9.0.16, 9.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.16, 9.0.16]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -4486,7 +4500,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -11,9 +11,9 @@ function HomePage() {
     const { darkMode } = useTheme();
     const navigate = useNavigate();
     const [chats, setChats] = useState([]);
-    
+
     const moveToLessons = () => {
-        navigate(`/online-list-lessons-page`);    
+        navigate(`/online-list-lessons-page`);
     }
 
     const moveToNotes = () => {
@@ -23,13 +23,13 @@ function HomePage() {
     const handleCreateChat = (newChat) => {
         setChats(prevChats => [newChat, ...prevChats]);
     };
-    
+
     return (
         <div className={`minimal-home ${darkMode ? "dark-theme" : ""}`}>
             <section className="hero">
                 <Container>
                     <div className="hero-content">
-                        <div className="hero-emoji">🚀</div>
+                        <div className="hero-emoji">📘</div>
                         <h1>{t("home.hero-title")}</h1>
                         <p className="subtitle">{t("home.hero-subtitle")}</p>
                         <div className="cta-container">
@@ -38,6 +38,7 @@ function HomePage() {
                     </div>
                 </Container>
             </section>
+
             <section className="features">
                 <Container>
                     <h2 className="section-title">{t("home.notes-title")}</h2>
@@ -56,11 +57,11 @@ function HomePage() {
                                             <p>{t("home.notes-description")}</p>
                                             <div className="feature-list">
                                                 <div className="feature-list-item">
-                                                    <span className="list-icon">✅</span>
+                                                    <span className="list-icon">•</span>
                                                     <span>{t("home.notes-feature1")}</span>
                                                 </div>
                                                 <div className="feature-list-item">
-                                                    <span className="list-icon">✅</span>
+                                                    <span className="list-icon">•</span>
                                                     <span>{t("home.notes-feature2")}</span>
                                                 </div>
                                                 <Button onClick={moveToNotes}
@@ -74,6 +75,7 @@ function HomePage() {
                     </Row>
                 </Container>
             </section>
+
             <section className="benefits">
                 <Container>
                     <h2 className="section-title">{t("home.lessons-title")}</h2>
@@ -87,14 +89,14 @@ function HomePage() {
                         </Col>
                         <Col md={4}>
                             <div className="benefit-card">
-                                <div className="benefit-icon">🧩</div>
+                                <div className="benefit-icon">📖</div>
                                 <h3>{t("home.lesson2-title")}</h3>
                                 <p>{t("home.lesson2-desc")}</p>
                             </div>
                         </Col>
                         <Col md={4}>
                             <div className="benefit-card">
-                                <div className="benefit-icon">⚡</div>
+                                <div className="benefit-icon">✍️</div>
                                 <h3>{t("home.lesson3-title")}</h3>
                                 <p>{t("home.lesson3-desc")}</p>
                             </div>
@@ -102,6 +104,7 @@ function HomePage() {
                     </Row>
                 </Container>
             </section>
+
             <section className="ai-showcase">
                 <Container>
                     <div className="ai-container">
@@ -150,7 +153,7 @@ function HomePage() {
                             </Col>
                         </Row>
                         <div className="ai-cta">
-                           <NewChatButton onPost={handleCreateChat} Primary={"btn-primary"}/>
+                            <NewChatButton onPost={handleCreateChat} Primary={"btn-primary"}/>
                         </div>
                     </div>
                 </Container>
