@@ -1,6 +1,6 @@
-import "../modal.css";
-import { useState } from "react";
-import axios from "axios";
+import { useState } from 'react';
+import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
@@ -10,6 +10,7 @@ function EditUserPopUp({
                            email: initialEmail,
                            onPut
                        }) {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [name, setName] = useState(initialName);
     const [email, setEmail] = useState(initialEmail);
@@ -49,14 +50,14 @@ function EditUserPopUp({
                 }
                 togglePopup();
             } else {
-                setError(response.data.message || "Ошибка при изменении пользователя.");
+                setError(response.data.message || t("edit-user.error-message"));
             }
         } catch (error) {
             console.error("Edit error:", error);
             setError(
                 error.response?.data?.message ||
                 error.response?.data?.title ||
-                "Ошибка при изменении пользователя."
+                t("edit-user.error-message")
             );
         } finally {
             setIsLoading(false);
@@ -66,7 +67,7 @@ function EditUserPopUp({
     return (
         <div>
             <button type="button" className="btn btn-primary" onClick={togglePopup}>
-                <i className="bi bi-pencil"></i> Edit
+                <i className="bi bi-pencil"></i> {t("edit-user.edit-button")}
             </button>
             {isOpen && (
                 <div className="popup">
@@ -74,11 +75,11 @@ function EditUserPopUp({
             <span className="close" onClick={togglePopup}>
               &times;
             </span>
-                        <h3>Edit user</h3>
+                        <h3>{t("edit-user.edit-user-title")}</h3>
                         <form onSubmit={handleEdit}>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label">
-                                    Name
+                                    {t("edit-user.name-label")}
                                 </label>
                                 <input
                                     type="text"
@@ -91,7 +92,7 @@ function EditUserPopUp({
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="email" className="form-label">
-                                    Email
+                                    {t("edit-user.email-label")}
                                 </label>
                                 <input
                                     type="email"
@@ -103,12 +104,12 @@ function EditUserPopUp({
                                     required
                                 />
                                 <div id="emailHelp" className="form-text">
-                                    We'll never share your email with anyone else.
+                                    {t("edit-user.email-help")}
                                 </div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="password" className="form-label">
-                                    New Password (optional)
+                                    {t("edit-user.password-label")}
                                 </label>
                                 <input
                                     type="password"
@@ -116,7 +117,7 @@ function EditUserPopUp({
                                     id="password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    placeholder="Leave empty to keep current password"
+                                    placeholder={t("edit-user.password-placeholder")}
                                 />
                             </div>
                             {error && (
@@ -129,7 +130,7 @@ function EditUserPopUp({
                                 className="btn btn-primary"
                                 disabled={isLoading}
                             >
-                                {isLoading ? "Saving..." : "Save changes"}
+                                {isLoading ? t("edit-user.saving-button") : t("edit-user.save-button")}
                             </button>
                         </form>
                     </div>
